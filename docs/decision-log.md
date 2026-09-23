@@ -21,3 +21,13 @@
   但 difficulty-audit/ 三份审计为**改造前**评级（红/黄/绿）；直接沿用会把已修复问题误记为现状。
 - **裁决**：评分反映**改造后当前状态**；每款须交叉三源——审计行（改造前问题）+ ledger.md §2（改造内容与验证证据）
   + 该款 SPEC/试玩报告（可读时）。无法核实的维度给保守分并在备注注明「推断」。
+
+## #4 2026-09-23 推送通道：代理 HTTPS 弃用 → SSH ssh.github.com:443 直连
+- **背景**：188M pack 大推送。代理 HTTPS（V2Ray 10809）两连败——①CC 后台任务被系统低内存收割；②独立进程重推后 V2Ray 断流，
+  git-remote-https 挂死（TCP 只剩 Bound 残壳、CPU 零增长，「进程活着但集体不动」）。
+- **处置**：杀卡死进程树（精确 PID，避开兄弟会话 optcg 推送）→ 生成专用 key `C:/Users/mod/.ssh/kg_push_key`
+  → 注册 **repo 级 deploy key**（kids-games-push，可写，不动账号全局 key）→ `git remote set-url origin ssh://git.github.com:443/...`
+  → Start-Process cmd 独立进程推送（脱离 CC 会话收割）。
+- **结果**：一次成功，188M 约 14 分钟（显著快于代理）。后续推送沿用此通道。
+- **回滚**：`git remote set-url origin https://github.com/frandy820/kids-games.git` + gh api 删除 deploy key。
+- **验证**：远端 commits=2（gh api 核验）+ 进程干净退出 + 日志 `* [new branch] main -> main`。

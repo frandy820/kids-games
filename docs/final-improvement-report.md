@@ -90,6 +90,10 @@ python F:/claudecode/projects/active/kids-games/output/smoke-120/smoke120.py
 
 通用观察五问：能否独立理解 / 哪步卡住 / 是否主动再玩 / 过度兴奋或挫败信号 / 愿意讲述吗（记录表在 manual-test-checklist.md 第五节）。
 
-## 八、本轮 Git 提交
+## 八、本轮 Git 提交与仓库状态
 
-【待回填：文档批次 commit + push 结果】
+- 仓库：https://github.com/frandy820/kids-games（**PRIVATE**，用户指令转私有）
+- commit 1：`kids-games 120 款儿童离线游戏库：三年龄段各 40 款+难度改造期终态…`（120 款游戏库+README+.gitignore，188M pack）
+- commit 2：`docs: add game audit (120-game scored), improvement plan (86 cards), framework, test checklist, final report`（8 文件 1707 行）
+- 推送通道：代理 HTTPS 两连败（低内存收割+断流挂死）→ 终态=**SSH ssh.github.com:443 直连 + repo 级 deploy key（kids-games-push，可写）**，origin 已切 SSH URL；188M 约 14 分钟传完。后续推送沿用此通道即可。
+- 冒烟产物 output/smoke-120/ 按 .gitignore 留本地（内部过程区，不入库）
