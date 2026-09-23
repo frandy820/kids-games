@@ -1,0 +1,5622 @@
+{
+ "0": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "row": 0,
+    "scene": "flower",
+    "kind": "face",
+    "text": "朋友送你一朵小花",
+    "say": "朋友送你一朵小花",
+    "sayKey": "etm_sc_flower",
+    "picks": [
+     "angry",
+     "scared",
+     "happy",
+     "sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 1,
+    "scene": "blocksdown",
+    "kind": "face",
+    "text": "妹妹把你的积木推倒了",
+    "say": "妹妹把你的积木推倒了",
+    "sayKey": "etm_sc_blocksdown",
+    "picks": [
+     "angry",
+     "sad",
+     "scared",
+     "happy"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 2,
+    "scene": "balloonfly",
+    "kind": "face",
+    "text": "心爱的气球飞走了",
+    "say": "心爱的气球飞走了",
+    "sayKey": "etm_sc_balloonfly",
+    "picks": [
+     "angry",
+     "scared",
+     "sad",
+     "happy"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 3,
+    "scene": "thunder",
+    "kind": "face",
+    "text": "打雷轰隆隆响",
+    "say": "打雷轰隆隆响",
+    "sayKey": "etm_sc_thunder",
+    "picks": [
+     "angry",
+     "scared",
+     "sad",
+     "happy"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 4,
+    "scene": "singsong",
+    "kind": "face",
+    "text": "大家一起唱歌",
+    "say": "大家一起唱歌",
+    "sayKey": "etm_sc_singsong",
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "1": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "row": 1,
+    "scene": "blocksdown",
+    "kind": "face",
+    "text": "妹妹把你的积木推倒了",
+    "say": "妹妹把你的积木推倒了",
+    "sayKey": "etm_sc_blocksdown",
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 2,
+    "scene": "balloonfly",
+    "kind": "face",
+    "text": "心爱的气球飞走了",
+    "say": "心爱的气球飞走了",
+    "sayKey": "etm_sc_balloonfly",
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 3,
+    "scene": "thunder",
+    "kind": "face",
+    "text": "打雷轰隆隆响",
+    "say": "打雷轰隆隆响",
+    "sayKey": "etm_sc_thunder",
+    "picks": [
+     "happy",
+     "scared",
+     "angry",
+     "sad"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 4,
+    "scene": "singsong",
+    "kind": "face",
+    "text": "大家一起唱歌",
+    "say": "大家一起唱歌",
+    "sayKey": "etm_sc_singsong",
+    "picks": [
+     "scared",
+     "angry",
+     "sad",
+     "happy"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 0,
+    "scene": "flower",
+    "kind": "face",
+    "text": "朋友送你一朵小花",
+    "say": "朋友送你一朵小花",
+    "sayKey": "etm_sc_flower",
+    "picks": [
+     "scared",
+     "angry",
+     "sad",
+     "happy"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "2": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 2,
+  "qs": [
+   {
+    "row": 2,
+    "scene": "balloonfly",
+    "kind": "face",
+    "text": "心爱的气球飞走了",
+    "say": "心爱的气球飞走了",
+    "sayKey": "etm_sc_balloonfly",
+    "picks": [
+     "scared",
+     "sad",
+     "happy",
+     "angry"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 3,
+    "scene": "thunder",
+    "kind": "face",
+    "text": "打雷轰隆隆响",
+    "say": "打雷轰隆隆响",
+    "sayKey": "etm_sc_thunder",
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 4,
+    "scene": "singsong",
+    "kind": "face",
+    "text": "大家一起唱歌",
+    "say": "大家一起唱歌",
+    "sayKey": "etm_sc_singsong",
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 0,
+    "scene": "flower",
+    "kind": "face",
+    "text": "朋友送你一朵小花",
+    "say": "朋友送你一朵小花",
+    "sayKey": "etm_sc_flower",
+    "picks": [
+     "scared",
+     "sad",
+     "angry",
+     "happy"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 1,
+    "scene": "blocksdown",
+    "kind": "face",
+    "text": "妹妹把你的积木推倒了",
+    "say": "妹妹把你的积木推倒了",
+    "sayKey": "etm_sc_blocksdown",
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "3": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "row": 3,
+    "scene": "thunder",
+    "kind": "face",
+    "text": "打雷轰隆隆响",
+    "say": "打雷轰隆隆响",
+    "sayKey": "etm_sc_thunder",
+    "picks": [
+     "angry",
+     "scared",
+     "happy",
+     "sad"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 4,
+    "scene": "singsong",
+    "kind": "face",
+    "text": "大家一起唱歌",
+    "say": "大家一起唱歌",
+    "sayKey": "etm_sc_singsong",
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 0,
+    "scene": "flower",
+    "kind": "face",
+    "text": "朋友送你一朵小花",
+    "say": "朋友送你一朵小花",
+    "sayKey": "etm_sc_flower",
+    "picks": [
+     "happy",
+     "scared",
+     "angry",
+     "sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 1,
+    "scene": "blocksdown",
+    "kind": "face",
+    "text": "妹妹把你的积木推倒了",
+    "say": "妹妹把你的积木推倒了",
+    "sayKey": "etm_sc_blocksdown",
+    "picks": [
+     "scared",
+     "angry",
+     "sad",
+     "happy"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 2,
+    "scene": "balloonfly",
+    "kind": "face",
+    "text": "心爱的气球飞走了",
+    "say": "心爱的气球飞走了",
+    "sayKey": "etm_sc_balloonfly",
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "4": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "row": 4,
+    "scene": "singsong",
+    "kind": "face",
+    "text": "大家一起唱歌",
+    "say": "大家一起唱歌",
+    "sayKey": "etm_sc_singsong",
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 0,
+    "scene": "flower",
+    "kind": "face",
+    "text": "朋友送你一朵小花",
+    "say": "朋友送你一朵小花",
+    "sayKey": "etm_sc_flower",
+    "picks": [
+     "sad",
+     "happy",
+     "angry",
+     "scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 1,
+    "scene": "blocksdown",
+    "kind": "face",
+    "text": "妹妹把你的积木推倒了",
+    "say": "妹妹把你的积木推倒了",
+    "sayKey": "etm_sc_blocksdown",
+    "picks": [
+     "happy",
+     "scared",
+     "angry",
+     "sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 2,
+    "scene": "balloonfly",
+    "kind": "face",
+    "text": "心爱的气球飞走了",
+    "say": "心爱的气球飞走了",
+    "sayKey": "etm_sc_balloonfly",
+    "picks": [
+     "happy",
+     "scared",
+     "sad",
+     "angry"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 3,
+    "scene": "thunder",
+    "kind": "face",
+    "text": "打雷轰隆隆响",
+    "say": "打雷轰隆隆响",
+    "sayKey": "etm_sc_thunder",
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "5": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "row": 5,
+    "scene": "fishfloat",
+    "kind": "face",
+    "text": "你的小金鱼不动了，浮在水面上",
+    "say": "你的小金鱼不动了，浮在水面上",
+    "sayKey": "etm_sc_fishfloat",
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 6,
+    "scene": "dooropen",
+    "kind": "face",
+    "text": "关了灯的房间，衣柜门吱呀开了",
+    "say": "关了灯的房间，衣柜门吱呀开了",
+    "sayKey": "etm_sc_dooropen",
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 7,
+    "scene": "coinbank",
+    "kind": "face",
+    "text": "存钱罐里的钱，正好够买那个玩具",
+    "say": "存钱罐里的钱，正好够买那个玩具",
+    "sayKey": "etm_sc_coinbank",
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 8,
+    "scene": "sacktower",
+    "kind": "face",
+    "text": "辛苦搭的高塔被人扫倒，他转身就走",
+    "say": "辛苦搭的高塔被人扫倒，他转身就走",
+    "sayKey": "etm_sc_sacktower",
+    "picks": [
+     "happy",
+     "scared",
+     "angry",
+     "sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 9,
+    "scene": "artshow",
+    "kind": "face",
+    "text": "你的画被选去展览，大家都停下来看",
+    "say": "你的画被选去展览，大家都停下来看",
+    "sayKey": "etm_sc_artshow",
+    "picks": [
+     "sad",
+     "happy",
+     "angry",
+     "scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "6": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "row": 6,
+    "scene": "dooropen",
+    "kind": "face",
+    "text": "关了灯的房间，衣柜门吱呀开了",
+    "say": "关了灯的房间，衣柜门吱呀开了",
+    "sayKey": "etm_sc_dooropen",
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 7,
+    "scene": "coinbank",
+    "kind": "face",
+    "text": "存钱罐里的钱，正好够买那个玩具",
+    "say": "存钱罐里的钱，正好够买那个玩具",
+    "sayKey": "etm_sc_coinbank",
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 8,
+    "scene": "sacktower",
+    "kind": "face",
+    "text": "辛苦搭的高塔被人扫倒，他转身就走",
+    "say": "辛苦搭的高塔被人扫倒，他转身就走",
+    "sayKey": "etm_sc_sacktower",
+    "picks": [
+     "happy",
+     "sad",
+     "scared",
+     "angry"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 9,
+    "scene": "artshow",
+    "kind": "face",
+    "text": "你的画被选去展览，大家都停下来看",
+    "say": "你的画被选去展览，大家都停下来看",
+    "sayKey": "etm_sc_artshow",
+    "picks": [
+     "happy",
+     "scared",
+     "sad",
+     "angry"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 5,
+    "scene": "fishfloat",
+    "kind": "face",
+    "text": "你的小金鱼不动了，浮在水面上",
+    "say": "你的小金鱼不动了，浮在水面上",
+    "sayKey": "etm_sc_fishfloat",
+    "picks": [
+     "happy",
+     "scared",
+     "angry",
+     "sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "7": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "row": 7,
+    "scene": "coinbank",
+    "kind": "face",
+    "text": "存钱罐里的钱，正好够买那个玩具",
+    "say": "存钱罐里的钱，正好够买那个玩具",
+    "sayKey": "etm_sc_coinbank",
+    "picks": [
+     "angry",
+     "scared",
+     "sad",
+     "happy"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 8,
+    "scene": "sacktower",
+    "kind": "face",
+    "text": "辛苦搭的高塔被人扫倒，他转身就走",
+    "say": "辛苦搭的高塔被人扫倒，他转身就走",
+    "sayKey": "etm_sc_sacktower",
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 9,
+    "scene": "artshow",
+    "kind": "face",
+    "text": "你的画被选去展览，大家都停下来看",
+    "say": "你的画被选去展览，大家都停下来看",
+    "sayKey": "etm_sc_artshow",
+    "picks": [
+     "sad",
+     "angry",
+     "happy",
+     "scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 5,
+    "scene": "fishfloat",
+    "kind": "face",
+    "text": "你的小金鱼不动了，浮在水面上",
+    "say": "你的小金鱼不动了，浮在水面上",
+    "sayKey": "etm_sc_fishfloat",
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 6,
+    "scene": "dooropen",
+    "kind": "face",
+    "text": "关了灯的房间，衣柜门吱呀开了",
+    "say": "关了灯的房间，衣柜门吱呀开了",
+    "sayKey": "etm_sc_dooropen",
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "8": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "row": 8,
+    "scene": "sacktower",
+    "kind": "face",
+    "text": "辛苦搭的高塔被人扫倒，他转身就走",
+    "say": "辛苦搭的高塔被人扫倒，他转身就走",
+    "sayKey": "etm_sc_sacktower",
+    "picks": [
+     "scared",
+     "sad",
+     "happy",
+     "angry"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 9,
+    "scene": "artshow",
+    "kind": "face",
+    "text": "你的画被选去展览，大家都停下来看",
+    "say": "你的画被选去展览，大家都停下来看",
+    "sayKey": "etm_sc_artshow",
+    "picks": [
+     "sad",
+     "angry",
+     "happy",
+     "scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 5,
+    "scene": "fishfloat",
+    "kind": "face",
+    "text": "你的小金鱼不动了，浮在水面上",
+    "say": "你的小金鱼不动了，浮在水面上",
+    "sayKey": "etm_sc_fishfloat",
+    "picks": [
+     "happy",
+     "sad",
+     "scared",
+     "angry"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 6,
+    "scene": "dooropen",
+    "kind": "face",
+    "text": "关了灯的房间，衣柜门吱呀开了",
+    "say": "关了灯的房间，衣柜门吱呀开了",
+    "sayKey": "etm_sc_dooropen",
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 7,
+    "scene": "coinbank",
+    "kind": "face",
+    "text": "存钱罐里的钱，正好够买那个玩具",
+    "say": "存钱罐里的钱，正好够买那个玩具",
+    "sayKey": "etm_sc_coinbank",
+    "picks": [
+     "happy",
+     "sad",
+     "angry",
+     "scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "9": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "row": 9,
+    "scene": "artshow",
+    "kind": "face",
+    "text": "你的画被选去展览，大家都停下来看",
+    "say": "你的画被选去展览，大家都停下来看",
+    "sayKey": "etm_sc_artshow",
+    "picks": [
+     "scared",
+     "angry",
+     "sad",
+     "happy"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 5,
+    "scene": "fishfloat",
+    "kind": "face",
+    "text": "你的小金鱼不动了，浮在水面上",
+    "say": "你的小金鱼不动了，浮在水面上",
+    "sayKey": "etm_sc_fishfloat",
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 6,
+    "scene": "dooropen",
+    "kind": "face",
+    "text": "关了灯的房间，衣柜门吱呀开了",
+    "say": "关了灯的房间，衣柜门吱呀开了",
+    "sayKey": "etm_sc_dooropen",
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 7,
+    "scene": "coinbank",
+    "kind": "face",
+    "text": "存钱罐里的钱，正好够买那个玩具",
+    "say": "存钱罐里的钱，正好够买那个玩具",
+    "sayKey": "etm_sc_coinbank",
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 8,
+    "scene": "sacktower",
+    "kind": "face",
+    "text": "辛苦搭的高塔被人扫倒，他转身就走",
+    "say": "辛苦搭的高塔被人扫倒，他转身就走",
+    "sayKey": "etm_sc_sacktower",
+    "picks": [
+     "scared",
+     "sad",
+     "happy",
+     "angry"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "10": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "row": 10,
+    "scene": "crayondrop",
+    "kind": "level",
+    "text": "有人不小心碰掉了你的蜡笔",
+    "say": "有人不小心碰掉了你的蜡笔",
+    "sayKey": "etm_sc_crayondrop",
+    "picks": [
+     "l5",
+     "l4",
+     "l2",
+     "l1",
+     "l3"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l2",
+     "l1",
+     "l3",
+     "l5",
+     "l4"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l5",
+     "l3",
+     "l4",
+     "l1",
+     "l2"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 13,
+    "scene": "castlekick",
+    "kind": "level",
+    "text": "辛苦搭的城堡被故意踢倒",
+    "say": "辛苦搭的城堡被故意踢倒",
+    "sayKey": "etm_sc_castlekick",
+    "picks": [
+     "l3",
+     "l2",
+     "l5",
+     "l4",
+     "l1"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l5",
+     "l4",
+     "l1",
+     "l3",
+     "l2"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "11": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l4",
+     "l2",
+     "l5",
+     "l1",
+     "l3"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l2",
+     "l4",
+     "l1",
+     "l3",
+     "l5"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 13,
+    "scene": "castlekick",
+    "kind": "level",
+    "text": "辛苦搭的城堡被故意踢倒",
+    "say": "辛苦搭的城堡被故意踢倒",
+    "sayKey": "etm_sc_castlekick",
+    "picks": [
+     "l4",
+     "l1",
+     "l3",
+     "l5",
+     "l2"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l3",
+     "l1",
+     "l4",
+     "l5",
+     "l2"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 10,
+    "scene": "crayondrop",
+    "kind": "level",
+    "text": "有人不小心碰掉了你的蜡笔",
+    "say": "有人不小心碰掉了你的蜡笔",
+    "sayKey": "etm_sc_crayondrop",
+    "picks": [
+     "l2",
+     "l5",
+     "l1",
+     "l4",
+     "l3"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "12": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l4",
+     "l2",
+     "l1",
+     "l5",
+     "l3"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 13,
+    "scene": "castlekick",
+    "kind": "level",
+    "text": "辛苦搭的城堡被故意踢倒",
+    "say": "辛苦搭的城堡被故意踢倒",
+    "sayKey": "etm_sc_castlekick",
+    "picks": [
+     "l4",
+     "l3",
+     "l5",
+     "l2",
+     "l1"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l4",
+     "l5",
+     "l1",
+     "l3",
+     "l2"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 10,
+    "scene": "crayondrop",
+    "kind": "level",
+    "text": "有人不小心碰掉了你的蜡笔",
+    "say": "有人不小心碰掉了你的蜡笔",
+    "sayKey": "etm_sc_crayondrop",
+    "picks": [
+     "l1",
+     "l2",
+     "l3",
+     "l5",
+     "l4"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l1",
+     "l2",
+     "l4",
+     "l3",
+     "l5"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "13": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "row": 13,
+    "scene": "castlekick",
+    "kind": "level",
+    "text": "辛苦搭的城堡被故意踢倒",
+    "say": "辛苦搭的城堡被故意踢倒",
+    "sayKey": "etm_sc_castlekick",
+    "picks": [
+     "l3",
+     "l1",
+     "l5",
+     "l4",
+     "l2"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l2",
+     "l3",
+     "l1",
+     "l4",
+     "l5"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 10,
+    "scene": "crayondrop",
+    "kind": "level",
+    "text": "有人不小心碰掉了你的蜡笔",
+    "say": "有人不小心碰掉了你的蜡笔",
+    "sayKey": "etm_sc_crayondrop",
+    "picks": [
+     "l5",
+     "l3",
+     "l4",
+     "l2",
+     "l1"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l2",
+     "l1",
+     "l3",
+     "l4",
+     "l5"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l3",
+     "l5",
+     "l2",
+     "l1",
+     "l4"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "14": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l3",
+     "l1",
+     "l5",
+     "l4",
+     "l2"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 10,
+    "scene": "crayondrop",
+    "kind": "level",
+    "text": "有人不小心碰掉了你的蜡笔",
+    "say": "有人不小心碰掉了你的蜡笔",
+    "sayKey": "etm_sc_crayondrop",
+    "picks": [
+     "l3",
+     "l5",
+     "l2",
+     "l1",
+     "l4"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l4",
+     "l3",
+     "l1",
+     "l5",
+     "l2"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l2",
+     "l5",
+     "l4",
+     "l1",
+     "l3"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 13,
+    "scene": "castlekick",
+    "kind": "level",
+    "text": "辛苦搭的城堡被故意踢倒",
+    "say": "辛苦搭的城堡被故意踢倒",
+    "sayKey": "etm_sc_castlekick",
+    "picks": [
+     "l1",
+     "l5",
+     "l4",
+     "l2",
+     "l3"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "15": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "row": 15,
+    "scene": "bookrip",
+    "kind": "mix",
+    "text": "绘本被撕坏了，你又气又难过",
+    "say": "绘本被撕坏了，你又气又难过",
+    "sayKey": "etm_sc_bookrip",
+    "picks": [
+     "happy+scared",
+     "happy+sad",
+     "angry+scared",
+     "angry+sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 16,
+    "scene": "funfair",
+    "kind": "mix",
+    "text": "明天去游乐园，你开心又有点怕下雨",
+    "say": "明天去游乐园，你开心又有点怕下雨",
+    "sayKey": "etm_sc_funfair",
+    "picks": [
+     "angry+sad",
+     "happy+scared",
+     "angry+scared",
+     "happy+sad"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 17,
+    "scene": "friendmove",
+    "kind": "mix",
+    "text": "好朋友要搬走了，你为他开心又舍不得",
+    "say": "好朋友要搬走了，你为他开心又舍不得",
+    "sayKey": "etm_sc_friendmove",
+    "picks": [
+     "happy+sad",
+     "happy+scared",
+     "angry+sad",
+     "angry+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 18,
+    "scene": "bullyshout",
+    "kind": "mix",
+    "text": "有人抢你玩具还凶你，你又怕又生气",
+    "say": "有人抢你玩具还凶你，你又怕又生气",
+    "sayKey": "etm_sc_bullyshout",
+    "picks": [
+     "angry+scared",
+     "happy+scared",
+     "angry+sad",
+     "happy+sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 19,
+    "scene": "stageshow",
+    "kind": "mix",
+    "text": "要上台表演啦，你开心又怕忘动作",
+    "say": "要上台表演啦，你开心又怕忘动作",
+    "sayKey": "etm_sc_stageshow",
+    "picks": [
+     "happy+sad",
+     "angry+sad",
+     "happy+scared",
+     "angry+scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "16": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "row": 16,
+    "scene": "funfair",
+    "kind": "mix",
+    "text": "明天去游乐园，你开心又有点怕下雨",
+    "say": "明天去游乐园，你开心又有点怕下雨",
+    "sayKey": "etm_sc_funfair",
+    "picks": [
+     "angry+sad",
+     "angry+scared",
+     "happy+scared",
+     "happy+sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 17,
+    "scene": "friendmove",
+    "kind": "mix",
+    "text": "好朋友要搬走了，你为他开心又舍不得",
+    "say": "好朋友要搬走了，你为他开心又舍不得",
+    "sayKey": "etm_sc_friendmove",
+    "picks": [
+     "happy+scared",
+     "angry+sad",
+     "happy+sad",
+     "angry+scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 18,
+    "scene": "bullyshout",
+    "kind": "mix",
+    "text": "有人抢你玩具还凶你，你又怕又生气",
+    "say": "有人抢你玩具还凶你，你又怕又生气",
+    "sayKey": "etm_sc_bullyshout",
+    "picks": [
+     "angry+sad",
+     "happy+scared",
+     "happy+sad",
+     "angry+scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 19,
+    "scene": "stageshow",
+    "kind": "mix",
+    "text": "要上台表演啦，你开心又怕忘动作",
+    "say": "要上台表演啦，你开心又怕忘动作",
+    "sayKey": "etm_sc_stageshow",
+    "picks": [
+     "angry+sad",
+     "happy+sad",
+     "happy+scared",
+     "angry+scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 15,
+    "scene": "bookrip",
+    "kind": "mix",
+    "text": "绘本被撕坏了，你又气又难过",
+    "say": "绘本被撕坏了，你又气又难过",
+    "sayKey": "etm_sc_bookrip",
+    "picks": [
+     "angry+sad",
+     "angry+scared",
+     "happy+scared",
+     "happy+sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "17": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "row": 17,
+    "scene": "friendmove",
+    "kind": "mix",
+    "text": "好朋友要搬走了，你为他开心又舍不得",
+    "say": "好朋友要搬走了，你为他开心又舍不得",
+    "sayKey": "etm_sc_friendmove",
+    "picks": [
+     "angry+scared",
+     "angry+sad",
+     "happy+sad",
+     "happy+scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 18,
+    "scene": "bullyshout",
+    "kind": "mix",
+    "text": "有人抢你玩具还凶你，你又怕又生气",
+    "say": "有人抢你玩具还凶你，你又怕又生气",
+    "sayKey": "etm_sc_bullyshout",
+    "picks": [
+     "angry+sad",
+     "happy+scared",
+     "angry+scared",
+     "happy+sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 19,
+    "scene": "stageshow",
+    "kind": "mix",
+    "text": "要上台表演啦，你开心又怕忘动作",
+    "say": "要上台表演啦，你开心又怕忘动作",
+    "sayKey": "etm_sc_stageshow",
+    "picks": [
+     "angry+sad",
+     "happy+scared",
+     "happy+sad",
+     "angry+scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 15,
+    "scene": "bookrip",
+    "kind": "mix",
+    "text": "绘本被撕坏了，你又气又难过",
+    "say": "绘本被撕坏了，你又气又难过",
+    "sayKey": "etm_sc_bookrip",
+    "picks": [
+     "angry+sad",
+     "angry+scared",
+     "happy+scared",
+     "happy+sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 16,
+    "scene": "funfair",
+    "kind": "mix",
+    "text": "明天去游乐园，你开心又有点怕下雨",
+    "say": "明天去游乐园，你开心又有点怕下雨",
+    "sayKey": "etm_sc_funfair",
+    "picks": [
+     "happy+scared",
+     "happy+sad",
+     "angry+sad",
+     "angry+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "18": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "row": 18,
+    "scene": "bullyshout",
+    "kind": "mix",
+    "text": "有人抢你玩具还凶你，你又怕又生气",
+    "say": "有人抢你玩具还凶你，你又怕又生气",
+    "sayKey": "etm_sc_bullyshout",
+    "picks": [
+     "happy+scared",
+     "happy+sad",
+     "angry+sad",
+     "angry+scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 19,
+    "scene": "stageshow",
+    "kind": "mix",
+    "text": "要上台表演啦，你开心又怕忘动作",
+    "say": "要上台表演啦，你开心又怕忘动作",
+    "sayKey": "etm_sc_stageshow",
+    "picks": [
+     "angry+sad",
+     "happy+sad",
+     "happy+scared",
+     "angry+scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 15,
+    "scene": "bookrip",
+    "kind": "mix",
+    "text": "绘本被撕坏了，你又气又难过",
+    "say": "绘本被撕坏了，你又气又难过",
+    "sayKey": "etm_sc_bookrip",
+    "picks": [
+     "happy+sad",
+     "angry+scared",
+     "angry+sad",
+     "happy+scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 16,
+    "scene": "funfair",
+    "kind": "mix",
+    "text": "明天去游乐园，你开心又有点怕下雨",
+    "say": "明天去游乐园，你开心又有点怕下雨",
+    "sayKey": "etm_sc_funfair",
+    "picks": [
+     "happy+scared",
+     "angry+sad",
+     "angry+scared",
+     "happy+sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 17,
+    "scene": "friendmove",
+    "kind": "mix",
+    "text": "好朋友要搬走了，你为他开心又舍不得",
+    "say": "好朋友要搬走了，你为他开心又舍不得",
+    "sayKey": "etm_sc_friendmove",
+    "picks": [
+     "angry+sad",
+     "happy+sad",
+     "happy+scared",
+     "angry+scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "19": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "row": 19,
+    "scene": "stageshow",
+    "kind": "mix",
+    "text": "要上台表演啦，你开心又怕忘动作",
+    "say": "要上台表演啦，你开心又怕忘动作",
+    "sayKey": "etm_sc_stageshow",
+    "picks": [
+     "angry+scared",
+     "angry+sad",
+     "happy+sad",
+     "happy+scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 15,
+    "scene": "bookrip",
+    "kind": "mix",
+    "text": "绘本被撕坏了，你又气又难过",
+    "say": "绘本被撕坏了，你又气又难过",
+    "sayKey": "etm_sc_bookrip",
+    "picks": [
+     "happy+scared",
+     "happy+sad",
+     "angry+scared",
+     "angry+sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 16,
+    "scene": "funfair",
+    "kind": "mix",
+    "text": "明天去游乐园，你开心又有点怕下雨",
+    "say": "明天去游乐园，你开心又有点怕下雨",
+    "sayKey": "etm_sc_funfair",
+    "picks": [
+     "angry+sad",
+     "happy+sad",
+     "angry+scared",
+     "happy+scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 17,
+    "scene": "friendmove",
+    "kind": "mix",
+    "text": "好朋友要搬走了，你为他开心又舍不得",
+    "say": "好朋友要搬走了，你为他开心又舍不得",
+    "sayKey": "etm_sc_friendmove",
+    "picks": [
+     "angry+scared",
+     "happy+sad",
+     "angry+sad",
+     "happy+scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 18,
+    "scene": "bullyshout",
+    "kind": "mix",
+    "text": "有人抢你玩具还凶你，你又怕又生气",
+    "say": "有人抢你玩具还凶你，你又怕又生气",
+    "sayKey": "etm_sc_bullyshout",
+    "picks": [
+     "angry+scared",
+     "happy+sad",
+     "angry+sad",
+     "happy+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "20": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "row": 30,
+    "scene": "stepfoot",
+    "kind": "level",
+    "text": "排队时被轻轻踩了一脚",
+    "say": "排队时被轻轻踩了一脚",
+    "sayKey": "etm_sc_stepfoot",
+    "picks": [
+     "l4",
+     "l3",
+     "l1",
+     "l2",
+     "l5"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l2",
+     "l5",
+     "l4",
+     "l3",
+     "l1"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l5",
+     "l3",
+     "l1",
+     "l2",
+     "l4"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 34,
+    "scene": "tearbook",
+    "kind": "level",
+    "text": "有人撕了你的故事书还做鬼脸",
+    "say": "有人撕了你的故事书还做鬼脸",
+    "sayKey": "etm_sc_tearbook",
+    "picks": [
+     "l2",
+     "l5",
+     "l4",
+     "l3",
+     "l1"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 10,
+    "scene": "crayondrop",
+    "kind": "level",
+    "text": "有人不小心碰掉了你的蜡笔",
+    "say": "有人不小心碰掉了你的蜡笔",
+    "sayKey": "etm_sc_crayondrop",
+    "picks": [
+     "l3",
+     "l5",
+     "l2",
+     "l4",
+     "l1"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "21": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "row": 9,
+    "scene": "artshow",
+    "kind": "face",
+    "text": "你的画被选去展览，大家都停下来看",
+    "say": "你的画被选去展览，大家都停下来看",
+    "sayKey": "etm_sc_artshow",
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 26,
+    "scene": "darkhole",
+    "kind": "face",
+    "text": "球滚进黑黑的地下室，你不敢进去捡",
+    "say": "球滚进黑黑的地下室，你不敢进去捡",
+    "sayKey": "etm_sc_darkhole",
+    "picks": [
+     "angry",
+     "scared",
+     "happy",
+     "sad"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 25,
+    "scene": "rainpicnic",
+    "kind": "face",
+    "text": "期待好久的野餐，早上下起了大雨",
+    "say": "期待好久的野餐，早上下起了大雨",
+    "sayKey": "etm_sc_rainpicnic",
+    "picks": [
+     "happy",
+     "angry",
+     "sad",
+     "scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 28,
+    "scene": "nightnoise",
+    "kind": "face",
+    "text": "半夜轰隆一声响，你从梦里惊醒了",
+    "say": "半夜轰隆一声响，你从梦里惊醒了",
+    "sayKey": "etm_sc_nightnoise",
+    "picks": [
+     "angry",
+     "sad",
+     "happy",
+     "scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 29,
+    "scene": "kitewin",
+    "kind": "face",
+    "text": "风筝掉下来好多次，终于飞上了天",
+    "say": "风筝掉下来好多次，终于飞上了天",
+    "sayKey": "etm_sc_kitewin",
+    "picks": [
+     "scared",
+     "angry",
+     "sad",
+     "happy"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "22": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "row": 6,
+    "scene": "dooropen",
+    "kind": "face",
+    "text": "关了灯的房间，衣柜门吱呀开了",
+    "say": "关了灯的房间，衣柜门吱呀开了",
+    "sayKey": "etm_sc_dooropen",
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 29,
+    "scene": "kitewin",
+    "kind": "face",
+    "text": "风筝掉下来好多次，终于飞上了天",
+    "say": "风筝掉下来好多次，终于飞上了天",
+    "sayKey": "etm_sc_kitewin",
+    "picks": [
+     "happy",
+     "angry",
+     "sad",
+     "scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 9,
+    "scene": "artshow",
+    "kind": "face",
+    "text": "你的画被选去展览，大家都停下来看",
+    "say": "你的画被选去展览，大家都停下来看",
+    "sayKey": "etm_sc_artshow",
+    "picks": [
+     "scared",
+     "sad",
+     "angry",
+     "happy"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 5,
+    "scene": "fishfloat",
+    "kind": "face",
+    "text": "你的小金鱼不动了，浮在水面上",
+    "say": "你的小金鱼不动了，浮在水面上",
+    "sayKey": "etm_sc_fishfloat",
+    "picks": [
+     "happy",
+     "scared",
+     "angry",
+     "sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 28,
+    "scene": "nightnoise",
+    "kind": "face",
+    "text": "半夜轰隆一声响，你从梦里惊醒了",
+    "say": "半夜轰隆一声响，你从梦里惊醒了",
+    "sayKey": "etm_sc_nightnoise",
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "23": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "row": 8,
+    "scene": "sacktower",
+    "kind": "face",
+    "text": "辛苦搭的高塔被人扫倒，他转身就走",
+    "say": "辛苦搭的高塔被人扫倒，他转身就走",
+    "sayKey": "etm_sc_sacktower",
+    "picks": [
+     "scared",
+     "angry",
+     "sad",
+     "happy"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 28,
+    "scene": "nightnoise",
+    "kind": "face",
+    "text": "半夜轰隆一声响，你从梦里惊醒了",
+    "say": "半夜轰隆一声响，你从梦里惊醒了",
+    "sayKey": "etm_sc_nightnoise",
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 27,
+    "scene": "grandma",
+    "kind": "face",
+    "text": "远方的奶奶坐了很久的车，来看你了",
+    "say": "远方的奶奶坐了很久的车，来看你了",
+    "sayKey": "etm_sc_grandma",
+    "picks": [
+     "sad",
+     "happy",
+     "angry",
+     "scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 6,
+    "scene": "dooropen",
+    "kind": "face",
+    "text": "关了灯的房间，衣柜门吱呀开了",
+    "say": "关了灯的房间，衣柜门吱呀开了",
+    "sayKey": "etm_sc_dooropen",
+    "picks": [
+     "angry",
+     "sad",
+     "happy",
+     "scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 29,
+    "scene": "kitewin",
+    "kind": "face",
+    "text": "风筝掉下来好多次，终于飞上了天",
+    "say": "风筝掉下来好多次，终于飞上了天",
+    "sayKey": "etm_sc_kitewin",
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "24": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l2",
+     "l4",
+     "l5",
+     "l1",
+     "l3"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 10,
+    "scene": "crayondrop",
+    "kind": "level",
+    "text": "有人不小心碰掉了你的蜡笔",
+    "say": "有人不小心碰掉了你的蜡笔",
+    "sayKey": "etm_sc_crayondrop",
+    "picks": [
+     "l2",
+     "l4",
+     "l3",
+     "l5",
+     "l1"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l5",
+     "l2",
+     "l3",
+     "l1",
+     "l4"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 30,
+    "scene": "stepfoot",
+    "kind": "level",
+    "text": "排队时被轻轻踩了一脚",
+    "say": "排队时被轻轻踩了一脚",
+    "sayKey": "etm_sc_stepfoot",
+    "picks": [
+     "l4",
+     "l2",
+     "l1",
+     "l3",
+     "l5"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 13,
+    "scene": "castlekick",
+    "kind": "level",
+    "text": "辛苦搭的城堡被故意踢倒",
+    "say": "辛苦搭的城堡被故意踢倒",
+    "sayKey": "etm_sc_castlekick",
+    "picks": [
+     "l2",
+     "l5",
+     "l3",
+     "l1",
+     "l4"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "25": {
+  "ch": 6,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "row": 33,
+    "scene": "modelcrush",
+    "kind": "level",
+    "text": "有人故意踩坏了你拼好的飞机",
+    "say": "有人故意踩坏了你拼好的飞机",
+    "sayKey": "etm_sc_modelcrush",
+    "picks": [
+     "l1",
+     "l4",
+     "l5",
+     "l2",
+     "l3"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 30,
+    "scene": "stepfoot",
+    "kind": "level",
+    "text": "排队时被轻轻踩了一脚",
+    "say": "排队时被轻轻踩了一脚",
+    "sayKey": "etm_sc_stepfoot",
+    "picks": [
+     "l4",
+     "l2",
+     "l5",
+     "l3",
+     "l1"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l4",
+     "l2",
+     "l1",
+     "l5",
+     "l3"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 34,
+    "scene": "tearbook",
+    "kind": "level",
+    "text": "有人撕了你的故事书还做鬼脸",
+    "say": "有人撕了你的故事书还做鬼脸",
+    "sayKey": "etm_sc_tearbook",
+    "picks": [
+     "l4",
+     "l3",
+     "l5",
+     "l2",
+     "l1"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l5",
+     "l1",
+     "l2",
+     "l4",
+     "l3"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "26": {
+  "ch": 6,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "row": 32,
+    "scene": "interrupt",
+    "kind": "level",
+    "text": "你说话总是被人打断",
+    "say": "你说话总是被人打断",
+    "sayKey": "etm_sc_interrupt",
+    "picks": [
+     "l3",
+     "l4",
+     "l2",
+     "l5",
+     "l1"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 13,
+    "scene": "castlekick",
+    "kind": "level",
+    "text": "辛苦搭的城堡被故意踢倒",
+    "say": "辛苦搭的城堡被故意踢倒",
+    "sayKey": "etm_sc_castlekick",
+    "picks": [
+     "l5",
+     "l3",
+     "l4",
+     "l2",
+     "l1"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 31,
+    "scene": "queuejump",
+    "kind": "level",
+    "text": "有人插队，一下站到了你的前面",
+    "say": "有人插队，一下站到了你的前面",
+    "sayKey": "etm_sc_queuejump",
+    "picks": [
+     "l1",
+     "l4",
+     "l2",
+     "l5",
+     "l3"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l4",
+     "l1",
+     "l2",
+     "l3",
+     "l5"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 33,
+    "scene": "modelcrush",
+    "kind": "level",
+    "text": "有人故意踩坏了你拼好的飞机",
+    "say": "有人故意踩坏了你拼好的飞机",
+    "sayKey": "etm_sc_modelcrush",
+    "picks": [
+     "l4",
+     "l5",
+     "l3",
+     "l1",
+     "l2"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "27": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "row": 36,
+    "scene": "gradfare",
+    "kind": "mix",
+    "text": "拿到毕业奖状很开心，又舍不得老师",
+    "say": "拿到毕业奖状很开心，又舍不得老师",
+    "sayKey": "etm_sc_gradfare",
+    "picks": [
+     "angry+scared",
+     "happy+sad",
+     "angry+sad",
+     "happy+scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 39,
+    "scene": "racefirst",
+    "kind": "mix",
+    "text": "明天要比赛了，你开心又怕输",
+    "say": "明天要比赛了，你开心又怕输",
+    "sayKey": "etm_sc_racefirst",
+    "picks": [
+     "angry+scared",
+     "happy+scared",
+     "happy+sad",
+     "angry+sad"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 17,
+    "scene": "friendmove",
+    "kind": "mix",
+    "text": "好朋友要搬走了，你为他开心又舍不得",
+    "say": "好朋友要搬走了，你为他开心又舍不得",
+    "sayKey": "etm_sc_friendmove",
+    "picks": [
+     "angry+sad",
+     "happy+sad",
+     "happy+scared",
+     "angry+scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 38,
+    "scene": "legobroke",
+    "kind": "mix",
+    "text": "乐高被踩坏了，你又生气又心疼",
+    "say": "乐高被踩坏了，你又生气又心疼",
+    "sayKey": "etm_sc_legobroke",
+    "picks": [
+     "angry+sad",
+     "happy+sad",
+     "happy+scared",
+     "angry+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 16,
+    "scene": "funfair",
+    "kind": "mix",
+    "text": "明天去游乐园，你开心又有点怕下雨",
+    "say": "明天去游乐园，你开心又有点怕下雨",
+    "sayKey": "etm_sc_funfair",
+    "picks": [
+     "happy+sad",
+     "happy+scared",
+     "angry+scared",
+     "angry+sad"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "28": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "row": 18,
+    "scene": "bullyshout",
+    "kind": "mix",
+    "text": "有人抢你玩具还凶你，你又怕又生气",
+    "say": "有人抢你玩具还凶你，你又怕又生气",
+    "sayKey": "etm_sc_bullyshout",
+    "picks": [
+     "happy+scared",
+     "happy+sad",
+     "angry+sad",
+     "angry+scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 17,
+    "scene": "friendmove",
+    "kind": "mix",
+    "text": "好朋友要搬走了，你为他开心又舍不得",
+    "say": "好朋友要搬走了，你为他开心又舍不得",
+    "sayKey": "etm_sc_friendmove",
+    "picks": [
+     "angry+scared",
+     "happy+scared",
+     "angry+sad",
+     "happy+sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 15,
+    "scene": "bookrip",
+    "kind": "mix",
+    "text": "绘本被撕坏了，你又气又难过",
+    "say": "绘本被撕坏了，你又气又难过",
+    "sayKey": "etm_sc_bookrip",
+    "picks": [
+     "angry+sad",
+     "angry+scared",
+     "happy+sad",
+     "happy+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 16,
+    "scene": "funfair",
+    "kind": "mix",
+    "text": "明天去游乐园，你开心又有点怕下雨",
+    "say": "明天去游乐园，你开心又有点怕下雨",
+    "sayKey": "etm_sc_funfair",
+    "picks": [
+     "happy+scared",
+     "angry+sad",
+     "happy+sad",
+     "angry+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 19,
+    "scene": "stageshow",
+    "kind": "mix",
+    "text": "要上台表演啦，你开心又怕忘动作",
+    "say": "要上台表演啦，你开心又怕忘动作",
+    "sayKey": "etm_sc_stageshow",
+    "picks": [
+     "angry+scared",
+     "happy+sad",
+     "happy+scared",
+     "angry+sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "29": {
+  "ch": 6,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l2",
+     "l1",
+     "l4",
+     "l3",
+     "l5"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 10,
+    "scene": "crayondrop",
+    "kind": "level",
+    "text": "有人不小心碰掉了你的蜡笔",
+    "say": "有人不小心碰掉了你的蜡笔",
+    "sayKey": "etm_sc_crayondrop",
+    "picks": [
+     "l3",
+     "l4",
+     "l1",
+     "l2",
+     "l5"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 34,
+    "scene": "tearbook",
+    "kind": "level",
+    "text": "有人撕了你的故事书还做鬼脸",
+    "say": "有人撕了你的故事书还做鬼脸",
+    "sayKey": "etm_sc_tearbook",
+    "picks": [
+     "l3",
+     "l4",
+     "l2",
+     "l1",
+     "l5"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 32,
+    "scene": "interrupt",
+    "kind": "level",
+    "text": "你说话总是被人打断",
+    "say": "你说话总是被人打断",
+    "sayKey": "etm_sc_interrupt",
+    "picks": [
+     "l3",
+     "l5",
+     "l1",
+     "l4",
+     "l2"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l5",
+     "l2",
+     "l3",
+     "l4",
+     "l1"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "30": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "row": 36,
+    "scene": "gradfare",
+    "kind": "mix",
+    "text": "拿到毕业奖状很开心，又舍不得老师",
+    "say": "拿到毕业奖状很开心，又舍不得老师",
+    "sayKey": "etm_sc_gradfare",
+    "picks": [
+     "happy+sad",
+     "angry+sad",
+     "happy+scared",
+     "angry+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 17,
+    "scene": "friendmove",
+    "kind": "mix",
+    "text": "好朋友要搬走了，你为他开心又舍不得",
+    "say": "好朋友要搬走了，你为他开心又舍不得",
+    "sayKey": "etm_sc_friendmove",
+    "picks": [
+     "angry+sad",
+     "angry+scared",
+     "happy+scared",
+     "happy+sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 38,
+    "scene": "legobroke",
+    "kind": "mix",
+    "text": "乐高被踩坏了，你又生气又心疼",
+    "say": "乐高被踩坏了，你又生气又心疼",
+    "sayKey": "etm_sc_legobroke",
+    "picks": [
+     "angry+scared",
+     "happy+sad",
+     "angry+sad",
+     "happy+scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 37,
+    "scene": "bigkidpush",
+    "kind": "mix",
+    "text": "有人抢了你的球还推人，你又怕又生气",
+    "say": "有人抢了你的球还推人，你又怕又生气",
+    "sayKey": "etm_sc_bigkidpush",
+    "picks": [
+     "angry+scared",
+     "happy+sad",
+     "angry+sad",
+     "happy+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 16,
+    "scene": "funfair",
+    "kind": "mix",
+    "text": "明天去游乐园，你开心又有点怕下雨",
+    "say": "明天去游乐园，你开心又有点怕下雨",
+    "sayKey": "etm_sc_funfair",
+    "picks": [
+     "happy+scared",
+     "angry+scared",
+     "happy+sad",
+     "angry+sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "31": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "row": 34,
+    "scene": "tearbook",
+    "kind": "level",
+    "text": "有人撕了你的故事书还做鬼脸",
+    "say": "有人撕了你的故事书还做鬼脸",
+    "sayKey": "etm_sc_tearbook",
+    "picks": [
+     "l2",
+     "l1",
+     "l5",
+     "l4",
+     "l3"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l4",
+     "l1",
+     "l3",
+     "l2",
+     "l5"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 31,
+    "scene": "queuejump",
+    "kind": "level",
+    "text": "有人插队，一下站到了你的前面",
+    "say": "有人插队，一下站到了你的前面",
+    "sayKey": "etm_sc_queuejump",
+    "picks": [
+     "l3",
+     "l2",
+     "l5",
+     "l4",
+     "l1"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l4",
+     "l1",
+     "l2",
+     "l3",
+     "l5"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 13,
+    "scene": "castlekick",
+    "kind": "level",
+    "text": "辛苦搭的城堡被故意踢倒",
+    "say": "辛苦搭的城堡被故意踢倒",
+    "sayKey": "etm_sc_castlekick",
+    "picks": [
+     "l3",
+     "l4",
+     "l1",
+     "l5",
+     "l2"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "32": {
+  "ch": 7,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "row": 6,
+    "scene": "dooropen",
+    "kind": "face",
+    "text": "关了灯的房间，衣柜门吱呀开了",
+    "say": "关了灯的房间，衣柜门吱呀开了",
+    "sayKey": "etm_sc_dooropen",
+    "picks": [
+     "scared",
+     "sad",
+     "angry",
+     "happy"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 9,
+    "scene": "artshow",
+    "kind": "face",
+    "text": "你的画被选去展览，大家都停下来看",
+    "say": "你的画被选去展览，大家都停下来看",
+    "sayKey": "etm_sc_artshow",
+    "picks": [
+     "scared",
+     "sad",
+     "happy",
+     "angry"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 7,
+    "scene": "coinbank",
+    "kind": "face",
+    "text": "存钱罐里的钱，正好够买那个玩具",
+    "say": "存钱罐里的钱，正好够买那个玩具",
+    "sayKey": "etm_sc_coinbank",
+    "picks": [
+     "angry",
+     "sad",
+     "scared",
+     "happy"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 8,
+    "scene": "sacktower",
+    "kind": "face",
+    "text": "辛苦搭的高塔被人扫倒，他转身就走",
+    "say": "辛苦搭的高塔被人扫倒，他转身就走",
+    "sayKey": "etm_sc_sacktower",
+    "picks": [
+     "scared",
+     "sad",
+     "happy",
+     "angry"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 25,
+    "scene": "rainpicnic",
+    "kind": "face",
+    "text": "期待好久的野餐，早上下起了大雨",
+    "say": "期待好久的野餐，早上下起了大雨",
+    "sayKey": "etm_sc_rainpicnic",
+    "picks": [
+     "happy",
+     "angry",
+     "sad",
+     "scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "33": {
+  "ch": 7,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "row": 2,
+    "scene": "balloonfly",
+    "kind": "face",
+    "text": "心爱的气球飞走了",
+    "say": "心爱的气球飞走了",
+    "sayKey": "etm_sc_balloonfly",
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 24,
+    "scene": "lostmom",
+    "kind": "face",
+    "text": "迷路找不到妈妈",
+    "say": "迷路找不到妈妈",
+    "sayKey": "etm_sc_lostmom",
+    "picks": [
+     "sad",
+     "angry",
+     "happy",
+     "scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 1,
+    "scene": "blocksdown",
+    "kind": "face",
+    "text": "妹妹把你的积木推倒了",
+    "say": "妹妹把你的积木推倒了",
+    "sayKey": "etm_sc_blocksdown",
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 4,
+    "scene": "singsong",
+    "kind": "face",
+    "text": "大家一起唱歌",
+    "say": "大家一起唱歌",
+    "sayKey": "etm_sc_singsong",
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 3,
+    "scene": "thunder",
+    "kind": "face",
+    "text": "打雷轰隆隆响",
+    "say": "打雷轰隆隆响",
+    "sayKey": "etm_sc_thunder",
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "34": {
+  "ch": 7,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "row": 0,
+    "scene": "flower",
+    "kind": "face",
+    "text": "朋友送你一朵小花",
+    "say": "朋友送你一朵小花",
+    "sayKey": "etm_sc_flower",
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 4,
+    "scene": "singsong",
+    "kind": "face",
+    "text": "大家一起唱歌",
+    "say": "大家一起唱歌",
+    "sayKey": "etm_sc_singsong",
+    "picks": [
+     "scared",
+     "sad",
+     "happy",
+     "angry"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 2,
+    "scene": "balloonfly",
+    "kind": "face",
+    "text": "心爱的气球飞走了",
+    "say": "心爱的气球飞走了",
+    "sayKey": "etm_sc_balloonfly",
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 22,
+    "scene": "towertop",
+    "kind": "face",
+    "text": "你搭的高塔成功了",
+    "say": "你搭的高塔成功了",
+    "sayKey": "etm_sc_towertop",
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 24,
+    "scene": "lostmom",
+    "kind": "face",
+    "text": "迷路找不到妈妈",
+    "say": "迷路找不到妈妈",
+    "sayKey": "etm_sc_lostmom",
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "35": {
+  "ch": 8,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l5",
+     "l1",
+     "l4",
+     "l3",
+     "l2"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 34,
+    "scene": "tearbook",
+    "kind": "level",
+    "text": "有人撕了你的故事书还做鬼脸",
+    "say": "有人撕了你的故事书还做鬼脸",
+    "sayKey": "etm_sc_tearbook",
+    "picks": [
+     "l5",
+     "l3",
+     "l1",
+     "l4",
+     "l2"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 33,
+    "scene": "modelcrush",
+    "kind": "level",
+    "text": "有人故意踩坏了你拼好的飞机",
+    "say": "有人故意踩坏了你拼好的飞机",
+    "sayKey": "etm_sc_modelcrush",
+    "picks": [
+     "l4",
+     "l2",
+     "l1",
+     "l5",
+     "l3"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 32,
+    "scene": "interrupt",
+    "kind": "level",
+    "text": "你说话总是被人打断",
+    "say": "你说话总是被人打断",
+    "sayKey": "etm_sc_interrupt",
+    "picks": [
+     "l5",
+     "l4",
+     "l3",
+     "l2",
+     "l1"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 31,
+    "scene": "queuejump",
+    "kind": "level",
+    "text": "有人插队，一下站到了你的前面",
+    "say": "有人插队，一下站到了你的前面",
+    "sayKey": "etm_sc_queuejump",
+    "picks": [
+     "l3",
+     "l2",
+     "l5",
+     "l1",
+     "l4"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "36": {
+  "ch": 8,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "row": 23,
+    "scene": "grabtoy",
+    "kind": "face",
+    "text": "玩具被人抢走了",
+    "say": "玩具被人抢走了",
+    "sayKey": "etm_sc_grabtoy",
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 20,
+    "scene": "painting",
+    "kind": "face",
+    "text": "你的画被弄坏了",
+    "say": "你的画被弄坏了",
+    "sayKey": "etm_sc_painting",
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 4,
+    "scene": "singsong",
+    "kind": "face",
+    "text": "大家一起唱歌",
+    "say": "大家一起唱歌",
+    "sayKey": "etm_sc_singsong",
+    "picks": [
+     "angry",
+     "sad",
+     "scared",
+     "happy"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 0,
+    "scene": "flower",
+    "kind": "face",
+    "text": "朋友送你一朵小花",
+    "say": "朋友送你一朵小花",
+    "sayKey": "etm_sc_flower",
+    "picks": [
+     "happy",
+     "angry",
+     "sad",
+     "scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 3,
+    "scene": "thunder",
+    "kind": "face",
+    "text": "打雷轰隆隆响",
+    "say": "打雷轰隆隆响",
+    "sayKey": "etm_sc_thunder",
+    "picks": [
+     "happy",
+     "sad",
+     "angry",
+     "scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "37": {
+  "ch": 8,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l3",
+     "l1",
+     "l5",
+     "l4",
+     "l2"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 30,
+    "scene": "stepfoot",
+    "kind": "level",
+    "text": "排队时被轻轻踩了一脚",
+    "say": "排队时被轻轻踩了一脚",
+    "sayKey": "etm_sc_stepfoot",
+    "picks": [
+     "l5",
+     "l4",
+     "l1",
+     "l3",
+     "l2"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 13,
+    "scene": "castlekick",
+    "kind": "level",
+    "text": "辛苦搭的城堡被故意踢倒",
+    "say": "辛苦搭的城堡被故意踢倒",
+    "sayKey": "etm_sc_castlekick",
+    "picks": [
+     "l3",
+     "l4",
+     "l5",
+     "l2",
+     "l1"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 31,
+    "scene": "queuejump",
+    "kind": "level",
+    "text": "有人插队，一下站到了你的前面",
+    "say": "有人插队，一下站到了你的前面",
+    "sayKey": "etm_sc_queuejump",
+    "picks": [
+     "l3",
+     "l5",
+     "l4",
+     "l2",
+     "l1"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 32,
+    "scene": "interrupt",
+    "kind": "level",
+    "text": "你说话总是被人打断",
+    "say": "你说话总是被人打断",
+    "sayKey": "etm_sc_interrupt",
+    "picks": [
+     "l5",
+     "l3",
+     "l4",
+     "l2",
+     "l1"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "38": {
+  "ch": 8,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "row": 24,
+    "scene": "lostmom",
+    "kind": "face",
+    "text": "迷路找不到妈妈",
+    "say": "迷路找不到妈妈",
+    "sayKey": "etm_sc_lostmom",
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 21,
+    "scene": "shoutloud",
+    "kind": "face",
+    "text": "有人对你大喊大叫",
+    "say": "有人对你大喊大叫",
+    "sayKey": "etm_sc_shoutloud",
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 20,
+    "scene": "painting",
+    "kind": "face",
+    "text": "你的画被弄坏了",
+    "say": "你的画被弄坏了",
+    "sayKey": "etm_sc_painting",
+    "picks": [
+     "scared",
+     "sad",
+     "angry",
+     "happy"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 3,
+    "scene": "thunder",
+    "kind": "face",
+    "text": "打雷轰隆隆响",
+    "say": "打雷轰隆隆响",
+    "sayKey": "etm_sc_thunder",
+    "picks": [
+     "sad",
+     "angry",
+     "happy",
+     "scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 2,
+    "scene": "balloonfly",
+    "kind": "face",
+    "text": "心爱的气球飞走了",
+    "say": "心爱的气球飞走了",
+    "sayKey": "etm_sc_balloonfly",
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "39": {
+  "ch": 8,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "row": 30,
+    "scene": "stepfoot",
+    "kind": "level",
+    "text": "排队时被轻轻踩了一脚",
+    "say": "排队时被轻轻踩了一脚",
+    "sayKey": "etm_sc_stepfoot",
+    "picks": [
+     "l1",
+     "l3",
+     "l2",
+     "l4",
+     "l5"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 33,
+    "scene": "modelcrush",
+    "kind": "level",
+    "text": "有人故意踩坏了你拼好的飞机",
+    "say": "有人故意踩坏了你拼好的飞机",
+    "sayKey": "etm_sc_modelcrush",
+    "picks": [
+     "l5",
+     "l4",
+     "l3",
+     "l2",
+     "l1"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l1",
+     "l4",
+     "l5",
+     "l2",
+     "l3"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 13,
+    "scene": "castlekick",
+    "kind": "level",
+    "text": "辛苦搭的城堡被故意踢倒",
+    "say": "辛苦搭的城堡被故意踢倒",
+    "sayKey": "etm_sc_castlekick",
+    "picks": [
+     "l3",
+     "l4",
+     "l5",
+     "l2",
+     "l1"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 32,
+    "scene": "interrupt",
+    "kind": "level",
+    "text": "你说话总是被人打断",
+    "say": "你说话总是被人打断",
+    "sayKey": "etm_sc_interrupt",
+    "picks": [
+     "l4",
+     "l3",
+     "l1",
+     "l5",
+     "l2"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "40": {
+  "ch": 9,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "row": 10,
+    "scene": "crayondrop",
+    "kind": "level",
+    "text": "有人不小心碰掉了你的蜡笔",
+    "say": "有人不小心碰掉了你的蜡笔",
+    "sayKey": "etm_sc_crayondrop",
+    "picks": [
+     "l3",
+     "l1",
+     "l5",
+     "l4",
+     "l2"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 30,
+    "scene": "stepfoot",
+    "kind": "level",
+    "text": "排队时被轻轻踩了一脚",
+    "say": "排队时被轻轻踩了一脚",
+    "sayKey": "etm_sc_stepfoot",
+    "picks": [
+     "l1",
+     "l2",
+     "l4",
+     "l5",
+     "l3"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 31,
+    "scene": "queuejump",
+    "kind": "level",
+    "text": "有人插队，一下站到了你的前面",
+    "say": "有人插队，一下站到了你的前面",
+    "sayKey": "etm_sc_queuejump",
+    "picks": [
+     "l1",
+     "l3",
+     "l5",
+     "l2",
+     "l4"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 33,
+    "scene": "modelcrush",
+    "kind": "level",
+    "text": "有人故意踩坏了你拼好的飞机",
+    "say": "有人故意踩坏了你拼好的飞机",
+    "sayKey": "etm_sc_modelcrush",
+    "picks": [
+     "l3",
+     "l5",
+     "l1",
+     "l2",
+     "l4"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l3",
+     "l1",
+     "l5",
+     "l2",
+     "l4"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "41": {
+  "ch": 9,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "row": 17,
+    "scene": "friendmove",
+    "kind": "mix",
+    "text": "好朋友要搬走了，你为他开心又舍不得",
+    "say": "好朋友要搬走了，你为他开心又舍不得",
+    "sayKey": "etm_sc_friendmove",
+    "picks": [
+     "happy+scared",
+     "angry+scared",
+     "angry+sad",
+     "happy+sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 18,
+    "scene": "bullyshout",
+    "kind": "mix",
+    "text": "有人抢你玩具还凶你，你又怕又生气",
+    "say": "有人抢你玩具还凶你，你又怕又生气",
+    "sayKey": "etm_sc_bullyshout",
+    "picks": [
+     "angry+scared",
+     "happy+sad",
+     "happy+scared",
+     "angry+sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 37,
+    "scene": "bigkidpush",
+    "kind": "mix",
+    "text": "有人抢了你的球还推人，你又怕又生气",
+    "say": "有人抢了你的球还推人，你又怕又生气",
+    "sayKey": "etm_sc_bigkidpush",
+    "picks": [
+     "angry+sad",
+     "angry+scared",
+     "happy+sad",
+     "happy+scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 15,
+    "scene": "bookrip",
+    "kind": "mix",
+    "text": "绘本被撕坏了，你又气又难过",
+    "say": "绘本被撕坏了，你又气又难过",
+    "sayKey": "etm_sc_bookrip",
+    "picks": [
+     "angry+scared",
+     "happy+scared",
+     "angry+sad",
+     "happy+sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 16,
+    "scene": "funfair",
+    "kind": "mix",
+    "text": "明天去游乐园，你开心又有点怕下雨",
+    "say": "明天去游乐园，你开心又有点怕下雨",
+    "sayKey": "etm_sc_funfair",
+    "picks": [
+     "angry+scared",
+     "angry+sad",
+     "happy+sad",
+     "happy+scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "42": {
+  "ch": 9,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "row": 28,
+    "scene": "nightnoise",
+    "kind": "face",
+    "text": "半夜轰隆一声响，你从梦里惊醒了",
+    "say": "半夜轰隆一声响，你从梦里惊醒了",
+    "sayKey": "etm_sc_nightnoise",
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 5,
+    "scene": "fishfloat",
+    "kind": "face",
+    "text": "你的小金鱼不动了，浮在水面上",
+    "say": "你的小金鱼不动了，浮在水面上",
+    "sayKey": "etm_sc_fishfloat",
+    "picks": [
+     "scared",
+     "happy",
+     "angry",
+     "sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 26,
+    "scene": "darkhole",
+    "kind": "face",
+    "text": "球滚进黑黑的地下室，你不敢进去捡",
+    "say": "球滚进黑黑的地下室，你不敢进去捡",
+    "sayKey": "etm_sc_darkhole",
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 8,
+    "scene": "sacktower",
+    "kind": "face",
+    "text": "辛苦搭的高塔被人扫倒，他转身就走",
+    "say": "辛苦搭的高塔被人扫倒，他转身就走",
+    "sayKey": "etm_sc_sacktower",
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 25,
+    "scene": "rainpicnic",
+    "kind": "face",
+    "text": "期待好久的野餐，早上下起了大雨",
+    "say": "期待好久的野餐，早上下起了大雨",
+    "sayKey": "etm_sc_rainpicnic",
+    "picks": [
+     "scared",
+     "sad",
+     "angry",
+     "happy"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "43": {
+  "ch": 9,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "row": 32,
+    "scene": "interrupt",
+    "kind": "level",
+    "text": "你说话总是被人打断",
+    "say": "你说话总是被人打断",
+    "sayKey": "etm_sc_interrupt",
+    "picks": [
+     "l1",
+     "l3",
+     "l4",
+     "l2",
+     "l5"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l2",
+     "l3",
+     "l5",
+     "l4",
+     "l1"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 30,
+    "scene": "stepfoot",
+    "kind": "level",
+    "text": "排队时被轻轻踩了一脚",
+    "say": "排队时被轻轻踩了一脚",
+    "sayKey": "etm_sc_stepfoot",
+    "picks": [
+     "l4",
+     "l1",
+     "l2",
+     "l3",
+     "l5"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l2",
+     "l1",
+     "l4",
+     "l5",
+     "l3"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l2",
+     "l3",
+     "l5",
+     "l4",
+     "l1"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "44": {
+  "ch": 9,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "row": 22,
+    "scene": "towertop",
+    "kind": "face",
+    "text": "你搭的高塔成功了",
+    "say": "你搭的高塔成功了",
+    "sayKey": "etm_sc_towertop",
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 3,
+    "scene": "thunder",
+    "kind": "face",
+    "text": "打雷轰隆隆响",
+    "say": "打雷轰隆隆响",
+    "sayKey": "etm_sc_thunder",
+    "picks": [
+     "sad",
+     "happy",
+     "angry",
+     "scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 20,
+    "scene": "painting",
+    "kind": "face",
+    "text": "你的画被弄坏了",
+    "say": "你的画被弄坏了",
+    "sayKey": "etm_sc_painting",
+    "picks": [
+     "happy",
+     "sad",
+     "scared",
+     "angry"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 21,
+    "scene": "shoutloud",
+    "kind": "face",
+    "text": "有人对你大喊大叫",
+    "say": "有人对你大喊大叫",
+    "sayKey": "etm_sc_shoutloud",
+    "picks": [
+     "happy",
+     "scared",
+     "sad",
+     "angry"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 4,
+    "scene": "singsong",
+    "kind": "face",
+    "text": "大家一起唱歌",
+    "say": "大家一起唱歌",
+    "sayKey": "etm_sc_singsong",
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "45": {
+  "ch": 10,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "row": 25,
+    "scene": "rainpicnic",
+    "kind": "face",
+    "text": "期待好久的野餐，早上下起了大雨",
+    "say": "期待好久的野餐，早上下起了大雨",
+    "sayKey": "etm_sc_rainpicnic",
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 8,
+    "scene": "sacktower",
+    "kind": "face",
+    "text": "辛苦搭的高塔被人扫倒，他转身就走",
+    "say": "辛苦搭的高塔被人扫倒，他转身就走",
+    "sayKey": "etm_sc_sacktower",
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 26,
+    "scene": "darkhole",
+    "kind": "face",
+    "text": "球滚进黑黑的地下室，你不敢进去捡",
+    "say": "球滚进黑黑的地下室，你不敢进去捡",
+    "sayKey": "etm_sc_darkhole",
+    "picks": [
+     "sad",
+     "happy",
+     "angry",
+     "scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 9,
+    "scene": "artshow",
+    "kind": "face",
+    "text": "你的画被选去展览，大家都停下来看",
+    "say": "你的画被选去展览，大家都停下来看",
+    "sayKey": "etm_sc_artshow",
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 7,
+    "scene": "coinbank",
+    "kind": "face",
+    "text": "存钱罐里的钱，正好够买那个玩具",
+    "say": "存钱罐里的钱，正好够买那个玩具",
+    "sayKey": "etm_sc_coinbank",
+    "picks": [
+     "happy",
+     "angry",
+     "sad",
+     "scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "46": {
+  "ch": 10,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "row": 5,
+    "scene": "fishfloat",
+    "kind": "face",
+    "text": "你的小金鱼不动了，浮在水面上",
+    "say": "你的小金鱼不动了，浮在水面上",
+    "sayKey": "etm_sc_fishfloat",
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 26,
+    "scene": "darkhole",
+    "kind": "face",
+    "text": "球滚进黑黑的地下室，你不敢进去捡",
+    "say": "球滚进黑黑的地下室，你不敢进去捡",
+    "sayKey": "etm_sc_darkhole",
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 6,
+    "scene": "dooropen",
+    "kind": "face",
+    "text": "关了灯的房间，衣柜门吱呀开了",
+    "say": "关了灯的房间，衣柜门吱呀开了",
+    "sayKey": "etm_sc_dooropen",
+    "picks": [
+     "angry",
+     "sad",
+     "happy",
+     "scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 28,
+    "scene": "nightnoise",
+    "kind": "face",
+    "text": "半夜轰隆一声响，你从梦里惊醒了",
+    "say": "半夜轰隆一声响，你从梦里惊醒了",
+    "sayKey": "etm_sc_nightnoise",
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 27,
+    "scene": "grandma",
+    "kind": "face",
+    "text": "远方的奶奶坐了很久的车，来看你了",
+    "say": "远方的奶奶坐了很久的车，来看你了",
+    "sayKey": "etm_sc_grandma",
+    "picks": [
+     "sad",
+     "angry",
+     "happy",
+     "scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "47": {
+  "ch": 10,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "row": 6,
+    "scene": "dooropen",
+    "kind": "face",
+    "text": "关了灯的房间，衣柜门吱呀开了",
+    "say": "关了灯的房间，衣柜门吱呀开了",
+    "sayKey": "etm_sc_dooropen",
+    "picks": [
+     "happy",
+     "sad",
+     "scared",
+     "angry"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 27,
+    "scene": "grandma",
+    "kind": "face",
+    "text": "远方的奶奶坐了很久的车，来看你了",
+    "say": "远方的奶奶坐了很久的车，来看你了",
+    "sayKey": "etm_sc_grandma",
+    "picks": [
+     "angry",
+     "sad",
+     "happy",
+     "scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 25,
+    "scene": "rainpicnic",
+    "kind": "face",
+    "text": "期待好久的野餐，早上下起了大雨",
+    "say": "期待好久的野餐，早上下起了大雨",
+    "sayKey": "etm_sc_rainpicnic",
+    "picks": [
+     "scared",
+     "happy",
+     "angry",
+     "sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 29,
+    "scene": "kitewin",
+    "kind": "face",
+    "text": "风筝掉下来好多次，终于飞上了天",
+    "say": "风筝掉下来好多次，终于飞上了天",
+    "sayKey": "etm_sc_kitewin",
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 26,
+    "scene": "darkhole",
+    "kind": "face",
+    "text": "球滚进黑黑的地下室，你不敢进去捡",
+    "say": "球滚进黑黑的地下室，你不敢进去捡",
+    "sayKey": "etm_sc_darkhole",
+    "picks": [
+     "sad",
+     "scared",
+     "angry",
+     "happy"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "48": {
+  "ch": 10,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "row": 19,
+    "scene": "stageshow",
+    "kind": "mix",
+    "text": "要上台表演啦，你开心又怕忘动作",
+    "say": "要上台表演啦，你开心又怕忘动作",
+    "sayKey": "etm_sc_stageshow",
+    "picks": [
+     "angry+scared",
+     "angry+sad",
+     "happy+scared",
+     "happy+sad"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 15,
+    "scene": "bookrip",
+    "kind": "mix",
+    "text": "绘本被撕坏了，你又气又难过",
+    "say": "绘本被撕坏了，你又气又难过",
+    "sayKey": "etm_sc_bookrip",
+    "picks": [
+     "happy+sad",
+     "angry+sad",
+     "happy+scared",
+     "angry+scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 17,
+    "scene": "friendmove",
+    "kind": "mix",
+    "text": "好朋友要搬走了，你为他开心又舍不得",
+    "say": "好朋友要搬走了，你为他开心又舍不得",
+    "sayKey": "etm_sc_friendmove",
+    "picks": [
+     "happy+sad",
+     "angry+scared",
+     "angry+sad",
+     "happy+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 18,
+    "scene": "bullyshout",
+    "kind": "mix",
+    "text": "有人抢你玩具还凶你，你又怕又生气",
+    "say": "有人抢你玩具还凶你，你又怕又生气",
+    "sayKey": "etm_sc_bullyshout",
+    "picks": [
+     "angry+scared",
+     "happy+scared",
+     "happy+sad",
+     "angry+sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 38,
+    "scene": "legobroke",
+    "kind": "mix",
+    "text": "乐高被踩坏了，你又生气又心疼",
+    "say": "乐高被踩坏了，你又生气又心疼",
+    "sayKey": "etm_sc_legobroke",
+    "picks": [
+     "happy+sad",
+     "angry+scared",
+     "angry+sad",
+     "happy+scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "49": {
+  "ch": 10,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "row": 28,
+    "scene": "nightnoise",
+    "kind": "face",
+    "text": "半夜轰隆一声响，你从梦里惊醒了",
+    "say": "半夜轰隆一声响，你从梦里惊醒了",
+    "sayKey": "etm_sc_nightnoise",
+    "picks": [
+     "scared",
+     "happy",
+     "angry",
+     "sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 8,
+    "scene": "sacktower",
+    "kind": "face",
+    "text": "辛苦搭的高塔被人扫倒，他转身就走",
+    "say": "辛苦搭的高塔被人扫倒，他转身就走",
+    "sayKey": "etm_sc_sacktower",
+    "picks": [
+     "angry",
+     "sad",
+     "happy",
+     "scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 26,
+    "scene": "darkhole",
+    "kind": "face",
+    "text": "球滚进黑黑的地下室，你不敢进去捡",
+    "say": "球滚进黑黑的地下室，你不敢进去捡",
+    "sayKey": "etm_sc_darkhole",
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 5,
+    "scene": "fishfloat",
+    "kind": "face",
+    "text": "你的小金鱼不动了，浮在水面上",
+    "say": "你的小金鱼不动了，浮在水面上",
+    "sayKey": "etm_sc_fishfloat",
+    "picks": [
+     "happy",
+     "scared",
+     "sad",
+     "angry"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 25,
+    "scene": "rainpicnic",
+    "kind": "face",
+    "text": "期待好久的野餐，早上下起了大雨",
+    "say": "期待好久的野餐，早上下起了大雨",
+    "sayKey": "etm_sc_rainpicnic",
+    "picks": [
+     "sad",
+     "scared",
+     "angry",
+     "happy"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "50": {
+  "ch": 11,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "row": 4,
+    "scene": "singsong",
+    "kind": "face",
+    "text": "大家一起唱歌",
+    "say": "大家一起唱歌",
+    "sayKey": "etm_sc_singsong",
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 22,
+    "scene": "towertop",
+    "kind": "face",
+    "text": "你搭的高塔成功了",
+    "say": "你搭的高塔成功了",
+    "sayKey": "etm_sc_towertop",
+    "picks": [
+     "sad",
+     "happy",
+     "angry",
+     "scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 0,
+    "scene": "flower",
+    "kind": "face",
+    "text": "朋友送你一朵小花",
+    "say": "朋友送你一朵小花",
+    "sayKey": "etm_sc_flower",
+    "picks": [
+     "happy",
+     "sad",
+     "scared",
+     "angry"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 20,
+    "scene": "painting",
+    "kind": "face",
+    "text": "你的画被弄坏了",
+    "say": "你的画被弄坏了",
+    "sayKey": "etm_sc_painting",
+    "picks": [
+     "angry",
+     "scared",
+     "happy",
+     "sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 2,
+    "scene": "balloonfly",
+    "kind": "face",
+    "text": "心爱的气球飞走了",
+    "say": "心爱的气球飞走了",
+    "sayKey": "etm_sc_balloonfly",
+    "picks": [
+     "angry",
+     "sad",
+     "scared",
+     "happy"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "51": {
+  "ch": 11,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "row": 4,
+    "scene": "singsong",
+    "kind": "face",
+    "text": "大家一起唱歌",
+    "say": "大家一起唱歌",
+    "sayKey": "etm_sc_singsong",
+    "picks": [
+     "sad",
+     "scared",
+     "angry",
+     "happy"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 23,
+    "scene": "grabtoy",
+    "kind": "face",
+    "text": "玩具被人抢走了",
+    "say": "玩具被人抢走了",
+    "sayKey": "etm_sc_grabtoy",
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 3,
+    "scene": "thunder",
+    "kind": "face",
+    "text": "打雷轰隆隆响",
+    "say": "打雷轰隆隆响",
+    "sayKey": "etm_sc_thunder",
+    "picks": [
+     "scared",
+     "sad",
+     "angry",
+     "happy"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 21,
+    "scene": "shoutloud",
+    "kind": "face",
+    "text": "有人对你大喊大叫",
+    "say": "有人对你大喊大叫",
+    "sayKey": "etm_sc_shoutloud",
+    "picks": [
+     "angry",
+     "sad",
+     "scared",
+     "happy"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 22,
+    "scene": "towertop",
+    "kind": "face",
+    "text": "你搭的高塔成功了",
+    "say": "你搭的高塔成功了",
+    "sayKey": "etm_sc_towertop",
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "52": {
+  "ch": 11,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "row": 31,
+    "scene": "queuejump",
+    "kind": "level",
+    "text": "有人插队，一下站到了你的前面",
+    "say": "有人插队，一下站到了你的前面",
+    "sayKey": "etm_sc_queuejump",
+    "picks": [
+     "l2",
+     "l5",
+     "l1",
+     "l4",
+     "l3"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 30,
+    "scene": "stepfoot",
+    "kind": "level",
+    "text": "排队时被轻轻踩了一脚",
+    "say": "排队时被轻轻踩了一脚",
+    "sayKey": "etm_sc_stepfoot",
+    "picks": [
+     "l2",
+     "l1",
+     "l5",
+     "l3",
+     "l4"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 32,
+    "scene": "interrupt",
+    "kind": "level",
+    "text": "你说话总是被人打断",
+    "say": "你说话总是被人打断",
+    "sayKey": "etm_sc_interrupt",
+    "picks": [
+     "l5",
+     "l2",
+     "l1",
+     "l3",
+     "l4"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l4",
+     "l5",
+     "l2",
+     "l1",
+     "l3"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l5",
+     "l3",
+     "l2",
+     "l1",
+     "l4"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "53": {
+  "ch": 11,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "row": 18,
+    "scene": "bullyshout",
+    "kind": "mix",
+    "text": "有人抢你玩具还凶你，你又怕又生气",
+    "say": "有人抢你玩具还凶你，你又怕又生气",
+    "sayKey": "etm_sc_bullyshout",
+    "picks": [
+     "angry+sad",
+     "happy+sad",
+     "happy+scared",
+     "angry+scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 37,
+    "scene": "bigkidpush",
+    "kind": "mix",
+    "text": "有人抢了你的球还推人，你又怕又生气",
+    "say": "有人抢了你的球还推人，你又怕又生气",
+    "sayKey": "etm_sc_bigkidpush",
+    "picks": [
+     "angry+scared",
+     "angry+sad",
+     "happy+sad",
+     "happy+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 39,
+    "scene": "racefirst",
+    "kind": "mix",
+    "text": "明天要比赛了，你开心又怕输",
+    "say": "明天要比赛了，你开心又怕输",
+    "sayKey": "etm_sc_racefirst",
+    "picks": [
+     "happy+sad",
+     "angry+sad",
+     "angry+scared",
+     "happy+scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 17,
+    "scene": "friendmove",
+    "kind": "mix",
+    "text": "好朋友要搬走了，你为他开心又舍不得",
+    "say": "好朋友要搬走了，你为他开心又舍不得",
+    "sayKey": "etm_sc_friendmove",
+    "picks": [
+     "happy+sad",
+     "happy+scared",
+     "angry+sad",
+     "angry+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 36,
+    "scene": "gradfare",
+    "kind": "mix",
+    "text": "拿到毕业奖状很开心，又舍不得老师",
+    "say": "拿到毕业奖状很开心，又舍不得老师",
+    "sayKey": "etm_sc_gradfare",
+    "picks": [
+     "happy+sad",
+     "angry+sad",
+     "happy+scared",
+     "angry+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "54": {
+  "ch": 11,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "row": 22,
+    "scene": "towertop",
+    "kind": "face",
+    "text": "你搭的高塔成功了",
+    "say": "你搭的高塔成功了",
+    "sayKey": "etm_sc_towertop",
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 2,
+    "scene": "balloonfly",
+    "kind": "face",
+    "text": "心爱的气球飞走了",
+    "say": "心爱的气球飞走了",
+    "sayKey": "etm_sc_balloonfly",
+    "picks": [
+     "happy",
+     "angry",
+     "sad",
+     "scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 23,
+    "scene": "grabtoy",
+    "kind": "face",
+    "text": "玩具被人抢走了",
+    "say": "玩具被人抢走了",
+    "sayKey": "etm_sc_grabtoy",
+    "picks": [
+     "happy",
+     "sad",
+     "angry",
+     "scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 1,
+    "scene": "blocksdown",
+    "kind": "face",
+    "text": "妹妹把你的积木推倒了",
+    "say": "妹妹把你的积木推倒了",
+    "sayKey": "etm_sc_blocksdown",
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 3,
+    "scene": "thunder",
+    "kind": "face",
+    "text": "打雷轰隆隆响",
+    "say": "打雷轰隆隆响",
+    "sayKey": "etm_sc_thunder",
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "55": {
+  "ch": 12,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "row": 10,
+    "scene": "crayondrop",
+    "kind": "level",
+    "text": "有人不小心碰掉了你的蜡笔",
+    "say": "有人不小心碰掉了你的蜡笔",
+    "sayKey": "etm_sc_crayondrop",
+    "picks": [
+     "l3",
+     "l2",
+     "l1",
+     "l5",
+     "l4"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l1",
+     "l4",
+     "l2",
+     "l5",
+     "l3"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l4",
+     "l3",
+     "l5",
+     "l2",
+     "l1"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 31,
+    "scene": "queuejump",
+    "kind": "level",
+    "text": "有人插队，一下站到了你的前面",
+    "say": "有人插队，一下站到了你的前面",
+    "sayKey": "etm_sc_queuejump",
+    "picks": [
+     "l5",
+     "l1",
+     "l3",
+     "l4",
+     "l2"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 30,
+    "scene": "stepfoot",
+    "kind": "level",
+    "text": "排队时被轻轻踩了一脚",
+    "say": "排队时被轻轻踩了一脚",
+    "sayKey": "etm_sc_stepfoot",
+    "picks": [
+     "l3",
+     "l2",
+     "l4",
+     "l1",
+     "l5"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "56": {
+  "ch": 12,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l3",
+     "l1",
+     "l5",
+     "l4",
+     "l2"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l4",
+     "l2",
+     "l5",
+     "l3",
+     "l1"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 10,
+    "scene": "crayondrop",
+    "kind": "level",
+    "text": "有人不小心碰掉了你的蜡笔",
+    "say": "有人不小心碰掉了你的蜡笔",
+    "sayKey": "etm_sc_crayondrop",
+    "picks": [
+     "l2",
+     "l3",
+     "l5",
+     "l1",
+     "l4"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 32,
+    "scene": "interrupt",
+    "kind": "level",
+    "text": "你说话总是被人打断",
+    "say": "你说话总是被人打断",
+    "sayKey": "etm_sc_interrupt",
+    "picks": [
+     "l2",
+     "l1",
+     "l3",
+     "l5",
+     "l4"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 31,
+    "scene": "queuejump",
+    "kind": "level",
+    "text": "有人插队，一下站到了你的前面",
+    "say": "有人插队，一下站到了你的前面",
+    "sayKey": "etm_sc_queuejump",
+    "picks": [
+     "l3",
+     "l4",
+     "l1",
+     "l5",
+     "l2"
+    ],
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "57": {
+  "ch": 12,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "row": 15,
+    "scene": "bookrip",
+    "kind": "mix",
+    "text": "绘本被撕坏了，你又气又难过",
+    "say": "绘本被撕坏了，你又气又难过",
+    "sayKey": "etm_sc_bookrip",
+    "picks": [
+     "happy+scared",
+     "happy+sad",
+     "angry+sad",
+     "angry+scared"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 35,
+    "scene": "puzzlelost",
+    "kind": "mix",
+    "text": "拼图被弄丢了，你又气又想哭",
+    "say": "拼图被弄丢了，你又气又想哭",
+    "sayKey": "etm_sc_puzzlelost",
+    "picks": [
+     "angry+scared",
+     "angry+sad",
+     "happy+scared",
+     "happy+sad"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 36,
+    "scene": "gradfare",
+    "kind": "mix",
+    "text": "拿到毕业奖状很开心，又舍不得老师",
+    "say": "拿到毕业奖状很开心，又舍不得老师",
+    "sayKey": "etm_sc_gradfare",
+    "picks": [
+     "angry+sad",
+     "angry+scared",
+     "happy+scared",
+     "happy+sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 39,
+    "scene": "racefirst",
+    "kind": "mix",
+    "text": "明天要比赛了，你开心又怕输",
+    "say": "明天要比赛了，你开心又怕输",
+    "sayKey": "etm_sc_racefirst",
+    "picks": [
+     "angry+scared",
+     "happy+scared",
+     "angry+sad",
+     "happy+sad"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 37,
+    "scene": "bigkidpush",
+    "kind": "mix",
+    "text": "有人抢了你的球还推人，你又怕又生气",
+    "say": "有人抢了你的球还推人，你又怕又生气",
+    "sayKey": "etm_sc_bigkidpush",
+    "picks": [
+     "happy+sad",
+     "angry+sad",
+     "happy+scared",
+     "angry+scared"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "58": {
+  "ch": 12,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "row": 37,
+    "scene": "bigkidpush",
+    "kind": "mix",
+    "text": "有人抢了你的球还推人，你又怕又生气",
+    "say": "有人抢了你的球还推人，你又怕又生气",
+    "sayKey": "etm_sc_bigkidpush",
+    "picks": [
+     "angry+sad",
+     "angry+scared",
+     "happy+sad",
+     "happy+scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 16,
+    "scene": "funfair",
+    "kind": "mix",
+    "text": "明天去游乐园，你开心又有点怕下雨",
+    "say": "明天去游乐园，你开心又有点怕下雨",
+    "sayKey": "etm_sc_funfair",
+    "picks": [
+     "happy+scared",
+     "angry+scared",
+     "angry+sad",
+     "happy+sad"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 15,
+    "scene": "bookrip",
+    "kind": "mix",
+    "text": "绘本被撕坏了，你又气又难过",
+    "say": "绘本被撕坏了，你又气又难过",
+    "sayKey": "etm_sc_bookrip",
+    "picks": [
+     "angry+sad",
+     "happy+sad",
+     "angry+scared",
+     "happy+scared"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 36,
+    "scene": "gradfare",
+    "kind": "mix",
+    "text": "拿到毕业奖状很开心，又舍不得老师",
+    "say": "拿到毕业奖状很开心，又舍不得老师",
+    "sayKey": "etm_sc_gradfare",
+    "picks": [
+     "angry+scared",
+     "angry+sad",
+     "happy+scared",
+     "happy+sad"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 17,
+    "scene": "friendmove",
+    "kind": "mix",
+    "text": "好朋友要搬走了，你为他开心又舍不得",
+    "say": "好朋友要搬走了，你为他开心又舍不得",
+    "sayKey": "etm_sc_friendmove",
+    "picks": [
+     "angry+sad",
+     "happy+sad",
+     "happy+scared",
+     "angry+scared"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "59": {
+  "ch": 12,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "row": 12,
+    "scene": "swinggrab",
+    "kind": "level",
+    "text": "有人一直抢你的秋千",
+    "say": "有人一直抢你的秋千",
+    "sayKey": "etm_sc_swinggrab",
+    "picks": [
+     "l2",
+     "l5",
+     "l1",
+     "l3",
+     "l4"
+    ],
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 14,
+    "scene": "ruinlaugh",
+    "kind": "level",
+    "text": "有人弄坏了你的画还笑你",
+    "say": "有人弄坏了你的画还笑你",
+    "sayKey": "etm_sc_ruinlaugh",
+    "picks": [
+     "l3",
+     "l2",
+     "l5",
+     "l1",
+     "l4"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 34,
+    "scene": "tearbook",
+    "kind": "level",
+    "text": "有人撕了你的故事书还做鬼脸",
+    "say": "有人撕了你的故事书还做鬼脸",
+    "sayKey": "etm_sc_tearbook",
+    "picks": [
+     "l1",
+     "l2",
+     "l5",
+     "l4",
+     "l3"
+    ],
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 13,
+    "scene": "castlekick",
+    "kind": "level",
+    "text": "辛苦搭的城堡被故意踢倒",
+    "say": "辛苦搭的城堡被故意踢倒",
+    "sayKey": "etm_sc_castlekick",
+    "picks": [
+     "l5",
+     "l4",
+     "l1",
+     "l2",
+     "l3"
+    ],
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "row": 11,
+    "scene": "snatchtoy",
+    "kind": "level",
+    "text": "有人抢走你手里的玩具",
+    "say": "有人抢走你手里的玩具",
+    "sayKey": "etm_sc_snatchtoy",
+    "picks": [
+     "l2",
+     "l1",
+     "l4",
+     "l3",
+     "l5"
+    ],
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ }
+}

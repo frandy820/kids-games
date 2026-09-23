@@ -1,0 +1,3857 @@
+{
+ "0": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "flower",
+    "ans": "happy",
+    "answer": 2,
+    "picks": [
+     "angry",
+     "scared",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "blocksdown",
+    "ans": "angry",
+    "answer": 0,
+    "picks": [
+     "angry",
+     "sad",
+     "scared",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "balloonfly",
+    "ans": "sad",
+    "answer": 2,
+    "picks": [
+     "angry",
+     "scared",
+     "sad",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 1,
+    "picks": [
+     "angry",
+     "scared",
+     "sad",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 2,
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ]
+   }
+  ]
+ },
+ "1": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "blocksdown",
+    "ans": "angry",
+    "answer": 3,
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "balloonfly",
+    "ans": "sad",
+    "answer": 3,
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 1,
+    "picks": [
+     "happy",
+     "scared",
+     "angry",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 3,
+    "picks": [
+     "scared",
+     "angry",
+     "sad",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "flower",
+    "ans": "happy",
+    "answer": 3,
+    "picks": [
+     "scared",
+     "angry",
+     "sad",
+     "happy"
+    ]
+   }
+  ]
+ },
+ "2": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "balloonfly",
+    "ans": "sad",
+    "answer": 1,
+    "picks": [
+     "scared",
+     "sad",
+     "happy",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 2,
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 1,
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "flower",
+    "ans": "happy",
+    "answer": 3,
+    "picks": [
+     "scared",
+     "sad",
+     "angry",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "blocksdown",
+    "ans": "angry",
+    "answer": 1,
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ]
+   }
+  ]
+ },
+ "3": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 1,
+    "picks": [
+     "angry",
+     "scared",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 2,
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "flower",
+    "ans": "happy",
+    "answer": 0,
+    "picks": [
+     "happy",
+     "scared",
+     "angry",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "blocksdown",
+    "ans": "angry",
+    "answer": 1,
+    "picks": [
+     "scared",
+     "angry",
+     "sad",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "balloonfly",
+    "ans": "sad",
+    "answer": 0,
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ]
+   }
+  ]
+ },
+ "4": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 1,
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "flower",
+    "ans": "happy",
+    "answer": 1,
+    "picks": [
+     "sad",
+     "happy",
+     "angry",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "blocksdown",
+    "ans": "angry",
+    "answer": 2,
+    "picks": [
+     "happy",
+     "scared",
+     "angry",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "balloonfly",
+    "ans": "sad",
+    "answer": 2,
+    "picks": [
+     "happy",
+     "scared",
+     "sad",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 2,
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ]
+   }
+  ]
+ },
+ "5": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 0,
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 3,
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 2,
+    "picks": [
+     "happy",
+     "scared",
+     "angry",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "lostmom",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "sad",
+     "happy",
+     "angry",
+     "scared"
+    ]
+   }
+  ]
+ },
+ "6": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 1,
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 3,
+    "picks": [
+     "happy",
+     "sad",
+     "scared",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "lostmom",
+    "ans": "scared",
+    "answer": 1,
+    "picks": [
+     "happy",
+     "scared",
+     "sad",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 3,
+    "picks": [
+     "happy",
+     "scared",
+     "angry",
+     "sad"
+    ]
+   }
+  ]
+ },
+ "7": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 3,
+    "picks": [
+     "angry",
+     "scared",
+     "sad",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 3,
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "lostmom",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "sad",
+     "angry",
+     "happy",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 0,
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ]
+   }
+  ]
+ },
+ "8": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 3,
+    "picks": [
+     "scared",
+     "sad",
+     "happy",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "lostmom",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "sad",
+     "angry",
+     "happy",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 1,
+    "picks": [
+     "happy",
+     "sad",
+     "scared",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 0,
+    "picks": [
+     "happy",
+     "sad",
+     "angry",
+     "scared"
+    ]
+   }
+  ]
+ },
+ "9": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "lostmom",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "angry",
+     "sad",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 0,
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 1,
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 3,
+    "picks": [
+     "scared",
+     "sad",
+     "happy",
+     "angry"
+    ]
+   }
+  ]
+ },
+ "10": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "11": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 0,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "12": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "13": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 0,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 0,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "14": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "15": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "16": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 0,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "17": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   }
+  ]
+ },
+ "18": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "19": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   }
+  ]
+ },
+ "20": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   }
+  ]
+ },
+ "21": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 1,
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 1,
+    "picks": [
+     "angry",
+     "scared",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 2,
+    "picks": [
+     "happy",
+     "angry",
+     "sad",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 0,
+    "picks": [
+     "angry",
+     "sad",
+     "happy",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "lostmom",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "angry",
+     "sad",
+     "happy"
+    ]
+   }
+  ]
+ },
+ "22": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "blocksdown",
+    "ans": "angry",
+    "answer": 1,
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "lostmom",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "happy",
+     "angry",
+     "sad",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 3,
+    "picks": [
+     "scared",
+     "sad",
+     "angry",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "flower",
+    "ans": "happy",
+    "answer": 0,
+    "picks": [
+     "happy",
+     "scared",
+     "angry",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 3,
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ]
+   }
+  ]
+ },
+ "23": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "angry",
+     "sad",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 1,
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 1,
+    "picks": [
+     "sad",
+     "happy",
+     "angry",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "blocksdown",
+    "ans": "angry",
+    "answer": 0,
+    "picks": [
+     "angry",
+     "sad",
+     "happy",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "lostmom",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ]
+   }
+  ]
+ },
+ "24": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   }
+  ]
+ },
+ "25": {
+  "ch": 6,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   }
+  ]
+ },
+ "26": {
+  "ch": 6,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   }
+  ]
+ },
+ "27": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   }
+  ]
+ },
+ "28": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 0,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "29": {
+  "ch": 6,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   }
+  ]
+ },
+ "30": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   }
+  ]
+ },
+ "31": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "32": {
+  "ch": 7,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "blocksdown",
+    "ans": "angry",
+    "answer": 2,
+    "picks": [
+     "scared",
+     "sad",
+     "angry",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 2,
+    "picks": [
+     "scared",
+     "sad",
+     "happy",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "balloonfly",
+    "ans": "sad",
+    "answer": 1,
+    "picks": [
+     "angry",
+     "sad",
+     "scared",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "sad",
+     "happy",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 2,
+    "picks": [
+     "happy",
+     "angry",
+     "sad",
+     "scared"
+    ]
+   }
+  ]
+ },
+ "33": {
+  "ch": 7,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "balloonfly",
+    "ans": "sad",
+    "answer": 0,
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "lostmom",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "sad",
+     "angry",
+     "happy",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "blocksdown",
+    "ans": "angry",
+    "answer": 1,
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 2,
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 1,
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ]
+   }
+  ]
+ },
+ "34": {
+  "ch": 7,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "flower",
+    "ans": "happy",
+    "answer": 1,
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 2,
+    "picks": [
+     "scared",
+     "sad",
+     "happy",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "balloonfly",
+    "ans": "sad",
+    "answer": 3,
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 0,
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "lostmom",
+    "ans": "scared",
+    "answer": 2,
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ]
+   }
+  ]
+ },
+ "35": {
+  "ch": 8,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   }
+  ]
+ },
+ "36": {
+  "ch": 8,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 3,
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 0,
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 3,
+    "picks": [
+     "angry",
+     "sad",
+     "scared",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "flower",
+    "ans": "happy",
+    "answer": 0,
+    "picks": [
+     "happy",
+     "angry",
+     "sad",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "happy",
+     "sad",
+     "angry",
+     "scared"
+    ]
+   }
+  ]
+ },
+ "37": {
+  "ch": 8,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "38": {
+  "ch": 8,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "lostmom",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 2,
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 1,
+    "picks": [
+     "scared",
+     "sad",
+     "angry",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "sad",
+     "angry",
+     "happy",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "balloonfly",
+    "ans": "sad",
+    "answer": 3,
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ]
+   }
+  ]
+ },
+ "39": {
+  "ch": 8,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 0,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   }
+  ]
+ },
+ "40": {
+  "ch": 9,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   }
+  ]
+ },
+ "41": {
+  "ch": 9,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 0,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   }
+  ]
+ },
+ "42": {
+  "ch": 9,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 0,
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "flower",
+    "ans": "happy",
+    "answer": 1,
+    "picks": [
+     "scared",
+     "happy",
+     "angry",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 1,
+    "picks": [
+     "scared",
+     "sad",
+     "angry",
+     "happy"
+    ]
+   }
+  ]
+ },
+ "43": {
+  "ch": 9,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   }
+  ]
+ },
+ "44": {
+  "ch": 9,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 0,
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "sad",
+     "happy",
+     "angry",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 1,
+    "picks": [
+     "happy",
+     "sad",
+     "scared",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 1,
+    "picks": [
+     "happy",
+     "scared",
+     "sad",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 1,
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ]
+   }
+  ]
+ },
+ "45": {
+  "ch": 10,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 0,
+    "picks": [
+     "sad",
+     "happy",
+     "scared",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "sad",
+     "happy",
+     "angry",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 2,
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "balloonfly",
+    "ans": "sad",
+    "answer": 2,
+    "picks": [
+     "happy",
+     "angry",
+     "sad",
+     "scared"
+    ]
+   }
+  ]
+ },
+ "46": {
+  "ch": 10,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "flower",
+    "ans": "happy",
+    "answer": 2,
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 2,
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "blocksdown",
+    "ans": "angry",
+    "answer": 0,
+    "picks": [
+     "angry",
+     "sad",
+     "happy",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 3,
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 2,
+    "picks": [
+     "sad",
+     "angry",
+     "happy",
+     "scared"
+    ]
+   }
+  ]
+ },
+ "47": {
+  "ch": 10,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "blocksdown",
+    "ans": "angry",
+    "answer": 3,
+    "picks": [
+     "happy",
+     "sad",
+     "scared",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 2,
+    "picks": [
+     "angry",
+     "sad",
+     "happy",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 3,
+    "picks": [
+     "scared",
+     "happy",
+     "angry",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "lostmom",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "happy",
+     "sad",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 1,
+    "picks": [
+     "sad",
+     "scared",
+     "angry",
+     "happy"
+    ]
+   }
+  ]
+ },
+ "48": {
+  "ch": 10,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 0,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "tearbook",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "49": {
+  "ch": 10,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 2,
+    "picks": [
+     "scared",
+     "happy",
+     "angry",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "angry",
+     "sad",
+     "happy",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 3,
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "flower",
+    "ans": "happy",
+    "answer": 0,
+    "picks": [
+     "happy",
+     "scared",
+     "sad",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 0,
+    "picks": [
+     "sad",
+     "scared",
+     "angry",
+     "happy"
+    ]
+   }
+  ]
+ },
+ "50": {
+  "ch": 11,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 0,
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 1,
+    "picks": [
+     "sad",
+     "happy",
+     "angry",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "flower",
+    "ans": "happy",
+    "answer": 0,
+    "picks": [
+     "happy",
+     "sad",
+     "scared",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "painting",
+    "ans": "sad",
+    "answer": 3,
+    "picks": [
+     "angry",
+     "scared",
+     "happy",
+     "sad"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "balloonfly",
+    "ans": "sad",
+    "answer": 1,
+    "picks": [
+     "angry",
+     "sad",
+     "scared",
+     "happy"
+    ]
+   }
+  ]
+ },
+ "51": {
+  "ch": 11,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "singsong",
+    "ans": "happy",
+    "answer": 3,
+    "picks": [
+     "sad",
+     "scared",
+     "angry",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 0,
+    "picks": [
+     "angry",
+     "happy",
+     "sad",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "sad",
+     "angry",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "shoutloud",
+    "ans": "scared",
+    "answer": 2,
+    "picks": [
+     "angry",
+     "sad",
+     "scared",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 0,
+    "picks": [
+     "happy",
+     "angry",
+     "scared",
+     "sad"
+    ]
+   }
+  ]
+ },
+ "52": {
+  "ch": 11,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 0,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   }
+  ]
+ },
+ "53": {
+  "ch": 11,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "54": {
+  "ch": 11,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "face",
+    "scene": "towertop",
+    "ans": "happy",
+    "answer": 2,
+    "picks": [
+     "sad",
+     "scared",
+     "happy",
+     "angry"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "balloonfly",
+    "ans": "sad",
+    "answer": 2,
+    "picks": [
+     "happy",
+     "angry",
+     "sad",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "grabtoy",
+    "ans": "angry",
+    "answer": 2,
+    "picks": [
+     "happy",
+     "sad",
+     "angry",
+     "scared"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "blocksdown",
+    "ans": "angry",
+    "answer": 1,
+    "picks": [
+     "sad",
+     "angry",
+     "scared",
+     "happy"
+    ]
+   },
+   {
+    "kind": "face",
+    "scene": "thunder",
+    "ans": "scared",
+    "answer": 0,
+    "picks": [
+     "scared",
+     "angry",
+     "happy",
+     "sad"
+    ]
+   }
+  ]
+ },
+ "55": {
+  "ch": 12,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 0,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   }
+  ]
+ },
+ "56": {
+  "ch": 12,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 2,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   }
+  ]
+ },
+ "57": {
+  "ch": 12,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 0,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "interrupt",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 1,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   }
+  ]
+ },
+ "58": {
+  "ch": 12,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "paintspill",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "crayondrop",
+    "ans": "l1",
+    "answer": 0,
+    "picks": [
+     "l1",
+     "l2",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "castlekick",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 0,
+    "picks": [
+     "l3",
+     "l1",
+     "l2"
+    ]
+   }
+  ]
+ },
+ "59": {
+  "ch": 12,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "level",
+    "scene": "ruinlaugh",
+    "ans": "l3",
+    "answer": 1,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "swinggrab",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l3",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "longwait",
+    "ans": "l2",
+    "answer": 0,
+    "picks": [
+     "l2",
+     "l1",
+     "l3"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "stepfoot",
+    "ans": "l1",
+    "answer": 2,
+    "picks": [
+     "l3",
+     "l2",
+     "l1"
+    ]
+   },
+   {
+    "kind": "level",
+    "scene": "snatchtoy",
+    "ans": "l2",
+    "answer": 2,
+    "picks": [
+     "l1",
+     "l3",
+     "l2"
+    ]
+   }
+  ]
+ }
+}

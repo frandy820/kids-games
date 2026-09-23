@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>钓鱼颜色</title>
+<style>
+/* ================= 钓鱼颜色 fishcolor（batch7）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、池塘浅青水面、暖橙主色、灰蓝错误色（不用大红）
+   触摸目标：小鱼热区 ≥64（章 4 密集档 86×69）、底栏按钮 ≥72、"再听" ≥80 高；
+   pointerdown 即响应（命中按元素实时位置）；鱼位由 JS 撒点（中心距 ≥90px 防重叠不可点）
+   游动在内层 .swim 上做（按钮盒静止→布局断言/命中判定稳定）；摆尾在 SVG 尾巴 g 上做 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#7FC4BB;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：池塘 + 题面色卡 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:10px;overflow:hidden;padding:6px 10px}
+/* 池塘：浅青水面 + 内嵌水波/荷叶/芦苇（低干扰不响应点击） */
+#pond{position:relative;width:100%;max-width:1180px;flex:1 1 auto;min-height:200px;
+  background:linear-gradient(180deg,#D8ECE8 0%,#C8E2DC 55%,#BEDAD3 100%);
+  border:3px solid #A9CCC4;border-radius:26px;overflow:hidden;
+  box-shadow:inset 0 0 0 6px rgba(255,249,238,.5)}
+#pond .water{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.95}
+/* 钓竿（右上装饰，钓起时抖动拉起） */
+#rod{position:absolute;top:-1px;right:22px;width:112px;height:98px;pointer-events:none;z-index:2;
+  transform-origin:96% 4%}
+#rod.tug{animation:rod-tug .5s ease}
+@keyframes rod-tug{0%,100%{transform:rotate(0)}30%{transform:rotate(-7deg) translateY(-3px)}65%{transform:rotate(3deg)}}
+
+/* ---------- 场上小鱼：绝对定位按钮，尺寸/坐标由 JS 撒点 ---------- */
+.animal{position:absolute;padding:0;border:none;background:none;transform-origin:50% 60%;
+  transition:none;will-change:transform}
+.animal .swim{display:block;width:100%;height:100%;pointer-events:none;
+  animation:an-swim var(--dur,9s) ease-in-out var(--del,0s) infinite alternate}
+@keyframes an-swim{from{transform:translateX(-9%)}to{transform:translateX(9%)}}
+.animal .swim svg{width:100%;height:100%}
+/* 摆尾（SVG 尾巴独立 g，transform-box 锚在鱼身一侧） */
+.fishsvg .tail{transform-box:fill-box;transform-origin:86% 50%;animation:an-tail .46s ease-in-out infinite alternate}
+@keyframes an-tail{from{transform:rotate(12deg)}to{transform:rotate(-12deg)}}
+.animal.fish{filter:drop-shadow(0 3px 0 rgba(150,190,182,.55))}
+/* 钓起：角标弹出 → 鱼咬钩被拉出水面（.rise 0.68s）→ .gone 隐藏 */
+.animal.rise{animation:an-rise .68s cubic-bezier(.4,.05,.6,1) forwards;pointer-events:none;z-index:5}
+@keyframes an-rise{
+  0%{transform:translateY(0) scale(1);opacity:1}
+  22%{transform:translateY(7%) scale(1.07);opacity:1}
+  100%{transform:translateY(-270%) scale(.4) rotate(-14deg);opacity:0}}
+.animal.gone{visibility:hidden;pointer-events:none}
+/* 点非目标色鱼：摆尾躲开（零惩罚，不计数） */
+.animal.wig{animation:an-wig .55s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}22%{transform:rotate(-9deg) translateX(5%)}
+  55%{transform:rotate(8deg) translateX(-4%)}80%{transform:rotate(-4deg)}}
+/* 连错 2 次后：目标色鱼呼吸高亮（首错不 pulse，给再想机会） */
+.animal.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+@keyframes an-breathe{
+  0%,100%{filter:none}
+  50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+/* 计数角标：钓起序号圆片（1..K） */
+.animal .badge{position:absolute;top:-12%;right:-7%;min-width:34px;height:34px;padding:0 5px;
+  border-radius:17px;background:#FFF9EE;border:3px solid #E8975A;color:#4A3B2E;
+  font-size:21px;font-weight:800;display:none;align-items:center;justify-content:center;
+  font-variant-numeric:tabular-nums;box-shadow:0 2px 0 #D8C9B4;pointer-events:none;z-index:3}
+.animal .badge.on{display:flex;animation:badge-pop .4s cubic-bezier(.2,1.6,.4,1)}
+@keyframes badge-pop{from{transform:scale(0) rotate(-18deg)}to{transform:scale(1) rotate(0)}}
+/* r7 鱼群游散：散去=内层游出+淡出，按钮 .away 不可点（按钮盒不动=布局断言稳定） */
+.animal.away{pointer-events:none}
+.animal.away .swim{animation:an-away .55s ease-in forwards}
+@keyframes an-away{to{transform:translateY(-46px) scale(.55);opacity:0}}
+
+/* ---------- 题面行：目标色卡（视觉自解释：大色鱼+需钓数圆点，双色依次显示） ---------- */
+#prompt{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+  min-height:104px;padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:12px;padding:8px 24px;border-radius:22px;
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4}
+.card{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;
+  padding:6px 14px 5px;border-radius:18px;background:#FFFDF6;border:3px solid var(--c,#E8975A);
+  transition:transform .2s}
+.card .swatch{width:78px;height:56px;display:block}
+.card .swatch svg{width:100%;height:100%}
+.card .pips{display:flex;gap:6px}
+.card .pips i{width:17px;height:17px;border-radius:50%;border:3px solid var(--c);background:transparent;
+  transition:background .2s}
+.card .pips i.on{background:var(--c)}
+.card .lbl{font-size:15px;font-weight:800;color:#4A3B2E;line-height:1.1}
+.card.cur .swatch{animation:card-bob 1.3s ease-in-out infinite}
+@keyframes card-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.card.next{opacity:.42;transform:scale(.78)}
+.card.done{opacity:.9}
+.card .mark{position:absolute;right:-11px;top:-11px;width:32px;height:32px;border-radius:50%;
+  background:#8FBF7F;border:2.5px solid #FFF9EE;display:flex;align-items:center;justify-content:center;
+  animation:opt-pop .45s cubic-bezier(.2,1.6,.4,1)}
+.card .mark svg{width:22px;height:22px}
+@keyframes opt-pop{from{transform:scale(0) rotate(-20deg)}to{transform:scale(1) rotate(0)}}
+#prompt-chip .then{width:34px;height:34px;flex:0 0 34px}
+/* r7 间色卡：成分迷你鱼行（当前步亮/未到暗）+ 目标间色大鱼（合成目标视觉自解释） */
+.card.mix{flex-direction:column;align-items:center;gap:3px}
+.card.mix .mixrow{display:flex;align-items:center;gap:5px}
+.card.mix .mini{display:flex;flex-direction:column;align-items:center;gap:1px;width:64px;
+  padding:4px 3px 3px;border-radius:12px;background:#FFFDF6;border:2.5px solid var(--c);
+  transition:opacity .2s,transform .2s}
+.card.mix .mini .fishsvg{width:52px;height:38px}
+.card.mix .mini.cur{animation:card-bob 1.3s ease-in-out infinite}
+.card.mix .mini.dim{opacity:.45;transform:scale(.86)}
+.card.mix .mini.fin{opacity:.85}
+.card.mix .mini .pips{display:flex;gap:4px}
+.card.mix .mini .pips i{width:13px;height:13px;border-radius:50%;border:2.5px solid var(--c);
+  background:transparent;transition:background .2s}
+.card.mix .mini .pips i.on{background:var(--c)}
+.card.mix .plus{font-style:normal;font-size:22px;font-weight:800;color:#4A3B2E;line-height:1}
+.card.mix .swatch{width:88px;height:60px}
+.card.mix.done .mini{opacity:.9;transform:none}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch5/6） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：色卡与题面适配（鱼按 pond 实际宽高撒点，无需改） */
+@media (orientation:portrait){
+  .card .swatch{width:70px;height:50px}
+  .card.next{transform:scale(.72)}
+  #prompt-chip{gap:9px;padding:8px 16px}
+  .card.mix .mini{width:56px}
+  .card.mix .mini .fishsvg{width:46px;height:34px}
+  .card.mix .swatch{width:76px;height:52px}
+  #prompt{min-height:96px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="钓鱼颜色">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="pond" aria-label="池塘">
+      <div class="water" aria-hidden="true"></div>
+      <div id="rod" aria-hidden="true"></div>
+    </div>
+    <div id="prompt">
+      <div id="prompt-chip" role="heading" aria-label="题目"></div>
+    </div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

@@ -1,0 +1,201 @@
+{
+ "game": "times",
+ "steps": {
+  "A_tutorial": {
+   "watch_click_swallowed": true,
+   "tut_help_reached_ms": 7511,
+   "aid_open_after_groups_btn": true,
+   "solo_reached": true,
+   "vc_teach": [
+    "Q:tim_also+tim_n3+tim_times+tim_n3",
+    "Q:tim_n2+tim_plus+tim_n2+tim_plus+tim_n2+tim_plus+tim_n2+tim_eq+tim_howmuch",
+    "tim_tut_turn",
+    "Q:tim_n3+tim_plus+tim_n3+tim_plus+tim_n3+tim_eq+tim_howmuch"
+   ]
+  },
+  "B_flat0": {
+   "picks": 8,
+   "saved": {
+    "stars": 3,
+    "plays": 1
+   },
+   "celebrate": [
+    {
+     "stars": 3,
+     "at": 1788699618457
+    }
+   ]
+  },
+  "C_flat1_miss_chain": {
+   "q": {
+    "type": "sum",
+    "text": "3 + 3 + 3 + 3 = ?",
+    "ok": 2,
+    "wrongs": [
+     0,
+     1,
+     3
+    ]
+   },
+   "chain": [
+    {
+     "miss": 1,
+     "aidOpen": true,
+     "fishPulse": false,
+     "ansPulse": false,
+     "step": 0,
+     "vc": [
+      "tim_hint",
+      "tim_hint"
+     ]
+    },
+    {
+     "miss": 2,
+     "aidOpen": true,
+     "fishPulse": true,
+     "ansPulse": true,
+     "step": 0,
+     "vc": [
+      "tim_hint",
+      "tim_hint"
+     ]
+    },
+    {
+     "miss": 3,
+     "aidOpen": true,
+     "fishPulse": true,
+     "ansPulse": true,
+     "step": 0,
+     "vc": [
+      "tim_hint",
+      "tim_hint"
+     ]
+    }
+   ]
+  },
+  "C_flat1_star": {
+   "saved": {
+    "stars": 2,
+    "plays": 1
+   }
+  },
+  "B2_flat2_star": {
+   "saved": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  "E_flat10": {
+   "groups_btn_visible": true,
+   "q": {
+    "type": "mul",
+    "text": "6 × 9 = ?",
+    "items": [
+     15,
+     48,
+     45,
+     54
+    ]
+   },
+   "miss1": {
+    "aidOpen": true,
+    "fishPulse": false,
+    "ansPulse": false,
+    "step": 0
+   },
+   "miss1_vc": [],
+   "miss2": {
+    "aidOpen": true,
+    "fishPulse": true,
+    "ansPulse": true,
+    "step": 0
+   },
+   "rescue": {
+    "before_n": 0,
+    "new_keys": [
+     "tim_hint"
+    ],
+    "rescue_played": true
+   }
+  },
+  "F_flat15_miss": {
+   "groups_btn_visible": false,
+   "miss_q": {
+    "type": "miss",
+    "text": "? × 2 = 14",
+    "items": [
+     6,
+     2,
+     9,
+     7
+    ]
+   },
+   "miss1_click_landed": true,
+   "miss1": {
+    "aidOpen": false,
+    "fishPulse": false,
+    "ansPulse": null,
+    "step": 4
+   },
+   "miss1_vc": [
+    "tim_miss_hint"
+   ],
+   "miss2_click_landed": true,
+   "miss2": {
+    "aidOpen": false,
+    "fishPulse": true,
+    "ansPulse": null,
+    "step": 4
+   },
+   "miss2_vc": [
+    "tim_miss_hint"
+   ]
+  },
+  "G_layout": [
+   {
+    "w": 1280,
+    "h": 800,
+    "flat0": {
+     "overflowX": 0,
+     ".fish-btn": {
+      "n": 4,
+      "w": 294,
+      "h": 495
+     }
+    },
+    "flat10": {
+     "overflowX": 0,
+     ".fish-btn": {
+      "n": 4,
+      "w": 294,
+      "h": 495
+     }
+    },
+    "pageerrors": []
+   },
+   {
+    "w": 800,
+    "h": 1180,
+    "flat0": {
+     "overflowX": 0,
+     ".fish-btn": {
+      "n": 4,
+      "w": 363,
+      "h": 441
+     }
+    },
+    "flat10": {
+     "overflowX": 0,
+     ".fish-btn": {
+      "n": 4,
+      "w": 363,
+      "h": 441
+     }
+    },
+    "pageerrors": []
+   }
+  ]
+ },
+ "pageerrors": [],
+ "hook_install": "hooked"
+}

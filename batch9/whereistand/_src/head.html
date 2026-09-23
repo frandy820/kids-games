@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>方位排排队</title>
+<style>
+/* ================= 方位排排队 whereistand（batch9）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E、灰蓝错误色（不用大红）
+   玩法 = 5 只小动物排队（横排/竖排），题面语音问方位（最边上是谁 / 从某边数第几个是谁 /
+   r33：从X边数第k个的Y边那只 / 小动物自己的左边——SPEC-R33 四题型），孩子直接点场景中的
+   动物卡 —— 点场景即方位训练本体（SPEC §1）。
+   触摸目标：场景动物卡 = 主答案按钮 ≥96×96（§0.9）；底栏按钮 ≥64；overflowX 恒 0。
+   题面指令全语音承载（§0.19），题面行=方向箭头+序数大字+参照头像（装饰性冗余） */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:38px;height:38px;border-radius:11px;background:#BFD9A8;display:flex;align-items:center;
+  justify-content:center;flex:0 0 38px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：草地场景（动物排队） + 题面行 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;overflow:hidden;padding:6px 10px}
+#field{position:relative;width:100%;max-width:1180px;flex:1 1 auto;min-height:180px;
+  background:#CBE7F0;border:3px solid #A8D3E2;border-radius:26px;overflow:hidden;
+  box-shadow:inset 0 0 0 6px rgba(255,249,238,.4)}
+#field .scene{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+
+/* ---------- 动物排列：横排 / 竖排（绝对定位盒，竖排 margin auto 居中 CSS 2.1 §10.3.7）
+   line[0] 恒 = 最左 / 最上（引擎 answerIdx 坐标约定） ---------- */
+#line{position:absolute;inset:12px 14px;display:grid}
+#line.horiz{grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:100%;gap:14px}
+#line.vert{grid-template-rows:repeat(5,minmax(0,1fr));grid-template-columns:minmax(0,1fr);
+  gap:6px;max-width:250px;margin:0 auto}
+.card{position:relative;background:#FFF9EE;border:3px solid #4A3B2E;border-radius:20px;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;
+  transition:transform .15s}
+#line.horiz .card{width:100%;aspect-ratio:1;align-self:center;justify-self:center;
+  max-width:min(100%,32vh)}                    /* 极扁视口兜底防溢出 */
+#line.vert .card{height:100%;aspect-ratio:1;justify-self:center;max-width:100%}
+.card:active{transform:translateY(3px)}
+.card svg{width:88%;height:88%;pointer-events:none}
+/* 入场弹跳（换题重排 stagger） */
+.card.pop{animation:card-in .42s cubic-bezier(.2,1.6,.4,1) backwards}
+@keyframes card-in{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+/* 答对：绿底弹起 */
+.card.lit{background:#8FBF7F;border-color:#6FA063;box-shadow:0 4px 0 #6FA063;
+  animation:opt-lit .5s cubic-bezier(.2,1.6,.4,1)}
+.card.lit svg{animation:card-in .5s cubic-bezier(.2,1.7,.4,1)}
+@keyframes opt-lit{0%{transform:scale(1)}45%{transform:scale(1.12)}100%{transform:scale(1)}}
+/* 答错：晃动（不灰掉——场景卡全可点，SPEC §1 零惩罚） */
+.card.wig{animation:an-wig .55s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-7deg)}
+  55%{transform:rotate(6deg)}80%{transform:rotate(-3deg)}}
+/* 连错 2 次后：正确卡呼吸高亮（首错不 pulse，给再想机会） */
+.card.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+@keyframes an-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+
+/* ---------- 题面行：方向箭头 + 序数大字（装饰性冗余，指令全语音承载 §0.19） ---------- */
+#prompt{flex:0 0 auto;display:flex;align-items:center;justify-content:center;min-height:78px;
+  padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:13px;padding:6px 26px;min-height:66px;
+  border-radius:22px;background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  transition:transform .15s}
+#prompt-chip:active{transform:translateY(3px)}
+#prompt-chip .fdir{width:40px;height:40px;flex:0 0 40px}
+#prompt-chip .fq{font-size:34px;font-weight:800;color:#E8873A;line-height:1}
+#prompt-chip .fk{font-size:22px;font-weight:800;color:#4A3B2E;line-height:1;white-space:nowrap}
+#prompt-chip .fk b{font-size:36px;color:#E8873A;font-variant-numeric:tabular-nums}
+/* r33 flip 题面行：参照动物头像（.fan）——chip 内小尺寸复用 animalSvg，尺寸对齐 .fdir */
+#prompt-chip .fan{width:44px;height:44px;flex:0 0 44px}
+#prompt-chip .fan svg{width:100%;height:100%}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch8） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：chip/底栏适配，主答案卡仍 ≥96 */
+@media (orientation:portrait){
+  #prompt-chip{gap:10px;padding:5px 20px}
+  #prompt-chip .fdir{width:34px;height:34px;flex:0 0 34px}
+  #prompt-chip .fq{font-size:29px}
+  #prompt-chip .fk{font-size:19px}
+  #prompt-chip .fk b{font-size:31px}
+  #prompt-chip .fan{width:38px;height:38px;flex:0 0 38px}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="方位排排队">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="field" aria-label="小动物排队">
+      <div class="scene" aria-hidden="true"></div>
+      <div id="line" aria-label="排队的小动物"></div>
+    </div>
+    <div id="prompt">
+      <button id="prompt-chip" aria-label="题目，点我再听一遍"></button>
+    </div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

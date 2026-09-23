@@ -1,0 +1,41 @@
+{
+ "game": "whereistand 方位排排队",
+ "scens": {
+  "A_教学+第1关": {
+   "通关": true,
+   "stars": 3,
+   "plays": 1,
+   "tutSeen": true,
+   "教学吞输入": true,
+   "教学期乱点无pageerror": true,
+   "vlog": [
+    "Q:wis_tut_turn,wis_q_up"
+   ]
+  },
+  "B_第2关_错3次+静置救援": {
+   "通关": true,
+   "stars": 1,
+   "miss2后正确卡高亮": null,
+   "静置17s救援语音": [
+    "K:wis_q_down|谁在最下面呀"
+   ],
+   "pageerrors": []
+  },
+  "C_第2章2-1": {
+   "通关": true,
+   "stars": 1,
+   "章": 2,
+   "题型": {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "answerIdx": 0,
+    "step": 0,
+    "miss": 0
+   },
+   "pageerrors": []
+  }
+ },
+ "pageerror_total": []
+}

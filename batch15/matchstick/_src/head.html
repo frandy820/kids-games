@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>火柴谜题</title>
+<style>
+/* ================= 火柴谜题 matchstick（batch15）=================
+   视觉按 SPEC-BATCH15 §3：暖米底 #FBF3E4、七段火柴数字（暖木色杆+红磷头，
+   横段头朝左/竖段头朝上统一）、空槽=虚线框、拿起=浮起+阴影。
+   主交互=点火柴（拿起）→点目标虚线槽（放置即判，无确认键）：
+   成立=火焰粒子+胜利 / 不成立=晃动零惩罚火柴回原位可再移（miss 计浪费移动）。
+   触摸目标：火柴/槽透明命中矩形 ≥64（tangram M5 先例：几何外扩+
+   elementFromPoint 采样验证）；底栏按钮 ≥72 高；不灰化款 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E7D8C0;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E7D8C0}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;overflow:hidden;padding:4px 10px}
+
+/* ---------- 题面行 ---------- */
+#board{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+  min-height:72px;padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:14px;padding:6px 24px;border-radius:22px;
+  background:#FFFAF0;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #DFCFB6}
+#prompt-chip .mini{width:54px;height:54px;flex:0 0 54px}
+#prompt-chip .ask{font-size:26px;font-weight:800;color:#4A3B2E;letter-spacing:.02em}
+
+/* ---------- 场景区：七段火柴等式 SVG（JS 按容器实测 px 布局，保命中 ≥64） ---------- */
+#scene-area{flex:1 1 auto;min-height:260px;width:100%;max-width:1100px;display:flex;
+  align-items:center;justify-content:center;padding:2px 6px}
+#scene{width:100%;height:100%;min-height:260px;display:flex;align-items:center;justify-content:center}
+#scene svg.eq{display:block}
+
+/* 火柴杆/头/命中矩形（hit 透明填充吃指针；locked 等号 hit 不响应） */
+#scene .stk .rod{fill:#D9A15E;stroke:#8A6B45;stroke-width:1.6}
+#scene .stk .head{fill:#E05548;stroke:#A93B31;stroke-width:1.6}
+#scene .stk .hit{fill:transparent;stroke:none;pointer-events:all}
+#scene .stk.locked .hit{pointer-events:none}
+#scene .slot .gh{fill:none;stroke:#C9B69B;stroke-width:2;stroke-dasharray:6 5;pointer-events:none}
+#scene .slot .hit{fill:transparent;stroke:none;pointer-events:all}
+#scene .slot.hot .gh{stroke:#E8873A;stroke-width:2.6;stroke-dasharray:7 5;
+  animation:slot-hot 1.1s ease-in-out infinite}
+@keyframes slot-hot{0%,100%{opacity:.55}50%{opacity:1}}
+/* 拿起态：内层 mov 浮起+阴影（CSS transform 不碰外层定位 attribute transform） */
+#scene .stk .mov{transition:transform .18s ease,filter .18s ease}
+#scene .stk.held .mov{transform:translateY(-13px) scale(1.07);filter:drop-shadow(0 7px 7px rgba(74,59,46,.4))}
+#scene .stk.lit .mov{animation:stk-lit .5s ease-in-out infinite alternate}
+@keyframes stk-lit{from{filter:drop-shadow(0 0 2px rgba(232,135,58,0))}to{filter:drop-shadow(0 0 9px rgba(232,135,58,.95))}}
+/* 救援：可解源火柴 pulse 三连（§0.21；作用于内层 .mov——外层是 attribute transform 定位） */
+#scene .stk.pulse3 .mov{animation:stk-pulse3 1.5s ease}
+@keyframes stk-pulse3{0%,33.3%,66.6%,100%{transform:scale(1)}16.6%,49.9%,83.2%{transform:scale(1.2)}}
+/* 等式整体晃动（放置不成立，§0.26 防重入窗内） */
+#scene svg.eq.shake{animation:eq-shake .5s ease}
+@keyframes eq-shake{0%,100%{transform:translateX(0)}18%{transform:translateX(-9px)}
+  38%{transform:translateX(8px)}58%{transform:translateX(-6px)}78%{transform:translateX(5px)}}
+/* 成立：等式亮起（背景板转暖绿+杆辉光） */
+#scene svg.eq.ok .panel{fill:#EDF6E3;stroke:#8FBF7F}
+#scene svg.eq.ok .stk .rod{fill:#C9CE9A}
+#scene .fx circle{fill:#F5A623;stroke:none}
+#scene .fx .f2{fill:#E8703A}
+#scene .fx .f3{fill:#F8D494}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 blocks/numberdet） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFFAF0;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：题面/场景适配 */
+@media (orientation:portrait){
+  #prompt-chip .ask{font-size:22px}
+  #prompt-chip .mini{width:46px;height:46px;flex:0 0 46px}
+  #scene-area{min-height:300px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="火柴谜题">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="board">
+      <div id="prompt-chip" role="heading" aria-label="题目"></div>
+    </div>
+    <div id="scene-area">
+      <div id="scene" aria-label="火柴算式"></div>
+    </div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="读题"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

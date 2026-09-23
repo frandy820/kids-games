@@ -1,0 +1,104 @@
+{
+ "landscape": {
+  "title": "VERIFY PASS 59/59",
+  "errs": [],
+  "dist": {
+   "ok": true,
+   "dch1Distinct": 7,
+   "dch2Distinct": 8,
+   "dch3All": true,
+   "dch4Mix": true,
+   "dch4BadLv": null,
+   "higherPairs": 65,
+   "adjacentRatio": 0.72,
+   "melody": 12,
+   "iv": 12,
+   "expectMelIv": 12,
+   "mixCnt": 153,
+   "mixBad": 0,
+   "genDch": {
+    "1": 2,
+    "2": 7,
+    "3": 4,
+    "4": 7
+   },
+   "histOk": true,
+   "findAns": [
+    35,
+    25,
+    28,
+    23
+   ],
+   "hiAns": [
+    16,
+    15,
+    20,
+    14
+   ],
+   "ivCls": [
+    2,
+    5,
+    5
+   ]
+  },
+  "leak": {
+   "ok": true,
+   "findQuiet": true,
+   "findReplayQuiet": true,
+   "higherLit": true
+  },
+  "npass": 59,
+  "total": 59
+ },
+ "portrait": {
+  "title": "VERIFY PASS 59/59",
+  "errs": [],
+  "dist": {
+   "ok": true,
+   "dch1Distinct": 7,
+   "dch2Distinct": 8,
+   "dch3All": true,
+   "dch4Mix": true,
+   "dch4BadLv": null,
+   "higherPairs": 65,
+   "adjacentRatio": 0.72,
+   "melody": 12,
+   "iv": 12,
+   "expectMelIv": 12,
+   "mixCnt": 153,
+   "mixBad": 0,
+   "genDch": {
+    "1": 2,
+    "2": 7,
+    "3": 4,
+    "4": 7
+   },
+   "histOk": true,
+   "findAns": [
+    35,
+    25,
+    28,
+    23
+   ],
+   "hiAns": [
+    16,
+    15,
+    20,
+    14
+   ],
+   "ivCls": [
+    2,
+    5,
+    5
+   ]
+  },
+  "leak": {
+   "ok": true,
+   "findQuiet": true,
+   "findReplayQuiet": true,
+   "higherLit": true
+  },
+  "npass": 59,
+  "total": 59
+ }
+}

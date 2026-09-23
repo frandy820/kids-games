@@ -1,0 +1,131 @@
+{
+ "tut_random_click": {
+  "tut_after": "watch"
+ },
+ "prompt_1_0": "✋\n洗手\n，先做什么呀？",
+ "level_1_0": [
+  {
+   "hid": "xishou",
+   "name": "洗手",
+   "steps": 5
+  },
+  {
+   "hid": "qichuang",
+   "name": "起床",
+   "steps": 5
+  },
+  {
+   "hid": "xishou",
+   "name": "洗手",
+   "steps": 5
+  },
+  {
+   "hid": "xishou",
+   "name": "洗手",
+   "steps": 5
+  },
+  {
+   "hid": "xishou",
+   "name": "洗手",
+   "steps": 5
+  }
+ ],
+ "stars_1_0": {
+  "stars": 3,
+  "plays": 1
+ },
+ "wrong_obs_1_1": [
+  {
+   "n": 1,
+   "miss": 1,
+   "wrong_cls": "card pop wig",
+   "answer_cls": "card pop"
+  },
+  {
+   "n": 2,
+   "miss": 2,
+   "answer_cls": "card pop breathe"
+  },
+  {
+   "n": 3,
+   "miss": 3
+  }
+ ],
+ "rescue_idle": {
+  "first_pulse_s": 13.1
+ },
+ "seed_n6": {
+  "flat": 0,
+  "ch": 1,
+  "dayend": 1,
+  "dayend_text": "今天的新关卡玩完啦/明天：过马路和睡前准备，都要记住哦/再玩玩旧关卡/明天见"
+ },
+ "level_2_0": [
+  {
+   "hid": "chuanyi",
+   "name": "穿衣",
+   "steps": 4
+  },
+  {
+   "hid": "shuaya",
+   "name": "刷牙",
+   "steps": 4
+  },
+  {
+   "hid": "shuaya",
+   "name": "刷牙",
+   "steps": 4
+  },
+  {
+   "hid": "chuanyi",
+   "name": "穿衣",
+   "steps": 4
+  },
+  {
+   "hid": "shuaya",
+   "name": "刷牙",
+   "steps": 4
+  }
+ ],
+ "steps_compare": {
+  "ch1": [
+   5,
+   5,
+   5,
+   5,
+   5
+  ],
+  "ch2": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "ch1_hids": [
+   "xishou",
+   "qichuang",
+   "xishou",
+   "xishou",
+   "xishou"
+  ],
+  "ch2_hids": [
+   "chuanyi",
+   "shuaya",
+   "shuaya",
+   "chuanyi",
+   "shuaya"
+  ]
+ },
+ "stars_2_0": {
+  "stars": 2,
+  "plays": 1
+ },
+ "text_audit": {
+  "prompt": "😁\n刷牙\n，先做什么呀？",
+  "p_name_px": "32px",
+  "c_word_px": "17px",
+  "c_emoji_px": "44px"
+ },
+ "pageerrors": []
+}

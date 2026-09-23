@@ -1,0 +1,31 @@
+# 内部工作过程文档（不入公开仓，跟随 game-ports 干净交付先例）
+ledger.md
+progress.md
+difficulty-audit/
+EXPANSION-120-PLAN.md
+RESEARCH-200-GAMES.md
+ROADMAP-90.md
+ROADMAP-AGES.md
+output/
+test/
+table.json
+PROGRESS.md
+
+# 试玩/审查过程报告
+REPORT-PLAYER-*.md
+REPORT-REVIEW-*.md
+
+# 一次性试玩工具与中间产物
+_play*.py
+_play*.json
+_play*.txt
+_shots*/
+_shots/
+_clipdur*.json
+
+# Python / 系统垃圾
+__pycache__/
+*.pyc
+bash.exe.stackdump
+*.stackdump
+Thumbs.db

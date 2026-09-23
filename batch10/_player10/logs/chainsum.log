@@ -1,0 +1,51 @@
+[   1.0s] OPEN file:///F:/claudecode/projects/active/kids-games/batch10/chainsum/index.html
+[   1.8s] A 开档 tutorial='watch' quiz0={'cur': 3, 'op': '+', 'd': 1, 'answer': 4, 'options': [5, 3, 4], 'dead': [], 'step': 0, 'miss': 0}
+[   2.0s] SNAP chainsum_A0_tut_start.png
+[   2.4s] A 乱点天空后 tutorial='watch' step=0
+[   2.8s] A 乱点错误卡后 tutorial='watch' step=0 miss=0（应仍 watch/0/0）
+[   3.2s] A 乱点兔子后 tutorial='watch'
+[   5.0s] A 教学进入 help 幽灵手指 class='' tutSeen=True
+[   5.0s] SNAP chainsum_A2_tut_help.png
+[   8.2s] A 教学首答后 tutorial='solo'（应 solo）ghost=''
+[   8.2s] A2 1-0 第2题 4 + 1 = ? 候选[5, 4, 6] → 我点 5
+[  11.5s] A2 1-0 第3题 5 - 2 = ? 候选[4, 3, 2] → 我点 3
+[  15.0s] A2 1-0 第4题 3 + 2 = ? 候选[5, 4, 6] → 我点 5
+[  18.0s] A2 1-0 第5题 5 - 1 = ? 候选[3, 4, 5] → 我点 4
+[  21.7s] A2 1-0 题目记录 [{'cur': 4, 'op': '+', 'd': 1, 'answer': 5, 'options': [5, 4, 6]}, {'cur': 5, 'op': '-', 'd': 2, 'answer': 3, 'options': [4, 3, 2]}, {'cur': 3, 'op': '+', 'd': 2, 'answer': 5, 'options': [5, 4, 6]}, {'cur': 5, 'op': '-', 'd': 1, 'answer': 4, 'options': [3, 4, 5]}]
+[  21.8s] A2 CELEBRATE 星星=3 文案='★/★/★/真棒！'
+[  21.8s] SNAP chainsum_celebrate_A2.png
+[  27.3s] A2 存档 levels[1-0] = {'stars': 3, 'plays': 1}（通关判据 stars>=1）
+[  27.3s] A2 当前关 flat=1（应自动进 1-1）
+[  28.3s] B 1-1 第1题 {'cur': 3, 'op': '-', 'd': 2, 'answer': 1, 'options': [2, 1, 3]}
+[  30.5s] B 错1后 miss=1 错卡class='cardbtn wig dim' 正确卡class='cardbtn'
+[  30.6s] SNAP chainsum_B1_wrong1.png
+[  31.4s] B 错2后 miss=2 正确卡class='cardbtn breathe'（breathe=高亮提示）
+[  31.4s] SNAP chainsum_B2_wrong2_breathe.png
+[  32.0s] B 点已灰卡 miss 2→2（不变=排除法保底不重复罚）
+[  34.9s] B 纠正后 step=1（应推进）
+[  35.4s] B 点兔子后 class='hop'（hop=有反馈）
+[  35.4s] C 静置前题目 {'cur': 1, 'op': '-', 'd': 1, 'answer': 0} 步=1
+[  48.5s] C ★救援视觉出现 @13.1s 正确卡class='cardbtn breathe' step未推进=1
+[  48.6s] SNAP chainsum_C_rescue_breathe.png
+[  55.6s] C 静置20s结束 first_breathe=13.1
+[  55.6s] D1 seed n=6 写入关数=6 后 reload
+[  58.4s] D1 DAYEND overlay=1 文案='今天的新关卡玩完啦/明天：车厢数字变大啦，开进二十以内/再玩玩旧关卡/明天见'
+[  58.4s] D1 n=6 重开后 flat=0 ch=1（日限=首日6关，已全标完成→日末门）
+[  59.3s] SNAP chainsum_D1_dayend_n6.png
+[  60.3s] D1 点[再玩玩旧关卡]后 overlay=0 flat=0（仍是第1章1-0，第2章今天进不去）
+[  63.0s] D2 seed n=5 重开后 flat=5 ch=2 lv=0（应为 5 / 2 / 0 = 第2章第1关）
+[  63.1s] D2 DAYEND overlay=0 文案=None
+[  63.1s] SNAP chainsum_D2_ch2_start.png
+[  63.1s] D2 2-0 第1题 4 + 3 = ? 候选[6, 8, 7]
+[  66.5s] D2 2-0 第2题 7 + 3 = ? 候选[8, 9, 10]
+[  69.6s] D2 ch2 错1次后 miss=1 正确卡class='cardbtn'
+[  73.2s] D2 2-0 第3题 10 - 3 = ? 候选[7, 8, 6]
+[  76.7s] D2 2-0 第4题 7 - 4 = ? 候选[2, 3, 4]
+[  81.1s] D2 2-0 第5题 3 + 3 = ? 候选[6, 7, 5]
+[  85.6s] D2 ch1 运算幅度 d=[1, 2, 2, 1] | ch2 d=[3, 3, 3, 4, 3]
+[  85.7s] D2 CELEBRATE 星星=2 文案='★/★/好棒！'
+[  85.7s] SNAP chainsum_celebrate_D2.png
+[  91.2s] D2 存档 levels[2-0] = {'stars': 2, 'plays': 1}
+[  91.2s] D2后 DAYEND overlay=1 文案='今天的新关卡玩完啦/明天：车厢数字变大啦，开进二十以内/再玩玩旧关卡/明天见'
+[  91.2s] E 文本审计 {'chip_text': '4\n+\n3\n=\n?', 'fnum_px': '34px', 'cardnum_px': '54px', 'opsign_b_px': '33px', 'logo_title': None}
+[  91.2s] DONE errors=[]

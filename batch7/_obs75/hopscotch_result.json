@@ -1,0 +1,749 @@
+{
+ "game": "hopscotch",
+ "url": "file:///F:/claudecode/projects/active/kids-games/batch7/hopscotch/index.html",
+ "pageerrors": [],
+ "levels": [
+  {
+   "tag": "flat0",
+   "flat": 0,
+   "ch": 1,
+   "dch": 1,
+   "clicks": 21,
+   "retries": 1,
+   "stars": 2,
+   "quizzes": {
+    "0": {
+     "from": 1,
+     "to": 4,
+     "dir": 1,
+     "len": 3,
+     "hidden": []
+    },
+    "1": {
+     "from": 1,
+     "to": 3,
+     "dir": 1,
+     "len": 2,
+     "hidden": []
+    },
+    "2": {
+     "from": 1,
+     "to": 4,
+     "dir": 1,
+     "len": 3,
+     "hidden": []
+    },
+    "3": {
+     "from": 1,
+     "to": 5,
+     "dir": 1,
+     "len": 4,
+     "hidden": []
+    },
+    "4": {
+     "from": 1,
+     "to": 4,
+     "dir": 1,
+     "len": 3,
+     "hidden": []
+    }
+   },
+   "tut": {
+    "watch_seen": true,
+    "watch_swallow": true,
+    "help_enter": "help",
+    "ghost_show": false,
+    "rescue_in_help": {
+     "label": "flat0_help_idle",
+     "waited_s": 25.5,
+     "entries": [
+      "speak(跳到四)"
+     ],
+     "fire_after_s": [
+      19.844
+     ]
+    },
+    "after_first_hop": "solo",
+    "ghost_hidden_after_solo": true
+   },
+   "events": [
+    {
+     "ev": "step_0_voice",
+     "v": []
+    },
+    {
+     "ev": "far_skip",
+     "cur": 1,
+     "miss": 1,
+     "retries": 1,
+     "pulse": [
+      0,
+      0
+     ],
+     "voice": [
+      "play(hop_wrong,一格一格跳)"
+     ]
+    },
+    {
+     "ev": "self_tap",
+     "retries": [
+      1,
+      1
+     ],
+     "miss": 1
+    },
+    {
+     "ev": "step_1_voice",
+     "v": [
+      "play(hop_wrong,一格一格跳)"
+     ]
+    },
+    {
+     "ev": "blank_river_click",
+     "voice": [
+      "play(hop_hint,听一听，跳到几)"
+     ]
+    },
+    {
+     "ev": "step_2_voice",
+     "v": [
+      "play(hop_hint,听一听，跳到几)"
+     ]
+    },
+    {
+     "ev": "hear_btn",
+     "voice": [
+      "say(跳到五)",
+      "play(None,跳到五)"
+     ]
+    },
+    {
+     "ev": "step_3_voice",
+     "v": [
+      "say(跳到五)",
+      "play(None,跳到五)"
+     ]
+    },
+    {
+     "ev": "rabbit_btn",
+     "voice": [
+      "play(hop_hint,听一听，跳到几)"
+     ]
+    },
+    {
+     "ev": "step_4_voice",
+     "v": [
+      "play(hop_hint,听一听，跳到几)"
+     ]
+    }
+   ],
+   "vlog": [
+    "say(二)",
+    "play(None,二)",
+    "say(三)",
+    "play(None,三)",
+    "say(四)",
+    "play(None,四)",
+    "play(None,跳到四)",
+    "play(hop_tut_turn,你来跳一跳)",
+    "speak(跳到四)",
+    "say(二)",
+    "play(None,二)",
+    "say(三)",
+    "play(None,三)",
+    "say(四)",
+    "play(None,四)",
+    "play(None,跳到三)",
+    "play(hop_wrong,一格一格跳)",
+    "say(二)",
+    "play(None,二)",
+    "say(三)",
+    "play(None,三)",
+    "play(None,跳到四)",
+    "play(hop_hint,听一听，跳到几)",
+    "say(二)",
+    "play(None,二)",
+    "say(三)",
+    "play(None,三)",
+    "say(四)",
+    "play(None,四)",
+    "play(None,跳到五)",
+    "say(跳到五)",
+    "play(None,跳到五)",
+    "say(二)",
+    "play(None,二)",
+    "say(三)",
+    "play(None,三)",
+    "say(四)",
+    "play(None,四)",
+    "say(五)",
+    "play(None,五)",
+    "play(None,跳到四)",
+    "play(hop_hint,听一听，跳到几)",
+    "say(二)",
+    "play(None,二)",
+    "say(三)",
+    "play(None,三)",
+    "say(四)",
+    "play(None,四)"
+   ]
+  },
+  {
+   "tag": "flat5",
+   "flat": 5,
+   "ch": 2,
+   "dch": 2,
+   "clicks": 27,
+   "retries": 3,
+   "stars": 1,
+   "quizzes": {
+    "0": {
+     "from": 3,
+     "to": 8,
+     "dir": 1,
+     "len": 5,
+     "hidden": []
+    },
+    "1": {
+     "from": 5,
+     "to": 8,
+     "dir": 1,
+     "len": 3,
+     "hidden": []
+    },
+    "2": {
+     "from": 5,
+     "to": 10,
+     "dir": 1,
+     "len": 5,
+     "hidden": []
+    },
+    "3": {
+     "from": 5,
+     "to": 9,
+     "dir": 1,
+     "len": 4,
+     "hidden": []
+    },
+    "4": {
+     "from": 4,
+     "to": 9,
+     "dir": 1,
+     "len": 5,
+     "hidden": []
+    }
+   },
+   "events": [
+    {
+     "ev": "far_wrong1",
+     "voice": [
+      "play(hop_wrong,一格一格跳)"
+     ],
+     "pulse": [
+      0,
+      0
+     ],
+     "miss": 1
+    },
+    {
+     "ev": "far_wrong2_throttled",
+     "voice": [],
+     "pulse": [
+      0,
+      1
+     ],
+     "miss": 2
+    },
+    {
+     "ev": "far_wrong3_after10s",
+     "voice": [
+      "play(hop_wrong,一格一格跳)"
+     ],
+     "miss": 3
+    },
+    {
+     "ev": "step_0_voice",
+     "v": [
+      "play(hop_wrong,一格一格跳)",
+      "play(hop_wrong,一格一格跳)"
+     ]
+    },
+    {
+     "ev": "backward_adjacent",
+     "cur": [
+      5,
+      4
+     ],
+     "retries": [
+      3,
+      3
+     ],
+     "voice": [
+      "say(四)",
+      "play(None,四)"
+     ]
+    },
+    {
+     "ev": "step_1_voice",
+     "v": [
+      "say(四)",
+      "play(None,四)"
+     ]
+    },
+    {
+     "ev": "step_2_voice",
+     "v": []
+    },
+    {
+     "ev": "step_3_voice",
+     "v": []
+    },
+    {
+     "ev": "step_4_voice",
+     "v": []
+    }
+   ],
+   "misc": {
+    "seed_lim": 6,
+    "opening_voice": [
+     "TTS:跳到八"
+    ],
+    "rescue": {
+     "label": "flat5_idle",
+     "waited_s": 25.5,
+     "entries": [
+      "speak(跳到八)"
+     ],
+     "fire_after_s": [
+      17.358
+     ]
+    }
+   },
+   "vlog": [
+    "speak(跳到八)",
+    "play(hop_wrong,一格一格跳)",
+    "play(hop_wrong,一格一格跳)",
+    "say(四)",
+    "play(None,四)",
+    "say(五)",
+    "play(None,五)",
+    "say(六)",
+    "play(None,六)",
+    "say(七)",
+    "play(None,七)",
+    "say(八)",
+    "play(None,八)",
+    "play(None,跳到八)",
+    "say(四)",
+    "play(None,四)",
+    "say(五)",
+    "play(None,五)",
+    "say(六)",
+    "play(None,六)",
+    "say(七)",
+    "play(None,七)",
+    "say(八)",
+    "play(None,八)",
+    "play(None,跳到十)",
+    "say(六)",
+    "play(None,六)",
+    "say(七)",
+    "play(None,七)",
+    "say(八)",
+    "play(None,八)",
+    "say(九)",
+    "play(None,九)",
+    "say(十)",
+    "play(None,十)",
+    "play(None,跳到九)",
+    "say(六)",
+    "play(None,六)",
+    "say(七)",
+    "play(None,七)",
+    "say(八)",
+    "play(None,八)",
+    "say(九)",
+    "play(None,九)",
+    "play(None,跳到九)",
+    "say(五)",
+    "play(None,五)",
+    "say(六)",
+    "play(None,六)",
+    "say(七)",
+    "play(None,七)",
+    "say(八)",
+    "play(None,八)",
+    "say(九)",
+    "play(None,九)"
+   ]
+  },
+  {
+   "tag": "flat10",
+   "flat": 10,
+   "ch": 3,
+   "dch": 3,
+   "clicks": 19,
+   "retries": 1,
+   "stars": 2,
+   "quizzes": {
+    "0": {
+     "from": 10,
+     "to": 7,
+     "dir": -1,
+     "len": 3,
+     "hidden": []
+    },
+    "1": {
+     "from": 6,
+     "to": 3,
+     "dir": -1,
+     "len": 3,
+     "hidden": []
+    },
+    "2": {
+     "from": 10,
+     "to": 6,
+     "dir": -1,
+     "len": 4,
+     "hidden": []
+    },
+    "3": {
+     "from": 4,
+     "to": 1,
+     "dir": -1,
+     "len": 3,
+     "hidden": []
+    },
+    "4": {
+     "from": 10,
+     "to": 7,
+     "dir": -1,
+     "len": 3,
+     "hidden": []
+    }
+   },
+   "events": [
+    {
+     "ev": "far_wrong1",
+     "voice": [
+      "play(hop_wrong,一格一格跳)"
+     ],
+     "pulse": [
+      0,
+      0
+     ],
+     "miss": 1
+    },
+    {
+     "ev": "step_0_voice",
+     "v": [
+      "play(hop_wrong,一格一格跳)"
+     ]
+    },
+    {
+     "ev": "hear_btn",
+     "voice": [
+      "say(往回跳，跳到三)",
+      "play(None,往回跳，跳到三)"
+     ]
+    },
+    {
+     "ev": "step_1_voice",
+     "v": [
+      "say(往回跳，跳到三)",
+      "play(None,往回跳，跳到三)"
+     ]
+    },
+    {
+     "ev": "step_2_voice",
+     "v": []
+    },
+    {
+     "ev": "blank_river_click",
+     "voice": [
+      "play(hop_hint,听一听，跳到几)"
+     ]
+    },
+    {
+     "ev": "step_3_voice",
+     "v": [
+      "play(hop_hint,听一听，跳到几)"
+     ]
+    },
+    {
+     "ev": "step_4_voice",
+     "v": []
+    }
+   ],
+   "misc": {
+    "seed_lim": 16,
+    "opening_voice": [
+     "TTS:往回跳，跳到七"
+    ]
+   },
+   "vlog": [
+    "play(hop_wrong,一格一格跳)",
+    "say(九)",
+    "play(None,九)",
+    "say(八)",
+    "play(None,八)",
+    "say(七)",
+    "play(None,七)",
+    "play(None,往回跳，跳到三)",
+    "say(往回跳，跳到三)",
+    "play(None,往回跳，跳到三)",
+    "say(五)",
+    "play(None,五)",
+    "say(四)",
+    "play(None,四)",
+    "say(三)",
+    "play(None,三)",
+    "play(None,往回跳，跳到六)",
+    "say(九)",
+    "play(None,九)",
+    "say(八)",
+    "play(None,八)",
+    "say(七)",
+    "play(None,七)",
+    "say(六)",
+    "play(None,六)",
+    "play(None,往回跳，跳到一)",
+    "play(hop_hint,听一听，跳到几)",
+    "say(三)",
+    "play(None,三)",
+    "say(二)",
+    "play(None,二)",
+    "say(一)",
+    "play(None,一)",
+    "play(None,往回跳，跳到七)",
+    "say(九)",
+    "play(None,九)",
+    "say(八)",
+    "play(None,八)",
+    "say(七)",
+    "play(None,七)"
+   ]
+  },
+  {
+   "tag": "flat15",
+   "flat": 15,
+   "ch": 4,
+   "dch": 4,
+   "clicks": 23,
+   "retries": 2,
+   "stars": 2,
+   "quizzes": {
+    "0": {
+     "from": 4,
+     "to": 9,
+     "dir": 1,
+     "len": 5,
+     "hidden": [
+      7,
+      8
+     ]
+    },
+    "1": {
+     "from": 7,
+     "to": 2,
+     "dir": -1,
+     "len": 5,
+     "hidden": [
+      5
+     ]
+    },
+    "2": {
+     "from": 6,
+     "to": 10,
+     "dir": 1,
+     "len": 4,
+     "hidden": [
+      7
+     ]
+    },
+    "3": {
+     "from": 10,
+     "to": 6,
+     "dir": -1,
+     "len": 4,
+     "hidden": [
+      7
+     ]
+    },
+    "4": {
+     "from": 5,
+     "to": 8,
+     "dir": 1,
+     "len": 3,
+     "hidden": [
+      6,
+      7
+     ]
+    }
+   },
+   "events": [
+    {
+     "ev": "hidden_cells",
+     "hidden": [
+      7,
+      8
+     ],
+     "masked_dom": 2,
+     "path": "4→9 dir+1"
+    },
+    {
+     "ev": "far_wrong1",
+     "voice": [
+      "play(hop_wrong,一格一格跳)"
+     ],
+     "pulse": [
+      0,
+      0
+     ]
+    },
+    {
+     "ev": "far_wrong2_pulse",
+     "voice": [],
+     "pulse": [
+      0,
+      1
+     ]
+    },
+    {
+     "ev": "step_0_voice",
+     "v": [
+      "play(hop_wrong,一格一格跳)"
+     ]
+    },
+    {
+     "ev": "reveal_cnt",
+     "n": 1,
+     "shown": [
+      7
+     ]
+    },
+    {
+     "ev": "reveal_cnt",
+     "n": 2,
+     "shown": [
+      7,
+      8
+     ]
+    },
+    {
+     "ev": "step_1_voice",
+     "v": []
+    },
+    {
+     "ev": "step_2_voice",
+     "v": []
+    },
+    {
+     "ev": "step_3_voice",
+     "v": []
+    },
+    {
+     "ev": "step_4_voice",
+     "v": []
+    }
+   ],
+   "misc": {
+    "seed_lim": 16,
+    "opening_voice": [
+     "TTS:跳到九"
+    ]
+   },
+   "vlog": [
+    "play(hop_wrong,一格一格跳)",
+    "say(五)",
+    "play(None,五)",
+    "say(六)",
+    "play(None,六)",
+    "say(七)",
+    "play(None,七)",
+    "say(八)",
+    "play(None,八)",
+    "say(九)",
+    "play(None,九)",
+    "play(None,往回跳，跳到二)",
+    "say(六)",
+    "play(None,六)",
+    "say(五)",
+    "play(None,五)",
+    "say(四)",
+    "play(None,四)",
+    "say(三)",
+    "play(None,三)",
+    "say(二)",
+    "play(None,二)",
+    "play(None,跳到十)",
+    "say(七)",
+    "play(None,七)",
+    "say(八)",
+    "play(None,八)",
+    "say(九)",
+    "play(None,九)",
+    "say(十)",
+    "play(None,十)",
+    "play(None,往回跳，跳到六)",
+    "say(九)",
+    "play(None,九)",
+    "say(八)",
+    "play(None,八)",
+    "say(七)",
+    "play(None,七)",
+    "say(六)",
+    "play(None,六)",
+    "play(None,跳到八)",
+    "say(六)",
+    "play(None,六)",
+    "say(七)",
+    "play(None,七)",
+    "say(八)",
+    "play(None,八)"
+   ]
+  }
+ ],
+ "vlog_tail": [
+  "play(None,八)",
+  "say(九)",
+  "play(None,九)",
+  "play(None,往回跳，跳到二)",
+  "say(六)",
+  "play(None,六)",
+  "say(五)",
+  "play(None,五)",
+  "say(四)",
+  "play(None,四)",
+  "say(三)",
+  "play(None,三)",
+  "say(二)",
+  "play(None,二)",
+  "play(None,跳到十)",
+  "say(七)",
+  "play(None,七)",
+  "say(八)",
+  "play(None,八)",
+  "say(九)",
+  "play(None,九)",
+  "say(十)",
+  "play(None,十)",
+  "play(None,往回跳，跳到六)",
+  "say(九)",
+  "play(None,九)",
+  "say(八)",
+  "play(None,八)",
+  "say(七)",
+  "play(None,七)",
+  "say(六)",
+  "play(None,六)",
+  "play(None,跳到八)",
+  "say(六)",
+  "play(None,六)",
+  "say(七)",
+  "play(None,七)",
+  "say(八)",
+  "play(None,八)",
+  "play(core_day_end,今天的新关卡玩完啦，明天见)"
+ ]
+}

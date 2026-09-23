@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>滑块拼图</title>
+<style>
+/* ================= 滑块拼图 slide（batch22）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E。
+   玩法 = 小兔子照片切块打乱（2×2 → 2×3 → 3×3，从完成态做 K 次随机
+   合法滑动构造——构造即证明可解，禁随机排列），右侧小样恒可见（5-6 岁
+   须有参照，SPEC-BATCH22 §2）；点空格相邻块 = 滑入（动画 ≤200ms）；
+   点非相邻块 = 该块轻微晃动 'wig' 拒绝（非错误零惩罚）；全块归位 =
+   自动 celebrate（无提交）；不限步不限时。
+   零文字依赖（§0.19）：块上禁数字标号，图块自身纹理 = 线索；
+   题面/纠错语义全语音承载。触摸目标：拼图块 = 主答案 ≥64；
+   底栏按钮 ≥64；布局量测走 offsetWidth/offsetHeight（禁动画帧 getBCR）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:38px;height:38px;border-radius:11px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 38px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：拼图盘（恒正方形）+ 右侧照片小样（恒可见参照） ---------- */
+#stage{flex:1 1 auto;min-height:180px;display:flex;align-items:center;justify-content:center;
+  gap:16px;padding:12px 14px;overflow:hidden}
+#boardwrap{flex:1 1 auto;align-self:stretch;display:flex;align-items:center;justify-content:center;
+  min-width:120px;min-height:120px}
+#board{position:relative;flex:0 0 auto;border-radius:14px;background:#F2E7D2;
+  box-shadow:0 5px 0 rgba(74,59,46,.22),inset 0 0 0 3px #4A3B2E}
+#board.bump{animation:an-bump .3s ease}
+@keyframes an-bump{0%{transform:scale(1)}45%{transform:scale(.97)}100%{transform:scale(1)}}
+
+/* 拼图块（主答案按钮 ≥64）：块 = 网格等分矩形，内嵌完整 SVG 图的对应区域
+   （.art 相对块恒静止，滑入 = 块 left/top transition ≤200ms） */
+.tile{position:absolute;border-radius:7px;overflow:hidden;padding:0;
+  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55),0 1px 3px rgba(74,59,46,.25);
+  transition:left .18s cubic-bezier(.4,.1,.3,1),top .18s cubic-bezier(.4,.1,.3,1)}
+.tile:active{filter:brightness(1.05)}
+.tile .art{position:absolute;left:0;top:0}
+.tile.pop{animation:tile-in .4s cubic-bezier(.2,1.5,.4,1) backwards}
+@keyframes tile-in{from{transform:scale(.4) rotate(-4deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}
+/* 点非相邻块：轻微晃动 'wig' 拒绝（非错误零惩罚，不灰化可重点） */
+.tile.wig{animation:an-wig .55s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-6deg)}
+  55%{transform:rotate(5deg)}80%{transform:rotate(-3deg)}}
+/* 救援答案级（30s 无进展）：下一步应滑块 breathe 循环（§0.21 在屏） */
+.tile.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+/* 救援方向级（14s）：应滑块描边闪两下（试玩P2——空格 pulse 外的可点指示） */
+.tile.hintline{animation:an-hintline .6s ease-out 2}
+@keyframes an-hintline{0%,100%{box-shadow:none}50%{box-shadow:0 0 0 5px rgba(242,163,60,.85) inset,0 0 12px rgba(242,163,60,.75)}}
+@keyframes an-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 12px rgba(232,151,90,.95)) brightness(1.06)}}
+
+/* 空格（不可点）：虚线软框——14s 方向级救援 = pulse 呼吸高亮 */
+.blankcell{position:absolute;border-radius:7px;border:2.5px dashed #C9B393;
+  background:rgba(255,249,238,.5);pointer-events:none;
+  animation:blank-in .4s ease backwards}
+@keyframes blank-in{from{opacity:0}to{opacity:1}}
+.blankcell.pulse{animation:an-pulse 1.5s ease-in-out infinite}
+@keyframes an-pulse{0%,100%{box-shadow:none;border-color:#C9B393}
+  50%{box-shadow:0 0 0 7px rgba(232,151,90,.4);border-color:#E8975A}}
+
+/* 本题复原：完整原图盖盘闪现（celebrate 前的「照片拼好了」仪式感） */
+#reveal{position:absolute;inset:0;z-index:8;border-radius:10px;overflow:hidden;display:none;
+  box-shadow:0 0 0 4px #FFF9EE,0 0 0 7px #E8975A}
+#reveal.show{display:block;animation:reveal-in .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes reveal-in{from{transform:scale(.72);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* 右侧照片小样（完成参照，恒可见；零文字依赖：相框图形承载语义） */
+#side{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:8px}
+#mini{width:158px;padding:8px;border-radius:14px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 4px 0 #C9A87C;position:relative}
+#mini .cap{position:absolute;left:-7px;top:-9px;width:30px;height:30px;border-radius:9px;
+  background:#E8975A;border:2.5px solid #4A3B2E;display:flex;align-items:center;justify-content:center}
+#mini svg{width:100%;height:auto}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch9-21） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：小样移到盘面上方横排居左，块仍 ≥64 */
+@media (orientation:portrait){
+  #stage{flex-direction:column;gap:10px;padding:10px 12px}
+  #side{flex-direction:row;align-self:stretch;justify-content:flex-start;gap:12px}
+  #mini{width:136px;padding:6px}
+  #mini .cap{width:26px;height:26px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="滑块拼图">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="boardwrap">
+      <div id="board" aria-label="照片拼图盘"></div>
+    </div>
+    <div id="side">
+      <div id="mini" aria-label="照片小样">
+        <span class="cap" aria-hidden="true"></span>
+        <div id="mini-art"></div>
+      </div>
+    </div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

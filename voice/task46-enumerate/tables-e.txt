@@ -1,0 +1,29 @@
+=== story3  [game-data.js]
+STORY_LIB = { |   /* ===== ch1 生活 routine ===== */ |   wake: { ch: 1, n: '起床三步', s: ['小丫睡醒了坐起来', '小丫拿起牙刷刷牙', '小丫背上书包上幼儿园'], art: [ |     /* f0 坐起来：晨窗 + 小床 + 坐起的小丫 */ |     F(winEl(10, 12, sunEl(20, 24, 4.5)) + |       '<rect x="50" y="38" width="7" height="32" rx="3" fill="' + SC.wood + '" stroke="' + INK + '" stroke-width="2.2"/>' + |       '<rect x="55" y="54" width="56" height="16" rx="6" fill="' + SC.white + '" stroke="' + INK + '" stroke-width="2.4"/>' + |       '<rect x="60" y="48" width="16" height="10" rx="4" fill="#F2DDC0" stroke="' + INK + '" stroke-width="2"/>' + |       '<path d="M78 54 h28 v8 h-28 Z" fill="#F2A0B5" stroke="' + INK + '" stroke-width="2" opacity=".9"/>' + |       girlEl(88, 42, 0.72, '#E8975A') + |       '<circle cx="46" cy="72" r="6" fill="' + SC.white + '" stroke="' + INK + '" stroke-width=
+=== story3  [game-data.js]
+recapOf = id => '先' + STORY_LIB[id].s[0] + '，然后' + STORY_LIB[id].s[1] + '，最后' + STORY_LIB[id].s[2]; |  | /* ---------- 章配置（章号 1 基；生成关 flat≥20 按 (ch-1)%4+1 循环取材） |    hint=章末预告**下一章**文案（hint[i] ↔ CHAPTERS[i+1]，家族 F 禁右移）； |    GEN_HINTS[k] ↔ dch=k+1（C7 verify 关键词断言） */ | const CHAPTERS = { |   1: { name: '生活的一天', hint: '大自然的故事也要按顺序排一排啦' },  
+=== story3  [game-data.js]
+TIME_HINT = '想一想，先做什么，然后再做什么，最后做什么'; | /* TTS 时长估算（复述句等待窗用）：zh rate0.9 ≈ 300ms/字 + 停顿余量，上限 1
+=== calendar  [game-data.js]
+DAYS = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日']; | const MONTHS = ['一月', '二月', '三月', '四月', '五月', '六月', |                 '七月', '八月', '九月', '十月', '十一月', '十二月']; | c
+=== calendar  [game-data.js]
+MONTHS = ['一月', '二月', '三月', '四月', '五月', '六月', |                 '七月', '八月', '九月', '十月', '十一月', '十二月']; | const KINDS = ['day', 'month', 'day_rev', 'month_rev'];          // 题型全集（ch4 混合覆盖） | const famOf = kind => (k
+=== calendar  [game-data.js]
+quizText = q => |   q.kind === 'day'      ? q.base + '的后面是星期几？' : |   q.kind === 'month'    ? q.base + '的后面是几月？' : |   q.kind === 'day_rev'  ? '今天是' + q.base + '，昨天是星期几？' : |                           '这个月是' + q.base + '，上个月是几月？'; | const confirmText = q => |   isRev(q.kind) ? q.base + '的前面是' + q.answer |                 : q.base + '的后面是' + q.answer; | /* TTS 拼句时长估算（b25 定版：SAPI ~345ms/汉字 + 600ms 基数；标点/问号不计） |    判对演出窗按 estMs(确认句) 动态取值——月份长句（10 字=4050ms）不被读题掐尾 */ | const estMs = t => 345 * String(t).replace(/[^一-鿿]/g, '').length + 600; | const CON
+=== calendar  MISS
+=== calendar  [game-data.js]
+confirmText = q => |   isRev(q.kind) ? q.base + '的前面是' + q.answer |                 : q.base + '的后面是' + q.answer; | /* TTS 拼句时长估算（b25 定版：SAPI ~345ms/汉字 + 600ms 基数；标点/问号不计） |    判对演出窗按 estMs(确认句) 动态取值——月份长句（10 字=4050ms）不被读题掐尾 */ | const estMs = t => 345 * String(t).replace(/[^一-鿿]/g, '').length + 600; | const CONFIRM_PAD = 3
+=== season  [game-data.js]
+stemOf = (band, occ) => TEMPS[band].n + '的天' + OCCS[occ].n + '，穿什么'; | const stemAntiOf = band => TEMPS[band].n + '的天，哪件穿上不合适'; |  | /* ---------- 提交反馈句（TTS 拼句，flat<3 每次播 / flat≥3 10s 节流——sayWText 通道） |    ≤11 码点：estMs(11)=4395 ≤ wrongChainUntil 4750-300（build.py 静态断言；r4 审查 m-5： |    estMs 统一家族 b25 定版 +600 落地余量，豁免窗 4600→4750 同步） ---------- */ | const SUBMIT_TEXT = { |   less: '还差一件，再挑一挑',        /* 少选：保留勾选继续找（合法路径不算 mi
+=== season  [game-data.js]
+ANTI_ANCHOR = { |   cold: '很冷的天，哪件会发抖', |   cool: '凉爽的天，哪件不合适', |   hot:  '很热的天，哪件会出汗' | }; | /* 判对确认句（TTS 拼句豁免，v1 confirm 先例）：outfit=题面句尾换「穿好啦」/ anti=带语义确认 |    ≤11 码点：判对演出窗 620+430+4350=5400 ≥ estMs(11)+300=4695（b25 定版 TTS 拼句窗护栏） */ | const confirmOf = q => q.kind ==
+=== season  [game-data.js]
+confirmOf = q => q.kind === 'anti' |   ? TEMPS[q.band].n + '的天，它不合适' |   : TEMPS[q.band].n + '的天' + OCCS[q.occ].n + '，穿好啦'; |  | /* ---------- SAPI 拼句时长估计（b25 定版：~345ms/字 + 600 落地余量——r4 审查 m-5 统一， |    原本款 +300 为口径漂移）TTS_MAX_CHARS=全部错反馈/提交反馈句的最大码点数（estMs 窗校验 |    封闭入口；题面句 fire-and-forget 不受窗约束） ---------- */ | const estMs = n => n * 345 + 600; | const TTS_MAX_CHARS = 11;          // estMs(11)=4395；wrongChainUntil=4750 ≥ 439
+=== season  [game-data.js]
+SUBMIT_TEXT = { |   less: '还差一件，再挑一挑',        /* 少选：保留勾选继续找（合法路径不算 miss） */ |   more: '多选了一件，再挑一挑'       /* 含错件：清空重选 + miss（真实错误路径） */ | }; | /* 反向题错反馈方向锚（点适配件时播；按 band 归句，不泄答案；≤10 码点） */ | const ANTI_ANCH
+=== sign  [game-data.js]
+SIGNS = { |   light:   { n: '红绿灯',   fam: 'signal', m: '看灯走',   sent: '红灯停，绿灯行' }, |   zebra:   { n: '斑马线',   fam: 'blue',   m: '走斑马线', sent: '过马路，走斑马线' }, |   bridge:  { n: '过街天桥', fam: 'blue',   m: '走天桥',   sent: '过马路，走天桥' }, |   tunnel:  { n: '地下通道', fam: 'blue',   m: '走地下道', sent: '过马路，走地下通道' }, |   noentry: { n: '禁止通行', fam: 'red',    m: '不能通行', sent: '红圈圈，这里不能走' }, |   noped:   { n: '禁止行人', fam: 'red',    m: '行人禁入', sent: '红圈圈，行人不能进' }, |   stop:    { n: '停车让行', fam: 'redoct', m: '停下看路', sent: '红八角，停下看一看' }, |   ped:     { n: '注意行人', fam: 'yellow', m: '注意行人', sent: '黄三角，前方有行人' }, |   child:   { n: '注意儿童', fam: 'yellow', m: '前方儿童', sent: '黄三角，前方有小朋友' }, |   work:    { n: '前方施工', fam: 'yellow', m: '前方施工', sent: '黄三角
+=== sign  [game-data.js]
+GUIDE = { red: '红圈圈说，不能做', |                 redoct: '红八角说，停下来', |                 yellow: '黄三角说，要小心', |                 blue: '蓝牌子说，这样走', |                 signal: '看看灯的颜色再走' }; |  | /* ---------- 章配置（章号 1 基；生成关 flat≥20 按 (ch-1)%4+1 循环四章取材） |    hint=章末预告**下一章**文案（hint[i] ↔ CHAPTER
+=== sign  [game-data.js]
+confirmText = s => SIGNS[s].sent; | /* 错反馈引导句（按题面标志 fam——锚定形状颜色线索，不否定人格，SPEC §0.61） */ | const GUIDE = { red: '红圈圈说，不能做', |                 redoct: '红八角说，停下来', |                 yellow: '黄三角说，要小心', |                 blue: '蓝牌子说，这样走', |                 signal: '看看灯的颜色再走' }; |  | /* ---------- 章配置（章号 1 基；生成关 flat≥20 按 (ch-1)%4+1 

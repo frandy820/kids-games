@@ -1,0 +1,305 @@
+{
+ "ruler": {
+  "game": "ruler",
+  "session_s": 831.45,
+  "page_errors": [],
+  "perr": [],
+  "ctxState": "err",
+  "stars": {
+   "0": [
+    "1-0",
+    1
+   ],
+   "1": [
+    "1-1",
+    3
+   ],
+   "2": [
+    "1-2",
+    3
+   ],
+   "3": [
+    "1-3",
+    2
+   ],
+   "4": [
+    "1-4",
+    3
+   ],
+   "5": [
+    null,
+    null
+   ],
+   "6": [
+    null,
+    null
+   ],
+   "7": [
+    null,
+    null
+   ],
+   "8": [
+    null,
+    null
+   ],
+   "9": [
+    null,
+    null
+   ],
+   "10": [
+    null,
+    null
+   ]
+  },
+  "save_levels": {
+   "1-0": {
+    "stars": 1,
+    "plays": 1
+   },
+   "1-1": {
+    "stars": 3,
+    "plays": 1
+   },
+   "1-2": {
+    "stars": 3,
+    "plays": 1
+   },
+   "1-3": {
+    "stars": 2,
+    "plays": 1
+   },
+   "1-4": {
+    "stars": 3,
+    "plays": 1
+   },
+   "2-0": {
+    "stars": 3,
+    "plays": 5
+   }
+  },
+  "voice_ms": 609019,
+  "voice_pct": 73.2,
+  "n_clips": 53,
+  "n_tts": 123,
+  "n_core_unknown": 7,
+  "tts_counter": {
+   "看！用回形针量一量": 1,
+   "铅笔有四根回形针长": 5,
+   "还有一小段，再多数一根": 3,
+   "没有那么多，再数数": 4,
+   "蜡笔有三根回形针长": 4,
+   "橡皮有二根回形针长": 4,
+   "剪刀有四根回形针长": 4,
+   "玩具车有五根回形针长": 5,
+   "故事书有六根回形针长": 4,
+   "铅笔有几根小棒长？": 24,
+   "铅笔有二根小棒长": 6,
+   "橡皮有几根小棒长？": 8,
+   "橡皮有一根小棒长": 6,
+   "剪刀有几根小棒长？": 8,
+   "剪刀有二根小棒长": 6,
+   "故事书有几根小棒长？": 8,
+   "故事书有三根小棒长": 6,
+   "蜡笔有几块积木长？": 12,
+   "蜡笔有一块积木长": 5
+  },
+  "clip_counter": {
+   "rul_tut_watch": 1,
+   "rul_tut_turn": 1,
+   "rul_wrong": 8,
+   "rul_q": 26,
+   "rul_right": 10,
+   "core_chapter_end": 1,
+   "core_day_end": 5,
+   "core_rest": 1
+  },
+  "teach_swallow": {
+   "t": 3.01,
+   "tag": "tut_watch_tap_swallowed",
+   "step_same": true,
+   "voice": [
+    "<clip:rul_tut_watch>",
+    "TTS:看！用回形针量一量",
+    "TTS:铅笔有四根回形针长"
+   ]
+  },
+  "teach_watch_s": 4.3,
+  "rescue_voices": [
+   "<clip:rul_right>",
+   "<clip:rul_q>",
+   "<clip:rul_q>"
+  ],
+  "q_gaps_max": 18175,
+  "blank": {
+   "t": 72.32,
+   "tag": "blank_tap",
+   "note": "flat1 点左上空白",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":0,\"m\":0}",
+   "voice": [
+    "<clip:rul_right>",
+    "<clip:rul_q>"
+   ]
+  },
+  "rapid": {
+   "t": 175.34,
+   "tag": "rapid_double_tap",
+   "miss_before": 1,
+   "miss_after": 2,
+   "voice": [
+    "TTS:没有那么多，再数数"
+   ]
+  },
+  "throttle": {
+   "t": 177.65,
+   "tag": "throttle_window",
+   "miss_before": 2,
+   "miss_after": 2,
+   "voice": []
+  },
+  "wrong_chains": [
+   {
+    "t": 1788994451388,
+    "guide": "",
+    "chain_ms": 4230,
+    "intrusions": [
+     "rul_q"
+    ],
+    "detail": [
+     "clip rul_q @+1.20s"
+    ]
+   },
+   {
+    "t": 1788994458412,
+    "guide": "还有一小段，再多数一根",
+    "chain_ms": 7425,
+    "intrusions": [
+     "TTS:铅笔有四根回形针长"
+    ],
+    "detail": [
+     "TTS «铅笔有四根回形针长» @+6.95s"
+    ]
+   },
+   {
+    "t": 1788994471158,
+    "guide": "没有那么多，再数数",
+    "chain_ms": 6735,
+    "intrusions": [],
+    "detail": []
+   },
+   {
+    "t": 1788994613961,
+    "guide": "没有那么多，再数数",
+    "chain_ms": 6735,
+    "intrusions": [],
+    "detail": []
+   },
+   {
+    "t": 1788995100907,
+    "guide": "没有那么多，再数数",
+    "chain_ms": 6735,
+    "intrusions": [],
+    "detail": []
+   },
+   {
+    "t": 1788995131035,
+    "guide": "没有那么多，再数数",
+    "chain_ms": 6735,
+    "intrusions": [],
+    "detail": []
+   },
+   {
+    "t": 1788995161110,
+    "guide": "还有一小段，再多数一根",
+    "chain_ms": 7425,
+    "intrusions": [],
+    "detail": []
+   },
+   {
+    "t": 1788995191183,
+    "guide": "还有一小段，再多数一根",
+    "chain_ms": 7425,
+    "intrusions": [],
+    "detail": []
+   }
+  ],
+  "ch3_checks": [
+   {
+    "why": {
+     "kind": "count",
+     "item": "pencil",
+     "unit": "stick",
+     "true_recalc": 2,
+     "impl_units": 2,
+     "picked": 3
+    },
+    "guide": [
+     "<clip:rul_wrong>",
+     "TTS:没有那么多，再数数",
+     "TTS:铅笔有几根小棒长？"
+    ],
+    "verdict": "count 复算真值=2（实现 units=2 一致=True）错点=3"
+   },
+   {
+    "why": {
+     "kind": "count",
+     "item": "eraser",
+     "unit": "stick",
+     "true_recalc": 1,
+     "impl_units": 1,
+     "picked": 2
+    },
+    "guide": [
+     "<clip:rul_wrong>",
+     "TTS:没有那么多，再数数"
+    ],
+    "verdict": "count 复算真值=1（实现 units=1 一致=True）错点=2"
+   },
+   {
+    "why": {
+     "kind": "count",
+     "item": "scissors",
+     "unit": "stick",
+     "true_recalc": 2,
+     "impl_units": 2,
+     "picked": 1
+    },
+    "guide": [
+     "<clip:rul_wrong>",
+     "TTS:还有一小段，再多数一根"
+    ],
+    "verdict": "count 复算真值=2（实现 units=2 一致=True）错点=1"
+   },
+   {
+    "why": {
+     "kind": "count",
+     "item": "book",
+     "unit": "stick",
+     "true_recalc": 3,
+     "impl_units": 3,
+     "picked": 2
+    },
+    "guide": [
+     "<clip:rul_wrong>",
+     "TTS:还有一小段，再多数一根"
+    ],
+    "verdict": "count 复算真值=3（实现 units=3 一致=True）错点=2"
+   },
+   {
+    "why": {
+     "kind": "count",
+     "item": "crayon",
+     "unit": "block",
+     "true_recalc": 1,
+     "impl_units": 1,
+     "picked": 2
+    },
+    "guide": [
+     "TTS:蜡笔有几块积木长？",
+     "TTS:蜡笔有几块积木长？"
+    ],
+    "verdict": "count 复算真值=1（实现 units=1 一致=True）错点=2"
+   }
+  ]
+ }
+}

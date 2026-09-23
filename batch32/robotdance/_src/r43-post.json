@@ -1,0 +1,5653 @@
+{
+ "spectra": [
+  {
+   "flat": 0,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "jump",
+      "clap"
+     ],
+     "anims": [
+      "clap",
+      "jump",
+      "wave"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 0
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "kick",
+      "jump",
+      "shake"
+     ],
+     "anims": [
+      "jump",
+      "wave",
+      "shake",
+      "kick",
+      "bow",
+      "spin",
+      "stretch"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "nod",
+      "stomp",
+      "spin"
+     ],
+     "anims": [
+      "stretch",
+      "wave",
+      "spin",
+      "stomp",
+      "kick",
+      "clap",
+      "nod"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "wave",
+      "spin",
+      "jump",
+      "nod"
+     ],
+     "anims": [
+      "kick",
+      "nod",
+      "jump",
+      "spin",
+      "clap",
+      "bow",
+      "wave",
+      "stomp"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "clap",
+      "wave",
+      "jump",
+      "stomp"
+     ],
+     "anims": [
+      "shake",
+      "jump",
+      "spin",
+      "kick",
+      "wave",
+      "stretch",
+      "stomp",
+      "clap"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 1,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "clap",
+      "kick"
+     ],
+     "anims": [
+      "stretch",
+      "jump",
+      "kick",
+      "clap",
+      "spin",
+      "nod"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "stretch",
+      "wave",
+      "kick"
+     ],
+     "anims": [
+      "shake",
+      "stretch",
+      "clap",
+      "nod",
+      "kick",
+      "jump",
+      "wave"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "nod",
+      "clap",
+      "spin"
+     ],
+     "anims": [
+      "nod",
+      "clap",
+      "jump",
+      "wave",
+      "spin",
+      "stomp",
+      "kick"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "wave",
+      "jump",
+      "shake",
+      "bow"
+     ],
+     "anims": [
+      "wave",
+      "stretch",
+      "nod",
+      "bow",
+      "jump",
+      "shake",
+      "clap",
+      "stomp"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "stretch",
+      "wave",
+      "jump",
+      "stomp"
+     ],
+     "anims": [
+      "spin",
+      "bow",
+      "clap",
+      "stretch",
+      "stomp",
+      "wave",
+      "nod",
+      "jump"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 2,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "stomp",
+      "jump",
+      "kick"
+     ],
+     "anims": [
+      "bow",
+      "nod",
+      "jump",
+      "stomp",
+      "spin",
+      "kick"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "bow",
+      "stomp",
+      "clap"
+     ],
+     "anims": [
+      "stomp",
+      "nod",
+      "stretch",
+      "bow",
+      "jump",
+      "clap",
+      "kick"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "spin",
+      "shake",
+      "bow"
+     ],
+     "anims": [
+      "shake",
+      "wave",
+      "jump",
+      "spin",
+      "kick",
+      "bow",
+      "clap"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "clap",
+      "stomp",
+      "kick",
+      "shake"
+     ],
+     "anims": [
+      "nod",
+      "kick",
+      "clap",
+      "spin",
+      "bow",
+      "stomp",
+      "shake",
+      "stretch"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "stretch",
+      "clap",
+      "bow",
+      "jump"
+     ],
+     "anims": [
+      "jump",
+      "stretch",
+      "shake",
+      "wave",
+      "nod",
+      "clap",
+      "stomp",
+      "bow"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 3,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "stomp",
+      "clap"
+     ],
+     "anims": [
+      "nod",
+      "clap",
+      "spin",
+      "stomp",
+      "kick",
+      "stretch"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "stomp",
+      "spin",
+      "clap"
+     ],
+     "anims": [
+      "stomp",
+      "stretch",
+      "jump",
+      "clap",
+      "wave",
+      "spin",
+      "kick"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "wave",
+      "jump",
+      "stomp"
+     ],
+     "anims": [
+      "stretch",
+      "stomp",
+      "clap",
+      "shake",
+      "jump",
+      "nod",
+      "wave"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "stomp",
+      "wave",
+      "bow",
+      "clap"
+     ],
+     "anims": [
+      "shake",
+      "kick",
+      "clap",
+      "bow",
+      "nod",
+      "jump",
+      "stomp",
+      "wave"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "bow",
+      "kick",
+      "clap",
+      "shake"
+     ],
+     "anims": [
+      "spin",
+      "nod",
+      "jump",
+      "clap",
+      "bow",
+      "kick",
+      "stomp",
+      "shake"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 4,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "wave",
+      "stomp"
+     ],
+     "anims": [
+      "bow",
+      "kick",
+      "clap",
+      "nod",
+      "wave",
+      "stomp"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "stomp",
+      "clap",
+      "shake"
+     ],
+     "anims": [
+      "spin",
+      "kick",
+      "clap",
+      "stomp",
+      "wave",
+      "stretch",
+      "shake"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "jump",
+      "shake",
+      "spin"
+     ],
+     "anims": [
+      "kick",
+      "wave",
+      "jump",
+      "spin",
+      "stretch",
+      "shake",
+      "nod"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "spin",
+      "nod",
+      "bow",
+      "stomp"
+     ],
+     "anims": [
+      "bow",
+      "spin",
+      "stomp",
+      "kick",
+      "wave",
+      "nod",
+      "clap",
+      "jump"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "jump",
+      "stomp",
+      "wave",
+      "clap"
+     ],
+     "anims": [
+      "clap",
+      "bow",
+      "shake",
+      "nod",
+      "spin",
+      "jump",
+      "wave",
+      "stomp"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 5,
+   "dch": 2,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "nod",
+      "shake",
+      "bow",
+      "clap",
+      "spin"
+     ],
+     "anims": [
+      "jump",
+      "shake",
+      "stomp",
+      "spin",
+      "clap",
+      "wave",
+      "bow",
+      "stretch",
+      "nod"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "bow",
+      "stomp",
+      "clap",
+      "spin",
+      "stretch"
+     ],
+     "anims": [
+      "kick",
+      "spin",
+      "stomp",
+      "nod",
+      "jump",
+      "wave",
+      "clap",
+      "bow",
+      "stretch"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "clap",
+      "wave",
+      "shake",
+      "spin",
+      "jump"
+     ],
+     "anims": [
+      "wave",
+      "jump",
+      "shake",
+      "bow",
+      "clap",
+      "spin",
+      "nod",
+      "stretch",
+      "stomp"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "stomp",
+      "nod",
+      "spin",
+      "wave",
+      "clap"
+     ],
+     "anims": [
+      "bow",
+      "shake",
+      "jump",
+      "stomp",
+      "clap",
+      "nod",
+      "stretch",
+      "spin",
+      "wave"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "stretch",
+      "stomp",
+      "bow",
+      "wave",
+      "spin"
+     ],
+     "anims": [
+      "jump",
+      "shake",
+      "clap",
+      "spin",
+      "wave",
+      "stretch",
+      "kick",
+      "bow",
+      "stomp"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 6,
+   "dch": 2,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "stretch",
+      "clap",
+      "bow",
+      "kick",
+      "spin"
+     ],
+     "anims": [
+      "stomp",
+      "clap",
+      "shake",
+      "wave",
+      "spin",
+      "jump",
+      "bow",
+      "stretch",
+      "kick"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "bow",
+      "stomp",
+      "shake",
+      "jump",
+      "stretch"
+     ],
+     "anims": [
+      "stomp",
+      "clap",
+      "bow",
+      "jump",
+      "spin",
+      "shake",
+      "kick",
+      "wave",
+      "stretch"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "wave",
+      "shake",
+      "clap",
+      "spin",
+      "kick"
+     ],
+     "anims": [
+      "spin",
+      "stretch",
+      "wave",
+      "clap",
+      "stomp",
+      "kick",
+      "bow",
+      "jump",
+      "shake"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "kick",
+      "wave",
+      "stomp",
+      "spin",
+      "jump"
+     ],
+     "anims": [
+      "bow",
+      "spin",
+      "kick",
+      "wave",
+      "jump",
+      "shake",
+      "stomp",
+      "clap",
+      "stretch"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "nod",
+      "wave",
+      "shake",
+      "kick",
+      "stretch"
+     ],
+     "anims": [
+      "bow",
+      "wave",
+      "jump",
+      "kick",
+      "stomp",
+      "nod",
+      "stretch",
+      "shake",
+      "spin"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 7,
+   "dch": 2,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "stretch",
+      "bow",
+      "nod",
+      "spin",
+      "stomp"
+     ],
+     "anims": [
+      "clap",
+      "spin",
+      "stretch",
+      "nod",
+      "jump",
+      "shake",
+      "stomp",
+      "wave",
+      "bow"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "shake",
+      "bow",
+      "wave",
+      "kick",
+      "stretch"
+     ],
+     "anims": [
+      "bow",
+      "jump",
+      "stomp",
+      "shake",
+      "kick",
+      "nod",
+      "stretch",
+      "wave",
+      "clap"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "stomp",
+      "wave",
+      "jump",
+      "stretch",
+      "shake"
+     ],
+     "anims": [
+      "nod",
+      "kick",
+      "jump",
+      "shake",
+      "clap",
+      "stomp",
+      "bow",
+      "stretch",
+      "wave"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "clap",
+      "kick",
+      "stomp",
+      "shake",
+      "jump"
+     ],
+     "anims": [
+      "kick",
+      "shake",
+      "jump",
+      "stomp",
+      "spin",
+      "clap",
+      "stretch",
+      "nod",
+      "bow"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "wave",
+      "spin",
+      "clap",
+      "nod",
+      "stomp"
+     ],
+     "anims": [
+      "kick",
+      "stomp",
+      "jump",
+      "spin",
+      "clap",
+      "bow",
+      "nod",
+      "shake",
+      "wave"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 8,
+   "dch": 2,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "stomp",
+      "wave",
+      "spin",
+      "shake",
+      "nod",
+      "kick"
+     ],
+     "anims": [
+      "spin",
+      "clap",
+      "stomp",
+      "wave",
+      "jump",
+      "kick",
+      "stretch",
+      "nod",
+      "shake"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "stomp",
+      "kick",
+      "bow",
+      "nod",
+      "spin"
+     ],
+     "anims": [
+      "clap",
+      "jump",
+      "nod",
+      "kick",
+      "shake",
+      "bow",
+      "wave",
+      "spin",
+      "stomp"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "jump",
+      "wave",
+      "nod",
+      "stomp",
+      "kick"
+     ],
+     "anims": [
+      "stretch",
+      "wave",
+      "bow",
+      "jump",
+      "kick",
+      "nod",
+      "shake",
+      "stomp",
+      "spin"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stomp",
+      "jump",
+      "spin",
+      "stretch",
+      "wave",
+      "clap"
+     ],
+     "anims": [
+      "bow",
+      "spin",
+      "shake",
+      "stretch",
+      "jump",
+      "nod",
+      "wave",
+      "clap",
+      "stomp"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "jump",
+      "spin",
+      "nod",
+      "kick",
+      "wave"
+     ],
+     "anims": [
+      "kick",
+      "clap",
+      "bow",
+      "jump",
+      "nod",
+      "shake",
+      "spin",
+      "stretch",
+      "wave"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 9,
+   "dch": 2,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "stomp",
+      "wave",
+      "stretch",
+      "kick",
+      "clap",
+      "nod"
+     ],
+     "anims": [
+      "stretch",
+      "spin",
+      "stomp",
+      "nod",
+      "clap",
+      "shake",
+      "wave",
+      "bow",
+      "kick"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "spin",
+      "wave",
+      "kick",
+      "nod",
+      "stomp"
+     ],
+     "anims": [
+      "nod",
+      "stretch",
+      "kick",
+      "shake",
+      "jump",
+      "wave",
+      "clap",
+      "spin",
+      "stomp"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "jump",
+      "stomp",
+      "stretch",
+      "bow",
+      "kick"
+     ],
+     "anims": [
+      "stretch",
+      "stomp",
+      "wave",
+      "bow",
+      "clap",
+      "kick",
+      "spin",
+      "jump",
+      "shake"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "wave",
+      "jump",
+      "kick",
+      "stretch",
+      "spin"
+     ],
+     "anims": [
+      "stretch",
+      "nod",
+      "wave",
+      "kick",
+      "stomp",
+      "clap",
+      "jump",
+      "spin",
+      "bow"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "stomp",
+      "clap",
+      "wave",
+      "shake",
+      "bow"
+     ],
+     "anims": [
+      "shake",
+      "wave",
+      "bow",
+      "stomp",
+      "jump",
+      "kick",
+      "clap",
+      "nod",
+      "spin"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 10,
+   "dch": 3,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "nod",
+      "kick",
+      "stomp",
+      "shake",
+      "stretch",
+      "kick"
+     ],
+     "anims": [
+      "clap",
+      "stretch",
+      "jump",
+      "bow",
+      "wave",
+      "stomp",
+      "shake",
+      "kick",
+      "spin",
+      "nod",
+      "kick"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "spin",
+      "kick",
+      "shake",
+      "jump",
+      "wave",
+      "wave"
+     ],
+     "anims": [
+      "clap",
+      "kick",
+      "stomp",
+      "bow",
+      "nod",
+      "wave",
+      "shake",
+      "wave",
+      "spin",
+      "stretch",
+      "jump"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "jump",
+      "stretch",
+      "kick",
+      "kick",
+      "shake",
+      "bow"
+     ],
+     "anims": [
+      "stretch",
+      "spin",
+      "clap",
+      "shake",
+      "bow",
+      "jump",
+      "kick",
+      "stomp",
+      "nod",
+      "wave",
+      "kick"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "jump",
+      "kick",
+      "kick",
+      "spin",
+      "nod",
+      "clap"
+     ],
+     "anims": [
+      "jump",
+      "clap",
+      "bow",
+      "stomp",
+      "shake",
+      "spin",
+      "wave",
+      "kick",
+      "nod",
+      "stretch",
+      "kick"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "stomp",
+      "spin",
+      "nod",
+      "stretch",
+      "stretch",
+      "wave"
+     ],
+     "anims": [
+      "spin",
+      "jump",
+      "wave",
+      "clap",
+      "kick",
+      "stomp",
+      "stretch",
+      "stretch",
+      "bow",
+      "shake",
+      "nod"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 11,
+   "dch": 3,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "stomp",
+      "wave",
+      "bow",
+      "clap",
+      "kick",
+      "nod"
+     ],
+     "anims": [
+      "kick",
+      "wave",
+      "kick",
+      "nod",
+      "jump",
+      "bow",
+      "spin",
+      "shake",
+      "stretch",
+      "clap",
+      "stomp"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "wave",
+      "nod",
+      "jump",
+      "spin",
+      "kick",
+      "wave"
+     ],
+     "anims": [
+      "stomp",
+      "nod",
+      "shake",
+      "wave",
+      "bow",
+      "spin",
+      "wave",
+      "stretch",
+      "jump",
+      "kick",
+      "clap"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "spin",
+      "kick",
+      "shake",
+      "bow",
+      "wave",
+      "spin"
+     ],
+     "anims": [
+      "shake",
+      "spin",
+      "kick",
+      "wave",
+      "bow",
+      "nod",
+      "stretch",
+      "clap",
+      "stomp",
+      "spin",
+      "jump"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "stomp",
+      "clap",
+      "jump",
+      "stretch",
+      "spin",
+      "bow"
+     ],
+     "anims": [
+      "bow",
+      "wave",
+      "spin",
+      "stretch",
+      "nod",
+      "kick",
+      "shake",
+      "jump",
+      "clap",
+      "spin",
+      "stomp"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "bow",
+      "wave",
+      "jump",
+      "bow",
+      "clap",
+      "shake"
+     ],
+     "anims": [
+      "kick",
+      "stomp",
+      "wave",
+      "bow",
+      "clap",
+      "nod",
+      "shake",
+      "spin",
+      "jump",
+      "bow",
+      "stretch"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 12,
+   "dch": 3,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "kick",
+      "stretch",
+      "shake",
+      "bow",
+      "wave",
+      "stomp"
+     ],
+     "anims": [
+      "bow",
+      "shake",
+      "kick",
+      "stomp",
+      "clap",
+      "jump",
+      "stretch",
+      "stretch",
+      "wave",
+      "nod",
+      "spin"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "spin",
+      "stomp",
+      "wave",
+      "kick",
+      "nod",
+      "stomp"
+     ],
+     "anims": [
+      "stomp",
+      "jump",
+      "clap",
+      "stomp",
+      "kick",
+      "stretch",
+      "shake",
+      "wave",
+      "nod",
+      "spin",
+      "bow"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "bow",
+      "clap",
+      "stretch",
+      "bow",
+      "shake",
+      "kick"
+     ],
+     "anims": [
+      "kick",
+      "jump",
+      "spin",
+      "clap",
+      "shake",
+      "bow",
+      "stomp",
+      "wave",
+      "bow",
+      "nod",
+      "stretch"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "shake",
+      "wave",
+      "jump",
+      "kick",
+      "kick",
+      "clap"
+     ],
+     "anims": [
+      "jump",
+      "kick",
+      "clap",
+      "spin",
+      "wave",
+      "shake",
+      "stretch",
+      "stomp",
+      "nod",
+      "kick",
+      "bow"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "clap",
+      "wave",
+      "nod",
+      "clap",
+      "stretch",
+      "stomp"
+     ],
+     "anims": [
+      "shake",
+      "wave",
+      "clap",
+      "spin",
+      "stomp",
+      "clap",
+      "stretch",
+      "nod",
+      "bow",
+      "jump",
+      "kick"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 13,
+   "dch": 3,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "clap",
+      "bow",
+      "stomp",
+      "jump",
+      "clap",
+      "wave"
+     ],
+     "anims": [
+      "spin",
+      "kick",
+      "shake",
+      "stretch",
+      "jump",
+      "clap",
+      "stomp",
+      "wave",
+      "clap",
+      "bow",
+      "nod"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "spin",
+      "stretch",
+      "nod",
+      "clap",
+      "stomp",
+      "wave"
+     ],
+     "anims": [
+      "clap",
+      "stomp",
+      "spin",
+      "bow",
+      "kick",
+      "wave",
+      "spin",
+      "jump",
+      "nod",
+      "stretch",
+      "shake"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "stomp",
+      "shake",
+      "wave",
+      "nod",
+      "nod",
+      "bow"
+     ],
+     "anims": [
+      "clap",
+      "kick",
+      "nod",
+      "spin",
+      "shake",
+      "wave",
+      "bow",
+      "jump",
+      "nod",
+      "stomp",
+      "stretch"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "shake",
+      "wave",
+      "bow",
+      "clap",
+      "stomp",
+      "wave"
+     ],
+     "anims": [
+      "nod",
+      "clap",
+      "stomp",
+      "shake",
+      "wave",
+      "kick",
+      "bow",
+      "stretch",
+      "wave",
+      "jump",
+      "spin"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "stretch",
+      "clap",
+      "nod",
+      "jump",
+      "kick",
+      "wave"
+     ],
+     "anims": [
+      "wave",
+      "stretch",
+      "spin",
+      "stomp",
+      "kick",
+      "clap",
+      "bow",
+      "jump",
+      "nod",
+      "nod",
+      "shake"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 14,
+   "dch": 3,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "kick",
+      "jump",
+      "kick",
+      "stomp",
+      "bow",
+      "stretch"
+     ],
+     "anims": [
+      "jump",
+      "shake",
+      "spin",
+      "nod",
+      "stomp",
+      "kick",
+      "stretch",
+      "bow",
+      "wave",
+      "kick",
+      "clap"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "stomp",
+      "kick",
+      "nod",
+      "shake",
+      "wave",
+      "kick"
+     ],
+     "anims": [
+      "stomp",
+      "nod",
+      "kick",
+      "wave",
+      "shake",
+      "jump",
+      "kick",
+      "bow",
+      "stretch",
+      "spin",
+      "clap"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "stomp",
+      "stretch",
+      "spin",
+      "kick",
+      "wave",
+      "shake"
+     ],
+     "anims": [
+      "stomp",
+      "wave",
+      "jump",
+      "shake",
+      "nod",
+      "stretch",
+      "bow",
+      "wave",
+      "kick",
+      "clap",
+      "spin"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "shake",
+      "nod",
+      "bow",
+      "clap",
+      "stomp",
+      "shake"
+     ],
+     "anims": [
+      "bow",
+      "jump",
+      "kick",
+      "shake",
+      "stretch",
+      "clap",
+      "shake",
+      "wave",
+      "spin",
+      "nod",
+      "stomp"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "shake",
+      "stretch",
+      "bow",
+      "kick",
+      "kick",
+      "spin"
+     ],
+     "anims": [
+      "nod",
+      "bow",
+      "shake",
+      "stomp",
+      "stretch",
+      "spin",
+      "kick",
+      "jump",
+      "clap",
+      "kick",
+      "wave"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 15,
+   "dch": 4,
+   "q": [
+    {
+     "kind": "fix",
+     "steps": [
+      "stomp",
+      "nod",
+      "shake",
+      "stomp",
+      "clap",
+      "spin",
+      "spin",
+      "stretch"
+     ],
+     "anims": [],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 0,
+     "k": 0,
+     "bad": "stretch",
+     "disp": [
+      "stretch",
+      "nod",
+      "shake",
+      "stomp",
+      "clap",
+      "spin",
+      "spin",
+      "stretch"
+     ]
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "kick",
+      "bow",
+      "jump",
+      "jump",
+      "shake",
+      "clap",
+      "spin"
+     ],
+     "anims": [
+      "clap",
+      "bow",
+      "jump",
+      "shake",
+      "kick",
+      "jump",
+      "spin",
+      "stomp",
+      "stretch",
+      "nod",
+      "wave",
+      "bow"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "kick",
+      "clap",
+      "stretch",
+      "kick",
+      "shake",
+      "jump",
+      "stretch"
+     ],
+     "anims": [
+      "jump",
+      "bow",
+      "shake",
+      "clap",
+      "nod",
+      "stomp",
+      "kick",
+      "spin",
+      "wave",
+      "kick",
+      "stretch",
+      "stretch"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "wave",
+      "stretch",
+      "clap",
+      "bow",
+      "bow",
+      "stomp",
+      "shake"
+     ],
+     "anims": [
+      "kick",
+      "spin",
+      "stomp",
+      "shake",
+      "bow",
+      "clap",
+      "stretch",
+      "shake",
+      "wave",
+      "nod",
+      "bow",
+      "jump"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "jump",
+      "stomp",
+      "wave",
+      "stomp",
+      "clap",
+      "stomp",
+      "stretch"
+     ],
+     "anims": [
+      "bow",
+      "nod",
+      "stretch",
+      "clap",
+      "shake",
+      "stomp",
+      "kick",
+      "spin",
+      "stomp",
+      "wave",
+      "jump",
+      "stomp"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 16,
+   "dch": 4,
+   "q": [
+    {
+     "kind": "fix",
+     "steps": [
+      "jump",
+      "bow",
+      "shake",
+      "wave",
+      "wave",
+      "kick",
+      "shake",
+      "spin"
+     ],
+     "anims": [],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 0,
+     "k": 3,
+     "bad": "bow",
+     "disp": [
+      "jump",
+      "bow",
+      "shake",
+      "bow",
+      "wave",
+      "kick",
+      "shake",
+      "spin"
+     ]
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "spin",
+      "bow",
+      "nod",
+      "clap",
+      "bow",
+      "kick",
+      "bow"
+     ],
+     "anims": [
+      "spin",
+      "shake",
+      "nod",
+      "bow",
+      "stomp",
+      "kick",
+      "bow",
+      "clap",
+      "bow",
+      "stretch",
+      "wave",
+      "jump"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "bow",
+      "clap",
+      "stomp",
+      "stomp",
+      "shake",
+      "wave",
+      "clap"
+     ],
+     "anims": [
+      "stomp",
+      "shake",
+      "nod",
+      "bow",
+      "kick",
+      "jump",
+      "stomp",
+      "clap",
+      "clap",
+      "wave",
+      "spin",
+      "stretch"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "kick",
+      "jump",
+      "nod",
+      "nod",
+      "wave",
+      "spin",
+      "stretch"
+     ],
+     "anims": [
+      "clap",
+      "nod",
+      "stomp",
+      "kick",
+      "shake",
+      "nod",
+      "bow",
+      "jump",
+      "wave",
+      "stretch",
+      "kick",
+      "spin"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "jump",
+      "clap",
+      "clap",
+      "stretch",
+      "stomp",
+      "kick",
+      "stomp"
+     ],
+     "anims": [
+      "stomp",
+      "wave",
+      "clap",
+      "nod",
+      "shake",
+      "stomp",
+      "spin",
+      "bow",
+      "stretch",
+      "kick",
+      "clap",
+      "jump"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 17,
+   "dch": 4,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "nod",
+      "clap",
+      "spin",
+      "stomp",
+      "nod",
+      "kick",
+      "shake"
+     ],
+     "anims": [
+      "spin",
+      "nod",
+      "wave",
+      "jump",
+      "stretch",
+      "stomp",
+      "bow",
+      "clap",
+      "nod",
+      "shake",
+      "kick",
+      "spin"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "fix",
+     "steps": [
+      "shake",
+      "shake",
+      "clap",
+      "wave",
+      "nod",
+      "shake",
+      "kick",
+      "bow"
+     ],
+     "anims": [],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 0,
+     "k": 4,
+     "bad": "clap",
+     "disp": [
+      "shake",
+      "shake",
+      "clap",
+      "wave",
+      "clap",
+      "shake",
+      "kick",
+      "bow"
+     ]
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "wave",
+      "stomp",
+      "stretch",
+      "jump",
+      "nod",
+      "wave",
+      "kick"
+     ],
+     "anims": [
+      "stomp",
+      "spin",
+      "nod",
+      "nod",
+      "kick",
+      "bow",
+      "jump",
+      "wave",
+      "wave",
+      "clap",
+      "stretch",
+      "shake"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "stretch",
+      "bow",
+      "clap",
+      "stomp",
+      "clap",
+      "wave",
+      "stomp"
+     ],
+     "anims": [
+      "bow",
+      "stretch",
+      "spin",
+      "clap",
+      "clap",
+      "nod",
+      "shake",
+      "stomp",
+      "kick",
+      "stomp",
+      "jump",
+      "wave"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "bow",
+      "jump",
+      "wave",
+      "stretch",
+      "stretch",
+      "nod",
+      "clap"
+     ],
+     "anims": [
+      "stretch",
+      "clap",
+      "shake",
+      "stomp",
+      "bow",
+      "wave",
+      "spin",
+      "kick",
+      "jump",
+      "nod",
+      "stretch",
+      "jump"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 18,
+   "dch": 4,
+   "q": [
+    {
+     "kind": "fix",
+     "steps": [
+      "spin",
+      "kick",
+      "spin",
+      "stomp",
+      "jump",
+      "jump",
+      "bow",
+      "clap"
+     ],
+     "anims": [],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 0,
+     "k": 4,
+     "bad": "clap",
+     "disp": [
+      "spin",
+      "kick",
+      "spin",
+      "stomp",
+      "clap",
+      "jump",
+      "bow",
+      "clap"
+     ]
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "nod",
+      "wave",
+      "kick",
+      "kick",
+      "bow",
+      "bow",
+      "clap"
+     ],
+     "anims": [
+      "bow",
+      "bow",
+      "nod",
+      "spin",
+      "wave",
+      "clap",
+      "kick",
+      "kick",
+      "jump",
+      "shake",
+      "stretch",
+      "stomp"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "kick",
+      "stretch",
+      "clap",
+      "wave",
+      "wave",
+      "nod",
+      "jump"
+     ],
+     "anims": [
+      "stomp",
+      "stretch",
+      "wave",
+      "bow",
+      "shake",
+      "kick",
+      "clap",
+      "spin",
+      "wave",
+      "stretch",
+      "jump",
+      "nod"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "wave",
+      "kick",
+      "nod",
+      "wave",
+      "kick",
+      "clap",
+      "spin"
+     ],
+     "anims": [
+      "kick",
+      "kick",
+      "bow",
+      "clap",
+      "nod",
+      "shake",
+      "stomp",
+      "jump",
+      "wave",
+      "stretch",
+      "wave",
+      "spin"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "wave",
+      "jump",
+      "nod",
+      "spin",
+      "stomp",
+      "jump",
+      "wave"
+     ],
+     "anims": [
+      "shake",
+      "stretch",
+      "jump",
+      "wave",
+      "kick",
+      "clap",
+      "nod",
+      "spin",
+      "bow",
+      "stomp",
+      "wave",
+      "jump"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 19,
+   "dch": 4,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "kick",
+      "stretch",
+      "kick",
+      "shake",
+      "clap",
+      "stretch",
+      "bow"
+     ],
+     "anims": [
+      "clap",
+      "bow",
+      "stretch",
+      "shake",
+      "jump",
+      "nod",
+      "spin",
+      "wave",
+      "stomp",
+      "kick",
+      "kick",
+      "stretch"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "kick",
+      "clap",
+      "spin",
+      "nod",
+      "stomp",
+      "spin",
+      "wave"
+     ],
+     "anims": [
+      "wave",
+      "jump",
+      "nod",
+      "bow",
+      "kick",
+      "stomp",
+      "stretch",
+      "clap",
+      "clap",
+      "shake",
+      "spin",
+      "spin"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "fix",
+     "steps": [
+      "clap",
+      "wave",
+      "shake",
+      "bow",
+      "kick",
+      "spin",
+      "clap",
+      "spin"
+     ],
+     "anims": [],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 0,
+     "k": 6,
+     "bad": "bow",
+     "disp": [
+      "clap",
+      "wave",
+      "shake",
+      "bow",
+      "kick",
+      "spin",
+      "bow",
+      "spin"
+     ]
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "stomp",
+      "spin",
+      "spin",
+      "nod",
+      "clap",
+      "spin",
+      "bow"
+     ],
+     "anims": [
+      "wave",
+      "bow",
+      "spin",
+      "stretch",
+      "kick",
+      "jump",
+      "spin",
+      "shake",
+      "stomp",
+      "nod",
+      "clap",
+      "spin"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "shake",
+      "clap",
+      "bow",
+      "clap",
+      "nod",
+      "stomp",
+      "spin"
+     ],
+     "anims": [
+      "spin",
+      "wave",
+      "bow",
+      "clap",
+      "kick",
+      "nod",
+      "shake",
+      "jump",
+      "stretch",
+      "stomp",
+      "nod",
+      "clap"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 20,
+   "dch": 3,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "wave",
+      "nod",
+      "shake",
+      "stretch",
+      "stomp",
+      "stomp"
+     ],
+     "anims": [
+      "wave",
+      "clap",
+      "stomp",
+      "stomp",
+      "bow",
+      "shake",
+      "spin",
+      "jump",
+      "stretch",
+      "kick",
+      "nod"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stomp",
+      "jump",
+      "stretch",
+      "spin",
+      "wave",
+      "spin",
+      "bow"
+     ],
+     "anims": [
+      "spin",
+      "stomp",
+      "clap",
+      "spin",
+      "wave",
+      "kick",
+      "shake",
+      "nod",
+      "jump",
+      "stretch",
+      "bow"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "jump",
+      "spin",
+      "stomp",
+      "nod",
+      "stomp",
+      "stretch"
+     ],
+     "anims": [
+      "stomp",
+      "wave",
+      "stretch",
+      "stomp",
+      "shake",
+      "nod",
+      "spin",
+      "clap",
+      "jump",
+      "bow",
+      "kick"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "nod",
+      "shake",
+      "spin",
+      "clap",
+      "stretch",
+      "stomp"
+     ],
+     "anims": [
+      "stomp",
+      "stretch",
+      "shake",
+      "bow",
+      "wave",
+      "jump",
+      "nod",
+      "clap",
+      "kick",
+      "clap",
+      "spin"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "nod",
+      "bow",
+      "stomp",
+      "spin",
+      "shake",
+      "clap"
+     ],
+     "anims": [
+      "jump",
+      "clap",
+      "clap",
+      "nod",
+      "bow",
+      "spin",
+      "wave",
+      "stomp",
+      "shake",
+      "stretch",
+      "kick"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 21,
+   "dch": 3,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "clap",
+      "shake",
+      "nod",
+      "stretch",
+      "stretch",
+      "kick"
+     ],
+     "anims": [
+      "spin",
+      "kick",
+      "wave",
+      "clap",
+      "stomp",
+      "stretch",
+      "jump",
+      "stretch",
+      "shake",
+      "bow",
+      "nod"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "clap",
+      "clap",
+      "wave",
+      "stretch",
+      "spin",
+      "nod"
+     ],
+     "anims": [
+      "shake",
+      "jump",
+      "nod",
+      "kick",
+      "clap",
+      "stomp",
+      "clap",
+      "bow",
+      "spin",
+      "wave",
+      "stretch"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "stomp",
+      "wave",
+      "jump",
+      "stretch",
+      "jump",
+      "bow"
+     ],
+     "anims": [
+      "shake",
+      "jump",
+      "stomp",
+      "nod",
+      "bow",
+      "jump",
+      "stretch",
+      "spin",
+      "wave",
+      "kick",
+      "clap"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "stretch",
+      "stomp",
+      "nod",
+      "stomp",
+      "jump",
+      "shake"
+     ],
+     "anims": [
+      "stretch",
+      "shake",
+      "wave",
+      "nod",
+      "spin",
+      "clap",
+      "bow",
+      "jump",
+      "stomp",
+      "kick",
+      "stomp"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "kick",
+      "stomp",
+      "jump",
+      "kick",
+      "shake",
+      "spin"
+     ],
+     "anims": [
+      "kick",
+      "jump",
+      "spin",
+      "shake",
+      "clap",
+      "stomp",
+      "bow",
+      "nod",
+      "kick",
+      "wave",
+      "stretch"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 22,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "stretch",
+      "clap"
+     ],
+     "anims": [
+      "stomp",
+      "kick",
+      "spin",
+      "wave",
+      "clap",
+      "stretch"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stomp",
+      "spin",
+      "bow",
+      "jump"
+     ],
+     "anims": [
+      "clap",
+      "jump",
+      "wave",
+      "spin",
+      "bow",
+      "nod",
+      "stomp"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "bow",
+      "spin",
+      "stretch"
+     ],
+     "anims": [
+      "bow",
+      "spin",
+      "jump",
+      "nod",
+      "stretch",
+      "stomp",
+      "wave"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "stretch",
+      "wave",
+      "shake",
+      "kick"
+     ],
+     "anims": [
+      "shake",
+      "wave",
+      "nod",
+      "clap",
+      "bow",
+      "kick",
+      "jump",
+      "stretch"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "shake",
+      "stomp",
+      "bow",
+      "stretch"
+     ],
+     "anims": [
+      "kick",
+      "stretch",
+      "jump",
+      "clap",
+      "shake",
+      "stomp",
+      "bow",
+      "wave"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 23,
+   "dch": 3,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "wave",
+      "spin",
+      "stretch",
+      "shake",
+      "spin",
+      "clap"
+     ],
+     "anims": [
+      "spin",
+      "stomp",
+      "shake",
+      "jump",
+      "stretch",
+      "bow",
+      "spin",
+      "wave",
+      "kick",
+      "nod",
+      "clap"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "nod",
+      "wave",
+      "kick",
+      "nod",
+      "spin",
+      "stretch"
+     ],
+     "anims": [
+      "wave",
+      "shake",
+      "nod",
+      "clap",
+      "bow",
+      "spin",
+      "stomp",
+      "kick",
+      "jump",
+      "nod",
+      "stretch"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "spin",
+      "stomp",
+      "nod",
+      "jump",
+      "bow",
+      "kick"
+     ],
+     "anims": [
+      "bow",
+      "shake",
+      "kick",
+      "stretch",
+      "bow",
+      "jump",
+      "spin",
+      "wave",
+      "stomp",
+      "nod",
+      "clap"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "spin",
+      "shake",
+      "stretch",
+      "jump",
+      "kick",
+      "bow"
+     ],
+     "anims": [
+      "shake",
+      "stretch",
+      "spin",
+      "stomp",
+      "clap",
+      "bow",
+      "jump",
+      "kick",
+      "wave",
+      "nod",
+      "shake"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "shake",
+      "bow",
+      "jump",
+      "spin",
+      "kick",
+      "spin"
+     ],
+     "anims": [
+      "spin",
+      "jump",
+      "bow",
+      "stomp",
+      "spin",
+      "wave",
+      "clap",
+      "shake",
+      "kick",
+      "stretch",
+      "nod"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 24,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "wave",
+      "stomp"
+     ],
+     "anims": [
+      "clap",
+      "wave",
+      "spin",
+      "stomp",
+      "shake",
+      "stretch"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "spin",
+      "nod",
+      "stretch"
+     ],
+     "anims": [
+      "kick",
+      "jump",
+      "stomp",
+      "stretch",
+      "nod",
+      "spin",
+      "clap"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "stomp",
+      "spin",
+      "kick"
+     ],
+     "anims": [
+      "clap",
+      "bow",
+      "kick",
+      "stomp",
+      "wave",
+      "spin",
+      "shake"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "clap",
+      "nod",
+      "stomp",
+      "stretch"
+     ],
+     "anims": [
+      "jump",
+      "nod",
+      "clap",
+      "spin",
+      "shake",
+      "bow",
+      "stomp",
+      "stretch"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "shake",
+      "nod",
+      "stomp",
+      "bow"
+     ],
+     "anims": [
+      "stomp",
+      "stretch",
+      "nod",
+      "clap",
+      "wave",
+      "shake",
+      "jump",
+      "bow"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 25,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "wave",
+      "stretch"
+     ],
+     "anims": [
+      "nod",
+      "kick",
+      "clap",
+      "stretch",
+      "jump",
+      "wave"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "clap",
+      "bow",
+      "stomp"
+     ],
+     "anims": [
+      "stretch",
+      "stomp",
+      "jump",
+      "clap",
+      "shake",
+      "kick",
+      "bow"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "stomp",
+      "spin",
+      "shake"
+     ],
+     "anims": [
+      "stretch",
+      "stomp",
+      "clap",
+      "shake",
+      "spin",
+      "nod",
+      "wave"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "stretch",
+      "nod",
+      "spin",
+      "jump"
+     ],
+     "anims": [
+      "stretch",
+      "nod",
+      "wave",
+      "jump",
+      "kick",
+      "shake",
+      "clap",
+      "spin"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "stretch",
+      "kick",
+      "bow",
+      "jump"
+     ],
+     "anims": [
+      "clap",
+      "jump",
+      "nod",
+      "wave",
+      "bow",
+      "shake",
+      "stretch",
+      "kick"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 26,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "kick",
+      "shake"
+     ],
+     "anims": [
+      "clap",
+      "kick",
+      "stretch",
+      "wave",
+      "shake",
+      "jump"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "wave",
+      "clap",
+      "nod"
+     ],
+     "anims": [
+      "bow",
+      "clap",
+      "shake",
+      "kick",
+      "nod",
+      "jump",
+      "wave"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "stomp",
+      "clap",
+      "stretch"
+     ],
+     "anims": [
+      "stretch",
+      "shake",
+      "wave",
+      "stomp",
+      "spin",
+      "jump",
+      "clap"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "bow",
+      "stretch",
+      "jump",
+      "nod"
+     ],
+     "anims": [
+      "jump",
+      "bow",
+      "shake",
+      "spin",
+      "nod",
+      "wave",
+      "clap",
+      "stretch"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "shake",
+      "bow",
+      "clap",
+      "spin"
+     ],
+     "anims": [
+      "jump",
+      "spin",
+      "clap",
+      "kick",
+      "bow",
+      "wave",
+      "stretch",
+      "shake"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 27,
+   "dch": 4,
+   "q": [
+    {
+     "kind": "fix",
+     "steps": [
+      "spin",
+      "spin",
+      "shake",
+      "clap",
+      "kick",
+      "stretch",
+      "jump",
+      "clap"
+     ],
+     "anims": [],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 0,
+     "k": 0,
+     "bad": "jump",
+     "disp": [
+      "jump",
+      "spin",
+      "shake",
+      "clap",
+      "kick",
+      "stretch",
+      "jump",
+      "clap"
+     ]
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "kick",
+      "wave",
+      "nod",
+      "nod",
+      "clap",
+      "wave",
+      "shake"
+     ],
+     "anims": [
+      "bow",
+      "clap",
+      "nod",
+      "stretch",
+      "spin",
+      "nod",
+      "shake",
+      "wave",
+      "jump",
+      "stomp",
+      "kick",
+      "wave"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "wave",
+      "spin",
+      "stretch",
+      "jump",
+      "nod",
+      "kick",
+      "nod"
+     ],
+     "anims": [
+      "nod",
+      "stomp",
+      "kick",
+      "spin",
+      "clap",
+      "nod",
+      "stretch",
+      "wave",
+      "jump",
+      "shake",
+      "wave",
+      "bow"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "stomp",
+      "bow",
+      "kick",
+      "kick",
+      "stretch",
+      "nod",
+      "stretch"
+     ],
+     "anims": [
+      "spin",
+      "stretch",
+      "stretch",
+      "bow",
+      "nod",
+      "wave",
+      "kick",
+      "shake",
+      "stomp",
+      "jump",
+      "clap",
+      "kick"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "spin",
+      "jump",
+      "shake",
+      "spin",
+      "kick",
+      "kick",
+      "clap",
+      "bow"
+     ],
+     "anims": [
+      "spin",
+      "kick",
+      "clap",
+      "jump",
+      "kick",
+      "spin",
+      "nod",
+      "stomp",
+      "shake",
+      "stretch",
+      "wave",
+      "bow"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 28,
+   "dch": 3,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "jump",
+      "wave",
+      "shake",
+      "nod",
+      "spin",
+      "wave"
+     ],
+     "anims": [
+      "wave",
+      "shake",
+      "bow",
+      "nod",
+      "wave",
+      "kick",
+      "spin",
+      "stomp",
+      "clap",
+      "stretch",
+      "jump"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "shake",
+      "nod",
+      "bow",
+      "stretch",
+      "wave",
+      "stomp"
+     ],
+     "anims": [
+      "jump",
+      "stretch",
+      "stretch",
+      "clap",
+      "stomp",
+      "wave",
+      "spin",
+      "bow",
+      "kick",
+      "shake",
+      "nod"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "jump",
+      "spin",
+      "stomp",
+      "wave",
+      "stretch",
+      "wave"
+     ],
+     "anims": [
+      "wave",
+      "kick",
+      "jump",
+      "bow",
+      "spin",
+      "shake",
+      "stretch",
+      "stomp",
+      "clap",
+      "nod",
+      "wave"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "shake",
+      "stretch",
+      "nod",
+      "stretch",
+      "spin",
+      "clap"
+     ],
+     "anims": [
+      "wave",
+      "kick",
+      "clap",
+      "nod",
+      "jump",
+      "spin",
+      "bow",
+      "stretch",
+      "stomp",
+      "stretch",
+      "shake"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "wave",
+      "stretch",
+      "stomp",
+      "spin",
+      "nod",
+      "stomp"
+     ],
+     "anims": [
+      "bow",
+      "wave",
+      "kick",
+      "clap",
+      "nod",
+      "stomp",
+      "stretch",
+      "spin",
+      "stomp",
+      "shake",
+      "jump"
+     ],
+     "n": 7,
+     "u": 6,
+     "dup": 1,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 29,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "wave",
+      "bow"
+     ],
+     "anims": [
+      "kick",
+      "jump",
+      "spin",
+      "nod",
+      "bow",
+      "wave"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "kick",
+      "jump",
+      "spin"
+     ],
+     "anims": [
+      "jump",
+      "shake",
+      "kick",
+      "stomp",
+      "bow",
+      "stretch",
+      "spin"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "bow",
+      "wave",
+      "kick"
+     ],
+     "anims": [
+      "shake",
+      "stomp",
+      "jump",
+      "clap",
+      "bow",
+      "wave",
+      "kick"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "nod",
+      "stomp",
+      "kick",
+      "jump"
+     ],
+     "anims": [
+      "stretch",
+      "spin",
+      "stomp",
+      "jump",
+      "shake",
+      "kick",
+      "bow",
+      "nod"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "clap",
+      "kick",
+      "stretch",
+      "jump"
+     ],
+     "anims": [
+      "wave",
+      "jump",
+      "stretch",
+      "clap",
+      "kick",
+      "stomp",
+      "nod",
+      "shake"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 30,
+   "dch": 2,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "stomp",
+      "spin",
+      "nod",
+      "bow",
+      "kick"
+     ],
+     "anims": [
+      "nod",
+      "clap",
+      "wave",
+      "bow",
+      "stomp",
+      "shake",
+      "stretch",
+      "kick",
+      "spin"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "shake",
+      "spin",
+      "stomp",
+      "kick",
+      "stretch"
+     ],
+     "anims": [
+      "spin",
+      "stomp",
+      "kick",
+      "nod",
+      "shake",
+      "stretch",
+      "clap",
+      "jump",
+      "bow"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "bow",
+      "clap",
+      "spin",
+      "stretch",
+      "wave"
+     ],
+     "anims": [
+      "bow",
+      "stomp",
+      "wave",
+      "nod",
+      "shake",
+      "clap",
+      "spin",
+      "kick",
+      "stretch"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "jump",
+      "spin",
+      "wave",
+      "kick",
+      "nod"
+     ],
+     "anims": [
+      "bow",
+      "nod",
+      "spin",
+      "kick",
+      "wave",
+      "jump",
+      "clap",
+      "shake",
+      "stomp"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "clap",
+      "kick",
+      "spin",
+      "stomp",
+      "nod"
+     ],
+     "anims": [
+      "nod",
+      "kick",
+      "jump",
+      "stomp",
+      "clap",
+      "shake",
+      "spin",
+      "stretch",
+      "wave"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 31,
+   "dch": 4,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "kick",
+      "jump",
+      "stomp",
+      "clap",
+      "jump",
+      "shake",
+      "nod"
+     ],
+     "anims": [
+      "clap",
+      "clap",
+      "jump",
+      "bow",
+      "spin",
+      "stomp",
+      "stretch",
+      "shake",
+      "wave",
+      "kick",
+      "nod",
+      "jump"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "jump",
+      "stomp",
+      "bow",
+      "bow",
+      "clap",
+      "bow",
+      "kick"
+     ],
+     "anims": [
+      "shake",
+      "bow",
+      "bow",
+      "jump",
+      "nod",
+      "wave",
+      "clap",
+      "spin",
+      "stomp",
+      "stretch",
+      "kick",
+      "bow"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "fix",
+     "steps": [
+      "spin",
+      "wave",
+      "jump",
+      "jump",
+      "clap",
+      "clap",
+      "bow",
+      "kick"
+     ],
+     "anims": [],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 0,
+     "k": 4,
+     "bad": "bow",
+     "disp": [
+      "spin",
+      "wave",
+      "jump",
+      "jump",
+      "bow",
+      "clap",
+      "bow",
+      "kick"
+     ]
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "bow",
+      "kick",
+      "shake",
+      "wave",
+      "nod",
+      "shake",
+      "wave"
+     ],
+     "anims": [
+      "nod",
+      "stretch",
+      "wave",
+      "shake",
+      "spin",
+      "clap",
+      "stomp",
+      "kick",
+      "jump",
+      "shake",
+      "bow",
+      "wave"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "clap",
+      "bow",
+      "stomp",
+      "shake",
+      "spin",
+      "stretch",
+      "shake"
+     ],
+     "anims": [
+      "spin",
+      "kick",
+      "clap",
+      "stomp",
+      "stretch",
+      "bow",
+      "wave",
+      "stretch",
+      "shake",
+      "shake",
+      "jump",
+      "nod"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 32,
+   "dch": 4,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "clap",
+      "stretch",
+      "wave",
+      "spin",
+      "stretch",
+      "clap",
+      "shake"
+     ],
+     "anims": [
+      "jump",
+      "clap",
+      "stretch",
+      "clap",
+      "stretch",
+      "shake",
+      "stomp",
+      "kick",
+      "wave",
+      "nod",
+      "bow",
+      "spin"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "fix",
+     "steps": [
+      "clap",
+      "nod",
+      "spin",
+      "kick",
+      "wave",
+      "nod",
+      "stomp",
+      "spin"
+     ],
+     "anims": [],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 0,
+     "k": 4,
+     "bad": "spin",
+     "disp": [
+      "clap",
+      "nod",
+      "spin",
+      "kick",
+      "spin",
+      "nod",
+      "stomp",
+      "spin"
+     ]
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "shake",
+      "kick",
+      "wave",
+      "stomp",
+      "shake",
+      "jump",
+      "nod"
+     ],
+     "anims": [
+      "kick",
+      "spin",
+      "nod",
+      "clap",
+      "bow",
+      "shake",
+      "jump",
+      "shake",
+      "stomp",
+      "wave",
+      "wave",
+      "stretch"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "kick",
+      "jump",
+      "jump",
+      "wave",
+      "stomp",
+      "bow",
+      "bow"
+     ],
+     "anims": [
+      "shake",
+      "nod",
+      "wave",
+      "spin",
+      "clap",
+      "jump",
+      "stretch",
+      "stomp",
+      "bow",
+      "kick",
+      "jump",
+      "bow"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "kick",
+      "clap",
+      "nod",
+      "nod",
+      "bow",
+      "jump",
+      "spin"
+     ],
+     "anims": [
+      "shake",
+      "stretch",
+      "clap",
+      "jump",
+      "nod",
+      "clap",
+      "nod",
+      "stomp",
+      "spin",
+      "bow",
+      "wave",
+      "kick"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 33,
+   "dch": 4,
+   "q": [
+    {
+     "kind": "fix",
+     "steps": [
+      "wave",
+      "jump",
+      "stomp",
+      "clap",
+      "clap",
+      "spin",
+      "stomp",
+      "shake"
+     ],
+     "anims": [],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 0,
+     "k": 3,
+     "bad": "stomp",
+     "disp": [
+      "wave",
+      "jump",
+      "stomp",
+      "stomp",
+      "clap",
+      "spin",
+      "stomp",
+      "shake"
+     ]
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "kick",
+      "wave",
+      "stomp",
+      "shake",
+      "shake",
+      "stretch",
+      "bow"
+     ],
+     "anims": [
+      "clap",
+      "shake",
+      "stomp",
+      "bow",
+      "kick",
+      "shake",
+      "jump",
+      "nod",
+      "shake",
+      "stretch",
+      "wave",
+      "spin"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "shake",
+      "nod",
+      "stomp",
+      "wave",
+      "bow",
+      "stretch",
+      "wave"
+     ],
+     "anims": [
+      "bow",
+      "spin",
+      "jump",
+      "stretch",
+      "clap",
+      "bow",
+      "wave",
+      "shake",
+      "kick",
+      "stomp",
+      "wave",
+      "nod"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "spin",
+      "nod",
+      "bow",
+      "kick",
+      "kick",
+      "nod",
+      "clap"
+     ],
+     "anims": [
+      "stretch",
+      "spin",
+      "jump",
+      "stomp",
+      "bow",
+      "kick",
+      "clap",
+      "nod",
+      "nod",
+      "wave",
+      "kick",
+      "shake"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "clap",
+      "nod",
+      "jump",
+      "jump",
+      "stretch",
+      "spin",
+      "nod"
+     ],
+     "anims": [
+      "spin",
+      "nod",
+      "kick",
+      "wave",
+      "jump",
+      "shake",
+      "bow",
+      "jump",
+      "stretch",
+      "clap",
+      "stomp",
+      "nod"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 34,
+   "dch": 4,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "stomp",
+      "nod",
+      "stretch",
+      "nod",
+      "clap",
+      "stretch",
+      "wave"
+     ],
+     "anims": [
+      "nod",
+      "kick",
+      "wave",
+      "spin",
+      "stretch",
+      "shake",
+      "clap",
+      "stretch",
+      "stomp",
+      "jump",
+      "nod",
+      "bow"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "fix",
+     "steps": [
+      "stomp",
+      "nod",
+      "shake",
+      "bow",
+      "stretch",
+      "kick",
+      "stretch",
+      "shake"
+     ],
+     "anims": [],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 0,
+     "k": 1,
+     "bad": "bow",
+     "disp": [
+      "stomp",
+      "bow",
+      "shake",
+      "bow",
+      "stretch",
+      "kick",
+      "stretch",
+      "shake"
+     ]
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "stretch",
+      "wave",
+      "clap",
+      "stretch",
+      "bow",
+      "stomp",
+      "jump"
+     ],
+     "anims": [
+      "spin",
+      "jump",
+      "stretch",
+      "jump",
+      "bow",
+      "shake",
+      "stretch",
+      "stomp",
+      "nod",
+      "wave",
+      "clap",
+      "kick"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "stomp",
+      "kick",
+      "stretch",
+      "wave",
+      "kick",
+      "shake",
+      "wave"
+     ],
+     "anims": [
+      "shake",
+      "jump",
+      "stomp",
+      "bow",
+      "clap",
+      "wave",
+      "kick",
+      "stretch",
+      "wave",
+      "nod",
+      "spin",
+      "kick"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "wave",
+      "jump",
+      "spin",
+      "jump",
+      "clap",
+      "bow",
+      "bow"
+     ],
+     "anims": [
+      "bow",
+      "clap",
+      "jump",
+      "spin",
+      "wave",
+      "bow",
+      "stomp",
+      "kick",
+      "shake",
+      "stretch",
+      "nod",
+      "jump"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 35,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "nod",
+      "spin"
+     ],
+     "anims": [
+      "nod",
+      "stretch",
+      "spin",
+      "wave",
+      "shake",
+      "kick"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "kick",
+      "shake",
+      "stomp"
+     ],
+     "anims": [
+      "stomp",
+      "bow",
+      "clap",
+      "wave",
+      "kick",
+      "shake",
+      "nod"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stomp",
+      "wave",
+      "stretch",
+      "kick"
+     ],
+     "anims": [
+      "bow",
+      "stomp",
+      "shake",
+      "stretch",
+      "spin",
+      "kick",
+      "wave"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "wave",
+      "stretch",
+      "spin",
+      "clap"
+     ],
+     "anims": [
+      "bow",
+      "clap",
+      "spin",
+      "jump",
+      "wave",
+      "kick",
+      "stomp",
+      "stretch"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "stretch",
+      "nod",
+      "wave",
+      "stomp"
+     ],
+     "anims": [
+      "bow",
+      "kick",
+      "stretch",
+      "stomp",
+      "wave",
+      "nod",
+      "spin",
+      "shake"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 36,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "clap",
+      "spin",
+      "stretch"
+     ],
+     "anims": [
+      "stretch",
+      "bow",
+      "spin",
+      "kick",
+      "clap",
+      "shake"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "stretch",
+      "kick",
+      "clap",
+      "bow"
+     ],
+     "anims": [
+      "nod",
+      "bow",
+      "spin",
+      "clap",
+      "stomp",
+      "kick",
+      "stretch"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "stretch",
+      "stomp",
+      "shake"
+     ],
+     "anims": [
+      "stomp",
+      "shake",
+      "nod",
+      "wave",
+      "stretch",
+      "kick",
+      "clap"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "spin",
+      "wave",
+      "shake",
+      "bow"
+     ],
+     "anims": [
+      "kick",
+      "shake",
+      "clap",
+      "bow",
+      "stomp",
+      "spin",
+      "wave",
+      "jump"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "wave",
+      "nod",
+      "stretch",
+      "spin"
+     ],
+     "anims": [
+      "stomp",
+      "stretch",
+      "nod",
+      "shake",
+      "bow",
+      "wave",
+      "spin",
+      "kick"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 37,
+   "dch": 4,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "kick",
+      "spin",
+      "clap",
+      "bow",
+      "bow",
+      "stomp",
+      "wave",
+      "bow"
+     ],
+     "anims": [
+      "nod",
+      "spin",
+      "stretch",
+      "stomp",
+      "wave",
+      "clap",
+      "bow",
+      "jump",
+      "kick",
+      "bow",
+      "shake",
+      "bow"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "fix",
+     "steps": [
+      "clap",
+      "wave",
+      "spin",
+      "bow",
+      "clap",
+      "shake",
+      "kick",
+      "shake"
+     ],
+     "anims": [],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 0,
+     "k": 2,
+     "bad": "shake",
+     "disp": [
+      "clap",
+      "wave",
+      "shake",
+      "bow",
+      "clap",
+      "shake",
+      "kick",
+      "shake"
+     ]
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "clap",
+      "stomp",
+      "stretch",
+      "nod",
+      "stomp",
+      "wave",
+      "stomp"
+     ],
+     "anims": [
+      "stomp",
+      "spin",
+      "clap",
+      "kick",
+      "shake",
+      "stomp",
+      "stretch",
+      "bow",
+      "jump",
+      "stomp",
+      "nod",
+      "wave"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "nod",
+      "kick",
+      "wave",
+      "clap",
+      "shake",
+      "kick",
+      "stomp"
+     ],
+     "anims": [
+      "stomp",
+      "kick",
+      "shake",
+      "wave",
+      "bow",
+      "jump",
+      "spin",
+      "kick",
+      "clap",
+      "shake",
+      "stretch",
+      "nod"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "shake",
+      "kick",
+      "shake",
+      "stomp",
+      "shake",
+      "wave",
+      "stretch"
+     ],
+     "anims": [
+      "bow",
+      "shake",
+      "stomp",
+      "stretch",
+      "nod",
+      "wave",
+      "shake",
+      "kick",
+      "jump",
+      "spin",
+      "clap",
+      "shake"
+     ],
+     "n": 8,
+     "u": 6,
+     "dup": 2,
+     "dis": 4
+    }
+   ]
+  },
+  {
+   "flat": 38,
+   "dch": 1,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "stretch",
+      "stomp"
+     ],
+     "anims": [
+      "bow",
+      "nod",
+      "jump",
+      "stomp",
+      "stretch",
+      "wave"
+     ],
+     "n": 3,
+     "u": 3,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "wave",
+      "nod",
+      "clap"
+     ],
+     "anims": [
+      "wave",
+      "stomp",
+      "kick",
+      "bow",
+      "nod",
+      "shake",
+      "clap"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "spin",
+      "stretch",
+      "jump"
+     ],
+     "anims": [
+      "bow",
+      "spin",
+      "stretch",
+      "nod",
+      "jump",
+      "clap",
+      "shake"
+     ],
+     "n": 4,
+     "u": 4,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "wave",
+      "bow",
+      "spin",
+      "shake"
+     ],
+     "anims": [
+      "nod",
+      "jump",
+      "stretch",
+      "bow",
+      "wave",
+      "kick",
+      "shake",
+      "spin"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "wave",
+      "nod",
+      "shake",
+      "spin",
+      "clap"
+     ],
+     "anims": [
+      "wave",
+      "bow",
+      "spin",
+      "clap",
+      "stomp",
+      "shake",
+      "jump",
+      "nod"
+     ],
+     "n": 5,
+     "u": 5,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  },
+  {
+   "flat": 39,
+   "dch": 2,
+   "q": [
+    {
+     "kind": "seq",
+     "steps": [
+      "bow",
+      "jump",
+      "nod",
+      "spin",
+      "shake",
+      "wave"
+     ],
+     "anims": [
+      "clap",
+      "spin",
+      "stomp",
+      "bow",
+      "wave",
+      "shake",
+      "stretch",
+      "jump",
+      "nod"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "stomp",
+      "spin",
+      "shake",
+      "bow",
+      "stretch"
+     ],
+     "anims": [
+      "bow",
+      "stretch",
+      "kick",
+      "stomp",
+      "shake",
+      "nod",
+      "clap",
+      "wave",
+      "spin"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "nod",
+      "shake",
+      "bow",
+      "spin",
+      "kick",
+      "stomp"
+     ],
+     "anims": [
+      "wave",
+      "shake",
+      "nod",
+      "bow",
+      "kick",
+      "stomp",
+      "stretch",
+      "jump",
+      "spin"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "shake",
+      "clap",
+      "kick",
+      "stretch",
+      "nod",
+      "spin"
+     ],
+     "anims": [
+      "jump",
+      "shake",
+      "stretch",
+      "nod",
+      "spin",
+      "bow",
+      "clap",
+      "kick",
+      "stomp"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    },
+    {
+     "kind": "seq",
+     "steps": [
+      "jump",
+      "stretch",
+      "clap",
+      "wave",
+      "shake",
+      "nod"
+     ],
+     "anims": [
+      "stomp",
+      "jump",
+      "stretch",
+      "bow",
+      "clap",
+      "nod",
+      "shake",
+      "spin",
+      "wave"
+     ],
+     "n": 6,
+     "u": 6,
+     "dup": 0,
+     "dis": 3
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "dch1": {
+   "levels": 13,
+   "n_min": 3,
+   "n_max": 5,
+   "dis_min": 0,
+   "dis_max": 3,
+   "dup_min": 0,
+   "dup_max": 0
+  },
+  "dch2": {
+   "levels": 7,
+   "n_min": 6,
+   "n_max": 6,
+   "dis_min": 3,
+   "dis_max": 3,
+   "dup_min": 0,
+   "dup_max": 0
+  },
+  "dch3": {
+   "levels": 9,
+   "n_min": 7,
+   "n_max": 7,
+   "dis_min": 4,
+   "dis_max": 4,
+   "dup_min": 1,
+   "dup_max": 1
+  },
+  "dch4": {
+   "levels": 11,
+   "n_min": 8,
+   "n_max": 8,
+   "dis_min": 0,
+   "dis_max": 4,
+   "dup_min": 2,
+   "dup_max": 2
+  }
+ },
+ "fix_k_hist": {
+  "0": 2,
+  "3": 2,
+  "4": 4,
+  "6": 1,
+  "1": 1,
+  "2": 1
+ },
+ "n_q": 200
+}

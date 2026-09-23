@@ -1,0 +1,315 @@
+### batch10\chainsum\_src\game-data.js
+  L41 QNULL '再想一想，算一算'
+### batch10\chainsum\_src\game-main.js
+  L67 SAY qSpeech(q)
+### batch10\habit\_src\game-data.js
+  L60 QNULL '再想一想，一开始先做什么？'
+  L61 QNULL '这一步要用到上一步的结果吗？'
+  L62 QNULL '再想想这两步，谁得等谁？'
+  L65 QNULL Q_SUFFIX
+### batch11\shadow\_src\game-data.js
+  L67 QNULL '再找一找，一样的影子'
+### batch11\sortsize\_src\game-data.js
+  L36 QNULL '再想一想，先点哪个呀'
+### batch12\divide\_src\game-main.js
+  L35 SAY fullText
+### batch13\money\_src\game-main.js
+  L41 SAY fullText
+### batch13\wordprob\_src\game-main.js
+  L36 SAY fullText
+### batch14\multibattle\_src\game-main.js
+  L37 SAY fullText
+### batch14\numberdet\_src\game-main.js
+  L30 SAY fullText
+### batch15\cashier\_src\game-main.js
+  L46 SAY fullText
+### batch15\logicwho\_src\game-main.js
+  L32 SAY fullText
+### batch16\idiom\_src\game-main.js
+  L105 QNULL idmOf(q.idx).ctx
+  L108 QNULL idmOf(q.idx).say
+  L365 QNULL idmOf(q0.idx).ctx
+### batch16\read\_src\game-main.js
+  L32 SAY fullText
+  L246 SAY q.sents[k]
+  L277 SAY q.sents[i]
+### batch16\spellen\_src\game-main.js
+  L76 SAY word.split('').join('、')
+### batch17\area\_src\game-main.js
+  L37 SAY '一圈 ' + q.ans + ' 格，' + VOICE.right.text
+  L39 SAY '一共 ' + q.ans + ' 格，' + VOICE.right.text
+  L41 SAY '一共 ' + q.ans + ' 只，' + VOICE.right.text
+  L44 SAY String(q.hole.length) + ' 格，' + VOICE.right.text
+  L136 SAY askOf(q)
+### batch17\poemfill\_src\game-main.js
+  L258 SAY cueSayOf(q)
+  L269 SAY q.lines[li]
+  L316 SAY winLineOf(q)
+  L454 SAY q.lines[q.cueIdx]
+  L563 SAY q.targetChar
+### batch18\bounce\_src\game-main.js
+  L266 SAY '进错洞啦，换个方向再试试'
+### batch18\coder2\_src\game-main.js
+  L35 SAY INSTR_TEXT[t]
+  L215 SAY '循环块里不放循环块哦'
+  L331 SAY q._prog.map(i => INSTR_TEXT[q.pool[i].t]).join('，')
+### batch18\stack\_src\game-main.js
+  L99 SAY qAsk(cur.dch)
+### batch19\cipher\_src\game-main.js
+  L37 SAY v
+  L38 SAY name + '，代表，' + img
+  L347 SAY '看破译好的情报，推一推'
+  L366 SAY '这一行缺了一角，看情报推一推'
+  L379 SAY '情报写着，' + parts.join('，')
+  L390 SAY '把' + names + '，破译出来'
+### batch19\sudokunum\_src\game-main.js
+  L244 SAY '有一个数字放错啦，换一换摇头的格子'
+  L442 SAY '有一个数字放错啦，换一换摇头的格子'
+### batch1\kitchen-rhythm\_src\game-main.js
+  L681 SAY '你切了' + R.hitN + '个，连击' + R.maxCombo + '下，小猫收走了' + R.missN + '个'
+### batch1\kitchen-rhythm\_src\game.js
+  L322 SAY '你切了' + G.hitN + '个，小猫收走了' + G.missN + '个'
+### batch20\memduel\_src\game-main.js
+  L28 SAY String(v)
+### batch20\quiz\_src\game-main.js
+  L38 SAY t
+### batch20\timecalc\_src\game-main.js
+  L35 SAY v
+  L443 QNULL askText(q)
+  L520 SAY askText(cur.quizzes[0])
+  L534 SAY guide
+  L633 QNULL askText(q)
+### batch21\bridge\_src\game-main.js
+  L411 SAY chantText(q)
+### batch21\bubble\_src\game-main.js
+  L175 QNULL quizSpeech(q)
+  L206 SAY quizSpeech(q)
+  L289 SAY numCn(q._cnt)
+  L425 SAY '数够了就拍拍小兔子'
+  L461 SAY quizSpeech(q)
+  L484 SAY quizSpeech(q)
+### batch21\feed\_src\game-main.js
+  L90 SAY speechOf(q)
+  L308 SAY numCn(r)
+  L325 SAY numCn(r)
+  L344 SAY numCn(r)
+  L457 SAY '多啦，放回去一根'
+### batch22\colormix\_src\game-main.js
+  L57 SAY quizSpeech(q.target)
+  L190 SAY COLORS[color].name
+  L283 SAY '变绿啦'
+  L311 SAY quizSpeech(q.target)
+  L326 SAY quizSpeech(q.target)
+### batch22\hidden\_src\game-main.js
+  L116 SAY quizSpeech(q)
+  L257 SAY '这不是' + ANIMALS[q.distractor.animal].n + '呀'
+  L324 SAY '看到耳朵尖了吗'
+  L386 SAY quizSpeech(q)
+  L401 SAY quizSpeech(q)
+### batch22\slide\_src\game-main.js
+  L68 SAY quizSpeech()
+  L310 SAY '空格旁边的，才能滑'
+### batch23\piano\_src\game-main.js
+  L389 SAY '弹得真像'
+### batch23\share\_src\game-main.js
+  L24 SAY quizSpeech(q)
+  L247 SAY numCn(cur.quizzes[cur.step]._bowlIds[j].length)
+  L299 SAY numCn(r)
+### batch23\weather\_src\game-main.js
+  L25 SAY t
+  L35 SAY t
+  L37 SAY t
+### batch24\dressup\_src\game-main.js
+  L78 SAY quizSpeech(q)
+### batch25\emo\_src\game-main.js
+  L67 SAY sceneById(q.scene).ask
+  L180 QNULL confirmOf(sceneById(q.scene))
+### batch25\habitat\_src\game-main.js
+  L75 SAY quizText(q)
+  L300 SAY confirmText(q)
+### batch25\story3\_src\game-main.js
+  L218 SAY TIME_HINT
+  L252 SAY recap
+### batch26\calendar\_src\game-main.js
+  L40 SAY dirText(q, word)
+  L75 SAY quizText(q)
+  L82 QNULL quizText(q)
+  L83 SAY quizText(q)
+  L204 SAY confirmText(q)
+  L323 SAY '想想它的前面是谁'
+  L362 SAY '想想它的前面是谁'
+### batch26\season\_src\game-main.js
+  L31 SAY t
+  L37 SAY t
+  L39 SAY t
+  L295 SAY confirmOf(q)
+  L365 SAY confirmOf(q)
+### batch26\sign\_src\game-main.js
+  L184 QNULL GUIDE[SIGNS[q.sign].fam]
+  L204 SAY confirmText(q.sign)
+### batch27\coin\_src\game-main.js
+  L81 SAY '哪个和它一样多？'
+  L83 SAY COMBOS[q.face].say
+  L238 QNULL guideFor(q, q.opts[i])
+  L258 SAY confirmOf(q.kind, q.face)
+### batch27\notebird\_src\game-main.js
+  L126 SAY '谁的声音高？'
+  L264 QNULL guide
+  L285 SAY confirmText(q)
+  L371 SAY MAIN_LINE
+### batch27\ruler\_src\game-main.js
+  L77 SAY quizText(q)
+  L206 QNULL guideText(q, i)
+  L226 SAY confirmText(q)
+### batch28\coder\_src\game-main.js
+  L83 SAY pathSpeak(q)
+  L244 SAY GUIDE.block
+  L263 QNULL guideText(q)
+  L285 SAY demo ? '点箭头，小兔子就走' : confirmText(q)
+### batch28\conserve\_src\game-main.js
+  L116 SAY PRE_SAY
+  L120 SAY T_SAY[q.family]
+  L125 SAY addSayOf(q)
+  L218 QNULL guideOf(q)
+  L238 SAY confirmOf(q)
+  L322 SAY T_SAY.rows
+### batch28\shapecount\_src\game-main.js
+  L86 QNULL quizText(q)
+  L226 QNULL guideText(q, i)
+  L246 SAY confirmText(q)
+  L344 SAY NUMCN[2 * (g + 1)] + '个'
+### batch29\bodyen\_src\game-main.js
+  L90 QNULL HEAR_AGAIN
+  L221 QNULL HEAR_AGAIN
+  L222 QNULL SEE_AGAIN
+### batch29\poem\_src\game-main.js
+  L198 QNULL guide
+### batch29\wordpuz\_src\game-main.js
+  L218 QNULL GUIDE.wrong
+  L243 SAY DEMO_SAY
+### batch30\babylove\_src\game-main.js
+  L232 QNULL AGAIN_OF[v0.kind]
+### batch30\maze\_src\game-main.js
+  L236 QNULL GUIDE.guide
+  L254 SAY GETKEY_SENT
+  L293 SAY DEMO_SENT
+### batch30\storybed\_src\game-main.js
+  L258 QNULL guide
+### batch31\animalmenu\_src\game-main.js
+  L290 QNULL FOOD_AGAIN
+  L292 QNULL WHO_AGAIN
+  L294 QNULL DIET_AGAIN
+  L296 QNULL CHAIN_AGAIN
+### batch31\chartread\_src\game-main.js
+  L122 QNULL TAIL_HOWMANY
+  L124 QNULL TAIL_COMPARE
+  L126 QNULL q.text.slice(0, -1)
+  L325 QNULL again
+  L397 QNULL NUMCN[q.chart.values[q.chart.cats.indexOf(q.target)]] + '只'
+  L399 QNULL '一共' + NUMCN[q.chart.values.reduce((s, v) => s + v, 0)] + '只'
+  L401 QNULL '多' + NUMCN[q.chart.values[q.chart.cats.indexOf(q.pair[0])] - q.chart.values[q.chart.cats.indexOf(q.pair[1])]] + '只'
+  L403 QNULL '多' + NUMCN[q.chart2.values[q.chart.cats.indexOf(q.target)] - q.chart.values[q.chart.cats.indexOf(q.target)]] + '只'
+### batch31\iftrain\_src\game-main.js
+  L251 QNULL q.kind === 'ruleback' ? BACK_AGAIN : APPLY_AGAIN
+### batch32\evidence\_src\game-main.js
+  L297 QNULL WRONG_AGAIN
+  L340 QNULL WRONG_AGAIN
+### batch32\senses\_src\game-main.js
+  L215 QNULL MULTI_AGAIN
+  L217 QNULL ANTI_BASE + nameOf(q.ask) + ANTI_TAIL
+  L219 QNULL COV_AGAIN
+  L221 QNULL q.kind === 'findsense' ? SENSE_AGAIN : THING_AGAIN
+### batch33\position\_src\game-main.js
+  L78 QNULL PLACE_TTS[q.ask]
+  L299 QNULL '呀'
+### batch33\robotpaint\_src\game-main.js
+  L358 QNULL MEM_TEXT
+### batch34\datacollect\_src\game-main.js
+  L115 QNULL confirmText(q)
+  L116 QNULL confirmText(q)
+### batch34\hidecup\_src\game-main.js
+  L175 QNULL VOICE.show.text
+### batch34\sentorder\_src\game-main.js
+  L83 SAY q.text
+  L218 SAY w
+  L257 QNULL q.text
+### batch35\errdoc\_src\game-main.js
+  L244 QNULL hintTTS(q)
+  L301 QNULL eqTTS(q)
+### batch35\maketen\_src\game-data.js
+  L13 QNULL 'X加Y等于Z'
+### batch35\maketen\_src\game-main.js
+  L222 QNULL formulaText(q)
+### batch36\comfort\_src\game-main.js
+  L166 SAY q.say
+  L467 SAY q.say
+### batch36\quickcmp\_src\game-main.js
+  L299 QNULL '左边' + NUMCN[q.nL] + '个右边' + NUMCN[q.nR] + '个'
+### batch37\plant\_src\game-main.js
+  L166 SAY cardText(q)
+  L187 SAY cardText(q)
+### batch37\teach\_src\game-main.js
+  L227 SAY taskTTS(q)
+  L231 SAY GROUP_HINT_TTS
+  L316 SAY groupTTS(q.bowl)
+  L337 SAY GROUP_MODES.find(m => m.g === g).label
+  L357 SAY rabbitTTS
+  L700 SAY taskTTS(q)
+  L706 SAY taskTTS(q)
+### batch37\thanks\_src\game-main.js
+  L159 SAY q.say
+  L469 SAY q.say
+### batch38\gear\_src\game-main.js
+  L209 SAY q.obs
+  L233 SAY q.obs
+### batch38\libr\_src\game-main.js
+  L142 SAY q.say
+  L222 SAY q.say
+  L407 SAY q.say
+### batch39\cir\_src\game-main.js
+  L340 SAY q.obs
+  L363 SAY q.obs
+### batch39\crd\_src\game-main.js
+  L179 SAY q.say
+  L492 SAY q.say
+### batch39\etm\_src\game-main.js
+  L148 SAY q.say
+  L214 SAY q.say
+  L402 SAY q.say
+### batch40\brk\_src\game-main.js
+  L163 QNULL TMPL
+  L448 SAY qq.cards[ci].label
+### batch40\cbx\_src\game-main.js
+  L143 SAY q.say
+  L403 SAY q.say
+### batch40\ins\_src\game-data.js
+  L9 QNULL SAY_T[kind]
+  L78 QNULL SAY_T[kind]
+### batch40\ins\_src\game-main.js
+  L3 QNULL SAY_T[kind]
+  L143 QNULL SAY_T[q.kind]
+  L384 QNULL SAY_T[q.kind]
+### batch4\times\_src\game-main.js
+  L17 SAY fullText
+### batch5\connect\_src\game-main.js
+  L21 SAY t
+### batch6\compare\_src\game-main.js
+  L281 SAY SEM_TEXT[q.answer]
+  L439 SAY String(k)
+### batch7\fishcolor\_src\game-main.js
+  L178 SAY quizSpeech(q)
+  L291 SAY nameOf(q.targets[0]) + '和' + nameOf(q.targets[1]) +         '，变成' + nameOf(q.mix) + '的小鱼啦'
+  L421 SAY quizSpeech(q)
+### batch7\hopscotch\_src\game-main.js
+  L217 SAY numCn(n)
+  L355 SAY qSpeech(q)
+### batch8\neighbors\_src\game-data.js
+  L37 QNULL '再想一想，顺着数一数'
+### batch8\neighbors\_src\game-main.js
+  L67 SAY numCn(q.n) + '和' + numCn(q.n + 2)
+  L73 SAY numCn(q.n)
+### batch9\whereistand\_src\game-data.js
+  L35 QNULL '再想一想，它站在哪里呀'
+### batch9\whereistand\_src\game-main.js
+  L70 SAY ordinalCn(q.dir, q.k)
+TOTAL files with hits: 91

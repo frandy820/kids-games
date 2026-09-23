@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>动物家园</title>
+<style>
+/* ================= 动物家园 habitat（batch25）=================
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E；
+   6-7 岁幼小衔接段：题面=动物出场（草地场景）+ 题面句文字+TTS（识字萌芽）；
+   下方 4 张环境场景卡（森林/草原/海洋/沙漠/池塘/天空/农场 封闭 7）。
+   点对=动物飞进所选场景卡（入住动画）+ 确认句 TTS；
+   点错=场景卡摇头 + 语义反馈 hab_w_<所点环境>（卡不灰可重选——探索不罚）。
+   触摸目标：场景卡=主答案按钮 ≥96×96（§0.9）；题面卡可点重听；底栏按钮 ≥72。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{color:#4A3B2E;font-family:inherit;cursor:pointer;border:none;background:none}   /* 契约 O：自建 button 显式 color（r4 审查 m-13） */
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 50px;display:flex;align-items:center;padding:5px 60px 0 14px;gap:14px}
+#logo{width:40px;height:40px;border-radius:12px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 40px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：题面卡（草地+出场动物+题面句）→ 环境场景卡排 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:14px;overflow:hidden;padding:6px 12px}
+
+/* 题面卡：可点重听题面；出场动物弹落 + 题面句文字条；r4 题型化题面元素
+   （chain-row 链行 / sleep-ico 冬夜 / feat-ico 特征特写 / cond-chips 条件芯片） */
+#scene{position:relative;width:min(600px,94vw);height:184px;border-radius:26px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;overflow:hidden;padding:0;transition:transform .15s}
+/* r4 新题型题面更高（题面图形+多行 q-text 实测不交叠：chain 3 行 109px+图形 70 → 210） */
+#scene[data-kind=chain],#scene[data-kind=hib],#scene[data-kind=struct],#scene[data-kind=dual]{height:210px}
+#scene:active{transform:translateY(3px)}
+#scene .sky{position:absolute;inset:0;margin:auto}
+#scene .animal-slot{position:absolute;left:0;right:0;top:2px;display:flex;justify-content:center;z-index:2}
+#scene .chain-row{position:absolute;left:0;right:0;top:10px;display:flex;justify-content:center;
+  align-items:center;gap:8px;z-index:2}
+#scene .ch-ico{display:flex;align-items:center;justify-content:center}
+#scene .ch-q{width:40px;height:40px;border-radius:12px;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;color:#E8975A}
+#scene .sleep-ico{position:absolute;left:0;right:0;top:14px;display:flex;justify-content:center;z-index:2}
+#scene .sleep-ico svg{animation:pet-idle 2.6s ease-in-out .4s infinite}
+#scene .feat-ico{position:absolute;left:0;right:0;top:10px;display:flex;justify-content:center;z-index:2}
+#scene .cond-chips{position:absolute;left:0;right:0;top:14px;display:flex;justify-content:center;
+  align-items:center;gap:12px;z-index:2}
+#scene .chip{display:flex;flex-direction:column;align-items:center;gap:2px;background:rgba(255,249,238,.95);
+  border:2.5px solid #4A3B2E;border-radius:14px;padding:6px 12px}
+#scene .chip i{font-style:normal;font-size:17px;font-weight:700;color:#4A3B2E;white-space:nowrap}
+#scene .chip-plus{font-size:30px;font-weight:700;color:#E8975A}
+#scene #pet{animation:pet-drop .62s cubic-bezier(.2,1.5,.4,1) backwards,
+  pet-idle 2.6s ease-in-out .8s infinite}
+#scene #pet svg{width:118px;height:118px}
+@keyframes pet-drop{0%{transform:translateY(-46px) scale(.4);opacity:0}
+  70%{transform:translateY(0) scale(1.06);opacity:1}100%{transform:translateY(0) scale(1)}}
+/* 出场落定后轻浮待命（消除悬空感，像轻轻踮脚张望） */
+@keyframes pet-idle{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+#scene #pet.hop{animation:pet-hop .5s ease 2, pet-idle 2.6s ease-in-out .8s infinite}
+@keyframes pet-hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-14px)}}
+#scene .q-text{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:3;
+  background:rgba(255,249,238,.94);border:2.5px solid #4A3B2E;border-radius:16px;
+  padding:5px 18px;font-size:24px;font-weight:700;letter-spacing:1px;
+  white-space:normal;max-width:min(520px,92%);text-align:center;line-height:1.32}
+/* 救援方向级：题面区 pulse（整体呼吸放大 3 次） */
+#scene.pulse{animation:scene-pulse 1s ease-in-out 3}
+@keyframes scene-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+#scene.bounce{animation:scene-b .4s ease}
+@keyframes scene-b{0%,100%{transform:scale(1)}45%{transform:scale(.97)}}
+
+/* ---------- 候选卡排（r4 按题型：环境/食物/动物/能力卡）：一行 4 卡，主答案按钮 ≥96×96；
+   吞输入=容器 bump；带标签卡（食物/能力）icon+lbl 纵排 ---------- */
+#board{display:flex;gap:20px;justify-content:center;align-items:stretch;flex:0 0 auto;
+  width:100%;max-width:780px;padding:0 2px}
+#board.bump{animation:board-bump .22s ease}
+@keyframes board-bump{0%,100%{transform:scale(1)}45%{transform:scale(.96)}}
+.card{position:relative;background:#FFF9EE;border:3px solid #4A3B2E;border-radius:22px;
+  box-shadow:0 5px 0 #D8C9B4;flex:0 0 auto;width:126px;min-height:150px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  transition:transform .15s;overflow:hidden}
+.card:active{transform:translateY(3px)}
+.card .gwrap{display:flex;align-items:center;justify-content:center;pointer-events:none}
+.card .gwrap.env{width:100px;height:110px}
+.card .gwrap.env svg{width:100px;height:110px}
+.card .lbl{font-style:normal;font-size:20px;font-weight:700;color:#4A3B2E;line-height:1;
+  padding-bottom:6px}
+.card.pop{animation:card-in .42s cubic-bezier(.2,1.6,.4,1) backwards}
+@keyframes card-in{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+.card.bump{animation:card-bump .22s ease}
+@keyframes card-bump{0%,100%{transform:scale(1)}45%{transform:scale(.94)}}
+/* 答对：卡绿+弹（动物飞进场景入住） */
+.card.lit{border-color:#6FA063;box-shadow:0 5px 0 #8FBF7F;
+  animation:card-lit .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes card-lit{0%{transform:scale(1)}45%{transform:scale(1.12)}100%{transform:scale(1)}}
+/* 入住小动物（答对飞达后置于场景卡中央偏下） */
+.card .pet-in{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);z-index:2;
+  animation:petin-pop .5s cubic-bezier(.2,1.6,.4,1) backwards;pointer-events:none}
+.card .pet-in svg{width:48px;height:48px;filter:drop-shadow(0 2px 0 rgba(255,255,255,.8))}
+@keyframes petin-pop{0%{transform:translateX(-50%) scale(.2);opacity:0}
+  100%{transform:translateX(-50%) scale(1);opacity:1}}
+/* 答错：摇头晃动（不灰掉可重选——探索不罚，语义反馈款） */
+.card.wig{animation:an-wig .6s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}22%{transform:rotate(-8deg) translateX(-4px)}
+  50%{transform:rotate(7deg) translateX(3px)}78%{transform:rotate(-4deg) translateX(-2px)}}
+/* 30s 答案级救援：正确场景呼吸高亮循环（§0.21） */
+.card.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+@keyframes an-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+/* 动物飞行体（题面 → 场景卡，fixed 层 CSS transition） */
+.flypet{position:fixed;z-index:90;width:64px;height:64px;border-radius:16px;display:flex;
+  align-items:center;justify-content:center;pointer-events:none;
+  transition:transform .56s cubic-bezier(.3,.85,.35,1.08)}
+.flypet svg{width:58px;height:58px}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:86px;height:86px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch21-24） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：题面/卡适配，主答案卡仍 ≥96 */
+@media (orientation:portrait){
+  #scene{height:168px}
+  #scene[data-kind=chain],#scene[data-kind=hib],#scene[data-kind=struct],#scene[data-kind=dual]{height:186px}
+  #scene #pet svg{width:100px;height:100px}
+  #scene .q-text{font-size:20px;padding:4px 14px}
+  #scene .chain-row{top:8px;gap:5px}
+  #scene .ch-ico svg{width:52px;height:52px}
+  #scene .ch-animal svg{width:60px;height:60px}
+  #scene .ch-q{width:34px;height:34px;font-size:22px}
+  #scene .sleep-ico svg{width:72px;height:72px}
+  #scene .feat-ico svg{width:76px;height:76px}
+  #scene .cond-chips{top:10px;gap:8px}
+  #scene .chip{padding:4px 8px}
+  #scene .chip svg{width:44px;height:44px}
+  #scene .chip i{font-size:14px}
+  #scene .chip-plus{font-size:24px}
+  #board{gap:12px}
+  .card{width:106px;min-height:132px}
+  .card .gwrap.env{width:84px;height:92px}
+  .card .gwrap.env svg{width:84px;height:92px}
+  .card .gwrap.gen svg{width:78px;height:78px}
+  .card .lbl{font-size:17px;padding-bottom:4px}
+  .card .pet-in svg{width:40px;height:40px}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="动物家园">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <button id="scene" aria-label="小动物找家，点我再听一遍"></button>
+    <div id="board" aria-label="环境场景卡"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

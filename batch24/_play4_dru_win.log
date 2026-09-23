@@ -1,0 +1,8 @@
+[13.3s] tut=help，autoSolve 开始
+[36.8s] autoSolve 返回={"done": true, "taps": 10}
+[37.8s]   +1s done=True won=True celebrate=True levels键=[] flat=0
+[38.8s]   +2s done=True won=True celebrate=True levels键=[] flat=0
+[39.8s]   +3s done=False won=False celebrate=False levels键=['1-0'] flat=1
+[39.8s] 最终 levels={"1-0": {"stars": 3, "plays": 1}}
+[39.8s] pageerror 总数=0
+DONE win-probe

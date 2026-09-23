@@ -1,0 +1,759 @@
+{
+ "game": "fishcolor",
+ "url": "file:///F:/claudecode/projects/active/kids-games/batch7/fishcolor/index.html",
+ "pageerrors": [],
+ "levels": [
+  {
+   "tag": "flat0",
+   "flat": 0,
+   "ch": 1,
+   "dch": 1,
+   "clicks": 15,
+   "retries": 1,
+   "stars": 2,
+   "quizzes": {
+    "0": {
+     "targets": [
+      "blue"
+     ],
+     "need": [
+      2
+     ],
+     "act0": 0,
+     "fishes": [
+      "yellow",
+      "blue",
+      "blue",
+      "green",
+      "blue"
+     ],
+     "miss": 0
+    },
+    "1": {
+     "targets": [
+      "red"
+     ],
+     "need": [
+      2
+     ],
+     "act0": 0,
+     "fishes": [
+      "red",
+      "yellow",
+      "blue",
+      "red",
+      "red"
+     ],
+     "miss": 0
+    },
+    "2": {
+     "targets": [
+      "blue"
+     ],
+     "need": [
+      2
+     ],
+     "act0": 0,
+     "fishes": [
+      "blue",
+      "yellow",
+      "blue",
+      "red",
+      "blue",
+      "green"
+     ],
+     "miss": 0
+    },
+    "3": {
+     "targets": [
+      "red"
+     ],
+     "need": [
+      2
+     ],
+     "act0": 0,
+     "fishes": [
+      "yellow",
+      "red",
+      "red",
+      "red",
+      "blue",
+      "green"
+     ],
+     "miss": 0
+    },
+    "4": {
+     "targets": [
+      "blue"
+     ],
+     "need": [
+      2
+     ],
+     "act0": 0,
+     "fishes": [
+      "yellow",
+      "blue",
+      "red",
+      "blue",
+      "blue",
+      "blue"
+     ],
+     "miss": 0
+    }
+   },
+   "tut": {
+    "watch_seen": true,
+    "watch_swallow": true,
+    "help_enter": "help",
+    "ghost_show": false,
+    "rescue_in_help": {
+     "label": "flat0_help_idle",
+     "waited_s": 25.5,
+     "entries": [
+      "play(None,钓两条蓝色的鱼)"
+     ],
+     "fire_after_s": [
+      19.989
+     ]
+    },
+    "after_first_catch": "solo",
+    "ghost_hidden_after_solo": true
+   },
+   "events": [
+    {
+     "ev": "step_0_voice",
+     "v": []
+    },
+    {
+     "ev": "wrong1_distractor",
+     "miss": 1,
+     "retries": 1,
+     "pulse": [
+      0,
+      0
+     ],
+     "voice": [
+      "play(fis_wrong,不对哦，钓红色的鱼)"
+     ]
+    },
+    {
+     "ev": "step_1_voice",
+     "v": [
+      "play(fis_wrong,不对哦，钓红色的鱼)"
+     ]
+    },
+    {
+     "ev": "tap_gone_again",
+     "miss": [
+      0,
+      0
+     ],
+     "retries": [
+      1,
+      1
+     ],
+     "voice": [
+      "play(fis_hint,听一听，钓什么颜色的鱼)"
+     ]
+    },
+    {
+     "ev": "step_2_voice",
+     "v": [
+      "play(fis_hint,听一听，钓什么颜色的鱼)"
+     ]
+    },
+    {
+     "ev": "blank_pond_click",
+     "voice": []
+    },
+    {
+     "ev": "step_3_voice",
+     "v": []
+    },
+    {
+     "ev": "rabbit_btn",
+     "voice": [
+      "play(fis_hint,听一听，钓什么颜色的鱼)"
+     ]
+    },
+    {
+     "ev": "step_4_voice",
+     "v": [
+      "play(fis_hint,听一听，钓什么颜色的鱼)"
+     ]
+    }
+   ],
+   "vlog": [
+    "say(钓两条蓝色的鱼)",
+    "play(None,钓两条蓝色的鱼)",
+    "play(fis_tut_turn,你来钓一钓)",
+    "play(None,钓两条蓝色的鱼)",
+    "say(钓两条红色的鱼)",
+    "play(None,钓两条红色的鱼)",
+    "play(fis_wrong,不对哦，钓红色的鱼)",
+    "say(钓两条蓝色的鱼)",
+    "play(None,钓两条蓝色的鱼)",
+    "play(fis_hint,听一听，钓什么颜色的鱼)",
+    "say(钓两条红色的鱼)",
+    "play(None,钓两条红色的鱼)",
+    "say(钓两条蓝色的鱼)",
+    "play(None,钓两条蓝色的鱼)",
+    "play(fis_hint,听一听，钓什么颜色的鱼)"
+   ]
+  },
+  {
+   "tag": "flat5",
+   "flat": 5,
+   "ch": 2,
+   "dch": 2,
+   "clicks": 14,
+   "retries": 3,
+   "stars": 1,
+   "quizzes": {
+    "0": {
+     "targets": [
+      "blue"
+     ],
+     "need": [
+      2
+     ],
+     "act0": 0,
+     "fishes": [
+      "blue",
+      "green",
+      "blue",
+      "purple",
+      "blue",
+      "blue"
+     ],
+     "miss": 0
+    },
+    "1": {
+     "targets": [
+      "orange"
+     ],
+     "need": [
+      2
+     ],
+     "act0": 0,
+     "fishes": [
+      "orange",
+      "yellow",
+      "orange",
+      "red",
+      "orange",
+      "orange"
+     ],
+     "miss": 0
+    },
+    "2": {
+     "targets": [
+      "red"
+     ],
+     "need": [
+      3
+     ],
+     "act0": 0,
+     "fishes": [
+      "red",
+      "orange",
+      "blue",
+      "red",
+      "red",
+      "purple"
+     ],
+     "miss": 0
+    },
+    "3": {
+     "targets": [
+      "pink"
+     ],
+     "need": [
+      2
+     ],
+     "act0": 0,
+     "fishes": [
+      "pink",
+      "blue",
+      "green",
+      "red",
+      "pink"
+     ],
+     "miss": 0
+    },
+    "4": {
+     "targets": [
+      "yellow"
+     ],
+     "need": [
+      2
+     ],
+     "act0": 0,
+     "fishes": [
+      "pink",
+      "yellow",
+      "yellow",
+      "yellow",
+      "orange"
+     ],
+     "miss": 0
+    }
+   },
+   "events": [
+    {
+     "ev": "near_wrong1",
+     "voice": [
+      "play(fis_wrong,不对哦，钓蓝色的鱼)"
+     ],
+     "pulse": [
+      0,
+      0
+     ],
+     "miss": 1
+    },
+    {
+     "ev": "near_wrong2_in10s_throttled",
+     "voice": [],
+     "pulse": [
+      0,
+      1
+     ],
+     "miss": 2
+    },
+    {
+     "ev": "near_wrong3_after10s",
+     "voice": [
+      "play(fis_wrong,不对哦，钓蓝色的鱼)"
+     ],
+     "miss": 3
+    },
+    {
+     "ev": "step_0_voice",
+     "v": [
+      "play(fis_wrong,不对哦，钓蓝色的鱼)",
+      "play(fis_wrong,不对哦，钓蓝色的鱼)"
+     ]
+    },
+    {
+     "ev": "step_1_voice",
+     "v": []
+    },
+    {
+     "ev": "step_2_voice",
+     "v": []
+    },
+    {
+     "ev": "step_3_voice",
+     "v": []
+    },
+    {
+     "ev": "step_4_voice",
+     "v": []
+    }
+   ],
+   "misc": {
+    "seed_lim": 6,
+    "opening_voice": [
+     "TTS:钓两条蓝色的鱼"
+    ],
+    "rescue": {
+     "label": "flat5_idle",
+     "waited_s": 25.5,
+     "entries": [
+      "play(None,钓两条蓝色的鱼)"
+     ],
+     "fire_after_s": [
+      17.412
+     ]
+    }
+   },
+   "vlog": [
+    "play(None,钓两条蓝色的鱼)",
+    "play(fis_wrong,不对哦，钓蓝色的鱼)",
+    "play(fis_wrong,不对哦，钓蓝色的鱼)",
+    "say(钓两条橙色的鱼)",
+    "play(None,钓两条橙色的鱼)",
+    "say(钓三条红色的鱼)",
+    "play(None,钓三条红色的鱼)",
+    "say(钓两条粉色的鱼)",
+    "play(None,钓两条粉色的鱼)",
+    "say(钓两条黄色的鱼)",
+    "play(None,钓两条黄色的鱼)"
+   ]
+  },
+  {
+   "tag": "flat10",
+   "flat": 10,
+   "ch": 3,
+   "dch": 3,
+   "clicks": 13,
+   "retries": 1,
+   "stars": 2,
+   "quizzes": {
+    "0": {
+     "targets": [
+      "red",
+      "white"
+     ],
+     "need": [
+      1,
+      1
+     ],
+     "act0": 0,
+     "fishes": [
+      "white",
+      "blue",
+      "red",
+      "black",
+      "green"
+     ],
+     "miss": 0
+    },
+    "1": {
+     "targets": [
+      "white",
+      "black"
+     ],
+     "need": [
+      2,
+      1
+     ],
+     "act0": 0,
+     "fishes": [
+      "blue",
+      "white",
+      "green",
+      "black",
+      "red",
+      "white",
+      "yellow"
+     ],
+     "miss": 0
+    },
+    "2": {
+     "targets": [
+      "yellow",
+      "green"
+     ],
+     "need": [
+      2,
+      1
+     ],
+     "act0": 0,
+     "fishes": [
+      "yellow",
+      "yellow",
+      "red",
+      "blue",
+      "yellow",
+      "green",
+      "white"
+     ],
+     "miss": 0
+    },
+    "3": {
+     "targets": [
+      "red",
+      "white"
+     ],
+     "need": [
+      1,
+      1
+     ],
+     "act0": 0,
+     "fishes": [
+      "black",
+      "red",
+      "white",
+      "yellow",
+      "white"
+     ],
+     "miss": 0
+    },
+    "4": {
+     "targets": [
+      "yellow",
+      "black"
+     ],
+     "need": [
+      1,
+      1
+     ],
+     "act0": 0,
+     "fishes": [
+      "black",
+      "yellow",
+      "white",
+      "green",
+      "blue",
+      "black",
+      "red"
+     ],
+     "miss": 0
+    }
+   },
+   "events": [
+    {
+     "ev": "dual_chip_cards",
+     "n": 2,
+     "targets": [
+      "red",
+      "white"
+     ],
+     "need": [
+      1,
+      1
+     ]
+    },
+    {
+     "ev": "explore_bw_fish",
+     "voice": [
+      "play(fis_wrong,不对哦，钓红色的鱼)"
+     ],
+     "miss": 1
+    },
+    {
+     "ev": "step_0_voice",
+     "v": [
+      "play(fis_wrong,不对哦，钓红色的鱼)"
+     ]
+    },
+    {
+     "ev": "step_1_voice",
+     "v": []
+    },
+    {
+     "ev": "dual_step2_chip",
+     "n": 2
+    },
+    {
+     "ev": "step_2_voice",
+     "v": []
+    },
+    {
+     "ev": "step_3_voice",
+     "v": []
+    },
+    {
+     "ev": "step_4_voice",
+     "v": []
+    }
+   ],
+   "misc": {
+    "seed_lim": 16,
+    "opening_voice": [
+     "TTS:先钓一条红色，再钓一条白色"
+    ]
+   },
+   "vlog": [
+    "play(fis_wrong,不对哦，钓红色的鱼)",
+    "say(再钓一条白色的鱼)",
+    "play(None,再钓一条白色的鱼)",
+    "say(先钓两条白色，再钓一条黑色)",
+    "play(None,先钓两条白色，再钓一条黑色)",
+    "say(再钓一条黑色的鱼)",
+    "play(None,再钓一条黑色的鱼)",
+    "say(先钓两条黄色，再钓一条绿色)",
+    "play(None,先钓两条黄色，再钓一条绿色)",
+    "say(再钓一条绿色的鱼)",
+    "play(None,再钓一条绿色的鱼)",
+    "say(先钓一条红色，再钓一条白色)",
+    "play(None,先钓一条红色，再钓一条白色)",
+    "say(再钓一条白色的鱼)",
+    "play(None,再钓一条白色的鱼)",
+    "say(先钓一条黄色，再钓一条黑色)",
+    "play(None,先钓一条黄色，再钓一条黑色)",
+    "say(再钓一条黑色的鱼)",
+    "play(None,再钓一条黑色的鱼)"
+   ]
+  },
+  {
+   "tag": "flat15",
+   "flat": 15,
+   "ch": 4,
+   "dch": 4,
+   "clicks": 17,
+   "retries": 2,
+   "stars": 2,
+   "quizzes": {
+    "0": {
+     "targets": [
+      "purple"
+     ],
+     "need": [
+      3
+     ],
+     "act0": 0,
+     "fishes": [
+      "purple",
+      "purple",
+      "purple",
+      "blue",
+      "orange",
+      "purple",
+      "blue",
+      "yellow"
+     ],
+     "miss": 0
+    },
+    "1": {
+     "targets": [
+      "orange"
+     ],
+     "need": [
+      3
+     ],
+     "act0": 0,
+     "fishes": [
+      "orange",
+      "orange",
+      "red",
+      "blue",
+      "purple",
+      "orange",
+      "orange",
+      "yellow"
+     ],
+     "miss": 0
+    },
+    "2": {
+     "targets": [
+      "blue"
+     ],
+     "need": [
+      3
+     ],
+     "act0": 0,
+     "fishes": [
+      "blue",
+      "purple",
+      "purple",
+      "blue",
+      "blue",
+      "yellow",
+      "red",
+      "orange"
+     ],
+     "miss": 0
+    },
+    "3": {
+     "targets": [
+      "red"
+     ],
+     "need": [
+      3
+     ],
+     "act0": 0,
+     "fishes": [
+      "red",
+      "purple",
+      "orange",
+      "yellow",
+      "red",
+      "orange",
+      "red",
+      "red"
+     ],
+     "miss": 0
+    },
+    "4": {
+     "targets": [
+      "yellow"
+     ],
+     "need": [
+      3
+     ],
+     "act0": 0,
+     "fishes": [
+      "yellow",
+      "orange",
+      "yellow",
+      "orange",
+      "yellow",
+      "blue",
+      "red",
+      "yellow"
+     ],
+     "miss": 0
+    }
+   },
+   "events": [
+    {
+     "ev": "density",
+     "fishes": 8,
+     "target": "purple",
+     "near_distract": 2
+    },
+    {
+     "ev": "near_wrong1",
+     "voice": [
+      "play(fis_wrong,不对哦，钓紫色的鱼)"
+     ],
+     "pulse": [
+      0,
+      0
+     ]
+    },
+    {
+     "ev": "near_wrong2_pulse",
+     "voice": [],
+     "pulse": [
+      0,
+      1
+     ]
+    },
+    {
+     "ev": "step_0_voice",
+     "v": [
+      "play(fis_wrong,不对哦，钓紫色的鱼)"
+     ]
+    },
+    {
+     "ev": "step_1_voice",
+     "v": []
+    },
+    {
+     "ev": "step_2_voice",
+     "v": []
+    },
+    {
+     "ev": "step_3_voice",
+     "v": []
+    },
+    {
+     "ev": "step_4_voice",
+     "v": []
+    }
+   ],
+   "misc": {
+    "seed_lim": 16,
+    "opening_voice": [
+     "TTS:钓三条紫色的鱼"
+    ]
+   },
+   "vlog": [
+    "play(fis_wrong,不对哦，钓紫色的鱼)",
+    "say(钓三条橙色的鱼)",
+    "play(None,钓三条橙色的鱼)",
+    "say(钓三条蓝色的鱼)",
+    "play(None,钓三条蓝色的鱼)",
+    "say(钓三条红色的鱼)",
+    "play(None,钓三条红色的鱼)",
+    "say(钓三条黄色的鱼)",
+    "play(None,钓三条黄色的鱼)"
+   ]
+  }
+ ],
+ "vlog_tail": [
+  "play(fis_wrong,不对哦，钓紫色的鱼)",
+  "say(钓三条橙色的鱼)",
+  "play(None,钓三条橙色的鱼)",
+  "say(钓三条蓝色的鱼)",
+  "play(None,钓三条蓝色的鱼)",
+  "say(钓三条红色的鱼)",
+  "play(None,钓三条红色的鱼)",
+  "say(钓三条黄色的鱼)",
+  "play(None,钓三条黄色的鱼)",
+  "play(core_day_end,今天的新关卡玩完啦，明天见)"
+ ]
+}

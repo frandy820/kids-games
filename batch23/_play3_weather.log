@@ -1,0 +1,77 @@
+[   1.00s] == 朵朵 5 岁 7 个月，第一次打开《天气穿衣》==（注入包裹：仅语音观测，零逻辑改动）
+[   1.21s]   shot wea-01-教学watch.png
+[   4.11s] 教学演示证据 __weDemoR = right （预期 right）
+[   4.11s] 教学期语音: ['c:看！下雨要穿雨衣', 'n:659Hz', 'n:880Hz', 's:coin']
+[   4.11s] 教学 watch 时长 3.1s（§0 watch<=16s）
+[   7.52s] 交接语音: ['n:880Hz', 's:coin', 'c:你来选一选', 'c:下雨啦，穿什么'] tutorial = help
+[   7.56s]   shot wea-02-教学help幽灵指.png
+[   7.57s] Q1 = rain single need=['raincoat']
+[   7.61s]   shot wea-03-题面.png
+[   7.68s]   tap 正确卡(歪手) @(745,414)
+[   8.59s]    独立放手 tutorial = solo （solo=放手成功）
+[   8.60s]    题完成 step=1 miss=0
+[   8.90s] Q2 = sun single need=['sunhat']
+[   8.91s]   tap 干扰卡(错) @(304,430)
+[  10.18s]    错反馈=['n:587Hz', 'c:天热穿这么多会出汗哦'] miss=1
+[  10.23s]   shot wea-04-点干扰卡反馈.png
+[  10.24s]   tap 正确卡(1s防重入窗内抢点) @(596,412)
+[  10.55s]    窗内抢点后 miss=0（应不变=吞点）
+[  11.87s]    题完成 step=2 miss=1
+[  11.87s] Q3 = rain single need=['raincoat']
+[  11.88s]   tap 空白(舞台左侧)
+[  12.60s]   tap 正确卡(边缘点击) @(380,351) 边缘
+[  13.02s]   tap 连点第二下(演出窗) @(426,413)
+[  14.12s]    空白反馈=['s:coin', 'n:988Hz', 'n:1319Hz', 'c:太阳晒晒，穿什么']
+[  14.14s]    题完成 step=3 miss=1
+[  14.15s] Q4 = sun single need=['sunhat']
+[  30.37s]    发呆16.2s 反馈=['c:太阳晒晒，穿什么'] scene.pulse=True（方向级=重读题面+场景pulse）
+[  30.41s]   shot wea-05-救援方向级.png
+[  30.43s]   tap 正确卡 @(452,410)
+[  30.44s]    题完成 step=4 miss=1
+[  31.50s] Q5 = rain single need=['rainboots']
+[  31.52s]   tap 正确卡 @(598,412)
+[  31.52s]    题完成 step=5 miss=1
+[  31.52s] 整关用时(秒): {'Q1': 1.0, 'Q2': 3.0, 'Q3': 2.3, 'Q4': 16.3, 'Q5': 0.0}
+[  36.20s] 过关语音=['n:784Hz', 'n:1047Hz', 'c:穿得刚刚好，出门啦', 'c:看看天上的雨']
+[  36.21s] 写档铁证 levels["1-0"] = {"stars": 2, "plays": 1}
+[  36.25s]   shot wea-06-通关celebrate.png
+[  39.27s] 自动推进 cur = {'flat': 1, 'ch': 1, 'lv': 1}
+[  39.31s]   shot wea-07-推进1-1.png
+[  39.31s] 纯发呆 33s 探针开始（每 5.5s 记录，页钟锚点）...
+[  44.82s]    + 5.5s 题面重读x0 card.breathe=False
+[  50.33s]    +11.0s 题面重读x1 card.breathe=False
+[  55.85s]    +16.5s 题面重读x1 card.breathe=False
+[  61.36s]    +22.0s 题面重读x1 card.breathe=False
+[  66.88s]    +27.5s 题面重读x2 card.breathe=False
+[  72.40s]    +33.0s 题面重读x2 card.breathe=False
+[  72.40s] 33s 纯发呆答案级出现 = False （False=不可达：14s 方向级触发即重置救援钟）
+[  72.88s]   shot wea-08-答案级breathe直驱补证.png
+[  72.88s] 直驱补证 breathe 类 = True
+[  72.91s]   tap 正确卡(被救后继续) @(595,409)
+[  72.91s] 被救后继续 step=1（应=1）
+[  73.85s] ch2全季节 flat5: rain single need=['raincoat']
+[  73.86s]   tap 干扰卡x1 @(453,436)
+[  75.14s]   tap 干扰卡x2 @(450,408)
+[  76.51s]    连点干扰反馈=['n:587Hz', 'c:下雨穿这个会淋湿哦', 'c:下雨啦，穿什么', 'n:587Hz'] miss=2
+[  76.57s]   shot wea-10-ch2连点干扰.png
+[  76.58s]   tap 正确卡 @(304,434)
+[  76.59s]    ch2全季节 flat5 首题 2.7s step=1
+[  77.52s] ch3两件 flat10: rain two need=['raincoat', 'rainboots']
+[  77.53s]   tap 两件-第1件 @(281,434)
+[  78.79s]    挂起 picked=[0] held卡数=1 兔子badge=1
+[  78.83s]   shot wea-09-ch3两件挂起.png
+[  78.84s]   tap 两件-中间错一件 @(426,413)
+[  80.20s]    中途错一件 miss=1 picked=[0]（挂起不重置）反馈=['n:1319Hz', 'c:下雨啦，穿什么', 'n:587Hz']
+[  80.22s]   tap 两件-第2件 @(741,435)
+[  80.22s]    ch3两件 flat10 首题 2.7s step=1
+[  81.15s] ch4混合 flat15: rain single need=['raincoat']
+[  81.17s]   tap 第1/1件 @(742,433)
+[  82.43s]    flat15 题1 single ['raincoat'] 完成
+[  82.45s]   tap 第1/1件 @(307,412)
+[  83.71s]    flat15 题2 single ['jacket'] 完成
+[  83.71s]    ch4混合 flat15 两题 2.6s
+[  83.72s] 预置档写入：值头40字符={"v":"1.0","game":"weather","firstDay":"（JSON.stringify 包裹，非 [object Object]）
+[  86.29s] reload 后 cur = {'flat': 2, 'ch': 1, 'lv': 2} tutorial = none levels 保留 = {"1-0":{"stars":2,"plays":1},"1-1":{"stars":2,"plays":1}}
+[  86.32s]   shot wea-11-预置档reload.png
+[  86.32s] == weather 结束 ==
+DONE weather 86.4s

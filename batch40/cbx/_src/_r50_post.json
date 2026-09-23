@@ -1,0 +1,4922 @@
+{
+ "0": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "scene": 0,
+    "emo": "angry",
+    "say": "弟弟推倒你的积木，你好生气",
+    "sayKey": "cbx_sc_1",
+    "prop": "blocks",
+    "picks": [
+     "drinkwater",
+     "breath",
+     "throw"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 1,
+    "emo": "angry",
+    "say": "同学抢走你的画笔，你气坏了",
+    "sayKey": "cbx_sc_2",
+    "prop": "brush",
+    "picks": [
+     "hit",
+     "sayout",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 2,
+    "emo": "angry",
+    "say": "排队时有人插队，气鼓鼓的",
+    "sayKey": "cbx_sc_3",
+    "prop": "queue",
+    "picks": [
+     "sayout",
+     "shout",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 3,
+    "emo": "angry",
+    "say": "妹妹弄坏你的小车，好想发火",
+    "sayKey": "cbx_sc_4",
+    "prop": "car",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "tear"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 4,
+    "emo": "angry",
+    "say": "游戏输了，你气得直跺脚",
+    "sayKey": "cbx_sc_5",
+    "prop": "medal",
+    "picks": [
+     "breath",
+     "hugbunny",
+     "shout"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "1": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "scene": 1,
+    "emo": "angry",
+    "say": "同学抢走你的画笔，你气坏了",
+    "sayKey": "cbx_sc_2",
+    "prop": "brush",
+    "picks": [
+     "sayout",
+     "countten",
+     "hit"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 2,
+    "emo": "angry",
+    "say": "排队时有人插队，气鼓鼓的",
+    "sayKey": "cbx_sc_3",
+    "prop": "queue",
+    "picks": [
+     "hugbunny",
+     "shout",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 3,
+    "emo": "angry",
+    "say": "妹妹弄坏你的小车，好想发火",
+    "sayKey": "cbx_sc_4",
+    "prop": "car",
+    "picks": [
+     "tear",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 4,
+    "emo": "angry",
+    "say": "游戏输了，你气得直跺脚",
+    "sayKey": "cbx_sc_5",
+    "prop": "medal",
+    "picks": [
+     "shout",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 0,
+    "emo": "angry",
+    "say": "弟弟推倒你的积木，你好生气",
+    "sayKey": "cbx_sc_1",
+    "prop": "blocks",
+    "picks": [
+     "throw",
+     "breath",
+     "drinkwater"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   }
+  ]
+ },
+ "2": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 2,
+  "qs": [
+   {
+    "scene": 2,
+    "emo": "angry",
+    "say": "排队时有人插队，气鼓鼓的",
+    "sayKey": "cbx_sc_3",
+    "prop": "queue",
+    "picks": [
+     "shout",
+     "sayout",
+     "hugbunny"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 3,
+    "emo": "angry",
+    "say": "妹妹弄坏你的小车，好想发火",
+    "sayKey": "cbx_sc_4",
+    "prop": "car",
+    "picks": [
+     "tear",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 4,
+    "emo": "angry",
+    "say": "游戏输了，你气得直跺脚",
+    "sayKey": "cbx_sc_5",
+    "prop": "medal",
+    "picks": [
+     "hugbunny",
+     "breath",
+     "shout"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 0,
+    "emo": "angry",
+    "say": "弟弟推倒你的积木，你好生气",
+    "sayKey": "cbx_sc_1",
+    "prop": "blocks",
+    "picks": [
+     "breath",
+     "throw",
+     "drinkwater"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 1,
+    "emo": "angry",
+    "say": "同学抢走你的画笔，你气坏了",
+    "sayKey": "cbx_sc_2",
+    "prop": "brush",
+    "picks": [
+     "sayout",
+     "hit",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   }
+  ]
+ },
+ "3": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "scene": 3,
+    "emo": "angry",
+    "say": "妹妹弄坏你的小车，好想发火",
+    "sayKey": "cbx_sc_4",
+    "prop": "car",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "tear"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 4,
+    "emo": "angry",
+    "say": "游戏输了，你气得直跺脚",
+    "sayKey": "cbx_sc_5",
+    "prop": "medal",
+    "picks": [
+     "hugbunny",
+     "shout",
+     "breath"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 0,
+    "emo": "angry",
+    "say": "弟弟推倒你的积木，你好生气",
+    "sayKey": "cbx_sc_1",
+    "prop": "blocks",
+    "picks": [
+     "drinkwater",
+     "breath",
+     "throw"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 1,
+    "emo": "angry",
+    "say": "同学抢走你的画笔，你气坏了",
+    "sayKey": "cbx_sc_2",
+    "prop": "brush",
+    "picks": [
+     "countten",
+     "sayout",
+     "hit"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 2,
+    "emo": "angry",
+    "say": "排队时有人插队，气鼓鼓的",
+    "sayKey": "cbx_sc_3",
+    "prop": "queue",
+    "picks": [
+     "sayout",
+     "shout",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   }
+  ]
+ },
+ "4": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "scene": 4,
+    "emo": "angry",
+    "say": "游戏输了，你气得直跺脚",
+    "sayKey": "cbx_sc_5",
+    "prop": "medal",
+    "picks": [
+     "shout",
+     "hugbunny",
+     "breath"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 0,
+    "emo": "angry",
+    "say": "弟弟推倒你的积木，你好生气",
+    "sayKey": "cbx_sc_1",
+    "prop": "blocks",
+    "picks": [
+     "drinkwater",
+     "breath",
+     "throw"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 1,
+    "emo": "angry",
+    "say": "同学抢走你的画笔，你气坏了",
+    "sayKey": "cbx_sc_2",
+    "prop": "brush",
+    "picks": [
+     "hit",
+     "sayout",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 2,
+    "emo": "angry",
+    "say": "排队时有人插队，气鼓鼓的",
+    "sayKey": "cbx_sc_3",
+    "prop": "queue",
+    "picks": [
+     "sayout",
+     "shout",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 3,
+    "emo": "angry",
+    "say": "妹妹弄坏你的小车，好想发火",
+    "sayKey": "cbx_sc_4",
+    "prop": "car",
+    "picks": [
+     "tear",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   }
+  ]
+ },
+ "5": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "breath",
+     "hugbunny",
+     "tear"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "countten",
+     "hugbunny",
+     "shout"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "sayout",
+     "drinkwater",
+     "throw"
+    ],
+    "answer": 1,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "sayout",
+     "hit",
+     "breath"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "tear",
+     "drinkwater",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   }
+  ]
+ },
+ "6": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "countten",
+     "shout",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "drinkwater",
+     "throw",
+     "sayout"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "breath",
+     "hit",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "tear"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "breath",
+     "tear",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   }
+  ]
+ },
+ "7": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "drinkwater",
+     "throw",
+     "sayout"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "breath",
+     "hit",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "tear",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "breath",
+     "hugbunny",
+     "tear"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "hugbunny",
+     "countten",
+     "shout"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "8": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "breath",
+     "sayout",
+     "hit"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "countten",
+     "tear",
+     "drinkwater"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "breath",
+     "hugbunny",
+     "tear"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "hugbunny",
+     "shout",
+     "countten"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "throw",
+     "drinkwater",
+     "sayout"
+    ],
+    "answer": 1,
+    "ans": "drinkwater",
+    "n": 3
+   }
+  ]
+ },
+ "9": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "countten",
+     "tear",
+     "drinkwater"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "breath",
+     "tear",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "countten",
+     "hugbunny",
+     "shout"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "throw",
+     "drinkwater",
+     "sayout"
+    ],
+    "answer": 1,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "hit",
+     "breath",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   }
+  ]
+ },
+ "10": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "scene": 10,
+    "emo": "fear",
+    "say": "半夜听到怪声音，你有点害怕",
+    "sayKey": "cbx_sc_11",
+    "prop": "moon",
+    "picks": [
+     "hide",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 11,
+    "emo": "fear",
+    "say": "打雷声好响，你吓得发抖",
+    "sayKey": "cbx_sc_12",
+    "prop": "cloud",
+    "picks": [
+     "hugbunny",
+     "countten",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 12,
+    "emo": "fear",
+    "say": "房间黑黑的，你不敢进去",
+    "sayKey": "cbx_sc_13",
+    "prop": "lamp",
+    "picks": [
+     "hide",
+     "sayout",
+     "breath"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 13,
+    "emo": "fear",
+    "say": "看牙医的时候，你心里害怕",
+    "sayKey": "cbx_sc_14",
+    "prop": "tooth",
+    "picks": [
+     "cryonly",
+     "drinkwater",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 14,
+    "emo": "fear",
+    "say": "大狗汪汪叫，你吓得后退",
+    "sayKey": "cbx_sc_15",
+    "prop": "dog",
+    "picks": [
+     "cryonly",
+     "sayout",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   }
+  ]
+ },
+ "11": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "scene": 11,
+    "emo": "fear",
+    "say": "打雷声好响，你吓得发抖",
+    "sayKey": "cbx_sc_12",
+    "prop": "cloud",
+    "picks": [
+     "hugbunny",
+     "countten",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 12,
+    "emo": "fear",
+    "say": "房间黑黑的，你不敢进去",
+    "sayKey": "cbx_sc_13",
+    "prop": "lamp",
+    "picks": [
+     "breath",
+     "sayout",
+     "hide"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 13,
+    "emo": "fear",
+    "say": "看牙医的时候，你心里害怕",
+    "sayKey": "cbx_sc_14",
+    "prop": "tooth",
+    "picks": [
+     "drinkwater",
+     "cryonly",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 14,
+    "emo": "fear",
+    "say": "大狗汪汪叫，你吓得后退",
+    "sayKey": "cbx_sc_15",
+    "prop": "dog",
+    "picks": [
+     "drinkwater",
+     "sayout",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 10,
+    "emo": "fear",
+    "say": "半夜听到怪声音，你有点害怕",
+    "sayKey": "cbx_sc_11",
+    "prop": "moon",
+    "picks": [
+     "hugbunny",
+     "hide",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   }
+  ]
+ },
+ "12": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "scene": 12,
+    "emo": "fear",
+    "say": "房间黑黑的，你不敢进去",
+    "sayKey": "cbx_sc_13",
+    "prop": "lamp",
+    "picks": [
+     "breath",
+     "sayout",
+     "hide"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 13,
+    "emo": "fear",
+    "say": "看牙医的时候，你心里害怕",
+    "sayKey": "cbx_sc_14",
+    "prop": "tooth",
+    "picks": [
+     "cryonly",
+     "drinkwater",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 14,
+    "emo": "fear",
+    "say": "大狗汪汪叫，你吓得后退",
+    "sayKey": "cbx_sc_15",
+    "prop": "dog",
+    "picks": [
+     "cryonly",
+     "sayout",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 10,
+    "emo": "fear",
+    "say": "半夜听到怪声音，你有点害怕",
+    "sayKey": "cbx_sc_11",
+    "prop": "moon",
+    "picks": [
+     "hide",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 11,
+    "emo": "fear",
+    "say": "打雷声好响，你吓得发抖",
+    "sayKey": "cbx_sc_12",
+    "prop": "cloud",
+    "picks": [
+     "hugbunny",
+     "hide",
+     "countten"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "13": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "scene": 13,
+    "emo": "fear",
+    "say": "看牙医的时候，你心里害怕",
+    "sayKey": "cbx_sc_14",
+    "prop": "tooth",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 14,
+    "emo": "fear",
+    "say": "大狗汪汪叫，你吓得后退",
+    "sayKey": "cbx_sc_15",
+    "prop": "dog",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 10,
+    "emo": "fear",
+    "say": "半夜听到怪声音，你有点害怕",
+    "sayKey": "cbx_sc_11",
+    "prop": "moon",
+    "picks": [
+     "breath",
+     "hugbunny",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 11,
+    "emo": "fear",
+    "say": "打雷声好响，你吓得发抖",
+    "sayKey": "cbx_sc_12",
+    "prop": "cloud",
+    "picks": [
+     "countten",
+     "hide",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 12,
+    "emo": "fear",
+    "say": "房间黑黑的，你不敢进去",
+    "sayKey": "cbx_sc_13",
+    "prop": "lamp",
+    "picks": [
+     "breath",
+     "hide",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   }
+  ]
+ },
+ "14": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "scene": 14,
+    "emo": "fear",
+    "say": "大狗汪汪叫，你吓得后退",
+    "sayKey": "cbx_sc_15",
+    "prop": "dog",
+    "picks": [
+     "cryonly",
+     "drinkwater",
+     "sayout"
+    ],
+    "answer": 1,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 10,
+    "emo": "fear",
+    "say": "半夜听到怪声音，你有点害怕",
+    "sayKey": "cbx_sc_11",
+    "prop": "moon",
+    "picks": [
+     "hugbunny",
+     "breath",
+     "hide"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 11,
+    "emo": "fear",
+    "say": "打雷声好响，你吓得发抖",
+    "sayKey": "cbx_sc_12",
+    "prop": "cloud",
+    "picks": [
+     "hugbunny",
+     "countten",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 12,
+    "emo": "fear",
+    "say": "房间黑黑的，你不敢进去",
+    "sayKey": "cbx_sc_13",
+    "prop": "lamp",
+    "picks": [
+     "sayout",
+     "breath",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 13,
+    "emo": "fear",
+    "say": "看牙医的时候，你心里害怕",
+    "sayKey": "cbx_sc_14",
+    "prop": "tooth",
+    "picks": [
+     "drinkwater",
+     "cryonly",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   }
+  ]
+ },
+ "15": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "breath",
+     "sayout",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "hide",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "cryonly",
+     "hugbunny",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "hide",
+     "drinkwater",
+     "countten"
+    ],
+    "answer": 1,
+    "ans": "drinkwater",
+    "n": 3
+   }
+  ]
+ },
+ "16": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "breath",
+     "hide",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "sayout",
+     "hugbunny",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "countten",
+     "hide",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   }
+  ]
+ },
+ "17": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "hugbunny",
+     "breath",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "countten",
+     "hide",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "cryonly",
+     "breath",
+     "sayout"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "cryonly",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   }
+  ]
+ },
+ "18": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "countten",
+     "hide",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "hide",
+     "hugbunny",
+     "breath"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "19": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "drinkwater",
+     "hide",
+     "countten"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "sayout",
+     "breath",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "hide",
+     "hugbunny",
+     "breath"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   }
+  ]
+ },
+ "20": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "tear",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "countten",
+     "hugbunny",
+     "shout"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "drinkwater",
+     "throw",
+     "sayout"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "hit",
+     "breath",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "countten",
+     "tear",
+     "drinkwater"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   }
+  ]
+ },
+ "21": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "hugbunny",
+     "countten",
+     "shout"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "drinkwater",
+     "throw",
+     "sayout"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "breath",
+     "hit",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "tear"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "hugbunny",
+     "breath",
+     "tear"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   }
+  ]
+ },
+ "22": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "scene": 12,
+    "emo": "fear",
+    "say": "房间黑黑的，你不敢进去",
+    "sayKey": "cbx_sc_13",
+    "prop": "lamp",
+    "picks": [
+     "breath",
+     "hide",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 13,
+    "emo": "fear",
+    "say": "看牙医的时候，你心里害怕",
+    "sayKey": "cbx_sc_14",
+    "prop": "tooth",
+    "picks": [
+     "countten",
+     "cryonly",
+     "drinkwater"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 14,
+    "emo": "fear",
+    "say": "大狗汪汪叫，你吓得后退",
+    "sayKey": "cbx_sc_15",
+    "prop": "dog",
+    "picks": [
+     "drinkwater",
+     "sayout",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 10,
+    "emo": "fear",
+    "say": "半夜听到怪声音，你有点害怕",
+    "sayKey": "cbx_sc_11",
+    "prop": "moon",
+    "picks": [
+     "hide",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 11,
+    "emo": "fear",
+    "say": "打雷声好响，你吓得发抖",
+    "sayKey": "cbx_sc_12",
+    "prop": "cloud",
+    "picks": [
+     "hide",
+     "countten",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "23": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "scene": 3,
+    "emo": "angry",
+    "say": "妹妹弄坏你的小车，好想发火",
+    "sayKey": "cbx_sc_4",
+    "prop": "car",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "tear"
+    ],
+    "answer": 1,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 4,
+    "emo": "angry",
+    "say": "游戏输了，你气得直跺脚",
+    "sayKey": "cbx_sc_5",
+    "prop": "medal",
+    "picks": [
+     "shout",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 0,
+    "emo": "angry",
+    "say": "弟弟推倒你的积木，你好生气",
+    "sayKey": "cbx_sc_1",
+    "prop": "blocks",
+    "picks": [
+     "breath",
+     "drinkwater",
+     "throw"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 1,
+    "emo": "angry",
+    "say": "同学抢走你的画笔，你气坏了",
+    "sayKey": "cbx_sc_2",
+    "prop": "brush",
+    "picks": [
+     "countten",
+     "hit",
+     "sayout"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 2,
+    "emo": "angry",
+    "say": "排队时有人插队，气鼓鼓的",
+    "sayKey": "cbx_sc_3",
+    "prop": "queue",
+    "picks": [
+     "sayout",
+     "hugbunny",
+     "shout"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   }
+  ]
+ },
+ "24": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "scene": 4,
+    "emo": "angry",
+    "say": "游戏输了，你气得直跺脚",
+    "sayKey": "cbx_sc_5",
+    "prop": "medal",
+    "picks": [
+     "breath",
+     "hugbunny",
+     "shout"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 0,
+    "emo": "angry",
+    "say": "弟弟推倒你的积木，你好生气",
+    "sayKey": "cbx_sc_1",
+    "prop": "blocks",
+    "picks": [
+     "throw",
+     "drinkwater",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 1,
+    "emo": "angry",
+    "say": "同学抢走你的画笔，你气坏了",
+    "sayKey": "cbx_sc_2",
+    "prop": "brush",
+    "picks": [
+     "countten",
+     "hit",
+     "sayout"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 2,
+    "emo": "angry",
+    "say": "排队时有人插队，气鼓鼓的",
+    "sayKey": "cbx_sc_3",
+    "prop": "queue",
+    "picks": [
+     "sayout",
+     "shout",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 3,
+    "emo": "angry",
+    "say": "妹妹弄坏你的小车，好想发火",
+    "sayKey": "cbx_sc_4",
+    "prop": "car",
+    "picks": [
+     "tear",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   }
+  ]
+ },
+ "25": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "cryonly",
+     "breath",
+     "sayout"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "hide",
+     "hugbunny",
+     "breath"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "hugbunny",
+     "cryonly",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "drinkwater",
+     "hide",
+     "countten"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   }
+  ]
+ },
+ "26": {
+  "ch": 6,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "scene": 11,
+    "emo": "fear",
+    "say": "打雷声好响，你吓得发抖",
+    "sayKey": "cbx_sc_12",
+    "prop": "cloud",
+    "picks": [
+     "hugbunny",
+     "countten",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 12,
+    "emo": "fear",
+    "say": "房间黑黑的，你不敢进去",
+    "sayKey": "cbx_sc_13",
+    "prop": "lamp",
+    "picks": [
+     "sayout",
+     "breath",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 13,
+    "emo": "fear",
+    "say": "看牙医的时候，你心里害怕",
+    "sayKey": "cbx_sc_14",
+    "prop": "tooth",
+    "picks": [
+     "drinkwater",
+     "cryonly",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 14,
+    "emo": "fear",
+    "say": "大狗汪汪叫，你吓得后退",
+    "sayKey": "cbx_sc_15",
+    "prop": "dog",
+    "picks": [
+     "cryonly",
+     "sayout",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 10,
+    "emo": "fear",
+    "say": "半夜听到怪声音，你有点害怕",
+    "sayKey": "cbx_sc_11",
+    "prop": "moon",
+    "picks": [
+     "hugbunny",
+     "breath",
+     "hide"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   }
+  ]
+ },
+ "27": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "breath",
+     "hide",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "hugbunny",
+     "sayout",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "countten",
+     "hide",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "breath",
+     "sayout",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   }
+  ]
+ },
+ "28": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "breath",
+     "sayout",
+     "hit"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "tear",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "tear",
+     "hugbunny",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "hugbunny",
+     "shout",
+     "countten"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "drinkwater",
+     "throw",
+     "sayout"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   }
+  ]
+ },
+ "29": {
+  "ch": 6,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "scene": 14,
+    "emo": "fear",
+    "say": "大狗汪汪叫，你吓得后退",
+    "sayKey": "cbx_sc_15",
+    "prop": "dog",
+    "picks": [
+     "sayout",
+     "drinkwater",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 10,
+    "emo": "fear",
+    "say": "半夜听到怪声音，你有点害怕",
+    "sayKey": "cbx_sc_11",
+    "prop": "moon",
+    "picks": [
+     "breath",
+     "hide",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 11,
+    "emo": "fear",
+    "say": "打雷声好响，你吓得发抖",
+    "sayKey": "cbx_sc_12",
+    "prop": "cloud",
+    "picks": [
+     "hugbunny",
+     "hide",
+     "countten"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 12,
+    "emo": "fear",
+    "say": "房间黑黑的，你不敢进去",
+    "sayKey": "cbx_sc_13",
+    "prop": "lamp",
+    "picks": [
+     "sayout",
+     "breath",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 13,
+    "emo": "fear",
+    "say": "看牙医的时候，你心里害怕",
+    "sayKey": "cbx_sc_14",
+    "prop": "tooth",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   }
+  ]
+ },
+ "30": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "scene": 10,
+    "emo": "fear",
+    "say": "半夜听到怪声音，你有点害怕",
+    "sayKey": "cbx_sc_11",
+    "prop": "moon",
+    "picks": [
+     "hide",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 11,
+    "emo": "fear",
+    "say": "打雷声好响，你吓得发抖",
+    "sayKey": "cbx_sc_12",
+    "prop": "cloud",
+    "picks": [
+     "countten",
+     "hide",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 12,
+    "emo": "fear",
+    "say": "房间黑黑的，你不敢进去",
+    "sayKey": "cbx_sc_13",
+    "prop": "lamp",
+    "picks": [
+     "breath",
+     "sayout",
+     "hide"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 13,
+    "emo": "fear",
+    "say": "看牙医的时候，你心里害怕",
+    "sayKey": "cbx_sc_14",
+    "prop": "tooth",
+    "picks": [
+     "countten",
+     "cryonly",
+     "drinkwater"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 14,
+    "emo": "fear",
+    "say": "大狗汪汪叫，你吓得后退",
+    "sayKey": "cbx_sc_15",
+    "prop": "dog",
+    "picks": [
+     "drinkwater",
+     "sayout",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   }
+  ]
+ },
+ "31": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "cryonly",
+     "drinkwater",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "hide",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "cryonly",
+     "hugbunny",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "countten",
+     "hide",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "breath",
+     "cryonly",
+     "sayout"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   }
+  ]
+ },
+ "32": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "breath",
+     "hide",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "cryonly",
+     "hugbunny",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "drinkwater",
+     "hide",
+     "countten"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "cryonly",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   }
+  ]
+ },
+ "33": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "scene": 13,
+    "emo": "fear",
+    "say": "看牙医的时候，你心里害怕",
+    "sayKey": "cbx_sc_14",
+    "prop": "tooth",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 14,
+    "emo": "fear",
+    "say": "大狗汪汪叫，你吓得后退",
+    "sayKey": "cbx_sc_15",
+    "prop": "dog",
+    "picks": [
+     "cryonly",
+     "sayout",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 10,
+    "emo": "fear",
+    "say": "半夜听到怪声音，你有点害怕",
+    "sayKey": "cbx_sc_11",
+    "prop": "moon",
+    "picks": [
+     "breath",
+     "hide",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 11,
+    "emo": "fear",
+    "say": "打雷声好响，你吓得发抖",
+    "sayKey": "cbx_sc_12",
+    "prop": "cloud",
+    "picks": [
+     "hugbunny",
+     "countten",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 12,
+    "emo": "fear",
+    "say": "房间黑黑的，你不敢进去",
+    "sayKey": "cbx_sc_13",
+    "prop": "lamp",
+    "picks": [
+     "breath",
+     "hide",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   }
+  ]
+ },
+ "34": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "hide",
+     "drinkwater",
+     "countten"
+    ],
+    "answer": 1,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "cryonly",
+     "drinkwater",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "breath",
+     "hide",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "hugbunny",
+     "sayout",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   }
+  ]
+ },
+ "35": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "tear",
+     "hugbunny",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "hugbunny",
+     "countten",
+     "shout"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "throw",
+     "sayout",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "breath",
+     "sayout",
+     "hit"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "tear"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   }
+  ]
+ },
+ "36": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "hugbunny",
+     "breath",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "hugbunny",
+     "sayout",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "cryonly",
+     "sayout",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   }
+  ]
+ },
+ "37": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "drinkwater",
+     "throw",
+     "sayout"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "breath",
+     "hit",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "countten",
+     "tear",
+     "drinkwater"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "tear",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "shout",
+     "hugbunny",
+     "countten"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "38": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "hide"
+    ],
+    "answer": 1,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "cryonly",
+     "sayout",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "breath",
+     "hide",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "39": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "tear",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "tear",
+     "hugbunny",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "shout",
+     "hugbunny",
+     "countten"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "drinkwater",
+     "sayout",
+     "throw"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "hit",
+     "breath",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   }
+  ]
+ },
+ "40": {
+  "ch": 9,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "tear",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "hugbunny",
+     "shout",
+     "countten"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "sayout",
+     "drinkwater",
+     "throw"
+    ],
+    "answer": 1,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "sayout",
+     "breath",
+     "hit"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "tear"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   }
+  ]
+ },
+ "41": {
+  "ch": 9,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "countten",
+     "shout",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "drinkwater",
+     "throw",
+     "sayout"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "hit",
+     "breath",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "tear"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "hugbunny",
+     "breath",
+     "tear"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   }
+  ]
+ },
+ "42": {
+  "ch": 9,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "sayout",
+     "throw",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "breath",
+     "hit",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "tear"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "tear",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "shout",
+     "hugbunny",
+     "countten"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "43": {
+  "ch": 9,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "breath",
+     "sayout",
+     "hit"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "tear"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "hugbunny",
+     "tear",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "shout",
+     "countten",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "sayout",
+     "drinkwater",
+     "throw"
+    ],
+    "answer": 1,
+    "ans": "drinkwater",
+    "n": 3
+   }
+  ]
+ },
+ "44": {
+  "ch": 9,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "breath",
+     "cryonly",
+     "sayout"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "drinkwater",
+     "cryonly",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "hugbunny",
+     "breath",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "hugbunny",
+     "cryonly",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   }
+  ]
+ },
+ "45": {
+  "ch": 10,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "scene": 0,
+    "emo": "angry",
+    "say": "弟弟推倒你的积木，你好生气",
+    "sayKey": "cbx_sc_1",
+    "prop": "blocks",
+    "picks": [
+     "drinkwater",
+     "breath",
+     "throw"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 1,
+    "emo": "angry",
+    "say": "同学抢走你的画笔，你气坏了",
+    "sayKey": "cbx_sc_2",
+    "prop": "brush",
+    "picks": [
+     "hit",
+     "sayout",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 2,
+    "emo": "angry",
+    "say": "排队时有人插队，气鼓鼓的",
+    "sayKey": "cbx_sc_3",
+    "prop": "queue",
+    "picks": [
+     "shout",
+     "hugbunny",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 3,
+    "emo": "angry",
+    "say": "妹妹弄坏你的小车，好想发火",
+    "sayKey": "cbx_sc_4",
+    "prop": "car",
+    "picks": [
+     "countten",
+     "tear",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 4,
+    "emo": "angry",
+    "say": "游戏输了，你气得直跺脚",
+    "sayKey": "cbx_sc_5",
+    "prop": "medal",
+    "picks": [
+     "shout",
+     "hugbunny",
+     "breath"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "46": {
+  "ch": 10,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "cryonly",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "hugbunny",
+     "breath",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "countten",
+     "hide",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "cryonly",
+     "sayout",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   }
+  ]
+ },
+ "47": {
+  "ch": 10,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "scene": 12,
+    "emo": "fear",
+    "say": "房间黑黑的，你不敢进去",
+    "sayKey": "cbx_sc_13",
+    "prop": "lamp",
+    "picks": [
+     "breath",
+     "sayout",
+     "hide"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 13,
+    "emo": "fear",
+    "say": "看牙医的时候，你心里害怕",
+    "sayKey": "cbx_sc_14",
+    "prop": "tooth",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 14,
+    "emo": "fear",
+    "say": "大狗汪汪叫，你吓得后退",
+    "sayKey": "cbx_sc_15",
+    "prop": "dog",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 10,
+    "emo": "fear",
+    "say": "半夜听到怪声音，你有点害怕",
+    "sayKey": "cbx_sc_11",
+    "prop": "moon",
+    "picks": [
+     "hide",
+     "hugbunny",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 11,
+    "emo": "fear",
+    "say": "打雷声好响，你吓得发抖",
+    "sayKey": "cbx_sc_12",
+    "prop": "cloud",
+    "picks": [
+     "countten",
+     "hugbunny",
+     "hide"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "48": {
+  "ch": 10,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "hit",
+     "breath",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "tear"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "breath",
+     "hugbunny",
+     "tear"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "countten",
+     "hugbunny",
+     "shout"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "throw",
+     "drinkwater",
+     "sayout"
+    ],
+    "answer": 1,
+    "ans": "drinkwater",
+    "n": 3
+   }
+  ]
+ },
+ "49": {
+  "ch": 10,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "tear"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "breath",
+     "hugbunny",
+     "tear"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "hugbunny",
+     "countten",
+     "shout"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "drinkwater",
+     "throw",
+     "sayout"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "sayout",
+     "breath",
+     "hit"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   }
+  ]
+ },
+ "50": {
+  "ch": 11,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "cryonly",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "breath",
+     "hide",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "cryonly",
+     "hugbunny",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "hide",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   }
+  ]
+ },
+ "51": {
+  "ch": 11,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "countten",
+     "cryonly",
+     "drinkwater"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "breath",
+     "hugbunny",
+     "hide"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "hugbunny"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "cryonly",
+     "sayout",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   }
+  ]
+ },
+ "52": {
+  "ch": 11,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "sayout",
+     "throw",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "hit",
+     "breath",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "tear",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "tear",
+     "breath",
+     "hugbunny"
+    ],
+    "answer": 1,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "shout",
+     "countten",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "53": {
+  "ch": 11,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "cryonly",
+     "hugbunny",
+     "sayout"
+    ],
+    "answer": 2,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "hide",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "breath",
+     "sayout",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "cryonly",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "hugbunny",
+     "breath",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "54": {
+  "ch": 11,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "hide",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "sayout",
+     "cryonly",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "drinkwater",
+     "cryonly",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "hide",
+     "hugbunny",
+     "breath"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "hugbunny",
+     "sayout",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   }
+  ]
+ },
+ "55": {
+  "ch": 12,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "scene": 10,
+    "emo": "fear",
+    "say": "半夜听到怪声音，你有点害怕",
+    "sayKey": "cbx_sc_11",
+    "prop": "moon",
+    "picks": [
+     "hide",
+     "hugbunny",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 11,
+    "emo": "fear",
+    "say": "打雷声好响，你吓得发抖",
+    "sayKey": "cbx_sc_12",
+    "prop": "cloud",
+    "picks": [
+     "hide",
+     "hugbunny",
+     "countten"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 12,
+    "emo": "fear",
+    "say": "房间黑黑的，你不敢进去",
+    "sayKey": "cbx_sc_13",
+    "prop": "lamp",
+    "picks": [
+     "sayout",
+     "breath",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 13,
+    "emo": "fear",
+    "say": "看牙医的时候，你心里害怕",
+    "sayKey": "cbx_sc_14",
+    "prop": "tooth",
+    "picks": [
+     "countten",
+     "drinkwater",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 14,
+    "emo": "fear",
+    "say": "大狗汪汪叫，你吓得后退",
+    "sayKey": "cbx_sc_15",
+    "prop": "dog",
+    "picks": [
+     "drinkwater",
+     "sayout",
+     "cryonly"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   }
+  ]
+ },
+ "56": {
+  "ch": 12,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "scene": 1,
+    "emo": "angry",
+    "say": "同学抢走你的画笔，你气坏了",
+    "sayKey": "cbx_sc_2",
+    "prop": "brush",
+    "picks": [
+     "countten",
+     "sayout",
+     "hit"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 2,
+    "emo": "angry",
+    "say": "排队时有人插队，气鼓鼓的",
+    "sayKey": "cbx_sc_3",
+    "prop": "queue",
+    "picks": [
+     "shout",
+     "sayout",
+     "hugbunny"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 3,
+    "emo": "angry",
+    "say": "妹妹弄坏你的小车，好想发火",
+    "sayKey": "cbx_sc_4",
+    "prop": "car",
+    "picks": [
+     "countten",
+     "tear",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 4,
+    "emo": "angry",
+    "say": "游戏输了，你气得直跺脚",
+    "sayKey": "cbx_sc_5",
+    "prop": "medal",
+    "picks": [
+     "breath",
+     "shout",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 0,
+    "emo": "angry",
+    "say": "弟弟推倒你的积木，你好生气",
+    "sayKey": "cbx_sc_1",
+    "prop": "blocks",
+    "picks": [
+     "drinkwater",
+     "throw",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   }
+  ]
+ },
+ "57": {
+  "ch": 12,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "drinkwater",
+     "sayout",
+     "throw"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "breath",
+     "sayout",
+     "hit"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "drinkwater",
+     "tear",
+     "countten"
+    ],
+    "answer": 2,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "hugbunny",
+     "tear",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "countten",
+     "shout",
+     "hugbunny"
+    ],
+    "answer": 2,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "58": {
+  "ch": 12,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "scene": 18,
+    "emo": "frus",
+    "say": "写的字歪歪扭扭，你好泄气",
+    "sayKey": "cbx_sc_19",
+    "prop": "pencil",
+    "picks": [
+     "hugbunny",
+     "sayout",
+     "cryonly"
+    ],
+    "answer": 1,
+    "ans": "sayout",
+    "n": 3
+   },
+   {
+    "scene": 19,
+    "emo": "frus",
+    "say": "学骑车总摔倒，你灰心了",
+    "sayKey": "cbx_sc_20",
+    "prop": "bike",
+    "picks": [
+     "drinkwater",
+     "countten",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 15,
+    "emo": "frus",
+    "say": "鞋带总系不好，你好灰心",
+    "sayKey": "cbx_sc_16",
+    "prop": "shoe",
+    "picks": [
+     "cryonly",
+     "sayout",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 16,
+    "emo": "frus",
+    "say": "跳绳总绊脚，你有点泄气",
+    "sayKey": "cbx_sc_17",
+    "prop": "rope",
+    "picks": [
+     "countten",
+     "cryonly",
+     "drinkwater"
+    ],
+    "answer": 0,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 17,
+    "emo": "frus",
+    "say": "拼图好难，你拼得直叹气",
+    "sayKey": "cbx_sc_18",
+    "prop": "puzzle",
+    "picks": [
+     "hugbunny",
+     "breath",
+     "hide"
+    ],
+    "answer": 0,
+    "ans": "hugbunny",
+    "n": 3
+   }
+  ]
+ },
+ "59": {
+  "ch": 12,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "scene": 9,
+    "emo": "sad",
+    "say": "下雨天去不了公园，好难过",
+    "sayKey": "cbx_sc_10",
+    "prop": "umbrella",
+    "picks": [
+     "tear",
+     "countten",
+     "drinkwater"
+    ],
+    "answer": 1,
+    "ans": "countten",
+    "n": 3
+   },
+   {
+    "scene": 5,
+    "emo": "sad",
+    "say": "心爱的气球飞走了，你好难过",
+    "sayKey": "cbx_sc_6",
+    "prop": "balloon",
+    "picks": [
+     "hugbunny",
+     "tear",
+     "breath"
+    ],
+    "answer": 2,
+    "ans": "breath",
+    "n": 3
+   },
+   {
+    "scene": 6,
+    "emo": "sad",
+    "say": "好朋友转学了，你好难过",
+    "sayKey": "cbx_sc_7",
+    "prop": "letter",
+    "picks": [
+     "countten",
+     "hugbunny",
+     "shout"
+    ],
+    "answer": 1,
+    "ans": "hugbunny",
+    "n": 3
+   },
+   {
+    "scene": 7,
+    "emo": "sad",
+    "say": "画好的画弄脏了，你很难过",
+    "sayKey": "cbx_sc_8",
+    "prop": "paper",
+    "picks": [
+     "sayout",
+     "throw",
+     "drinkwater"
+    ],
+    "answer": 2,
+    "ans": "drinkwater",
+    "n": 3
+   },
+   {
+    "scene": 8,
+    "emo": "sad",
+    "say": "小金鱼不动了，你心里难过",
+    "sayKey": "cbx_sc_9",
+    "prop": "fish",
+    "picks": [
+     "sayout",
+     "breath",
+     "hit"
+    ],
+    "answer": 0,
+    "ans": "sayout",
+    "n": 3
+   }
+  ]
+ }
+}

@@ -1,0 +1,3482 @@
+{
+ "0": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "frog",
+     "bear",
+     "duck",
+     "monkey"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "duck",
+     "rabbit",
+     "elephant",
+     "frog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "frog",
+     "duck",
+     "cat",
+     "rabbit",
+     "monkey"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "frog",
+     "duck",
+     "cat",
+     "bear"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "frog",
+     "dog",
+     "monkey",
+     "elephant"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "1": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "cat",
+     "dog",
+     "rabbit",
+     "monkey"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "dog",
+     "bear",
+     "monkey",
+     "duck"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "frog",
+     "monkey",
+     "cat",
+     "duck"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "dog",
+     "duck",
+     "bear",
+     "monkey",
+     "frog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "dog",
+     "rabbit",
+     "duck",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "2": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "duck",
+     "dog",
+     "frog",
+     "rabbit"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "rabbit",
+     "dog",
+     "duck",
+     "bear"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "dog",
+     "cat",
+     "rabbit",
+     "bear"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "dog",
+     "elephant",
+     "frog",
+     "monkey"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "monkey",
+     "duck",
+     "rabbit",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "3": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "duck",
+     "monkey",
+     "cat",
+     "rabbit"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "rabbit",
+     "monkey",
+     "frog",
+     "bear",
+     "elephant"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "elephant",
+     "frog",
+     "cat",
+     "bear"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "cat",
+     "duck",
+     "frog",
+     "monkey"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "monkey",
+     "duck",
+     "frog",
+     "bear"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "4": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "dog",
+     "frog",
+     "duck",
+     "bear"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "frog",
+     "elephant",
+     "monkey",
+     "cat",
+     "bear"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "bear",
+     "rabbit",
+     "elephant",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "rabbit",
+     "frog",
+     "bear",
+     "dog",
+     "elephant"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "dog",
+     "elephant",
+     "cat",
+     "bear",
+     "rabbit"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "5": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "duck",
+     "monkey",
+     "rabbit",
+     "bear",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "duck",
+     "monkey",
+     "dog",
+     "elephant",
+     "bear"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "rabbit",
+     "cat",
+     "bear",
+     "duck",
+     "monkey"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "monkey",
+     "dog",
+     "rabbit",
+     "elephant"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "monkey",
+     "cat",
+     "elephant",
+     "rabbit",
+     "dog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "6": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "elephant",
+     "monkey",
+     "bear",
+     "cat"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "frog",
+     "duck",
+     "monkey",
+     "rabbit"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "dog",
+     "rabbit",
+     "bear",
+     "cat"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "rabbit",
+     "cat",
+     "duck",
+     "bear"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "dog",
+     "duck",
+     "rabbit",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "7": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "cat",
+     "dog",
+     "frog",
+     "monkey"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "rabbit",
+     "cat",
+     "duck",
+     "bear",
+     "frog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "rabbit",
+     "frog",
+     "duck",
+     "monkey"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "monkey",
+     "elephant",
+     "bear",
+     "frog",
+     "duck"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "monkey",
+     "cat",
+     "bear",
+     "duck",
+     "elephant"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "8": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "dog",
+     "bear",
+     "monkey",
+     "elephant",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "rabbit",
+     "bear",
+     "frog",
+     "dog",
+     "monkey"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "cat",
+     "bear",
+     "monkey",
+     "rabbit"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "dog",
+     "frog",
+     "duck",
+     "monkey",
+     "cat"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "dog",
+     "monkey",
+     "rabbit",
+     "cat"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "9": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "bear",
+     "monkey",
+     "dog",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "duck",
+     "cat",
+     "frog",
+     "elephant",
+     "bear"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "duck",
+     "cat",
+     "frog",
+     "bear"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "rabbit",
+     "duck",
+     "dog",
+     "cat",
+     "frog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "duck",
+     "bear",
+     "elephant",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "10": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 5,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "monkey",
+     "bear",
+     "rabbit",
+     "elephant"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 4,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "elephant",
+     "dog",
+     "cat",
+     "frog"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 5,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "duck",
+     "bear",
+     "monkey",
+     "elephant"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 5,
+    "orient": "vert",
+    "line": [
+     "dog",
+     "rabbit",
+     "cat",
+     "monkey",
+     "elephant"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 4,
+    "orient": "horiz",
+    "line": [
+     "dog",
+     "monkey",
+     "rabbit",
+     "elephant",
+     "cat"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "11": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 4,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "frog",
+     "monkey",
+     "duck",
+     "dog"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 5,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "frog",
+     "elephant",
+     "dog",
+     "rabbit"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 3,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "bear",
+     "monkey",
+     "frog",
+     "cat"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 4,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "dog",
+     "rabbit",
+     "elephant",
+     "bear"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 3,
+    "orient": "horiz",
+    "line": [
+     "dog",
+     "frog",
+     "rabbit",
+     "cat",
+     "bear"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "12": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 5,
+    "orient": "horiz",
+    "line": [
+     "duck",
+     "cat",
+     "dog",
+     "frog",
+     "monkey"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 1,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "elephant",
+     "bear",
+     "dog",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 4,
+    "orient": "horiz",
+    "line": [
+     "duck",
+     "bear",
+     "rabbit",
+     "frog",
+     "cat"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "bear",
+     "duck",
+     "frog",
+     "dog"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 3,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "duck",
+     "frog",
+     "elephant",
+     "cat"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "13": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 5,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "rabbit",
+     "elephant",
+     "bear",
+     "monkey"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "bear",
+     "dog",
+     "monkey",
+     "rabbit"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 1,
+    "orient": "horiz",
+    "line": [
+     "duck",
+     "rabbit",
+     "elephant",
+     "cat",
+     "dog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "duck",
+     "monkey",
+     "elephant",
+     "frog"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 1,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "monkey",
+     "frog",
+     "elephant",
+     "dog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "14": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 2,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "frog",
+     "duck",
+     "monkey",
+     "dog"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 5,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "rabbit",
+     "frog",
+     "duck",
+     "elephant"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 1,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "rabbit",
+     "dog",
+     "cat",
+     "duck"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 4,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "rabbit",
+     "bear",
+     "duck",
+     "dog"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 1,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "cat",
+     "monkey",
+     "frog",
+     "duck"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "15": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "rabbit",
+     "bear",
+     "monkey",
+     "duck"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 5,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "rabbit",
+     "bear",
+     "dog",
+     "cat"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "rabbit",
+     "duck",
+     "bear",
+     "dog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 2,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "monkey",
+     "duck",
+     "bear",
+     "frog"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "frog",
+     "cat",
+     "elephant",
+     "dog",
+     "bear"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "16": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "frog",
+     "monkey",
+     "dog",
+     "duck"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 4,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "elephant",
+     "cat",
+     "duck",
+     "dog"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 2,
+    "orient": "vert",
+    "line": [
+     "dog",
+     "rabbit",
+     "monkey",
+     "elephant",
+     "cat"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "duck",
+     "bear",
+     "monkey",
+     "dog",
+     "frog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 5,
+    "orient": "vert",
+    "line": [
+     "dog",
+     "frog",
+     "rabbit",
+     "bear",
+     "duck"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "17": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "dog",
+     "frog",
+     "monkey",
+     "duck"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 5,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "dog",
+     "duck",
+     "rabbit",
+     "monkey"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "dog",
+     "rabbit",
+     "monkey",
+     "elephant",
+     "cat"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 1,
+    "orient": "horiz",
+    "line": [
+     "dog",
+     "elephant",
+     "monkey",
+     "frog",
+     "duck"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "monkey",
+     "cat",
+     "dog",
+     "frog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "18": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 2,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "cat",
+     "frog",
+     "monkey",
+     "rabbit"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 5,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "rabbit",
+     "elephant",
+     "dog",
+     "frog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "duck",
+     "bear",
+     "monkey",
+     "dog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "dog",
+     "duck",
+     "frog",
+     "rabbit"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 4,
+    "orient": "horiz",
+    "line": [
+     "monkey",
+     "cat",
+     "rabbit",
+     "duck",
+     "elephant"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "19": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "elephant",
+     "duck",
+     "frog",
+     "rabbit"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 4,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "frog",
+     "dog",
+     "cat",
+     "monkey"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 2,
+    "orient": "horiz",
+    "line": [
+     "dog",
+     "bear",
+     "cat",
+     "frog",
+     "duck"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "dog",
+     "duck",
+     "elephant",
+     "monkey",
+     "rabbit"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "elephant",
+     "duck",
+     "frog",
+     "rabbit"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "20": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 3,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "rabbit",
+     "bear",
+     "monkey",
+     "duck"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "bear",
+     "elephant",
+     "monkey",
+     "rabbit"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 1,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "dog",
+     "elephant",
+     "duck",
+     "bear"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "frog",
+     "bear",
+     "monkey",
+     "duck"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 2,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "duck",
+     "bear",
+     "monkey",
+     "dog"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "21": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "rabbit",
+     "cat",
+     "dog",
+     "elephant",
+     "monkey"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "frog",
+     "dog",
+     "elephant",
+     "duck"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 2,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "cat",
+     "duck",
+     "monkey",
+     "bear"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "cat",
+     "rabbit",
+     "dog",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "cat",
+     "rabbit",
+     "duck",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "22": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 5,
+    "orient": "vert",
+    "line": [
+     "frog",
+     "duck",
+     "elephant",
+     "cat",
+     "rabbit"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "rabbit",
+     "bear",
+     "cat",
+     "monkey",
+     "elephant"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 1,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "cat",
+     "bear",
+     "elephant",
+     "duck"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 5,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "bear",
+     "duck",
+     "rabbit",
+     "dog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "duck",
+     "elephant",
+     "rabbit",
+     "cat",
+     "monkey"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "23": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "rabbit",
+     "monkey",
+     "elephant",
+     "frog",
+     "bear"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 4,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "frog",
+     "monkey",
+     "cat",
+     "dog"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "rabbit",
+     "monkey",
+     "bear",
+     "dog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "duck",
+     "dog",
+     "monkey",
+     "elephant",
+     "frog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "duck",
+     "rabbit",
+     "elephant",
+     "bear"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "24": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 5,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "cat",
+     "frog",
+     "elephant",
+     "dog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 2,
+    "orient": "horiz",
+    "line": [
+     "rabbit",
+     "cat",
+     "monkey",
+     "frog",
+     "elephant"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "elephant",
+     "rabbit",
+     "frog",
+     "duck"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "duck",
+     "dog",
+     "monkey",
+     "frog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "dog",
+     "elephant",
+     "duck",
+     "bear",
+     "rabbit"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "25": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "elephant",
+     "dog",
+     "bear",
+     "rabbit"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "dog",
+     "rabbit",
+     "bear",
+     "duck",
+     "frog"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 2,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "dog",
+     "duck",
+     "elephant",
+     "frog"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "rabbit",
+     "bear",
+     "elephant",
+     "cat",
+     "duck"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "dog",
+     "monkey",
+     "rabbit",
+     "elephant",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "26": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "duck",
+     "dog",
+     "cat",
+     "frog",
+     "rabbit"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 4,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "dog",
+     "elephant",
+     "rabbit",
+     "duck"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "duck",
+     "cat",
+     "bear",
+     "dog",
+     "rabbit"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 5,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "bear",
+     "elephant",
+     "dog",
+     "cat"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "rabbit",
+     "elephant",
+     "cat",
+     "dog",
+     "duck"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "27": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 5,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "duck",
+     "frog",
+     "cat",
+     "monkey"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 2,
+    "orient": "vert",
+    "line": [
+     "frog",
+     "monkey",
+     "elephant",
+     "rabbit",
+     "bear"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 1,
+    "orient": "vert",
+    "line": [
+     "frog",
+     "monkey",
+     "elephant",
+     "dog",
+     "cat"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "rabbit",
+     "monkey",
+     "duck",
+     "frog",
+     "elephant"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 5,
+    "orient": "horiz",
+    "line": [
+     "duck",
+     "monkey",
+     "elephant",
+     "cat",
+     "bear"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "28": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "duck",
+     "frog",
+     "monkey",
+     "cat",
+     "dog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 2,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "rabbit",
+     "monkey",
+     "cat",
+     "duck"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "rabbit",
+     "dog",
+     "duck",
+     "cat"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "dog",
+     "bear",
+     "frog",
+     "rabbit",
+     "cat"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "bear",
+     "monkey",
+     "dog",
+     "rabbit",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "29": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 4,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "duck",
+     "rabbit",
+     "frog",
+     "cat"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "monkey",
+     "elephant",
+     "duck",
+     "bear",
+     "frog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 3,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "duck",
+     "cat",
+     "rabbit",
+     "frog"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "dog",
+     "monkey",
+     "elephant",
+     "bear",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "frog",
+     "rabbit",
+     "monkey",
+     "cat"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "30": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 4,
+    "orient": "vert",
+    "line": [
+     "dog",
+     "bear",
+     "rabbit",
+     "elephant",
+     "frog"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 4,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "frog",
+     "bear",
+     "duck",
+     "dog"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "bear",
+     "rabbit",
+     "elephant",
+     "cat"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 5,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "cat",
+     "rabbit",
+     "duck",
+     "bear"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "frog",
+     "dog",
+     "duck",
+     "rabbit"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "31": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 5,
+    "orient": "vert",
+    "line": [
+     "duck",
+     "frog",
+     "dog",
+     "monkey",
+     "bear"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 4,
+    "orient": "horiz",
+    "line": [
+     "rabbit",
+     "monkey",
+     "cat",
+     "duck",
+     "bear"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 4,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "rabbit",
+     "frog",
+     "bear",
+     "cat"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "monkey",
+     "rabbit",
+     "cat",
+     "dog",
+     "elephant"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "duck",
+     "elephant",
+     "cat",
+     "dog",
+     "bear"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "32": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "frog",
+     "dog",
+     "duck",
+     "rabbit"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "monkey",
+     "elephant",
+     "bear",
+     "dog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "bear",
+     "rabbit",
+     "duck",
+     "dog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 2,
+    "orient": "vert",
+    "line": [
+     "frog",
+     "elephant",
+     "cat",
+     "rabbit",
+     "duck"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "bear",
+     "cat",
+     "frog",
+     "rabbit"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "33": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "frog",
+     "cat",
+     "rabbit",
+     "duck",
+     "dog"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "duck",
+     "rabbit",
+     "dog",
+     "frog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "rabbit",
+     "bear",
+     "elephant",
+     "duck",
+     "frog"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "monkey",
+     "frog",
+     "dog",
+     "cat",
+     "duck"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "monkey",
+     "duck",
+     "rabbit",
+     "cat"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "34": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 1,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "frog",
+     "monkey",
+     "cat",
+     "bear"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 2,
+    "orient": "horiz",
+    "line": [
+     "dog",
+     "elephant",
+     "duck",
+     "frog",
+     "bear"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "frog",
+     "rabbit",
+     "cat",
+     "duck"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 4,
+    "orient": "vert",
+    "line": [
+     "frog",
+     "elephant",
+     "monkey",
+     "bear",
+     "cat"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 2,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "cat",
+     "rabbit",
+     "duck",
+     "monkey"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "35": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "monkey",
+     "rabbit",
+     "dog",
+     "elephant"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 1,
+    "orient": "horiz",
+    "line": [
+     "monkey",
+     "dog",
+     "bear",
+     "elephant",
+     "cat"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 4,
+    "orient": "vert",
+    "line": [
+     "dog",
+     "cat",
+     "frog",
+     "rabbit",
+     "monkey"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 1,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "dog",
+     "frog",
+     "bear",
+     "cat"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 4,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "bear",
+     "rabbit",
+     "frog",
+     "monkey"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "36": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "elephant",
+     "frog",
+     "duck",
+     "rabbit"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "cat",
+     "rabbit",
+     "elephant",
+     "duck"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "frog",
+     "rabbit",
+     "cat",
+     "duck"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 2,
+    "orient": "horiz",
+    "line": [
+     "rabbit",
+     "elephant",
+     "monkey",
+     "duck",
+     "bear"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "bear",
+     "frog",
+     "duck",
+     "elephant",
+     "cat"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "37": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "down",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "duck",
+     "bear",
+     "frog",
+     "rabbit"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "dog",
+     "frog",
+     "rabbit",
+     "duck",
+     "elephant"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "up",
+    "k": null,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "duck",
+     "monkey",
+     "bear",
+     "dog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 2,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "elephant",
+     "duck",
+     "rabbit",
+     "monkey"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "left",
+    "k": 4,
+    "orient": "horiz",
+    "line": [
+     "elephant",
+     "bear",
+     "monkey",
+     "frog",
+     "cat"
+    ],
+    "answerIdx": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "38": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "edge",
+    "dir": "right",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "cat",
+     "frog",
+     "elephant",
+     "bear",
+     "duck"
+    ],
+    "answerIdx": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "rabbit",
+     "dog",
+     "elephant",
+     "cat"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "up",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "dog",
+     "frog",
+     "rabbit",
+     "elephant"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "monkey",
+     "dog",
+     "frog",
+     "cat",
+     "bear"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 5,
+    "orient": "vert",
+    "line": [
+     "duck",
+     "rabbit",
+     "elephant",
+     "cat",
+     "frog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "39": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 3,
+    "orient": "vert",
+    "line": [
+     "elephant",
+     "dog",
+     "duck",
+     "frog",
+     "cat"
+    ],
+    "answerIdx": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "dog",
+     "duck",
+     "elephant",
+     "monkey",
+     "cat"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "down",
+    "k": 5,
+    "orient": "vert",
+    "line": [
+     "cat",
+     "monkey",
+     "frog",
+     "duck",
+     "dog"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "ordinal",
+    "dir": "right",
+    "k": 4,
+    "orient": "horiz",
+    "line": [
+     "frog",
+     "rabbit",
+     "cat",
+     "elephant",
+     "bear"
+    ],
+    "answerIdx": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "edge",
+    "dir": "left",
+    "k": null,
+    "orient": "horiz",
+    "line": [
+     "rabbit",
+     "cat",
+     "frog",
+     "elephant",
+     "monkey"
+    ],
+    "answerIdx": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ }
+}

@@ -1,0 +1,18 @@
+[10:11:43] A 段结果载入 39 条
+[10:12:36] [PASS] 胜线三格高亮(wincell) :: cls=cell x wincell line=[2, 4, 6]
+[10:13:32] [PASS] 胜线三格高亮(wincell) :: cls=cell x wincell line=[0, 4, 8]
+[10:14:28] [PASS] 胜线三格高亮(wincell) :: cls=cell x wincell line=[2, 4, 6]
+[10:14:31] [PASS] flat2 3 局打完 :: results=['win', 'win', 'win']
+[10:17:14] [PASS] 胜线三格高亮(wincell) :: cls=cell x wincell line=[2, 4, 6]
+[10:18:35] [PASS] 胜线三格高亮(wincell) :: cls=cell x wincell line=[1, 4, 7]
+[10:18:38] [PASS] flat3 3 局打完 :: results=['draw', 'win', 'win']
+[10:18:42] [PASS] 多玩 flat1-3 写档 :: keys=['1-0', '1-1', '1-2', '1-3', '4-0', '4-1']
+[10:18:43] [PASS] restTip 13 分钟档触发 :: text='z z\n小兔子的眼睛要休息啦\n去看看远处的大树，明天再一起玩\n好的'
+[10:18:44] [PASS] restTip.shown=13 写档 :: {'day': '2026-09-12', 'shown': 13}
+[10:18:44] [PASS] dailyMin ≥13 入账 :: dailyMin={'2026-09-12': 31}
+[10:18:45] [PASS] dayEnd=今日玩完+明日预告 :: text='今天的新关卡玩完啦\n明天：最厉害的兔子来啦\n再玩玩旧关卡\n明天见' 期望明天：最厉害的兔子来啦
+[10:18:45] [PASS] dayEnd 可关 :: 
+[10:22:21] [PASS] ch2 block-only：威胁点兔子大概率落堵点（实测采样） :: threats=4 blocked=4 results=['draw', 'draw']
+[10:22:21] 可读性度量: {"cell": [126, 110], "qtext_px": "21px", "board": [380, 335]}
+[10:22:21] [PASS] tictac pageerror=0 :: errors=[]
+[10:22:21] == tictac: 54/54 PASS, pageerror=0 ==

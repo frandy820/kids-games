@@ -1,0 +1,95 @@
+==================== sign 交通标志 ====================
+  [    0.0s] page_loaded {}
+  [    0.2s] shot {'file': 'sign_f0_teach.png'}
+  [    1.5s] tut_watch_tap_swallowed {'step_same': True, 'bump': 'bump'}
+  [    1.5s] phase {'name': '教学关 flat0（watch 演示）'}
+  [   10.7s] tut_state {'state': 'help'}
+  [   10.7s] shot {'file': 'sign_f0_turn.png'}
+  [   13.3s] phase {'name': 'flat0 题1 故意点错（听错反馈）'}
+  [   16.7s] tap {'card': 0, 'result': 'wrong', 'voice': ['<clip:sgn_wrong> + TTS:看看灯的颜色再走']}
+  [   16.8s] shot {'file': 'sign_f0_wrong.png'}
+  [   26.3s] tap {'card': 1, 'result': 'right', 'voice': ['<clip:sgn_q> + TTS:这个标志是什么意思', 'TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [   36.8s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:过马路，走斑马线', 'TTS:过马路，走斑马线']}
+  [   44.9s] phase {'name': 'flat0 题3 点错+重复点同卡'}
+  [   47.0s] tap {'card': 0, 'result': 'wrong', 'voice': ['<clip:sgn_wrong> + TTS:蓝牌子说，这样走']}
+  [   49.2s] tap {'card': 0, 'result': 'wrong', 'voice': ['<clip:sgn_wrong> + TTS:蓝牌子说，这样走']}
+  [   49.2s] repeat_wrong_tap {'second': 'wrong', 'voice2': ['<clip:sgn_wrong> + TTS:蓝牌子说，这样走']}
+  [   50.8s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:过马路，走天桥', 'TTS:过马路，走天桥']}
+  [   61.1s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:过马路，走地下通道', 'TTS:过马路，走地下通道']}
+  [   71.4s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [   79.6s] tut_done {'tut': 'none'}
+  [   96.2s] level_done {'flat': 0, 'key': '1-0', 'stars': 1, 'miss': 0}
+  [   97.2s] phase {'name': 'flat1 正常玩+点空白'}
+  [   99.7s] blank_tap {'voice': ['<clip:sgn_hint> + TTS:再看看标志的样子']}
+  [  100.5s] level_start {'flat': 1}
+  [  102.6s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:过马路，走天桥', 'TTS:过马路，走天桥']}
+  [  112.7s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:过马路，走地下通道', 'TTS:过马路，走地下通道']}
+  [  122.9s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [  133.3s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:过马路，走斑马线', 'TTS:过马路，走斑马线']}
+  [  143.8s] tap {'card': 3, 'result': 'done', 'voice': ['TTS:过马路，走天桥', 'TTS:过马路，走天桥']}
+  [  171.0s] level_done {'flat': 1, 'key': '1-1', 'stars': 3, 'miss': 0}
+  [  171.8s] level_start {'flat': 2}
+  [  173.8s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:过马路，走斑马线', 'TTS:过马路，走斑马线']}
+  [  181.9s] phase {'name': '犹豫测试：静置等 14s 方向级救援'}
+  [  199.4s] rescue_probe {'voice': ['<clip:sgn_q> + TTS:这个标志是什么意思'], 'scene_cls': 'pulse -> pulse'}
+  [  199.5s] shot {'file': 'sign_f2_rescue.png'}
+  [  201.7s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:过马路，走天桥', 'TTS:过马路，走天桥']}
+  [  212.0s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:过马路，走地下通道', 'TTS:过马路，走地下通道']}
+  [  222.5s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [  232.2s] tap {'card': 3, 'result': 'done', 'voice': ['TTS:过马路，走斑马线', 'TTS:过马路，走斑马线']}
+  [  259.4s] level_done {'flat': 2, 'key': '1-2', 'stars': 3, 'miss': 0}
+  [  260.2s] level_start {'flat': 3}
+  [  260.2s] phase {'name': '手痒连点测试'}
+  [  264.4s] rapidtap {'miss': (0, 0), 'step': 1, 'voice': ['TTS:过马路，走地下通道', 'TTS:过马路，走地下通道']}
+  [  264.4s] shot {'file': 'sign_f3_rapidtap.png'}
+  [  264.4s] phase {'name': 'flat≥3 语义反馈+10s 节流测试'}
+  [  266.2s] tap {'card': 1, 'result': 'swallowed', 'voice': []}
+  [  266.2s] shot {'file': 'sign_f3_wrongfb.png'}
+  [  275.7s] tap {'card': 1, 'result': 'wrong', 'voice': ['<clip:sgn_wrong> + TTS:看看灯的颜色再走']}
+  [  275.7s] throttle_second_wrong {'result': 'wrong', 'voice2': ['<clip:sgn_wrong> + TTS:看看灯的颜色再走']}
+  [  280.3s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [  290.6s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:过马路，走斑马线', 'TTS:过马路，走斑马线']}
+  [  301.1s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:过马路，走天桥', 'TTS:过马路，走天桥']}
+  [  311.1s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:过马路，走地下通道', 'TTS:过马路，走地下通道']}
+  [  338.3s] level_done {'flat': 3, 'key': '1-3', 'stars': 2, 'miss': 0}
+  [  339.1s] level_start {'flat': 4}
+  [  341.4s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [  351.0s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:过马路，走斑马线', 'TTS:过马路，走斑马线']}
+  [  361.5s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:过马路，走天桥', 'TTS:过马路，走天桥']}
+  [  371.4s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:过马路，走地下通道', 'TTS:过马路，走地下通道']}
+  [  381.6s] tap {'card': 1, 'result': 'done', 'voice': ['TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [  393.5s] chapterend_shown {'text': '★ | 第 1 章 完成！ | 本章星星 12 | 明天：红圈圈和蓝牌子要来啦 | 明天见'}
+  [  393.6s] shot {'file': 'sign_chapend.png'}
+  [  394.0s] level_done {'flat': 4, 'key': '1-4', 'stars': 3, 'miss': 0}
+  [  394.9s] level_start {'flat': 5}
+  [  396.7s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红八角，停下看一看', 'TTS:红八角，停下看一看']}
+  [  406.4s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红圈圈，行人不能进', 'TTS:红圈圈，行人不能进']}
+  [  416.2s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:黄三角，前方在施工', 'TTS:黄三角，前方在施工']}
+  [  426.3s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:红八角，停下看一看', 'TTS:红八角，停下看一看']}
+  [  436.4s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:蓝牌子，只往前走', 'TTS:蓝牌子，只往前走']}
+  [  448.4s] dayend_shown {'text': '今天的新关卡玩完啦 | 明天：长得像的标志要仔细看哦 | 再玩玩旧关卡 | 明天见'}
+  [  448.4s] shot {'file': 'sign_dayend.png'}
+  [  448.9s] dayend_closed_btn {'btn': '再玩玩旧关卡'}
+  [  448.9s] level_done {'flat': 5, 'key': '2-0', 'stars': 3, 'miss': 0}
+  [  450.9s] phase {'name': '家长门解锁多玩 9 关'}
+  [  451.6s] parent_gate {'quiz': '34+47'}
+  [  452.5s] shot {'file': 'sign_parentpanel.png'}
+  [  453.0s] bonus_set {'limit': 15}
+  [  453.4s] after_bonus_at {'flat': 5}
+  [  453.4s] level_start {'flat': 5}
+  [  455.7s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红八角，停下看一看', 'TTS:红八角，停下看一看']}
+  [  466.0s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红圈圈，行人不能进', 'TTS:红圈圈，行人不能进']}
+  [  476.1s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:黄三角，前方在施工', 'TTS:黄三角，前方在施工']}
+  [  486.4s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:红八角，停下看一看', 'TTS:红八角，停下看一看']}
+  [  496.3s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:蓝牌子，只往前走', 'TTS:蓝牌子，只往前走']}
+  [  525.5s] level_done {'flat': 5, 'key': '2-0', 'stars': 3, 'miss': 0}
+  [  525.5s] now_at {'flat': 6}
+!!!! sign FAILED: Page.evaluate() takes from 2 to 3 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "F:\claudecode\projects\active\kids-games\batch26\_play6yo.py", line 633, in <module>
+    run_game(gn)
+  File "F:\claudecode\projects\active\kids-games\batch26\_play6yo.py", line 617, in run_game
+    autosolve_level(s, f)
+  File "F:\claudecode\projects\active\kids-games\batch26\_play6yo.py", line 476, in autosolve_level
+    s.pg.evaluate('(h,f) => window[h].start(f)', s.h, flat)
+TypeError: Page.evaluate() takes from 2 to 3 positional arguments but 4 were given

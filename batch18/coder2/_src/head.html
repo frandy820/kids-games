@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小兔编程</title>
+<style>
+/* ================= 小兔编程 coder2（batch18）=================
+   视觉按 SPEC-BATCH18 §1（承家族暖米底）：每题=网格地图（6×6 内，草地棋盘）+
+   小兔（含朝向箭头）+胡萝卜目标+可选障碍灌木+指令卡池（前进/左转/右转/重复2次/3次）。
+   点指令卡入底部程序序列（虚线槽）；点序列内指令=退回；点「运行」小兔逐格动画执行。
+   触摸目标：指令卡/程序槽 ≥64、运行按钮 ≥96 高、底栏按钮 ≥72 高；pointerdown 即响应 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:40px;height:40px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 40px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E7D8C0;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E7D8C0}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:9px;overflow:hidden;padding:4px 10px}
+
+/* ---------- 地图（草地棋盘 60px 格；非触摸目标） ---------- */
+#map-area{flex:0 0 auto;display:flex;align-items:center;justify-content:center}
+#grid{position:relative;display:grid;grid-template-columns:repeat(var(--gw,5),60px);
+  grid-auto-rows:60px;border-radius:16px;border:3px solid #4A3B2E;overflow:hidden;
+  box-shadow:0 5px 0 rgba(74,59,46,.22);animation:map-in .4s ease both}
+@keyframes map-in{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+.gcell{position:relative;width:60px;height:60px;background:#EAF2DC;display:flex;
+  align-items:center;justify-content:center}
+.gcell.alt{background:#DFEDCB}
+.gcell.wall{background:#D5E5C2}
+.gcell.wall svg{width:44px;height:44px}
+.gcell.goal{background:#FBF0D2}
+.gcell.goal svg{width:42px;height:42px;animation:carrot-bob 2.2s ease-in-out infinite}
+@keyframes carrot-bob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-4px) rotate(4deg)}}
+.gcell.goal.win{background:#8FBF7F}
+.gcell.goal.win svg{animation:carrot-pop .55s cubic-bezier(.2,1.8,.4,1) both}
+@keyframes carrot-pop{from{transform:scale(.4)}to{transform:scale(1.25)}}
+.gcell.goal.breathe{animation:cell-breathe 1.6s ease-in-out infinite}
+@keyframes cell-breathe{0%,100%{box-shadow:inset 0 0 0 3px #E8975A;filter:brightness(1)}
+  50%{box-shadow:inset 0 0 0 5px #E8975A;filter:brightness(1.1)}}
+/* 小兔：绝对定位逐格移动；箭头在旋转坐标系上方=实际前进方向 */
+#bunny{position:absolute;left:0;top:0;width:60px;height:60px;z-index:5;pointer-events:none;
+  transition:transform .36s ease}
+#bunny-rot{width:100%;height:100%;position:relative;transition:transform .26s ease;
+  display:flex;align-items:center;justify-content:center}
+#bunny-rot .bunny-body{width:46px;height:46px}
+#bunny-rot .bunny-body.bump{animation:body-bump .43s ease}
+@keyframes body-bump{0%,100%{transform:scale(1)}30%{transform:scale(1.18) rotate(-6deg)}
+  60%{transform:scale(.94) rotate(5deg)}}
+#bunny .dir-arrow{position:absolute;top:0;left:50%;transform:translateX(-50%);width:0;height:0;
+  border-left:7px solid transparent;border-right:7px solid transparent;
+  border-bottom:11px solid #E8975A;filter:drop-shadow(0 1px 1px rgba(74,59,46,.45))}
+
+/* ---------- 指令卡池 ---------- */
+#pool-area{flex:1 1 auto;min-height:130px;width:100%;max-width:1120px;display:flex;
+  flex-direction:column;justify-content:center;gap:6px}
+#card-pool{display:flex;flex-wrap:wrap;justify-content:center;align-content:center;
+  gap:12px 14px;min-height:84px;padding:8px 10px;border-radius:20px;
+  background:#F6ECD9;border:2.5px dashed #D9C5A6}
+/* 指令卡：暖色积木卡（rep 块青蓝系区分）；点后 .gone（入程序）；救援/帮 breathe、pulse 三连 */
+.card{position:relative;width:76px;height:76px;padding:2px;border-radius:16px;
+  border:2.5px solid #4A3B2E;box-shadow:0 4px 0 rgba(74,59,46,.28);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+  transition:transform .15s;animation:card-in .4s cubic-bezier(.2,1.5,.4,1) both}
+.card:nth-child(2n){animation-delay:.06s}.card:nth-child(3n){animation-delay:.12s}
+@keyframes card-in{from{transform:scale(0) rotate(-14deg)}to{transform:scale(1) rotate(0)}}
+.card:active{transform:translateY(3px)}
+.card .ci{width:30px;height:30px}
+.card .ci svg{width:30px;height:30px}
+.card.t-rep2 .ci svg,.card.t-rep3 .ci svg{width:28px;height:28px}
+.card .ct{font-size:13px;font-weight:800;line-height:1.15;color:#4A3B2E}
+.card.t-rep2,.card.t-rep3{border-color:#3E6E8E;box-shadow:0 4px 0 rgba(62,110,142,.35)}
+.card.gone{visibility:hidden;pointer-events:none}
+.card.breathe{animation:card-breathe 1.6s ease-in-out infinite}
+@keyframes card-breathe{0%,100%{transform:scale(1);box-shadow:0 4px 0 rgba(74,59,46,.28)}
+  50%{transform:scale(1.12);box-shadow:0 4px 14px rgba(232,151,90,.85)}}
+.card.pulse{animation:card-pulse .5s ease 3}
+@keyframes card-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.22) rotate(6deg)}}
+
+/* ---------- 程序序列条 + 运行按钮 ---------- */
+#prog-wrap{flex:0 0 auto;width:100%;max-width:1120px;display:flex;flex-direction:column;
+  align-items:center;gap:5px;padding:0 8px}
+#tip{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:#8A7B6C}
+#tip .dot{width:10px;height:10px;border-radius:50%;background:#E8975A;flex:0 0 10px}
+#prog-row{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:nowrap;
+  min-height:104px;padding:2px 6px}
+#prog-bar{display:flex;align-items:center;gap:7px;flex:0 0 auto;
+  padding:6px 9px;border-radius:18px;background:#F6ECD9;border:2.5px dashed #D9C5A6}
+/* 程序槽：虚线空槽（序号）→已排 mini 指令卡（可点退回） */
+.pslot{width:64px;height:64px;padding:1px;border-radius:14px;background:#FBF8EF;
+  border:2.5px dashed #C9A87C;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:0;transition:transform .15s}
+.pslot .num{font-size:22px;font-weight:800;color:#D9C5A6}
+.pslot.full{border-style:solid;border-color:#4A3B2E;box-shadow:0 3px 0 rgba(74,59,46,.25);
+  animation:slot-in .3s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes slot-in{from{transform:scale(.3)}to{transform:scale(1)}}
+.pslot.full:active{transform:translateY(3px)}
+.pslot .ci{width:24px;height:24px}
+.pslot .ci svg{width:24px;height:24px}
+.pslot .ct{font-size:11px;font-weight:800;line-height:1.1;color:#4A3B2E}
+.pslot.full.t-rep2,.pslot.full.t-rep3{border-color:#3E6E8E}
+/* 循环作用域分组（审查 M2）：rep 卡与其后 2 位槽=一个重复组，虚线框可视化「重复哪几张」
+   （槽保持 64px 不缩——§0 触摸门 ≥64） */
+.pgroup{display:flex;align-items:center;gap:6px;padding:3px 4px;border-radius:18px;
+  border:2.5px dashed #3E6E8E;background:rgba(62,110,142,.10)}
+.pslot.breathe{animation:card-breathe 1.6s ease-in-out infinite}
+#run-btn{min-width:132px;min-height:96px;padding:0 26px;border-radius:26px;background:#8FBF7F;
+  border:3px solid #4A3B2E;box-shadow:0 6px 0 #6FA063;color:#FFF9EE;font-size:32px;font-weight:800;
+  letter-spacing:.1em;display:flex;align-items:center;justify-content:center;gap:10px;
+  transition:transform .15s,box-shadow .15s;animation:card-in .38s cubic-bezier(.2,1.5,.4,1) both}
+#run-btn:active{transform:translateY(3px);box-shadow:0 3px 0 #6FA063}
+#run-btn svg{width:40px;height:40px}
+#run-btn.nudge{animation:run-nudge .4s ease}
+@keyframes run-nudge{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}
+  60%{transform:translateX(6px)}}
+#run-btn.pulse{animation:card-pulse .5s ease 3}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 read/spellen） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFFAF0;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：指令卡仍 ≥64；地图格 60 不变（非触摸目标） */
+@media (orientation:portrait){
+  .card{width:66px;height:66px}
+  .card .ct{font-size:12px}
+  .card .ci{width:26px;height:26px}
+  .card .ci svg{width:26px;height:26px}
+  .pslot{width:64px;height:64px}
+  #run-btn{min-width:118px;font-size:27px;padding:0 18px}
+  #prog-row{gap:9px}
+  #pool-area{min-height:118px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="小兔编程">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="map-area">
+      <div id="grid" aria-label="地图，小兔要去胡萝卜那里"></div>
+    </div>
+    <div id="pool-area">
+      <div id="card-pool" aria-label="指令卡池"></div>
+    </div>
+    <div id="prog-wrap">
+      <div id="tip" aria-label="玩法提示"><span class="dot"></span><span>点指令卡排程序，多余的卡可以不放，点「运行」出发</span></div>
+      <div id="prog-row">
+        <div id="prog-bar" aria-label="程序序列"></div>
+        <button id="run-btn" aria-label="运行"></button>
+      </div>
+    </div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="读一读程序"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

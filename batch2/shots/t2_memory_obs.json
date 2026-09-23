@@ -1,0 +1,699 @@
+{
+ "meta": {
+  "game": "memory",
+  "started": "2026-09-06T09:14:45.648401",
+  "viewport": "800x1180 headless",
+  "finished": "2026-09-06T09:17:26.524727",
+  "duration_s": 161.7
+ },
+ "timeline": [
+  {
+   "t": 1.3,
+   "msg": "MEM 就绪"
+  },
+  {
+   "t": 1.3,
+   "msg": "关卡1-0开局",
+   "data": {
+    "level": {
+     "flat": 0,
+     "ch": 1,
+     "lv": 0,
+     "grid": {
+      "r": 2,
+      "c": 3
+     },
+     "pairs": 3,
+     "misses": 0,
+     "matched": 0
+    },
+    "geometry": {
+     "cards": 6,
+     "cardW": 168,
+     "cardH": 168
+    }
+   }
+  },
+  {
+   "t": 3.0,
+   "msg": "教学\"看\"中途点牌2→是否被吞",
+   "data": {
+    "after": {
+     "tut": "watch",
+     "cards": [
+      [
+       0,
+       "gone"
+      ],
+      [
+       1,
+       "gone"
+      ],
+      [
+       2,
+       "down"
+      ],
+      [
+       3,
+       "down"
+      ],
+      [
+       4,
+       "down"
+      ],
+      [
+       5,
+       "down"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "t": 6.7,
+   "msg": "教学\"帮\"幽灵手指",
+   "data": {
+    "show": true,
+    "over": 0,
+    "pulse": [
+     0
+    ]
+   }
+  },
+  {
+   "t": 12.4,
+   "msg": "翻开牌0后手指应转向其配对1",
+   "data": {
+    "show": true,
+    "over": 1,
+    "pulse": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "t": 17.1,
+   "msg": "教学首次配对完成→独",
+   "data": {
+    "tut": "solo",
+    "misses": 0,
+    "tray_on": 1,
+    "states": [
+     "gone",
+     "gone",
+     "down",
+     "down",
+     "down",
+     "down"
+    ]
+   }
+  },
+  {
+   "t": 24.3,
+   "msg": "失误判定锁定期乱点两张→应被吞",
+   "data": {
+    "c3_state_after": "down"
+   }
+  },
+  {
+   "t": 25.6,
+   "msg": "失误盖回完成",
+   "data": {
+    "misses": 1
+   }
+  },
+  {
+   "t": 35.6,
+   "msg": "1-0过关+演出期间乱点",
+   "data": {
+    "stars": 3,
+    "text": "真棒！",
+    "celebrate_still_after_clicks": true
+   }
+  },
+  {
+   "t": 37.4,
+   "msg": "进入1-1",
+   "data": {
+    "flat": 1,
+    "ch": 1,
+    "lv": 1,
+    "grid": {
+     "r": 2,
+     "c": 3
+    },
+    "pairs": 3,
+    "misses": 0,
+    "matched": 0
+   }
+  },
+  {
+   "t": 57.7,
+   "msg": "1-1三连失误→支架是否触发",
+   "data": {
+    "misses": 3,
+    "ghost": {
+     "show": true,
+     "over": 0,
+     "pulse": [
+      0
+     ]
+    },
+    "voice_mem_hint": [
+     {
+      "t": 55831,
+      "api": "voice",
+      "key": "mem_hint",
+      "text": "找到一样的两张"
+     }
+    ]
+   }
+  },
+  {
+   "t": 63.8,
+   "msg": "跟支架完成配对",
+   "data": {
+    "misses": 3,
+    "tray_on": 1
+   }
+  },
+  {
+   "t": 63.8,
+   "msg": "开始20秒不动（孩子卡住）"
+  },
+  {
+   "t": 84.8,
+   "msg": "卡住21秒后的帮扶",
+   "data": {
+    "voice": [
+     {
+      "t": 82018,
+      "api": "voice",
+      "key": "mem_hint",
+      "text": "找到一样的两张"
+     }
+    ],
+    "ghost_show": false
+   }
+  },
+  {
+   "t": 94.8,
+   "msg": "1-1过关",
+   "data": {
+    "stars": 3,
+    "misses": 3
+   }
+  },
+  {
+   "t": 96.5,
+   "msg": "进入1-2",
+   "data": {
+    "flat": 2,
+    "ch": 1,
+    "lv": 2,
+    "grid": {
+     "r": 2,
+     "c": 4
+    },
+    "pairs": 4,
+    "misses": 0,
+    "matched": 0
+   }
+  },
+  {
+   "t": 122.2,
+   "msg": "1-2两轮全错后",
+   "data": {
+    "misses": 4
+   }
+  },
+  {
+   "t": 141.2,
+   "msg": "1-2两轮全错后",
+   "data": {
+    "misses": 8
+   }
+  },
+  {
+   "t": 159.4,
+   "msg": "1-2过关（高失误）",
+   "data": {
+    "stars": 2,
+    "misses": 8
+   }
+  },
+  {
+   "t": 161.4,
+   "msg": "存档关卡记录",
+   "data": {
+    "1-0": {
+     "stars": 3,
+     "plays": 1
+    },
+    "1-1": {
+     "stars": 3,
+     "plays": 1
+    },
+    "1-2": {
+     "stars": 2,
+     "plays": 1
+    }
+   }
+  }
+ ],
+ "errors": [],
+ "vlog": [
+  {
+   "t": 49,
+   "api": "tts",
+   "text": "看！翻一翻，找到一样的两张"
+  },
+  {
+   "t": 758,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 1872,
+   "api": "sfx",
+   "key": "coin"
+  },
+  {
+   "t": 2725,
+   "api": "voice",
+   "key": "mem_tut_turn",
+   "text": "现在你来试一试"
+  },
+  {
+   "t": 9783,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 14682,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 15111,
+   "api": "sfx",
+   "key": "coin"
+  },
+  {
+   "t": 15111,
+   "api": "sfx",
+   "key": "ok"
+  },
+  {
+   "t": 20530,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 22563,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 23464,
+   "api": "sfx",
+   "key": "fail"
+  },
+  {
+   "t": 27014,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 28229,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 28664,
+   "api": "sfx",
+   "key": "coin"
+  },
+  {
+   "t": 29664,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 33247,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 33678,
+   "api": "sfx",
+   "key": "coin"
+  },
+  {
+   "t": 33679,
+   "api": "sfx",
+   "key": "win"
+  },
+  {
+   "t": 36304,
+   "api": "voice",
+   "key": "mem_hint",
+   "text": "找到一样的两张"
+  },
+  {
+   "t": 44165,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 47164,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 48080,
+   "api": "sfx",
+   "key": "fail"
+  },
+  {
+   "t": 48798,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 50947,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 51862,
+   "api": "sfx",
+   "key": "fail"
+  },
+  {
+   "t": 52565,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 54929,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 55830,
+   "api": "sfx",
+   "key": "fail"
+  },
+  {
+   "t": 55831,
+   "api": "voice",
+   "key": "mem_hint",
+   "text": "找到一样的两张"
+  },
+  {
+   "t": 60048,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 61498,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 61925,
+   "api": "sfx",
+   "key": "coin"
+  },
+  {
+   "t": 82018,
+   "api": "voice",
+   "key": "mem_hint",
+   "text": "找到一样的两张"
+  },
+  {
+   "t": 83746,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 86829,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 87263,
+   "api": "sfx",
+   "key": "coin"
+  },
+  {
+   "t": 88264,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 92263,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 92695,
+   "api": "sfx",
+   "key": "coin"
+  },
+  {
+   "t": 92695,
+   "api": "sfx",
+   "key": "win"
+  },
+  {
+   "t": 95336,
+   "api": "voice",
+   "key": "mem_hint",
+   "text": "找到一样的两张"
+  },
+  {
+   "t": 102996,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 106216,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 107125,
+   "api": "sfx",
+   "key": "fail"
+  },
+  {
+   "t": 107845,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 110861,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 111766,
+   "api": "sfx",
+   "key": "fail"
+  },
+  {
+   "t": 112477,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 114779,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 115692,
+   "api": "sfx",
+   "key": "fail"
+  },
+  {
+   "t": 115693,
+   "api": "voice",
+   "key": "mem_hint",
+   "text": "找到一样的两张"
+  },
+  {
+   "t": 116413,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 119448,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 120357,
+   "api": "sfx",
+   "key": "fail"
+  },
+  {
+   "t": 120358,
+   "api": "voice",
+   "key": "mem_hint",
+   "text": "找到一样的两张"
+  },
+  {
+   "t": 121096,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 123464,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 124380,
+   "api": "sfx",
+   "key": "fail"
+  },
+  {
+   "t": 124381,
+   "api": "voice",
+   "key": "mem_hint",
+   "text": "找到一样的两张"
+  },
+  {
+   "t": 125098,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 129096,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 130006,
+   "api": "sfx",
+   "key": "fail"
+  },
+  {
+   "t": 130007,
+   "api": "voice",
+   "key": "mem_hint",
+   "text": "找到一样的两张"
+  },
+  {
+   "t": 130730,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 132912,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 133821,
+   "api": "sfx",
+   "key": "fail"
+  },
+  {
+   "t": 133822,
+   "api": "voice",
+   "key": "mem_hint",
+   "text": "找到一样的两张"
+  },
+  {
+   "t": 134548,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 138478,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 139385,
+   "api": "sfx",
+   "key": "fail"
+  },
+  {
+   "t": 139386,
+   "api": "voice",
+   "key": "mem_hint",
+   "text": "找到一样的两张"
+  },
+  {
+   "t": 140113,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 143978,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 144409,
+   "api": "sfx",
+   "key": "coin"
+  },
+  {
+   "t": 145396,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 148128,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 148553,
+   "api": "sfx",
+   "key": "coin"
+  },
+  {
+   "t": 149544,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 152346,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 152772,
+   "api": "sfx",
+   "key": "coin"
+  },
+  {
+   "t": 153778,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 156827,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 157249,
+   "api": "sfx",
+   "key": "coin"
+  },
+  {
+   "t": 157249,
+   "api": "sfx",
+   "key": "win"
+  }
+ ]
+}

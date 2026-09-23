@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>表情温度计</title>
+<style>
+/* ================= etm 表情温度计（batch39 / r49 难度改造）=================
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色 #E8975A、暖棕描边 #4A3B2E。
+   玩法 = 情绪粒度训练（SPEC-BATCH39 §0.95/§2 + SPEC-R49）：ch1 命名族直白——
+   情境插画+题面情境句（say 非队列链，零文字依赖）+4 情绪脸谱（原型分离：
+   嘴角/眉毛/眼泪/汗滴）；ch2 间接情境（r49：线索推理，插画只画事件不泄答案）；
+   ch3 分级族五档（r49：生气情境+立式温度计水银柱 1-5 档=强度可视化核心隐喻
+   +5 档位卡，脸谱强度化+横温度计小样）；ch4 混合情绪族（r49：双拼脸=左半 A
+   情绪+右半 B 情绪，4 组合卡）。
+   指对=正确项放大 .good+确认链 etm_right（+level 族水银柱升位演出 data-lv1-5）；
+   指错=项摇头+错链（etm_wrong+etm_hint）+错链播毕重播情境句（不泄答案）。
+   SEL：脸谱/组合脸候选 ≥96×96（实测 ~108×104）；档位格高 ≥64px；候选 ≤5。
+   脸谱图形原型互异（不靠颜色歧视）。overflowX 恒 0。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:38px;height:38px;border-radius:11px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 38px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：情境区（插画卡+温度计+情境句） ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:6px;overflow:hidden;padding:6px 12px}
+#scene{position:relative;flex:1 1 auto;width:100%;max-width:640px;min-height:210px;display:flex;
+  flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  background:linear-gradient(180deg,#FDF3E3 0%,#FAE9CF 100%);
+  border:3px solid #E5CDA6;border-radius:26px;overflow:hidden;
+  box-shadow:inset 0 0 0 5px rgba(255,249,238,.55);padding:8px 12px}
+#scene .ground{position:absolute;left:8%;right:8%;bottom:14px;height:14px;border-radius:50%;
+  background:rgba(201,179,138,.3)}
+
+/* 情境横排：插画卡（事件性简笔——不画表情不泄答案）+温度计（level 族显示） */
+#scene-zone{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:14px;z-index:2}
+#scene-card{width:158px;height:120px;background:#FFF9EE;border:3px solid #4A3B2E;
+  border-radius:18px;box-shadow:0 5px 0 #D8C9B4;padding:7px}
+#scene-card svg{width:100%;height:100%}
+#scene-card.in{animation:sc-in .45s ease}
+@keyframes sc-in{0%{transform:translateY(-16px) scale(.88);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+
+/* ---------- 立式温度计（level 族强度隐喻核心；face/mix 族隐藏）
+   .t-tube[data-lv]：0=归零低位 / 1-5=五档（r49：水银柱 14%/34%/54%/74%/93%
+   升位——相邻档 Δ=20/20/20/19%，横版 20.2/19.2px·竖版 17.4/16.5px 均 ≥可辨阈值
+   15px；顶档 93% 留头部圆角区防刻度裁切；升起 transition .9s） ---------- */
+#thermo{display:none;flex:0 0 auto;flex-direction:column;align-items:center;gap:2px;height:150px}
+#thermo.show{display:flex}
+#thermo .t-tube{position:relative;width:34px;height:108px;border:3.5px solid #4A3B2E;border-radius:17px;
+  background:linear-gradient(180deg,#FFF9EE 0%,#FDF3E3 100%);overflow:hidden}
+#thermo .t-mercury{position:absolute;left:3.5px;right:3.5px;bottom:3.5px;height:7%;
+  background:linear-gradient(180deg,#E8836A 0%,#D94F3D 100%);border-radius:8px;
+  transition:height .9s cubic-bezier(.34,1.3,.64,1)}
+#thermo .t-tube[data-lv="1"] .t-mercury{height:14%}
+#thermo .t-tube[data-lv="2"] .t-mercury{height:34%}
+#thermo .t-tube[data-lv="3"] .t-mercury{height:54%}
+#thermo .t-tube[data-lv="4"] .t-mercury{height:74%}
+#thermo .t-tube[data-lv="5"] .t-mercury{height:93%}
+#thermo .t-tick{position:absolute;right:1px;width:11px;height:3.5px;background:#C9A87C;border-radius:2px}
+#thermo .t-tick.tk1{bottom:14%}#thermo .t-tick.tk2{bottom:34%}#thermo .t-tick.tk3{bottom:54%}
+#thermo .t-tick.tk4{bottom:74%}#thermo .t-tick.tk5{bottom:93%}
+#thermo .t-bulb{width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#F0938A 0%,#D94F3D 62%);
+  border:3.5px solid #4A3B2E;margin-top:-9px}
+#thermo .t-heat{animation:t-heat 2.6s ease-in-out infinite}
+@keyframes t-heat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+
+/* 情境句（题面 TTS 同源文字——识字辅助非依赖） */
+#hint-line{font-size:17px;font-weight:700;color:#6B5B4A;letter-spacing:1.5px;max-width:440px;
+  text-align:center;line-height:1.35;z-index:2}
+#hint-line.repop{animation:ht-re .6s ease}
+@keyframes ht-re{0%,100%{transform:scale(1);color:#6B5B4A}45%{transform:scale(1.08);color:#E8975A}}
+
+/* ---------- 候选行：脸谱/档位卡（face 4/level 5；触摸目标 ≥96×96，竖屏 5 项 2 列——r49 m3 勘正） ---------- */
+#picks{flex:0 0 auto;display:flex;justify-content:center;align-items:stretch;gap:10px;
+  width:100%;max-width:620px;position:relative;z-index:2}
+#picks.wig{animation:pk-wig .5s ease}
+@keyframes pk-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-1.4deg)}75%{transform:rotate(1.4deg)}}
+#picks.bump{animation:pk-bump .22s ease}
+@keyframes pk-bump{0%,100%{transform:scale(1)}45%{transform:scale(.97)}}
+.pick{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+  flex:1 1 0;min-width:96px;min-height:104px;padding:7px 4px 5px;border-radius:16px;gap:2px;
+  background:#FFF9EE;border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  transition:transform .15s}
+.pick:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+.pick .art{width:66px;height:66px;flex:0 0 auto}
+.pick .art svg{width:100%;height:100%}
+.pick .word{font-size:15px;font-weight:800;color:#4A3B2E;letter-spacing:1px}
+/* 指对：正确项放大跳动+暖光（演出层锚 .good——契约 M） */
+.pick.good{animation:pk-good 1s ease;box-shadow:0 5px 0 #D8C9B4,0 0 18px rgba(143,191,127,.9);
+  border-color:#8FBF7F}
+@keyframes pk-good{0%{transform:scale(1)}40%{transform:scale(1.14) translateY(-5px)}70%{transform:scale(.98)}100%{transform:scale(1)}}
+/* 指错：项摇头弹回（不指正确项本体——不泄答案） */
+.pick.miss{animation:pk-miss .5s ease}
+@keyframes pk-miss{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px) rotate(-3deg)}75%{transform:translateX(8px) rotate(3deg)}}
+/* 救援答案级：正确项高亮呼吸 */
+.pick.breathe{animation:pk-hint 1.2s ease-in-out infinite}
+@keyframes pk-hint{0%,100%{box-shadow:0 5px 0 #D8C9B4}50%{box-shadow:0 5px 0 #D8C9B4,0 0 16px rgba(232,151,90,.95)}}
+/* 出场弹入 */
+.pick.pop{animation:pk-pop .45s ease backwards}
+@keyframes pk-pop{0%{transform:translateY(26px) scale(.86);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+
+#q-text{flex:0 0 auto;font-size:15px;letter-spacing:2px;color:#8A7B6C;padding:0 0 6px}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（fixed 层，教学演示/帮共用；照家族形态） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:opacity .4s;transform:translate(-50%,-88%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-88%)}50%{transform:translate(-50%,-74%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：舞台收紧+候选 2 列网格（face/mix 4 张 2×2；level 5 张
+   r49 改 2 列×3 行——单列 5 张 84px<96 触目标不达标，2 列 223px 达标） */
+@media (orientation:portrait){
+  #scene{min-height:186px;max-width:470px;gap:5px;padding:8px 8px}
+  #scene-zone{gap:10px}
+  #scene-card{width:136px;height:102px}
+  #thermo{height:132px}
+  #thermo .t-tube{height:94px}
+  #hint-line{font-size:15px;max-width:330px}
+  #picks{gap:8px;max-width:460px}
+  #picks[data-n="4"]{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  #picks[data-n="5"]{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .pick{min-width:96px;min-height:98px}
+  .pick .art{width:58px;height:58px}
+  .pick .word{font-size:14px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="表情温度计">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="scene" aria-label="听一听发生了什么，指一指心情">
+      <div class="ground" aria-hidden="true"></div>
+      <div id="scene-zone" aria-hidden="true">
+        <div id="scene-card"></div>
+        <div id="thermo" aria-hidden="true">
+          <div class="t-tube t-heat" data-lv="0">
+            <div class="t-mercury"></div>
+            <i class="t-tick tk1"></i><i class="t-tick tk2"></i><i class="t-tick tk3"></i><i class="t-tick tk4"></i><i class="t-tick tk5"></i>
+          </div>
+          <div class="t-bulb"></div>
+        </div>
+      </div>
+      <div id="hint-line" aria-hidden="true"></div>
+    </div>
+    <div id="picks" aria-label="候选项：点一个心情脸谱或档位"></div>
+    <div id="q-text" aria-hidden="true"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

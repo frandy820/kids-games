@@ -1,0 +1,16 @@
+[   5.80s] watch→help 4.5s（复验）
+[   5.91s]   tap 题1 正确(circle) @(599,413)
+[   7.52s]   题1 后 step=1 done=False miss=0
+[   7.56s]   tap 题2 正确(square) @(743,436)
+[   9.17s]   题2 后 step=2 done=False miss=0
+[   9.18s]   tap 题3 正确(triangle) @(305,435)
+[  10.79s]   题3 后 step=3 done=False miss=0
+[  10.82s]   tap 题4 正确(circle) @(718,410)
+[  12.43s]   题4 后 step=4 done=False miss=0
+[  12.46s]   tap 题5 正确(square) @(596,408)
+[  14.06s]   题5 后 step=5 done=True miss=0
+[  14.58s]   celebrate 层=True
+[  14.80s]   shot sr-06-通关celebrate.png（覆盖主跑废片）
+[  18.31s] 写档 levels={"1-0": {"stars": 3, "plays": 1}}
+[  18.31s] 通关后当前关 flat=1（proceed→flat1）整关用时 12.5s
+DONE sr-clear OK levels[1-0]={"stars": 3, "plays": 1}

@@ -1,0 +1,64 @@
+[13.4s] 教学 watch 完成，tut=help
+[13.4s] 题0 rain need=['raincoat', 'rboots']
+[13.5s]   题0 选中片2 @(462,428) 命中元素=BUTTON.stk pop
+[13.9s]   题0 贴上 @(741,315) 命中元素=circle.[object SVGAnimate
+[15.1s]     选中后 sel=['2'] fly=0 | 贴上后 placed=['rboots'] miss=0 step=0 fly=0
+[15.1s]   题0 选中片3 @(563,442) 命中元素=BUTTON.stk pop
+[15.5s]   题0 贴上 @(754,326) 命中元素=circle.[object SVGAnimate
+[16.8s]     选中后 sel=['3'] fly=0 | 贴上后 placed=[] miss=0 step=1 fly=0
+[16.8s]   题0 选中片2 @(475,428) 命中元素=BUTTON.stk pop held
+[17.2s]   题0 贴上 @(740,326) 命中元素=circle.[object SVGAnimate
+[18.4s]     选中后 sel=['3'] fly=0 | 贴上后 placed=[] miss=0 step=1 fly=0
+[18.5s]   题0 选中片2 @(461,427) 命中元素=BUTTON.stk pop held
+[18.9s]   题0 贴上 @(740,314) 命中元素=circle.[object SVGAnimate
+[20.1s]     选中后 sel=['3'] fly=0 | 贴上后 placed=[] miss=0 step=1 fly=0
+[20.1s] 题1 winter need=['coat', 'scarf']
+[20.1s]   题1 选中片2 @(462,428) 命中元素=BUTTON.stk pop
+[20.6s]   题1 贴上 @(740,328) 命中元素=circle.[object SVGAnimate
+[21.8s]     选中后 sel=['2'] fly=0 | 贴上后 placed=['scarf'] miss=0 step=1 fly=0
+[21.8s]   题1 选中片4 @(651,428) 命中元素=BUTTON.stk pop
+[22.2s]   题1 贴上 @(741,313) 命中元素=circle.[object SVGAnimate
+[23.5s]     选中后 sel=['4'] fly=0 | 贴上后 placed=[] miss=0 step=2 fly=0
+[23.5s]   题1 选中片4 @(637,435) 命中元素=BUTTON.stk pop sel held
+[23.9s]   题1 贴上 @(753,326) 命中元素=circle.[object SVGAnimate
+[25.1s]     选中后 sel=['4'] fly=0 | 贴上后 placed=[] miss=0 step=2 fly=0
+[25.2s]   题1 选中片4 @(650,433) 命中元素=BUTTON.stk pop sel held
+[25.5s]   题1 贴上 @(753,327) 命中元素=circle.[object SVGAnimate
+[26.8s]     选中后 sel=['4'] fly=0 | 贴上后 placed=[] miss=0 step=2 fly=0
+[26.8s] 题2 rain need=['raincoat', 'rboots']
+[26.8s]   题2 选中片4 @(637,427) 命中元素=BUTTON.stk pop
+[27.2s]   题2 贴上 @(741,315) 命中元素=circle.[object SVGAnimate
+[28.5s]     选中后 sel=['4'] fly=0 | 贴上后 placed=['rboots'] miss=0 step=2 fly=0
+[28.5s]   题2 选中片5 @(725,442) 命中元素=BUTTON.stk pop
+[28.9s]   题2 贴上 @(740,313) 命中元素=circle.[object SVGAnimate
+[30.2s]     选中后 sel=['5'] fly=0 | 贴上后 placed=[] miss=0 step=3 fly=0
+[30.2s]   题2 选中片0 @(299,442) 命中元素=BUTTON.stk pop
+[30.6s]   题2 贴上 @(739,328) 命中元素=circle.[object SVGAnimate
+[31.8s]     选中后 sel=['5'] fly=0 | 贴上后 placed=[] miss=0 step=3 fly=0
+[31.9s]   题2 选中片0 @(298,428) 命中元素=BUTTON.stk pop
+[32.3s]   题2 贴上 @(752,326) 命中元素=circle.[object SVGAnimate
+[33.6s]     选中后 sel=['5'] fly=0 | 贴上后 placed=[] miss=0 step=3 fly=0
+[33.6s] 题3 winter need=['gloves', 'scarf']
+[33.6s]   题3 选中片0 @(299,427) 命中元素=BUTTON.stk pop
+[34.0s]   题3 贴上 @(740,314) 命中元素=circle.[object SVGAnimate
+[35.3s]     选中后 sel=['0'] fly=0 | 贴上后 placed=['scarf'] miss=0 step=3 fly=0
+[35.3s]   题3 选中片4 @(651,428) 命中元素=BUTTON.stk pop
+[35.7s]   题3 贴上 @(740,314) 命中元素=circle.[object SVGAnimate
+[37.0s]     选中后 sel=['4'] fly=0 | 贴上后 placed=[] miss=0 step=4 fly=0
+[37.0s]   题3 选中片1 @(387,428) 命中元素=BUTTON.stk pop
+[37.4s]   题3 贴上 @(755,328) 命中元素=circle.[object SVGAnimate
+[38.7s]     选中后 sel=['4'] fly=0 | 贴上后 placed=[] miss=0 step=4 fly=0
+[38.7s]   题3 选中片1 @(387,441) 命中元素=BUTTON.stk pop
+[39.1s]   题3 贴上 @(739,329) 命中元素=circle.[object SVGAnimate
+[40.4s]     选中后 sel=['4'] fly=0 | 贴上后 placed=[] miss=0 step=4 fly=0
+[40.4s] 题4 rain need=['raincoat', 'rboots']
+[40.4s]   题4 选中片1 @(373,427) 命中元素=BUTTON.stk pop
+[40.8s]   题4 贴上 @(741,315) 命中元素=circle.[object SVGAnimate
+[42.1s]     选中后 sel=['1'] fly=0 | 贴上后 placed=['rboots'] miss=0 step=4 fly=0
+[42.1s]   题4 选中片3 @(563,428) 命中元素=BUTTON.stk pop
+[42.5s]   题4 贴上 @(754,327) 命中元素=circle.[object SVGAnimate
+[43.7s]     选中后 sel=['3'] fly=0 | 贴上后 placed=None miss=None step=5 fly=0
+[43.7s] 关完成 done=True step=5
+[44.5s] celebrate=False
+[48.2s] 写档 levels={} flat=0
+DONE repro

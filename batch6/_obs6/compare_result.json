@@ -1,0 +1,442 @@
+{
+ "game": "compare",
+ "pageerrors": [],
+ "levels": [
+  {
+   "flat": 0,
+   "ch": 1,
+   "dch": 1,
+   "lv": 0,
+   "quizzes": [
+    null,
+    {
+     "mode": "count",
+     "left": {
+      "n": 4,
+      "kind": "pear",
+      "type": "items"
+     },
+     "right": {
+      "n": 2,
+      "kind": "orange",
+      "type": "items"
+     },
+     "answer": ">",
+     "diff": 2
+    },
+    {
+     "mode": "count",
+     "left": {
+      "n": 1,
+      "kind": "orange",
+      "type": "items"
+     },
+     "right": {
+      "n": 4,
+      "kind": "berry",
+      "type": "items"
+     },
+     "answer": "<",
+     "diff": -3
+    },
+    {
+     "mode": "count",
+     "left": {
+      "n": 5,
+      "kind": "apple",
+      "type": "items"
+     },
+     "right": {
+      "n": 1,
+      "kind": "orange",
+      "type": "items"
+     },
+     "answer": ">",
+     "diff": 4
+    },
+    {
+     "mode": "count",
+     "left": {
+      "n": 3,
+      "kind": "orange",
+      "type": "items"
+     },
+     "right": {
+      "n": 5,
+      "kind": "berry",
+      "type": "items"
+     },
+     "answer": "<",
+     "diff": -2
+    }
+   ],
+   "clicks": 36,
+   "retries": 0,
+   "stars": 3,
+   "events": [],
+   "tut": {
+    "watch_swallow": true,
+    "help_enter": "help",
+    "ghost_show": false,
+    "rescue_teach": {
+     "label": "flat0_help_25s",
+     "new_entries": [
+      "play(cmp_hint,数一数，比一比)"
+     ]
+    },
+    "after_first_right": "solo",
+    "ghost_hidden_after_solo": true
+   }
+  },
+  {
+   "flat": 5,
+   "ch": 2,
+   "dch": 2,
+   "lv": 0,
+   "quizzes": [
+    {
+     "mode": "count",
+     "left": {
+      "n": 8,
+      "kind": "apple",
+      "type": "items"
+     },
+     "right": {
+      "n": 9,
+      "kind": "berry",
+      "type": "items"
+     },
+     "answer": "<",
+     "diff": -1
+    },
+    {
+     "mode": "count",
+     "left": {
+      "n": 5,
+      "kind": "pear",
+      "type": "items"
+     },
+     "right": {
+      "n": 3,
+      "kind": "orange",
+      "type": "items"
+     },
+     "answer": ">",
+     "diff": 2
+    },
+    {
+     "mode": "count",
+     "left": {
+      "n": 6,
+      "kind": "apple",
+      "type": "items"
+     },
+     "right": {
+      "n": 7,
+      "kind": "orange",
+      "type": "items"
+     },
+     "answer": "<",
+     "diff": -1
+    },
+    {
+     "mode": "count",
+     "left": {
+      "n": 4,
+      "kind": "pear",
+      "type": "items"
+     },
+     "right": {
+      "n": 1,
+      "kind": "apple",
+      "type": "items"
+     },
+     "answer": ">",
+     "diff": 3
+    },
+    {
+     "mode": "count",
+     "left": {
+      "n": 7,
+      "kind": "apple",
+      "type": "items"
+     },
+     "right": {
+      "n": 7,
+      "kind": "berry",
+      "type": "items"
+     },
+     "answer": "=",
+     "diff": 0
+    }
+   ],
+   "clicks": 63,
+   "retries": 1,
+   "stars": 2,
+   "events": [
+    {
+     "ev": "mirror_first_wrong",
+     "ans": "<",
+     "picked": ">",
+     "pulse": [
+      0,
+      0
+     ],
+     "retries": 1
+    }
+   ],
+   "misc": {
+    "flat": 5,
+    "opening_voice": [
+     "AUDIO:cmp_hint",
+     "TTS:数一数，比一比"
+    ],
+    "misclick_midslot": [
+     "play(cmp_hint,数一数，比一比)"
+    ],
+    "rescue": {
+     "label": "flat5_25s",
+     "new_entries": [
+      "play(cmp_hint,数一数，比一比)"
+     ]
+    }
+   }
+  },
+  {
+   "flat": 10,
+   "ch": 3,
+   "dch": 3,
+   "lv": 0,
+   "quizzes": [
+    {
+     "mode": "mix",
+     "left": {
+      "n": 6,
+      "kind": "num",
+      "type": "num"
+     },
+     "right": {
+      "n": 7,
+      "kind": "pear",
+      "type": "items"
+     },
+     "answer": "<",
+     "diff": -1
+    },
+    {
+     "mode": "num",
+     "left": {
+      "n": 6,
+      "kind": "num",
+      "type": "num"
+     },
+     "right": {
+      "n": 6,
+      "kind": "num",
+      "type": "num"
+     },
+     "answer": "=",
+     "diff": 0
+    },
+    {
+     "mode": "num",
+     "left": {
+      "n": 10,
+      "kind": "num",
+      "type": "num"
+     },
+     "right": {
+      "n": 9,
+      "kind": "num",
+      "type": "num"
+     },
+     "answer": ">",
+     "diff": 1
+    },
+    {
+     "mode": "mix",
+     "left": {
+      "n": 9,
+      "kind": "berry",
+      "type": "items"
+     },
+     "right": {
+      "n": 8,
+      "kind": "num",
+      "type": "num"
+     },
+     "answer": ">",
+     "diff": 1
+    },
+    {
+     "mode": "count",
+     "left": {
+      "n": 5,
+      "kind": "orange",
+      "type": "items"
+     },
+     "right": {
+      "n": 6,
+      "kind": "berry",
+      "type": "items"
+     },
+     "answer": "<",
+     "diff": -1
+    }
+   ],
+   "clicks": 39,
+   "retries": 2,
+   "stars": 2,
+   "events": [
+    {
+     "ev": "wrong_1",
+     "picked": ">",
+     "pulse_after": 0,
+     "retries": 1
+    },
+    {
+     "ev": "wrong_2",
+     "picked": "=",
+     "pulse_after": 1,
+     "retries": 2
+    }
+   ],
+   "misc": {
+    "flat": 10,
+    "opening_voice": [
+     "AUDIO:cmp_hint",
+     "TTS:数一数，比一比"
+    ],
+    "rescue": {
+     "label": "flat10_25s",
+     "new_entries": [
+      "play(cmp_hint,数一数，比一比)"
+     ]
+    }
+   }
+  },
+  {
+   "flat": 15,
+   "ch": 4,
+   "dch": 4,
+   "lv": 0,
+   "quizzes": [
+    {
+     "mode": "mix",
+     "left": {
+      "n": 14,
+      "kind": "num",
+      "type": "num"
+     },
+     "right": {
+      "n": 11,
+      "kind": "berry",
+      "type": "items"
+     },
+     "answer": ">",
+     "diff": 3
+    },
+    {
+     "mode": "mix",
+     "left": {
+      "n": 12,
+      "kind": "pear",
+      "type": "items"
+     },
+     "right": {
+      "n": 13,
+      "kind": "num",
+      "type": "num"
+     },
+     "answer": "<",
+     "diff": -1
+    },
+    {
+     "mode": "count",
+     "left": {
+      "n": 6,
+      "kind": "berry",
+      "type": "items"
+     },
+     "right": {
+      "n": 8,
+      "kind": "apple",
+      "type": "items"
+     },
+     "answer": "<",
+     "diff": -2
+    },
+    {
+     "mode": "num",
+     "left": {
+      "n": 10,
+      "kind": "num",
+      "type": "num"
+     },
+     "right": {
+      "n": 10,
+      "kind": "num",
+      "type": "num"
+     },
+     "answer": "=",
+     "diff": 0
+    },
+    {
+     "mode": "num",
+     "left": {
+      "n": 13,
+      "kind": "num",
+      "type": "num"
+     },
+     "right": {
+      "n": 10,
+      "kind": "num",
+      "type": "num"
+     },
+     "answer": ">",
+     "diff": 3
+    }
+   ],
+   "clicks": 49,
+   "retries": 3,
+   "stars": 1,
+   "events": [
+    {
+     "ev": "mirror_first_wrong",
+     "ans": ">",
+     "picked": "<",
+     "pulse": [
+      0,
+      0
+     ],
+     "retries": 1
+    },
+    {
+     "ev": "wrong_1",
+     "picked": ">",
+     "pulse_after": 0,
+     "retries": 2
+    },
+    {
+     "ev": "wrong_2",
+     "picked": "=",
+     "pulse_after": 1,
+     "retries": 3
+    }
+   ],
+   "misc": {
+    "flat": 15,
+    "opening_voice": [
+     "AUDIO:cmp_hint",
+     "TTS:数一数，比一比"
+    ],
+    "rescue": {
+     "label": "flat15_25s",
+     "new_entries": [
+      "play(cmp_hint,数一数，比一比)"
+     ]
+    }
+   }
+  }
+ ]
+}

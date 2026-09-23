@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>井字棋小冠军</title>
+<style>
+/* ================= 井字棋小冠军 tictac（batch36·扩容批 6·r18 难度改造版）
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色 #E8975A、暖棕描边 #4A3B2E；
+   玩法（SPEC-BATCH36 §-r18-tictac 现行版，7 章×6 关）：
+   ch1-4 classic 3×3 井字棋 vs 兔子四档（随机→只堵→聪明→minimax 完美）；
+   ch5 残局小侦探（win1 一步制胜/block1 必堵/fork 双威胁，答错计 miss）；
+   ch6 大棋盘三连（4×4 得 3 连 24 胜线，.w16/.b16 四列布局）；
+   ch7 三子滚动（每方场上 ≤3 子 FIFO，.cell.oldest=己方最旧子标记）。
+   负局 AI 复盘（classic）：.k-review 层=失误步迷你棋盘（红 .rev-miss=实际格/
+   绿 .rev-best=更优格 breathe）。
+   顶部双头像指示（孩子执子恒亮，兔子思考期亮兔子侧）；
+   HUD 局点（对战 3 局 win 绿/draw 橙/lose 灰；残局 5 题 win 绿）。
+   触摸目标：棋盘格 ≥96×96（3×3 横竖双档核 + 4×4 双档核：横 1280×800 格≈101px/
+   竖 800×1180 格≈111px）；overflowX 恒 0。
+   款内自建 button 带显式 color（契约 O：不依赖 core 兜底）。
+   miss 分题型（§-r18 §5）：对战恒 0（点已占格=拒绝 bump 不响 wrong）；残局点错计 miss。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 46px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:36px;height:36px;border-radius:11px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 36px}
+#step-dots{display:flex;gap:9px;align-items:center;flex:1 1 auto}
+#step-dots i{width:15px;height:15px;border-radius:50%;background:#E5D5BC;border:2.5px solid #D8C9B4;
+  transition:all .3s}
+#step-dots i.cur{background:#E8975A;transform:scale(1.3)}
+#step-dots i.w{background:#8FBF7F;border-color:#6FA35F}
+#step-dots i.d{background:#F6C96B;border-color:#DCA63E}
+#step-dots i.l{background:#CFC4B2;border-color:#B7AA94}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 轮到指示条：双头像（孩子执子恒亮；兔子思考演出期亮兔子侧） ---------- */
+#turn-bar{flex:0 0 auto;display:flex;justify-content:center;gap:56px;padding:4px 0 2px}
+.who{display:flex;flex-direction:column;align-items:center;gap:2px;width:76px}
+.who .avatar{width:52px;height:52px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;transition:all .25s}
+.who .avatar svg{width:80%;height:80%}
+.who .name{font-size:13px;font-weight:700;opacity:.5;transition:all .25s}
+.who.active .avatar{box-shadow:0 0 0 5px rgba(232,151,90,.55);animation:tk-who .8s ease infinite alternate}
+.who.active .name{opacity:1;color:#C4702F}
+.who:not(.active) .avatar{filter:grayscale(.55);opacity:.55}
+@keyframes tk-who{from{transform:scale(1)}to{transform:scale(1.07)}}
+
+/* ---------- 舞台：棋盘（主点选区）+ 题面句条 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:10px;overflow:hidden;padding:4px 12px}
+
+/* 棋盘垫：暖色木牌（3×3 格浮层；.w16=4×4 变体放大垫） */
+#board-wrap{position:relative;flex:0 0 auto;width:min(430px,94vw,calc((100vh - 330px)*1.06));
+  aspect-ratio:380/340;border-radius:24px;overflow:hidden;
+  background:linear-gradient(180deg,#FDF3DC 0%,#F6E9C8 60%,#EFE0BE 100%);
+  border:3px solid #4A3B2E;box-shadow:0 4px 0 #D8C9B4;padding:22px}
+#board{position:relative;width:100%;height:100%;display:grid;
+  grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:9px}
+/* v44 大棋盘（ch6）：4×4 得 3 连——正方形垫+四列网格，格 ≥96×96 双档核 */
+#board-wrap.w16{width:min(508px,94vw,calc(100vh - 330px));aspect-ratio:1/1;padding:20px}
+#board.b16{grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);gap:8px}
+.cell{position:relative;border-radius:16px;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 3px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;
+  transition:transform .12s}
+.cell:active{transform:scale(.95)}
+.cell svg.mark{width:76%;height:76%;overflow:visible}
+.cell.pop-in{animation:tk-cell .32s cubic-bezier(.2,1.5,.4,1) backwards}
+@keyframes tk-cell{0%{transform:scale(.4);opacity:0}100%{transform:scale(1);opacity:1}}
+.cell svg.mark{animation:tk-mark .34s cubic-bezier(.2,1.6,.4,1)}
+@keyframes tk-mark{0%{transform:scale(.3);opacity:0}70%{transform:scale(1.14)}100%{transform:scale(1);opacity:1}}
+/* vroll 最旧子标记（ch7）：己方满 3 子后，下新子时会被移走的子（虚线框+角标） */
+.cell.oldest{border-style:dashed;border-color:#C4702F;opacity:.8}
+.cell.oldest:after{content:'';position:absolute;top:5px;right:5px;width:9px;height:9px;border-radius:50%;
+  background:#E8975A;border:2px solid #C4702F}
+/* 胜线三格高亮（演出层锚：终局连线格渲染 .wincell） */
+.cell.wincell{background:#FDE9C8;border-color:#C4702F;box-shadow:0 3px 0 #C9A87C,0 0 14px rgba(232,151,90,.65);
+  animation:tk-winc .5s ease infinite alternate}
+@keyframes tk-winc{from{transform:scale(1)}to{transform:scale(1.05)}}
+/* 反馈动效：wig=已占格/吞输入拒绝摇头（家族 D 轻叮配 bump）/ breathe=救援答案级 */
+.cell.wig{animation:tk-wig .4s ease}
+@keyframes tk-wig{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.cell.breathe{animation:tk-br 1.2s ease-in-out infinite}
+@keyframes tk-br{0%,100%{filter:drop-shadow(0 0 0 rgba(232,151,90,0))}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+.cell.pulse{animation:tk-pulse .95s ease 1}
+@keyframes tk-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.09)}}
+
+/* 兔子思考演出：小兔头像浮到棋盘边（思考气泡三点） */
+.bunny-g{position:absolute;bottom:4%;right:-20%;width:20%;z-index:8;pointer-events:none;opacity:0;
+  transition:right .6s ease,opacity .3s ease}
+.bunny-g.show{opacity:1;right:2%}
+.bunny-g .bsvg{width:100%;height:auto;animation:tk-bthink .6s ease infinite alternate}
+@keyframes tk-bthink{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+.bunny-g .think{position:absolute;left:-34%;top:8%;width:52%;aspect-ratio:1;background:#FFF9EE;
+  border:2.5px solid #4A3B2E;border-radius:50%;display:flex;align-items:center;justify-content:center;gap:4px}
+.bunny-g .think i{width:7%;aspect-ratio:1;border-radius:50%;background:#4A3B2E;animation:tk-dot .9s ease infinite}
+.bunny-g .think i:nth-child(2){animation-delay:.15s}
+.bunny-g .think i:nth-child(3){animation-delay:.3s}
+@keyframes tk-dot{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+
+/* 负局 AI 复盘层（§-r18：失误步局面迷你棋盘，红=实际格/绿=更优格；tap 提前关） */
+.k-review{position:fixed;inset:0;z-index:66;background:rgba(74,59,46,.58);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:14px;padding:20px}
+.k-review .rv-title{font-size:24px;font-weight:800;color:#FFF9EE;text-shadow:0 2px 0 rgba(74,59,46,.6)}
+.k-review .rv-board{width:min(300px,80vw,52vh);aspect-ratio:1/1;display:grid;
+  grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:7px;
+  background:#F6E9C8;border:3px solid #4A3B2E;border-radius:18px;padding:12px;box-shadow:0 5px 0 #D8C9B4}
+.k-review .rv-cell{position:relative;border-radius:12px;background:#FFF9EE;border:2.5px solid #D8C9B4;
+  display:flex;align-items:center;justify-content:center}
+.k-review .rv-cell svg.mark{width:72%;height:72%}
+.k-review .rv-cell.rev-miss{border-color:#D9534F;box-shadow:0 0 12px rgba(217,83,79,.55)}
+.k-review .rv-cell.rev-best{border-style:dashed;border-color:#6FA35F;animation:rv-best 1.2s ease-in-out infinite}
+@keyframes rv-best{0%,100%{box-shadow:0 0 0 rgba(111,163,95,0)}50%{box-shadow:0 0 14px rgba(111,163,95,.85)}}
+.k-review .rv-legend{font-size:15px;font-weight:700;color:#FFF9EE;background:rgba(74,59,46,.5);
+  padding:4px 14px;border-radius:10px}
+
+/* 题面句条 */
+#qbar{flex:0 0 auto;max-width:94vw}
+#qbar .q-text{font-size:21px;font-weight:700;padding:3px 18px;border-radius:14px;
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 3px 0 #D8C9B4}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:86px;height:86px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:tk-hearb .45s ease}
+@keyframes tk-hearb{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch21-35） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板/手机竖持）：棋盘收紧，格子仍 ≥96×96 */
+@media (orientation:portrait){
+  #board-wrap{width:min(410px,94vw)}
+  #board-wrap.w16{width:min(508px,94vw)}
+  #qbar .q-text{font-size:18px;padding:3px 14px}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+}
+/*PORT-CLS*/
+body.port #board-wrap{width:min(410px,94vw)}
+body.port #board-wrap.w16{width:min(508px,94vw)}
+body.port #qbar .q-text{font-size:18px;padding:3px 14px}
+body.port #btn-rabbit{width:78px;height:78px}
+body.port #btn-rabbit svg{width:64px;height:64px}
+</style>
+</head>
+<body>
+<div id="game" aria-label="井字棋小冠军">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="turn-bar" aria-label="轮到谁">
+    <div class="who who-k" data-side="k"><div class="avatar"></div><div class="name">你</div></div>
+    <div class="who who-r" data-side="r"><div class="avatar"></div><div class="name">小兔子</div></div>
+  </div>
+  <div id="stage">
+    <div id="board-wrap" aria-label="井字棋棋盘">
+      <div id="board"></div>
+      <div class="bunny-g" aria-hidden="true"><div class="bsvg"></div><div class="think"><i></i><i></i><i></i></div></div>
+    </div>
+    <div id="qbar"><div class="q-text"></div></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

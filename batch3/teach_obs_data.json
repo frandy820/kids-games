@@ -1,0 +1,6210 @@
+{
+ "pinyin": {
+  "game": "pinyin",
+  "events": [
+   {
+    "ev": "tut_mid_click",
+    "game": "pinyin",
+    "at_s": 0.93,
+    "target_i": 0,
+    "after": {
+     "tut": "watch",
+     "idx": 0
+    },
+    "correct_now": 0
+   },
+   {
+    "ev": "q",
+    "flat": 1,
+    "qi": 0,
+    "target": "d",
+    "items": [
+     "b",
+     "d",
+     "p"
+    ],
+    "answer": 1,
+    "confusable": [
+     0,
+     2
+    ]
+   },
+   {
+    "ev": "q",
+    "flat": 1,
+    "qi": 1,
+    "target": "n",
+    "items": [
+     "n",
+     "h",
+     "m"
+    ],
+    "answer": 0,
+    "confusable": [
+     1,
+     2
+    ]
+   },
+   {
+    "ev": "wrong_seq1",
+    "flat": 1,
+    "qi": 1,
+    "picked": 1,
+    "snap_instant": {
+     "lv": {
+      "flat": 1,
+      "idx": 1,
+      "solved": 1,
+      "retries": 1
+     },
+     "q": {
+      "answer": 0,
+      "items": [
+       "n",
+       "h",
+       "m"
+      ],
+      "target": "n",
+      "type": "sm"
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "cars": [
+      {
+       "i": "0",
+       "cls": "car pulse",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "car wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "cls": "car",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 1,
+      "idx": 1,
+      "solved": 1,
+      "retries": 1
+     },
+     "q": {
+      "answer": 0,
+      "items": [
+       "n",
+       "h",
+       "m"
+      ],
+      "target": "n",
+      "type": "sm"
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "cars": [
+      {
+       "i": "0",
+       "cls": "car",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "car wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "cls": "car",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "wrong_seq2",
+    "flat": 1,
+    "qi": 1,
+    "picked": 2,
+    "snap_instant": {
+     "lv": {
+      "flat": 1,
+      "idx": 1,
+      "solved": 1,
+      "retries": 2
+     },
+     "q": {
+      "answer": 0,
+      "items": [
+       "n",
+       "h",
+       "m"
+      ],
+      "target": "n",
+      "type": "sm"
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "cars": [
+      {
+       "i": "0",
+       "cls": "car pulse",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "car wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "cls": "car wrong",
+       "pe": "none",
+       "op": "0.55"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 1,
+      "idx": 1,
+      "solved": 1,
+      "retries": 2
+     },
+     "q": {
+      "answer": 0,
+      "items": [
+       "n",
+       "h",
+       "m"
+      ],
+      "target": "n",
+      "type": "sm"
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "cars": [
+      {
+       "i": "0",
+       "cls": "car",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "car wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "cls": "car wrong",
+       "pe": "none",
+       "op": "0.55"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "dead_click_greyed",
+    "flat": 1,
+    "qi": 1,
+    "retries_before": 2,
+    "retries_after": 2,
+    "grey_car_computed": {
+     "i": "1",
+     "cls": "car wrong",
+     "pe": "none",
+     "op": "0.55"
+    }
+   },
+   {
+    "ev": "rescue_watch_10s",
+    "flat": 1,
+    "qi": 1,
+    "samples": [
+     {
+      "s": 1,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": false
+      },
+      "answer_cls": "car",
+      "voices": 15
+     },
+     {
+      "s": 2,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": false
+      },
+      "answer_cls": "car",
+      "voices": 15
+     },
+     {
+      "s": 3,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": false
+      },
+      "answer_cls": "car",
+      "voices": 15
+     },
+     {
+      "s": 4,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": false
+      },
+      "answer_cls": "car",
+      "voices": 15
+     },
+     {
+      "s": 5,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": false
+      },
+      "answer_cls": "car",
+      "voices": 15
+     },
+     {
+      "s": 6,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": false
+      },
+      "answer_cls": "car",
+      "voices": 15
+     },
+     {
+      "s": 7,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": false
+      },
+      "answer_cls": "car",
+      "voices": 15
+     },
+     {
+      "s": 8,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": false
+      },
+      "answer_cls": "car",
+      "voices": 15
+     },
+     {
+      "s": 9,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": false
+      },
+      "answer_cls": "car",
+      "voices": 15
+     },
+     {
+      "s": 10,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": false
+      },
+      "answer_cls": "car",
+      "voices": 15
+     }
+    ]
+   },
+   {
+    "ev": "recover_after_rescue",
+    "flat": 1,
+    "snap": {
+     "lv": {
+      "flat": 1,
+      "idx": 2,
+      "solved": 2,
+      "retries": 2
+     },
+     "q": {
+      "answer": 2,
+      "items": [
+       "p",
+       "d",
+       "b"
+      ],
+      "target": "b",
+      "type": "sm"
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": true
+     },
+     "cars": [
+      {
+       "i": "0",
+       "cls": "car",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "car",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "car",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "q",
+    "flat": 1,
+    "qi": 2,
+    "target": "b",
+    "items": [
+     "p",
+     "d",
+     "b"
+    ],
+    "answer": 2,
+    "confusable": [
+     0,
+     1
+    ]
+   },
+   {
+    "ev": "idle_20s_voice",
+    "flat": 1,
+    "voices_before": 17,
+    "new_voice": [
+     {
+      "t": 70069,
+      "key": "pyi_hint",
+      "text": "找一找一样的拼音"
+     }
+    ],
+    "snap": {
+     "lv": {
+      "flat": 1,
+      "idx": 2,
+      "solved": 2,
+      "retries": 2
+     },
+     "q": {
+      "answer": 2,
+      "items": [
+       "p",
+       "d",
+       "b"
+      ],
+      "target": "b",
+      "type": "sm"
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": true
+     },
+     "cars": [
+      {
+       "i": "0",
+       "cls": "car",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "car",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "car",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "q",
+    "flat": 5,
+    "qi": 0,
+    "target": "o",
+    "items": [
+     "e",
+     "o",
+     "a"
+    ],
+    "answer": 1
+   },
+   {
+    "ev": "chaos_during_correct",
+    "flat": 5,
+    "idx_before": 0,
+    "idx_after": 1,
+    "advanced_by": 1,
+    "misc_clicks": 3
+   },
+   {
+    "ev": "q",
+    "flat": 5,
+    "qi": 1,
+    "target": "ü",
+    "items": [
+     "u",
+     "ü",
+     "i"
+    ],
+    "answer": 1
+   },
+   {
+    "ev": "chaos_during_correct",
+    "flat": 5,
+    "idx_before": 1,
+    "idx_after": 2,
+    "advanced_by": 1,
+    "misc_clicks": 3
+   },
+   {
+    "ev": "q",
+    "flat": 5,
+    "qi": 2,
+    "target": "u",
+    "items": [
+     "u",
+     "ü",
+     "i"
+    ],
+    "answer": 0
+   },
+   {
+    "ev": "chaos_during_correct",
+    "flat": 5,
+    "idx_before": 2,
+    "idx_after": 3,
+    "advanced_by": 1,
+    "misc_clicks": 3
+   }
+  ],
+  "notes": [],
+  "console_errors": [],
+  "tut_timeline": [
+   {
+    "s": 0.01,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.16,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.31,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.47,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.62,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.78,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 0.93,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 1.37,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 1.53,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 1.68,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 1.84,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 1.99,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 2.15,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 2.3,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 2.45,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 2.61,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 2.76,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 2.92,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 3.07,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 3.22,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 3.38,
+    "tut": "help",
+    "idx": 0,
+    "ghost": false
+   }
+  ],
+  "tut_help_entry": {
+   "lv": {
+    "flat": 0,
+    "idx": 0,
+    "solved": 0,
+    "retries": 0
+   },
+   "q": {
+    "answer": 2,
+    "items": [
+     "p",
+     "b",
+     "d"
+    ],
+    "target": "d",
+    "type": "sm"
+   },
+   "tut": "help",
+   "ghost": {
+    "show": false,
+    "pressing": false,
+    "onAnswer": true
+   },
+   "cars": [
+    {
+     "i": "0",
+     "cls": "car",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "cls": "car",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "cls": "car",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "tut_help_after6s": {
+   "lv": {
+    "flat": 0,
+    "idx": 0,
+    "solved": 0,
+    "retries": 0
+   },
+   "q": {
+    "answer": 2,
+    "items": [
+     "p",
+     "b",
+     "d"
+    ],
+    "target": "d",
+    "type": "sm"
+   },
+   "tut": "help",
+   "ghost": {
+    "show": true,
+    "pressing": true,
+    "onAnswer": true
+   },
+   "cars": [
+    {
+     "i": "0",
+     "cls": "car",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "cls": "car",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "cls": "car pulse",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "tut_solo_check": {
+   "lv": {
+    "flat": 0,
+    "idx": 1,
+    "solved": 1,
+    "retries": 0
+   },
+   "q": {
+    "answer": 0,
+    "items": [
+     "b",
+     "q",
+     "p"
+    ],
+    "target": "b",
+    "type": "sm"
+   },
+   "tut": "solo",
+   "ghost": {
+    "show": false,
+    "pressing": false,
+    "onAnswer": false
+   },
+   "cars": [
+    {
+     "i": "0",
+     "cls": "car",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "cls": "car",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "cls": "car pulse correct",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "t_1_0_done": 2.43,
+  "lv_1_1_start": {
+   "lv": {
+    "flat": 1,
+    "idx": 0,
+    "solved": 0,
+    "retries": 0
+   },
+   "q": {
+    "answer": 1,
+    "items": [
+     "b",
+     "d",
+     "p"
+    ],
+    "target": "d",
+    "type": "sm"
+   },
+   "tut": "none",
+   "ghost": {
+    "show": false,
+    "pressing": false,
+    "onAnswer": false
+   },
+   "cars": [
+    {
+     "i": "0",
+     "cls": "car",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "cls": "car",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "cls": "car",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "t_1_1_done": 2.43,
+  "final_2_1": {
+   "lv": {
+    "flat": 5,
+    "idx": 3,
+    "solved": 3,
+    "retries": 0
+   },
+   "q": null,
+   "tut": "none",
+   "ghost": {
+    "show": false,
+    "pressing": false,
+    "onAnswer": null
+   },
+   "cars": [
+    {
+     "i": "0",
+     "cls": "car correct",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "cls": "car",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "cls": "car",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "obs": {
+   "obs": [
+    {
+     "t": 795,
+     "ev": "ghost-class",
+     "cls": "show",
+     "show": true,
+     "pressing": false
+    },
+    {
+     "t": 1603,
+     "ev": "ghost-class",
+     "cls": "show pressing",
+     "show": true,
+     "pressing": true
+    },
+    {
+     "t": 3530,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 4134,
+     "ev": "ghost-class",
+     "cls": "show",
+     "show": true,
+     "pressing": false
+    },
+    {
+     "t": 4937,
+     "ev": "ghost-class",
+     "cls": "show pressing",
+     "show": true,
+     "pressing": true
+    },
+    {
+     "t": 12689,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 19900,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 22533,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 75642,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 78277,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 78481,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 92157,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    }
+   ],
+   "voice": [
+    {
+     "t": 2105,
+     "key": "py_syl_de",
+     "text": "的"
+    },
+    {
+     "t": 3017,
+     "key": "py_syl_bo",
+     "text": "波"
+    },
+    {
+     "t": 3018,
+     "key": "pyi_tut_turn",
+     "text": "你来点一点"
+    },
+    {
+     "t": 3530,
+     "key": "py_syl_de",
+     "text": "的"
+    },
+    {
+     "t": 12689,
+     "key": "py_syl_de",
+     "text": "的"
+    },
+    {
+     "t": 13601,
+     "key": "py_syl_bo",
+     "text": "波"
+    },
+    {
+     "t": 14944,
+     "key": "py_syl_bo",
+     "text": "波"
+    },
+    {
+     "t": 15848,
+     "key": "py_syl_te",
+     "text": "特"
+    },
+    {
+     "t": 18985,
+     "key": "py_syl_te",
+     "text": "特"
+    },
+    {
+     "t": 22532,
+     "key": "py_syl_de",
+     "text": "的"
+    },
+    {
+     "t": 22533,
+     "key": "pyi_hint",
+     "text": "找一找一样的拼音"
+    },
+    {
+     "t": 25491,
+     "key": "py_syl_de",
+     "text": "的"
+    },
+    {
+     "t": 26396,
+     "key": "py_syl_ne",
+     "text": "呢"
+    },
+    {
+     "t": 29243,
+     "key": "pyi_hint",
+     "text": "找一找一样的拼音"
+    },
+    {
+     "t": 33384,
+     "key": "pyi_hint",
+     "text": "找一找一样的拼音"
+    },
+    {
+     "t": 49311,
+     "key": "py_syl_ne",
+     "text": "呢"
+    },
+    {
+     "t": 50214,
+     "key": "py_syl_bo",
+     "text": "波"
+    },
+    {
+     "t": 70069,
+     "key": "pyi_hint",
+     "text": "找一找一样的拼音"
+    },
+    {
+     "t": 74738,
+     "key": "py_syl_bo",
+     "text": "波"
+    },
+    {
+     "t": 78277,
+     "key": "py_syl_ge",
+     "text": "哥"
+    },
+    {
+     "t": 78277,
+     "key": "pyi_hint",
+     "text": "找一找一样的拼音"
+    }
+   ],
+   "clicks": [
+    {
+     "t": 1133,
+     "x": 356,
+     "y": 446
+    },
+    {
+     "t": 12685,
+     "x": 668,
+     "y": 446
+    },
+    {
+     "t": 14941,
+     "x": 356,
+     "y": 446
+    },
+    {
+     "t": 18982,
+     "x": 668,
+     "y": 446
+    },
+    {
+     "t": 25487,
+     "x": 512,
+     "y": 446
+    },
+    {
+     "t": 29238,
+     "x": 512,
+     "y": 446
+    },
+    {
+     "t": 33381,
+     "x": 668,
+     "y": 446
+    },
+    {
+     "t": 35044,
+     "x": 512,
+     "y": 446
+    },
+    {
+     "t": 49306,
+     "x": 356,
+     "y": 446
+    },
+    {
+     "t": 74734,
+     "x": 668,
+     "y": 446
+    },
+    {
+     "t": 82810,
+     "x": 512,
+     "y": 446
+    },
+    {
+     "t": 83075,
+     "x": 356,
+     "y": 446
+    },
+    {
+     "t": 83098,
+     "x": 668,
+     "y": 446
+    },
+    {
+     "t": 87314,
+     "x": 512,
+     "y": 446
+    },
+    {
+     "t": 87578,
+     "x": 356,
+     "y": 446
+    },
+    {
+     "t": 87593,
+     "x": 668,
+     "y": 446
+    },
+    {
+     "t": 91244,
+     "x": 356,
+     "y": 446
+    },
+    {
+     "t": 91510,
+     "x": 512,
+     "y": 446
+    },
+    {
+     "t": 91527,
+     "x": 668,
+     "y": 446
+    }
+   ]
+  }
+ },
+ "math": {
+  "game": "math",
+  "events": [
+   {
+    "ev": "tut_mid_click",
+    "game": "math",
+    "at_s": 1.55,
+    "target_i": 0,
+    "after": {
+     "tut": "watch",
+     "idx": 0
+    },
+    "correct_now": 0
+   },
+   {
+    "ev": "q",
+    "flat": 1,
+    "qi": 0,
+    "text": "3 + 2 = ?",
+    "items": [
+     6,
+     3,
+     5
+    ],
+    "answerIdx": 2
+   },
+   {
+    "ev": "q",
+    "flat": 1,
+    "qi": 1,
+    "text": "3 - 2 = ?",
+    "items": [
+     3,
+     1,
+     4
+    ],
+    "answerIdx": 1
+   },
+   {
+    "ev": "wrong_slip",
+    "flat": 1,
+    "qi": 1,
+    "picked": 0,
+    "snap_instant": {
+     "lv": {
+      "flat": 1,
+      "step": 1,
+      "retries": 1,
+      "done": false
+     },
+     "q": {
+      "text": "3 - 2 = ?",
+      "answer": 1,
+      "items": [
+       3,
+       1,
+       4
+      ],
+      "answerIdx": 1,
+      "op": "-",
+      "a": 3,
+      "b": 2,
+      "wrong": [
+       0
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "apple",
+      "numline": false,
+      "apples": 3,
+      "startRing": false
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "3",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "1",
+       "txt": "1",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "txt": "4",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 1,
+      "step": 1,
+      "retries": 1,
+      "done": false
+     },
+     "q": {
+      "text": "3 - 2 = ?",
+      "answer": 1,
+      "items": [
+       3,
+       1,
+       4
+      ],
+      "answerIdx": 1,
+      "op": "-",
+      "a": 3,
+      "b": 2,
+      "wrong": [
+       0
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "apple",
+      "numline": false,
+      "apples": 3,
+      "startRing": false
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "3",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "1",
+       "txt": "1",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "txt": "4",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "q",
+    "flat": 1,
+    "qi": 2,
+    "text": "4 - 1 = ?",
+    "items": [
+     3,
+     1,
+     5
+    ],
+    "answerIdx": 0
+   },
+   {
+    "ev": "wrong_seq1",
+    "flat": 1,
+    "qi": 2,
+    "picked": 1,
+    "snap_instant": {
+     "lv": {
+      "flat": 1,
+      "step": 2,
+      "retries": 2,
+      "done": false
+     },
+     "q": {
+      "text": "4 - 1 = ?",
+      "answer": 3,
+      "items": [
+       3,
+       1,
+       5
+      ],
+      "answerIdx": 0,
+      "op": "-",
+      "a": 4,
+      "b": 1,
+      "wrong": [
+       1
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "apple",
+      "numline": false,
+      "apples": 4,
+      "startRing": false
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "3",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "txt": "1",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "txt": "5",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 1,
+      "step": 2,
+      "retries": 2,
+      "done": false
+     },
+     "q": {
+      "text": "4 - 1 = ?",
+      "answer": 3,
+      "items": [
+       3,
+       1,
+       5
+      ],
+      "answerIdx": 0,
+      "op": "-",
+      "a": 4,
+      "b": 1,
+      "wrong": [
+       1
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "apple",
+      "numline": false,
+      "apples": 4,
+      "startRing": false
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "3",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "txt": "1",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "txt": "5",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "wrong_seq2",
+    "flat": 1,
+    "qi": 2,
+    "picked": 2,
+    "snap_instant": {
+     "lv": {
+      "flat": 1,
+      "step": 2,
+      "retries": 3,
+      "done": false
+     },
+     "q": {
+      "text": "4 - 1 = ?",
+      "answer": 3,
+      "items": [
+       3,
+       1,
+       5
+      ],
+      "answerIdx": 0,
+      "op": "-",
+      "a": 4,
+      "b": 1,
+      "wrong": [
+       1,
+       2
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "apple",
+      "numline": false,
+      "apples": 4,
+      "startRing": false
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "3",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "txt": "1",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "txt": "5",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 1,
+      "step": 2,
+      "retries": 3,
+      "done": false
+     },
+     "q": {
+      "text": "4 - 1 = ?",
+      "answer": 3,
+      "items": [
+       3,
+       1,
+       5
+      ],
+      "answerIdx": 0,
+      "op": "-",
+      "a": 4,
+      "b": 1,
+      "wrong": [
+       1,
+       2
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "apple",
+      "numline": false,
+      "apples": 4,
+      "startRing": false
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "3",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "txt": "1",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "txt": "5",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "dead_click_greyed",
+    "flat": 1,
+    "retries_before": 3,
+    "retries_after": 3,
+    "grey_btn_computed": {
+     "i": "1",
+     "txt": "1",
+     "cls": "ans shake wrong",
+     "pe": "none",
+     "op": "0.55"
+    }
+   },
+   {
+    "ev": "rescue_watch_10s",
+    "flat": 1,
+    "qi": 2,
+    "samples": [
+     {
+      "s": 1,
+      "aid": {
+       "open": true,
+       "kind": "apple",
+       "numline": false,
+       "apples": 4,
+       "startRing": false
+      },
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAidBtn": true,
+       "onAnswer": false
+      },
+      "voices": 5,
+      "answer_cls": "ans pulse"
+     },
+     {
+      "s": 2,
+      "aid": {
+       "open": true,
+       "kind": "apple",
+       "numline": false,
+       "apples": 4,
+       "startRing": false
+      },
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAidBtn": true,
+       "onAnswer": false
+      },
+      "voices": 5,
+      "answer_cls": "ans pulse"
+     },
+     {
+      "s": 3,
+      "aid": {
+       "open": true,
+       "kind": "apple",
+       "numline": false,
+       "apples": 4,
+       "startRing": false
+      },
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAidBtn": true,
+       "onAnswer": false
+      },
+      "voices": 5,
+      "answer_cls": "ans pulse"
+     },
+     {
+      "s": 4,
+      "aid": {
+       "open": true,
+       "kind": "apple",
+       "numline": false,
+       "apples": 4,
+       "startRing": false
+      },
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAidBtn": true,
+       "onAnswer": false
+      },
+      "voices": 5,
+      "answer_cls": "ans pulse"
+     },
+     {
+      "s": 5,
+      "aid": {
+       "open": true,
+       "kind": "apple",
+       "numline": false,
+       "apples": 4,
+       "startRing": false
+      },
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAidBtn": true,
+       "onAnswer": false
+      },
+      "voices": 5,
+      "answer_cls": "ans pulse"
+     },
+     {
+      "s": 6,
+      "aid": {
+       "open": true,
+       "kind": "apple",
+       "numline": false,
+       "apples": 4,
+       "startRing": false
+      },
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAidBtn": true,
+       "onAnswer": false
+      },
+      "voices": 5,
+      "answer_cls": "ans pulse"
+     },
+     {
+      "s": 7,
+      "aid": {
+       "open": true,
+       "kind": "apple",
+       "numline": false,
+       "apples": 4,
+       "startRing": false
+      },
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAidBtn": true,
+       "onAnswer": false
+      },
+      "voices": 5,
+      "answer_cls": "ans pulse"
+     },
+     {
+      "s": 8,
+      "aid": {
+       "open": true,
+       "kind": "apple",
+       "numline": false,
+       "apples": 4,
+       "startRing": false
+      },
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAidBtn": true,
+       "onAnswer": false
+      },
+      "voices": 5,
+      "answer_cls": "ans pulse"
+     },
+     {
+      "s": 9,
+      "aid": {
+       "open": true,
+       "kind": "apple",
+       "numline": false,
+       "apples": 4,
+       "startRing": false
+      },
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAidBtn": true,
+       "onAnswer": false
+      },
+      "voices": 5,
+      "answer_cls": "ans pulse"
+     },
+     {
+      "s": 10,
+      "aid": {
+       "open": true,
+       "kind": "apple",
+       "numline": false,
+       "apples": 4,
+       "startRing": false
+      },
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAidBtn": true,
+       "onAnswer": false
+      },
+      "voices": 5,
+      "answer_cls": "ans pulse"
+     }
+    ]
+   },
+   {
+    "ev": "recover_after_rescue",
+    "flat": 1,
+    "snap": {
+     "lv": {
+      "flat": 1,
+      "step": 3,
+      "retries": 3,
+      "done": false
+     },
+     "q": {
+      "text": "4 - 2 = ?",
+      "answer": 2,
+      "items": [
+       2,
+       4,
+       0
+      ],
+      "answerIdx": 0,
+      "op": "-",
+      "a": 4,
+      "b": 2,
+      "wrong": []
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": false,
+      "kind": null,
+      "numline": false,
+      "apples": 0,
+      "startRing": false
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "2",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "txt": "4",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "txt": "0",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "q",
+    "flat": 1,
+    "qi": 3,
+    "text": "4 - 2 = ?",
+    "items": [
+     2,
+     4,
+     0
+    ],
+    "answerIdx": 0
+   },
+   {
+    "ev": "idle_20s_voice",
+    "flat": 1,
+    "voices_before": 5,
+    "new_voice": [
+     {
+      "t": 90025,
+      "key": "mat_hint",
+      "text": "数一数，再选答案"
+     }
+    ],
+    "snap": {
+     "lv": {
+      "flat": 1,
+      "step": 3,
+      "retries": 3,
+      "done": false
+     },
+     "q": {
+      "text": "4 - 2 = ?",
+      "answer": 2,
+      "items": [
+       2,
+       4,
+       0
+      ],
+      "answerIdx": 0,
+      "op": "-",
+      "a": 4,
+      "b": 2,
+      "wrong": []
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": false,
+      "kind": null,
+      "numline": false,
+      "apples": 0,
+      "startRing": false
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "2",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "txt": "4",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "txt": "0",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "q",
+    "flat": 1,
+    "qi": 4,
+    "text": "2 + 1 = ?",
+    "items": [
+     6,
+     2,
+     3
+    ],
+    "answerIdx": 2
+   },
+   {
+    "ev": "q",
+    "flat": 15,
+    "qi": 0,
+    "text": "14 - 9 = ?",
+    "op": "-",
+    "items": [
+     3,
+     8,
+     5
+    ],
+    "answerIdx": 2
+   },
+   {
+    "ev": "wrong_seq1",
+    "flat": 15,
+    "qi": 0,
+    "picked": 0,
+    "snap_instant": {
+     "lv": {
+      "flat": 15,
+      "step": 0,
+      "retries": 1,
+      "done": false
+     },
+     "q": {
+      "text": "14 - 9 = ?",
+      "answer": 5,
+      "items": [
+       3,
+       8,
+       5
+      ],
+      "answerIdx": 2,
+      "op": "-",
+      "a": 14,
+      "b": 9,
+      "wrong": [
+       0
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "line",
+      "numline": true,
+      "apples": 0,
+      "startRing": true
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "3",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "1",
+       "txt": "8",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "txt": "5",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 15,
+      "step": 0,
+      "retries": 1,
+      "done": false
+     },
+     "q": {
+      "text": "14 - 9 = ?",
+      "answer": 5,
+      "items": [
+       3,
+       8,
+       5
+      ],
+      "answerIdx": 2,
+      "op": "-",
+      "a": 14,
+      "b": 9,
+      "wrong": [
+       0
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "line",
+      "numline": true,
+      "apples": 0,
+      "startRing": true
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "3",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "1",
+       "txt": "8",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "txt": "5",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "wrong_seq2",
+    "flat": 15,
+    "qi": 0,
+    "picked": 1,
+    "snap_instant": {
+     "lv": {
+      "flat": 15,
+      "step": 0,
+      "retries": 2,
+      "done": false
+     },
+     "q": {
+      "text": "14 - 9 = ?",
+      "answer": 5,
+      "items": [
+       3,
+       8,
+       5
+      ],
+      "answerIdx": 2,
+      "op": "-",
+      "a": 14,
+      "b": 9,
+      "wrong": [
+       0,
+       1
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "line",
+      "numline": true,
+      "apples": 0,
+      "startRing": true
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "3",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "1",
+       "txt": "8",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "txt": "5",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 15,
+      "step": 0,
+      "retries": 2,
+      "done": false
+     },
+     "q": {
+      "text": "14 - 9 = ?",
+      "answer": 5,
+      "items": [
+       3,
+       8,
+       5
+      ],
+      "answerIdx": 2,
+      "op": "-",
+      "a": 14,
+      "b": 9,
+      "wrong": [
+       0,
+       1
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "line",
+      "numline": true,
+      "apples": 0,
+      "startRing": true
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "3",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "1",
+       "txt": "8",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "txt": "5",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "rescue_watch_10s",
+    "flat": 15,
+    "qi": 0,
+    "samples": [
+     {
+      "s": 1,
+      "aid": {
+       "open": true,
+       "kind": "line",
+       "numline": true,
+       "apples": 0,
+       "startRing": true
+      },
+      "answer_cls": "ans pulse",
+      "voices": 7
+     },
+     {
+      "s": 2,
+      "aid": {
+       "open": true,
+       "kind": "line",
+       "numline": true,
+       "apples": 0,
+       "startRing": true
+      },
+      "answer_cls": "ans pulse",
+      "voices": 7
+     },
+     {
+      "s": 3,
+      "aid": {
+       "open": true,
+       "kind": "line",
+       "numline": true,
+       "apples": 0,
+       "startRing": true
+      },
+      "answer_cls": "ans pulse",
+      "voices": 7
+     },
+     {
+      "s": 4,
+      "aid": {
+       "open": true,
+       "kind": "line",
+       "numline": true,
+       "apples": 0,
+       "startRing": true
+      },
+      "answer_cls": "ans pulse",
+      "voices": 7
+     },
+     {
+      "s": 5,
+      "aid": {
+       "open": true,
+       "kind": "line",
+       "numline": true,
+       "apples": 0,
+       "startRing": true
+      },
+      "answer_cls": "ans pulse",
+      "voices": 7
+     },
+     {
+      "s": 6,
+      "aid": {
+       "open": true,
+       "kind": "line",
+       "numline": true,
+       "apples": 0,
+       "startRing": true
+      },
+      "answer_cls": "ans pulse",
+      "voices": 7
+     },
+     {
+      "s": 7,
+      "aid": {
+       "open": true,
+       "kind": "line",
+       "numline": true,
+       "apples": 0,
+       "startRing": true
+      },
+      "answer_cls": "ans pulse",
+      "voices": 7
+     },
+     {
+      "s": 8,
+      "aid": {
+       "open": true,
+       "kind": "line",
+       "numline": true,
+       "apples": 0,
+       "startRing": true
+      },
+      "answer_cls": "ans pulse",
+      "voices": 7
+     },
+     {
+      "s": 9,
+      "aid": {
+       "open": true,
+       "kind": "line",
+       "numline": true,
+       "apples": 0,
+       "startRing": true
+      },
+      "answer_cls": "ans pulse",
+      "voices": 7
+     },
+     {
+      "s": 10,
+      "aid": {
+       "open": true,
+       "kind": "line",
+       "numline": true,
+       "apples": 0,
+       "startRing": true
+      },
+      "answer_cls": "ans pulse",
+      "voices": 7
+     }
+    ]
+   },
+   {
+    "ev": "countaid_before_recover",
+    "flat": 15,
+    "snap": {
+     "lv": {
+      "flat": 15,
+      "step": 0,
+      "retries": 2,
+      "done": false
+     },
+     "q": {
+      "text": "14 - 9 = ?",
+      "answer": 5,
+      "items": [
+       3,
+       8,
+       5
+      ],
+      "answerIdx": 2,
+      "op": "-",
+      "a": 14,
+      "b": 9,
+      "wrong": [
+       0,
+       1
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": false,
+      "kind": null,
+      "numline": false,
+      "apples": 0,
+      "startRing": false
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "3",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "1",
+       "txt": "8",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "txt": "5",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "recover_after_rescue",
+    "flat": 15,
+    "snap": {
+     "lv": {
+      "flat": 15,
+      "step": 1,
+      "retries": 2,
+      "done": false
+     },
+     "q": {
+      "text": "9 + 3 = ?",
+      "answer": 12,
+      "items": [
+       12,
+       13,
+       11
+      ],
+      "answerIdx": 0,
+      "op": "+",
+      "a": 9,
+      "b": 3,
+      "wrong": []
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": false,
+      "kind": null,
+      "numline": false,
+      "apples": 0,
+      "startRing": false
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "12",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "txt": "13",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "txt": "11",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "q",
+    "flat": 15,
+    "qi": 1,
+    "text": "9 + 3 = ?",
+    "op": "+",
+    "items": [
+     12,
+     13,
+     11
+    ],
+    "answerIdx": 0
+   },
+   {
+    "ev": "wrong_carry_40pct",
+    "flat": 15,
+    "qi": 1,
+    "text": "9 + 3 = ?",
+    "picked": 13,
+    "snap_instant": {
+     "lv": {
+      "flat": 15,
+      "step": 1,
+      "retries": 3,
+      "done": false
+     },
+     "q": {
+      "text": "9 + 3 = ?",
+      "answer": 12,
+      "items": [
+       12,
+       13,
+       11
+      ],
+      "answerIdx": 0,
+      "op": "+",
+      "a": 9,
+      "b": 3,
+      "wrong": [
+       1
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "line",
+      "numline": true,
+      "apples": 0,
+      "startRing": true
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "12",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "txt": "13",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "txt": "11",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 15,
+      "step": 1,
+      "retries": 3,
+      "done": false
+     },
+     "q": {
+      "text": "9 + 3 = ?",
+      "answer": 12,
+      "items": [
+       12,
+       13,
+       11
+      ],
+      "answerIdx": 0,
+      "op": "+",
+      "a": 9,
+      "b": 3,
+      "wrong": [
+       1
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "line",
+      "numline": true,
+      "apples": 0,
+      "startRing": true
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "12",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "txt": "13",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "2",
+       "txt": "11",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "q",
+    "flat": 15,
+    "qi": 2,
+    "text": "4 + 8 = ?",
+    "op": "+",
+    "items": [
+     11,
+     13,
+     12
+    ],
+    "answerIdx": 2
+   },
+   {
+    "ev": "chaos_during_correct",
+    "flat": 15,
+    "step_before": 3,
+    "step_after": 4
+   },
+   {
+    "ev": "q",
+    "flat": 15,
+    "qi": 4,
+    "text": "9 + 7 + 3 = ?",
+    "op": "++",
+    "items": [
+     18,
+     20,
+     19
+    ],
+    "answerIdx": 2
+   },
+   {
+    "ev": "wrong_carry_40pct",
+    "flat": 15,
+    "qi": 4,
+    "text": "9 + 7 + 3 = ?",
+    "picked": 18,
+    "snap_instant": {
+     "lv": {
+      "flat": 15,
+      "step": 4,
+      "retries": 5,
+      "done": false
+     },
+     "q": {
+      "text": "9 + 7 + 3 = ?",
+      "answer": 19,
+      "items": [
+       18,
+       20,
+       19
+      ],
+      "answerIdx": 2,
+      "op": "++",
+      "a": 9,
+      "b": 7,
+      "wrong": [
+       0
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "line",
+      "numline": true,
+      "apples": 0,
+      "startRing": true
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "18",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "1",
+       "txt": "20",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "txt": "19",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 15,
+      "step": 4,
+      "retries": 5,
+      "done": false
+     },
+     "q": {
+      "text": "9 + 7 + 3 = ?",
+      "answer": 19,
+      "items": [
+       18,
+       20,
+       19
+      ],
+      "answerIdx": 2,
+      "op": "++",
+      "a": 9,
+      "b": 7,
+      "wrong": [
+       0
+      ]
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAidBtn": true,
+      "onAnswer": false
+     },
+     "aid": {
+      "open": true,
+      "kind": "line",
+      "numline": true,
+      "apples": 0,
+      "startRing": true
+     },
+     "btns": [
+      {
+       "i": "0",
+       "txt": "18",
+       "cls": "ans shake wrong",
+       "pe": "none",
+       "op": "0.55"
+      },
+      {
+       "i": "1",
+       "txt": "20",
+       "cls": "ans",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "txt": "19",
+       "cls": "ans pulse",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   }
+  ],
+  "notes": [],
+  "console_errors": [],
+  "tut_timeline": [
+   {
+    "s": 0.0,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.16,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.31,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.47,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.62,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.78,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.94,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 1.09,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 1.24,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 1.4,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 1.55,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 2.0,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 2.16,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 2.31,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 2.47,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 2.62,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 2.78,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 2.93,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 3.08,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 3.24,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 3.39,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": true
+   },
+   {
+    "s": 3.55,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 3.7,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 3.86,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 4.01,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 4.17,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 4.32,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 4.48,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 4.63,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 4.78,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 4.94,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": true
+   },
+   {
+    "s": 5.09,
+    "tut": "help",
+    "idx": 0,
+    "ghost": true
+   }
+  ],
+  "tut_help_entry": {
+   "lv": {
+    "flat": 0,
+    "step": 0,
+    "retries": 0,
+    "done": false
+   },
+   "q": {
+    "text": "2 - 1 = ?",
+    "answer": 1,
+    "items": [
+     0,
+     1,
+     2
+    ],
+    "answerIdx": 1,
+    "op": "-",
+    "a": 2,
+    "b": 1,
+    "wrong": []
+   },
+   "tut": "help",
+   "ghost": {
+    "show": true,
+    "pressing": true,
+    "onAidBtn": false,
+    "onAnswer": true
+   },
+   "aid": {
+    "open": false,
+    "kind": null,
+    "numline": false,
+    "apples": 0,
+    "startRing": false
+   },
+   "btns": [
+    {
+     "i": "0",
+     "txt": "0",
+     "cls": "ans",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "txt": "1",
+     "cls": "ans",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "txt": "2",
+     "cls": "ans",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "tut_help_after6s": {
+   "lv": {
+    "flat": 0,
+    "step": 0,
+    "retries": 0,
+    "done": false
+   },
+   "q": {
+    "text": "2 - 1 = ?",
+    "answer": 1,
+    "items": [
+     0,
+     1,
+     2
+    ],
+    "answerIdx": 1,
+    "op": "-",
+    "a": 2,
+    "b": 1,
+    "wrong": []
+   },
+   "tut": "help",
+   "ghost": {
+    "show": true,
+    "pressing": true,
+    "onAidBtn": true,
+    "onAnswer": false
+   },
+   "aid": {
+    "open": false,
+    "kind": null,
+    "numline": false,
+    "apples": 0,
+    "startRing": false
+   },
+   "btns": [
+    {
+     "i": "0",
+     "txt": "0",
+     "cls": "ans",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "txt": "1",
+     "cls": "ans",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "txt": "2",
+     "cls": "ans",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "tut_help_countbtn": {
+   "after_click": {
+    "lv": {
+     "flat": 0,
+     "step": 0,
+     "retries": 0,
+     "done": false
+    },
+    "q": {
+     "text": "2 - 1 = ?",
+     "answer": 1,
+     "items": [
+      0,
+      1,
+      2
+     ],
+     "answerIdx": 1,
+     "op": "-",
+     "a": 2,
+     "b": 1,
+     "wrong": []
+    },
+    "tut": "help",
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "onAidBtn": true,
+     "onAnswer": false
+    },
+    "aid": {
+     "open": true,
+     "kind": "apple",
+     "numline": false,
+     "apples": 2,
+     "startRing": false
+    },
+    "btns": [
+     {
+      "i": "0",
+      "txt": "0",
+      "cls": "ans",
+      "pe": "auto",
+      "op": "1"
+     },
+     {
+      "i": "1",
+      "txt": "1",
+      "cls": "ans",
+      "pe": "auto",
+      "op": "1"
+     },
+     {
+      "i": "2",
+      "txt": "2",
+      "cls": "ans",
+      "pe": "auto",
+      "op": "1"
+     }
+    ]
+   },
+   "after_5_6s_idle": {
+    "lv": {
+     "flat": 0,
+     "step": 0,
+     "retries": 0,
+     "done": false
+    },
+    "q": {
+     "text": "2 - 1 = ?",
+     "answer": 1,
+     "items": [
+      0,
+      1,
+      2
+     ],
+     "answerIdx": 1,
+     "op": "-",
+     "a": 2,
+     "b": 1,
+     "wrong": []
+    },
+    "tut": "help",
+    "ghost": {
+     "show": true,
+     "pressing": false,
+     "onAidBtn": true,
+     "onAnswer": false
+    },
+    "aid": {
+     "open": true,
+     "kind": "apple",
+     "numline": false,
+     "apples": 2,
+     "startRing": false
+    },
+    "btns": [
+     {
+      "i": "0",
+      "txt": "0",
+      "cls": "ans",
+      "pe": "auto",
+      "op": "1"
+     },
+     {
+      "i": "1",
+      "txt": "1",
+      "cls": "ans",
+      "pe": "auto",
+      "op": "1"
+     },
+     {
+      "i": "2",
+      "txt": "2",
+      "cls": "ans",
+      "pe": "auto",
+      "op": "1"
+     }
+    ]
+   }
+  },
+  "tut_solo_check": {
+   "lv": {
+    "flat": 0,
+    "step": 1,
+    "retries": 0,
+    "done": false
+   },
+   "q": {
+    "text": "1 + 3 = ?",
+    "answer": 4,
+    "items": [
+     4,
+     5,
+     6
+    ],
+    "answerIdx": 0,
+    "op": "+",
+    "a": 1,
+    "b": 3,
+    "wrong": []
+   },
+   "tut": "solo",
+   "ghost": {
+    "show": false,
+    "pressing": false,
+    "onAidBtn": true,
+    "onAnswer": false
+   },
+   "aid": {
+    "open": false,
+    "kind": null,
+    "numline": false,
+    "apples": 0,
+    "startRing": false
+   },
+   "btns": [
+    {
+     "i": "0",
+     "txt": "0",
+     "cls": "ans",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "txt": "1",
+     "cls": "ans right",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "txt": "2",
+     "cls": "ans",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "t_1_0_done": 2.45,
+  "t_1_1_done": 2.43,
+  "lv_4_1_start": {
+   "lv": {
+    "flat": 15,
+    "step": 0,
+    "retries": 0,
+    "done": false
+   },
+   "q": {
+    "text": "14 - 9 = ?",
+    "answer": 5,
+    "items": [
+     3,
+     8,
+     5
+    ],
+    "answerIdx": 2,
+    "op": "-",
+    "a": 14,
+    "b": 9,
+    "wrong": []
+   },
+   "tut": "none",
+   "ghost": {
+    "show": false,
+    "pressing": false,
+    "onAidBtn": true,
+    "onAnswer": false
+   },
+   "aid": {
+    "open": false,
+    "kind": null,
+    "numline": false,
+    "apples": 0,
+    "startRing": false
+   },
+   "btns": [
+    {
+     "i": "0",
+     "txt": "3",
+     "cls": "ans",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "txt": "8",
+     "cls": "ans",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "txt": "5",
+     "cls": "ans",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "final_4_1": {
+   "lv": {
+    "flat": 15,
+    "step": 5,
+    "retries": 5,
+    "done": true
+   },
+   "q": null,
+   "tut": "none",
+   "ghost": {
+    "show": false,
+    "pressing": false,
+    "onAidBtn": true,
+    "onAnswer": null
+   },
+   "aid": {
+    "open": false,
+    "kind": null,
+    "numline": false,
+    "apples": 0,
+    "startRing": false
+   },
+   "btns": [
+    {
+     "i": "0",
+     "txt": "18",
+     "cls": "ans shake wrong",
+     "pe": "none",
+     "op": "0.55"
+    },
+    {
+     "i": "1",
+     "txt": "20",
+     "cls": "ans",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "txt": "19",
+     "cls": "ans pulse right",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "obs": {
+   "obs": [
+    {
+     "t": 2403,
+     "ev": "ghost-class",
+     "cls": "show",
+     "show": true,
+     "pressing": false
+    },
+    {
+     "t": 3261,
+     "ev": "ghost-class",
+     "cls": "show pressing",
+     "show": true,
+     "pressing": true
+    },
+    {
+     "t": 5952,
+     "ev": "ghost-class",
+     "cls": "show pressing",
+     "show": true,
+     "pressing": true
+    },
+    {
+     "t": 11532,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 17024,
+     "ev": "ghost-class",
+     "cls": "show",
+     "show": true,
+     "pressing": false
+    },
+    {
+     "t": 21067,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 33278,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 35916,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 100559,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 103183,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 103278,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 148146,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    }
+   ],
+   "voice": [
+    {
+     "t": 4735,
+     "key": "mat_tut_turn",
+     "text": "你来算一算"
+    },
+    {
+     "t": 35916,
+     "key": "mat_hint",
+     "text": "数一数，再选答案"
+    },
+    {
+     "t": 44338,
+     "key": "mat_hint",
+     "text": "数一数，再选答案"
+    },
+    {
+     "t": 51645,
+     "key": "mat_hint",
+     "text": "数一数，再选答案"
+    },
+    {
+     "t": 54981,
+     "key": "mat_hint",
+     "text": "数一数，再选答案"
+    },
+    {
+     "t": 90025,
+     "key": "mat_hint",
+     "text": "数一数，再选答案"
+    },
+    {
+     "t": 103183,
+     "key": "mat_hint",
+     "text": "数一数，再选答案"
+    }
+   ],
+   "clicks": [
+    {
+     "t": 1750,
+     "x": 360,
+     "y": 585
+    },
+    {
+     "t": 11530,
+     "x": 81,
+     "y": 712
+    },
+    {
+     "t": 21064,
+     "x": 512,
+     "y": 585
+    },
+    {
+     "t": 23510,
+     "x": 360,
+     "y": 585
+    },
+    {
+     "t": 26684,
+     "x": 664,
+     "y": 585
+    },
+    {
+     "t": 29577,
+     "x": 664,
+     "y": 585
+    },
+    {
+     "t": 32452,
+     "x": 664,
+     "y": 585
+    },
+    {
+     "t": 39855,
+     "x": 664,
+     "y": 585
+    },
+    {
+     "t": 44334,
+     "x": 360,
+     "y": 585
+    },
+    {
+     "t": 48126,
+     "x": 512,
+     "y": 585
+    },
+    {
+     "t": 51642,
+     "x": 512,
+     "y": 585
+    },
+    {
+     "t": 54977,
+     "x": 664,
+     "y": 585
+    },
+    {
+     "t": 56060,
+     "x": 512,
+     "y": 585
+    },
+    {
+     "t": 69575,
+     "x": 360,
+     "y": 585
+    },
+    {
+     "t": 95551,
+     "x": 360,
+     "y": 585
+    },
+    {
+     "t": 99735,
+     "x": 664,
+     "y": 585
+    },
+    {
+     "t": 105814,
+     "x": 360,
+     "y": 585
+    },
+    {
+     "t": 109026,
+     "x": 512,
+     "y": 585
+    },
+    {
+     "t": 120156,
+     "x": 81,
+     "y": 712
+    },
+    {
+     "t": 125560,
+     "x": 664,
+     "y": 585
+    },
+    {
+     "t": 130675,
+     "x": 512,
+     "y": 585
+    },
+    {
+     "t": 135228,
+     "x": 360,
+     "y": 585
+    },
+    {
+     "t": 138694,
+     "x": 664,
+     "y": 585
+    },
+    {
+     "t": 139867,
+     "x": 360,
+     "y": 585
+    },
+    {
+     "t": 140287,
+     "x": 512,
+     "y": 585
+    },
+    {
+     "t": 143317,
+     "x": 360,
+     "y": 585
+    },
+    {
+     "t": 147314,
+     "x": 664,
+     "y": 585
+    }
+   ]
+  }
+ },
+ "pattern": {
+  "game": "pattern",
+  "events": [
+   {
+    "ev": "tut_mid_click",
+    "game": "pattern",
+    "at_s": 1.09,
+    "target_i": 0,
+    "after": {
+     "tut": "watch",
+     "idx": 0
+    },
+    "correct_now": 0
+   },
+   {
+    "ev": "q",
+    "flat": 1,
+    "qi": 0,
+    "seq": [
+     {
+      "shape": "drop",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "cushion",
+      "color": "yellow",
+      "count": 1
+     },
+     {
+      "shape": "drop",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "cushion",
+      "color": "yellow",
+      "count": 1
+     },
+     null
+    ],
+    "items": [
+     {
+      "shape": "drop",
+      "color": "purple",
+      "count": 1
+     },
+     {
+      "shape": "drop",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     }
+    ],
+    "answerIdx": 1
+   },
+   {
+    "ev": "chaos_during_correct",
+    "flat": 1,
+    "qi_before": 0,
+    "qi_after": 1,
+    "advanced_by": 1,
+    "snap": {
+     "lv": {
+      "flat": 1,
+      "qi": 1,
+      "quizCount": 3,
+      "misses": 1,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "ball",
+        "color": "blue",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "heart",
+       "color": "blue",
+       "count": 1
+      },
+      "missingIdx": 5,
+      "answerIdx": 0
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "q",
+    "flat": 1,
+    "qi": 1,
+    "seq": [
+     {
+      "shape": "drop",
+      "color": "purple",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "blue",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "blue",
+      "count": 1
+     },
+     {
+      "shape": "drop",
+      "color": "purple",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "blue",
+      "count": 1
+     },
+     null
+    ],
+    "items": [
+     {
+      "shape": "heart",
+      "color": "blue",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "ball",
+      "color": "blue",
+      "count": 1
+     }
+    ],
+    "answerIdx": 0
+   },
+   {
+    "ev": "wrong_once",
+    "flat": 1,
+    "qi": 1,
+    "picked": 1,
+    "snap_instant": {
+     "lv": {
+      "flat": 1,
+      "qi": 1,
+      "quizCount": 3,
+      "misses": 2,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "ball",
+        "color": "blue",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "heart",
+       "color": "blue",
+       "count": 1
+      },
+      "missingIdx": 5,
+      "answerIdx": 0
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice reveal",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "choice wrong",
+       "pe": "none",
+       "op": "0.5"
+      },
+      {
+       "i": "2",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 1,
+      "qi": 1,
+      "quizCount": 3,
+      "misses": 2,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "ball",
+        "color": "blue",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "heart",
+       "color": "blue",
+       "count": 1
+      },
+      "missingIdx": 5,
+      "answerIdx": 0
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "choice wrong",
+       "pe": "none",
+       "op": "0.5"
+      },
+      {
+       "i": "2",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "q",
+    "flat": 1,
+    "qi": 2,
+    "seq": [
+     {
+      "shape": "heart",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "star",
+      "color": "red",
+      "count": 1
+     },
+     {
+      "shape": "star",
+      "color": "red",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "star",
+      "color": "red",
+      "count": 1
+     },
+     null
+    ],
+    "items": [
+     {
+      "shape": "star",
+      "color": "red",
+      "count": 1
+     },
+     {
+      "shape": "ball",
+      "color": "red",
+      "count": 1
+     },
+     {
+      "shape": "star",
+      "color": "yellow",
+      "count": 1
+     }
+    ],
+    "answerIdx": 0
+   },
+   {
+    "ev": "idle_20s_voice",
+    "flat": 1,
+    "voices_before": 2,
+    "new_voice": [
+     {
+      "t": 66021,
+      "key": "pat_hint",
+      "text": "看看前面的图案"
+     }
+    ],
+    "snap": {
+     "lv": {
+      "flat": 1,
+      "qi": 2,
+      "quizCount": 3,
+      "misses": 2,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "heart",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "star",
+        "color": "red",
+        "count": 1
+       },
+       {
+        "shape": "star",
+        "color": "red",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "star",
+        "color": "red",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "star",
+        "color": "red",
+        "count": 1
+       },
+       {
+        "shape": "ball",
+        "color": "red",
+        "count": 1
+       },
+       {
+        "shape": "star",
+        "color": "yellow",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "star",
+       "color": "red",
+       "count": 1
+      },
+      "missingIdx": 5,
+      "answerIdx": 0
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "q",
+    "flat": 1,
+    "qi": 3,
+    "seq": [
+     {
+      "shape": "heart",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "star",
+      "color": "red",
+      "count": 1
+     },
+     {
+      "shape": "star",
+      "color": "red",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "star",
+      "color": "red",
+      "count": 1
+     },
+     null
+    ],
+    "items": [
+     {
+      "shape": "star",
+      "color": "red",
+      "count": 1
+     },
+     {
+      "shape": "ball",
+      "color": "red",
+      "count": 1
+     },
+     {
+      "shape": "star",
+      "color": "yellow",
+      "count": 1
+     }
+    ],
+    "answerIdx": 0
+   },
+   {
+    "ev": "q",
+    "flat": 10,
+    "qi": 0,
+    "seq": [
+     {
+      "shape": "cushion",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "ball",
+      "color": "blue",
+      "count": 1
+     },
+     {
+      "shape": "cushion",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "ball",
+      "color": "blue",
+      "count": 1
+     },
+     null
+    ],
+    "items": [
+     {
+      "shape": "cushion",
+      "color": "yellow",
+      "count": 1
+     },
+     {
+      "shape": "cushion",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "green",
+      "count": 1
+     }
+    ],
+    "answer": {
+     "shape": "cushion",
+     "color": "green",
+     "count": 1
+    },
+    "answerIdx": 1
+   },
+   {
+    "ev": "wrong_onedim_seq1",
+    "flat": 10,
+    "qi": 0,
+    "picked": 0,
+    "picked_item": {
+     "shape": "cushion",
+     "color": "yellow",
+     "count": 1
+    },
+    "snap_instant": {
+     "lv": {
+      "flat": 10,
+      "qi": 0,
+      "quizCount": 4,
+      "misses": 1,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "cushion",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "ball",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "cushion",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "ball",
+        "color": "blue",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "cushion",
+        "color": "yellow",
+        "count": 1
+       },
+       {
+        "shape": "cushion",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "green",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "cushion",
+       "color": "green",
+       "count": 1
+      },
+      "missingIdx": 4,
+      "answerIdx": 1
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": true
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice wrong",
+       "pe": "none",
+       "op": "0.5"
+      },
+      {
+       "i": "1",
+       "cls": "choice reveal",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 10,
+      "qi": 0,
+      "quizCount": 4,
+      "misses": 1,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "cushion",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "ball",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "cushion",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "ball",
+        "color": "blue",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "cushion",
+        "color": "yellow",
+        "count": 1
+       },
+       {
+        "shape": "cushion",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "green",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "cushion",
+       "color": "green",
+       "count": 1
+      },
+      "missingIdx": 4,
+      "answerIdx": 1
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": true
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice wrong",
+       "pe": "none",
+       "op": "0.5"
+      },
+      {
+       "i": "1",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "wrong_onedim_seq2",
+    "flat": 10,
+    "qi": 0,
+    "picked": 2,
+    "picked_item": {
+     "shape": "heart",
+     "color": "green",
+     "count": 1
+    },
+    "snap_instant": {
+     "lv": {
+      "flat": 10,
+      "qi": 0,
+      "quizCount": 4,
+      "misses": 2,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "cushion",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "ball",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "cushion",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "ball",
+        "color": "blue",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "cushion",
+        "color": "yellow",
+        "count": 1
+       },
+       {
+        "shape": "cushion",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "green",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "cushion",
+       "color": "green",
+       "count": 1
+      },
+      "missingIdx": 4,
+      "answerIdx": 1
+     },
+     "tut": "none",
+     "ghost": {
+      "show": true,
+      "pressing": true,
+      "onAnswer": true
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice wrong",
+       "pe": "none",
+       "op": "0.5"
+      },
+      {
+       "i": "1",
+       "cls": "choice reveal",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "choice wrong",
+       "pe": "none",
+       "op": "0.5"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 10,
+      "qi": 0,
+      "quizCount": 4,
+      "misses": 2,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "cushion",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "ball",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "cushion",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "ball",
+        "color": "blue",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "cushion",
+        "color": "yellow",
+        "count": 1
+       },
+       {
+        "shape": "cushion",
+        "color": "green",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "green",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "cushion",
+       "color": "green",
+       "count": 1
+      },
+      "missingIdx": 4,
+      "answerIdx": 1
+     },
+     "tut": "none",
+     "ghost": {
+      "show": true,
+      "pressing": true,
+      "onAnswer": true
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice wrong",
+       "pe": "none",
+       "op": "0.5"
+      },
+      {
+       "i": "1",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "choice wrong",
+       "pe": "none",
+       "op": "0.5"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "rescue_watch_10s",
+    "flat": 10,
+    "qi": 0,
+    "samples": [
+     {
+      "s": 1,
+      "ghost": {
+       "show": true,
+       "pressing": true,
+       "onAnswer": true
+      },
+      "voices": 4,
+      "answer_cls": "choice"
+     },
+     {
+      "s": 2,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": true
+      },
+      "voices": 4,
+      "answer_cls": "choice"
+     },
+     {
+      "s": 3,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": true
+      },
+      "voices": 4,
+      "answer_cls": "choice"
+     },
+     {
+      "s": 4,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": true
+      },
+      "voices": 4,
+      "answer_cls": "choice"
+     },
+     {
+      "s": 5,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": true
+      },
+      "voices": 4,
+      "answer_cls": "choice"
+     },
+     {
+      "s": 6,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": true
+      },
+      "voices": 4,
+      "answer_cls": "choice"
+     },
+     {
+      "s": 7,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": true
+      },
+      "voices": 4,
+      "answer_cls": "choice"
+     },
+     {
+      "s": 8,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": true
+      },
+      "voices": 4,
+      "answer_cls": "choice"
+     },
+     {
+      "s": 9,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": true
+      },
+      "voices": 4,
+      "answer_cls": "choice"
+     },
+     {
+      "s": 10,
+      "ghost": {
+       "show": false,
+       "pressing": false,
+       "onAnswer": true
+      },
+      "voices": 4,
+      "answer_cls": "choice"
+     }
+    ]
+   },
+   {
+    "ev": "dead_click_greyed",
+    "flat": 10,
+    "misses_before": 2,
+    "misses_after": 2,
+    "grey_choice_computed": {
+     "i": "0",
+     "cls": "choice wrong",
+     "pe": "none",
+     "op": "0.5"
+    }
+   },
+   {
+    "ev": "recover_after_rescue",
+    "flat": 10,
+    "snap": {
+     "lv": {
+      "flat": 10,
+      "qi": 1,
+      "quizCount": 4,
+      "misses": 2,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "flower",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "drop",
+        "color": "orange",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "drop",
+       "color": "purple",
+       "count": 1
+      },
+      "missingIdx": 4,
+      "answerIdx": 0
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "q",
+    "flat": 10,
+    "qi": 1,
+    "seq": [
+     {
+      "shape": "drop",
+      "color": "purple",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "blue",
+      "count": 1
+     },
+     {
+      "shape": "drop",
+      "color": "purple",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "blue",
+      "count": 1
+     },
+     null
+    ],
+    "items": [
+     {
+      "shape": "drop",
+      "color": "purple",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "purple",
+      "count": 1
+     },
+     {
+      "shape": "drop",
+      "color": "orange",
+      "count": 1
+     }
+    ],
+    "answer": {
+     "shape": "drop",
+     "color": "purple",
+     "count": 1
+    },
+    "answerIdx": 0
+   },
+   {
+    "ev": "wrong_onedim_60pct",
+    "flat": 10,
+    "qi": 1,
+    "picked": 2,
+    "picked_item": {
+     "shape": "drop",
+     "color": "orange",
+     "count": 1
+    },
+    "snap_instant": {
+     "lv": {
+      "flat": 10,
+      "qi": 1,
+      "quizCount": 4,
+      "misses": 3,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "flower",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "drop",
+        "color": "orange",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "drop",
+       "color": "purple",
+       "count": 1
+      },
+      "missingIdx": 4,
+      "answerIdx": 0
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice reveal",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "choice wrong",
+       "pe": "none",
+       "op": "0.5"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 10,
+      "qi": 1,
+      "quizCount": 4,
+      "misses": 3,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "heart",
+        "color": "blue",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "drop",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "flower",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "drop",
+        "color": "orange",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "drop",
+       "color": "purple",
+       "count": 1
+      },
+      "missingIdx": 4,
+      "answerIdx": 0
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "1",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "choice wrong",
+       "pe": "none",
+       "op": "0.5"
+      }
+     ]
+    }
+   },
+   {
+    "ev": "q",
+    "flat": 10,
+    "qi": 2,
+    "seq": [
+     {
+      "shape": "flower",
+      "color": "purple",
+      "count": 1
+     },
+     {
+      "shape": "cushion",
+      "color": "yellow",
+      "count": 1
+     },
+     null,
+     {
+      "shape": "cushion",
+      "color": "yellow",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "purple",
+      "count": 1
+     }
+    ],
+    "items": [
+     {
+      "shape": "flower",
+      "color": "purple",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "drop",
+      "color": "purple",
+      "count": 1
+     }
+    ],
+    "answer": {
+     "shape": "flower",
+     "color": "purple",
+     "count": 1
+    },
+    "answerIdx": 0
+   },
+   {
+    "ev": "q",
+    "flat": 10,
+    "qi": 3,
+    "seq": [
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "star",
+      "color": "red",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "star",
+      "color": "red",
+      "count": 1
+     },
+     null
+    ],
+    "items": [
+     {
+      "shape": "drop",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "purple",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     }
+    ],
+    "answer": {
+     "shape": "flower",
+     "color": "orange",
+     "count": 1
+    },
+    "answerIdx": 2
+   },
+   {
+    "ev": "wrong_onedim_60pct",
+    "flat": 10,
+    "qi": 3,
+    "picked": 0,
+    "picked_item": {
+     "shape": "drop",
+     "color": "orange",
+     "count": 1
+    },
+    "snap_instant": {
+     "lv": {
+      "flat": 10,
+      "qi": 3,
+      "quizCount": 4,
+      "misses": 4,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "flower",
+        "color": "orange",
+        "count": 1
+       },
+       {
+        "shape": "star",
+        "color": "red",
+        "count": 1
+       },
+       {
+        "shape": "flower",
+        "color": "orange",
+        "count": 1
+       },
+       {
+        "shape": "star",
+        "color": "red",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "drop",
+        "color": "orange",
+        "count": 1
+       },
+       {
+        "shape": "flower",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "flower",
+        "color": "orange",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "flower",
+       "color": "orange",
+       "count": 1
+      },
+      "missingIdx": 4,
+      "answerIdx": 2
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice wrong",
+       "pe": "none",
+       "op": "0.5"
+      },
+      {
+       "i": "1",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "choice reveal",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    },
+    "snap": {
+     "lv": {
+      "flat": 10,
+      "qi": 3,
+      "quizCount": 4,
+      "misses": 4,
+      "won": false
+     },
+     "q": {
+      "seq": [
+       {
+        "shape": "flower",
+        "color": "orange",
+        "count": 1
+       },
+       {
+        "shape": "star",
+        "color": "red",
+        "count": 1
+       },
+       {
+        "shape": "flower",
+        "color": "orange",
+        "count": 1
+       },
+       {
+        "shape": "star",
+        "color": "red",
+        "count": 1
+       },
+       null
+      ],
+      "items": [
+       {
+        "shape": "drop",
+        "color": "orange",
+        "count": 1
+       },
+       {
+        "shape": "flower",
+        "color": "purple",
+        "count": 1
+       },
+       {
+        "shape": "flower",
+        "color": "orange",
+        "count": 1
+       }
+      ],
+      "answer": {
+       "shape": "flower",
+       "color": "orange",
+       "count": 1
+      },
+      "missingIdx": 4,
+      "answerIdx": 2
+     },
+     "tut": "none",
+     "ghost": {
+      "show": false,
+      "pressing": false,
+      "onAnswer": false
+     },
+     "leadCards": [],
+     "choices": [
+      {
+       "i": "0",
+       "cls": "choice wrong",
+       "pe": "none",
+       "op": "0.5"
+      },
+      {
+       "i": "1",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      },
+      {
+       "i": "2",
+       "cls": "choice",
+       "pe": "auto",
+       "op": "1"
+      }
+     ]
+    }
+   }
+  ],
+  "notes": [],
+  "console_errors": [],
+  "tut_timeline": [
+   {
+    "s": 0.01,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.16,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.31,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.47,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.62,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.78,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 0.93,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 1.09,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 1.54,
+    "tut": "watch",
+    "idx": 0,
+    "ghost": false
+   },
+   {
+    "s": 1.7,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 1.85,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 2.0,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 2.16,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 2.31,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 2.47,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 2.62,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 2.78,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 2.93,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 3.08,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 3.24,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 3.39,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 3.55,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 3.7,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 3.85,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 4.01,
+    "tut": "watch",
+    "idx": 1,
+    "ghost": false
+   },
+   {
+    "s": 4.16,
+    "tut": "help",
+    "idx": 0,
+    "ghost": false
+   }
+  ],
+  "tut_help_entry": {
+   "lv": {
+    "flat": 0,
+    "qi": 0,
+    "quizCount": 3,
+    "misses": 0,
+    "won": false
+   },
+   "q": {
+    "seq": [
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "blue",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "blue",
+      "count": 1
+     },
+     null
+    ],
+    "items": [
+     {
+      "shape": "drop",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "purple",
+      "count": 1
+     }
+    ],
+    "answer": {
+     "shape": "flower",
+     "color": "orange",
+     "count": 1
+    },
+    "missingIdx": 4,
+    "answerIdx": 1
+   },
+   "tut": "help",
+   "ghost": {
+    "show": false,
+    "pressing": false,
+    "onAnswer": false
+   },
+   "leadCards": [
+    "0",
+    "1",
+    "2"
+   ],
+   "choices": [
+    {
+     "i": "0",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "tut_help_after6s": {
+   "lv": {
+    "flat": 0,
+    "qi": 0,
+    "quizCount": 3,
+    "misses": 0,
+    "won": false
+   },
+   "q": {
+    "seq": [
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "blue",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "blue",
+      "count": 1
+     },
+     null
+    ],
+    "items": [
+     {
+      "shape": "drop",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "purple",
+      "count": 1
+     }
+    ],
+    "answer": {
+     "shape": "flower",
+     "color": "orange",
+     "count": 1
+    },
+    "missingIdx": 4,
+    "answerIdx": 1
+   },
+   "tut": "help",
+   "ghost": {
+    "show": true,
+    "pressing": true,
+    "onAnswer": true
+   },
+   "leadCards": [
+    "0",
+    "1",
+    "2"
+   ],
+   "choices": [
+    {
+     "i": "0",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "tut_solo_check": {
+   "lv": {
+    "flat": 0,
+    "qi": 1,
+    "quizCount": 3,
+    "misses": 0,
+    "won": false
+   },
+   "q": {
+    "seq": [
+     {
+      "shape": "heart",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "drop",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "drop",
+      "color": "orange",
+      "count": 1
+     },
+     null
+    ],
+    "items": [
+     {
+      "shape": "heart",
+      "color": "blue",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "cushion",
+      "color": "green",
+      "count": 1
+     }
+    ],
+    "answer": {
+     "shape": "heart",
+     "color": "green",
+     "count": 1
+    },
+    "missingIdx": 4,
+    "answerIdx": 1
+   },
+   "tut": "solo",
+   "ghost": {
+    "show": false,
+    "pressing": false,
+    "onAnswer": true
+   },
+   "leadCards": [],
+   "choices": [
+    {
+     "i": "0",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "t_1_0_done": 0.0,
+  "t_1_1_done": 0.0,
+  "dual_flat": 10,
+  "dual_start": {
+   "lv": {
+    "flat": 10,
+    "qi": 0,
+    "quizCount": 4,
+    "misses": 0,
+    "won": false
+   },
+   "q": {
+    "seq": [
+     {
+      "shape": "cushion",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "ball",
+      "color": "blue",
+      "count": 1
+     },
+     {
+      "shape": "cushion",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "ball",
+      "color": "blue",
+      "count": 1
+     },
+     null
+    ],
+    "items": [
+     {
+      "shape": "cushion",
+      "color": "yellow",
+      "count": 1
+     },
+     {
+      "shape": "cushion",
+      "color": "green",
+      "count": 1
+     },
+     {
+      "shape": "heart",
+      "color": "green",
+      "count": 1
+     }
+    ],
+    "answer": {
+     "shape": "cushion",
+     "color": "green",
+     "count": 1
+    },
+    "missingIdx": 4,
+    "answerIdx": 1
+   },
+   "tut": "none",
+   "ghost": {
+    "show": false,
+    "pressing": false,
+    "onAnswer": true
+   },
+   "leadCards": [],
+   "choices": [
+    {
+     "i": "0",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "1",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "final_dual": {
+   "lv": {
+    "flat": 10,
+    "qi": 4,
+    "quizCount": 4,
+    "misses": 4,
+    "won": true
+   },
+   "q": {
+    "seq": [
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "star",
+      "color": "red",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "star",
+      "color": "red",
+      "count": 1
+     },
+     null
+    ],
+    "items": [
+     {
+      "shape": "drop",
+      "color": "orange",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "purple",
+      "count": 1
+     },
+     {
+      "shape": "flower",
+      "color": "orange",
+      "count": 1
+     }
+    ],
+    "answer": {
+     "shape": "flower",
+     "color": "orange",
+     "count": 1
+    },
+    "missingIdx": 4,
+    "answerIdx": 2
+   },
+   "tut": "none",
+   "ghost": {
+    "show": false,
+    "pressing": false,
+    "onAnswer": false
+   },
+   "leadCards": [],
+   "choices": [
+    {
+     "i": "0",
+     "cls": "choice wrong",
+     "pe": "none",
+     "op": "0.5"
+    },
+    {
+     "i": "1",
+     "cls": "choice",
+     "pe": "auto",
+     "op": "1"
+    },
+    {
+     "i": "2",
+     "cls": "choice right",
+     "pe": "auto",
+     "op": "1"
+    }
+   ]
+  },
+  "obs": {
+   "obs": [
+    {
+     "t": 5170,
+     "ev": "ghost-class",
+     "cls": "show",
+     "show": true,
+     "pressing": false
+    },
+    {
+     "t": 5970,
+     "ev": "ghost-class",
+     "cls": "show pressing",
+     "show": true,
+     "pressing": true
+    },
+    {
+     "t": 14862,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 26116,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 28753,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 73512,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 76135,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 79709,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 86798,
+     "ev": "ghost-class",
+     "cls": "show",
+     "show": true,
+     "pressing": false
+    },
+    {
+     "t": 87199,
+     "ev": "ghost-class",
+     "cls": "show pressing",
+     "show": true,
+     "pressing": true
+    },
+    {
+     "t": 90399,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    },
+    {
+     "t": 128057,
+     "ev": "ghost-class",
+     "cls": "",
+     "show": false,
+     "pressing": false
+    }
+   ],
+   "voice": [
+    {
+     "t": 3751,
+     "key": "pat_tut_turn",
+     "text": "你来接着摆"
+    },
+    {
+     "t": 28753,
+     "key": "pat_hint",
+     "text": "看看前面的图案"
+    },
+    {
+     "t": 66021,
+     "key": "pat_hint",
+     "text": "看看前面的图案"
+    },
+    {
+     "t": 76134,
+     "key": "pat_hint",
+     "text": "看看前面的图案"
+    }
+   ],
+   "clicks": [
+    {
+     "t": 1291,
+     "x": 346,
+     "y": 566
+    },
+    {
+     "t": 12894,
+     "x": 512,
+     "y": 566
+    },
+    {
+     "t": 18903,
+     "x": 512,
+     "y": 566
+    },
+    {
+     "t": 24146,
+     "x": 678,
+     "y": 566
+    },
+    {
+     "t": 29028,
+     "x": 678,
+     "y": 566
+    },
+    {
+     "t": 34614,
+     "x": 512,
+     "y": 566
+    },
+    {
+     "t": 35148,
+     "x": 346,
+     "y": 566
+    },
+    {
+     "t": 35665,
+     "x": 678,
+     "y": 566
+    },
+    {
+     "t": 41133,
+     "x": 512,
+     "y": 566
+    },
+    {
+     "t": 45775,
+     "x": 346,
+     "y": 566
+    },
+    {
+     "t": 71391,
+     "x": 346,
+     "y": 566
+    },
+    {
+     "t": 77291,
+     "x": 346,
+     "y": 566
+    },
+    {
+     "t": 82793,
+     "x": 346,
+     "y": 566
+    },
+    {
+     "t": 86795,
+     "x": 678,
+     "y": 566
+    },
+    {
+     "t": 98839,
+     "x": 346,
+     "y": 566
+    },
+    {
+     "t": 101622,
+     "x": 512,
+     "y": 566
+    },
+    {
+     "t": 105826,
+     "x": 678,
+     "y": 566
+    },
+    {
+     "t": 111188,
+     "x": 346,
+     "y": 566
+    },
+    {
+     "t": 116898,
+     "x": 346,
+     "y": 566
+    },
+    {
+     "t": 121595,
+     "x": 346,
+     "y": 566
+    },
+    {
+     "t": 126096,
+     "x": 678,
+     "y": 566
+    }
+   ]
+  }
+ }
+}

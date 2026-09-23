@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小兔子的游戏屋 · 最后三款新游戏</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#FBF3E4;color:#4A3B2E;font-family:system-ui,-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+       min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;padding:34px 22px}
+  .logo{width:150px;height:150px}
+  h1{font-size:clamp(26px,5vw,38px);letter-spacing:.05em}
+  .ageband{display:inline-flex;align-items:center;gap:8px;background:#E8975A;color:#fff;font-size:16px;font-weight:700;
+           padding:7px 18px;border-radius:999px;letter-spacing:.04em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:24px;width:100%;max-width:760px}
+  a.card{display:flex;flex-direction:column;align-items:center;gap:14px;padding:28px 16px 24px;border-radius:26px;
+         background:#FFF9EE;border:2.5px solid #4A3B2E;text-decoration:none;color:#4A3B2E;
+         box-shadow:0 5px 0 #D8C9B4;transition:transform .2s}
+  a.card:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+  @media (hover:hover){
+    a.card:hover{transform:translateY(-4px);box-shadow:0 9px 0 #D8C9B4}
+  }
+  .card .icon{width:92px;height:92px}
+  .card .name{font-size:22px;font-weight:700}
+  .card .desc{font-size:14px;color:#8A7B6C;line-height:1.6;text-align:center}
+  .foot{font-size:12.5px;color:#8A7B6C;text-align:center;line-height:1.8;max-width:520px}
+</style>
+</head>
+<body>
+  <div class="logo" id="logo"></div>
+  <h1>小兔子的游戏屋 · 最后三款新游戏</h1>
+  <div class="ageband">★ 5-6 岁 · 启蒙伙伴 ★</div>
+  <div class="grid">
+    <a class="card" href="babylove/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="32" cy="38" rx="14" ry="11" fill="#8FD0A0" stroke="#4A3B2E" stroke-width="2.4"/>
+        <circle cx="27" cy="35" r="2" fill="#4A3B2E"/>
+        <circle cx="36" cy="35" r="2" fill="#4A3B2E"/>
+        <path d="M30 41 q3 2.5 6 0" stroke="#4A3B2E" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        <path d="M26 27 q-1 -7 4 -7 M34 27 q1 -7 -4 -7" stroke="#8FD0A0" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle cx="28" cy="19" r="2.4" fill="#8FD0A0"/>
+        <circle cx="38" cy="17" r="2.4" fill="#8FD0A0"/>
+        <ellipse cx="72" cy="66" rx="16" ry="12" fill="#5FB376" stroke="#4A3B2E" stroke-width="2.4"/>
+        <circle cx="66" cy="62" r="2.2" fill="#4A3B2E"/>
+        <circle cx="76" cy="62" r="2.2" fill="#4A3B2E"/>
+        <path d="M69 70 q4 3 8 0" stroke="#4A3B2E" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        <path d="M56 60 q-12 -4 -10 8 M84 60 q12 -4 10 8" stroke="#5FB376" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+        <path d="M46 48 q5 3 10 1 M64 52 q5 4 11 3" stroke="#E8975A" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-dasharray="1 4"/>
+      </svg></div>
+      <div class="name">动物宝宝找妈妈</div>
+      <div class="desc">小蝌蚪的妈妈是谁<br>帮宝宝找妈妈</div>
+    </a>
+    <a class="card" href="storybed/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 22 q16 -7 32 0 v50 q-16 -7 -32 0 z" fill="#FFF9EE" stroke="#4A3B2E" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M82 22 q-16 -7 -32 0 v50 q16 -7 32 0 z" fill="#FDEBD2" stroke="#4A3B2E" stroke-width="2.5" stroke-linejoin="round"/>
+        <g stroke="#8A7B6C" stroke-width="2.4" stroke-linecap="round">
+          <path d="M26 34 h16"/><path d="M26 43 h16"/><path d="M26 52 h10"/>
+        </g>
+        <text x="62" y="40" font-size="15" font-weight="700" fill="#7FB3E0" font-family="Arial">1</text>
+        <text x="62" y="58" font-size="15" font-weight="700" fill="#E8975A" font-family="Arial">2</text>
+        <text x="62" y="76" font-size="15" font-weight="700" fill="#9CC288" font-family="Arial">3</text>
+        <path d="M66 34 h8 v18 h8" stroke="#E05A5A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M26 66 q3 3 6 0 M34 66 q3 3 6 0" stroke="#4A3B2E" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        <path d="M28 72 q5 4 10 0" stroke="#4A3B2E" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      </svg></div>
+      <div class="name">晚安故事序</div>
+      <div class="desc">先刷牙还是先洗脸<br>把事情排排队</div>
+    </a>
+    <a class="card" href="maze/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="12" y="12" width="76" height="76" rx="8" fill="#FFF9EE" stroke="#4A3B2E" stroke-width="2.6"/>
+        <g stroke="#4A3B2E" stroke-width="3" stroke-linecap="round">
+          <path d="M28 12 v18 M28 44 v14 M12 58 h16 M44 30 v28 M44 30 h18 M62 58 v14 M62 88 v-0.1 M80 44 v28 M44 72 h18"/>
+        </g>
+        <ellipse cx="22" cy="26" rx="5" ry="6" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="1.8"/>
+        <circle cx="20.4" cy="25" r="1" fill="#4A3B2E"/><circle cx="24" cy="25" r="1" fill="#4A3B2E"/>
+        <path d="M18.6 29 q3.4 2.6 6.8 0" stroke="#4A3B2E" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M70 68 l10 4 -10 4 M74 66 v12" stroke="#E8975A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 40 q2 6 0 12 M34 66 q6 0 6 0" stroke="#9CC288" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="1 4"/>
+      </svg></div>
+      <div class="name">迷宫探险</div>
+      <div class="desc">点格子走迷宫<br>帮小兔子吃萝卜</div>
+    </a>
+  </div>
+    <p class="foot">每天有新关卡，玩完今天的小兔子会说"明天见"。<br>每款游戏右上角 🔒 家长面板：进度 / 时长 / 今日多玩关数。<br>完全离线，无广告无内购，进度保存在本机。</p>
+<script>
+/* 入口页不内嵌完整 core（无存档/会话需求），仅复用小兔子形象保持 IP 一致 */
+document.getElementById('logo').innerHTML = '<svg viewBox="0 0 120 120" width="150" height="150" xmlns="http://www.w3.org/2000/svg" fill="none"><ellipse cx="60" cy="96" rx="26" ry="12" fill="#EFE3CD"/><ellipse cx="45" cy="28" rx="10" ry="26" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5" transform="rotate(-10 45 28)"/><ellipse cx="45" cy="30" rx="4.5" ry="17" fill="#F2B8C6" transform="rotate(-10 45 30)"/><ellipse cx="76" cy="26" rx="10" ry="27" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5" transform="rotate(14 76 26)"/><ellipse cx="76" cy="28" rx="4.5" ry="18" fill="#F2B8C6" transform="rotate(14 76 28)"/><circle cx="60" cy="68" r="38" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5"/><ellipse cx="54" cy="56" rx="3" ry="2.2" fill="#D98A8A"/><ellipse cx="66" cy="56" rx="3" ry="2.2" fill="#D98A8A"/><ellipse cx="37" cy="74" rx="6.5" ry="4.5" fill="#F2B8C6" opacity=".8"/><ellipse cx="83" cy="74" rx="6.5" ry="4.5" fill="#F2B8C6" opacity=".8"/><path d="M44 62 q5 -7 10 0" stroke="#4A3B2E" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M66 62 q5 -7 10 0" stroke="#4A3B2E" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M55 74 q5 6 10 0" stroke="#4A3B2E" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="18" cy="55" r="9" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5"/></svg>';
+</script>
+</body>
+</html>

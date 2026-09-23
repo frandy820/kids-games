@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>贺卡工坊</title>
+<style>
+/* ================= crd 贺卡工坊（batch39）=================
+   家族基调：暖米底 #FBF6EC、暖橙主色 #E8975A、暖棕描边 #4A3B2E。
+   玩法 = 给小兔子做贺卡（SPEC-BATCH39 §0.94/§1，5-6 岁降坡·艺术/语言）：
+   每题=做一张完整贺卡——题内 nstage 连选（ch1-2 两步：底纹+贴纸 /
+   ch3-4 三步：+祝福语图卡），主题句 keyless TTS 播报（「给小兔子做一张
+   生日贺卡」——say 非队列链，零文字依赖）；下方候选盘 3 枚（本主题契合 1+
+   同列异主题干扰 2）：选对=元素落位贺卡画布永久留存（.layer.placed
+   svg[data-el] DOM 断言——契约 M）+crd_right；选错=虚影抖动消散（不落位）
+   +crd_wrong+miss。卡完成=成品定格一拍+飞向小兔子收卡演出（朋友收卡开心）
+   +入贺卡集；每关 5 题=5 张卡。
+   防同质化（SPEC §1 声明）：vs 换装贴贴=自由装饰→主题契合判定（语义匹配）
+   +送出叙事；vs 规律画画=周期推理→主题语义匹配（认知域不同）；vs 感谢的话
+   =回应行为选择→多步组合创作——三重差异。
+   触摸目标：候选 ≥96×96（实测 ~104）；overflowX 恒 0。
+   好坏候选视觉同构（语义承载在图案+主题句，不靠颜色歧视）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:38px;height:38px;border-radius:11px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 38px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 贺卡集（已完成贺卡缩略——进度可见+关末成品展示） ---------- */
+#gallery{flex:0 0 40px;display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;max-width:640px;margin:2px auto 0;min-height:0}
+#gallery:empty{visibility:hidden}
+.gal-item{position:relative;width:32px;height:42px;flex:0 0 auto;border-radius:6px;
+  border:2px solid #E5CDA6;box-shadow:0 2px 0 #E0CBB2;
+  animation:gal-pop .45s ease backwards}
+.gal-item svg{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:74%;height:74%}
+@keyframes gal-pop{0%{transform:translateY(10px) scale(.7);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+#gallery.finale .gal-item{animation:gal-bounce .6s ease 2}
+@keyframes gal-bounce{0%,100%{transform:translateY(0)}45%{transform:translateY(-8px) scale(1.1)}}
+
+/* ---------- 舞台：贺卡画布（居中） ---------- */
+#stage{flex:1 1 auto;min-height:110px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:5px;overflow:hidden;padding:4px 12px}
+#cardwrap{position:relative;flex:0 0 auto;display:flex;align-items:center;justify-content:center;
+  padding:8px 12px;border-radius:24px;background:rgba(253,243,227,.55);
+  border:2px solid #EFE3CD}
+#card{position:relative;width:min(238px,42vw);height:min(318px,56vw);
+  background:#FFFDF7;border:3px solid #E5CDA6;border-radius:18px;overflow:hidden;
+  box-shadow:0 5px 0 #E0CBB2,inset 0 0 0 5px rgba(255,249,238,.6)}
+#card.enter{animation:card-in .45s ease}
+@keyframes card-in{0%{transform:translateY(18px) scale(.94);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+#card.wig{animation:card-wig .55s ease}
+@keyframes card-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-1.4deg)}75%{transform:rotate(1.4deg)}}
+/* 卡完成：成品定格一拍（闪亮微放大）→ 飞向左下小兔子（送出演出） */
+#card.finale{animation:card-fin .7s ease}
+@keyframes card-fin{0%{transform:scale(1)}45%{transform:scale(1.06)}100%{transform:scale(1.02)}}
+#card.fly{animation:card-fly .6s ease-in forwards}
+@keyframes card-fly{0%{transform:translate(0,0) scale(1.02) rotate(0);opacity:1}
+  100%{transform:translate(min(-36vw,-240px),34vh) scale(.12) rotate(-10deg);opacity:0}}
+/* 元素层：bg 底纹（全卡）/ st 贴纸（中部）/ wish 祝福语图卡（底部）
+   slot=待选虚线位（cur=当前步目标）；placed=已落位永久留存（svg[data-el]） */
+.layer{position:absolute}
+.layer[data-col="bg"]{inset:7px}
+.layer[data-col="bg"] svg{width:100%;height:100%}
+.layer[data-col="st"]{left:50%;top:44%;transform:translate(-50%,-50%);width:60%;height:44%}
+.layer[data-col="wish"]{left:50%;bottom:6%;transform:translateX(-50%);width:56%;height:22%}
+.layer[data-col="st"] svg,.layer[data-col="wish"] svg{width:100%;height:100%}
+.layer.slot{border:2.5px dashed #C9A87C;border-radius:14px;background:rgba(255,249,238,.35)}
+.layer.slot::before{content:"";position:absolute;left:50%;top:50%;width:26px;height:26px;
+  transform:translate(-50%,-50%);border:2.5px dashed #DCC9A8;border-radius:50%;opacity:.8}
+.layer.slot.cur{border-color:#E8975A;background:rgba(255,249,238,.6);
+  animation:slot-pulse 1.3s ease-in-out infinite}
+@keyframes slot-pulse{0%,100%{box-shadow:0 0 0 0 rgba(232,151,90,0)}50%{box-shadow:0 0 0 7px rgba(232,151,90,.28)}}
+.layer.placed{border:none;background:none;animation:none}
+.layer.placed::before{display:none}
+.layer.placed svg{animation:el-pop .55s cubic-bezier(.2,1.6,.4,1) backwards}
+@keyframes el-pop{0%{transform:scale(2) rotate(-12deg);opacity:0}
+  55%{transform:scale(.86) rotate(3deg);opacity:1}100%{transform:scale(1) rotate(0)}}
+/* 选错虚影：抖动消散不落位（JS 在 SHAKE_MS 后移除） */
+.layer .ghost{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  pointer-events:none;z-index:3;animation:ghost-out .95s ease forwards}
+.layer .ghost svg{width:100%;height:100%;filter:grayscale(.35);opacity:.55;animation:none}
+@keyframes ghost-out{0%{transform:translateX(0) scale(1.5);opacity:0}
+  18%{transform:translateX(0) scale(1);opacity:.8}
+  30%{transform:translateX(-7px) scale(1)}45%{transform:translateX(7px) scale(1)}
+  60%{transform:translateX(-5px) scale(1)}75%{transform:translateX(5px) scale(.96)}
+  100%{transform:translateY(4px) scale(.7);opacity:0}}
+#q-text{flex:0 0 auto;font-size:15px;letter-spacing:2px;color:#8A7B6C;padding:0 0 2px}
+
+/* ---------- 候选盘 3 枚（主答案目标 ≥96×96；三型同构描线卡） ---------- */
+#tray{flex:0 0 auto;display:flex;justify-content:center;align-items:flex-end;gap:22px;
+  width:100%;max-width:700px;padding:2px 14px 8px}
+#tray.wig{animation:try-wig .5s ease}
+@keyframes try-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-1.6deg)}75%{transform:rotate(1.6deg)}}
+#tray.bump{animation:try-bump .22s ease}
+@keyframes try-bump{0%,100%{transform:scale(1)}45%{transform:scale(.96)}}
+.pick-wrap{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  width:104px;min-height:104px;padding:4px 6px 6px;border-radius:20px;
+  background:#FFF9EE;border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  transition:transform .15s}
+.pick-wrap:active{transform:translateY(4px) scale(1.03);box-shadow:0 1px 0 #D8C9B4}
+.pick-wrap .art{width:80px;height:88px;pointer-events:none;display:flex;align-items:center;justify-content:center}
+.pick-wrap .art svg{width:100%;height:100%}
+/* 选对：候选闪亮一拍（演出层锚 .good——契约 M） */
+.pick-wrap.good{animation:pk-good 1.05s ease}
+@keyframes pk-good{0%{transform:scale(1)}35%{transform:scale(1.14) translateY(-8px)}100%{transform:scale(1)}}
+/* 选错：摇头（行为后果反馈，不羞辱） */
+.pick-wrap.bad{animation:pk-bad .5s ease}
+@keyframes pk-bad{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+/* 救援答案级：正确候选高亮呼吸 */
+.pick-wrap.breathe{animation:pk-hint 1.2s ease-in-out infinite}
+@keyframes pk-hint{0%,100%{box-shadow:0 5px 0 #D8C9B4}50%{box-shadow:0 5px 0 #D8C9B4,0 0 18px rgba(232,151,90,.95)}}
+/* 出场弹入 */
+.pick-wrap.pop{animation:pk-pop .45s ease backwards}
+@keyframes pk-pop{0%{transform:translateY(24px) scale(.86);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+
+/* ---------- 底栏 ---------- */
+#dock{position:relative;flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+/* 收卡演出：小兔子上方爱心飘起（朋友收卡开心） */
+#dock .love{position:absolute;left:52px;top:-6px;font-size:26px;color:#E86A8A;z-index:5;
+  pointer-events:none;animation:love-up .95s ease forwards}
+@keyframes love-up{0%{transform:translateY(0) scale(.6);opacity:0}
+  25%{transform:translateY(-10px) scale(1.15);opacity:1}
+  100%{transform:translateY(-44px) scale(.9);opacity:0}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（fixed 层，教学演示/帮共用；照家族形态） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:opacity .4s;transform:translate(-50%,-88%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-88%)}50%{transform:translate(-50%,-74%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：画布收紧+盘横排收窄
+   双通道（r9 M-A1/r11 M-1/r12 M3 同型定版）：@media 真竖屏 + body.port 类通道
+   （verify simView 横视口下类通道模拟竖屏——两段规则逐条等值，改必同步）；
+   .pick-wrap .art 横 80/竖 72=portStyle 固定尺寸判别锚（verify 断言）。 */
+@media (orientation:portrait){
+  #card{width:min(210px,40vw);height:min(280px,54vw)}
+  #tray{gap:14px;max-width:600px}
+  .pick-wrap{width:96px;min-height:96px}
+  .pick-wrap .art{width:72px;height:80px}
+  #gallery{max-width:520px}
+}
+body.port #card{width:min(210px,40vw);height:min(280px,54vw)}
+body.port #tray{gap:14px;max-width:600px}
+body.port .pick-wrap{width:96px;min-height:96px}
+body.port .pick-wrap .art{width:72px;height:80px}
+body.port #gallery{max-width:520px}
+</style>
+</head>
+<body>
+<div id="game" aria-label="贺卡工坊">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="gallery" aria-label="已做好的贺卡"></div>
+    <div id="cardwrap" aria-label="贺卡画布">
+      <div id="card"></div>
+    </div>
+    <div id="q-text" aria-hidden="true"></div>
+    <div id="tray" aria-label="选一样装饰放上贺卡"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

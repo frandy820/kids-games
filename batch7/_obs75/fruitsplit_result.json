@@ -1,0 +1,811 @@
+{
+ "game": "fruitsplit",
+ "url": "file:///F:/claudecode/projects/active/kids-games/batch7/fruitsplit/index.html",
+ "pageerrors": [],
+ "levels": [
+  {
+   "tag": "flat0",
+   "flat": 0,
+   "ch": 1,
+   "dch": 1,
+   "clicks": 10,
+   "retries": 1,
+   "stars": 2,
+   "quizzes": {
+    "1": {
+     "mode": "pick",
+     "kind": "apple",
+     "answerIdx": 0,
+     "options": [
+      {
+       "kind": "apple",
+       "state": "half",
+       "side": "L"
+      },
+      {
+       "kind": "apple",
+       "state": "whole",
+       "side": null
+      }
+     ],
+     "given": null
+    },
+    "2": {
+     "mode": "pick",
+     "kind": "orange",
+     "answerIdx": 2,
+     "options": [
+      {
+       "kind": "orange",
+       "state": "whole",
+       "side": null
+      },
+      {
+       "kind": "orange",
+       "state": "cut",
+       "side": null
+      },
+      {
+       "kind": "orange",
+       "state": "half",
+       "side": "R"
+      }
+     ],
+     "given": null
+    },
+    "3": {
+     "mode": "pick",
+     "kind": "melon",
+     "answerIdx": 0,
+     "options": [
+      {
+       "kind": "melon",
+       "state": "half",
+       "side": "R"
+      },
+      {
+       "kind": "melon",
+       "state": "cut",
+       "side": null
+      },
+      {
+       "kind": "melon",
+       "state": "whole",
+       "side": null
+      }
+     ],
+     "given": null
+    },
+    "4": {
+     "mode": "pick",
+     "kind": "orange",
+     "answerIdx": 2,
+     "options": [
+      {
+       "kind": "orange",
+       "state": "whole",
+       "side": null
+      },
+      {
+       "kind": "orange",
+       "state": "cut",
+       "side": null
+      },
+      {
+       "kind": "orange",
+       "state": "half",
+       "side": "L"
+      }
+     ],
+     "given": null
+    }
+   },
+   "tut": {
+    "watch_seen": true,
+    "watch_swallow": true,
+    "help_enter": "help",
+    "ghost_show": false,
+    "rescue_in_help": {
+     "label": "flat0_help_idle",
+     "waited_s": 25.5,
+     "entries": [
+      "speak(哪个是一半？)"
+     ],
+     "fire_after_s": [
+      20.069
+     ]
+    },
+    "after_first_right": "solo",
+    "ghost_hidden_after_solo": true
+   },
+   "events": [
+    {
+     "ev": "wrong_cut_state",
+     "picked_state": "cut",
+     "voice": [
+      "play(fru_wrong,不对哦，再想一想)"
+     ],
+     "pulse": [
+      0,
+      0
+     ],
+     "wrongs": [
+      1
+     ],
+     "retries": 1
+    },
+    {
+     "ev": "wrong_whole_state",
+     "voice": [
+      "play(fru_hint,听一听，想一想)"
+     ],
+     "pulse": [
+      0,
+      0
+     ],
+     "wrongs": [
+      1
+     ]
+    },
+    {
+     "ev": "step_1_voice",
+     "v": [
+      "play(fru_wrong,不对哦，再想一想)",
+      "play(fru_hint,听一听，想一想)"
+     ]
+    },
+    {
+     "ev": "step_2_voice",
+     "v": []
+    },
+    {
+     "ev": "blank_board_click",
+     "voice": []
+    },
+    {
+     "ev": "step_3_voice",
+     "v": []
+    },
+    {
+     "ev": "hear_btn",
+     "voice": [
+      "speak(哪个是一半？)"
+     ]
+    },
+    {
+     "ev": "step_4_voice",
+     "v": [
+      "speak(哪个是一半？)"
+     ]
+    }
+   ],
+   "vlog": [
+    "speak(哪个是一半？)",
+    "play(fru_tut_turn,你来切一切)",
+    "speak(哪个是一半？)",
+    "speak(哪个是一半？)",
+    "play(fru_wrong,不对哦，再想一想)",
+    "play(fru_hint,听一听，想一想)",
+    "speak(哪个是一半？)",
+    "speak(哪个是一半？)",
+    "speak(哪个是一半？)",
+    "speak(哪个是一半？)"
+   ]
+  },
+  {
+   "tag": "flat5",
+   "flat": 5,
+   "ch": 2,
+   "dch": 2,
+   "clicks": 10,
+   "retries": 3,
+   "stars": 1,
+   "quizzes": {
+    "0": {
+     "mode": "cut",
+     "kind": "apple",
+     "answerIdx": -1,
+     "options": [],
+     "given": {
+      "kind": "apple",
+      "side": null
+     }
+    },
+    "1": {
+     "mode": "pick",
+     "kind": "melon",
+     "answerIdx": 1,
+     "options": [
+      {
+       "kind": "melon",
+       "state": "cut",
+       "side": null
+      },
+      {
+       "kind": "melon",
+       "state": "half",
+       "side": "L"
+      },
+      {
+       "kind": "melon",
+       "state": "whole",
+       "side": null
+      }
+     ],
+     "given": null
+    },
+    "2": {
+     "mode": "cut",
+     "kind": "apple",
+     "answerIdx": -1,
+     "options": [],
+     "given": {
+      "kind": "apple",
+      "side": null
+     }
+    },
+    "3": {
+     "mode": "pick",
+     "kind": "melon",
+     "answerIdx": 1,
+     "options": [
+      {
+       "kind": "melon",
+       "state": "cut",
+       "side": null
+      },
+      {
+       "kind": "melon",
+       "state": "half",
+       "side": "R"
+      },
+      {
+       "kind": "melon",
+       "state": "whole",
+       "side": null
+      }
+     ],
+     "given": null
+    },
+    "4": {
+     "mode": "cut",
+     "kind": "orange",
+     "answerIdx": -1,
+     "options": [],
+     "given": {
+      "kind": "orange",
+      "side": null
+     }
+    }
+   },
+   "events": [
+    {
+     "ev": "poke_fruit_body",
+     "voice": [
+      "play(fru_knife,点一点小刀，切一切)"
+     ]
+    },
+    {
+     "ev": "cut_done_q0",
+     "doll_result": true
+    },
+    {
+     "ev": "step_0_voice",
+     "v": [
+      "play(fru_knife,点一点小刀，切一切)",
+      "play(fru_same,一半和一半，一样多)",
+      "speak(哪个是一半？)"
+     ]
+    },
+    {
+     "ev": "wrong1_plays",
+     "voice": [
+      "play(fru_wrong,不对哦，再想一想)"
+     ],
+     "pulse": [
+      0,
+      0
+     ]
+    },
+    {
+     "ev": "gray_retap_again",
+     "retries": [
+      1,
+      1
+     ],
+     "wrongs": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ],
+     "voice": []
+    },
+    {
+     "ev": "wrong2_throttled_pulse",
+     "voice": [],
+     "pulse": [
+      0,
+      1
+     ]
+    },
+    {
+     "ev": "step_1_voice",
+     "v": [
+      "play(fru_wrong,不对哦，再想一想)"
+     ]
+    },
+    {
+     "ev": "swipe_cut",
+     "advanced": true,
+     "voice": [
+      "play(fru_knife,点一点小刀，切一切)",
+      "play(fru_same,一半和一半，一样多)",
+      "speak(哪个是一半？)"
+     ]
+    },
+    {
+     "ev": "step_2_voice",
+     "v": [
+      "play(fru_knife,点一点小刀，切一切)",
+      "play(fru_same,一半和一半，一样多)",
+      "speak(哪个是一半？)"
+     ]
+    },
+    {
+     "ev": "wrong_after10s_plays",
+     "voice": [
+      "play(fru_wrong,不对哦，再想一想)"
+     ]
+    },
+    {
+     "ev": "step_3_voice",
+     "v": [
+      "play(fru_wrong,不对哦，再想一想)"
+     ]
+    },
+    {
+     "ev": "step_4_voice",
+     "v": []
+    }
+   ],
+   "misc": {
+    "seed_lim": 6,
+    "opening_voice": [
+     "TTS:把苹果切成两半"
+    ],
+    "rescue": {
+     "label": "flat5_idle",
+     "waited_s": 25.5,
+     "entries": [
+      "speak(把苹果切成两半)"
+     ],
+     "fire_after_s": [
+      17.404
+     ]
+    }
+   },
+   "vlog": [
+    "speak(把苹果切成两半)",
+    "play(fru_knife,点一点小刀，切一切)",
+    "play(fru_same,一半和一半，一样多)",
+    "speak(哪个是一半？)",
+    "play(fru_wrong,不对哦，再想一想)",
+    "speak(把苹果切成两半)",
+    "play(fru_knife,点一点小刀，切一切)",
+    "play(fru_same,一半和一半，一样多)",
+    "speak(哪个是一半？)",
+    "play(fru_wrong,不对哦，再想一想)",
+    "speak(把橙子切成两半)",
+    "play(fru_same,一半和一半，一样多)"
+   ]
+  },
+  {
+   "tag": "flat10",
+   "flat": 10,
+   "ch": 3,
+   "dch": 3,
+   "clicks": 9,
+   "retries": 2,
+   "stars": 2,
+   "quizzes": {
+    "0": {
+     "mode": "match",
+     "kind": "apple",
+     "answerIdx": 0,
+     "options": [
+      {
+       "kind": "apple",
+       "state": null,
+       "side": "R"
+      },
+      {
+       "kind": "melon",
+       "state": null,
+       "side": "L"
+      },
+      {
+       "kind": "orange",
+       "state": null,
+       "side": "L"
+      }
+     ],
+     "given": {
+      "kind": "apple",
+      "side": "L"
+     }
+    },
+    "1": {
+     "mode": "match",
+     "kind": "melon",
+     "answerIdx": 2,
+     "options": [
+      {
+       "kind": "orange",
+       "state": null,
+       "side": "L"
+      },
+      {
+       "kind": "apple",
+       "state": null,
+       "side": "L"
+      },
+      {
+       "kind": "melon",
+       "state": null,
+       "side": "R"
+      }
+     ],
+     "given": {
+      "kind": "melon",
+      "side": "L"
+     }
+    },
+    "2": {
+     "mode": "match",
+     "kind": "orange",
+     "answerIdx": 1,
+     "options": [
+      {
+       "kind": "apple",
+       "state": null,
+       "side": "R"
+      },
+      {
+       "kind": "orange",
+       "state": null,
+       "side": "R"
+      },
+      {
+       "kind": "melon",
+       "state": null,
+       "side": "R"
+      }
+     ],
+     "given": {
+      "kind": "orange",
+      "side": "L"
+     }
+    },
+    "3": {
+     "mode": "match",
+     "kind": "apple",
+     "answerIdx": 1,
+     "options": [
+      {
+       "kind": "orange",
+       "state": null,
+       "side": "L"
+      },
+      {
+       "kind": "apple",
+       "state": null,
+       "side": "R"
+      },
+      {
+       "kind": "melon",
+       "state": null,
+       "side": "R"
+      }
+     ],
+     "given": {
+      "kind": "apple",
+      "side": "L"
+     }
+    },
+    "4": {
+     "mode": "match",
+     "kind": "orange",
+     "answerIdx": 0,
+     "options": [
+      {
+       "kind": "orange",
+       "state": null,
+       "side": "R"
+      },
+      {
+       "kind": "melon",
+       "state": null,
+       "side": "R"
+      },
+      {
+       "kind": "apple",
+       "state": null,
+       "side": "L"
+      }
+     ],
+     "given": {
+      "kind": "orange",
+      "side": "L"
+     }
+    }
+   },
+   "events": [
+    {
+     "ev": "match_layout",
+     "given": {
+      "kind": "apple",
+      "side": "L"
+     },
+     "options": [
+      {
+       "kind": "apple",
+       "state": null,
+       "side": "R"
+      },
+      {
+       "kind": "melon",
+       "state": null,
+       "side": "L"
+      },
+      {
+       "kind": "orange",
+       "state": null,
+       "side": "L"
+      }
+     ],
+     "answerIdx": 0
+    },
+    {
+     "ev": "match_wrong1",
+     "voice": [
+      "play(fru_wrong,不对哦，再想一想)"
+     ],
+     "pulse": [
+      0,
+      0
+     ]
+    },
+    {
+     "ev": "match_wrong2_pulse",
+     "voice": [],
+     "pulse": [
+      0,
+      1
+     ]
+    },
+    {
+     "ev": "gray_retap_again",
+     "retries": [
+      2,
+      2
+     ]
+    },
+    {
+     "ev": "step_0_voice",
+     "v": [
+      "play(fru_wrong,不对哦，再想一想)",
+      "play(fru_hint,听一听，想一想)"
+     ]
+    },
+    {
+     "ev": "hear_btn",
+     "voice": [
+      "speak(找一找，另一半在哪里？)"
+     ]
+    },
+    {
+     "ev": "step_1_voice",
+     "v": [
+      "speak(找一找，另一半在哪里？)"
+     ]
+    },
+    {
+     "ev": "step_2_voice",
+     "v": []
+    },
+    {
+     "ev": "step_3_voice",
+     "v": []
+    },
+    {
+     "ev": "step_4_voice",
+     "v": []
+    }
+   ],
+   "misc": {
+    "seed_lim": 16,
+    "opening_voice": [
+     "TTS:找一找，另一半在哪里？"
+    ]
+   },
+   "vlog": [
+    "play(fru_wrong,不对哦，再想一想)",
+    "play(fru_hint,听一听，想一想)",
+    "speak(找一找，另一半在哪里？)",
+    "speak(找一找，另一半在哪里？)",
+    "speak(找一找，另一半在哪里？)",
+    "speak(找一找，另一半在哪里？)",
+    "speak(找一找，另一半在哪里？)"
+   ]
+  },
+  {
+   "tag": "flat15",
+   "flat": 15,
+   "ch": 4,
+   "dch": 4,
+   "clicks": 6,
+   "retries": 0,
+   "stars": 3,
+   "quizzes": {
+    "0": {
+     "mode": "match",
+     "kind": "wedge",
+     "answerIdx": 0,
+     "options": [
+      {
+       "kind": "wedge",
+       "state": null,
+       "side": "R"
+      },
+      {
+       "kind": "melon",
+       "state": null,
+       "side": "L"
+      },
+      {
+       "kind": "berry",
+       "state": null,
+       "side": "L"
+      }
+     ],
+     "given": {
+      "kind": "wedge",
+      "side": "L"
+     }
+    },
+    "1": {
+     "mode": "cut",
+     "kind": "apple",
+     "answerIdx": -1,
+     "options": [],
+     "given": {
+      "kind": "apple",
+      "side": null
+     }
+    },
+    "2": {
+     "mode": "cut",
+     "kind": "berry",
+     "answerIdx": -1,
+     "options": [],
+     "given": {
+      "kind": "berry",
+      "side": null
+     }
+    },
+    "3": {
+     "mode": "pick",
+     "kind": "melon",
+     "answerIdx": 2,
+     "options": [
+      {
+       "kind": "melon",
+       "state": "whole",
+       "side": null
+      },
+      {
+       "kind": "melon",
+       "state": "cut",
+       "side": null
+      },
+      {
+       "kind": "melon",
+       "state": "half",
+       "side": "L"
+      }
+     ],
+     "given": null
+    },
+    "4": {
+     "mode": "match",
+     "kind": "wedge",
+     "answerIdx": 0,
+     "options": [
+      {
+       "kind": "wedge",
+       "state": null,
+       "side": "R"
+      },
+      {
+       "kind": "orange",
+       "state": null,
+       "side": "R"
+      },
+      {
+       "kind": "melon",
+       "state": null,
+       "side": "R"
+      }
+     ],
+     "given": {
+      "kind": "wedge",
+      "side": "L"
+     }
+    }
+   },
+   "events": [
+    {
+     "ev": "mixed_first",
+     "mode": "match",
+     "kind": "wedge"
+    },
+    {
+     "ev": "step_0_voice",
+     "v": []
+    },
+    {
+     "ev": "step_1_voice",
+     "v": []
+    },
+    {
+     "ev": "step_2_voice",
+     "v": []
+    },
+    {
+     "ev": "blank_board_click",
+     "voice": [
+      "play(fru_hint,听一听，想一想)"
+     ]
+    },
+    {
+     "ev": "step_3_voice",
+     "v": [
+      "play(fru_hint,听一听，想一想)"
+     ]
+    },
+    {
+     "ev": "step_4_voice",
+     "v": []
+    }
+   ],
+   "misc": {
+    "seed_lim": 16,
+    "opening_voice": [
+     "TTS:找一找，另一半在哪里？"
+    ]
+   },
+   "vlog": [
+    "speak(把苹果切成两半)",
+    "play(fru_same,一半和一半，一样多)",
+    "speak(把草莓切成两半)",
+    "play(fru_same,一半和一半，一样多)",
+    "speak(哪个是一半？)",
+    "play(fru_hint,听一听，想一想)",
+    "speak(找一找，另一半在哪里？)"
+   ]
+  }
+ ],
+ "vlog_tail": [
+  "speak(把苹果切成两半)",
+  "play(fru_same,一半和一半，一样多)",
+  "speak(把草莓切成两半)",
+  "play(fru_same,一半和一半，一样多)",
+  "speak(哪个是一半？)",
+  "play(fru_hint,听一听，想一想)",
+  "speak(找一找，另一半在哪里？)",
+  "play(core_day_end,今天的新关卡玩完啦，明天见)"
+ ]
+}

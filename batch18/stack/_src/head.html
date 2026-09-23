@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>搭高楼</title>
+<style>
+/* ================= 搭高楼 stack（batch18）=================
+   视觉按 SPEC-BATCH18 §2：暖米底 #FBF3E4、正视角楼层块塔（rect+顶高光条伪立体）、
+   石色地基+列虚线（与底部列按钮带呼应）、托盘显示待放块序列（当前块橙框）
+   风摆块：红色风箭头 + sway 往返动画（预判启蒙锚点）
+   触摸目标：列按钮 ≥72×76、底栏按钮 ≥72 高；pointerdown 即响应；倒塌零惩罚可重点 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E7D8C0;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E7D8C0}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:4px;overflow:hidden;padding:4px 10px}
+
+/* ---------- 题面行 ---------- */
+#board{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+  min-height:70px;padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:14px;padding:6px 24px;border-radius:22px;
+  background:#FFFAF0;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #DFCFB6}
+#prompt-chip .mini{width:54px;height:54px;flex:0 0 54px}
+#prompt-chip .ask{font-size:26px;font-weight:800;color:#4A3B2E;letter-spacing:.02em}
+
+/* ---------- 塔区（SVG 自动 contain 适配） ---------- */
+#scene-area{flex:1 1 auto;min-height:200px;width:100%;max-width:900px;display:flex;
+  align-items:center;justify-content:center;padding:2px 6px}
+#scene{width:100%;height:100%;min-height:200px;display:flex;align-items:center;justify-content:center}
+#scene svg.scene{width:100%;height:100%}
+
+/* 塔区动画（§0.13 transition 坑：动画只挂一次性 class，重放靠重绘） */
+.blk.drop{animation:st-drop .38s cubic-bezier(.35,1.1,.45,1) both}
+@keyframes st-drop{from{transform:translateY(-150px)}60%{transform:translateY(0)}
+  75%{transform:translateY(-7px)}100%{transform:translateY(0)}}
+.blk.fallout{animation:st-fallout .85s ease-in forwards}
+@keyframes st-fallout{to{transform:translate(var(--fx,60px),210px) rotate(var(--fr,38deg));opacity:.08}}
+.tower.tshake{animation:st-shake .55s ease}
+@keyframes st-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}
+  40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+.curwrap.sway{animation:st-sway 1.3s ease-in-out infinite}
+@keyframes st-sway{0%,100%{transform:translateX(0)}50%{transform:translateX(var(--sw,8px))}}
+.base.lit{animation:st-basepulse 1.2s ease-in-out infinite}
+@keyframes st-basepulse{0%,100%{opacity:1}50%{opacity:.55}}
+.tower .badge{animation:st-badge .45s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes st-badge{from{transform:scale(0)}to{transform:scale(1)}}
+
+/* ---------- 列按钮带（点格子列放置） ---------- */
+#colbar{flex:0 0 auto;display:flex;justify-content:center;align-items:center;gap:8px;
+  flex-wrap:nowrap;min-height:96px;padding:4px 8px}
+.colbtn{min-width:72px;min-height:76px;border-radius:16px;background:#FFFAF0;border:3px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;transition:transform .15s,box-shadow .15s;position:relative;
+  animation:col-in .38s cubic-bezier(.2,1.5,.4,1) both}
+.colbtn:nth-child(2){animation-delay:.04s}.colbtn:nth-child(3){animation-delay:.08s}
+.colbtn:nth-child(4){animation-delay:.12s}.colbtn:nth-child(5){animation-delay:.16s}
+.colbtn:nth-child(6){animation-delay:.2s}.colbtn:nth-child(7){animation-delay:.24s}
+@keyframes col-in{from{transform:scale(0)}to{transform:scale(1)}}
+.colbtn:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+.colbtn .cell{width:42px;height:14px;border-radius:4px;background:#E7D8C0;border:2px solid #4A3B2E}
+.colbtn .cn{font-size:15px;font-weight:800;color:#8A7B6C}
+.colbtn.breathe{animation:col-breathe 1.6s ease-in-out infinite}
+@keyframes col-breathe{0%,100%{transform:scale(1);box-shadow:0 4px 0 #DFCFB6}
+  50%{transform:scale(1.09);box-shadow:0 4px 0 #DFCFB6,0 0 16px rgba(232,151,90,.9)}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 blocks/read） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFFAF0;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：题面/列带/塔区适配 */
+@media (orientation:portrait){
+  #prompt-chip .ask{font-size:22px}
+  #prompt-chip .mini{width:46px;height:46px;flex:0 0 46px}
+  #scene-area{min-height:240px}
+  .colbtn{min-width:64px;min-height:72px}
+  #colbar{gap:6px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="搭高楼">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="board">
+      <div id="prompt-chip" role="heading" aria-label="题目"></div>
+    </div>
+    <div id="scene-area">
+      <div id="scene" aria-label="高楼塔区"></div>
+    </div>
+    <div id="colbar" aria-label="放置列"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="读题"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

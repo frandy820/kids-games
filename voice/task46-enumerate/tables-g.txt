@@ -1,0 +1,44 @@
+=== coder  [game-data.js]
+pathSpeak = q => '走' + NUMCN[q.seq.length] + '步，先往' + DIRS[q.seq[0]].n + |                        '，再往' + DIRS[q.seq[1]].n + '，小兔子会走到哪'; | const confirmText = q => q.kind === 'path' ? '猜对啦，走到这里' : '小兔子吃到萝卜啦'; |  | /* ---------- 错反馈语义引导句（SPEC §0.67：run 未到达按小兔当前位与萝卜相对方位 |    给「先往左/右/上/下走」；path 错锚第一步；撞石/出界探索豁免句） */ | const GUIDE = { |   run_wrong:  '小兔没走到萝卜，先往{d}走',   // {d}=方向汉字（运行时替换，12 字符定长） |   path_wrong: '再想想，先走第一步看看', |  
+=== coder  [game-data.js]
+const GUIDE = { |   run_wrong:  '小兔没走到萝卜，先往{d}走',   // {d}=方向汉字（运行时替换，12 字符定长） |   path_wrong: '再想想，先走第一步看看', |   block:      '往这边走不过去哦' | }; | const guideText = q => q.kind === 'path' ? GUIDE.path_wrong : |   GUIDE.run_wrong.r
+=== coder  MISS
+=== coder  [game-data.js]
+confirmText = q => q.kind === 'path' ? '猜对啦，走到这里' : '小兔子吃到萝卜啦'; |  | /* ---------- 错反馈语义引导句（SPEC §0.67：run 未到达按小兔当前位与萝卜相对方位 |    给「先往左/右/上/下走」；path 错锚第一步；撞石/出界探索豁免句） */ | const GUIDE = { |   run_wrong:  '小兔没走到萝卜，先往{d}走',   // {d}=方向汉字（运行时替换，12 字符定长） |   path_wrong: '再想想，先走第一步看看', |   block:      '往这边走不过去哦'
+=== conserve  [game-data.js]
+PRE_SAY = '看，两边一样多';                       // 7 字 | const T_SAY = { |   rows: '右边的拉开了，可是数量没有变
+=== conserve  [game-data.js]
+T_SAY = { |   rows: '右边的拉开了，可是数量没有变',                  // 14 字 |   pour: '水倒进细高的杯子，水面变高了',                  // 14 字 |   clay: '橡皮泥压一压，变成长条啦'                       // 12 字 | }; |  | /* add 题变更演出句（变换后追加，动画期间播） */ | function addSayOf(q) { |   if (q.family === 'rows') 
+=== conserve  MISS
+=== conserve  MISS
+=== conserve  MISS
+=== shapecount  [game-data.js]
+quizText = q => { |   if (q.kind === 'grid') return '排好队的图形，一共有几个？'; |   if (q.kind === 'gridmiss') return '有空格的图形，一共几个？'; |   if (q.kind === 'dual') { const p = dualPair(q); return COLORS[p[1]].n + SHAPES[p[0]].n + '有几个？'; } |   return SHAPES[q.ask].n + '有几个？'; | }; | const confirmText = q => { |   if (q.kind === 'grid' || q.kind === 'gridmiss') return '一共，有' + NUMCN[q.n] + '个'; |   if (q.kind === 'dual') { const p = dualPair(q); return COLO
+=== shapecount  [game-data.js]
+guideText = (q, i) => (q.kind === 'gridmiss') ? GUIDE.gridmiss |                           : (q.kind === 'dual') ? GUIDE.dual |                           : (q.opts[i].num > q.n ? GUIDE.count_over : GUIDE.count_under); |  | /* ---------- hint 按题型选播（r3 新增 2 条 clip：shc_hint_grid/shc_hint_dual） |    点兔子/空地点/空白探索 → 当前题型号相关策略提示 */ | const HINTS = { |   count:    { key: 'shc_hint',      text: '一个一个指着数' }, |   g
+=== shapecount  [game-data.js]
+confirmText = q => { |   if (q.kind === 'grid' || q.kind === 'gridmiss') return '一共，有' + NUMCN[q.n] + '个'; |   if (q.kind === 'dual') { const p = dualPair(q); return COLORS[p[1]].n + SHAPES[p[0]].n + '，有' + NUMCN[q.n] + '个'; } |   return SHAPES[q.ask].n + '，有' + NUMCN[q.n] + '个'; | }; |  | /* ---------- 错反馈语义引导句（r3：count/gr
+=== chartread  [game-data.js]
+TAIL_HOWMANY = '有几只呀'; | const TAIL_COMPARE = '比它多几只呀'; |  | /* ---------- 章配置（章号 1 基；生成关 flat>=
+=== chartread  MISS
+=== chartread qtexts [game-data.js]
+text: '谁最多呀'
+=== datacollect  [game-data.js]
+confirmText = q => { |   if (q.kind === 'count') return NUMCN[q.answer] + '只'; |   if (q.kind === 'sum') return '一共' + NUMCN[q.answer] + '只'; |   if (q.kind === 'diff' || q.kind === 'mostdiff') return '相差' + NUMCN[q.answer] + '只'; |   if (q.kind === 'change') return (q.up ? '多了' : '少了') + NUMCN[q.answer] + '只'; |   return '一共' + (q.up ? '多了' : '少了') + NUMCN[q.answer] + '只';   // totalchange | }; | const confirmChainMs = q => q.kind === 'count' || q.kind === 'chan
+=== maketen  [game-main.js]
+formulaText = q => NUMCN[q.a] + '加' + NUMCN[q.target - q.a] + '等于' + NUMCN[q.target]; | /* 救援/开场任务语音不受 flat 门限制（§0.5：不识字孩子 flat≥3 静置 14s 零救援） */ | const sayR = (key, text) => { if (cur) KIDS.voice.play(key, text); }; | /* 纠错链节流：flat<3 每错必播；flat≥3 走 10s 节流（契约 J：语义句全程保留，禁切通用 clip）
+=== errdoc  MISS
+=== errdoc  MISS
+=== quickcmp  [game-data.js]
+NUMCN = { 1: '一', 2: '两', 3: '三', 4: '四', 5: '五', |                 6: '六', 7: '七', 8: '八', 9: '九', 10: '十' }; |  | /* ---------- 闪现窗（SPEC §0.89：ch1-2 1200ms / ch3-4 900ms——感知
+=== plant  [game-data.js]
+cardText = q => '第' + NUMCN[q.row] + '行第' + NUMCN[q.col] + '列';   // 6 字恒定（第X行第Y列） |  | /* ---------- 树苗 SVG（viewBox 0 0 100 100；暖棕干+双层绿冠+小红果， |    .flower 花朵组默认 opacity 0——关末零错开花加成 .bloom 态点亮） |    根组 g[data-anim="tree"]——契约 M 帧内容断言锚 ---
+=== teach  MISS
+=== teach  [game-core.js]
+groupTTS = cum => NUMCN[cum] + '个'; |  | /* ---------- 结构校验（verify 用，返回失败原因或 null）：先验不变量逐条 |    （N 域按 dch 章域/etype 按章池/errAt 按型域/seq 构造同构/m=seq.length 按型 |    n∓1|n/4 卡恰一张 good/answer 推导同构/cards label 双录/干扰假性——errAt2≠e
+=== teach  [game-data.js]
+GROUP_MODES = [ |   { g: 1, label: '一个一个数' }, |   { g: 2, label: '两个两个数' }, |   { g: 5, label: '五个五个数' } | ]; | const GROUP_HINT_TTS = '大数字，可以几个几个数哦';   // ch3/4 首题 n≥10 引导句（12 字 estMs 4740） |  | /* ---------- 图标（内嵌 SVG 描线风，主色 INK 暖棕；无 <text> 防尺寸漂移） ---------- */ | const ICONS = { |   /* logo
+=== teach  [game-data.js]
+GROUP_HINT_TTS = '大数字，可以几个几个数哦';   // ch3/4 首题 n≥10 引导句（12 字 estMs 4740） |  | /* ---------- 图标（内嵌 SVG 描线风，主色 INK 暖
+=== teach  [game-core.js]
+rabbitTTS = '兔子说：我来试试'; | const groupTTS = cum => NUMCN[cum] + '个'; |  | /* ---------- 结构校验（veri

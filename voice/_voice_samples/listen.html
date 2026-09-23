@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>游戏语音音色试听 · 选型页</title>
+<style>
+  :root{
+    --bg:#FAF4E8; --card:#FFFFFF; --ink:#3D3229; --sub:#8A7A66;
+    --accent:#E8A23C; --accent2:#7BA05B; --line:#EFE5D4;
+    --red:#D96C4F; --blue:#6B8FAE;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:"Microsoft YaHei",-apple-system,sans-serif;padding:28px 18px 60px}
+  .wrap{max-width:860px;margin:0 auto}
+  h1{font-size:22px;margin-bottom:6px}
+  .lead{color:var(--sub);font-size:13px;margin-bottom:22px;line-height:1.7}
+  .lead b{color:var(--ink)}
+  .row{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(120,100,70,.06)}
+  .qtext{font-size:16px;font-weight:600;margin-bottom:12px}
+  .qtext .tag{display:inline-block;font-size:11px;font-weight:400;color:var(--sub);background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:1px 9px;margin-right:8px;vertical-align:2px}
+  .engines{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+  button{cursor:pointer;border:1.5px solid var(--line);background:var(--bg);border-radius:10px;padding:10px 8px;text-align:left;transition:all .15s;font-family:inherit}
+  button:hover{border-color:var(--accent);transform:translateY(-1px)}
+  button.playing{border-color:var(--accent2);background:#F0F5EA;box-shadow:0 0 0 2px rgba(123,160,91,.25)}
+  button .nm{font-size:14px;font-weight:600;display:block}
+  button .ds{font-size:11px;color:var(--sub);display:block;margin-top:3px;line-height:1.4}
+  button.cur .nm::after{content:" ← 现状";font-size:10px;color:var(--red);font-weight:400}
+  button .st{font-size:16px;float:right;color:var(--accent)}
+  .note{font-size:12px;color:var(--sub);margin-top:16px;line-height:1.8;background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:12px 16px}
+  .pending{opacity:.45;pointer-events:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🎧 游戏语音音色试听</h1>
+  <div class="lead">同一句话、不同引擎的效果对比。<b>点按钮即播放</b>。听完在底部告诉我你选哪个——选中的音色会用于全部 120 款游戏的全部语音重录。</div>
+
+  <div class="row">
+    <div class="qtext"><span class="tag">教学开场</span>看！昆虫和蜘蛛</div>
+    <div class="engines">
+      <button data-src="../../clips/ins_tut_watch.mp3" class="cur"><span class="st">▶</span><span class="nm">晓晓（现状）</span><span class="ds">微软 edge-tts · 全部游戏现用</span></button>
+      <button data-src="kokoro_zf_002_tut.wav"><span class="st">▶</span><span class="nm">Kokoro 音色1</span><span class="ds">本机离线 · 温和女声</span></button>
+      <button data-src="kokoro_zf_003_tut.wav"><span class="st">▶</span><span class="nm">Kokoro 音色2</span><span class="ds">本机离线 · 明亮女声</span></button>
+      <button data-src="cv1_clone_tut.wav"><span class="st">▶</span><span class="nm">真人克隆 · 自然女声</span><span class="ds">CosyVoice · 三十岁自然女声</span></button>
+      <button data-src="cv2_instruct_tut.wav" id="cv2btn_tut" class="pending"><span class="st">▶</span><span class="nm">真人克隆 · 甜美女声</span><span class="ds">CosyVoice · 二十岁撒娇甜美</span></button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="qtext"><span class="tag">答对反馈</span>答对啦，小科学家</div>
+    <div class="engines">
+      <button data-src="../../clips/ins_right.mp3" class="cur"><span class="st">▶</span><span class="nm">晓晓（现状）</span><span class="ds">微软 edge-tts</span></button>
+      <button data-src="kokoro_zf_002_right.wav"><span class="st">▶</span><span class="nm">Kokoro 音色1</span><span class="ds">本机离线</span></button>
+      <button data-src="kokoro_zf_003_right.wav"><span class="st">▶</span><span class="nm">Kokoro 音色2</span><span class="ds">本机离线</span></button>
+      <button data-src="cv1_clone_right.wav"><span class="st">▶</span><span class="nm">真人克隆 · 自然女声</span><span class="ds">CosyVoice</span></button>
+      <button data-src="cv2_instruct_right.wav" id="cv2btn_right" class="pending"><span class="st">▶</span><span class="nm">真人克隆 · 甜美女声</span><span class="ds">CosyVoice</span></button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="qtext"><span class="tag">情境后果句</span>玩具摔坏了，你也会更难过</div>
+    <div class="engines">
+      <button data-src="../../clips/cbx_b_throw.mp3" class="cur"><span class="st">▶</span><span class="nm">晓晓（现状）</span><span class="ds">微软 edge-tts</span></button>
+      <button data-src="kokoro_zf_002_sel.wav"><span class="st">▶</span><span class="nm">Kokoro 音色1</span><span class="ds">本机离线</span></button>
+      <button data-src="kokoro_zf_003_sel.wav"><span class="st">▶</span><span class="nm">Kokoro 音色2</span><span class="ds">本机离线</span></button>
+      <button data-src="cv1_clone_sel.wav"><span class="st">▶</span><span class="nm">真人克隆 · 自然女声</span><span class="ds">CosyVoice</span></button>
+      <button data-src="cv2_instruct_sel.wav" id="cv2btn_sel" class="pending"><span class="st">▶</span><span class="nm">真人克隆 · 甜美女声</span><span class="ds">CosyVoice</span></button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="qtext"><span class="tag">科普长句</span>昆虫有六条腿，头胸腹三部分</div>
+    <div class="engines">
+      <button data-src="../../clips/ins_sci_insect.mp3" class="cur"><span class="st">▶</span><span class="nm">晓晓（现状）</span><span class="ds">微软 edge-tts</span></button>
+      <button data-src="kokoro_zf_002_sci.wav"><span class="st">▶</span><span class="nm">Kokoro 音色1</span><span class="ds">本机离线</span></button>
+      <button data-src="kokoro_zf_003_sci.wav"><span class="st">▶</span><span class="nm">Kokoro 音色2</span><span class="ds">本机离线</span></button>
+      <button data-src="cv1_clone_sci.wav"><span class="st">▶</span><span class="nm">真人克隆 · 自然女声</span><span class="ds">CosyVoice</span></button>
+      <button data-src="cv2_instruct_sci.wav" id="cv2btn_sci" class="pending"><span class="st">▶</span><span class="nm">真人克隆 · 甜美女声</span><span class="ds">CosyVoice</span></button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="qtext"><span class="tag">题面问句</span>蚂蚁呀，它是昆虫还是蜘蛛</div>
+    <div class="engines">
+      <button disabled class="pending"><span class="st">—</span><span class="nm">晓晓（现状）</span><span class="ds">此句现为即时合成无录音</span></button>
+      <button data-src="kokoro_zf_002_q.wav"><span class="st">▶</span><span class="nm">Kokoro 音色1</span><span class="ds">本机离线</span></button>
+      <button data-src="kokoro_zf_003_q.wav"><span class="st">▶</span><span class="nm">Kokoro 音色2</span><span class="ds">本机离线</span></button>
+      <button data-src="cv1_clone_q.wav"><span class="st">▶</span><span class="nm">真人克隆 · 自然女声</span><span class="ds">CosyVoice</span></button>
+      <button data-src="cv2_instruct_q.wav" id="cv2btn_q" class="pending"><span class="st">▶</span><span class="nm">真人克隆 · 甜美女声</span><span class="ds">CosyVoice</span></button>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>怎么选：</b>「可爱的、像真人的」是你的目标——重点听「真人克隆·甜美女声」和「真人克隆·自然女声」两列。<br>
+    <b>说明：</b>Kokoro 两条音色完全离线（不依赖网络与服务器）；CosyVoice 两条来自 203 服务器的真人音色克隆，更自然但合成速度慢约 60 倍（全量 1553 条约需数小时夜跑）。<br>
+    <b>甜美女声列</b>若仍显示灰色=样本尚在合成，稍后刷新。
+  </div>
+</div>
+<script>
+(function(){
+  var cur=null, curBtn=null;
+  document.querySelectorAll('button[data-src]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if(curBtn===b && cur && !cur.ended){cur.pause();b.classList.remove('playing');return;}
+      if(cur){cur.pause();}
+      if(curBtn){curBtn.classList.remove('playing');}
+      var a=new Audio(b.getAttribute('data-src'));
+      cur=a;curBtn=b;
+      a.play().then(function(){b.classList.add('playing');}).catch(function(){b.classList.remove('playing');});
+      a.onended=function(){b.classList.remove('playing');};
+      a.onerror=function(){b.classList.remove('playing');b.querySelector('.ds').textContent='播放失败';};
+    });
+  });
+  // 甜美女声就绪探测：文件可加载则解除灰色
+  ['tut','right','sel','sci','q'].forEach(function(k){
+    var b=document.getElementById('cv2btn_'+k);
+    if(!b)return;
+    var probe=new Audio(b.getAttribute('data-src'));
+    probe.addEventListener('canplaythrough',function(){b.classList.remove('pending');},{once:true});
+    probe.load();
+  });
+})();
+</script>
+</body>
+</html>

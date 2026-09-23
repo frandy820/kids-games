@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小兔子的游戏屋 · 新游戏三款</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#FBF3E4;color:#4A3B2E;font-family:system-ui,-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+       min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;padding:34px 22px}
+  .logo{width:150px;height:150px}
+  h1{font-size:clamp(26px,5vw,38px);letter-spacing:.05em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:24px;width:100%;max-width:760px}
+  a.card{display:flex;flex-direction:column;align-items:center;gap:14px;padding:28px 16px 24px;border-radius:26px;
+         background:#FFF9EE;border:2.5px solid #4A3B2E;text-decoration:none;color:#4A3B2E;
+         box-shadow:0 5px 0 #D8C9B4;transition:transform .2s}
+  a.card:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+  @media (hover:hover){
+    a.card:hover{transform:translateY(-4px);box-shadow:0 9px 0 #D8C9B4}
+  }
+  .card .icon{width:92px;height:92px}
+  .card .name{font-size:22px;font-weight:700}
+  .card .band{font-size:12.5px;font-weight:700;color:#fff;background:#E8975A;padding:3px 12px;border-radius:999px;letter-spacing:.06em}
+  .card .desc{font-size:14px;color:#8A7B6C;line-height:1.6;text-align:center}
+  .foot{font-size:12.5px;color:#8A7B6C;text-align:center;line-height:1.8;max-width:520px}
+</style>
+</head>
+<body>
+  <div class="logo" id="logo"></div>
+  <h1>小兔子的游戏屋 · 新游戏三款</h1>
+  <div class="grid">
+    <a class="card" href="thanks/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="38" cy="42" rx="24" ry="22" fill="#E8975A" stroke="#4A3B2E" stroke-width="2.4"/>
+        <circle cx="22" cy="22" r="8" fill="#E8975A" stroke="#4A3B2E" stroke-width="2.2"/>
+        <circle cx="54" cy="22" r="8" fill="#E8975A" stroke="#4A3B2E" stroke-width="2.2"/>
+        <circle cx="30" cy="40" r="2.6" fill="#4A3B2E"/><circle cx="46" cy="40" r="2.6" fill="#4A3B2E"/>
+        <ellipse cx="38" cy="50" rx="4.4" ry="3.2" fill="#D98A8A"/>
+        <path d="M34 57 q4 3.6 8 0" stroke="#4A3B2E" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M70 40 c0 -7 9 -9 11 -3 c2 -6 11 -4 11 3 c0 8 -11 14 -11 14 c0 0 -11 -6 -11 -14 z" fill="#E05A5A" stroke="#4A3B2E" stroke-width="2.2"/>
+        <path d="M12 70 q10 8 20 0 M68 74 q9 7 18 0" stroke="#F2C94C" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      </svg></div>
+      <div class="name">感谢的话</div><div class="band">5-6 岁 · 社交情感</div>
+      <div class="desc">朋友帮了你，选一个感谢的做法——说声谢谢、抱抱它都可以</div>
+    </a>
+    <a class="card" href="plant/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 14 v72 M42 14 v72 M66 14 v72 M90 14 v72" stroke="#D8C9B4" stroke-width="1.8"/>
+        <path d="M18 20 h72 M18 44 h72 M18 68 h72" stroke="#D8C9B4" stroke-width="1.8"/>
+        <rect x="44" y="46" width="20" height="20" rx="4" fill="#A9CC95" stroke="#4A3B2E" stroke-width="2" opacity=".45"/>
+        <rect x="12" y="46" width="16" height="26" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2"/>
+        <line x1="16" y1="76" x2="24" y2="76" stroke="#4A3B2E" stroke-width="2" stroke-linecap="round"/>
+        <path d="M20 40 v-14 M20 26 l-7 -6 M20 26 l7 -6 M20 30 l8 5" stroke="#8A7B6C" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+        <ellipse cx="13" cy="17" rx="8" ry="6" fill="#9CBF88" stroke="#4A3B2E" stroke-width="2"/>
+        <ellipse cx="28" cy="16" rx="8" ry="6" fill="#7FB3E0" stroke="#4A3B2E" stroke-width="2"/>
+        <rect x="60" y="12" width="28" height="20" rx="5" fill="#FFF9EE" stroke="#4A3B2E" stroke-width="2.2"/>
+        <text x="74" y="26" font-size="11" font-weight="700" text-anchor="middle" fill="#E05A5A" font-family="Arial">2;3</text>
+        <path d="M52 62 l12 10 M52 62 l3 9" stroke="#E8975A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="66" cy="72" r="6" fill="#E8975A" stroke="#4A3B2E" stroke-width="2"/>
+      </svg></div>
+      <div class="name">植树程序</div><div class="band">6-7 岁 · 计算思维</div>
+      <div class="desc">看程序卡「第几行第几列」，把小树种进花园——花园慢慢变大啦</div>
+    </a>
+    <a class="card" href="teach/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="30" cy="22" rx="7" ry="16" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.2" transform="rotate(-14 30 22)"/>
+        <ellipse cx="52" cy="20" rx="7" ry="16" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.2" transform="rotate(12 52 20)"/>
+        <ellipse cx="40" cy="42" rx="24" ry="21" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.6"/>
+        <circle cx="32" cy="40" r="2.8" fill="#4A3B2E"/><circle cx="48" cy="40" r="2.8" fill="#4A3B2E"/>
+        <path d="M34 50 q6 5 12 0" stroke="#4A3B2E" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <circle cx="76" cy="34" r="9" fill="#E05A5A" stroke="#4A3B2E" stroke-width="2.2"/>
+        <path d="M76 25 q1 -6 6 -7" stroke="#8A7B6C" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="76" cy="18" rx="5" ry="3" fill="#9CBF88" stroke="#4A3B2E" stroke-width="1.6"/>
+        <rect x="20" y="66" width="30" height="22" rx="6" fill="#7FB3E0" stroke="#4A3B2E" stroke-width="2.4"/>
+        <circle cx="27" cy="74" r="3" fill="#FFF9EE"/><circle cx="35" cy="74" r="3" fill="#FFF9EE"/>
+        <circle cx="43" cy="74" r="3" fill="#FFF9EE"/><circle cx="27" cy="82" r="3" fill="#FFF9EE"/>
+        <circle cx="35" cy="82" r="3" fill="#FFF9EE"/>
+        <path d="M62 70 q8 6 16 0" stroke="#E8B04F" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+        <path d="M70 62 v16" stroke="#E8B04F" stroke-width="2.6" stroke-linecap="round"/>
+      </svg></div>
+      <div class="name">教会小兔子</div><div class="band">7-8 岁 · 元认知</div>
+      <div class="desc">你当小老师：先数苹果，再看小兔子数——它数错啦，帮它改过来</div>
+    </a>
+  </div>
+    <p class="foot">每天有新关卡，玩完今天的小兔子会说"明天见"。<br>每款游戏右上角 🔒 家长面板：进度 / 时长 / 今日多玩关数。<br>完全离线，无广告无内购，进度保存在本机。</p>
+<script>
+/* 入口页不内嵌完整 core（无存档/会话需求），仅复用小兔子形象保持 IP 一致 */
+document.getElementById('logo').innerHTML = '<svg viewBox="0 0 120 120" width="150" height="150" xmlns="http://www.w3.org/2000/svg" fill="none"><ellipse cx="60" cy="96" rx="26" ry="12" fill="#EFE3CD"/><ellipse cx="45" cy="28" rx="10" ry="26" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5" transform="rotate(-10 45 28)"/><ellipse cx="45" cy="30" rx="4.5" ry="17" fill="#F2B8C6" transform="rotate(-10 45 30)"/><ellipse cx="76" cy="26" rx="10" ry="27" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5" transform="rotate(14 76 26)"/><ellipse cx="76" cy="28" rx="4.5" ry="18" fill="#F2B8C6" transform="rotate(14 76 28)"/><circle cx="60" cy="68" r="38" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5"/><ellipse cx="54" cy="56" rx="3" ry="2.2" fill="#D98A8A"/><ellipse cx="66" cy="56" rx="3" ry="2.2" fill="#D98A8A"/><ellipse cx="37" cy="74" rx="6.5" ry="4.5" fill="#F2B8C6" opacity=".8"/><ellipse cx="83" cy="74" rx="6.5" ry="4.5" fill="#F2B8C6" opacity=".8"/><path d="M44 62 q5 -7 10 0" stroke="#4A3B2E" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M66 62 q5 -7 10 0" stroke="#4A3B2E" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M55 74 q5 6 10 0" stroke="#4A3B2E" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="18" cy="55" r="9" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5"/></svg>';
+</script>
+</body>
+</html>

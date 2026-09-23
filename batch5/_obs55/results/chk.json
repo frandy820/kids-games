@@ -1,0 +1,819 @@
+{
+ "game": "countchick",
+ "scenarios": {
+  "tutorial": {
+   "watchSec": 7.0,
+   "swallow": {
+    "countedBefore": 0,
+    "countedAfterTaps": 0
+   },
+   "nChicksDemo": 2,
+   "voiceDuring": [
+    "chk_tut_turn"
+   ],
+   "soloHandoff": true,
+   "helpVoiceKeys": [
+    "chk_tut_turn"
+   ],
+   "levelStars": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  "real_flat5": {
+   "startLevel": {
+    "flat": 5,
+    "ch": 2,
+    "dch": 2,
+    "n": 5
+   },
+   "measure0": {
+    "animals": 4,
+    "minD": 273,
+    "field": [
+     1180,
+     432
+    ],
+    "animalSizes": [
+     97,
+     104,
+     97,
+     105
+    ],
+    "badge": {
+     "fs": "21px",
+     "box": "autox34px"
+    },
+    "optSizes": [
+     [
+      132,
+      96
+     ],
+     [
+      132,
+      96
+     ],
+     [
+      132,
+      96
+     ]
+    ]
+   },
+   "steps": [
+    {
+     "n": 4,
+     "items": [
+      4,
+      3,
+      5
+     ],
+     "others": [],
+     "taps": [],
+     "measure": {
+      "animals": 4,
+      "minD": 272,
+      "animalSizes": [
+       94,
+       108,
+       94,
+       110
+      ]
+     },
+     "optBox": [
+      132,
+      96
+     ]
+    },
+    {
+     "n": 5,
+     "items": [
+      6,
+      5,
+      4
+     ],
+     "others": [],
+     "taps": [],
+     "measure": {
+      "animals": 5,
+      "minD": 193,
+      "animalSizes": [
+       100,
+       100,
+       110,
+       100,
+       102
+      ]
+     },
+     "optBox": [
+      132,
+      96
+     ]
+    },
+    {
+     "n": 6,
+     "items": [
+      6,
+      7,
+      5
+     ],
+     "others": [],
+     "taps": [],
+     "measure": {
+      "animals": 6,
+      "minD": 150,
+      "animalSizes": [
+       106,
+       106,
+       106,
+       102,
+       96,
+       108
+      ]
+     },
+     "optBox": [
+      132,
+      96
+     ]
+    },
+    {
+     "n": 4,
+     "items": [
+      3,
+      5,
+      4
+     ],
+     "others": [],
+     "taps": [],
+     "measure": {
+      "animals": 4,
+      "minD": 170,
+      "animalSizes": [
+       98,
+       98,
+       94,
+       90
+      ]
+     },
+     "optBox": [
+      132,
+      96
+     ]
+    },
+    {
+     "n": 5,
+     "items": [
+      5,
+      6,
+      4
+     ],
+     "others": [],
+     "taps": [],
+     "measure": {
+      "animals": 5,
+      "minD": 114,
+      "animalSizes": [
+       96,
+       90,
+       110,
+       92,
+       96
+      ]
+     },
+     "optBox": [
+      132,
+      96
+     ]
+    }
+   ],
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   },
+   "pageerrors": [],
+   "netreq": []
+  },
+  "real_flat10": {
+   "startLevel": {
+    "flat": 10,
+    "ch": 3,
+    "dch": 3,
+    "n": 5
+   },
+   "measure0": {
+    "animals": 7,
+    "minD": 133,
+    "field": [
+     1180,
+     432
+    ],
+    "animalSizes": [
+     84,
+     83,
+     91,
+     86,
+     85,
+     89,
+     83
+    ],
+    "badge": {
+     "fs": "21px",
+     "box": "autox34px"
+    },
+    "optSizes": [
+     [
+      132,
+      96
+     ],
+     [
+      132,
+      96
+     ],
+     [
+      132,
+      96
+     ]
+    ]
+   },
+   "steps": [
+    {
+     "n": 7,
+     "items": [
+      8,
+      6,
+      7
+     ],
+     "others": [],
+     "taps": [],
+     "doubleTap": {
+      "countedAfterDouble": 7,
+      "badges": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7
+      ]
+     },
+     "measure": {
+      "animals": 7,
+      "minD": 136,
+      "animalSizes": [
+       82,
+       80,
+       96,
+       86,
+       84,
+       92,
+       81
+      ]
+     },
+     "optBox": [
+      132,
+      96
+     ]
+    },
+    {
+     "n": 8,
+     "items": [
+      8,
+      9,
+      7
+     ],
+     "others": [],
+     "taps": [],
+     "measure": {
+      "animals": 8,
+      "minD": 94,
+      "animalSizes": [
+       84,
+       90,
+       96,
+       86,
+       96,
+       82,
+       84,
+       80
+      ]
+     },
+     "optBox": [
+      132,
+      96
+     ]
+    },
+    {
+     "n": 9,
+     "items": [
+      9,
+      8,
+      10
+     ],
+     "others": [],
+     "taps": [],
+     "measure": {
+      "animals": 9,
+      "minD": 99,
+      "animalSizes": [
+       82,
+       89,
+       89,
+       81,
+       80,
+       84,
+       93,
+       78,
+       90
+      ]
+     },
+     "optBox": [
+      132,
+      96
+     ]
+    },
+    {
+     "n": 10,
+     "items": [
+      11,
+      10,
+      9
+     ],
+     "others": [],
+     "taps": [],
+     "measure": {
+      "animals": 10,
+      "minD": 103,
+      "animalSizes": [
+       89,
+       89,
+       85,
+       83,
+       84,
+       86,
+       95,
+       88,
+       80,
+       81
+      ]
+     },
+     "optBox": [
+      132,
+      96
+     ]
+    },
+    {
+     "n": 8,
+     "items": [
+      7,
+      9,
+      8
+     ],
+     "others": [],
+     "taps": [],
+     "measure": {
+      "animals": 8,
+      "minD": 128,
+      "animalSizes": [
+       83,
+       84,
+       78,
+       96,
+       93,
+       84,
+       81,
+       95
+      ]
+     },
+     "optBox": [
+      132,
+      96
+     ]
+    }
+   ],
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   },
+   "pageerrors": [],
+   "netreq": []
+  },
+  "real_flat15": {
+   "startLevel": {
+    "flat": 15,
+    "ch": 4,
+    "dch": 4,
+    "n": 5
+   },
+   "measure0": {
+    "animals": 12,
+    "minD": 114,
+    "field": [
+     1180,
+     432
+    ],
+    "animalSizes": [
+     86,
+     93,
+     88,
+     91,
+     94,
+     95,
+     94,
+     95,
+     83,
+     83,
+     83,
+     83
+    ],
+    "badge": {
+     "fs": "21px",
+     "box": "autox34px"
+    },
+    "optSizes": [
+     [
+      132,
+      96
+     ],
+     [
+      132,
+      96
+     ],
+     [
+      132,
+      96
+     ]
+    ]
+   },
+   "steps": [
+    {
+     "n": 8,
+     "items": [
+      7,
+      8,
+      9
+     ],
+     "others": [
+      {
+       "kind": "bunny"
+      },
+      {
+       "kind": "duck"
+      },
+      {
+       "kind": "duck"
+      },
+      {
+       "kind": "bunny"
+      }
+     ],
+     "taps": [],
+     "measure": {
+      "animals": 12,
+      "minD": 101,
+      "animalSizes": [
+       86,
+       93,
+       86,
+       92,
+       98,
+       100,
+       98,
+       100,
+       83,
+       83,
+       83,
+       83
+      ]
+     },
+     "tapOtherCounted": 8,
+     "optBox": [
+      132,
+      96
+     ]
+    },
+    {
+     "n": 7,
+     "items": [
+      6,
+      7,
+      8
+     ],
+     "others": [
+      {
+       "kind": "duck"
+      },
+      {
+       "kind": "bunny"
+      }
+     ],
+     "taps": [],
+     "measure": {
+      "animals": 9,
+      "minD": 108,
+      "animalSizes": [
+       91,
+       82,
+       83,
+       92,
+       96,
+       90,
+       82,
+       83,
+       83
+      ]
+     },
+     "tapOtherCounted": 7,
+     "optBox": [
+      132,
+      96
+     ]
+    },
+    {
+     "n": 8,
+     "items": [
+      9,
+      8,
+      7
+     ],
+     "others": [
+      {
+       "kind": "duck"
+      },
+      {
+       "kind": "bunny"
+      },
+      {
+       "kind": "bunny"
+      },
+      {
+       "kind": "bunny"
+      }
+     ],
+     "taps": [],
+     "measure": {
+      "animals": 12,
+      "minD": 105,
+      "animalSizes": [
+       86,
+       89,
+       94,
+       88,
+       83,
+       80,
+       94,
+       92,
+       83,
+       83,
+       83,
+       83
+      ]
+     },
+     "tapOtherCounted": 8,
+     "optBox": [
+      132,
+      96
+     ]
+    },
+    {
+     "n": 6,
+     "items": [
+      7,
+      5,
+      6
+     ],
+     "others": [
+      {
+       "kind": "bunny"
+      },
+      {
+       "kind": "duck"
+      }
+     ],
+     "taps": [],
+     "measure": {
+      "animals": 8,
+      "minD": 113,
+      "animalSizes": [
+       88,
+       98,
+       98,
+       86,
+       88,
+       92,
+       83,
+       83
+      ]
+     },
+     "tapOtherCounted": 6,
+     "optBox": [
+      132,
+      96
+     ]
+    },
+    {
+     "n": 8,
+     "items": [
+      9,
+      7,
+      8
+     ],
+     "others": [
+      {
+       "kind": "bunny"
+      },
+      {
+       "kind": "bunny"
+      }
+     ],
+     "taps": [],
+     "measure": {
+      "animals": 10,
+      "minD": 102,
+      "animalSizes": [
+       87,
+       87,
+       86,
+       100,
+       92,
+       83,
+       83,
+       100,
+       83,
+       83
+      ]
+     },
+     "tapOtherCounted": 8,
+     "optBox": [
+      132,
+      96
+     ]
+    }
+   ],
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   },
+   "pageerrors": [],
+   "netreq": []
+  },
+  "error_path": {
+   "events": [
+    {
+     "step": "firstMiss",
+     "state": {
+      "wrongCls": [
+       "opt",
+       "opt wrong",
+       "opt"
+      ],
+      "pulseOnCorrect": false
+     },
+     "voiceN": 1
+    },
+    {
+     "step": "secondMiss",
+     "state": {
+      "pulseOnCorrect": true,
+      "cur": 2
+     },
+     "pickAgain": "again"
+    },
+    {
+     "step": 1,
+     "ok": true
+    }
+   ],
+   "finalStars": {
+    "stars": 2,
+    "plays": 1
+   }
+  },
+  "idle_rescue": {
+   "first26s": [
+    {
+     "k": "chk_hint",
+     "t": "点一点，数一数",
+     "at": 1788703963175
+    }
+   ],
+   "next22s": [
+    {
+     "k": "chk_hint",
+     "t": "点一点，数一数",
+     "at": 1788703983183
+    }
+   ],
+   "pageerrors": []
+  },
+  "viewports": {
+   "1280x800": {
+    "overflow": {
+     "sw": 1280,
+     "cw": 1280,
+     "iw": 1280,
+     "overX": 0
+    },
+    "measure": {
+     "animals": 7,
+     "minD": 133,
+     "field": [
+      1180,
+      432
+     ],
+     "animalSizes": [
+      84,
+      83,
+      91,
+      86,
+      85,
+      89,
+      83
+     ],
+     "badge": {
+      "fs": "21px",
+      "box": "autox34px"
+     },
+     "optSizes": [
+      [
+       132,
+       96
+      ],
+      [
+       132,
+       96
+      ],
+      [
+       132,
+       96
+      ]
+     ]
+    },
+    "shot": {
+     "mean": [
+      236.4,
+      237.3,
+      215.4
+     ],
+     "std": 22.6,
+     "colors": 2621,
+     "nonblank": true
+    },
+    "pageerrors": []
+   },
+   "800x1180": {
+    "overflow": {
+     "sw": 800,
+     "cw": 800,
+     "iw": 800,
+     "overX": 0
+    },
+    "measure": {
+     "animals": 7,
+     "minD": 103,
+     "field": [
+      780,
+      804
+     ],
+     "animalSizes": [
+      84,
+      83,
+      91,
+      86,
+      85,
+      89,
+      83
+     ],
+     "badge": {
+      "fs": "21px",
+      "box": "autox34px"
+     },
+     "optSizes": [
+      [
+       150,
+       104
+      ],
+      [
+       150,
+       104
+      ],
+      [
+       150,
+       104
+      ]
+     ]
+    },
+    "shot": {
+     "mean": [
+      232.3,
+      235.4,
+      209.9
+     ],
+     "std": 22.4,
+     "colors": 2900,
+     "nonblank": true
+    },
+    "pageerrors": []
+   }
+  }
+ }
+}

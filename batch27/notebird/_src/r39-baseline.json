@@ -1,0 +1,3121 @@
+{
+ "0": {
+  "dch": 1,
+  "ch": 1,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "fa"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "sol",
+     "dop"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "sol"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "fa",
+     "la",
+     "si"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "fa",
+     "sol",
+     "si"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "sol",
+     "dop"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ "1": {
+  "dch": 1,
+  "ch": 1,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "sol",
+     "dop"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "sol"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "si",
+     "dop"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "fa",
+     "la",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "fa",
+     "sol",
+     "si",
+     "dop"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "sol"
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ "2": {
+  "dch": 1,
+  "ch": 1,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "fa"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "la",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "si",
+     "dop"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "si"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "3": {
+  "dch": 1,
+  "ch": 1,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "sol",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "fa",
+     "la",
+     "si"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "la",
+     "dop"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "sol",
+     "si"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "fa",
+     "la",
+     "si"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ "4": {
+  "dch": 1,
+  "ch": 1,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "fa",
+     "si",
+     "dop"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "la"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "la"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ "5": {
+  "dch": 2,
+  "ch": 2,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "la"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "fa"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "sol",
+     "la"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "dop"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "dop"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "6": {
+  "dch": 2,
+  "ch": 2,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "fa",
+     "si",
+     "dop"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "fa",
+     "sol",
+     "dop"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "sol",
+     "dop"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "fa",
+     "si",
+     "dop"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "7": {
+  "dch": 2,
+  "ch": 2,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "dop"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "sol",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "8": {
+  "dch": 2,
+  "ch": 2,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "fa",
+     "la",
+     "dop"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "dop"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "sol",
+     "la"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "sol"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "9": {
+  "dch": 2,
+  "ch": 2,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "fa",
+     "la"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "la",
+     "si"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "sol"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "10": {
+  "dch": 3,
+  "ch": 3,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "si",
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "fa"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "mi",
+     "fa"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "fa",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "la",
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "sol"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "do",
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "si",
+     "dop"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "11": {
+  "dch": 3,
+  "ch": 3,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "sol",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "sol",
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "fa"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "re",
+     "mi"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "fa",
+     "sol"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "re",
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "sol",
+     "si"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "12": {
+  "dch": 3,
+  "ch": 3,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "la",
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "sol"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "do",
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "sol",
+     "la"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "la",
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "mi",
+     "fa"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "13": {
+  "dch": 3,
+  "ch": 3,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "sol",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "la",
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "fa"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "re",
+     "fa"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "fa",
+     "sol"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "sol",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "sol",
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "sol",
+     "la"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "14": {
+  "dch": 3,
+  "ch": 3,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "dop"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "mi",
+     "fa"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "sol"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "do",
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "mi",
+     "fa"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "sol",
+     "la"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "dop"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "re",
+     "fa"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "15": {
+  "dch": 4,
+  "ch": 4,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "fa",
+     "la",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "fa",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "re",
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "fa",
+     "sol"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "sol",
+     "la"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "16": {
+  "dch": 4,
+  "ch": 4,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "sol",
+     "la"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "la"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "re",
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "sol",
+     "la"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "fa",
+     "la",
+     "si"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "la",
+     "si"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "17": {
+  "dch": 4,
+  "ch": 4,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "fa",
+     "si"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "la",
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "dop"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "do",
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "sol",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "la",
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "sol",
+     "si"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ "18": {
+  "dch": 4,
+  "ch": 4,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "fa",
+     "sol"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "fa",
+     "sol",
+     "si"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "re",
+     "fa"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "mi",
+     "fa",
+     "la"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "do",
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "la",
+     "si"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "dop"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "19": {
+  "dch": 4,
+  "ch": 4,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "sol",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "sol",
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "la"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "mi",
+     "fa"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "la"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "la",
+     "si"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ "20": {
+  "dch": 3,
+  "ch": 5,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "fa",
+     "sol"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "re",
+     "fa"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "si",
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "la"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "do",
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "fa"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "re",
+     "fa"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "21": {
+  "dch": 2,
+  "ch": 5,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "fa",
+     "dop"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "dop"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "sol"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "sol",
+     "si"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "sol"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "22": {
+  "dch": 4,
+  "ch": 5,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "dop"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "mi",
+     "fa"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "la"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "mi",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "fa",
+     "sol"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "la"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "dop"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "23": {
+  "dch": 2,
+  "ch": 5,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "fa",
+     "la"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "si"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ "24": {
+  "dch": 4,
+  "ch": 5,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "sol",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "sol",
+     "la"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "fa"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "mi",
+     "fa"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "dop"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "25": {
+  "dch": 2,
+  "ch": 6,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "sol"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "fa",
+     "sol",
+     "si",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "la"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ "26": {
+  "dch": 1,
+  "ch": 6,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "fa",
+     "la"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "si"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "la",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "sol",
+     "la"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ "27": {
+  "dch": 4,
+  "ch": 6,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "fa",
+     "sol"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "sol",
+     "si"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "sol",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "si",
+     "dop"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "28": {
+  "dch": 1,
+  "ch": 6,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "fa",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "fa",
+     "si"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "sol",
+     "la"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "sol"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "fa",
+     "la",
+     "dop"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "29": {
+  "dch": 4,
+  "ch": 6,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "sol",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "si",
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "sol"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "si"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "mi",
+     "fa"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "fa",
+     "sol",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "fa"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "mi",
+     "fa"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "30": {
+  "dch": 3,
+  "ch": 7,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "la",
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "la"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "re",
+     "fa"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "si"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "re",
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "mi",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "la",
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "sol",
+     "la"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "31": {
+  "dch": 3,
+  "ch": 7,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "sol",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "la",
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "sol"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "re",
+     "mi"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "sol",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "sol",
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "la",
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "fa",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "la",
+     "si"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "32": {
+  "dch": 2,
+  "ch": 7,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "fa",
+     "la",
+     "si"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "fa",
+     "si",
+     "dop"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "sol"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ "33": {
+  "dch": 4,
+  "ch": 7,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "fa",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "la",
+     "si"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "la"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "fa",
+     "sol"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "sol",
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "la",
+     "dop"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "la",
+     "dop"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ "34": {
+  "dch": 3,
+  "ch": 7,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "re",
+     "fa"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "la"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "do",
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "la",
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "mi",
+     "la",
+     "si",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "si",
+     "dop"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "fa",
+     "la"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "re",
+     "fa"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "35": {
+  "dch": 4,
+  "ch": 8,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "mi",
+     "fa",
+     "la",
+     "dop"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "fa",
+     "la"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "si"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "re",
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "la"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "la"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "mi",
+     "fa",
+     "dop"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "do",
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "dop",
+    "sang": [
+     "la",
+     "dop"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ "36": {
+  "dch": 2,
+  "ch": 8,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "fa",
+     "sol",
+     "si"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "si"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "dop"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "sol"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "la",
+     "si"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "sol",
+     "la"
+    ],
+    "ansNote": "sol",
+    "sang": [
+     "sol"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "37": {
+  "dch": 2,
+  "ch": 8,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "fa",
+     "dop"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "fa",
+     "la",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "re",
+     "sol",
+     "si"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "re"
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ "38": {
+  "dch": 2,
+  "ch": 8,
+  "q": [
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "fa",
+     "sol",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "fa",
+     "dop"
+    ],
+    "ansNote": "mi",
+    "sang": [
+     "mi"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "do",
+     "mi",
+     "sol",
+     "si"
+    ],
+    "ansNote": "do",
+    "sang": [
+     "do"
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "mi",
+     "fa",
+     "sol",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "la"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "fa"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ "39": {
+  "dch": 4,
+  "ch": 8,
+  "q": [
+   {
+    "kind": "higher",
+    "notes": [
+     "do",
+     "re",
+     "mi",
+     "dop"
+    ],
+    "ansNote": "re",
+    "sang": [
+     "do",
+     "re"
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "re",
+     "mi",
+     "fa",
+     "sol"
+    ],
+    "ansNote": "fa",
+    "sang": [
+     "mi",
+     "fa"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "mi",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "sol",
+     "la"
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "find",
+    "notes": [
+     "re",
+     "fa",
+     "sol",
+     "si"
+    ],
+    "ansNote": "si",
+    "sang": [
+     "si"
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "higher",
+    "notes": [
+     "fa",
+     "sol",
+     "la",
+     "si"
+    ],
+    "ansNote": "la",
+    "sang": [
+     "sol",
+     "la"
+    ],
+    "answer": 2
+   }
+  ]
+ }
+}

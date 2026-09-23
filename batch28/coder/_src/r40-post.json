@@ -1,0 +1,6005 @@
+[
+ {
+  "flat": 0,
+  "dch": 1,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     1
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     1,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     0,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 1,
+  "dch": 1,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     1
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     0,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 2,
+  "dch": 1,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     1,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     1,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 3,
+  "dch": 1,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 4,
+  "dch": 1,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     1,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 5,
+  "dch": 2,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "left",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "right",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "down",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 6,
+  "dch": 2,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "left",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 7,
+  "dch": 2,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "down",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "up",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "up",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 8,
+  "dch": 2,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "down",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "down",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "right",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 9,
+  "dch": 2,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "up",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "right",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 10,
+  "dch": 3,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     2
+    ],
+    "goal": [
+     3,
+     0
+    ],
+    "stones": [
+     [
+      1,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "left",
+     "left"
+    ],
+    "opts": [
+     [
+      3,
+      1
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      3,
+      0
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     1
+    ],
+    "goal": [
+     3,
+     3
+    ],
+    "stones": [
+     [
+      0,
+      3
+     ]
+    ],
+    "pool": [
+     "right",
+     "right",
+     "down",
+     "down",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     3,
+     1
+    ],
+    "stones": [
+     [
+      1,
+      1
+     ]
+    ],
+    "pool": [
+     "right",
+     "down",
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     0
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "right"
+    ],
+    "opts": [
+     [
+      2,
+      2
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     0,
+     3
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": [
+     "right",
+     "up",
+     "right",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 11,
+  "dch": 3,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     3
+    ],
+    "goal": [
+     3,
+     1
+    ],
+    "stones": [
+     [
+      3,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "left",
+     "left"
+    ],
+    "opts": [
+     [
+      0,
+      0
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      3,
+      1
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     3
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [
+     [
+      2,
+      3
+     ]
+    ],
+    "pool": [
+     "down",
+     "up",
+     "left",
+     "left",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     3,
+     0
+    ],
+    "stones": [
+     [
+      3,
+      2
+     ]
+    ],
+    "pool": [
+     "down",
+     "down",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     1,
+     3
+    ],
+    "stones": [
+     [
+      3,
+      1
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "up"
+    ],
+    "opts": [
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      1,
+      3
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     3,
+     3
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [
+     [
+      1,
+      3
+     ]
+    ],
+    "pool": [
+     "left",
+     "up",
+     "up",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 12,
+  "dch": 3,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     3,
+     2
+    ],
+    "goal": [
+     0,
+     3
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": [
+     "right",
+     "up",
+     "up",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     3,
+     0
+    ],
+    "stones": [
+     [
+      2,
+      1
+     ]
+    ],
+    "pool": [
+     "down",
+     "down",
+     "left",
+     "left",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     1
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [
+     [
+      3,
+      1
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "down",
+     "left"
+    ],
+    "opts": [
+     [
+      3,
+      3
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      2
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     2
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "left",
+     "right"
+    ],
+    "opts": [
+     [
+      3,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      2
+     ]
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [
+     [
+      2,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "left",
+     "up",
+     "right"
+    ],
+    "opts": [
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "flat": 13,
+  "dch": 3,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [
+     [
+      3,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "left",
+     "right"
+    ],
+    "opts": [
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      1,
+      3
+     ]
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     3
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [
+     [
+      1,
+      2
+     ]
+    ],
+    "pool": [
+     "down",
+     "left",
+     "left",
+     "up",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     2,
+     3
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [
+     [
+      3,
+      1
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "left",
+     "up",
+     "up"
+    ],
+    "opts": [
+     [
+      2,
+      2
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     3
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [
+     [
+      2,
+      1
+     ]
+    ],
+    "pool": [
+     "left",
+     "right",
+     "down",
+     "left",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     3,
+     1
+    ],
+    "goal": [
+     0,
+     0
+    ],
+    "stones": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pool": [
+     "up",
+     "up",
+     "up",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 14,
+  "dch": 3,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     0
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [
+     [
+      3,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "up",
+     "right"
+    ],
+    "opts": [
+     [
+      3,
+      1
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [
+     [
+      1,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "left",
+     "down",
+     "down"
+    ],
+    "opts": [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     3
+    ],
+    "goal": [
+     0,
+     3
+    ],
+    "stones": [
+     [
+      3,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "left",
+     "right"
+    ],
+    "opts": [
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     1
+    ],
+    "goal": [
+     2,
+     3
+    ],
+    "stones": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "right",
+     "up"
+    ],
+    "opts": [
+     [
+      0,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      3
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     0,
+     3
+    ],
+    "stones": [
+     [
+      1,
+      1
+     ]
+    ],
+    "pool": [
+     "right",
+     "up",
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 15,
+  "dch": 4,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     3,
+     3
+    ],
+    "stones": [
+     [
+      2,
+      0
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "pool": [
+     "right",
+     "down",
+     "right",
+     "down",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     0,
+     3
+    ],
+    "stones": [
+     [
+      1,
+      1
+     ]
+    ],
+    "pool": [
+     "right",
+     "right",
+     "up",
+     "right",
+     "up",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "down",
+     "down",
+     "up"
+    ],
+    "opts": [
+     [
+      3,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     0
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [
+     [
+      2,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "up",
+     "down"
+    ],
+    "opts": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     2,
+     3
+    ],
+    "stones": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pool": [
+     "down",
+     "right",
+     "right",
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 16,
+  "dch": 4,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     2
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [
+     [
+      2,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "left",
+     "up",
+     "up"
+    ],
+    "opts": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     3,
+     2
+    ],
+    "stones": [
+     [
+      2,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "down",
+     "down",
+     "down"
+    ],
+    "opts": [
+     [
+      1,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      2
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     2,
+     3
+    ],
+    "goal": [
+     0,
+     0
+    ],
+    "stones": [
+     [
+      1,
+      3
+     ]
+    ],
+    "pool": [
+     "up",
+     "left",
+     "left",
+     "up",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     2,
+     3
+    ],
+    "stones": [
+     [
+      2,
+      2
+     ]
+    ],
+    "pool": [
+     "down",
+     "right",
+     "right",
+     "right",
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     3,
+     3
+    ],
+    "stones": [
+     [
+      2,
+      2
+     ]
+    ],
+    "pool": [
+     "right",
+     "right",
+     "down",
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 17,
+  "dch": 4,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     3,
+     3
+    ],
+    "stones": [
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "pool": [
+     "down",
+     "down",
+     "down",
+     "right",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     3,
+     2
+    ],
+    "goal": [
+     0,
+     0
+    ],
+    "stones": [
+     [
+      3,
+      0
+     ]
+    ],
+    "pool": [
+     "up",
+     "up",
+     "up",
+     "left",
+     "left",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     1,
+     2
+    ],
+    "stones": [
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "down",
+     "left"
+    ],
+    "opts": [
+     [
+      1,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     3
+    ],
+    "goal": [
+     1,
+     3
+    ],
+    "stones": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "down",
+     "left",
+     "right"
+    ],
+    "opts": [
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     0
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": null,
+    "seq": [
+     "right",
+     "up",
+     "right"
+    ],
+    "opts": [
+     [
+      2,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      2,
+      2
+     ]
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "flat": 18,
+  "dch": 4,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     3
+    ],
+    "goal": [
+     1,
+     3
+    ],
+    "stones": [
+     [
+      0,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "down",
+     "left",
+     "right"
+    ],
+    "opts": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     3,
+     3
+    ],
+    "stones": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "pool": [
+     "right",
+     "down",
+     "down",
+     "right",
+     "right",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [
+     [
+      3,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "right",
+     "right"
+    ],
+    "opts": [
+     [
+      0,
+      2
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     1
+    ],
+    "goal": [
+     3,
+     0
+    ],
+    "stones": [
+     [
+      0,
+      3
+     ],
+     [
+      2,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "down",
+     "left",
+     "down"
+    ],
+    "opts": [
+     [
+      3,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     2,
+     3
+    ],
+    "stones": [
+     [
+      1,
+      3
+     ],
+     [
+      3,
+      1
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "down",
+     "down",
+     "right"
+    ],
+    "opts": [
+     [
+      2,
+      2
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      3,
+      0
+     ]
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ {
+  "flat": 19,
+  "dch": 4,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     3,
+     2
+    ],
+    "stones": [],
+    "pool": null,
+    "seq": [
+     "down",
+     "left",
+     "right"
+    ],
+    "opts": [
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      0,
+      3
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     3,
+     0
+    ],
+    "stones": [
+     [
+      0,
+      3
+     ],
+     [
+      3,
+      1
+     ]
+    ],
+    "pool": [
+     "left",
+     "up",
+     "down",
+     "left",
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     3,
+     3
+    ],
+    "stones": [
+     [
+      2,
+      3
+     ]
+    ],
+    "pool": [
+     "right",
+     "down",
+     "down",
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     3,
+     2
+    ],
+    "goal": [
+     0,
+     0
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": [
+     "left",
+     "up",
+     "left",
+     "up",
+     "up",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": null,
+    "seq": [
+     "down",
+     "down",
+     "up"
+    ],
+    "opts": [
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      2,
+      2
+     ]
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "flat": 20,
+  "dch": 4,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     3,
+     0
+    ],
+    "goal": [
+     1,
+     3
+    ],
+    "stones": [
+     [
+      0,
+      3
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "pool": [
+     "right",
+     "up",
+     "up",
+     "right",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [
+     [
+      2,
+      0
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "right",
+     "left"
+    ],
+    "opts": [
+     [
+      3,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     2,
+     3
+    ],
+    "stones": [
+     [
+      0,
+      1
+     ],
+     [
+      3,
+      1
+     ]
+    ],
+    "pool": [
+     "right",
+     "right",
+     "right",
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     0,
+     3
+    ],
+    "stones": [
+     [
+      2,
+      3
+     ]
+    ],
+    "pool": [
+     "right",
+     "up",
+     "up",
+     "right",
+     "right",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     1
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [
+     [
+      3,
+      3
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "left",
+     "down",
+     "up"
+    ],
+    "opts": [
+     [
+      1,
+      0
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "flat": 21,
+  "dch": 4,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     1,
+     2
+    ],
+    "stones": [
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "right",
+     "down"
+    ],
+    "opts": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     2,
+     3
+    ],
+    "stones": [
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "down",
+     "down"
+    ],
+    "opts": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      0,
+      3
+     ]
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     3,
+     3
+    ],
+    "stones": [
+     [
+      2,
+      3
+     ]
+    ],
+    "pool": [
+     "down",
+     "right",
+     "down",
+     "right",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     3
+    ],
+    "goal": [
+     3,
+     0
+    ],
+    "stones": [
+     [
+      1,
+      2
+     ]
+    ],
+    "pool": [
+     "down",
+     "left",
+     "left",
+     "right",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     0,
+     3
+    ],
+    "stones": [],
+    "pool": null,
+    "seq": [
+     "right",
+     "down",
+     "up"
+    ],
+    "opts": [
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "flat": 22,
+  "dch": 2,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "right",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "left",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "up",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "down",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 23,
+  "dch": 3,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [
+     [
+      3,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "right",
+     "left"
+    ],
+    "opts": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      2,
+      2
+     ]
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     3,
+     1
+    ],
+    "stones": [
+     [
+      0,
+      3
+     ]
+    ],
+    "pool": [
+     "down",
+     "down",
+     "down",
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     0
+    ],
+    "goal": [
+     3,
+     3
+    ],
+    "stones": [
+     [
+      0,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "right",
+     "right"
+    ],
+    "opts": [
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     3
+    ],
+    "goal": [
+     2,
+     3
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "down",
+     "down",
+     "up"
+    ],
+    "opts": [
+     [
+      0,
+      0
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     1,
+     2
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "right",
+     "down"
+    ],
+    "opts": [
+     [
+      1,
+      2
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "flat": 24,
+  "dch": 3,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "right",
+     "left"
+    ],
+    "opts": [
+     [
+      3,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      2,
+      2
+     ]
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     3
+    ],
+    "goal": [
+     0,
+     3
+    ],
+    "stones": [
+     [
+      3,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "up",
+     "up"
+    ],
+    "opts": [
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      0,
+      3
+     ]
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     3,
+     0
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": [
+     "down",
+     "left",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     3
+    ],
+    "goal": [
+     3,
+     2
+    ],
+    "stones": [
+     [
+      2,
+      0
+     ]
+    ],
+    "pool": [
+     "down",
+     "down",
+     "down",
+     "left",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [
+     [
+      3,
+      3
+     ]
+    ],
+    "pool": [
+     "down",
+     "right",
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 25,
+  "dch": 4,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     2,
+     3
+    ],
+    "stones": [
+     [
+      0,
+      0
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "down",
+     "down"
+    ],
+    "opts": [
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     3,
+     3
+    ],
+    "stones": [
+     [
+      2,
+      3
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "pool": [
+     "down",
+     "left",
+     "down",
+     "down",
+     "right",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     3,
+     3
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [
+     [
+      3,
+      0
+     ]
+    ],
+    "pool": [
+     "left",
+     "up",
+     "left",
+     "up",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     3
+    ],
+    "goal": [
+     1,
+     2
+    ],
+    "stones": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "left",
+     "left",
+     "right"
+    ],
+    "opts": [
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     3
+    ],
+    "goal": [
+     3,
+     0
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": [
+     "left",
+     "down",
+     "left",
+     "down",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 26,
+  "dch": 2,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "left",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "down",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 27,
+  "dch": 1,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     0,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     0,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     1
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 28,
+  "dch": 1,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     0,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 29,
+  "dch": 4,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     3,
+     1
+    ],
+    "goal": [
+     0,
+     3
+    ],
+    "stones": [
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "pool": [
+     "right",
+     "up",
+     "up",
+     "right",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     1
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": null,
+    "seq": [
+     "down",
+     "right",
+     "left"
+    ],
+    "opts": [
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     2,
+     3
+    ],
+    "goal": [
+     0,
+     0
+    ],
+    "stones": [
+     [
+      0,
+      3
+     ]
+    ],
+    "pool": [
+     "left",
+     "left",
+     "left",
+     "up",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     2,
+     3
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [],
+    "pool": null,
+    "seq": [
+     "up",
+     "up",
+     "left"
+    ],
+    "opts": [
+     [
+      1,
+      3
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [
+     [
+      3,
+      2
+     ],
+     [
+      3,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "up",
+     "down"
+    ],
+    "opts": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      3,
+      1
+     ]
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "flat": 30,
+  "dch": 2,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "left",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     1,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "right",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "left",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 31,
+  "dch": 4,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     3
+    ],
+    "goal": [
+     3,
+     1
+    ],
+    "stones": [
+     [
+      0,
+      2
+     ]
+    ],
+    "pool": [
+     "down",
+     "down",
+     "left",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     1
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "up",
+     "down"
+    ],
+    "opts": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "left",
+     "down"
+    ],
+    "opts": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      3
+     ]
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     3,
+     2
+    ],
+    "stones": [
+     [
+      3,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "down",
+     "right",
+     "right"
+    ],
+    "opts": [
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      3,
+      1
+     ]
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     1
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [
+     [
+      1,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "left",
+     "right"
+    ],
+    "opts": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      0
+     ]
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ {
+  "flat": 32,
+  "dch": 2,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "right",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "up",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     1
+    ],
+    "goal": [
+     0,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "left",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 33,
+  "dch": 3,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [
+     [
+      1,
+      1
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "right",
+     "right"
+    ],
+    "opts": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     3,
+     2
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [
+     [
+      2,
+      2
+     ]
+    ],
+    "pool": [
+     "up",
+     "left",
+     "down",
+     "up",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [
+     [
+      0,
+      3
+     ]
+    ],
+    "pool": [
+     "down",
+     "left",
+     "left",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     2,
+     3
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "left",
+     "up",
+     "up"
+    ],
+    "opts": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     0,
+     2
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": [
+     "right",
+     "up",
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 34,
+  "dch": 2,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "left",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "left",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "down",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     1,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "down",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 35,
+  "dch": 3,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     2
+    ],
+    "goal": [
+     2,
+     3
+    ],
+    "stones": [
+     [
+      1,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "right"
+    ],
+    "opts": [
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      0,
+      3
+     ]
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [
+     [
+      0,
+      2
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "right",
+     "up"
+    ],
+    "opts": [
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     1,
+     3
+    ],
+    "stones": [
+     [
+      1,
+      2
+     ]
+    ],
+    "pool": [
+     "right",
+     "right",
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [
+     [
+      1,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "left",
+     "down"
+    ],
+    "opts": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     3,
+     3
+    ],
+    "stones": [
+     [
+      3,
+      1
+     ]
+    ],
+    "pool": [
+     "down",
+     "right",
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 36,
+  "dch": 2,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     1,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "right",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "down",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     1,
+     0
+    ],
+    "stones": [],
+    "pool": [
+     "left",
+     "down",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "down",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 37,
+  "dch": 3,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     2
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [
+     [
+      3,
+      1
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "down",
+     "down",
+     "up"
+    ],
+    "opts": [
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "answer": 2
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     1
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [
+     [
+      0,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "left",
+     "right"
+    ],
+    "opts": [
+     [
+      0,
+      0
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "answer": 3
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     2,
+     0
+    ],
+    "goal": [
+     1,
+     3
+    ],
+    "stones": [
+     [
+      1,
+      0
+     ]
+    ],
+    "pool": [
+     "right",
+     "right",
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     3,
+     2
+    ],
+    "stones": [
+     [
+      0,
+      1
+     ]
+    ],
+    "pool": [
+     "down",
+     "right",
+     "left",
+     "right",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     2,
+     3
+    ],
+    "goal": [
+     1,
+     1
+    ],
+    "stones": [
+     [
+      0,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "left",
+     "left"
+    ],
+    "opts": [
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      1,
+      3
+     ]
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "flat": 38,
+  "dch": 2,
+  "quizzes": [
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "up",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "right",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     0
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "right",
+     "down",
+     "down"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     0,
+     1
+    ],
+    "goal": [
+     2,
+     2
+    ],
+    "stones": [],
+    "pool": [
+     "down",
+     "down",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "run",
+    "g": 3,
+    "start": [
+     2,
+     2
+    ],
+    "goal": [
+     0,
+     1
+    ],
+    "stones": [],
+    "pool": [
+     "up",
+     "left",
+     "up"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ },
+ {
+  "flat": 39,
+  "dch": 3,
+  "quizzes": [
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     0,
+     2
+    ],
+    "goal": [
+     1,
+     2
+    ],
+    "stones": [
+     [
+      0,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "left",
+     "down",
+     "right"
+    ],
+    "opts": [
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "answer": 1
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     1,
+     0
+    ],
+    "goal": [
+     0,
+     3
+    ],
+    "stones": [
+     [
+      3,
+      0
+     ]
+    ],
+    "pool": [
+     "right",
+     "right",
+     "left",
+     "up",
+     "right"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     3,
+     2
+    ],
+    "goal": [
+     3,
+     3
+    ],
+    "stones": [
+     [
+      0,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "up",
+     "right",
+     "down"
+    ],
+    "opts": [
+     [
+      3,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "path",
+    "g": 4,
+    "start": [
+     1,
+     1
+    ],
+    "goal": [
+     2,
+     1
+    ],
+    "stones": [
+     [
+      3,
+      3
+     ]
+    ],
+    "pool": null,
+    "seq": [
+     "down",
+     "down",
+     "up"
+    ],
+    "opts": [
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      1
+     ]
+    ],
+    "answer": 0
+   },
+   {
+    "kind": "run",
+    "g": 4,
+    "start": [
+     3,
+     3
+    ],
+    "goal": [
+     2,
+     0
+    ],
+    "stones": [
+     [
+      1,
+      2
+     ]
+    ],
+    "pool": [
+     "left",
+     "up",
+     "left",
+     "left"
+    ],
+    "seq": null,
+    "opts": null,
+    "answer": -1
+   }
+  ]
+ }
+]

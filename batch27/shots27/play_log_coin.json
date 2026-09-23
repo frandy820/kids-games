@@ -1,0 +1,2140 @@
+{
+ "log": [
+  {
+   "t": 0.0,
+   "tag": "page_loaded",
+   "title": "硬币认钱"
+  },
+  {
+   "t": 0.0,
+   "tag": "phase",
+   "name": "教学关 flat0（watch 演示）"
+  },
+  {
+   "t": 1.58,
+   "tag": "shot",
+   "file": "coin_f0_teach.png"
+  },
+  {
+   "t": 1.58,
+   "tag": "tut_watch_state",
+   "state": "watch"
+  },
+  {
+   "t": 2.89,
+   "tag": "tut_watch_tap_swallowed",
+   "step_same": false,
+   "voice": [
+    "<clip:coi_tut_watch>",
+    "TTS:看！这是多少钱",
+    "TTS:这是一元"
+   ]
+  },
+  {
+   "t": 7.55,
+   "tag": "tut_state",
+   "state": "help",
+   "wait_s": 4.7
+  },
+  {
+   "t": 8.41,
+   "tag": "shot",
+   "file": "coin_f0_turn.png"
+  },
+  {
+   "t": 9.48,
+   "tag": "tap",
+   "card": 0,
+   "note": "teach 题1 错1",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":0,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_tut_turn>",
+    "<clip:coi_wrong>"
+   ]
+  },
+  {
+   "t": 15.11,
+   "tag": "shot",
+   "file": "coin_f0_wrong.png"
+  },
+  {
+   "t": 16.18,
+   "tag": "tap",
+   "card": 0,
+   "note": "teach 题1 重复同错卡（手痒）",
+   "before": "{\"s\":0,\"m\":1}",
+   "after": "{\"s\":0,\"m\":2}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "<clip:coi_wrong>"
+   ]
+  },
+  {
+   "t": 22.83,
+   "tag": "tap",
+   "card": 1,
+   "note": "teach 题1 点对",
+   "before": "{\"s\":0,\"m\":2}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:看看数字，再看看颜色",
+    "TTS:这是一元"
+   ]
+  },
+  {
+   "t": 28.56,
+   "tag": "tap",
+   "card": 0,
+   "note": "teach 题2 错1",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":1,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "<clip:coi_wrong>"
+   ]
+  },
+  {
+   "t": 35.2,
+   "tag": "tap",
+   "card": 3,
+   "note": "teach 题2 点对",
+   "before": "{\"s\":1,\"m\":1}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:看看颜色，金色的是五角",
+    "TTS:这是一角"
+   ]
+  },
+  {
+   "t": 41.96,
+   "tag": "tap",
+   "card": 2,
+   "note": "teach 题3 点对",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是五角"
+   ]
+  },
+  {
+   "t": 49.22,
+   "tag": "tap",
+   "card": 0,
+   "note": "teach 题4 点对",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一元"
+   ]
+  },
+  {
+   "t": 55.28,
+   "tag": "tap",
+   "card": 2,
+   "note": "teach 题5 点对",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一角"
+   ]
+  },
+  {
+   "t": 67.32,
+   "tag": "flat_done",
+   "flat": 0,
+   "level": "1-0",
+   "stars": {
+    "stars": 1,
+    "plays": 1
+   }
+  },
+  {
+   "t": 67.32,
+   "tag": "phase",
+   "name": "flat1 点空白+正常玩"
+  },
+  {
+   "t": 71.75,
+   "tag": "blank_tap",
+   "note": "flat1 点左上空白",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":0,\"m\":0}",
+   "voice": [
+    "<clip:coi_right>",
+    "<clip:coi_q>"
+   ]
+  },
+  {
+   "t": 71.75,
+   "tag": "blank_result",
+   "no_reaction": false
+  },
+  {
+   "t": 74.28,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat1 题1",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:这是五角"
+   ]
+  },
+  {
+   "t": 81.13,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat1 题2",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一元"
+   ]
+  },
+  {
+   "t": 87.5,
+   "tag": "tap",
+   "card": 2,
+   "note": "flat1 题3",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一角"
+   ]
+  },
+  {
+   "t": 94.74,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat1 题4",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是五角"
+   ]
+  },
+  {
+   "t": 101.06,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat1 题5",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一元"
+   ]
+  },
+  {
+   "t": 113.08,
+   "tag": "flat_done",
+   "flat": 1,
+   "level": "1-1",
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  {
+   "t": 113.08,
+   "tag": "phase",
+   "name": "flat2 首题犹豫 15.5s（观察 14s 方向级救援）"
+  },
+  {
+   "t": 128.6,
+   "tag": "idle",
+   "sec": 15.5,
+   "note": "flat2 首题犹豫",
+   "voice": [
+    "<clip:coi_right>",
+    "<clip:coi_q>",
+    "<clip:coi_q>"
+   ]
+  },
+  {
+   "t": 128.6,
+   "tag": "rescue_check",
+   "waited_s": 15.5,
+   "voices": [
+    "<clip:coi_right>",
+    "<clip:coi_q>",
+    "<clip:coi_q>"
+   ]
+  },
+  {
+   "t": 128.64,
+   "tag": "shot",
+   "file": "coin_f2_rescue.png"
+  },
+  {
+   "t": 131.26,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat2 题1",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:这是五角"
+   ]
+  },
+  {
+   "t": 137.92,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat2 题2",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一元"
+   ]
+  },
+  {
+   "t": 144.37,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat2 题3",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一角"
+   ]
+  },
+  {
+   "t": 151.56,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat2 题4",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是五角"
+   ]
+  },
+  {
+   "t": 158.18,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat2 题5",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一元"
+   ]
+  },
+  {
+   "t": 170.2,
+   "tag": "flat_done",
+   "flat": 2,
+   "level": "1-2",
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  {
+   "t": 170.2,
+   "tag": "phase",
+   "name": "flat3 手痒连点+错反馈节流"
+  },
+  {
+   "t": 171.27,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat3 题1 错1",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":0,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_right>",
+    "<clip:coi_q>",
+    "<clip:coi_wrong>"
+   ]
+  },
+  {
+   "t": 173.93,
+   "tag": "shot",
+   "file": "coin_f3_wrongfb.png"
+  },
+  {
+   "t": 174.73,
+   "tag": "rapid_double_tap",
+   "miss_before": 1,
+   "miss_after": 2,
+   "voice": [
+    "TTS:看看颜色，金色的是五角"
+   ]
+  },
+  {
+   "t": 174.77,
+   "tag": "shot",
+   "file": "coin_f3_rapidtap.png"
+  },
+  {
+   "t": 175.84,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat3 节流窗内二击（预期 miss+1 零语音）",
+   "before": "{\"s\":0,\"m\":2}",
+   "after": "{\"s\":0,\"m\":2}",
+   "bump": "bump",
+   "voice": []
+  },
+  {
+   "t": 177.07,
+   "tag": "throttle_window",
+   "miss_before": 2,
+   "miss_after": 2,
+   "voice": []
+  },
+  {
+   "t": 178.12,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat3 题1 对",
+   "before": "{\"s\":0,\"m\":2}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:这是一元"
+   ]
+  },
+  {
+   "t": 184.85,
+   "tag": "tap",
+   "card": 2,
+   "note": "flat3 题2",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一角"
+   ]
+  },
+  {
+   "t": 191.53,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat3 题3",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是五角"
+   ]
+  },
+  {
+   "t": 198.46,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat3 题4",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一元"
+   ]
+  },
+  {
+   "t": 205.41,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat3 题5",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一角"
+   ]
+  },
+  {
+   "t": 217.44,
+   "tag": "flat_done",
+   "flat": 3,
+   "level": "1-3",
+   "stars": {
+    "stars": 2,
+    "plays": 1
+   }
+  },
+  {
+   "t": 217.44,
+   "tag": "phase",
+   "name": "flat4 正常玩 顺利"
+  },
+  {
+   "t": 220.67,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat4 题1 对",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_right>",
+    "<clip:coi_q>",
+    "TTS:这是一角"
+   ]
+  },
+  {
+   "t": 227.65,
+   "tag": "tap",
+   "card": 2,
+   "note": "flat4 题2 对",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是五角"
+   ]
+  },
+  {
+   "t": 233.75,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat4 题3 对",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一元"
+   ]
+  },
+  {
+   "t": 240.94,
+   "tag": "tap",
+   "card": 2,
+   "note": "flat4 题4 对",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一角"
+   ]
+  },
+  {
+   "t": 248.09,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat4 题5 对",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是五角"
+   ]
+  },
+  {
+   "t": 258.22,
+   "tag": "panel_close",
+   "pattern": "明天见",
+   "btn": "明天见"
+  },
+  {
+   "t": 259.35,
+   "tag": "flat_done",
+   "flat": 4,
+   "level": "1-4",
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  {
+   "t": 259.35,
+   "tag": "phase",
+   "name": "flat5 正常玩 当日最后一关"
+  },
+  {
+   "t": 262.49,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat5 题1 对",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_right>",
+    "<clip:core_chapter_end>",
+    "<clip:coi_q>",
+    "TTS:这是五元"
+   ]
+  },
+  {
+   "t": 269.26,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat5 题2 对",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是undefined元"
+   ]
+  },
+  {
+   "t": 276.11,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat5 题3 对",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是undefined元"
+   ]
+  },
+  {
+   "t": 282.5,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat5 题4 对",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是一元"
+   ]
+  },
+  {
+   "t": 289.69,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat5 题5 对",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是五元"
+   ]
+  },
+  {
+   "t": 294.09,
+   "tag": "flat_done",
+   "flat": 5,
+   "level": null,
+   "stars": null
+  },
+  {
+   "t": 296.6,
+   "tag": "phase",
+   "name": "dayEnd 明天预告+家长门"
+  },
+  {
+   "t": 297.12,
+   "tag": "dayend_panels",
+   "panels": [
+    {
+     "cls": "pulse",
+     "txt": "5元这是多少钱？"
+    },
+    {
+     "cls": "card pop t-card",
+     "txt": "1元"
+    },
+    {
+     "cls": "card pop t-card lit",
+     "txt": "5元"
+    },
+    {
+     "cls": "card pop t-card t-long",
+     "txt": "10元"
+    },
+    {
+     "cls": "card pop t-card t-long",
+     "txt": "20元"
+    },
+    {
+     "cls": "k-parentbtn",
+     "txt": "👪"
+    },
+    {
+     "cls": "k-btn ghost",
+     "txt": "再玩玩旧关卡"
+    },
+    {
+     "cls": "k-btn",
+     "txt": "明天见"
+    }
+   ]
+  },
+  {
+   "t": 297.16,
+   "tag": "shot",
+   "file": "coin_dayend.png"
+  },
+  {
+   "t": 297.18,
+   "tag": "click_by_text",
+   "pattern": "再玩|旧关|明天见",
+   "hit": "再玩玩旧关卡",
+   "note": "dayEnd/章末 关闭"
+  },
+  {
+   "t": 299.98,
+   "tag": "parent_panels",
+   "panels": [
+    {
+     "cls": "pulse",
+     "txt": "5元这是多少钱？"
+    },
+    {
+     "cls": "card pop t-card",
+     "txt": "1元"
+    },
+    {
+     "cls": "card pop t-card lit",
+     "txt": "5元"
+    },
+    {
+     "cls": "card pop t-card t-long",
+     "txt": "10元"
+    },
+    {
+     "cls": "card pop t-card t-long",
+     "txt": "20元"
+    },
+    {
+     "cls": "k-parentbtn",
+     "txt": "👪"
+    },
+    {
+     "cls": "k-panel",
+     "txt": "家长验证19 + 38 = ?0123456789⌫确定取消"
+    },
+    {
+     "cls": "",
+     "txt": "0"
+    },
+    {
+     "cls": "",
+     "txt": "1"
+    },
+    {
+     "cls": "",
+     "txt": "2"
+    },
+    {
+     "cls": "",
+     "txt": "3"
+    },
+    {
+     "cls": "",
+     "txt": "4"
+    },
+    {
+     "cls": "",
+     "txt": "5"
+    },
+    {
+     "cls": "",
+     "txt": "6"
+    },
+    {
+     "cls": "",
+     "txt": "7"
+    },
+    {
+     "cls": "",
+     "txt": "8"
+    },
+    {
+     "cls": "",
+     "txt": "9"
+    },
+    {
+     "cls": "",
+     "txt": "⌫"
+    },
+    {
+     "cls": "mbtn",
+     "txt": "确定"
+    },
+    {
+     "cls": "mbtn ghost",
+     "txt": "取消"
+    }
+   ]
+  },
+  {
+   "t": 300.02,
+   "tag": "shot",
+   "file": "coin_parentpanel.png"
+  },
+  {
+   "t": 300.03,
+   "tag": "parent_gate_q",
+   "q": "19 + 38 = ?"
+  },
+  {
+   "t": 300.05,
+   "tag": "click_by_text",
+   "pattern": "^5$",
+   "hit": "5",
+   "note": "家长门数字 5"
+  },
+  {
+   "t": 300.48,
+   "tag": "click_by_text",
+   "pattern": "^7$",
+   "hit": "7",
+   "note": "家长门数字 7"
+  },
+  {
+   "t": 302.72,
+   "tag": "parent_unlock_answer",
+   "q": "19 + 38 = ?",
+   "ans": "57"
+  },
+  {
+   "t": 302.77,
+   "tag": "shot",
+   "file": "coin_parentpanel_after.png"
+  },
+  {
+   "t": 302.77,
+   "tag": "phase",
+   "name": "flat6-9 快进 autoSolve（真实判定链）"
+  },
+  {
+   "t": 379.78,
+   "tag": "panel_close_not_effective",
+   "pattern": "再玩玩旧关卡"
+  },
+  {
+   "t": 381.55,
+   "tag": "panel_close",
+   "pattern": "明天见",
+   "btn": "明天见"
+  },
+  {
+   "t": 382.17,
+   "tag": "flat_done",
+   "flat": 6,
+   "level": null,
+   "stars": null,
+   "auto": true
+  },
+  {
+   "t": 455.17,
+   "tag": "panel_close",
+   "pattern": "再玩玩旧关卡",
+   "btn": "再玩玩旧关卡"
+  },
+  {
+   "t": 455.79,
+   "tag": "flat_done",
+   "flat": 7,
+   "level": null,
+   "stars": null,
+   "auto": true
+  },
+  {
+   "t": 528.8,
+   "tag": "panel_close",
+   "pattern": "再玩玩旧关卡",
+   "btn": "再玩玩旧关卡"
+  },
+  {
+   "t": 529.42,
+   "tag": "flat_done",
+   "flat": 8,
+   "level": null,
+   "stars": null,
+   "auto": true
+  },
+  {
+   "t": 602.46,
+   "tag": "panel_close",
+   "pattern": "再玩玩旧关卡",
+   "btn": "再玩玩旧关卡"
+  },
+  {
+   "t": 603.06,
+   "tag": "flat_done",
+   "flat": 9,
+   "level": null,
+   "stars": null,
+   "auto": true
+  },
+  {
+   "t": 603.06,
+   "tag": "phase",
+   "name": "flat10 ch3 难关真实点击"
+  },
+  {
+   "t": 643.38,
+   "tag": "shot",
+   "file": "coin_f10_ch3.png"
+  },
+  {
+   "t": 655.25,
+   "tag": "idle",
+   "sec": 8.5,
+   "note": "flat10 题1 读题后静置",
+   "voice": [
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_right>",
+    "<clip:core_day_end>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_right>",
+    "<clip:core_day_end>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_right>",
+    "<clip:core_day_end>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_right>",
+    "<clip:core_day_end>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "<clip:coi_q>",
+    "TTS:这是五元",
+    "TTS:这是undefined元",
+    "TTS:这是多少钱",
+    "TTS:这是undefined元",
+    "TTS:这是多少钱",
+    "TTS:这是一元",
+    "TTS:这是多少钱",
+    "TTS:这是五元",
+    "TTS:这是多少钱",
+    "TTS:这是五元",
+    "TTS:这是undefined元",
+    "TTS:这是多少钱",
+    "TTS:这是undefined元",
+    "TTS:这是多少钱",
+    "TTS:这是一元",
+    "TTS:这是多少钱",
+    "TTS:这是五元",
+    "TTS:这是多少钱",
+    "TTS:这是五元",
+    "TTS:这是undefined元",
+    "TTS:这是多少钱",
+    "TTS:这是undefined元",
+    "TTS:这是多少钱",
+    "TTS:这是一元",
+    "TTS:这是多少钱",
+    "TTS:这是五元",
+    "TTS:这是多少钱",
+    "TTS:这是五元",
+    "TTS:这是undefined元",
+    "TTS:这是多少钱",
+    "TTS:这是undefined元",
+    "TTS:这是多少钱",
+    "TTS:这是一元",
+    "TTS:这是多少钱",
+    "TTS:这是五元",
+    "TTS:这是多少钱"
+   ]
+  },
+  {
+   "t": 656.32,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat10 题1 定向错点",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":0,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_wrong>"
+   ]
+  },
+  {
+   "t": 656.37,
+   "tag": "shot",
+   "file": "coin_f10_wrongfb.png"
+  },
+  {
+   "t": 667.31,
+   "tag": "wrong_chain",
+   "q": {
+    "near": "(fallback)",
+    "kind": "bill",
+    "face": "yuan5"
+   },
+   "chain_voice": [
+    "<clip:coi_wrong>",
+    "<clip:coi_q>",
+    "TTS:看看上面的大数字"
+   ],
+   "mid_voice": [
+    "<clip:coi_wrong>",
+    "TTS:看看上面的大数字"
+   ]
+  },
+  {
+   "t": 669.2,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat10 题1 对",
+   "before": "{\"s\":0,\"m\":1}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:这是五元"
+   ]
+  },
+  {
+   "t": 685.06,
+   "tag": "idle",
+   "sec": 8.5,
+   "note": "flat10 题2 读题后静置",
+   "voice": [
+    "<clip:coi_q>",
+    "<clip:coi_q>"
+   ]
+  },
+  {
+   "t": 686.12,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat10 题2 定向错点",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":1,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_wrong>"
+   ]
+  },
+  {
+   "t": 697.07,
+   "tag": "wrong_chain",
+   "q": {
+    "near": "(fallback)",
+    "kind": "bill",
+    "face": "yuan10"
+   },
+   "chain_voice": [
+    "<clip:coi_wrong>",
+    "<clip:coi_q>",
+    "TTS:看看上面的大数字"
+   ],
+   "mid_voice": [
+    "<clip:coi_wrong>",
+    "TTS:看看上面的大数字"
+   ]
+  },
+  {
+   "t": 698.95,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat10 题2 对",
+   "before": "{\"s\":1,\"m\":1}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:这是undefined元"
+   ]
+  },
+  {
+   "t": 714.83,
+   "tag": "idle",
+   "sec": 8.5,
+   "note": "flat10 题3 读题后静置",
+   "voice": [
+    "<clip:coi_q>",
+    "<clip:coi_q>"
+   ]
+  },
+  {
+   "t": 715.88,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat10 题3 定向错点",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":2,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_wrong>"
+   ]
+  },
+  {
+   "t": 726.82,
+   "tag": "wrong_chain",
+   "q": {
+    "near": "(fallback)",
+    "kind": "bill",
+    "face": "yuan20"
+   },
+   "chain_voice": [
+    "<clip:coi_wrong>",
+    "TTS:看看上面的大数字"
+   ],
+   "mid_voice": [
+    "<clip:coi_wrong>",
+    "TTS:看看上面的大数字"
+   ]
+  },
+  {
+   "t": 728.68,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat10 题3 对",
+   "before": "{\"s\":2,\"m\":1}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "TTS:这是undefined元"
+   ]
+  },
+  {
+   "t": 744.55,
+   "tag": "idle",
+   "sec": 8.5,
+   "note": "flat10 题4 读题后静置",
+   "voice": [
+    "<clip:coi_q>",
+    "<clip:coi_q>"
+   ]
+  },
+  {
+   "t": 745.61,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat10 题4 定向错点",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":3,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_wrong>"
+   ]
+  },
+  {
+   "t": 756.57,
+   "tag": "wrong_chain",
+   "q": {
+    "near": "(fallback)",
+    "kind": "bill",
+    "face": "yuan1p"
+   },
+   "chain_voice": [
+    "<clip:coi_wrong>",
+    "<clip:coi_q>",
+    "TTS:看看上面的大数字"
+   ],
+   "mid_voice": [
+    "<clip:coi_wrong>",
+    "TTS:看看上面的大数字"
+   ]
+  },
+  {
+   "t": 758.43,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat10 题4 对",
+   "before": "{\"s\":3,\"m\":1}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:这是一元"
+   ]
+  },
+  {
+   "t": 774.27,
+   "tag": "idle",
+   "sec": 8.5,
+   "note": "flat10 题5 读题后静置",
+   "voice": [
+    "<clip:coi_q>",
+    "<clip:coi_q>"
+   ]
+  },
+  {
+   "t": 775.32,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat10 题5 定向错点",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":4,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_wrong>"
+   ]
+  },
+  {
+   "t": 786.28,
+   "tag": "wrong_chain",
+   "q": {
+    "near": "(fallback)",
+    "kind": "bill",
+    "face": "yuan5"
+   },
+   "chain_voice": [
+    "<clip:coi_wrong>",
+    "<clip:core_rest>",
+    "TTS:看看上面的大数字"
+   ],
+   "mid_voice": [
+    "<clip:coi_wrong>",
+    "<clip:core_rest>",
+    "TTS:看看上面的大数字"
+   ]
+  },
+  {
+   "t": 788.15,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat10 题5 对",
+   "before": "{\"s\":4,\"m\":1}",
+   "after": "{\"s\":4,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:coi_q>",
+    "<clip:coi_q>"
+   ]
+  },
+  {
+   "t": 817.47,
+   "tag": "flat_done",
+   "flat": 10,
+   "level": null,
+   "stars": null
+  },
+  {
+   "t": 818.97,
+   "tag": "end_panels",
+   "panels": [
+    {
+     "cls": "pulse",
+     "txt": "5元这是多少钱？"
+    },
+    {
+     "cls": "card pop t-card wig",
+     "txt": "1元"
+    },
+    {
+     "cls": "card pop t-card breathe",
+     "txt": "5元"
+    },
+    {
+     "cls": "card pop t-card t-long",
+     "txt": "10元"
+    },
+    {
+     "cls": "card pop t-card t-long",
+     "txt": "20元"
+    },
+    {
+     "cls": "k-parentbtn",
+     "txt": "👪"
+    },
+    {
+     "cls": "k-btn",
+     "txt": "好的"
+    }
+   ]
+  },
+  {
+   "t": 819.03,
+   "tag": "shot",
+   "file": "coin_chapend.png"
+  },
+  {
+   "t": 819.03,
+   "tag": "session_end",
+   "page_errors": []
+  }
+ ],
+ "spy": {
+  "tts": [
+   {
+    "t": 1788991769560,
+    "text": "看！这是多少钱"
+   },
+   {
+    "t": 1788991773794,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788991790111,
+    "text": "看看数字，再看看颜色"
+   },
+   {
+    "t": 1788991793955,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788991802509,
+    "text": "看看颜色，金色的是五角"
+   },
+   {
+    "t": 1788991806325,
+    "text": "这是一角"
+   },
+   {
+    "t": 1788991813088,
+    "text": "这是五角"
+   },
+   {
+    "t": 1788991820339,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788991826410,
+    "text": "这是一角"
+   },
+   {
+    "t": 1788991845399,
+    "text": "这是五角"
+   },
+   {
+    "t": 1788991852259,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788991858627,
+    "text": "这是一角"
+   },
+   {
+    "t": 1788991865867,
+    "text": "这是五角"
+   },
+   {
+    "t": 1788991872184,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788991902398,
+    "text": "这是五角"
+   },
+   {
+    "t": 1788991909035,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788991915497,
+    "text": "这是一角"
+   },
+   {
+    "t": 1788991922680,
+    "text": "这是五角"
+   },
+   {
+    "t": 1788991929308,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788991945185,
+    "text": "看看颜色，金色的是五角"
+   },
+   {
+    "t": 1788991949254,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788991955976,
+    "text": "这是一角"
+   },
+   {
+    "t": 1788991962640,
+    "text": "这是五角"
+   },
+   {
+    "t": 1788991969588,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788991976523,
+    "text": "这是一角"
+   },
+   {
+    "t": 1788991991773,
+    "text": "这是一角"
+   },
+   {
+    "t": 1788991998792,
+    "text": "这是五角"
+   },
+   {
+    "t": 1788992004878,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788992012079,
+    "text": "这是一角"
+   },
+   {
+    "t": 1788992019220,
+    "text": "这是五角"
+   },
+   {
+    "t": 1788992033618,
+    "text": "这是五元"
+   },
+   {
+    "t": 1788992040389,
+    "text": "这是undefined元"
+   },
+   {
+    "t": 1788992047248,
+    "text": "这是undefined元"
+   },
+   {
+    "t": 1788992053613,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788992060824,
+    "text": "这是五元"
+   },
+   {
+    "t": 1788992115210,
+    "text": "这是五元"
+   },
+   {
+    "t": 1788992120618,
+    "text": "这是undefined元"
+   },
+   {
+    "t": 1788992120619,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992126024,
+    "text": "这是undefined元"
+   },
+   {
+    "t": 1788992126025,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992131435,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788992131437,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992136839,
+    "text": "这是五元"
+   },
+   {
+    "t": 1788992136840,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992194590,
+    "text": "这是五元"
+   },
+   {
+    "t": 1788992199997,
+    "text": "这是undefined元"
+   },
+   {
+    "t": 1788992199998,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992205407,
+    "text": "这是undefined元"
+   },
+   {
+    "t": 1788992205409,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992210815,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788992210816,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992216226,
+    "text": "这是五元"
+   },
+   {
+    "t": 1788992216228,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992268209,
+    "text": "这是五元"
+   },
+   {
+    "t": 1788992273613,
+    "text": "这是undefined元"
+   },
+   {
+    "t": 1788992273616,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992279022,
+    "text": "这是undefined元"
+   },
+   {
+    "t": 1788992279024,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992284432,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788992284433,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992289842,
+    "text": "这是五元"
+   },
+   {
+    "t": 1788992289844,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992341891,
+    "text": "这是五元"
+   },
+   {
+    "t": 1788992347294,
+    "text": "这是undefined元"
+   },
+   {
+    "t": 1788992347295,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992352698,
+    "text": "这是undefined元"
+   },
+   {
+    "t": 1788992352700,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992358105,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788992358106,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992363514,
+    "text": "这是五元"
+   },
+   {
+    "t": 1788992363515,
+    "text": "这是多少钱"
+   },
+   {
+    "t": 1788992430239,
+    "text": "看看上面的大数字"
+   },
+   {
+    "t": 1788992440314,
+    "text": "这是五元"
+   },
+   {
+    "t": 1788992460054,
+    "text": "看看上面的大数字"
+   },
+   {
+    "t": 1788992470069,
+    "text": "这是undefined元"
+   },
+   {
+    "t": 1788992489835,
+    "text": "看看上面的大数字"
+   },
+   {
+    "t": 1788992499808,
+    "text": "这是undefined元"
+   },
+   {
+    "t": 1788992519535,
+    "text": "看看上面的大数字"
+   },
+   {
+    "t": 1788992529566,
+    "text": "这是一元"
+   },
+   {
+    "t": 1788992549255,
+    "text": "看看上面的大数字"
+   }
+  ],
+  "clips": [
+   {
+    "t": 1788991769558,
+    "key": "coi_tut_watch"
+   },
+   {
+    "t": 1788991779711,
+    "key": "coi_tut_turn"
+   },
+   {
+    "t": 1788991780602,
+    "key": "coi_wrong"
+   },
+   {
+    "t": 1788991781915,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991787299,
+    "key": "coi_wrong"
+   },
+   {
+    "t": 1788991799360,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991799702,
+    "key": "coi_wrong"
+   },
+   {
+    "t": 1788991811725,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991818491,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991825746,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991831821,
+    "key": "coi_right"
+   },
+   {
+    "t": 1788991834851,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991850801,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991857661,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991864030,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991871276,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991877585,
+    "key": "coi_right"
+   },
+   {
+    "t": 1788991880621,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991895556,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991907802,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991914441,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991920906,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991928086,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991934716,
+    "key": "coi_right"
+   },
+   {
+    "t": 1788991937747,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991942387,
+    "key": "coi_wrong"
+   },
+   {
+    "t": 1788991954657,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991961386,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991968043,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991974992,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991981926,
+    "key": "coi_right"
+   },
+   {
+    "t": 1788991984962,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788991997177,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992004201,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992010287,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992017483,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992024623,
+    "key": "coi_right"
+   },
+   {
+    "t": 1788992027649,
+    "key": "core_chapter_end"
+   },
+   {
+    "t": 1788992031051,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992039026,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992045792,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992052653,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992059018,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992066227,
+    "key": "coi_right"
+   },
+   {
+    "t": 1788992069259,
+    "key": "core_day_end"
+   },
+   {
+    "t": 1788992072663,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992087557,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992102557,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992103557,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992120617,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992126023,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992131434,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992136838,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992142248,
+    "key": "coi_right"
+   },
+   {
+    "t": 1788992145284,
+    "key": "core_day_end"
+   },
+   {
+    "t": 1788992148687,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992163558,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992177563,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992179559,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992194564,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992199995,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992205406,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992210814,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992216225,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992221635,
+    "key": "coi_right"
+   },
+   {
+    "t": 1788992224665,
+    "key": "core_day_end"
+   },
+   {
+    "t": 1788992228071,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992242559,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992256560,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992258561,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992273612,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992279021,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992284430,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992289841,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992295246,
+    "key": "coi_right"
+   },
+   {
+    "t": 1788992298277,
+    "key": "core_day_end"
+   },
+   {
+    "t": 1788992301682,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992316562,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992330563,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992332562,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992347292,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992352697,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992358103,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992363512,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992368922,
+    "key": "coi_right"
+   },
+   {
+    "t": 1788992371958,
+    "key": "core_day_end"
+   },
+   {
+    "t": 1788992375364,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992389564,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992404564,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992405563,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992419564,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992427433,
+    "key": "coi_wrong"
+   },
+   {
+    "t": 1788992437569,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992445715,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992454564,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992457245,
+    "key": "coi_wrong"
+   },
+   {
+    "t": 1788992468570,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992475475,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992484565,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992487013,
+    "key": "coi_wrong"
+   },
+   {
+    "t": 1788992499566,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992505211,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992514565,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992516735,
+    "key": "coi_wrong"
+   },
+   {
+    "t": 1788992528570,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992534971,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992543570,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992546449,
+    "key": "coi_wrong"
+   },
+   {
+    "t": 1788992549572,
+    "key": "core_rest"
+   },
+   {
+    "t": 1788992558566,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992559566,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992574566,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992589566,
+    "key": "coi_q"
+   },
+   {
+    "t": 1788992590567,
+    "key": "coi_q"
+   }
+  ],
+  "nbSang": []
+ },
+ "save": {
+  "v": "1.0",
+  "game": "coin",
+  "firstDay": "2026-09-10",
+  "lastDay": "2026-09-10",
+  "levels": {
+   "1-0": {
+    "stars": 1,
+    "plays": 1
+   },
+   "1-1": {
+    "stars": 3,
+    "plays": 1
+   },
+   "1-2": {
+    "stars": 3,
+    "plays": 1
+   },
+   "1-3": {
+    "stars": 2,
+    "plays": 1
+   },
+   "1-4": {
+    "stars": 3,
+    "plays": 1
+   },
+   "2-0": {
+    "stars": 3,
+    "plays": 5
+   }
+  },
+  "dailyMin": {
+   "2026-09-10": 13
+  },
+  "settings": {
+   "sound": true,
+   "tts": true,
+   "vol": 0.6
+  },
+  "restTip": {
+   "day": "2026-09-10",
+   "shown": 13
+  },
+  "coin": {
+   "tutSeen": true
+  }
+ },
+ "perr": [],
+ "ctxState": "err"
+}

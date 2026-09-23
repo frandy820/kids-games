@@ -1,0 +1,1922 @@
+{
+ "0": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 0,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "1": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 1,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "2": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 2,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "3": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 3,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "4": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 4,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "5": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 0,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "6": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 1,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "7": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 2,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "8": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 3,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "9": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 4,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "10": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 0,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "11": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 1,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "12": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 2,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "13": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 3,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "14": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 4,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "15": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 0,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "16": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 1,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "17": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 2,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "18": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 3,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "19": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 4,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "20": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 0,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "21": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 1,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "22": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 2,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "23": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 3,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "24": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 4,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "25": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 0,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "26": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 1,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "27": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 2,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "28": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 3,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "29": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 4,
+  "n": 3,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 3,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "30": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 0,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "31": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 1,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "32": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 2,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "33": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 3,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "34": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 4,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "35": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 0,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "36": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 1,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "37": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 2,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "38": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 3,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 4,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "39": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 4,
+  "n": 4,
+  "qs": [
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 1,
+    "col": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 3,
+    "col": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "plant",
+    "n": 4,
+    "row": 2,
+    "col": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ }
+}

@@ -1,0 +1,120 @@
+[   1.11s] == 朵朵 5 岁 7 个月，第一次打开《碰碰琴》==（注入包裹：仅语音观测，零逻辑改动）
+[   1.30s]   shot pia-01-教学watch兔子弹.png
+[   3.96s]   shot pia-02-教学watch幽灵手复现.png
+[   7.68s] 教学演示证据 __piDemoR = right （预期 right）
+[   7.69s] 教学期语音: ['n:784Hz', 'n:262Hz', 'n:523Hz', 'n:392Hz', 'n:784Hz', 'c:弹对啦，真好听', 't:弹得真像', 'c:弹得真像']
+[   7.69s] 教学 watch 时长 6.6s（§0 watch<=16s）
+[   9.20s] 交接 tutorial = help
+[   9.24s]   shot pia-03-教学help.png
+[  10.30s] S1 = ['do', 'sol'] pos=0
+[  10.35s]   shot pia-04-轮到她弹.png
+[  10.40s]   tap 弹do(歪手) @(60,383)
+[  11.22s]    独立放手 tutorial = solo
+[  11.23s]   tap 弹第2音 @(589,382)
+[  14.30s]   tap 弹fa @(436,401)
+[  15.08s]   tap 弹mi @(311,382)
+[  15.85s]   tap 弹do @(60,404)
+[  17.94s]   tap 弹do @(59,400)
+[  18.72s]   tap 弹fa @(460,402)
+[  19.50s]   tap 弹do @(87,399)
+[  21.61s]   tap 弹do @(61,399)
+[  22.39s]   tap 弹re @(208,401)
+[  23.15s]    序列完成 step=4 miss=0 missTotal=0
+[  23.15s] S2 = ['fa', 'si'] pos=0
+[  23.16s]   tap 再听一遍(重听兔子弹) @(953,654)
+[  23.58s]   tap listen期乱弹(应被吞) @(837,379)
+[  24.39s]    listen 期乱点：pos 0->0 miss 0->0 反馈=['n:880Hz', 'n:349Hz', 'n:698Hz']（应不变=吞）
+[  25.45s]   tap 第1音弹对 @(460,383)
+[  26.18s]   tap 第2音弹错 @(185,401)
+[  27.49s]    弹错后 miss=1 pos=1（应=1 不回0=不重头）反馈=['n:587Hz', 'n:494Hz', 'n:988Hz', 'c:再听一次这个音']
+[  27.52s]   shot pia-05-弹错正确键轻闪.png
+[  27.54s]   tap 补弹当前音 @(837,378)
+[  28.76s]    序列完成 step=5 miss=1 missTotal=1
+[  32.45s] S3 = ['fa', 'sol'] pos=0
+[  32.45s]   tap 第1音 @(464,401)
+[  32.47s]   tap busy窗内抢点(应吞) @(336,401)
+[  33.09s]    抢点反馈=['n:698Hz', 's:pop', 'n:880Hz'] pos=1 miss=0（pos 应=1 不变）
+[  33.10s]   tap 第2音 @(589,379)
+[  36.15s]   tap 弹la @(687,377)
+[  36.93s]   tap 弹mi @(312,404)
+[  37.70s]   tap 弹do @(85,401)
+[  39.79s]   tap 弹do @(84,377)
+[  40.57s]   tap 弹mi @(312,401)
+[  41.35s]   tap 弹sol @(560,381)
+[  43.43s]   tap 弹sol @(560,404)
+[  44.21s]   tap 弹la @(713,384)
+[  44.97s]    序列完成 step=4 miss=0 missTotal=0
+[  44.97s] S4 = ['si', 'fa'] pos=0
+[  60.49s]    发呆15.5s 方向级 flash出现=False 反馈=['n:988Hz', 'n:349Hz', 'n:698Hz', 'c:你来弹一弹']（应弹键闪+重听该音）
+[  60.54s]   shot pia-06-救援方向级.png
+[  77.05s]    发呆32s 答案级 breathe出现=False 呼吸键=None
+[  77.10s]   shot pia-07-救援答案级breathe.png
+[  77.10s]    应弹音=si 呼吸键=None 一致=False
+[  77.11s]   tap 点呼吸键(被救后继续) @(815,402)
+[  77.85s]   tap 弹fa @(462,403)
+[  78.62s]    序列完成 step=5 miss=0 missTotal=0
+[  82.84s] S5 = ['mi', 'la'] pos=0
+[  82.85s]   tap 弹mi @(312,381)
+[  83.59s]   tap 弹la @(687,381)
+[  84.36s]   tap 弹la @(686,401)
+[  86.46s]   tap 弹la @(688,403)
+[  87.24s]   tap 弹si @(812,381)
+[  88.02s]   tap 弹si @(814,400)
+[  90.12s]   tap 弹si @(839,403)
+[  90.90s]   tap 弹sol @(587,400)
+[  91.67s]   tap 弹sol @(586,404)
+[  92.43s]    序列完成 step=3 miss=0 missTotal=0
+[  92.43s] 整关用时(秒): {'S1': 12.8, 'S2': 5.6, 'S3': 12.5, 'S4': 33.6, 'S5': 9.6}
+[ 111.85s] 过关语音=[]
+[ 111.85s] 写档铁证 levels["1-0"] = {"stars": 2, "plays": 1}
+[ 111.89s]   shot pia-08-通关celebrate.png
+[ 122.41s] 自动推进 cur = {'flat': 2, 'ch': 1, 'lv': 2}
+[ 122.42s]   tap 切自由弹 @(98,53)
+[ 123.13s] mode = free phase = free
+[ 123.15s]   tap 自由弹sol @(563,409)
+[ 123.49s]   tap 自由弹mi @(338,383)
+[ 123.84s]   tap 自由弹do @(85,406)
+[ 124.21s]   tap 自由弹dosi @(966,382)
+[ 124.55s]   tap 自由弹la @(712,407)
+[ 124.89s]   tap 自由弹re @(208,385)
+[ 125.22s] 自由弹6键：彩花粒子=14 quiz静止(pos=0 miss=0 step=3 无判定)
+[ 125.28s]   shot pia-09-自由弹彩花.png
+[ 125.29s]   tap 切回跟弹 @(211,52)
+[ 126.50s] 切回 mode = follow phase = listen （跟弹重发当前关）
+[ 127.30s] 1-1 纯发呆 33s 探针开始...
+[ 132.81s]    + 5.5s flash=False breathe=False hintClipx0
+[ 138.33s]    +11.0s flash=False breathe=False hintClipx0
+[ 143.84s]    +16.5s flash=True breathe=False hintClipx1
+[ 149.36s]    +22.0s flash=True breathe=False hintClipx1
+[ 154.88s]    +27.5s flash=True breathe=False hintClipx1
+[ 160.40s]    +33.0s flash=True breathe=True hintClipx1
+[ 160.41s] 答案级呼吸键=mi 应弹音=mi 一致=True
+[ 160.42s]   tap 被救后点呼吸键继续 @(338,377)
+[ 161.14s] 被救后 pos=1（应+1）
+[ 161.17s]   shot pia-10-答案级呼吸键.png
+[ 163.82s] ch2三音 flat5: seq=['mi', 'do', 'mi']
+[ 163.82s]   tap 弹mi @(338,377)
+[ 164.55s]   tap 第2音故意错 @(712,403)
+[ 165.77s]    错音 miss=1 pos=1（不重头）
+[ 165.78s]   tap 弹do @(85,406)
+[ 166.50s]   tap 弹mi @(336,405)
+[ 167.22s]    ch2三音 flat5 首序列 3.4s step=1 missTotal=1
+[ 170.38s] ch3四音 flat10: seq=['do', 'fa', 're', 'fa']
+[ 171.61s]   tap 弹do @(59,380)
+[ 173.53s]   tap 弹fa @(463,383)
+[ 175.47s]   tap 弹re @(187,381)
+[ 177.38s]   tap 弹fa @(434,380)
+[ 178.09s]    ch3四音 flat10 首序列 7.7s step=1 missTotal=0
+[ 181.51s] ch4重复音 flat15: seq=['la', 'la', 'si', 'si']
+[ 181.52s]   tap 弹la @(714,381)
+[ 182.25s]   tap 弹la @(712,400)
+[ 182.97s]   tap 弹si @(838,379)
+[ 183.68s]   tap 弹si @(812,401)
+[ 184.39s]    ch4重复音 flat15 首序列 2.9s step=1 missTotal=0
+[ 184.39s]    ch4 重复音实证：seq=['la', 'la', 'si', 'si'] 首两音重复=True 同键连弹被接受（step=1）
+[ 184.44s]   shot pia-11-ch4重复音.png
+[ 184.45s] 预置档写入：值头40字符={"v":"1.0","game":"piano","firstDay":"20（JSON.stringify 包裹）
+[ 187.01s] reload 后 cur = {'flat': 2, 'ch': 1, 'lv': 2} tutorial = none levels 保留 = {"1-0":{"stars":2,"plays":1},"1-1":{"stars":2,"plays":1}}
+[ 187.06s]   shot pia-12-预置档reload.png
+[ 187.06s] == piano 结束 ==
+DONE piano 187.1s

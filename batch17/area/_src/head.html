@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>铺砖小工匠</title>
+<style>
+/* ================= 铺砖面积 area（batch17 r14 难度改造 2026-09-15）=================
+   视觉按 SPEC-BATCH17 §7：暖米底 #FBF3E4、工地网格（淡土格 + 挖空区橙色高亮轮廓）、
+   砖块卡（形状 SVG，格线整数坐标对齐 §0.35——禁 CSS 像素拼凑）
+   四题型：calc=矩形挖空区+长宽标注→数字卡 3 选 1；samearea=3 砖卡选同面积者（正解异形状）；
+   combo=3-4 块砖横排展示→数字卡（拼合总面积）；unit2=挖空区一格住 2 只→数字卡；
+   count=数格子热身（dch2-4 首题）数字卡
+   触摸目标：答案卡 ≥96（.opt min-height 横 96/竖 104=portStyle 判别锚）、底栏按钮 ≥72 高、
+   数格子按钮 ≥64；pointerdown 即响应；不灰化款错卡=晃动可重点
+   竖屏双通道（r9 M-A1/r12 M3 同型定版）：@media 真竖屏 + body.port 类通道逐条等值两段同步 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E7D8C0;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E7D8C0}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:6px;overflow:hidden;padding:4px 10px}
+
+/* ---------- 题面行：题型图标 + 问句 + 数格子按钮 ---------- */
+#board{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+  min-height:72px;padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:14px;padding:6px 24px;border-radius:22px;
+  background:#FFFAF0;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #DFCFB6}
+#prompt-chip .mini{width:54px;height:54px;flex:0 0 54px}
+#prompt-chip .ask{font-size:26px;font-weight:800;color:#4A3B2E;letter-spacing:.02em}
+#prompt-chip.flash{animation:chip-flash .5s ease}
+@keyframes chip-flash{0%,100%{background:#FFFAF0}50%{background:#FBE4AE}}
+/* 「数格子」按钮（主动学习：点一下数一遍挖空区格数，SPEC §7）；combo 无挖空区时 hidden */
+#btn-count{min-height:64px;min-width:126px;padding:0 20px;border-radius:22px;background:#E8975A;
+  border:3px solid #4A3B2E;box-shadow:0 4px 0 #B96F3A;display:flex;align-items:center;gap:9px;
+  color:#FFF;font-size:23px;font-weight:800;letter-spacing:.04em;transition:transform .15s}
+#btn-count:active{transform:translateY(3px);box-shadow:0 1px 0 #B96F3A}
+#btn-count svg{width:36px;height:36px;flex:0 0 36px}
+#btn-count.bounce{animation:cnt-b .5s ease}
+@keyframes cnt-b{0%,100%{transform:scale(1)}40%{transform:scale(1.08)}}
+#btn-count[hidden]{display:none}
+
+/* ---------- 场景区：工地网格 SVG（自动 contain 适配容器） ----------
+   挖空格三态：默认橙 / lit=数格子当前格亮黄 / counted=已数过浅橙 / filled=铺好绿 */
+#scene-area{flex:1 1 auto;min-height:190px;width:100%;max-width:900px;display:flex;
+  align-items:center;justify-content:center;padding:2px 6px}
+#scene-area.noscene{display:none}
+#scene{width:100%;height:100%;min-height:190px;display:flex;align-items:center;justify-content:center}
+#scene svg.scene{width:100%;height:100%}
+#scene .hole-cell.lit{fill:#FFE9A8;stroke-width:3.2}
+#scene .hole-cell.counted{fill:#F2C985}
+#scene .hole-cell.filled{fill:#8FBF7F}
+
+/* ---------- calc 长宽标注（r14：挖空区下「长 N」/右「宽 N」=题面数据非答案） ---------- */
+#scene text.dim-long,#scene text.dim-wide{font-size:26px;font-weight:800;fill:#4A3B2E;
+  font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+/* combo 拼砖组展示（r14：砖横排展示，限宽防格子拉伸过大） */
+#scene svg.scene.combos{max-width:820px}
+
+/* ---------- 底部答案区：数字卡 / 形状卡 ---------- */
+#answers{flex:0 0 auto;display:flex;justify-content:center;align-items:center;gap:20px;
+  flex-wrap:wrap;min-height:118px;padding:2px 12px}
+.opt{min-width:132px;min-height:96px;padding:0 26px;border-radius:26px;background:#FFFAF0;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #DFCFB6;font-size:46px;font-weight:800;color:#4A3B2E;
+  font-variant-numeric:tabular-nums;transition:transform .15s,box-shadow .15s;position:relative;
+  animation:opt-in .38s cubic-bezier(.2,1.5,.4,1) both}
+.opt:nth-child(2){animation-delay:.07s}.opt:nth-child(3){animation-delay:.14s}
+@keyframes opt-in{from{transform:translateY(16px);opacity:0}to{transform:translateY(0);opacity:1}}
+.opt:active{transform:translateY(3px);box-shadow:0 2px 0 #DFCFB6}
+/* 形状卡（samearea 砖卡）：内嵌砖块 SVG，格线整数坐标（几何精确 §0.35） */
+.opt.card{min-width:156px;min-height:112px;padding:10px 16px;display:flex;align-items:center;justify-content:center}
+.opt.card svg{width:100%;height:100%;pointer-events:none}
+/* 不灰化款：错卡=晃动+红边（面积/形状不对的提示）不灰掉可重点（SPEC §2） */
+.opt.wrong{animation:opt-shake .42s ease;border-color:#C0392B}
+@keyframes opt-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}
+  40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.opt.right{background:#8FBF7F;color:#4A3B2E;border-color:#6FA063;box-shadow:0 5px 0 #6FA063}
+.opt.right .mark{position:absolute;top:-13px;right:-13px;width:40px;height:40px;border-radius:50%;
+  background:#8FBF7F;border:2.5px solid #FFFAF0;display:flex;align-items:center;justify-content:center;
+  animation:opt-pop .45s cubic-bezier(.2,1.6,.4,1)}
+.opt.right .mark svg{width:26px;height:26px}
+@keyframes opt-pop{from{transform:scale(0) rotate(-20deg)}to{transform:scale(1) rotate(0)}}
+/* 救援视觉：正确卡 breathe 持续循环（§0.21） */
+.opt.breathe{animation:opt-breathe 1.6s ease-in-out infinite}
+@keyframes opt-breathe{0%,100%{transform:scale(1);box-shadow:0 5px 0 #DFCFB6}
+  50%{transform:scale(1.07);box-shadow:0 5px 0 #DFCFB6,0 0 16px rgba(232,151,90,.9)}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 blocks/read） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFFAF0;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：题面/答案卡/场景适配。
+   通道 A=@media 真竖屏；通道 B=body.port 类（verify simView 模拟竖屏）——逐条等值两段同步 */
+@media (orientation:portrait){
+  .opt{min-width:150px;min-height:104px;font-size:52px}
+  .opt.card{min-width:150px;min-height:118px}
+  #prompt-chip .ask{font-size:22px}
+  #prompt-chip .mini{width:46px;height:46px;flex:0 0 46px}
+  #btn-count{min-width:110px;font-size:21px}
+  #scene-area{min-height:230px}
+  #scene text.dim-long,#scene text.dim-wide{font-size:22px}
+}
+body.port .opt{min-width:150px;min-height:104px;font-size:52px}
+body.port .opt.card{min-width:150px;min-height:118px}
+body.port #prompt-chip .ask{font-size:22px}
+body.port #prompt-chip .mini{width:46px;height:46px;flex:0 0 46px}
+body.port #btn-count{min-width:110px;font-size:21px}
+body.port #scene-area{min-height:230px}
+body.port #scene text.dim-long,body.port #scene text.dim-wide{font-size:22px}
+</style>
+</head>
+<body>
+<div id="game" aria-label="铺砖小工匠">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="board">
+      <div id="prompt-chip" role="heading" aria-label="题目"></div>
+      <button id="btn-count" aria-label="数格子"></button>
+    </div>
+    <div id="scene-area">
+      <div id="scene" aria-label="工地网格"></div>
+    </div>
+    <div id="answers" aria-label="作答区"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="读题"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

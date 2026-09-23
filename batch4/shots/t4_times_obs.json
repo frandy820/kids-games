@@ -1,0 +1,7028 @@
+{
+ "game": "times",
+ "wallSec": 182.4,
+ "stats": {
+  "levelsPlayed": [
+   {
+    "flat": 0,
+    "questions": 5
+   },
+   {
+    "flat": 1,
+    "questions": 3
+   },
+   {
+    "flat": 10,
+    "questions": 5,
+    "wrongs": 2
+   }
+  ],
+  "questions": 13,
+  "wrongs": 2,
+  "idles": [
+   {
+    "at": "flat0_q2",
+    "secs": 21,
+    "rescue": "something",
+    "voiceCalls": 1,
+    "domChanged": false
+   },
+   {
+    "at": "flat10_stuck",
+    "secs": 24,
+    "rescue": "none",
+    "voiceCalls": 0,
+    "domChanged": false
+   },
+   {
+    "at": "flat15_stuck",
+    "secs": 22,
+    "rescue": "something",
+    "voiceCalls": 0,
+    "domChanged": true
+   }
+  ],
+  "pageerrors": []
+ },
+ "obs": {
+  "voices": [
+   {
+    "wall": 1788695765806,
+    "key": "queue:tim_also+tim_n3+tim_times+tim_n3",
+    "text": ""
+   },
+   {
+    "wall": 1788695767458,
+    "key": "queue:tim_n2+tim_plus+tim_n2+tim_plus+tim_n2+tim_plus+tim_n2+tim_eq+tim_howmuch",
+    "text": ""
+   },
+   {
+    "wall": 1788695767811,
+    "key": "tim_tut_turn",
+    "text": "你来算一算"
+   },
+   {
+    "wall": 1788695768323,
+    "key": "queue:tim_n3+tim_plus+tim_n3+tim_plus+tim_n3+tim_eq+tim_howmuch",
+    "text": ""
+   },
+   {
+    "wall": 1788695774380,
+    "key": "queue:tim_also+tim_n3+tim_times+tim_n3",
+    "text": ""
+   },
+   {
+    "wall": 1788695776041,
+    "key": "queue:tim_n2+tim_plus+tim_n2+tim_plus+tim_n2+tim_plus+tim_n2+tim_eq+tim_howmuch",
+    "text": ""
+   },
+   {
+    "wall": 1788695777173,
+    "key": "queue:tim_also+tim_n2+tim_times+tim_n4",
+    "text": ""
+   },
+   {
+    "wall": 1788695778824,
+    "key": "queue:tim_n3+tim_times+tim_n6+tim_eq+tim_howmuch",
+    "text": ""
+   },
+   {
+    "wall": 1788695796710,
+    "key": "tim_hint",
+    "text": "数一数，再选答案"
+   },
+   {
+    "wall": 1788695800448,
+    "key": "tim_hint",
+    "text": "数一数，再选答案"
+   },
+   {
+    "wall": 1788695804571,
+    "key": "queue:tim_n2+tim_times+tim_n4+tim_eq+tim_howmuch",
+    "text": ""
+   },
+   {
+    "wall": 1788695806470,
+    "key": "queue:tim_n3+tim_times+tim_n2+tim_eq+tim_howmuch",
+    "text": ""
+   },
+   {
+    "wall": 1788695810189,
+    "key": "queue:tim_n3+tim_plus+tim_n3+tim_plus+tim_n3+tim_plus+tim_n3+tim_eq+tim_howmuch",
+    "text": ""
+   },
+   {
+    "wall": 1788695810189,
+    "key": "tim_hint",
+    "text": "数一数，再选答案"
+   },
+   {
+    "wall": 1788695815562,
+    "key": "queue:tim_also+tim_n3+tim_times+tim_n4",
+    "text": ""
+   },
+   {
+    "wall": 1788695817224,
+    "key": "queue:tim_n2+tim_plus+tim_n2+tim_plus+tim_n2+tim_eq+tim_howmuch",
+    "text": ""
+   },
+   {
+    "wall": 1788695817363,
+    "key": "tim_hint",
+    "text": "数一数，再选答案"
+   },
+   {
+    "wall": 1788695821619,
+    "key": "queue:tim_also+tim_n2+tim_times+tim_n3",
+    "text": ""
+   },
+   {
+    "wall": 1788695823273,
+    "key": "queue:tim_n3+tim_times+tim_n3+tim_eq+tim_howmuch",
+    "text": ""
+   }
+  ],
+  "sfx": [
+   {
+    "wall": 1788695761907,
+    "n": "pop"
+   },
+   {
+    "wall": 1788695762340,
+    "n": "pop"
+   },
+   {
+    "wall": 1788695762772,
+    "n": "pop"
+   },
+   {
+    "wall": 1788695765015,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695765806,
+    "n": "coin"
+   },
+   {
+    "wall": 1788695770682,
+    "n": "click"
+   },
+   {
+    "wall": 1788695773596,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695774380,
+    "n": "coin"
+   },
+   {
+    "wall": 1788695776388,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695777173,
+    "n": "coin"
+   },
+   {
+    "wall": 1788695800445,
+    "n": "fail"
+   },
+   {
+    "wall": 1788695803778,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695805679,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695806761,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695807551,
+    "n": "win"
+   },
+   {
+    "wall": 1788695814778,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695815562,
+    "n": "coin"
+   },
+   {
+    "wall": 1788695817362,
+    "n": "fail"
+   },
+   {
+    "wall": 1788695818211,
+    "n": "click"
+   },
+   {
+    "wall": 1788695818662,
+    "n": "click"
+   },
+   {
+    "wall": 1788695820828,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695821618,
+    "n": "coin"
+   },
+   {
+    "wall": 1788695823511,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695827894,
+    "n": "fail"
+   },
+   {
+    "wall": 1788695830964,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695834644,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695865642,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695869409,
+    "n": "fail"
+   },
+   {
+    "wall": 1788695872409,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695876991,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695877786,
+    "n": "win"
+   },
+   {
+    "wall": 1788695888015,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695892977,
+    "n": "fail"
+   },
+   {
+    "wall": 1788695895993,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695900943,
+    "n": "fail"
+   },
+   {
+    "wall": 1788695904208,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695908207,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695914108,
+    "n": "fail"
+   },
+   {
+    "wall": 1788695918092,
+    "n": "ok"
+   },
+   {
+    "wall": 1788695918880,
+    "n": "win"
+   }
+  ],
+  "errs": [],
+  "patchErr": [
+   null,
+   null
+  ]
+ },
+ "timeline": [
+  {
+   "wall": 1.47,
+   "kind": "snap",
+   "tag": "tut_watch_0",
+   "s": {
+    "wall": 1788695762141,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": true
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 3,
+      "b": 3,
+      "c": null,
+      "text": "3 + 3 + 3 = ?",
+      "answer": 9,
+      "items": [
+       12,
+       15,
+       6,
+       9
+      ],
+      "answerIdx": 3,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "watch"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "9",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": true,
+     "title": "数一数",
+     "groupsLit": 1,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": [
+      {
+       "i": "0",
+       "v": "12"
+      },
+      {
+       "i": "1",
+       "v": "15"
+      },
+      {
+       "i": "2",
+       "v": "6"
+      },
+      {
+       "i": "3",
+       "v": "9"
+      }
+     ]
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "3 + 3 + 3 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 2.39,
+   "kind": "snap",
+   "tag": "tut_watch_1",
+   "s": {
+    "wall": 1788695763060,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": true
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 3,
+      "b": 3,
+      "c": null,
+      "text": "3 + 3 + 3 = ?",
+      "answer": 9,
+      "items": [
+       12,
+       15,
+       6,
+       9
+      ],
+      "answerIdx": 3,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "watch"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "9",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": true,
+     "title": "数一数",
+     "groupsLit": 3,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": [
+      {
+       "i": "0",
+       "v": "12"
+      },
+      {
+       "i": "1",
+       "v": "15"
+      },
+      {
+       "i": "2",
+       "v": "6"
+      },
+      {
+       "i": "3",
+       "v": "9"
+      }
+     ]
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "3 + 3 + 3 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 3.3,
+   "kind": "snap",
+   "tag": "tut_watch_2",
+   "s": {
+    "wall": 1788695763967,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": false,
+     "x": 772,
+     "y": 375
+    },
+    "ghostAt": "#fish-grid .fish-btn[2]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": true
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 3,
+      "b": 3,
+      "c": null,
+      "text": "3 + 3 + 3 = ?",
+      "answer": 9,
+      "items": [
+       12,
+       15,
+       6,
+       9
+      ],
+      "answerIdx": 3,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "watch"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "9",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": true,
+     "title": "数一数",
+     "groupsLit": 3,
+     "ansPulse": [
+      "3"
+     ],
+     "ansWrong": [],
+     "ans": [
+      {
+       "i": "0",
+       "v": "12"
+      },
+      {
+       "i": "1",
+       "v": "15"
+      },
+      {
+       "i": "2",
+       "v": "6"
+      },
+      {
+       "i": "3",
+       "v": "9"
+      }
+     ]
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "3 + 3 + 3 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 4.21,
+   "kind": "snap",
+   "tag": "tut_watch_3",
+   "s": {
+    "wall": 1788695764879,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 772,
+     "y": 375
+    },
+    "ghostAt": "#fish-grid .fish-btn[2]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": true
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 3,
+      "b": 3,
+      "c": null,
+      "text": "3 + 3 + 3 = ?",
+      "answer": 9,
+      "items": [
+       12,
+       15,
+       6,
+       9
+      ],
+      "answerIdx": 3,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "watch"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "9",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": true,
+     "title": "数一数",
+     "groupsLit": 3,
+     "ansPulse": [
+      "3"
+     ],
+     "ansWrong": [],
+     "ans": [
+      {
+       "i": "0",
+       "v": "12"
+      },
+      {
+       "i": "1",
+       "v": "15"
+      },
+      {
+       "i": "2",
+       "v": "6"
+      },
+      {
+       "i": "3",
+       "v": "9"
+      }
+     ]
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "3 + 3 + 3 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 5.29,
+   "kind": "snap",
+   "tag": "tut_watch_4",
+   "s": {
+    "wall": 1788695765964,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 772,
+     "y": 375
+    },
+    "ghostAt": "#fish-grid .fish-btn[2]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 1,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": true
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 2,
+      "b": 4,
+      "c": null,
+      "text": "2 + 2 + 2 + 2 = ?",
+      "answer": 8,
+      "items": [
+       6,
+       10,
+       12,
+       8
+      ],
+      "answerIdx": 3,
+      "step": 1,
+      "wrong": []
+     },
+     "tut": "watch"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "9",
+      "cls": "fish-btn alt right"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": true,
+     "last": "3 + 3 + 3=9|3×3",
+     "txt": "3 + 3 + 3 = 9→3 × 3"
+    },
+    "quizTxt": "3 + 3 + 3 = 9",
+    "groupsBtn": {
+     "vis": true,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 6.2,
+   "kind": "snap",
+   "tag": "tut_watch_5",
+   "s": {
+    "wall": 1788695766875,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 772,
+     "y": 375
+    },
+    "ghostAt": "#fish-grid .fish-btn[2]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 1,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": true
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 2,
+      "b": 4,
+      "c": null,
+      "text": "2 + 2 + 2 + 2 = ?",
+      "answer": 8,
+      "items": [
+       6,
+       10,
+       12,
+       8
+      ],
+      "answerIdx": 3,
+      "step": 1,
+      "wrong": []
+     },
+     "tut": "watch"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "9",
+      "cls": "fish-btn alt right"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": true,
+     "last": "3 + 3 + 3=9|3×3",
+     "txt": "3 + 3 + 3 = 9→3 × 3"
+    },
+    "quizTxt": "3 + 3 + 3 = 9",
+    "groupsBtn": {
+     "vis": true,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 7.11,
+   "kind": "snap",
+   "tag": "tut_watch_6",
+   "s": {
+    "wall": 1788695767784,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 772,
+     "y": 375
+    },
+    "ghostAt": "#fish-grid .fish-btn[2]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 1,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 2,
+      "b": 4,
+      "c": null,
+      "text": "2 + 2 + 2 + 2 = ?",
+      "answer": 8,
+      "items": [
+       6,
+       10,
+       12,
+       8
+      ],
+      "answerIdx": 3,
+      "step": 1,
+      "wrong": []
+     },
+     "tut": "watch"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "10",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "8",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "3 + 3 + 3=9|3×3",
+     "txt": "3 + 3 + 3 = 9→3 × 3"
+    },
+    "quizTxt": "2 + 2 + 2 + 2 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 8.03,
+   "kind": "snap",
+   "tag": "tut_watch_7",
+   "s": {
+    "wall": 1788695768697,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 772,
+     "y": 375
+    },
+    "ghostAt": "#fish-grid .fish-btn[2]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 3,
+      "b": 3,
+      "c": null,
+      "text": "3 + 3 + 3 = ?",
+      "answer": 9,
+      "items": [
+       12,
+       15,
+       6,
+       9
+      ],
+      "answerIdx": 3,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "help"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "9",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "3 + 3 + 3=9|3×3",
+     "txt": "3 + 3 + 3 = 9→3 × 3"
+    },
+    "quizTxt": "3 + 3 + 3 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 8.03,
+   "kind": "snap",
+   "tag": "tut_end_help",
+   "s": {
+    "wall": 1788695768702,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 772,
+     "y": 375
+    },
+    "ghostAt": "#fish-grid .fish-btn[2]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 3,
+      "b": 3,
+      "c": null,
+      "text": "3 + 3 + 3 = ?",
+      "answer": 9,
+      "items": [
+       12,
+       15,
+       6,
+       9
+      ],
+      "answerIdx": 3,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "help"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "9",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "3 + 3 + 3=9|3×3",
+     "txt": "3 + 3 + 3 = 9→3 × 3"
+    },
+    "quizTxt": "3 + 3 + 3 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 8.03,
+   "kind": "tut_end",
+   "d": "tut=help ghost={'show': True, 'pressing': True, 'x': 772, 'y': 375} convert={'show': False, 'last': '3 + 3 + 3=9|3×3', 'txt': '3 + 3 + 3 = 9→3 × 3'}"
+  },
+  {
+   "wall": 10.52,
+   "kind": "snap",
+   "tag": "A_help_groups_opened",
+   "s": {
+    "wall": 1788695771197,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 3,
+      "b": 3,
+      "c": null,
+      "text": "3 + 3 + 3 = ?",
+      "answer": 9,
+      "items": [
+       12,
+       15,
+       6,
+       9
+      ],
+      "answerIdx": 3,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "help"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "9",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": true,
+     "title": "数一数",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": [
+      {
+       "i": "0",
+       "v": "12"
+      },
+      {
+       "i": "1",
+       "v": "15"
+      },
+      {
+       "i": "2",
+       "v": "6"
+      },
+      {
+       "i": "3",
+       "v": "9"
+      }
+     ]
+    },
+    "convert": {
+     "show": false,
+     "last": "3 + 3 + 3=9|3×3",
+     "txt": "3 + 3 + 3 = 9→3 × 3"
+    },
+    "quizTxt": "3 + 3 + 3 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 10.57,
+   "kind": "help_stage_target",
+   "d": "ghost was at groupsBtn=None, now ghost={'show': False, 'pressing': False, 'x': 81, 'y': 755}"
+  },
+  {
+   "wall": 13.83,
+   "kind": "snap",
+   "tag": "A_help_answered",
+   "s": {
+    "wall": 1788695774506,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 1,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": true
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 2,
+      "b": 4,
+      "c": null,
+      "text": "2 + 2 + 2 + 2 = ?",
+      "answer": 8,
+      "items": [
+       6,
+       10,
+       12,
+       8
+      ],
+      "answerIdx": 3,
+      "step": 1,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "9",
+      "cls": "fish-btn alt right"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": true,
+     "last": "3 + 3 + 3=9|3×3",
+     "txt": "3 + 3 + 3 = 9→3 × 3"
+    },
+    "quizTxt": "3 + 3 + 3 = 9",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 13.83,
+   "kind": "tut_solo_entered",
+   "d": "tut=solo"
+  },
+  {
+   "wall": 15.72,
+   "kind": "idle_start",
+   "d": "flat0_q2"
+  },
+  {
+   "wall": 18.53,
+   "kind": "snap",
+   "tag": "idle_flat0_q2_t0",
+   "s": {
+    "wall": 1788695779207,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 20.55,
+   "kind": "snap",
+   "tag": "idle_flat0_q2_t+2s",
+   "s": {
+    "wall": 1788695781219,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 22.56,
+   "kind": "snap",
+   "tag": "idle_flat0_q2_t+4s",
+   "s": {
+    "wall": 1788695783236,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 24.57,
+   "kind": "snap",
+   "tag": "idle_flat0_q2_t+6s",
+   "s": {
+    "wall": 1788695785246,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 26.59,
+   "kind": "snap",
+   "tag": "idle_flat0_q2_t+8s",
+   "s": {
+    "wall": 1788695787258,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 28.6,
+   "kind": "snap",
+   "tag": "idle_flat0_q2_t+10s",
+   "s": {
+    "wall": 1788695789269,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 30.61,
+   "kind": "snap",
+   "tag": "idle_flat0_q2_t+12s",
+   "s": {
+    "wall": 1788695791281,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 32.62,
+   "kind": "snap",
+   "tag": "idle_flat0_q2_t+14s",
+   "s": {
+    "wall": 1788695793291,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 34.63,
+   "kind": "snap",
+   "tag": "idle_flat0_q2_t+16s",
+   "s": {
+    "wall": 1788695795307,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 36.65,
+   "kind": "snap",
+   "tag": "idle_flat0_q2_t+18s",
+   "s": {
+    "wall": 1788695797318,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 38.66,
+   "kind": "snap",
+   "tag": "idle_flat0_q2_t+20s",
+   "s": {
+    "wall": 1788695799334,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 38.67,
+   "kind": "snap",
+   "tag": "idle_flat0_q2_end",
+   "s": {
+    "wall": 1788695799339,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 38.67,
+   "kind": "idle_end",
+   "d": "flat0_q2 rescue=something"
+  },
+  {
+   "wall": 40.7,
+   "kind": "snap",
+   "tag": "A_wrong_q3",
+   "s": {
+    "wall": 1788695801369,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 3,
+      "b": 6,
+      "c": null,
+      "text": "3 × 6 = ?",
+      "answer": 18,
+      "items": [
+       12,
+       15,
+       30,
+       18
+      ],
+      "answerIdx": 3,
+      "step": 2,
+      "wrong": [
+       0
+      ]
+     },
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn shake wrong"
+     },
+     {
+      "i": "1",
+      "v": "15",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "30",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "18",
+      "cls": "fish-btn alt pulse"
+     }
+    ],
+    "aid": {
+     "open": true,
+     "title": "每组的鱼一样多",
+     "groupsLit": 0,
+     "ansPulse": [
+      "3"
+     ],
+     "ansWrong": [
+      "0"
+     ],
+     "ans": [
+      {
+       "i": "0",
+       "v": "12"
+      },
+      {
+       "i": "1",
+       "v": "15"
+      },
+      {
+       "i": "2",
+       "v": "30"
+      },
+      {
+       "i": "3",
+       "v": "18"
+      }
+     ]
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 6 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 40.76,
+   "kind": "A_wrong",
+   "d": "voices_delta=1 aidOpen=True aidPulse=['3'] fishPulse=['3']"
+  },
+  {
+   "wall": 49.1,
+   "kind": "snap",
+   "tag": "A_win",
+   "s": {
+    "wall": 1788695809772,
+    "ov": {
+     "cls": "k-ov k-celebrate show",
+     "text": "★ ★ 好棒！"
+    },
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "step": 5,
+      "retries": 1,
+      "done": true,
+      "won": true,
+      "locked": true
+     },
+     "quiz": null,
+     "tut": "solo"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "3",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "6",
+      "cls": "fish-btn alt right"
+     },
+     {
+      "i": "2",
+      "v": "4",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "12",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "2 + 2 + 2 + 2=8|2×4",
+     "txt": "2 + 2 + 2 + 2 = 8→2 × 4"
+    },
+    "quizTxt": "3 × 2 = 6",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "done",
+      "done"
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 57.5,
+   "kind": "snap",
+   "tag": "B_wrong_autoaid",
+   "s": {
+    "wall": 1788695818169,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 1,
+      "ch": 1,
+      "dch": 1,
+      "lv": 1,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 2,
+      "b": 3,
+      "c": null,
+      "text": "2 + 2 + 2 = ?",
+      "answer": 6,
+      "items": [
+       12,
+       6,
+       8,
+       4
+      ],
+      "answerIdx": 1,
+      "step": 1,
+      "wrong": [
+       2
+      ]
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "6",
+      "cls": "fish-btn alt pulse"
+     },
+     {
+      "i": "2",
+      "v": "8",
+      "cls": "fish-btn shake wrong"
+     },
+     {
+      "i": "3",
+      "v": "4",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": true,
+     "title": "数一数",
+     "groupsLit": 0,
+     "ansPulse": [
+      "1"
+     ],
+     "ansWrong": [
+      "2"
+     ],
+     "ans": [
+      {
+       "i": "0",
+       "v": "12"
+      },
+      {
+       "i": "1",
+       "v": "6"
+      },
+      {
+       "i": "2",
+       "v": "8"
+      },
+      {
+       "i": "3",
+       "v": "4"
+      }
+     ]
+    },
+    "convert": {
+     "show": false,
+     "last": "3 + 3 + 3 + 3=12|3×4",
+     "txt": "3 + 3 + 3 + 3 = 12→3 × 4"
+    },
+    "quizTxt": "2 + 2 + 2 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 57.95,
+   "kind": "snap",
+   "tag": "B_groups_first_tap",
+   "s": {
+    "wall": 1788695818621,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 1,
+      "ch": 1,
+      "dch": 1,
+      "lv": 1,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 2,
+      "b": 3,
+      "c": null,
+      "text": "2 + 2 + 2 = ?",
+      "answer": 6,
+      "items": [
+       12,
+       6,
+       8,
+       4
+      ],
+      "answerIdx": 1,
+      "step": 1,
+      "wrong": [
+       2
+      ]
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "6",
+      "cls": "fish-btn alt pulse"
+     },
+     {
+      "i": "2",
+      "v": "8",
+      "cls": "fish-btn shake wrong"
+     },
+     {
+      "i": "3",
+      "v": "4",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": true,
+     "title": "数一数",
+     "groupsLit": 0,
+     "ansPulse": [
+      "1"
+     ],
+     "ansWrong": [
+      "2"
+     ],
+     "ans": [
+      {
+       "i": "0",
+       "v": "12"
+      },
+      {
+       "i": "1",
+       "v": "6"
+      },
+      {
+       "i": "2",
+       "v": "8"
+      },
+      {
+       "i": "3",
+       "v": "4"
+      }
+     ]
+    },
+    "convert": {
+     "show": false,
+     "last": "3 + 3 + 3 + 3=12|3×4",
+     "txt": "3 + 3 + 3 + 3 = 12→3 × 4"
+    },
+    "quizTxt": "2 + 2 + 2 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 57.95,
+   "kind": "B_aidAuto_firsttap",
+   "d": "aid still open=True"
+  },
+  {
+   "wall": 58.41,
+   "kind": "snap",
+   "tag": "B_groups_second_tap",
+   "s": {
+    "wall": 1788695819084,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 81,
+     "y": 755
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 1,
+      "ch": 1,
+      "dch": 1,
+      "lv": 1,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "sum",
+      "a": 2,
+      "b": 3,
+      "c": null,
+      "text": "2 + 2 + 2 = ?",
+      "answer": 6,
+      "items": [
+       12,
+       6,
+       8,
+       4
+      ],
+      "answerIdx": 1,
+      "step": 1,
+      "wrong": [
+       2
+      ]
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "12",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "6",
+      "cls": "fish-btn alt pulse"
+     },
+     {
+      "i": "2",
+      "v": "8",
+      "cls": "fish-btn shake wrong"
+     },
+     {
+      "i": "3",
+      "v": "4",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": "3 + 3 + 3 + 3=12|3×4",
+     "txt": "3 + 3 + 3 + 3 = 12→3 × 4"
+    },
+    "quizTxt": "2 + 2 + 2 = ?",
+    "groupsBtn": {
+     "vis": true,
+     "cls": "pulse"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 58.41,
+   "kind": "B_aid_secondtap",
+   "d": "aid open=False"
+  },
+  {
+   "wall": 63.29,
+   "kind": "snap",
+   "tag": "C_flat10_loaded",
+   "s": {
+    "wall": 1788695823962,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 9,
+      "c": null,
+      "text": "6 × 9 = ?",
+      "answer": 54,
+      "items": [
+       15,
+       48,
+       45,
+       54
+      ],
+      "answerIdx": 3,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "15",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "45",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "54",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 9 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 63.29,
+   "kind": "C_loaded",
+   "d": "groupsBtnVis=False quiz=6 × 9 = ?"
+  },
+  {
+   "wall": 68.13,
+   "kind": "snap",
+   "tag": "C_wrong_q0",
+   "s": {
+    "wall": 1788695828805,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 0,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 9,
+      "c": null,
+      "text": "6 × 9 = ?",
+      "answer": 54,
+      "items": [
+       15,
+       48,
+       45,
+       54
+      ],
+      "answerIdx": 3,
+      "step": 0,
+      "wrong": [
+       2
+      ]
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "15",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "45",
+      "cls": "fish-btn shake wrong"
+     },
+     {
+      "i": "3",
+      "v": "54",
+      "cls": "fish-btn alt pulse"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 9 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 68.14,
+   "kind": "C_wrong",
+   "d": "q0 voices_delta=0 answerRevealedByPulse=['3']"
+  },
+  {
+   "wall": 73.98,
+   "kind": "idle_start",
+   "d": "flat10_stuck"
+  },
+  {
+   "wall": 76.8,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t0",
+   "s": {
+    "wall": 1788695837469,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 78.81,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t+2s",
+   "s": {
+    "wall": 1788695839478,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 80.81,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t+4s",
+   "s": {
+    "wall": 1788695841487,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 82.83,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t+6s",
+   "s": {
+    "wall": 1788695843501,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 84.84,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t+8s",
+   "s": {
+    "wall": 1788695845514,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 86.85,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t+10s",
+   "s": {
+    "wall": 1788695847525,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 88.87,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t+12s",
+   "s": {
+    "wall": 1788695849544,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 90.89,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t+14s",
+   "s": {
+    "wall": 1788695851558,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 92.9,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t+16s",
+   "s": {
+    "wall": 1788695853574,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 94.92,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t+18s",
+   "s": {
+    "wall": 1788695855589,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 96.93,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t+20s",
+   "s": {
+    "wall": 1788695857603,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 98.94,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t+22s",
+   "s": {
+    "wall": 1788695859613,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 100.96,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_t+24s",
+   "s": {
+    "wall": 1788695861628,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 100.96,
+   "kind": "snap",
+   "tag": "idle_flat10_stuck_end",
+   "s": {
+    "wall": 1788695861634,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 100.96,
+   "kind": "idle_end",
+   "d": "flat10_stuck rescue=none"
+  },
+  {
+   "wall": 101.51,
+   "kind": "snap",
+   "tag": "flat10_rabbit",
+   "s": {
+    "wall": 1788695862187,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 6,
+      "b": 8,
+      "c": null,
+      "text": "6 × 8 = ?",
+      "answer": 48,
+      "items": [
+       48,
+       14,
+       54,
+       64
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "48",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "14",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "64",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "6 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 109.65,
+   "kind": "snap",
+   "tag": "C_wrong_q3",
+   "s": {
+    "wall": 1788695870322,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "step": 3,
+      "retries": 2,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 7,
+      "b": 6,
+      "c": null,
+      "text": "7 × 6 = ?",
+      "answer": 42,
+      "items": [
+       56,
+       42,
+       36,
+       13
+      ],
+      "answerIdx": 1,
+      "step": 3,
+      "wrong": [
+       2
+      ]
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "56",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "42",
+      "cls": "fish-btn alt pulse"
+     },
+     {
+      "i": "2",
+      "v": "36",
+      "cls": "fish-btn shake wrong"
+     },
+     {
+      "i": "3",
+      "v": "13",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "7 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 109.65,
+   "kind": "C_wrong",
+   "d": "q3 voices_delta=0 answerRevealedByPulse=['1']"
+  },
+  {
+   "wall": 133.22,
+   "kind": "snap",
+   "tag": "D_89_wrong_q1",
+   "s": {
+    "wall": 1788695893889,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 9,
+      "b": 6,
+      "c": null,
+      "text": "9 × 6 = ?",
+      "answer": 54,
+      "items": [
+       54,
+       72,
+       63,
+       15
+      ],
+      "answerIdx": 0,
+      "step": 1,
+      "wrong": [
+       2
+      ]
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "54",
+      "cls": "fish-btn pulse"
+     },
+     {
+      "i": "1",
+      "v": "72",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "63",
+      "cls": "fish-btn shake wrong"
+     },
+     {
+      "i": "3",
+      "v": "15",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "9 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 141.19,
+   "kind": "snap",
+   "tag": "D_89_wrong_q2",
+   "s": {
+    "wall": 1788695901865,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "step": 2,
+      "retries": 2,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 9,
+      "b": 8,
+      "c": null,
+      "text": "9 × 8 = ?",
+      "answer": 72,
+      "items": [
+       72,
+       63,
+       90,
+       81
+      ],
+      "answerIdx": 0,
+      "step": 2,
+      "wrong": [
+       3
+      ]
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "72",
+      "cls": "fish-btn pulse"
+     },
+     {
+      "i": "1",
+      "v": "63",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "90",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "81",
+      "cls": "fish-btn alt shake wrong"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "9 × 8 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 154.35,
+   "kind": "snap",
+   "tag": "D_miss_wrong",
+   "s": {
+    "wall": 1788695915023,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "step": 4,
+      "retries": 3,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "miss",
+      "a": 2,
+      "b": 7,
+      "c": 14,
+      "text": "? × 2 = 14",
+      "answer": 7,
+      "items": [
+       6,
+       2,
+       9,
+       7
+      ],
+      "answerIdx": 3,
+      "step": 4,
+      "wrong": [
+       1
+      ]
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "2",
+      "cls": "fish-btn alt shake wrong"
+     },
+     {
+      "i": "2",
+      "v": "9",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "7",
+      "cls": "fish-btn alt pulse"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "? × 2 = 14",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "done",
+      "cur"
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 154.41,
+   "kind": "D_miss_wrong",
+   "d": "quiz=? × 2 = 14 items=[6, 2, 9, 7] picked=2(answer=7)"
+  },
+  {
+   "wall": 157.42,
+   "kind": "idle_start",
+   "d": "flat15_stuck"
+  },
+  {
+   "wall": 160.24,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t0",
+   "s": {
+    "wall": 1788695920915,
+    "ov": {
+     "cls": "k-ov k-celebrate show",
+     "text": "★ ★ 好棒！"
+    },
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "step": 5,
+      "retries": 3,
+      "done": true,
+      "won": true,
+      "locked": true
+     },
+     "quiz": null,
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "6",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "2",
+      "cls": "fish-btn alt shake wrong"
+     },
+     {
+      "i": "2",
+      "v": "9",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "7",
+      "cls": "fish-btn alt pulse right"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "7 × 2 = 14",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "done",
+      "done"
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 162.26,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+2s",
+   "s": {
+    "wall": 1788695922934,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 164.28,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+4s",
+   "s": {
+    "wall": 1788695924952,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 166.29,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+6s",
+   "s": {
+    "wall": 1788695926965,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 168.3,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+8s",
+   "s": {
+    "wall": 1788695928978,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 170.33,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+10s",
+   "s": {
+    "wall": 1788695931000,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 172.35,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+12s",
+   "s": {
+    "wall": 1788695933020,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 174.36,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+14s",
+   "s": {
+    "wall": 1788695935036,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 176.38,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+16s",
+   "s": {
+    "wall": 1788695937050,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 178.39,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+18s",
+   "s": {
+    "wall": 1788695939066,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 180.41,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+20s",
+   "s": {
+    "wall": 1788695941079,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 182.43,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+22s",
+   "s": {
+    "wall": 1788695943101,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 182.44,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_end",
+   "s": {
+    "wall": 1788695943108,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 182.44,
+   "kind": "idle_end",
+   "d": "flat15_stuck rescue=something"
+  },
+  {
+   "wall": 182.44,
+   "kind": "snap",
+   "tag": "D_end",
+   "s": {
+    "wall": 1788695943114,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 16,
+      "ch": 4,
+      "dch": 4,
+      "lv": 1,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false,
+      "locked": false
+     },
+     "quiz": {
+      "type": "mul",
+      "a": 8,
+      "b": 6,
+      "c": null,
+      "text": "8 × 6 = ?",
+      "answer": 48,
+      "items": [
+       60,
+       48,
+       54,
+       56
+      ],
+      "answerIdx": 1,
+      "step": 0,
+      "wrong": []
+     },
+     "tut": "none"
+    },
+    "fish": [
+     {
+      "i": "0",
+      "v": "60",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "1",
+      "v": "48",
+      "cls": "fish-btn alt"
+     },
+     {
+      "i": "2",
+      "v": "54",
+      "cls": "fish-btn"
+     },
+     {
+      "i": "3",
+      "v": "56",
+      "cls": "fish-btn alt"
+     }
+    ],
+    "aid": {
+     "open": false,
+     "title": "",
+     "groupsLit": 0,
+     "ansPulse": [],
+     "ansWrong": [],
+     "ans": []
+    },
+    "convert": {
+     "show": false,
+     "last": null,
+     "txt": ""
+    },
+    "quizTxt": "8 × 6 = ?",
+    "groupsBtn": {
+     "vis": false,
+     "cls": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1191 @@
+{
+ "meta": {
+  "game": "tangram",
+  "started": "2026-09-06T09:27:58.269658",
+  "viewport": "800x1180 headless",
+  "finished": "2026-09-06T09:29:38.212749",
+  "duration_s": 100.7
+ },
+ "timeline": [
+  {
+   "t": 1.3,
+   "msg": "TAN 就绪",
+   "data": {
+    "flat": 0,
+    "ch": 1,
+    "lv": 0,
+    "name": "mountain2",
+    "pieces": 2,
+    "placed": 0,
+    "moves": 0
+   }
+  },
+  {
+   "t": 1.3,
+   "msg": "1-0初始块",
+   "data": [
+    {
+     "i": 0,
+     "t": "LT",
+     "x": 0.24,
+     "y": 4.23,
+     "r": 0,
+     "placed": false,
+     "solX": 4,
+     "solY": 3,
+     "solR": 4,
+     "cts": 4
+    },
+    {
+     "i": 1,
+     "t": "MT",
+     "x": 5.24,
+     "y": 5.11,
+     "r": 5,
+     "placed": false,
+     "solX": 6,
+     "solY": 3,
+     "solR": 4,
+     "cts": 7
+    }
+   ]
+  },
+  {
+   "t": 2.8,
+   "msg": "教学\"看\"中途点块1→是否被吞",
+   "data": {
+    "unchanged": true,
+    "tut": "watch"
+   }
+  },
+  {
+   "t": 5.6,
+   "msg": "教学\"帮\"幽灵手指+高亮",
+   "data": {
+    "show": true,
+    "over": 0,
+    "pulse_cls": [
+     "piece",
+     "piece"
+    ]
+   }
+  },
+  {
+   "t": 9.5,
+   "msg": "放偏90px松手→块停留原地",
+   "data": {
+    "piece0": {
+     "i": 0,
+     "t": "LT",
+     "x": 0.88,
+     "y": 1.68,
+     "r": 0,
+     "placed": false,
+     "solX": 4,
+     "solY": 3,
+     "solR": 4,
+     "cts": 4
+    },
+    "wrongflash": true,
+    "moves": 1
+   }
+  },
+  {
+   "t": 9.5,
+   "msg": "放偏后幽灵手指（是否还指旧托盘点）",
+   "data": {
+    "show": true,
+    "over_piece": null
+   }
+  },
+  {
+   "t": 13.7,
+   "msg": "硬放（形状对上但没转角）",
+   "data": {
+    "placed": false,
+    "r": 0,
+    "solR": 4,
+    "cts": 4,
+    "wrongflash": true,
+    "anchor": [
+     0,
+     1
+    ],
+    "bbox": [
+     36,
+     102,
+     523,
+     318
+    ],
+    "moves": 2
+   }
+  },
+  {
+   "t": 19.4,
+   "msg": "硬放后连点转角（绕锚点甩动）",
+   "data": {
+    "taps": [
+     {
+      "tap": 1,
+      "clicked": [
+       44,
+       112
+      ],
+      "r": 1,
+      "placed": false,
+      "bbox": [
+       -133,
+       79,
+       595,
+       595
+      ],
+      "moves": 3
+     },
+     {
+      "tap": 2,
+      "clicked": [
+       92,
+       88
+      ],
+      "r": 2,
+      "placed": false,
+      "bbox": [
+       -170,
+       102,
+       318,
+       523
+      ],
+      "moves": 4
+     },
+     {
+      "tap": 3,
+      "clicked": [
+       20,
+       112
+      ],
+      "r": 3,
+      "placed": false,
+      "bbox": [
+       -423,
+       -66,
+       595,
+       595
+      ],
+      "moves": 5
+     },
+     {
+      "tap": 4,
+      "clicked": [
+       20,
+       64
+      ],
+      "r": 4,
+      "placed": false,
+      "bbox": [
+       -375,
+       -103,
+       523,
+       318
+      ],
+      "moves": 6
+     },
+     {
+      "tap": 5,
+      "clicked": [
+       20,
+       64
+      ],
+      "r": 5,
+      "placed": false,
+      "bbox": [
+       -278,
+       -357,
+       595,
+       595
+      ],
+      "moves": 7
+     },
+     {
+      "tap": 6,
+      "clicked": [
+       20,
+       64
+      ],
+      "r": 6,
+      "placed": false,
+      "bbox": [
+       36,
+       -308,
+       318,
+       523
+      ],
+      "moves": 8
+     },
+     {
+      "tap": 7,
+      "clicked": [
+       44,
+       64
+      ],
+      "r": 7,
+      "placed": false,
+      "bbox": [
+       12,
+       -211,
+       595,
+       595
+      ],
+      "moves": 9
+     },
+     {
+      "tap": 8,
+      "clicked": [
+       116,
+       64
+      ],
+      "r": 0,
+      "placed": false,
+      "bbox": [
+       36,
+       102,
+       523,
+       318
+      ],
+      "moves": 10
+     }
+    ],
+    "placed": false
+   }
+  },
+  {
+   "t": 20.4,
+   "msg": "教师把块拉回中央",
+   "data": {
+    "dragged": true,
+    "bbox": [
+     651,
+     123,
+     523,
+     318
+    ]
+   }
+  },
+  {
+   "t": 23.7,
+   "msg": "中央点转到位后对位吸附",
+   "data": {
+    "placed": true,
+    "swings": [
+     {
+      "before": [
+       651,
+       123,
+       523,
+       318
+      ],
+      "after": [
+       483,
+       99,
+       595,
+       595
+      ]
+     },
+     {
+      "before": [
+       483,
+       99,
+       595,
+       595
+      ],
+      "after": [
+       446,
+       123,
+       318,
+       523
+      ]
+     },
+     {
+      "before": [
+       446,
+       123,
+       318,
+       523
+      ],
+      "after": [
+       193,
+       -46,
+       595,
+       595
+      ]
+     },
+     {
+      "before": [
+       193,
+       -46,
+       595,
+       595
+      ],
+      "after": [
+       241,
+       -82,
+       523,
+       318
+      ]
+     }
+    ],
+    "tut": "solo",
+    "moves": 16
+   }
+  },
+  {
+   "t": 28.8,
+   "msg": "第二块偏30px松手",
+   "data": {
+    "placed": true,
+    "moves": 24
+   }
+  },
+  {
+   "t": 29.2,
+   "msg": "1-0过关+演出期间乱点",
+   "data": {
+    "stars": 1,
+    "moves": 24,
+    "celebrate_kept": true
+   }
+  },
+  {
+   "t": 31.8,
+   "msg": "进入1-1",
+   "data": {
+    "flat": 1,
+    "ch": 1,
+    "lv": 1,
+    "name": "tree",
+    "pieces": 2,
+    "placed": 0,
+    "moves": 0
+   }
+  },
+  {
+   "t": 38.8,
+   "msg": "块0拖到块1的槽(错槽)",
+   "data": {
+    "placed0": false,
+    "anchor": [
+     2.38,
+     3.19
+    ],
+    "moves": 1
+   }
+  },
+  {
+   "t": 39.8,
+   "msg": "块0拖到中间空地松手（不回弹不锁死）",
+   "data": {
+    "placed0": false,
+    "anchor": [
+     2.33,
+     4.31
+    ],
+    "bbox": [
+     380,
+     481,
+     469,
+     285
+    ]
+   }
+  },
+  {
+   "t": 46.1,
+   "msg": "块0转角+对位放正",
+   "data": {
+    "placed0": true
+   }
+  },
+  {
+   "t": 47.1,
+   "msg": "误抓已就位块0拖走→进度回退",
+   "data": {
+    "placed0": false,
+    "prog_before": 1,
+    "prog_after": 1
+   }
+  },
+  {
+   "t": 48.1,
+   "msg": "块0放回",
+   "data": {
+    "placed0": true
+   }
+  },
+  {
+   "t": 48.1,
+   "msg": "最后一块留着不动，观察26秒闲置帮扶"
+  },
+  {
+   "t": 74.1,
+   "msg": "26秒后帮扶",
+   "data": {
+    "slot_hint": {
+     "hintpulse": []
+    },
+    "voice": [
+     {
+      "t": 66027,
+      "api": "voice",
+      "key": "tan_hint",
+      "text": "转一转，放到一样的形状里"
+     }
+    ]
+   }
+  },
+  {
+   "t": 75.7,
+   "msg": "最后一块偏45px松手",
+   "data": {
+    "placed": true
+   }
+  },
+  {
+   "t": 75.7,
+   "msg": "1-1过关",
+   "data": {
+    "stars": 2,
+    "moves": 11
+   }
+  },
+  {
+   "t": 78.3,
+   "msg": "进入1-2",
+   "data": {
+    "flat": 2,
+    "ch": 1,
+    "lv": 2,
+    "name": "mountain3",
+    "pieces": 3,
+    "placed": 0,
+    "moves": 0
+   }
+  },
+  {
+   "t": 88.4,
+   "msg": "狂点6下块0（转角甩动序列）",
+   "data": {
+    "seq": [
+     {
+      "tap": 1,
+      "r": 0,
+      "bbox": [
+       66,
+       647,
+       414,
+       252
+      ],
+      "placed": false
+     },
+     {
+      "tap": 2,
+      "r": 1,
+      "bbox": [
+       -68,
+       628,
+       471,
+       471
+      ],
+      "placed": false
+     },
+     {
+      "tap": 3,
+      "r": 2,
+      "bbox": [
+       -97,
+       647,
+       252,
+       414
+      ],
+      "placed": false
+     },
+     {
+      "tap": 4,
+      "r": 3,
+      "bbox": [
+       -297,
+       513,
+       471,
+       471
+      ],
+      "placed": false
+     },
+     {
+      "tap": 5,
+      "r": 4,
+      "bbox": [
+       -259,
+       484,
+       414,
+       252
+      ],
+      "placed": false
+     },
+     {
+      "tap": 6,
+      "r": 5,
+      "bbox": [
+       -183,
+       283,
+       471,
+       471
+      ],
+      "placed": false
+     }
+    ],
+    "cts": 7
+   }
+  },
+  {
+   "t": 100.5,
+   "msg": "1-2过关",
+   "data": {
+    "stars": 1,
+    "moves": 25
+   }
+  },
+  {
+   "t": 100.5,
+   "msg": "存档",
+   "data": {
+    "1-0": {
+     "stars": 1,
+     "plays": 1
+    },
+    "1-1": {
+     "stars": 2,
+     "plays": 1
+    }
+   }
+  }
+ ],
+ "errors": [],
+ "vlog": [
+  {
+   "t": 17,
+   "api": "tts",
+   "text": "看！把图形放到虚线里"
+  },
+  {
+   "t": 721,
+   "api": "sfx",
+   "key": "ok"
+  },
+  {
+   "t": 1633,
+   "api": "voice",
+   "key": "tan_tut_turn",
+   "text": "你来试一试，转一转放进去"
+  },
+  {
+   "t": 7412,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 11551,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 12525,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 12526,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 13243,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 13244,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 13958,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 13959,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 14677,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 14678,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 15398,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 15398,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 16113,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 16114,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 16834,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 16834,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 17547,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 17547,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 18316,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 19292,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 19292,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 19885,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 19886,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 20450,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 20450,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 21013,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 21014,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 21593,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 22220,
+   "api": "sfx",
+   "key": "ok"
+  },
+  {
+   "t": 22655,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 22655,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 23223,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 23224,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 23791,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 23791,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 24359,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 24359,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 24927,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 24927,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 25494,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 25495,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 26060,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 26061,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 26637,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 27240,
+   "api": "sfx",
+   "key": "ok"
+  },
+  {
+   "t": 27241,
+   "api": "sfx",
+   "key": "win"
+  },
+  {
+   "t": 29871,
+   "api": "voice",
+   "key": "tan_hint",
+   "text": "转一转，放到一样的形状里"
+  },
+  {
+   "t": 36751,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 37663,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 41695,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 41696,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 42264,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 42265,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 42855,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 42855,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 43421,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 43422,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 43998,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 44599,
+   "api": "sfx",
+   "key": "ok"
+  },
+  {
+   "t": 44981,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 46011,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 46598,
+   "api": "sfx",
+   "key": "ok"
+  },
+  {
+   "t": 66027,
+   "api": "voice",
+   "key": "tan_hint",
+   "text": "转一转，放到一样的形状里"
+  },
+  {
+   "t": 73027,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 73027,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 73602,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 74219,
+   "api": "sfx",
+   "key": "ok"
+  },
+  {
+   "t": 74219,
+   "api": "sfx",
+   "key": "win"
+  },
+  {
+   "t": 76858,
+   "api": "voice",
+   "key": "tan_hint",
+   "text": "转一转，放到一样的形状里"
+  },
+  {
+   "t": 83829,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 83830,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 84398,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 84398,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 84964,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 84964,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 85532,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 85533,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 86099,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 86099,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 86666,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 86666,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 87281,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 87282,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 87846,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 87847,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 88412,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 88413,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 88980,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 88981,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 89548,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 89549,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 90115,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 90116,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 90685,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 90686,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 91291,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 91898,
+   "api": "sfx",
+   "key": "ok"
+  },
+  {
+   "t": 92268,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 92268,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 92832,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 92832,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 93397,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 93398,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 93967,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 93967,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 94535,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 94536,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 95105,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 95106,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 95675,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 95676,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 96251,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 96850,
+   "api": "sfx",
+   "key": "ok"
+  },
+  {
+   "t": 97228,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 97228,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 97793,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 97793,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 98367,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 98966,
+   "api": "sfx",
+   "key": "ok"
+  },
+  {
+   "t": 98967,
+   "api": "sfx",
+   "key": "win"
+  }
+ ]
+}

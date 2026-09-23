@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小兔子的游戏屋 · 新游戏三款</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#FBF3E4;color:#4A3B2E;font-family:system-ui,-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+       min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;padding:34px 22px}
+  .logo{width:150px;height:150px}
+  h1{font-size:clamp(26px,5vw,38px);letter-spacing:.05em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:24px;width:100%;max-width:760px}
+  a.card{display:flex;flex-direction:column;align-items:center;gap:14px;padding:28px 16px 24px;border-radius:26px;
+         background:#FFF9EE;border:2.5px solid #4A3B2E;text-decoration:none;color:#4A3B2E;
+         box-shadow:0 5px 0 #D8C9B4;transition:transform .2s}
+  a.card:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+  @media (hover:hover){
+    a.card:hover{transform:translateY(-4px);box-shadow:0 9px 0 #D8C9B4}
+  }
+  .card .icon{width:92px;height:92px}
+  .card .name{font-size:22px;font-weight:700}
+  .card .band{font-size:12.5px;font-weight:700;color:#fff;background:#E8975A;padding:3px 12px;border-radius:999px;letter-spacing:.06em}
+  .card .desc{font-size:14px;color:#8A7B6C;line-height:1.6;text-align:center}
+  .foot{font-size:12.5px;color:#8A7B6C;text-align:center;line-height:1.8;max-width:520px}
+</style>
+</head>
+<body>
+  <div class="logo" id="logo"></div>
+  <h1>小兔子的游戏屋 · 新游戏三款</h1>
+  <div class="grid">
+    <a class="card" href="ins/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="34" cy="42" rx="16" ry="19" fill="#E05A5A" stroke="#4A3B2E" stroke-width="2.6"/>
+        <path d="M26 36 a3 3 0 1 0 .1 0 M42 34 a3 3 0 1 0 .1 0 M34 48 a3.4 3.4 0 1 0 .1 0" fill="#4A3B2E"/>
+        <circle cx="34" cy="24" r="6" fill="#E05A5A" stroke="#4A3B2E" stroke-width="2.2"/>
+        <path d="M30 20 l-6 -6 M38 20 l6 -6" stroke="#4A3B2E" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M24 34 l-10 -6 M26 44 l-11 2 M28 52 l-9 8 M44 34 l10 -6 M42 44 l11 2 M40 52 l9 8" stroke="#4A3B2E" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <ellipse cx="72" cy="46" rx="13" ry="10" fill="#8A7B6C" stroke="#4A3B2E" stroke-width="2.6"/>
+        <circle cx="72" cy="34" r="6" fill="#8A7B6C" stroke="#4A3B2E" stroke-width="2.2"/>
+        <circle cx="69.5" cy="33" r="1.5" fill="#4A3B2E"/><circle cx="74.5" cy="33" r="1.5" fill="#4A3B2E"/>
+        <path d="M64 42 l-12 -9 M66 48 l-13 0 M68 54 l-11 8 M80 42 l12 -9 M78 48 l13 0 M76 54 l11 8" stroke="#4A3B2E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M14 12 l8 8 M22 12 l-8 8 M86 12 l-8 8 M78 12 l8 8" stroke="#D8C9B4" stroke-width="2" stroke-linecap="round"/>
+      </svg></div>
+      <div class="name">昆虫还是蜘蛛</div><div class="band">5-6 岁 · 常识科学</div>
+      <div class="desc">看小动物数数腿：六条腿的是昆虫，八条腿的是蜘蛛，你分得清吗</div>
+    </a>
+    <a class="card" href="cbx/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 32 q18 -18 36 0" stroke="#4A3B2E" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <rect x="18" y="32" width="64" height="42" rx="8" fill="#E8975A" stroke="#4A3B2E" stroke-width="2.6"/>
+        <rect x="18" y="44" width="64" height="10" fill="#D98A5A" stroke="#4A3B2E" stroke-width="2"/>
+        <path d="M50 64 c-2 -5 -9 -6 -9 -1.6 c0 3.4 6 6.8 9 9.2 c3 -2.4 9 -5.8 9 -9.2 c0 -4.4 -7 -3.4 -9 1.6 z" fill="#FFF9EE" stroke="#4A3B2E" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M26 56 q4 3 8 0" stroke="#FFF9EE" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M66 56 q4 3 8 0" stroke="#FFF9EE" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      </svg></div>
+      <div class="name">冷静工具箱</div><div class="band">6-7 岁 · 情绪管理</div>
+      <div class="desc">心里不舒服的时候，挑一个好办法：深呼吸、数到十、说出来，慢慢平静下来</div>
+    </a>
+    <a class="card" href="brk/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="22" y="10" width="56" height="30" rx="5" fill="#E8975A" stroke="#4A3B2E" stroke-width="2.6"/>
+        <path d="M34 20 h32 M34 26 h22" stroke="#FFF9EE" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M50 40 v10 M50 50 l-10 6 M50 50 l10 6" stroke="#4A3B2E" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="12" y="62" width="22" height="22" rx="4" fill="#A9CC95" stroke="#4A3B2E" stroke-width="2.4"/>
+        <rect x="39" y="62" width="22" height="22" rx="4" fill="#7FB3E0" stroke="#4A3B2E" stroke-width="2.4"/>
+        <rect x="66" y="62" width="22" height="22" rx="4" fill="#F2C94C" stroke="#4A3B2E" stroke-width="2.4"/>
+        <path d="M17 70 h12 M17 76 h8 M44 70 h12 M44 76 h8 M71 70 h12 M71 76 h8" stroke="#4A3B2E" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+      </svg></div>
+      <div class="name">问题拆解小博士</div><div class="band">7-8 岁 · 信息素养</div>
+      <div class="desc">大任务别着急：拆成小问题，选出对的步骤，再按顺序排一排，一步步做完</div>
+    </a>
+  </div>
+    <p class="foot">每天有新关卡，玩完今天的小兔子会说"明天见"。<br>每款游戏右上角 🔒 家长面板：进度 / 时长 / 今日多玩关数。<br>完全离线，无广告无内购，进度保存在本机。</p>
+<script>
+/* 入口页不内嵌完整 core（无存档/会话需求），仅复用小兔子形象保持 IP 一致 */
+document.getElementById('logo').innerHTML = '<svg viewBox="0 0 120 120" width="150" height="150" xmlns="http://www.w3.org/2000/svg" fill="none"><ellipse cx="60" cy="96" rx="26" ry="12" fill="#EFE3CD"/><ellipse cx="45" cy="28" rx="10" ry="26" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5" transform="rotate(-10 45 28)"/><ellipse cx="45" cy="30" rx="4.5" ry="17" fill="#F2B8C6" transform="rotate(-10 45 30)"/><ellipse cx="76" cy="26" rx="10" ry="27" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5" transform="rotate(14 76 26)"/><ellipse cx="76" cy="28" rx="4.5" ry="18" fill="#F2B8C6" transform="rotate(14 76 28)"/><circle cx="60" cy="68" r="38" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5"/><ellipse cx="54" cy="56" rx="3" ry="2.2" fill="#D98A8A"/><ellipse cx="66" cy="56" rx="3" ry="2.2" fill="#D98A8A"/><ellipse cx="37" cy="74" rx="6.5" ry="4.5" fill="#F2B8C6" opacity=".8"/><ellipse cx="83" cy="74" rx="6.5" ry="4.5" fill="#F2B8C6" opacity=".8"/><path d="M44 62 q5 -7 10 0" stroke="#4A3B2E" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M66 62 q5 -7 10 0" stroke="#4A3B2E" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M55 74 q5 6 10 0" stroke="#4A3B2E" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="18" cy="55" r="9" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5"/></svg>';
+</script>
+</body>
+</html>

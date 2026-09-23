@@ -1,0 +1,15 @@
+=== habitat  MISS
+=== habitat  MISS
+=== habitat FOOD [game-data.js]
+const FOOD = { |   grass: { n: '青草' }, meat: { n: '肉' },   bug: { n: '小虫' }, |   fish:  { n: '小鱼' }, fruit: { n: '果子' }, candy: { n: '果冻' } | }; | const FOOD_KEYS = Object.keys(FOOD); | const nameOfFood = f => FOOD[f].n; |  | /* ---------- 食物链封闭 4（chain 题）：base 被吃 → mid → top（top 吃 mid，mid 吃 base） |    四链 12 个动物位互异（链内干扰选取干净）；up 
+=== habitat ENV [game-data.js]
+const ENV = { |   forest:    { n: '森林' }, |   grassland: { n: '草原' }, |   ocean:     { n: '海洋' }, |   desert:    { n: '沙漠' }, |   pond:      { n: '池塘' }, |   sky:       { n: '天空' }, |   farm:      { n: '农场' } | }; | const ALL7 = Object.keys(ENV);                          // 封闭 7 集 | const NEAR = { pond: 'ocean', ocean: 'pond',            // 近环境对封闭 3 对
+=== habitat CHAINS [game-data.js]
+const CHAINS = [ |   { id: 'c1', base: 'grass', mid: 'rabbit', top: 'eagle' }, |   { id: 'c2', base: 'grass', mid: 'zebra',  top: 'lion' }, |   { id: 'c3', base: 'bug',   mid: 'frog',   top: 'snake' }, |   { id: 'c4', base: 'fruit', mid: 'mon
+=== habitat STRUCTS [game-data.js]
+const STRUCTS = { |   web:   { feat: '脚上有蹼',       short: '有蹼',   abil: 'swim', q: '脚上有蹼的动物，会做什么？' }, |   wing:  { feat: '身上有翅膀',     short: '有翅膀', abil: 'fly',  q: '有翅膀的动物，会做什么？' }, |   legs:  { feat: '腿长长的又有力', short: '长腿',   abil: 'run',  q: '腿长长的动物，最会做什么？' }, |   claws: { feat: 
+=== habitat ABILITY [game-data.js]
+const ABILITY = { |   swim: { n: '会游泳' }, fly: { n: '会飞' }, run: { n: '跑得快' }, dig: { n: '会挖洞' } | }; | const ABILITY_KEYS = Object.keys(ABILITY); | const STRUCTS = { |   web:   { feat: '脚上有蹼',       short: '有蹼',   abil: 'swim', q: '脚上有蹼的动物，会做什么？' }, |   wing:  { feat: '身上有翅膀',     shor
+=== habitat DUALS [game-data.js]
+const DUALS = [ |   { id: 'swim_hib',    a: 'swim', b: 'hib', |     q: '既会游泳、冬天又要睡长觉的，是谁？', c: n => '对啦，' + n + '会游泳又冬眠' }, |   { id: 'water_nowegg', a: 'water', b: 'nowegg', |     q: '住在水里、可是不下蛋的，是谁？', c: n => '对啦，' + n + '住在水里不下蛋' }, |   { id: 'hib_egg',     a: 'hib',  b: 'egg', |     q: '冬天睡长觉、又会下蛋的，是谁？', c: n => '对啦，' +
+=== hidden  MISS

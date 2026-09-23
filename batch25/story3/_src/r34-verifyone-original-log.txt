@@ -1,0 +1,12 @@
+[PASS] T0 selftest 全绿+0 pageerror VERIFY PASS 58/58
+[PASS] T1 故事库封闭 12+章池分布 n=12 []
+[FAIL] T2 帧形状（3 帧互异+pos 排列+乱序呈现） [(5, 0, '帧形状', ['cate-f0', 'cate-f3', 'cate-f1', 'chick-f2', 'cate-f2'], [0, 3, 1, -1, 2]), (5, 1, '帧形状', ['seed-f1', 'chick-f0', 'chick-f2', 'chick-f3', 'chick-f1'], [-1, 0, 2, 3, 1]), (5, 2, '帧形状', ['seed-f1', 'seed-f2', 'seed-f3', 'seed-f0', 'chick-f1'], [1, 2, 3, 0, -1]), (5, 3, '帧形状', ['chick-f0', 'rain-f0', 'rain-f3', 'rain-f1', 'rain-f2'], [-1, 0, 3, 1, 2])]
+[PASS] T3 槽位状态机（错点不清已对+已放帧不可再点） []
+[FAIL] T4 方位反馈=当前槽语义 [(5, '方位反馈非当前槽语义', 0, []), (12, '方位反馈非当前槽语义', 0, [])]
+[PASS] T7 复述句触发（先…最后…） []
+[PASS] T6a 星级全最优=3★（排探测） []
+[PASS] T5 确定性（双读 sig 相同） []
+[PASS] T6b 1 错=2★ []
+[PASS] T10 家族 A+B 源码级 []
+
+TOTAL 8/10 PASS

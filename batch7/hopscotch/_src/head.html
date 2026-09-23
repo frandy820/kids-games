@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>跳格子数数</title>
+<style>
+/* ================= 跳格子数数 hopscotch（batch7 · r7 难度改造）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、河边浅蓝水面、暖橙主色、灰蓝石头色（不用大红警示）
+   圆石格 5 列蛇形（span10=2 行 1-10 / span20=4 行 1-20，行末折行；行数由 JS 按章 span 设），
+   800px 竖屏宽放得下且格 ≥64px（overflowX=0 硬指标）；格间箭头标示顺数方向（mode2 双箭头 »）
+   触摸目标：圆石格 ≥64×64；旗=目标格视觉锚（红=往前/蓝=往回，§0.19 零文字自解释）；
+   每格数字大字 + 点数圆点双重冗余（11-20=十点阵+个位）；pointerdown 即响应 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#9FB4C7;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：河面 + 题面 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:10px;overflow:hidden;padding:6px 10px}
+#field{position:relative;width:100%;max-width:1180px;flex:1 1 auto;min-height:230px;
+  background:#BFE0EA;border:3px solid #9FCCDA;border-radius:26px;overflow:hidden;
+  box-shadow:inset 0 0 0 6px rgba(255,249,238,.4)}
+#field .river{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+
+/* ---------- 圆石格路径：5 列 × 2 行 S 形（JS 按 n 定 grid 位置） ---------- */
+#path{position:absolute;inset:34px 18px 18px;display:grid;
+  grid-template-columns:repeat(5,1fr);grid-template-rows:1fr 1fr;gap:12px}
+.cell{position:relative;min-width:64px;min-height:64px;max-width:200px;width:100%;height:100%;
+  max-height:205px;justify-self:center;align-self:center;border-radius:38%;
+  background:linear-gradient(180deg,#E8EDF4 0%,#C9D3E0 78%,#B7C4D4 100%);
+  border:3px solid #8FA0B5;box-shadow:0 4px 0 rgba(99,117,140,.45);
+  display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;
+  padding:4px 6px;transition:transform .15s}
+.cell:active{transform:translateY(2px)}
+.cell .num{font-size:clamp(22px,4.6vh,42px);font-weight:800;color:#4A3B2E;line-height:1;
+  font-variant-numeric:tabular-nums}
+/* 藏数字格：数字藏起只显点数圆点（点对才亮——数序内化）；亮出时弹跳出现 */
+.cell.masked .num{visibility:hidden}
+.cell.reveal .num{visibility:visible;animation:num-pop .45s cubic-bezier(.2,1.6,.4,1)}
+@keyframes num-pop{from{transform:scale(0) rotate(-16deg)}to{transform:scale(1) rotate(0)}}
+/* 点数圆点：flex 三列换行居中（1-3 一行/4-6 两行/7-9 三行/10 四行 3+3+3+1）
+   r7 11-20：.ten 十点阵边框格（内恰 10 小点 2×5）+ 个位圆点——「一个整十+几」结构化显示 */
+.cell .dots{width:58%;display:flex;flex-wrap:wrap;gap:5%;justify-content:center;align-content:center}
+.cell .dots i{width:24%;aspect-ratio:1;border-radius:50%;background:#5B6B7E;
+  box-shadow:inset 0 -2px 0 rgba(74,59,46,.25)}
+.cell .dots .ten{width:100%;display:grid;grid-template-columns:repeat(5,1fr);gap:3px;
+  padding:6% 8%;margin:3% 0;border:2px solid #5B6B7E;border-radius:8px;
+  background:rgba(91,107,126,.10);box-shadow:none}
+.cell .dots .ten i{width:100%;aspect-ratio:1;box-shadow:none}
+/* 目标格：旗插角上 + 柔和描边圈（旗色=方向：红往前/蓝往回） */
+.cell.goal{border-color:#E8975A;box-shadow:0 4px 0 rgba(199,122,66,.5),inset 0 0 0 4px rgba(232,151,90,.35)}
+.cell .flag{position:absolute;top:-15%;right:-7%;width:34%;min-width:26px;z-index:2;
+  transform-origin:50% 100%;animation:flag-wave 2.2s ease-in-out infinite;pointer-events:none}
+.cell .flag.back{animation-name:flag-wave-b}
+@keyframes flag-wave{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(4deg)}}
+@keyframes flag-wave-b{0%,100%{transform:rotate(-4deg) scale(-1,1)}50%{transform:rotate(3deg) scale(-1,1)}}
+/* 当前所站格：淡圈提示 */
+.cell.here{box-shadow:0 4px 0 rgba(99,117,140,.45),inset 0 0 0 4px rgba(255,249,238,.7)}
+/* 点非相邻格：该格轻晃（零惩罚） */
+.cell.shake{animation:cell-shake .45s ease}
+@keyframes cell-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}
+  40%{transform:translateX(7px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+/* 连错 2 次才高亮下一格（首错不 pulse，给再想机会——§0.7） */
+.cell.pulse{animation:cell-pulse 1s ease 2}
+@keyframes cell-pulse{0%,100%{filter:none}50%{filter:drop-shadow(0 0 12px rgba(232,151,90,.95))}}
+/* 到达目标格：石头亮起 */
+.cell.win{animation:cell-win .6s cubic-bezier(.2,1.6,.4,1)}
+@keyframes cell-win{0%{transform:scale(1)}45%{transform:scale(1.12)}100%{transform:scale(1)}}
+/* 格间顺数方向小三角（1→4 右 / 5 下折 / 6→9 左）：纯装饰；
+   r7 mode2（跳两格）双箭头 » 同位挂链上格（aR2/aL2/aD2）；非链上石头减淡（.off，仍可点零惩罚） */
+.cell .nxt{position:absolute;width:16px;height:16px;pointer-events:none;opacity:.8}
+.cell.aR .nxt,.cell.aR2 .nxt{right:-15px;top:50%;transform:translateY(-50%)}
+.cell.aD .nxt,.cell.aD2 .nxt{bottom:-16px;left:50%;transform:translateX(-50%)}
+.cell.aL .nxt,.cell.aL2 .nxt{left:-15px;top:50%;transform:translateY(-50%)}
+.cell.aR2 .nxt,.cell.aD2 .nxt,.cell.aL2 .nxt{width:18px;height:14px}
+.cell.off{opacity:.55}
+
+/* ---------- 小兔子（JS 依当前格定位，left/top 过渡=跳过去） ---------- */
+#rabbit{position:absolute;left:0;top:0;width:76px;z-index:5;pointer-events:none;
+  transition:left .34s cubic-bezier(.35,1.3,.55,1),top .34s cubic-bezier(.35,1.3,.55,1)}
+#rabbit svg{width:100%;height:auto}
+#rabbit.hoppy{animation:rab-hop .34s ease}
+@keyframes rab-hop{0%,100%{transform:scale(1)}45%{transform:scale(1.14,.88)}}
+#rabbit.shake{animation:rab-shake .5s ease}
+@keyframes rab-shake{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg)}
+  55%{transform:rotate(7deg)}80%{transform:rotate(-4deg)}}
+
+/* ---------- 题面行：旗 + 跳到 N（文字为装饰性冗余，题面信息全语音承载 §0.19） ---------- */
+#prompt{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+  min-height:78px;padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:14px;padding:6px 26px;border-radius:22px;
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4}
+#prompt-chip .flagmini{width:44px;height:52px;flex:0 0 44px}
+#prompt-chip .big{font-size:32px;font-weight:800;color:#4A3B2E;line-height:1.25;white-space:nowrap}
+#prompt-chip .big b{color:#E8873A;font-size:38px;font-variant-numeric:tabular-nums}
+#prompt-chip .sub{display:none;font-size:16px;font-weight:700;color:#6B8CB8}
+#prompt-chip.back .sub,#prompt-chip.skip .sub{display:block}
+#prompt-chip.skip .sub{color:#E8873A}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch5 countchick） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：两行格子随场地变高，数字/旗适配 */
+@media (orientation:portrait){
+  .cell{max-height:230px}
+  #prompt-chip .big{font-size:28px}
+  #prompt-chip .big b{font-size:33px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="跳格子数数">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="field" aria-label="河边石头路">
+      <div class="river" aria-hidden="true"></div>
+      <div id="path" aria-label="十块圆石格子"></div>
+      <div id="rabbit" aria-hidden="true"></div>
+    </div>
+    <div id="prompt">
+      <div id="prompt-chip" role="heading" aria-label="题目"></div>
+    </div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="读题"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

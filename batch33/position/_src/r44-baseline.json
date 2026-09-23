@@ -1,0 +1,2082 @@
+{
+ "0": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   }
+  ]
+ },
+ "1": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   }
+  ]
+ },
+ "2": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   }
+  ]
+ },
+ "3": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   }
+  ]
+ },
+ "4": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   }
+  ]
+ },
+ "5": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   }
+  ]
+ },
+ "6": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   }
+  ]
+ },
+ "7": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   }
+  ]
+ },
+ "8": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   }
+  ]
+ },
+ "9": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   }
+  ]
+ },
+ "10": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 1
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 2
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 0
+   }
+  ]
+ },
+ "11": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 0
+   },
+   {
+    "kind": "placepos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 1
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 0
+   },
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 4
+   }
+  ]
+ },
+ "12": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 5
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 2
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 5
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   }
+  ]
+ },
+ "13": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 5
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 5
+   }
+  ]
+ },
+ "14": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "right",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 3
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 0
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   }
+  ]
+ },
+ "15": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "right",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 3
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "right",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 4
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   }
+  ]
+ },
+ "16": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 0
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 5
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 2
+   },
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 4
+   }
+  ]
+ },
+ "17": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 5
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 5
+   }
+  ]
+ },
+ "18": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 5
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 5
+   },
+   {
+    "kind": "placepos",
+    "ask": "right",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "placepos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 1
+   }
+  ]
+ },
+ "19": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "placepos",
+    "ask": "right",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 4
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   }
+  ]
+ },
+ "20": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   }
+  ]
+ },
+ "21": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   }
+  ]
+ },
+ "22": {
+  "ch": 5,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 2
+   },
+   {
+    "kind": "placepos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 1
+   }
+  ]
+ },
+ "23": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 2
+   },
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 4
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 5
+   },
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 4
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 2
+   }
+  ]
+ },
+ "24": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   }
+  ]
+ },
+ "25": {
+  "ch": 6,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   }
+  ]
+ },
+ "26": {
+  "ch": 6,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 5
+   },
+   {
+    "kind": "findpos",
+    "ask": "right",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 3
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 5
+   },
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 2
+   }
+  ]
+ },
+ "27": {
+  "ch": 6,
+  "dch": 1,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   }
+  ]
+ },
+ "28": {
+  "ch": 6,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   }
+  ]
+ },
+ "29": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 4
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 5
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 2
+   },
+   {
+    "kind": "placepos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 5
+   }
+  ]
+ },
+ "30": {
+  "ch": 7,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   }
+  ]
+ },
+ "31": {
+  "ch": 7,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   }
+  ]
+ },
+ "32": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 0
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 5
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 5
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   }
+  ]
+ },
+ "33": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 5
+   },
+   {
+    "kind": "findpos",
+    "ask": "right",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 2
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 2
+   }
+  ]
+ },
+ "34": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 4
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 5
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "placepos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 5
+   }
+  ]
+ },
+ "35": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   }
+  ]
+ },
+ "36": {
+  "ch": 8,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "right",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 3
+   },
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 4
+   },
+   {
+    "kind": "placepos",
+    "ask": "right",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 2
+   }
+  ]
+ },
+ "37": {
+  "ch": 8,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 5
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 4
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 4
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 2
+   }
+  ]
+ },
+ "38": {
+  "ch": 8,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 3
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "back",
+    "answer": 1
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "front",
+    "answer": 0
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 2
+   }
+  ]
+ },
+ "39": {
+  "ch": 8,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "down",
+    "answer": 5
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 5
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "right",
+    "answer": 0
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "up",
+    "answer": 5
+   },
+   {
+    "kind": "placepos",
+    "ask": "right",
+    "ask2": null,
+    "house": null,
+    "face": null,
+    "bunnyAt": "left",
+    "answer": 3
+   }
+  ]
+ }
+}

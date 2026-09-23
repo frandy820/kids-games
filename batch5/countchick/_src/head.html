@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>数数小鸡</title>
+<style>
+/* ================= 数数小鸡 countchick（batch5）r19 难度改造版 ================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、草地浅绿 #E6EFD2、暖橙主色、灰蓝错误色（不用大红）
+   触摸目标：小鸡热区 ≥64、答案按钮 ≥96×96、"重新数/再看一眼" ≥72 高；间距 ≥16；
+   pointerdown 即响应；小鸡位置由 JS 撒点（中心距 ≥90px 防重叠不可点）
+   r19 新面：十加几 ten-chip（满 10 后 10+n 结构化锚）/ 两群 tally 并排 / flash 草丛遮盖呈现 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：草地 + 题面 + 答案 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:10px;overflow:hidden;padding:6px 10px}
+/* 草地：浅绿圆角场 + 内嵌装饰草丛小花（低干扰不响应点击） */
+#field{position:relative;width:100%;max-width:1180px;flex:1 1 auto;min-height:200px;
+  background:linear-gradient(180deg,#EDF4DC 0%,#E2ECCB 60%,#DCE7C2 100%);
+  border:3px solid #C9D8A8;border-radius:26px;overflow:hidden;
+  box-shadow:inset 0 0 0 6px rgba(255,249,238,.5)}
+#field .grass{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.9}
+/* flash 快数：呈现期结束草丛"长高"遮盖（chicks 隐去，估计作答） */
+#field .cover{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .35s;
+  background:linear-gradient(180deg,rgba(201,216,168,0) 0%,rgba(183,204,142,.55) 45%,rgba(160,188,116,.9) 100%)}
+#field.hid .cover{opacity:1}
+
+/* ---------- 场上动物（小鸡/小鸭/小兔）：绝对定位按钮，尺寸/坐标由 JS 撒点 ---------- */
+.animal{position:absolute;padding:0;border:none;background:none;transform-origin:50% 88%;
+  transition:opacity .35s;will-change:transform}
+.animal svg{width:100%;height:100%;pointer-events:none}
+.animal.chick{filter:drop-shadow(0 3px 0 rgba(201,216,168,.55))}
+#field.hid .animal{opacity:0;pointer-events:none}
+/* 跳一下（点数反馈；transform 由 keyframes 接管，不影响布局测量） */
+.animal.hop{animation:an-hop .5s cubic-bezier(.3,1.5,.5,1)}
+@keyframes an-hop{0%,100%{transform:translateY(0) scale(var(--s,1))}40%{transform:translateY(-16%) scale(var(--s,1))}}
+/* 干扰动物被点：摆头摆脑（零惩罚，不计数） */
+.animal.wig{animation:an-wig .55s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0) scale(var(--s,1))}25%{transform:rotate(-7deg) scale(var(--s,1))}
+  55%{transform:rotate(6deg) scale(var(--s,1))}80%{transform:rotate(-3deg) scale(var(--s,1))}}
+/* 计数角标：头顶序号圆片（点过即显，"重新数"清零） */
+.animal .badge{position:absolute;top:-9%;right:-7%;min-width:34px;height:34px;padding:0 5px;
+  border-radius:17px;background:#FFF9EE;border:3px solid #E8975A;color:#4A3B2E;
+  font-size:21px;font-weight:800;display:none;align-items:center;justify-content:center;
+  font-variant-numeric:tabular-nums;box-shadow:0 2px 0 #D8C9B4;pointer-events:none;z-index:3}
+.animal .badge.on{display:flex;animation:badge-pop .4s cubic-bezier(.2,1.6,.4,1)}
+@keyframes badge-pop{from{transform:scale(0) rotate(-18deg)}to{transform:scale(1) rotate(0)}}
+/* compare 章：小鸭角标蓝灰描边（与小鸡橙色区分，双群各自数） */
+.animal.duck .badge{border-color:#8A9BAE}
+.animal.pulse{animation:an-pulse 1s ease 2}
+@keyframes an-pulse{0%,100%{filter:none}50%{filter:drop-shadow(0 0 14px rgba(232,151,90,.95))}}
+
+/* ---------- 题面行：问句 chip + ten-chip + 再看一眼 + 重新数 ---------- */
+#prompt{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+  min-height:78px;padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:14px;padding:6px 26px;border-radius:22px;
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4}
+#prompt-chip .big{font-size:34px;font-weight:800;color:#4A3B2E;line-height:1.2}
+#prompt-chip .sub{display:none;font-size:16px;font-weight:700;color:#8A7B6C}
+#prompt-chip.mix .sub{display:block}
+#prompt-chip svg{width:46px;height:46px}
+/* 两群并排 tally：小鸡/小鸭各自清点进度（compare 章，防数格子捷径=排列随机化靠撒点） */
+#prompt-chip .tally{display:none;gap:18px;margin-top:2px}
+#prompt-chip.cmp .tally{display:flex}
+#prompt-chip .tally .t{display:flex;align-items:center;gap:7px;font-size:25px;font-weight:800;
+  color:#4A3B2E;font-variant-numeric:tabular-nums}
+#prompt-chip .tally .t svg{width:36px;height:36px}
+/* 十加几结构化锚（count 章 _cnt≥10 显示「10 + 余数」，教学法：先数 10 再数余数） */
+#ten-chip{display:none;align-items:center;gap:6px;min-height:64px;padding:0 20px;border-radius:20px;
+  background:#FFF3D6;border:2.5px solid #E8975A;box-shadow:0 4px 0 #D8C9B4;
+  font-size:30px;font-weight:800;color:#4A3B2E;font-variant-numeric:tabular-nums}
+#ten-chip.on{display:flex;animation:ten-pop .45s cubic-bezier(.2,1.6,.4,1)}
+@keyframes ten-pop{from{transform:scale(.6) rotate(-6deg)}to{transform:scale(1) rotate(0)}}
+#btn-recount{display:flex;align-items:center;gap:9px;min-height:72px;padding:0 24px;border-radius:22px;
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 4px 0 #D8C9B4;
+  font-size:22px;font-weight:800;color:#4A3B2E;transition:transform .15s}
+#btn-recount:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-recount svg{width:40px;height:40px}
+#btn-recount.bounce{animation:recount-b .4s ease}
+@keyframes recount-b{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+#btn-recount.hidden{display:none}
+/* flash 章「再看一眼」：重播呈现窗（零惩罚，每次重播同窗长仍数不完=估计任务保真） */
+#btn-resee{display:none;align-items:center;gap:9px;min-height:72px;padding:0 22px;border-radius:22px;
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 4px 0 #D8C9B4;
+  font-size:22px;font-weight:800;color:#4A3B2E;transition:transform .15s}
+#btn-resee:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-resee svg{width:40px;height:40px}
+#btn-resee.on{display:flex}
+#btn-resee.bounce{animation:recount-b .4s ease}
+
+/* ---------- 答案大按钮（主触摸目标 ≥96） ---------- */
+#answers{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;padding:2px 12px;min-height:96px}
+.opt{min-width:132px;min-height:96px;padding:0 26px;border-radius:26px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;font-size:44px;font-weight:800;color:#4A3B2E;
+  font-variant-numeric:tabular-nums;transition:transform .15s,box-shadow .15s;position:relative}
+.opt:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+.opt.right{background:#8FBF7F;color:#4A3B2E;border-color:#6FA063;box-shadow:0 5px 0 #6FA063}
+.opt.right .mark{position:absolute;top:-13px;right:-13px;width:40px;height:40px;border-radius:50%;
+  background:#8FBF7F;border:2.5px solid #FFF9EE;display:flex;align-items:center;justify-content:center;
+  animation:opt-pop .45s cubic-bezier(.2,1.6,.4,1)}
+.opt.right .mark svg{width:26px;height:26px}
+@keyframes opt-pop{from{transform:scale(0) rotate(-20deg)}to{transform:scale(1) rotate(0)}}
+.opt.wrong{background:#EFE3CD;color:#B7AA96;border-color:#C9BDA8;box-shadow:0 3px 0 #C9BDA8;
+  opacity:.55;pointer-events:none}
+.opt.wrong{animation:shake .42s ease}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}
+  60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.opt.pulse{animation:opt-pulse 1s ease 2}
+@keyframes opt-pulse{0%,100%{filter:none}50%{filter:drop-shadow(0 0 12px rgba(232,151,90,.9))}}
+/* 吞输入容器 bump（家族 D：吞点轻叮必配 bump，替代无声拒绝） */
+.bump{animation:cont-bump .32s ease}
+@keyframes cont-bump{0%,100%{transform:translateX(0)}30%{transform:translateX(-7px)}60%{transform:translateX(7px)}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch4 clock） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：答案按钮与题面适配（草地按 stage 实际宽高撒点，无需改） */
+@media (orientation:portrait){
+.opt{min-width:150px;min-height:104px;font-size:50px}
+#prompt-chip .big{font-size:30px}
+#ten-chip{font-size:26px;min-height:56px}
+#prompt-chip .tally .t{font-size:20px}
+}
+/*PORT-CLS*/
+body.port .opt{min-width:150px;min-height:104px;font-size:50px}
+body.port #prompt-chip .big{font-size:30px}
+body.port #ten-chip{font-size:26px;min-height:56px}
+body.port #prompt-chip .tally .t{font-size:20px}
+</style>
+</head>
+<body>
+<div id="game" aria-label="数数小鸡">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="field" aria-label="草地">
+      <div class="grass" aria-hidden="true"></div>
+      <div class="cover" aria-hidden="true"></div>
+    </div>
+    <div id="prompt">
+      <div id="prompt-chip" role="heading" aria-label="题目"></div>
+      <div id="ten-chip" aria-live="polite"></div>
+      <button id="btn-resee" aria-label="再看一眼"></button>
+      <button id="btn-recount" aria-label="重新数"></button>
+    </div>
+    <div id="answers" aria-label="答案选项"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="读题"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

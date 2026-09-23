@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>音阶小鸟</title>
+<style>
+/* ================= 音阶小鸟 notebird（batch27）=================
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E；
+   6-7 岁幼小衔接段：题面 = 天空斜电线场景（电线左低右高——教学主线
+   「电线左边的声音低，右边的声音高」的位置↔音高映射）+ 题面句文字条，
+   场上 4 只唱名小鸟站站台（r39 谱：ch1 按音序升序、站台高度递增建立映射；
+   ch2+ 站位洗牌乱序+等高站台——位置/高度双轴零线索，破位置查表）。
+   鸟音 = Web Audio 合成（triangle osc + gain envelope 700ms，无 mp3 鸟音）；
+   点对 = 鸟跳 + 清唱该音 + 确认句 TTS（颜色锚定）；点错 = 语义方向反馈
+   （find：所点比答案低→它更高些 / 高→它更低些——音序语义，位置句已退役；
+   higher：再听一遍谁的声音高；melody：照顺序点；iv：隔了多远）。
+   higher 题面唱窗两鸟按唱序先后亮（题面信息不泄答——r39-bis 起唱序随机，
+   后亮不再恒=答案）；iv=三分类文字卡（挨着/隔一个/隔好几个）。
+   触摸目标：鸟卡=主答案按钮 ≥96×96（§0.9）；题面卡可点重听；底栏按钮 ≥72。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 50px;display:flex;align-items:center;padding:5px 60px 0 14px;gap:14px}
+#logo{width:40px;height:40px;border-radius:12px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 40px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：题面卡（天空斜电线+题面句）→ 鸟卡排 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:14px;overflow:hidden;padding:6px 12px}
+
+/* 题面卡：可点重听题面；天空+两根电线杆（左矮右高）+斜电线（左低右高）+题面句 */
+#scene{position:relative;width:min(600px,94vw);height:184px;border-radius:26px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;overflow:hidden;padding:0;transition:transform .15s}
+#scene:active{transform:translateY(3px)}
+#scene .sky{position:absolute;inset:0;margin:auto}
+/* 题面句文字条（顶部天空区） */
+#scene .q-text{position:absolute;left:50%;top:6px;transform:translateX(-50%);z-index:3;
+  background:rgba(255,249,238,.94);border:2.5px solid #4A3B2E;border-radius:16px;
+  padding:5px 18px;font-size:24px;font-weight:700;letter-spacing:1px;white-space:nowrap}
+/* 救援方向级：题面区 pulse（整体呼吸放大 3 次） */
+#scene.pulse{animation:scene-pulse 1s ease-in-out 3}
+@keyframes scene-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+#scene.bounce{animation:scene-b .4s ease}
+@keyframes scene-b{0%,100%{transform:scale(1)}45%{transform:scale(.97)}}
+
+/* ---------- 鸟卡排：一行 4 卡（ch1 站台递增 / ch2+ 等高——r39 谱），主答案按钮 ≥96×96；吞输入=容器 bump ---------- */
+#board{display:flex;gap:18px;justify-content:center;align-items:stretch;flex:0 0 auto;
+  width:100%;max-width:780px;padding:0 2px}
+#board.bump{animation:board-bump .22s ease}
+@keyframes board-bump{0%,100%{transform:scale(1)}45%{transform:scale(.96)}}
+.bird-card{position:relative;background:#FFF9EE;border:3px solid #4A3B2E;border-radius:22px;
+  box-shadow:0 5px 0 #D8C9B4;flex:0 0 auto;width:130px;min-height:156px;
+  display:flex;flex-direction:column;justify-content:flex-end;align-items:center;
+  transition:transform .15s;overflow:hidden}
+.bird-card:active{transform:translateY(3px)}
+.bird-card .bird-wrap{display:flex;align-items:flex-end;justify-content:center;pointer-events:none}
+.bird-card .bird-wrap svg{width:88px;height:88px}
+/* 站台柱：ch1 递增 30+16*i px（教学映射）/ch2+ 等高 30px（高度轴零线索）——JS 内联按 q.freeOrder 分流（r39）；30px 基数容 21px 唱名标签防截断；唱名标签立柱上 */
+.bird-card .perch{flex:0 0 auto;width:96px;background:#8A6B4F;border:2.5px solid #4A3B2E;
+  border-bottom:none;border-radius:10px 10px 0 0;display:flex;align-items:center;justify-content:center}
+.bird-card .perch .n-label{color:#FFF9EE;font-size:21px;font-weight:700;letter-spacing:1px;line-height:1}
+/* 唱歌音符飘动（合成音播放的鸟头上飘 ♪） */
+.bird-card .note-fly{position:absolute;top:8px;right:14px;font-size:26px;font-weight:700;
+  color:#E8975A;opacity:0;pointer-events:none}
+.bird-card.singing .note-fly{animation:note-up .7s ease-out}
+@keyframes note-up{0%{opacity:0;transform:translateY(10px) scale(.6)}
+  30%{opacity:.95}100%{opacity:0;transform:translateY(-22px) scale(1.15)}}
+.bird-card.pop{animation:card-in .42s cubic-bezier(.2,1.6,.4,1) backwards}
+@keyframes card-in{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+/* r39：interval 三分类文字卡（挨着/隔一个/隔好几个——图示=两音符间距，选项语义可视化非泄答） */
+.bird-card.iv-card{justify-content:center;gap:6px;width:150px;min-height:156px}
+.bird-card.iv-card .iv-glyph{font-size:34px;font-weight:700;color:#E8975A;line-height:1;
+  letter-spacing:2px;display:block}
+.bird-card.iv-card .iv-word{font-size:27px;font-weight:700;color:#4A3B2E;letter-spacing:2px;display:block}
+/* r39：melody 中间位点对高亮（picked 持续亮框到题终——进度可感知） */
+.bird-card.picked{border-color:#E8975A;box-shadow:0 5px 0 #E8975A}
+.bird-card.picked .perch{background:#B98A5C}
+.bird-card.bump{animation:card-bump .22s ease}
+@keyframes card-bump{0%,100%{transform:scale(1)}45%{transform:scale(.94)}}
+/* 答对：卡绿+鸟跳 */
+.bird-card.lit{border-color:#6FA063;box-shadow:0 5px 0 #8FBF7F;
+  animation:card-lit .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes card-lit{0%{transform:scale(1)}45%{transform:scale(1.12)}100%{transform:scale(1)}}
+.bird-card.lit .bird-wrap{animation:bird-jump .55s cubic-bezier(.2,1.6,.4,1) 2}
+@keyframes bird-jump{0%,100%{transform:translateY(0)}45%{transform:translateY(-16px)}}
+/* 答错：摇头晃动（不灰掉可重选——探索不罚，语义反馈款） */
+.bird-card.wig{animation:an-wig .6s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}22%{transform:rotate(-8deg) translateX(-4px)}
+  50%{transform:rotate(7deg) translateX(3px)}78%{transform:rotate(-4deg) translateX(-2px)}}
+/* 30s 答案级救援：正确鸟卡呼吸高亮循环（§0.21） */
+.bird-card.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+@keyframes an-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:86px;height:86px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+/* 再听一遍（听辨类专属，恒在场，不占救援钟语义） */
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 5px 0 #E8975A;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #E8975A}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch21-26） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：题面/卡适配，主答案卡仍 ≥96 */
+@media (orientation:portrait){
+  #scene{height:168px}
+  #scene .q-text{font-size:20px;padding:4px 14px}
+  #board{gap:11px}
+  .bird-card{width:108px;min-height:138px}
+  .bird-card.iv-card{width:120px}
+  .bird-card.iv-card .iv-glyph{font-size:27px}
+  .bird-card.iv-card .iv-word{font-size:23px}
+  .bird-card .bird-wrap svg{width:76px;height:76px}
+  .bird-card .perch{width:80px}
+  .bird-card .perch .n-label{font-size:18px}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="音阶小鸟">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <button id="scene" aria-label="听音找小鸟，点我再听一遍"></button>
+    <div id="board" aria-label="小鸟卡"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

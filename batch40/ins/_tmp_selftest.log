@@ -1,0 +1,13 @@
+P1 verify: VERIFY PASS 15/15 | units: 15 / 15 | clips: 28 | pageerror: 0
+P2 step1: waiting __insDemoR
+P2 step2: waiting turn quiz (help)
+P2 step3: real click on pick j=0 (turn)
+P2 teach: realClick x1 → solo = True | autoSolve = {'done': True, 'taps': 5}
+P2 save v= 1.0 | levels['1-0']= {'stars': 3, 'plays': 1} | tutSeen= True
+P2 clips: 28 (ins_ 25 + core 3 )
+P2 flat15: 开题实测 8882 ms | qi0 = judge3 jumpspider picks ['none', 'spider', 'insect'] （窗=400+1416+150+estMs(17字)6465+300=8731——SAY_T4 尾段实证）
+P2 flat15: autoSolve= {'done': True, 'taps': 5} | levels['4-0'].stars= 3 | pageerror: 0
+P2 flat15 演练: qi3 = judge3 snail | 真实点错 j=2 → miss=1 | 队列新增: [['ins_wrong', 'ins_sci_none']]
+P3 竖屏 3 选盘: {'n': 3, 'dataN': '3', 'w': 132, 'h': 132, 'overflowX': 0, 'bodyOverflowX': 0, 'portrait': True}
+P3 portrait: PASS | pageerror: 0
+SELFTEST PASS

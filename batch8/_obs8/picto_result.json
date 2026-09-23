@@ -1,0 +1,938 @@
+{
+ "game": "picto",
+ "url": "file:///F:/claudecode/projects/active/kids-games/batch8/picto/index.html",
+ "pageerrors": [],
+ "levels": [
+  {
+   "tag": "flat0",
+   "flat": 0,
+   "ch": 1,
+   "dch": 1,
+   "clicks": 10,
+   "misses": 1,
+   "stars": 2,
+   "quizzes": {
+    "1": {
+     "mode": "toChar",
+     "target": "yue",
+     "char": "月",
+     "options": [
+      "huo",
+      "yue"
+     ],
+     "chars": [
+      "火",
+      "月"
+     ],
+     "answerIdx": 1,
+     "near": false,
+     "nOpt": 2
+    },
+    "2": {
+     "mode": "toChar",
+     "target": "shan",
+     "char": "山",
+     "options": [
+      "shan",
+      "ma"
+     ],
+     "chars": [
+      "山",
+      "马"
+     ],
+     "answerIdx": 0,
+     "near": false,
+     "nOpt": 2
+    },
+    "3": {
+     "mode": "toChar",
+     "target": "shui",
+     "char": "水",
+     "options": [
+      "shui",
+      "mu2"
+     ],
+     "chars": [
+      "水",
+      "目"
+     ],
+     "answerIdx": 0,
+     "near": false,
+     "nOpt": 2
+    },
+    "4": {
+     "mode": "toChar",
+     "target": "huo",
+     "char": "火",
+     "options": [
+      "huo",
+      "zhou"
+     ],
+     "chars": [
+      "火",
+      "舟"
+     ],
+     "answerIdx": 0,
+     "near": false,
+     "nOpt": 2
+    }
+   },
+   "tut": {
+    "watch_seen": true,
+    "watch_swallow": true,
+    "help_enter": "help",
+    "ghost_show_in_help": true,
+    "opening_evidence": [
+     "play(pic_ch_ri,日，太阳的日)",
+     "queue(pic_tut_turn|你来找一找,pic_q1|看一看，古时候的画是哪个字呀)",
+     {
+      "t": 1788724561435,
+      "f": "play",
+      "a": [
+       "pic_ch_ri",
+       "日，太阳的日"
+      ]
+     },
+     {
+      "t": 1788724564547,
+      "f": "queue",
+      "a": [
+       [
+        {
+         "key": "pic_tut_turn",
+         "text": "你来找一找"
+        },
+        {
+         "key": "pic_q1",
+         "text": "看一看，古时候的画是哪个字呀"
+        }
+       ]
+      ]
+     },
+     "AUDIO:pic_tut_watch",
+     "AUDIO:pic_ch_ri",
+     "AUDIO:pic_tut_turn",
+     "TTS:看！古时候的人画图造字"
+    ],
+    "after_first_correct": "solo",
+    "solo_reached": true,
+    "ghost_hidden_after_solo": true
+   },
+   "events": [
+    {
+     "ev": "persona_wrong_flat0",
+     "picked_char": "火",
+     "target": "月",
+     "mode": "toChar",
+     "miss": 1,
+     "misses": 1,
+     "breathe": [
+      0,
+      0
+     ],
+     "dim": [
+      0,
+      1
+     ],
+     "voice": [
+      "play(pic_wrong,不对哦，再找一找)"
+     ],
+     "wrong_voice": true
+    },
+    {
+     "ev": "tap_dim_fallthrough",
+     "dim": [
+      1,
+      1
+     ],
+     "misses_same": true,
+     "voice": [
+      "play(pic_hint,听一听，找一找)"
+     ]
+    },
+    {
+     "ev": "hear_btn",
+     "voice": [
+      "play(pic_q1,看一看，古时候的画是哪个字呀)"
+     ]
+    },
+    {
+     "ev": "prompt_card_tap",
+     "voice": [
+      "play(pic_q1,看一看，古时候的画是哪个字呀)"
+     ]
+    }
+   ],
+   "vlog": [
+    "play(pic_ch_ri,日，太阳的日)",
+    "queue(pic_tut_turn|你来找一找,pic_q1|看一看，古时候的画是哪个字呀)",
+    "play(pic_ch_ri,日，太阳的日)",
+    "play(pic_q1,看一看，古时候的画是哪个字呀)",
+    "play(pic_wrong,不对哦，再找一找)",
+    "play(pic_hint,听一听，找一找)",
+    "play(pic_ch_yue,月，月亮的月)",
+    "play(pic_q1,看一看，古时候的画是哪个字呀)",
+    "play(pic_q1,看一看，古时候的画是哪个字呀)",
+    "play(pic_ch_shan,山，大山的山)",
+    "play(pic_q1,看一看，古时候的画是哪个字呀)",
+    "play(pic_q1,看一看，古时候的画是哪个字呀)",
+    "play(pic_ch_shui,水，河水的水)",
+    "play(pic_q1,看一看，古时候的画是哪个字呀)",
+    "play(pic_ch_huo,火，火焰的火)",
+    "queue(pic_hint|听一听，找一找,pic_q1|看一看，古时候的画是哪个字呀)"
+   ]
+  },
+  {
+   "tag": "flat5",
+   "flat": 5,
+   "ch": 2,
+   "dch": 2,
+   "clicks": 9,
+   "misses": 4,
+   "stars": 1,
+   "quizzes": {
+    "0": {
+     "mode": "toPic",
+     "target": "mu",
+     "char": "木",
+     "options": [
+      "mu",
+      "ma"
+     ],
+     "chars": [
+      "木",
+      "马"
+     ],
+     "answerIdx": 0,
+     "near": false,
+     "nOpt": 2
+    },
+    "1": {
+     "mode": "toPic",
+     "target": "ren",
+     "char": "人",
+     "options": [
+      "ren",
+      "yun"
+     ],
+     "chars": [
+      "人",
+      "云"
+     ],
+     "answerIdx": 0,
+     "near": false,
+     "nOpt": 2
+    },
+    "2": {
+     "mode": "toPic",
+     "target": "kou",
+     "char": "口",
+     "options": [
+      "kou",
+      "yun"
+     ],
+     "chars": [
+      "口",
+      "云"
+     ],
+     "answerIdx": 0,
+     "near": false,
+     "nOpt": 2
+    },
+    "3": {
+     "mode": "toPic",
+     "target": "tian",
+     "char": "田",
+     "options": [
+      "shui",
+      "tian"
+     ],
+     "chars": [
+      "水",
+      "田"
+     ],
+     "answerIdx": 1,
+     "near": false,
+     "nOpt": 2
+    },
+    "4": {
+     "mode": "toPic",
+     "target": "niao",
+     "char": "鸟",
+     "options": [
+      "zhu",
+      "niao"
+     ],
+     "chars": [
+      "竹",
+      "鸟"
+     ],
+     "answerIdx": 1,
+     "near": false,
+     "nOpt": 2
+    }
+   },
+   "events": [
+    {
+     "ev": "w1_voice",
+     "picked_char": "马",
+     "target": "木",
+     "mode": "toPic",
+     "miss": 1,
+     "misses": 1,
+     "breathe": [
+      0,
+      0
+     ],
+     "dim": [
+      0,
+      1
+     ],
+     "voice": [
+      "play(pic_wrong,不对哦，再找一找)"
+     ],
+     "wrong_voice": true
+    },
+    {
+     "ev": "w2_throttled_expect_silent",
+     "picked_char": "云",
+     "target": "人",
+     "mode": "toPic",
+     "miss": 1,
+     "misses": 2,
+     "breathe": [
+      0,
+      0
+     ],
+     "dim": [
+      0,
+      1
+     ],
+     "voice": [],
+     "wrong_voice": false
+    },
+    {
+     "ev": "w3_after10s_voice_again",
+     "picked_char": "云",
+     "target": "口",
+     "mode": "toPic",
+     "miss": 1,
+     "misses": 3,
+     "breathe": [
+      0,
+      0
+     ],
+     "dim": [
+      0,
+      1
+     ],
+     "voice": [
+      "play(pic_wrong,不对哦，再找一找)"
+     ],
+     "wrong_voice": true
+    },
+    {
+     "ev": "rescue_7a",
+     "label": "flat5_step4_wrong_then_rescue",
+     "fires": [
+      {
+       "f": "play",
+       "a": [
+        "pic_wrong",
+        "不对哦，再找一找"
+       ],
+       "after_click_s": 0.01
+      },
+      {
+       "f": "play",
+       "a": [
+        "pic_q2",
+        "看一看，哪个是它古时候的画"
+       ],
+       "after_click_s": 1.34
+      }
+     ],
+     "voice_during_idle": [],
+     "rescue_early_after_wrong": true
+    }
+   ],
+   "misc": {
+    "seed_lim": 6,
+    "struct": [
+     {
+      "mode": "toPic",
+      "target": "mu",
+      "options": [
+       "mu",
+       "ma"
+      ],
+      "near": false,
+      "distractors": [
+       "ma"
+      ],
+      "nOpt": 2
+     },
+     {
+      "mode": "toPic",
+      "target": "ren",
+      "options": [
+       "ren",
+       "yun"
+      ],
+      "near": false,
+      "distractors": [
+       "yun"
+      ],
+      "nOpt": 2
+     },
+     {
+      "mode": "toPic",
+      "target": "kou",
+      "options": [
+       "kou",
+       "yun"
+      ],
+      "near": false,
+      "distractors": [
+       "yun"
+      ],
+      "nOpt": 2
+     },
+     {
+      "mode": "toPic",
+      "target": "tian",
+      "options": [
+       "shui",
+       "tian"
+      ],
+      "near": false,
+      "distractors": [
+       "shui"
+      ],
+      "nOpt": 2
+     },
+     {
+      "mode": "toPic",
+      "target": "niao",
+      "options": [
+       "zhu",
+       "niao"
+      ],
+      "near": false,
+      "distractors": [
+       "zhu"
+      ],
+      "nOpt": 2
+     }
+    ],
+    "opening_voice": [
+     "AUDIO:pic_hint"
+    ]
+   },
+   "vlog": [
+    "play(pic_wrong,不对哦，再找一找)",
+    "play(pic_ch_mu,木，树木的木)",
+    "play(pic_q2,看一看，哪个是它古时候的画)",
+    "play(pic_ch_ren,人，大人的人)",
+    "play(pic_q2,看一看，哪个是它古时候的画)",
+    "play(pic_wrong,不对哦，再找一找)",
+    "play(pic_ch_kou,口，开口的口)",
+    "play(pic_q2,看一看，哪个是它古时候的画)",
+    "play(pic_ch_tian,田，水田的田)",
+    "play(pic_q2,看一看，哪个是它古时候的画)",
+    "play(pic_wrong,不对哦，再找一找)",
+    "play(pic_q2,看一看，哪个是它古时候的画)",
+    "play(pic_ch_niao,鸟，小鸟的鸟)",
+    "play(core_day_end,今天的新关卡玩完啦，明天见)"
+   ]
+  },
+  {
+   "tag": "flat10",
+   "flat": 10,
+   "ch": 3,
+   "dch": 3,
+   "clicks": 8,
+   "misses": 3,
+   "stars": 1,
+   "quizzes": {
+    "0": {
+     "mode": "toChar",
+     "target": "kou",
+     "char": "口",
+     "options": [
+      "tian",
+      "kou"
+     ],
+     "chars": [
+      "田",
+      "口"
+     ],
+     "answerIdx": 1,
+     "near": true,
+     "nOpt": 2
+    },
+    "1": {
+     "mode": "toPic",
+     "target": "tian",
+     "char": "田",
+     "options": [
+      "kou",
+      "tian"
+     ],
+     "chars": [
+      "口",
+      "田"
+     ],
+     "answerIdx": 1,
+     "near": true,
+     "nOpt": 2
+    },
+    "2": {
+     "mode": "toChar",
+     "target": "niao",
+     "char": "鸟",
+     "options": [
+      "ma",
+      "niao"
+     ],
+     "chars": [
+      "马",
+      "鸟"
+     ],
+     "answerIdx": 1,
+     "near": true,
+     "nOpt": 2
+    },
+    "3": {
+     "mode": "toPic",
+     "target": "ma",
+     "char": "马",
+     "options": [
+      "niao",
+      "ma"
+     ],
+     "chars": [
+      "鸟",
+      "马"
+     ],
+     "answerIdx": 1,
+     "near": true,
+     "nOpt": 2
+    },
+    "4": {
+     "mode": "toChar",
+     "target": "mu2",
+     "char": "目",
+     "options": [
+      "mu2",
+      "ri"
+     ],
+     "chars": [
+      "目",
+      "日"
+     ],
+     "answerIdx": 0,
+     "near": true,
+     "nOpt": 2
+    }
+   },
+   "events": [
+    {
+     "ev": "persona_near_distract",
+     "picked_char": "口",
+     "target": "田",
+     "mode": "toPic",
+     "miss": 1,
+     "misses": 1,
+     "breathe": [
+      0,
+      0
+     ],
+     "dim": [
+      0,
+      1
+     ],
+     "voice": [
+      "play(pic_wrong,不对哦，再找一找)"
+     ],
+     "wrong_voice": true
+    },
+    {
+     "ev": "persona_near_distract",
+     "picked_char": "鸟",
+     "target": "马",
+     "mode": "toPic",
+     "miss": 1,
+     "misses": 2,
+     "breathe": [
+      0,
+      0
+     ],
+     "dim": [
+      0,
+      1
+     ],
+     "voice": [],
+     "wrong_voice": false
+    },
+    {
+     "ev": "persona_confuse_目",
+     "picked_char": "日",
+     "target": "目",
+     "mode": "toChar",
+     "miss": 1,
+     "misses": 3,
+     "breathe": [
+      0,
+      0
+     ],
+     "dim": [
+      0,
+      1
+     ],
+     "voice": [
+      "play(pic_wrong,不对哦，再找一找)"
+     ],
+     "wrong_voice": true
+    }
+   ],
+   "misc": {
+    "seed_lim": 16,
+    "struct": [
+     {
+      "mode": "toChar",
+      "target": "kou",
+      "options": [
+       "tian",
+       "kou"
+      ],
+      "near": true,
+      "distractors": [
+       "tian"
+      ],
+      "nOpt": 2
+     },
+     {
+      "mode": "toPic",
+      "target": "tian",
+      "options": [
+       "kou",
+       "tian"
+      ],
+      "near": true,
+      "distractors": [
+       "kou"
+      ],
+      "nOpt": 2
+     },
+     {
+      "mode": "toChar",
+      "target": "niao",
+      "options": [
+       "ma",
+       "niao"
+      ],
+      "near": true,
+      "distractors": [
+       "ma"
+      ],
+      "nOpt": 2
+     },
+     {
+      "mode": "toPic",
+      "target": "ma",
+      "options": [
+       "niao",
+       "ma"
+      ],
+      "near": true,
+      "distractors": [
+       "niao"
+      ],
+      "nOpt": 2
+     },
+     {
+      "mode": "toChar",
+      "target": "mu2",
+      "options": [
+       "mu2",
+       "ri"
+      ],
+      "near": true,
+      "distractors": [
+       "ri"
+      ],
+      "nOpt": 2
+     }
+    ],
+    "opening_voice": [
+     "AUDIO:pic_hint"
+    ]
+   },
+   "vlog": [
+    "play(pic_ch_kou,口，开口的口)",
+    "play(pic_q2,看一看，哪个是它古时候的画)",
+    "play(pic_wrong,不对哦，再找一找)",
+    "play(pic_ch_tian,田，水田的田)",
+    "play(pic_q1,看一看，古时候的画是哪个字呀)",
+    "play(pic_ch_niao,鸟，小鸟的鸟)",
+    "play(pic_q2,看一看，哪个是它古时候的画)",
+    "play(pic_ch_ma,马，小马的马)",
+    "play(pic_q1,看一看，古时候的画是哪个字呀)",
+    "play(pic_wrong,不对哦，再找一找)",
+    "play(pic_ch_mu2,目，眼睛的目)",
+    "queue(pic_hint|听一听，找一找,pic_q1|看一看，古时候的画是哪个字呀)"
+   ]
+  },
+  {
+   "tag": "flat15",
+   "flat": 15,
+   "ch": 4,
+   "dch": 4,
+   "clicks": 9,
+   "misses": 2,
+   "stars": 2,
+   "quizzes": {
+    "0": {
+     "mode": "toPic",
+     "target": "shi",
+     "char": "石",
+     "options": [
+      "mu",
+      "shi"
+     ],
+     "chars": [
+      "木",
+      "石"
+     ],
+     "answerIdx": 1,
+     "near": false,
+     "nOpt": 2
+    },
+    "1": {
+     "mode": "toChar",
+     "target": "mu2",
+     "char": "目",
+     "options": [
+      "mu2",
+      "yu2"
+     ],
+     "chars": [
+      "目",
+      "雨"
+     ],
+     "answerIdx": 0,
+     "near": false,
+     "nOpt": 2
+    },
+    "2": {
+     "mode": "toPic",
+     "target": "he2",
+     "char": "禾",
+     "options": [
+      "mu",
+      "he2"
+     ],
+     "chars": [
+      "木",
+      "禾"
+     ],
+     "answerIdx": 1,
+     "near": true,
+     "nOpt": 2
+    },
+    "3": {
+     "mode": "toChar",
+     "target": "zhu",
+     "char": "竹",
+     "options": [
+      "ren",
+      "zhu"
+     ],
+     "chars": [
+      "人",
+      "竹"
+     ],
+     "answerIdx": 1,
+     "near": false,
+     "nOpt": 2
+    },
+    "4": {
+     "mode": "toPic",
+     "target": "zhou",
+     "char": "舟",
+     "options": [
+      "zhou",
+      "men"
+     ],
+     "chars": [
+      "舟",
+      "门"
+     ],
+     "answerIdx": 0,
+     "near": false,
+     "nOpt": 2
+    }
+   },
+   "events": [
+    {
+     "ev": "persona_unknown_char_topic",
+     "picked_char": "木",
+     "target": "禾",
+     "mode": "toPic",
+     "miss": 1,
+     "misses": 1,
+     "breathe": [
+      0,
+      0
+     ],
+     "dim": [
+      0,
+      1
+     ],
+     "voice": [
+      "play(pic_wrong,不对哦，再找一找)"
+     ],
+     "wrong_voice": true
+    },
+    {
+     "ev": "rabbit_tap",
+     "hop": [
+      0,
+      1
+     ],
+     "voice": []
+    },
+    {
+     "ev": "blank_click",
+     "voice": [
+      "play(pic_hint,听一听，找一找)"
+     ]
+    },
+    {
+     "ev": "persona_unknown_char_topic",
+     "picked_char": "门",
+     "target": "舟",
+     "mode": "toPic",
+     "miss": 1,
+     "misses": 2,
+     "breathe": [
+      0,
+      0
+     ],
+     "dim": [
+      0,
+      1
+     ],
+     "voice": [
+      "play(pic_wrong,不对哦，再找一找)"
+     ],
+     "wrong_voice": true
+    }
+   ],
+   "misc": {
+    "seed_lim": 16,
+    "struct": [
+     {
+      "mode": "toPic",
+      "target": "shi",
+      "options": [
+       "mu",
+       "shi"
+      ],
+      "near": false,
+      "distractors": [
+       "mu"
+      ],
+      "nOpt": 2
+     },
+     {
+      "mode": "toChar",
+      "target": "mu2",
+      "options": [
+       "mu2",
+       "yu2"
+      ],
+      "near": false,
+      "distractors": [
+       "yu2"
+      ],
+      "nOpt": 2
+     },
+     {
+      "mode": "toPic",
+      "target": "he2",
+      "options": [
+       "mu",
+       "he2"
+      ],
+      "near": true,
+      "distractors": [
+       "mu"
+      ],
+      "nOpt": 2
+     },
+     {
+      "mode": "toChar",
+      "target": "zhu",
+      "options": [
+       "ren",
+       "zhu"
+      ],
+      "near": false,
+      "distractors": [
+       "ren"
+      ],
+      "nOpt": 2
+     },
+     {
+      "mode": "toPic",
+      "target": "zhou",
+      "options": [
+       "zhou",
+       "men"
+      ],
+      "near": false,
+      "distractors": [
+       "men"
+      ],
+      "nOpt": 2
+     }
+    ],
+    "opening_voice": [
+     "AUDIO:pic_hint"
+    ]
+   },
+   "vlog": [
+    "play(pic_ch_shi,石，石头的石)",
+    "play(pic_q1,看一看，古时候的画是哪个字呀)",
+    "play(pic_ch_mu2,目，眼睛的目)",
+    "play(pic_q2,看一看，哪个是它古时候的画)",
+    "play(pic_wrong,不对哦，再找一找)",
+    "play(pic_ch_he2,禾，禾苗的禾)",
+    "play(pic_q1,看一看，古时候的画是哪个字呀)",
+    "play(pic_hint,听一听，找一找)",
+    "play(pic_ch_zhu,竹，竹子的竹)",
+    "play(pic_q2,看一看，哪个是它古时候的画)",
+    "play(pic_wrong,不对哦，再找一找)",
+    "play(pic_ch_zhou,舟，小船的舟)",
+    "play(core_day_end,今天的新关卡玩完啦，明天见)"
+   ]
+  }
+ ],
+ "vlog_tail": [
+  "play(pic_ch_shi,石，石头的石)",
+  "play(pic_q1,看一看，古时候的画是哪个字呀)",
+  "play(pic_ch_mu2,目，眼睛的目)",
+  "play(pic_q2,看一看，哪个是它古时候的画)",
+  "play(pic_wrong,不对哦，再找一找)",
+  "play(pic_ch_he2,禾，禾苗的禾)",
+  "play(pic_q1,看一看，古时候的画是哪个字呀)",
+  "play(pic_hint,听一听，找一找)",
+  "play(pic_ch_zhu,竹，竹子的竹)",
+  "play(pic_q2,看一看，哪个是它古时候的画)",
+  "play(pic_wrong,不对哦，再找一找)",
+  "play(pic_ch_zhou,舟，小船的舟)",
+  "play(core_day_end,今天的新关卡玩完啦，明天见)"
+ ]
+}

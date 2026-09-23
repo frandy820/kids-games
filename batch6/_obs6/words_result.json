@@ -1,0 +1,188 @@
+{
+ "game": "words",
+ "pageerrors": [],
+ "levels": [
+  {
+   "flat": 0,
+   "ch": 1,
+   "dch": 1,
+   "lv": 0,
+   "quizzes": [],
+   "clicks": 18,
+   "misses": 0,
+   "stars": 3,
+   "events": [],
+   "tut": {
+    "watch_swallow": true,
+    "help_enter": "help",
+    "ghost_show": false,
+    "rescue_teach": {
+     "label": "flat0_help_25s",
+     "new_entries": [
+      "play(wrd_ch_ming,明，明天的明)"
+     ]
+    },
+    "after_first_word": "solo",
+    "ghost_hidden_after_solo": true
+   }
+  },
+  {
+   "flat": 5,
+   "ch": 2,
+   "dch": 2,
+   "lv": 0,
+   "quizzes": [
+    {
+     "target": "地",
+     "py": "di",
+     "parts": [
+      "土",
+      "也"
+     ],
+     "distractors": [
+      "乞",
+      "可"
+     ],
+     "tiles": [
+      "土",
+      "可",
+      "也",
+      "乞"
+     ]
+    }
+   ],
+   "clicks": 19,
+   "misses": 1,
+   "stars": 2,
+   "events": [
+    {
+     "ev": "tap_distractor",
+     "k": 1,
+     "bounced_no_fill": true,
+     "wig": 1,
+     "pulse_after": 0,
+     "miss": 1
+    }
+   ],
+   "misc": {
+    "flat": 5,
+    "opening_voice": [
+     "AUDIO:wrd_hint"
+    ],
+    "misclick": [
+     "play(wrd_ch_di,地，土地的地)",
+     "play(wrd_hint,想一想，拼一拼)"
+    ],
+    "rescue": {
+     "label": "flat5_25s",
+     "new_entries": [
+      "play(wrd_ch_di,地，土地的地)"
+     ]
+    }
+   }
+  },
+  {
+   "flat": 10,
+   "ch": 3,
+   "dch": 3,
+   "lv": 0,
+   "quizzes": [
+    {
+     "target": "品",
+     "py": "pin",
+     "parts": [
+      "口",
+      "口",
+      "口"
+     ],
+     "distractors": [
+      "人",
+      "各"
+     ],
+     "tiles": [
+      "口",
+      "各",
+      "口",
+      "人",
+      "口"
+     ]
+    }
+   ],
+   "clicks": 23,
+   "misses": 0,
+   "stars": 3,
+   "events": [],
+   "misc": {
+    "flat": 10,
+    "opening_voice": [
+     "AUDIO:wrd_hint"
+    ],
+    "rescue": {
+     "label": "flat10_25s",
+     "new_entries": [
+      "play(wrd_ch_pin,品，物品的品)"
+     ]
+    }
+   }
+  },
+  {
+   "flat": 15,
+   "ch": 4,
+   "dch": 4,
+   "lv": 0,
+   "quizzes": [
+    {
+     "target": "星",
+     "py": "xing",
+     "parts": [
+      "日",
+      "生"
+     ],
+     "distractors": [
+      "公",
+      "化"
+     ],
+     "tiles": [
+      "生",
+      "日",
+      "化",
+      "公"
+     ]
+    }
+   ],
+   "clicks": 20,
+   "misses": 2,
+   "stars": 2,
+   "events": [
+    {
+     "ev": "tap_distractor",
+     "k": 1,
+     "bounced_no_fill": true,
+     "wig": 1,
+     "pulse_after": 0,
+     "miss": 1
+    },
+    {
+     "ev": "tap_distractor",
+     "k": 2,
+     "bounced_no_fill": true,
+     "wig": 1,
+     "pulse_after": 1,
+     "miss": 2
+    }
+   ],
+   "misc": {
+    "flat": 15,
+    "opening_voice": [
+     "AUDIO:wrd_hint"
+    ],
+    "rescue": {
+     "label": "flat15_25s",
+     "new_entries": [
+      "play(wrd_ch_xing,星，星星的星)"
+     ]
+    }
+   }
+  }
+ ]
+}

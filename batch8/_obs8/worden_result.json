@@ -1,0 +1,699 @@
+{
+ "game": "worden",
+ "url": "file:///F:/claudecode/projects/active/kids-games/batch8/worden/index.html",
+ "pageerrors": [],
+ "levels": [
+  {
+   "tag": "flat0",
+   "flat": 0,
+   "ch": 1,
+   "dch": 1,
+   "clicks": 9,
+   "retries": 1,
+   "stars": 2,
+   "quizzes": {
+    "1": {
+     "mode": "pic2word",
+     "target": "sun",
+     "options": [
+      "rain",
+      "sun"
+     ]
+    },
+    "2": {
+     "mode": "pic2word",
+     "target": "book",
+     "options": [
+      "book",
+      "ball"
+     ]
+    },
+    "3": {
+     "mode": "pic2word",
+     "target": "milk",
+     "options": [
+      "milk",
+      "egg"
+     ]
+    },
+    "4": {
+     "mode": "pic2word",
+     "target": "rain",
+     "options": [
+      "rain",
+      "sun"
+     ]
+    }
+   },
+   "tut": {
+    "watch_seen": true,
+    "watch_swallow": true,
+    "watch_voice": [],
+    "help_enter": "help",
+    "ghost_show_in_help": true,
+    "opening_evidence": [
+     "play(wen_w_fish,fish)",
+     "queue(wen_tut_turn,wen_q1)",
+     {
+      "t": 1788724254878,
+      "f": "play",
+      "a": [
+       "wen_w_fish",
+       "fish"
+      ]
+     },
+     {
+      "t": 1788724255843,
+      "f": "queue",
+      "a": [
+       [
+        "wen_tut_turn",
+        "wen_q1"
+       ]
+      ]
+     },
+     "AUDIO:wen_tut_watch",
+     "AUDIO:wen_w_fish",
+     "AUDIO:wen_tut_turn",
+     "TTS:看！小动物们有英语名字"
+    ],
+    "after_first_correct": "solo",
+    "solo_reached": true,
+    "ghost_hidden_after_solo": true
+   },
+   "events": [
+    {
+     "ev": "persona_guess_wrong",
+     "picked": "rain",
+     "target": "sun",
+     "mode": "pic2word",
+     "miss": 1,
+     "retries": 1,
+     "pulse": [
+      0,
+      0
+     ],
+     "wrong_cls": [
+      0,
+      1
+     ],
+     "voice": [
+      "play(wen_wrong,不对哦，再找一找它的英语)"
+     ],
+     "wrong_voice": true
+    },
+    {
+     "ev": "hear_btn",
+     "voice": [
+      "play(wen_q1,找一找，它的英语是哪一个)"
+     ]
+    },
+    {
+     "ev": "q_card_tap",
+     "voice": [
+      "play(wen_q1,找一找，它的英语是哪一个)"
+     ]
+    }
+   ],
+   "vlog": [
+    "play(wen_w_fish,fish)",
+    "queue(wen_tut_turn,wen_q1)",
+    "play(wen_w_fish,fish)",
+    "play(wen_q1,找一找，它的英语是哪一个)",
+    "play(wen_wrong,不对哦，再找一找它的英语)",
+    "play(wen_w_sun,sun)",
+    "play(wen_q1,找一找，它的英语是哪一个)",
+    "play(wen_q1,找一找，它的英语是哪一个)",
+    "play(wen_w_book,book)",
+    "play(wen_q1,找一找，它的英语是哪一个)",
+    "play(wen_q1,找一找，它的英语是哪一个)",
+    "play(wen_w_milk,milk)",
+    "play(wen_q1,找一找，它的英语是哪一个)",
+    "play(wen_w_rain,rain)",
+    "queue(wen_hint,wen_q1)"
+   ]
+  },
+  {
+   "tag": "flat5",
+   "flat": 5,
+   "ch": 2,
+   "dch": 2,
+   "clicks": 9,
+   "retries": 2,
+   "stars": 2,
+   "quizzes": {
+    "0": {
+     "mode": "sound2pic",
+     "target": "rabbit",
+     "options": [
+      "dog",
+      "rabbit"
+     ]
+    },
+    "1": {
+     "mode": "sound2pic",
+     "target": "book",
+     "options": [
+      "tree",
+      "book"
+     ]
+    },
+    "2": {
+     "mode": "sound2pic",
+     "target": "dog",
+     "options": [
+      "fish",
+      "dog"
+     ]
+    },
+    "3": {
+     "mode": "sound2pic",
+     "target": "nose",
+     "options": [
+      "nose",
+      "ear"
+     ]
+    },
+    "4": {
+     "mode": "sound2pic",
+     "target": "cake",
+     "options": [
+      "cake",
+      "egg"
+     ]
+    }
+   },
+   "events": [
+    {
+     "ev": "speaker_card_replay_and_throttle",
+     "first": [
+      "queue(wen_w_rabbit,wen_q2)"
+     ],
+     "second_within_3s": [
+      "play(wen_hint,听一听，再想一想)"
+     ],
+     "note": "第一次应 queue(en+q2)；3s 内第二次应回退 wen_hint"
+    },
+    {
+     "ev": "persona_cant_listen_guess_wrong",
+     "picked": "dog",
+     "target": "rabbit",
+     "mode": "sound2pic",
+     "miss": 1,
+     "retries": 1,
+     "pulse": [
+      0,
+      0
+     ],
+     "wrong_cls": [
+      0,
+      1
+     ],
+     "voice": [
+      "play(wen_wrong,不对哦，再听一听)"
+     ],
+     "wrong_voice": true
+    },
+    {
+     "ev": "rescue_7a_sound2pic",
+     "fires": [
+      {
+       "f": "play",
+       "a": [
+        "wen_wrong",
+        "不对哦，再听一听"
+       ],
+       "after_click_s": 0.01
+      },
+      {
+       "f": "queue",
+       "a": [
+        "['wen_w_dog', 'wen_q2']"
+       ],
+       "after_click_s": 0.69
+      }
+     ],
+     "voice_during_idle": [],
+     "rescue_early": true
+    }
+   ],
+   "misc": {
+    "seed_lim": 6,
+    "struct": [
+     {
+      "mode": "sound2pic",
+      "target": "rabbit",
+      "options": [
+       "dog",
+       "rabbit"
+      ]
+     },
+     {
+      "mode": "sound2pic",
+      "target": "book",
+      "options": [
+       "tree",
+       "book"
+      ]
+     },
+     {
+      "mode": "sound2pic",
+      "target": "dog",
+      "options": [
+       "fish",
+       "dog"
+      ]
+     },
+     {
+      "mode": "sound2pic",
+      "target": "nose",
+      "options": [
+       "nose",
+       "ear"
+      ]
+     },
+     {
+      "mode": "sound2pic",
+      "target": "cake",
+      "options": [
+       "cake",
+       "egg"
+      ]
+     }
+    ],
+    "opening_voice": [
+     "AUDIO:wen_hint"
+    ]
+   },
+   "vlog": [
+    "queue(wen_w_rabbit,wen_q2)",
+    "play(wen_hint,听一听，再想一想)",
+    "play(wen_wrong,不对哦，再听一听)",
+    "play(wen_w_rabbit,rabbit)",
+    "queue(wen_w_book,wen_q2)",
+    "play(wen_w_book,book)",
+    "queue(wen_w_dog,wen_q2)",
+    "play(wen_wrong,不对哦，再听一听)",
+    "queue(wen_w_dog,wen_q2)",
+    "play(wen_w_dog,dog)",
+    "queue(wen_w_nose,wen_q2)",
+    "play(wen_w_nose,nose)",
+    "queue(wen_w_cake,wen_q2)",
+    "play(wen_w_cake,cake)",
+    "play(core_day_end,今天的新关卡玩完啦，明天见)"
+   ]
+  },
+  {
+   "tag": "flat10",
+   "flat": 10,
+   "ch": 3,
+   "dch": 3,
+   "clicks": 9,
+   "retries": 4,
+   "stars": 1,
+   "quizzes": {
+    "0": {
+     "mode": "pic2word",
+     "target": "cake",
+     "options": [
+      "egg",
+      "lake",
+      "cake"
+     ]
+    },
+    "1": {
+     "mode": "pic2word",
+     "target": "book",
+     "options": [
+      "book",
+      "look",
+      "car"
+     ]
+    },
+    "2": {
+     "mode": "pic2word",
+     "target": "hand",
+     "options": [
+      "hand",
+      "ear",
+      "head"
+     ]
+    },
+    "3": {
+     "mode": "pic2word",
+     "target": "dog",
+     "options": [
+      "dot",
+      "dog",
+      "fish"
+     ]
+    },
+    "4": {
+     "mode": "pic2word",
+     "target": "star",
+     "options": [
+      "sun",
+      "stop",
+      "star"
+     ]
+    }
+   },
+   "events": [
+    {
+     "ev": "w1_confuse_card_voice",
+     "picked": "lake",
+     "target": "cake",
+     "mode": "pic2word",
+     "miss": 1,
+     "retries": 1,
+     "pulse": [
+      0,
+      0
+     ],
+     "wrong_cls": [
+      0,
+      1
+     ],
+     "voice": [
+      "play(wen_wrong,不对哦，再找一找它的英语)"
+     ],
+     "wrong_voice": true
+    },
+    {
+     "ev": "w2_throttled_pulse",
+     "picked": "egg",
+     "target": "cake",
+     "mode": "pic2word",
+     "miss": 2,
+     "retries": 2,
+     "pulse": [
+      0,
+      1
+     ],
+     "wrong_cls": [
+      1,
+      2
+     ],
+     "voice": [],
+     "wrong_voice": false
+    },
+    {
+     "ev": "correct_voice_no_confuse_clip",
+     "voice": [
+      "play(wen_w_cake,cake)",
+      "play(wen_q1,找一找，它的英语是哪一个)"
+     ],
+     "target": "cake"
+    },
+    {
+     "ev": "w3_after10s_voice_again",
+     "picked": "look",
+     "target": "book",
+     "mode": "pic2word",
+     "miss": 1,
+     "retries": 3,
+     "pulse": [
+      0,
+      0
+     ],
+     "wrong_cls": [
+      0,
+      1
+     ],
+     "voice": [
+      "play(wen_wrong,不对哦，再找一找它的英语)"
+     ],
+     "wrong_voice": true
+    },
+    {
+     "ev": "persona_confuse_again",
+     "picked": "dot",
+     "target": "dog",
+     "mode": "pic2word",
+     "miss": 1,
+     "retries": 4,
+     "pulse": [
+      0,
+      0
+     ],
+     "wrong_cls": [
+      0,
+      1
+     ],
+     "voice": [],
+     "wrong_voice": false
+    }
+   ],
+   "misc": {
+    "seed_lim": 16,
+    "struct": [
+     {
+      "mode": "pic2word",
+      "target": "cake",
+      "options": [
+       "egg",
+       "lake",
+       "cake"
+      ]
+     },
+     {
+      "mode": "pic2word",
+      "target": "book",
+      "options": [
+       "book",
+       "look",
+       "car"
+      ]
+     },
+     {
+      "mode": "pic2word",
+      "target": "hand",
+      "options": [
+       "hand",
+       "ear",
+       "head"
+      ]
+     },
+     {
+      "mode": "pic2word",
+      "target": "dog",
+      "options": [
+       "dot",
+       "dog",
+       "fish"
+      ]
+     },
+     {
+      "mode": "pic2word",
+      "target": "star",
+      "options": [
+       "sun",
+       "stop",
+       "star"
+      ]
+     }
+    ],
+    "opening_voice": [
+     "AUDIO:wen_hint"
+    ]
+   },
+   "vlog": [
+    "play(wen_wrong,不对哦，再找一找它的英语)",
+    "play(wen_w_cake,cake)",
+    "play(wen_q1,找一找，它的英语是哪一个)",
+    "play(wen_wrong,不对哦，再找一找它的英语)",
+    "play(wen_w_book,book)",
+    "play(wen_q1,找一找，它的英语是哪一个)",
+    "play(wen_w_hand,hand)",
+    "play(wen_q1,找一找，它的英语是哪一个)",
+    "play(wen_w_dog,dog)",
+    "play(wen_q1,找一找，它的英语是哪一个)",
+    "play(wen_w_star,star)",
+    "queue(wen_hint,wen_q1)"
+   ]
+  },
+  {
+   "tag": "flat15",
+   "flat": 15,
+   "ch": 4,
+   "dch": 4,
+   "clicks": 8,
+   "retries": 1,
+   "stars": 2,
+   "quizzes": {
+    "0": {
+     "mode": "word2pic",
+     "target": "ball",
+     "options": [
+      "ball",
+      "tree",
+      "book"
+     ]
+    },
+    "1": {
+     "mode": "word2pic",
+     "target": "cat",
+     "options": [
+      "fish",
+      "cat",
+      "rabbit"
+     ]
+    },
+    "2": {
+     "mode": "sound2pic",
+     "target": "rain",
+     "options": [
+      "sun",
+      "rain",
+      "moon"
+     ]
+    },
+    "3": {
+     "mode": "sound2pic",
+     "target": "sun",
+     "options": [
+      "star",
+      "rain",
+      "sun"
+     ]
+    },
+    "4": {
+     "mode": "sound2pic",
+     "target": "milk",
+     "options": [
+      "cake",
+      "milk",
+      "egg"
+     ]
+    }
+   },
+   "events": [
+    {
+     "ev": "word2pic_speaker_replay_zh_only",
+     "voice": [
+      "play(wen_q4,读一读，点出它的图片)"
+     ],
+     "note": "word2pic 重播=zh 指令 q4，不播 en（认读不靠听）"
+    },
+    {
+     "ev": "persona_word2pic_guess_wrong",
+     "picked": "tree",
+     "target": "ball",
+     "mode": "word2pic",
+     "miss": 1,
+     "retries": 1,
+     "pulse": [
+      0,
+      0
+     ],
+     "wrong_cls": [
+      0,
+      1
+     ],
+     "voice": [
+      "play(wen_wrong,不对哦，再读一读)"
+     ],
+     "wrong_voice": true
+    },
+    {
+     "ev": "rabbit_tap",
+     "hop": [
+      0,
+      1
+     ],
+     "voice": []
+    },
+    {
+     "ev": "step3_mode_check",
+     "mode": "sound2pic",
+     "voice_around": [
+      "queue(wen_w_rain,wen_q2)",
+      "play(wen_w_rain,rain)",
+      "queue(wen_w_sun,wen_q2)"
+     ]
+    }
+   ],
+   "misc": {
+    "seed_lim": 16,
+    "struct": [
+     {
+      "mode": "word2pic",
+      "target": "ball",
+      "options": [
+       "ball",
+       "tree",
+       "book"
+      ]
+     },
+     {
+      "mode": "word2pic",
+      "target": "cat",
+      "options": [
+       "fish",
+       "cat",
+       "rabbit"
+      ]
+     },
+     {
+      "mode": "sound2pic",
+      "target": "rain",
+      "options": [
+       "sun",
+       "rain",
+       "moon"
+      ]
+     },
+     {
+      "mode": "sound2pic",
+      "target": "sun",
+      "options": [
+       "star",
+       "rain",
+       "sun"
+      ]
+     },
+     {
+      "mode": "sound2pic",
+      "target": "milk",
+      "options": [
+       "cake",
+       "milk",
+       "egg"
+      ]
+     }
+    ],
+    "opening_voice": [
+     "AUDIO:wen_hint"
+    ]
+   },
+   "vlog": [
+    "play(wen_q4,读一读，点出它的图片)",
+    "play(wen_wrong,不对哦，再读一读)",
+    "play(wen_w_ball,ball)",
+    "play(wen_q4,读一读，点出它的图片)",
+    "play(wen_w_cat,cat)",
+    "queue(wen_w_rain,wen_q2)",
+    "play(wen_w_rain,rain)",
+    "queue(wen_w_sun,wen_q2)",
+    "play(wen_w_sun,sun)",
+    "queue(wen_w_milk,wen_q2)",
+    "play(wen_w_milk,milk)",
+    "play(core_day_end,今天的新关卡玩完啦，明天见)"
+   ]
+  }
+ ],
+ "vlog_tail": [
+  "play(wen_q4,读一读，点出它的图片)",
+  "play(wen_wrong,不对哦，再读一读)",
+  "play(wen_w_ball,ball)",
+  "play(wen_q4,读一读，点出它的图片)",
+  "play(wen_w_cat,cat)",
+  "queue(wen_w_rain,wen_q2)",
+  "play(wen_w_rain,rain)",
+  "queue(wen_w_sun,wen_q2)",
+  "play(wen_w_sun,sun)",
+  "queue(wen_w_milk,wen_q2)",
+  "play(wen_w_milk,milk)",
+  "play(core_day_end,今天的新关卡玩完啦，明天见)"
+ ]
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小兔子的游戏屋 · 一二年级的新游戏</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#FBF3E4;color:#4A3B2E;font-family:system-ui,-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+       min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;padding:34px 22px}
+  .logo{width:150px;height:150px}
+  h1{font-size:clamp(26px,5vw,38px);letter-spacing:.05em}
+  .ageband{display:inline-flex;align-items:center;gap:8px;background:#6E9BD8;color:#fff;font-size:16px;font-weight:700;
+           padding:7px 18px;border-radius:999px;letter-spacing:.04em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:24px;width:100%;max-width:760px}
+  a.card{display:flex;flex-direction:column;align-items:center;gap:14px;padding:28px 16px 24px;border-radius:26px;
+         background:#FFF9EE;border:2.5px solid #4A3B2E;text-decoration:none;color:#4A3B2E;
+         box-shadow:0 5px 0 #D8C9B4;transition:transform .2s}
+  a.card:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+  @media (hover:hover){
+    a.card:hover{transform:translateY(-4px);box-shadow:0 9px 0 #D8C9B4}
+  }
+  .card .icon{width:92px;height:92px}
+  .card .name{font-size:22px;font-weight:700}
+  .card .desc{font-size:14px;color:#8A7B6C;line-height:1.6;text-align:center}
+  .foot{font-size:12.5px;color:#8A7B6C;text-align:center;line-height:1.8;max-width:520px}
+</style>
+</head>
+<body>
+  <div class="logo" id="logo"></div>
+  <h1>小兔子的游戏屋 · 一二年级的新游戏</h1>
+  <div class="ageband">★ 7-8 岁 · 一二年级 ★</div>
+  <div class="grid">
+    <a class="card" href="blocks/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#4A3B2E" stroke-width="2" stroke-linejoin="round">
+          <polygon points="30,50 46,42 62,50 46,58" fill="#F8D494"/>
+          <polygon points="46,42 62,34 78,42 62,50" fill="#F8D494"/>
+          <polygon points="14,58 30,50 30,66 14,74" fill="#C7793F"/>
+          <polygon points="14,58 30,66 30,82 14,74" fill="#E8975A"/>
+          <polygon points="30,66 46,58 46,74 30,82" fill="#E8975A"/>
+          <polygon points="46,58 62,50 62,66 46,74" fill="#C7793F"/>
+          <polygon points="62,50 78,42 78,58 62,66" fill="#C7793F"/>
+          <polygon points="46,42 62,34 62,50 46,58" fill="#F8D494"/>
+          <polygon points="46,74 62,66 78,58 78,74 62,82 46,74" fill="#F8D494"/>
+          <polygon points="46,74 62,66 62,82 46,90" fill="#C7793F"/>
+          <polygon points="30,66 46,74 46,90 30,82" fill="#E8975A"/>
+        </g>
+        <text x="12" y="18" font-size="13" font-weight="700" fill="#E0503C" font-family="Consolas,monospace">8</text>
+        <path d="M18 22 q6 -8 12 0" stroke="#E0503C" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      </svg></div>
+      <div class="name">空间积木</div>
+      <div class="desc">数一数有几个方块<br>从前面上面看一看</div>
+    </a>
+    <a class="card" href="multibattle/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="58" width="84" height="26" rx="13" fill="#EFE3CD" stroke="#4A3B2E" stroke-width="2.2"/>
+        <path d="M8 71 h84" stroke="#D8C9B4" stroke-width="2" stroke-dasharray="5 5"/>
+        <line x1="88" y1="30" x2="88" y2="70" stroke="#4A3B2E" stroke-width="2.6"/>
+        <polygon points="88,30 76,36 88,42" fill="#E0503C"/>
+        <g stroke="#4A3B2E" stroke-width="2">
+          <circle cx="30" cy="54" r="13" fill="#FBF7F0"/>
+          <ellipse cx="24" cy="42" rx="4" ry="9" fill="#FBF7F0" transform="rotate(-12 24 42)"/>
+          <ellipse cx="36" cy="42" rx="4" ry="9" fill="#FBF7F0" transform="rotate(12 36 42)"/>
+          <circle cx="26" cy="54" r="1.6" fill="#4A3B2E"/><circle cx="34" cy="54" r="1.6" fill="#4A3B2E"/>
+          <path d="M27 59 q3 3 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <g stroke="#4A3B2E" stroke-width="2">
+          <circle cx="62" cy="50" r="13" fill="#8A7B6C"/>
+          <ellipse cx="56" cy="38" rx="4" ry="9" fill="#8A7B6C" transform="rotate(-12 56 38)"/>
+          <ellipse cx="68" cy="38" rx="4" ry="9" fill="#8A7B6C" transform="rotate(12 68 38)"/>
+          <circle cx="58" cy="50" r="1.6" fill="#4A3B2E"/><circle cx="66" cy="50" r="1.6" fill="#4A3B2E"/>
+        </g>
+        <text x="30" y="28" font-size="12" font-weight="700" fill="#E0503C" text-anchor="middle" font-family="Consolas,monospace">3&#215;4</text>
+      </svg></div>
+      <div class="name">乘法对战</div>
+      <div class="desc">和兔子比一比<br>谁先算出答案</div>
+    </a>
+    <a class="card" href="numberdet/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10" y1="46" x2="90" y2="46" stroke="#4A3B2E" stroke-width="2.6"/>
+        <g stroke="#4A3B2E" stroke-width="2"><line x1="18" y1="42" x2="18" y2="50"/><line x1="34" y1="42" x2="34" y2="50"/><line x1="50" y1="42" x2="50" y2="50"/><line x1="66" y1="42" x2="66" y2="50"/><line x1="82" y1="42" x2="82" y2="50"/></g>
+        <rect x="34" y="41" width="32" height="10" rx="5" fill="#8FBF7F" opacity=".45"/>
+        <text x="18" y="60" font-size="9" font-weight="700" fill="#8A7B6C" text-anchor="middle" font-family="Consolas,monospace">1</text>
+        <text x="82" y="60" font-size="9" font-weight="700" fill="#8A7B6C" text-anchor="middle" font-family="Consolas,monospace">20</text>
+        <rect x="54" y="34" width="10" height="9" rx="2" fill="#F5C445" stroke="#B8862B" stroke-width="1.8"/>
+        <path d="M56 43 q3 5 6 0" fill="#E0503C"/>
+        <circle cx="38" cy="76" r="11" fill="none" stroke="#4A3B2E" stroke-width="3"/>
+        <line x1="46" y1="84" x2="56" y2="94" stroke="#4A3B2E" stroke-width="4" stroke-linecap="round"/>
+        <text x="38" y="81" font-size="12" font-weight="700" fill="#E0503C" text-anchor="middle" font-family="Consolas,monospace">?</text>
+      </svg></div>
+      <div class="name">数字侦探</div>
+      <div class="desc">猜一猜神秘数<br>太大太小有提示</div>
+    </a>
+    <p class="foot">每天有新关卡，玩完今天的小兔子会说"明天见"。<br>每款游戏右上角 🔒 家长面板：进度 / 时长 / 今日多玩关数。<br>完全离线，无广告无内购，进度保存在本机。</p>
+<script>
+/* 入口页不内嵌完整 core（无存档/会话需求），仅复用小兔子形象保持 IP 一致 */
+document.getElementById('logo').innerHTML = '<svg viewBox="0 0 120 120" width="150" height="150" xmlns="http://www.w3.org/2000/svg" fill="none"><ellipse cx="60" cy="96" rx="26" ry="12" fill="#EFE3CD"/><ellipse cx="45" cy="28" rx="10" ry="26" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5" transform="rotate(-10 45 28)"/><ellipse cx="45" cy="30" rx="4.5" ry="17" fill="#F2B8C6" transform="rotate(-10 45 30)"/><ellipse cx="76" cy="26" rx="10" ry="27" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5" transform="rotate(14 76 26)"/><ellipse cx="76" cy="28" rx="4.5" ry="18" fill="#F2B8C6" transform="rotate(14 76 28)"/><circle cx="60" cy="68" r="38" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5"/><ellipse cx="54" cy="56" rx="3" ry="2.2" fill="#D98A8A"/><ellipse cx="66" cy="56" rx="3" ry="2.2" fill="#D98A8A"/><ellipse cx="37" cy="74" rx="6.5" ry="4.5" fill="#F2B8C6" opacity=".8"/><ellipse cx="83" cy="74" rx="6.5" ry="4.5" fill="#F2B8C6" opacity=".8"/><path d="M44 62 q5 -7 10 0" stroke="#4A3B2E" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M66 62 q5 -7 10 0" stroke="#4A3B2E" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M55 74 q5 6 10 0" stroke="#4A3B2E" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="18" cy="55" r="9" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5"/></svg>';
+</script>
+</body>
+</html>

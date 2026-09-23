@@ -1,0 +1,173 @@
+[
+ {
+  "game": "shop",
+  "phase": "S1教学",
+  "claim": "全新存档首单=小猫买1个苹果（教学关）",
+  "detail": {
+   "who": "cat",
+   "items": [
+    {
+     "k": "apple",
+     "n": 1
+    }
+   ],
+   "mode": "count"
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S1教学",
+  "claim": "演示（看）阶段她点货架被拒绝：qty 保持演示的 1 个（她的点击未入篮）",
+  "detail": {
+   "tap": "OK",
+   "qtyBefore": "1",
+   "qtyAfter": "1"
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S1教学",
+  "claim": "\"帮\"阶段幽灵手指重新出现并指向苹果货架（中心距<90px）",
+  "detail": {
+   "ghostShown": true,
+   "distToAppleShelf": 25,
+   "pointsAtApple": true,
+   "state": "shopping"
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S1教学",
+  "claim": "她模仿点1次苹果入篮，手指随即转指结账按钮",
+  "detail": {
+   "qty": "1",
+   "ghostAtCheckout": true
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S1教学",
+  "claim": "她按结账 → 付款离开流程",
+  "detail": {
+   "state": "leaving"
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S1教学",
+  "claim": "教学关 0 错 3 星",
+  "detail": {
+   "save_1_0": {
+    "stars": 3,
+    "plays": 1
+   }
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S2试玩",
+  "claim": "进入 1-1（小狗买2根香蕉）",
+  "detail": {
+   "who": "dog",
+   "items": [
+    {
+     "k": "banana",
+     "n": 2
+    }
+   ],
+   "mode": "count"
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S2试玩",
+  "claim": "多拿1个苹果→结账：温和提示（灰蓝卡+气泡重闪），篮子保留",
+  "detail": {
+   "state": "hint",
+   "hintcardShown": true,
+   "bubbleFlash": true,
+   "basketKept": "2"
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S2试玩",
+  "claim": "点篮内苹果槽放回成功（槽隐藏=0个）",
+  "detail": {
+   "appleSlotHidden": false
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S2试玩",
+  "claim": "纠正后过关：1 错 = 2 星（永不0星）",
+  "detail": {
+   "save_1_1": {
+    "stars": 2,
+    "plays": 1
+   }
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S3试玩",
+  "claim": "进入 1-2（小兔买3个梨）",
+  "detail": {
+   "who": "rabbit",
+   "items": [
+    {
+     "k": "pear",
+     "n": 3
+    }
+   ],
+   "mode": "count"
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S3试玩",
+  "claim": "她拿了5个梨（超量2个）",
+  "detail": {
+   "qty": "5"
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S3试玩",
+  "claim": "连错3次触发支架：超量梨 5→3 自动清掉、正确货架高亮pulse",
+  "detail": {
+   "qty": "3",
+   "pulseCell": false,
+   "state": "shopping"
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S3试玩",
+  "claim": "支架后一键结账过关：3错=1星；推进到下一单",
+  "detail": {
+   "save_1_2": {
+    "stars": 1,
+    "plays": 1
+   },
+   "nextCustomer": "rabbit"
+  }
+ },
+ {
+  "game": "shop",
+  "phase": "S3试玩",
+  "claim": "第4单（大象买5个苹果）已进场",
+  "detail": {
+   "order": {
+    "who": "bear",
+    "items": [
+     {
+      "k": "orange",
+      "n": 4
+     }
+    ],
+    "mode": "count"
+   }
+  }
+ }
+]

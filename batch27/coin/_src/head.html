@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>硬币认钱</title>
+<style>
+/* ================= 硬币认钱 coin（batch27）=================
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E；
+   6-7 岁幼小衔接段：题面=钱桌 + 钱币大图（教学锚=数字+颜色+大小三线索：
+   面上大字面额数字+主色+硬币花卉；硬币大小 1元>5角>1角 视觉可感）+ 题面句文字条；
+   下方 4 张卡（coin/bill/combo=面额文字卡；sameval=钱币小图卡）。
+   点对=钱币放大跳 + 小兔子滑入示范 + 确认句 TTS；点错=卡摇头 + coi_wrong +
+   线索引导句 TTS（卡不灰可重选——探索不罚）。
+   触摸目标：候选卡=主答案按钮 ≥96×96（§0.9）；题面卡可点重听；底栏按钮 ≥72。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 50px;display:flex;align-items:center;padding:5px 60px 0 14px;gap:14px}
+#logo{width:40px;height:40px;border-radius:12px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 40px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：题面卡（钱桌+钱币+题面句）→ 卡排 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:14px;overflow:hidden;padding:6px 12px}
+
+/* 题面卡：可点重听题面；钱币立于桌面 + 题面句文字条 */
+#scene{position:relative;width:min(600px,94vw);height:184px;border-radius:26px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;overflow:hidden;padding:0;transition:transform .15s}
+#scene:active{transform:translateY(3px)}
+#scene .sky{position:absolute;inset:0;margin:auto}
+/* 题面句文字条（顶部——浮于钱桌上方区；钱币立下方桌面，垂直零重叠） */
+#scene .q-text{position:absolute;left:50%;top:6px;transform:translateX(-50%);z-index:3;
+  background:rgba(255,249,238,.94);border:2.5px solid #4A3B2E;border-radius:16px;
+  padding:5px 18px;font-size:24px;font-weight:700;letter-spacing:1px;white-space:nowrap}
+/* 钱币槽（立桌面中央；答对放大跳；救援方向级随题面卡 pulse） */
+#scene .money-slot{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:2;
+  display:flex;align-items:flex-end;justify-content:center;
+  animation:coin-drop .62s cubic-bezier(.2,1.5,.4,1) backwards}
+#scene .money-slot svg{filter:drop-shadow(0 4px 0 rgba(74,59,46,.22))}
+/* 组合题面：2-4 枚硬币并排（硬币原始大小差=大小线索可感；枚数多尺寸由 JS 定） */
+#scene .combo-wrap{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:2;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  animation:coin-drop .62s cubic-bezier(.2,1.5,.4,1) backwards}
+#scene .combo-wrap svg{filter:drop-shadow(0 4px 0 rgba(74,59,46,.22))}
+/* r38 反向认币/最少几枚题面：面额大字牌（立桌面中央） */
+#scene .tag-card{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:2;
+  background:#FFF9EE;border:3.5px solid #4A3B2E;border-radius:20px;box-shadow:0 5px 0 #D8C9B4;
+  padding:14px 30px;font-size:52px;font-weight:800;letter-spacing:2px;white-space:nowrap;
+  font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+  animation:coin-drop .62s cubic-bezier(.2,1.5,.4,1) backwards}
+#scene .tag-card.jump{animation:tag-jump .55s cubic-bezier(.2,1.6,.4,1) 2}
+@keyframes tag-jump{0%,100%{transform:translateX(-50%) scale(1)}
+  40%{transform:translateX(-50%) scale(1.16)}75%{transform:translateX(-50%) scale(1.05)}}
+/* r38 找零题面：物品（含价签）+ 付出的纸币并排 */
+#scene .chg-wrap{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:2;
+  display:flex;align-items:flex-end;justify-content:center;gap:26px;
+  animation:coin-drop .62s cubic-bezier(.2,1.5,.4,1) backwards}
+#scene .chg-item{position:relative;display:flex;align-items:center;justify-content:center}
+#scene .chg-item .price-tag{position:absolute;right:-16px;top:-8px;transform:rotate(8deg);
+  background:#F2DDC0;border:2.5px solid #4A3B2E;border-radius:11px;padding:3px 9px;
+  font-size:19px;font-weight:800;white-space:nowrap;
+  font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif}
+#scene .chg-pay svg{filter:drop-shadow(0 4px 0 rgba(74,59,46,.22))}
+@keyframes coin-drop{0%{transform:translateX(-50%) translateY(-40px) scale(.4);opacity:0}
+  70%{transform:translateX(-50%) translateY(0) scale(1.06);opacity:1}
+  100%{transform:translateX(-50%) translateY(0) scale(1)}}
+/* 答对：钱币/字牌/物品区放大跳（连跳两下——「认对了！」） */
+#scene .money-slot.jump, #scene .combo-wrap.jump, #scene .chg-wrap.jump{animation:coin-jump .55s cubic-bezier(.2,1.6,.4,1) 2}
+@keyframes coin-jump{0%,100%{transform:translateX(-50%) scale(1)}
+  40%{transform:translateX(-50%) scale(1.3) rotate(-3deg)}
+  75%{transform:translateX(-50%) scale(1.06) rotate(2deg)}}
+/* 小兔子滑入示范（答对时从右侧滑到钱币旁，开心跳） */
+#scene .demo-pet{position:absolute;right:16px;bottom:12px;z-index:3;
+  animation:petin .5s cubic-bezier(.2,1.6,.4,1) backwards, pet-joy .8s ease .5s 3}
+#scene .demo-pet svg{width:58px;height:58px;filter:drop-shadow(0 2px 0 rgba(255,255,255,.8))}
+@keyframes petin{0%{transform:translateX(70px) scale(.2);opacity:0}
+  100%{transform:translateX(0) scale(1);opacity:1}}
+@keyframes pet-joy{0%,100%{margin-top:0}50%{margin-top:-10px}}
+/* 救援方向级：题面区 pulse（整体呼吸放大 3 次） */
+#scene.pulse{animation:scene-pulse 1s ease-in-out 3}
+@keyframes scene-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+#scene.bounce{animation:scene-b .4s ease}
+@keyframes scene-b{0%,100%{transform:scale(1)}45%{transform:scale(.97)}}
+
+/* ---------- 卡排：一行 4 卡，主答案按钮 ≥96×96；吞输入=容器 bump ---------- */
+#board{display:flex;gap:18px;justify-content:center;align-items:stretch;flex:0 0 auto;
+  width:100%;max-width:780px;padding:0 2px}
+#board.bump{animation:board-bump .22s ease}
+@keyframes board-bump{0%,100%{transform:scale(1)}45%{transform:scale(.96)}}
+.card{position:relative;background:#FFF9EE;border:3px solid #4A3B2E;border-radius:22px;
+  box-shadow:0 5px 0 #D8C9B4;flex:0 0 auto;width:130px;min-height:156px;
+  display:flex;align-items:center;justify-content:center;transition:transform .15s;overflow:hidden}
+.card:active{transform:translateY(3px)}
+/* 文字卡：大面额字（数字+角/元；识字萌芽——阿拉伯数字为主） */
+.card .t-label{font-size:44px;font-weight:800;letter-spacing:1px;white-space:nowrap;
+  font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif}
+.card.t-long .t-label{font-size:30px;letter-spacing:0}
+/* 钱币卡（sameval 带面额小字；rev 反向认币 bare=去标签——防识字泄漏，纯图辨析） */
+.card .gwrap{width:94px;height:96px;display:flex;align-items:center;justify-content:center;
+  pointer-events:none;margin-bottom:26px}
+.card .gwrap svg{max-width:92px;max-height:92px}
+.card .m-label{position:absolute;left:0;right:0;bottom:9px;text-align:center;
+  font-size:21px;font-weight:700;letter-spacing:.5px;white-space:nowrap}
+.card.m-card.bare .gwrap{margin-bottom:0}
+.card.m-card.bare .gwrap svg{max-width:104px;max-height:104px}
+.card.pop{animation:card-in .42s cubic-bezier(.2,1.6,.4,1) backwards}
+@keyframes card-in{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+.card.bump{animation:card-bump .22s ease}
+@keyframes card-bump{0%,100%{transform:scale(1)}45%{transform:scale(.94)}}
+/* 答对：卡绿+弹 */
+.card.lit{border-color:#6FA063;box-shadow:0 5px 0 #8FBF7F;
+  animation:card-lit .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes card-lit{0%{transform:scale(1)}45%{transform:scale(1.12)}100%{transform:scale(1)}}
+/* 答错：摇头晃动（不灰掉可重选——探索不罚，语义反馈款） */
+.card.wig{animation:an-wig .6s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}22%{transform:rotate(-8deg) translateX(-4px)}
+  50%{transform:rotate(7deg) translateX(3px)}78%{transform:rotate(-4deg) translateX(-2px)}}
+/* 30s 答案级救援：正确卡呼吸高亮循环（§0.21） */
+.card.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+@keyframes an-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:86px;height:86px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch21-26） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：题面/卡适配，主答案卡仍 ≥96 */
+@media (orientation:portrait){
+  #scene{height:168px}
+  #scene .q-text{font-size:20px;padding:4px 14px}
+  #scene .tag-card{font-size:40px;padding:10px 22px;bottom:12px}
+  #scene .chg-wrap{gap:16px}
+  #scene .chg-item svg{width:70px;height:70px}
+  #scene .chg-item .price-tag{font-size:16px;right:-12px;top:-6px}
+  #board{gap:11px}
+  .card{width:108px;min-height:138px}
+  .card .t-label{font-size:36px}
+  .card.t-long .t-label{font-size:24px}
+  .card .gwrap{width:80px;height:82px;margin-bottom:24px}
+  .card .gwrap svg{max-width:78px;max-height:78px}
+  .card.m-card.bare .gwrap{margin-bottom:0}
+  .card.m-card.bare .gwrap svg{max-width:92px;max-height:92px}
+  .card .m-label{font-size:18px;bottom:7px}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="硬币认钱">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <button id="scene" aria-label="认钱币，点我再听一遍"></button>
+    <div id="board" aria-label="面额卡"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

@@ -1,0 +1,15 @@
+[PASS] T1 selftest 复跑 VERIFY PASS 12/12
+[PASS] T2 真实页预置存档 v1.0 v=1.0
+[PASS] T3 全量 SPEC 对账+驱动 err=[]
+[PASS] T4 生成关 dch 独立复算对账+四型全现 obs=[4, 2, 4, 4, 3, 1, 2, 3, 1, 2, 3, 4, 1, 2, 2, 2, 1, 4, 2, 1] exp_match=True
+[PASS] T5 生成关确定性 
+[PASS] T6 错选 wrong+miss 计 1 r=wrong miss=1
+[PASS] T7 双错防重入 miss 只+1 d1=wrong d2=null miss=1
+[PASS] T8 星级三档 0错=3 2错=2 3错=1
+[PASS] T12 ch4 找错修章链 rw=wrong miss=1 found=False rf=found sus=1 r=fixed stamped=True motif=True step=1
+[PASS] T9 家族 A nextHint 双形态 
+[PASS] T9b 契约 K 面板守卫在场 
+[PASS] T10 C7 预告在场+生成关实算 hints=4 gh=4 genok=True
+[PASS] T11 契约 I+N 豁免窗≥下界+keyless 恒尾 N=6066 下界=6066 guard=True reset=True keyless静态=True
+
+TOTAL 13/13 PASS

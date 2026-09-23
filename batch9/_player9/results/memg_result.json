@@ -1,0 +1,29 @@
+{
+ "game": "memgrid 记忆亮亮格",
+ "scens": {
+  "A_教学+第1关": {
+   "通关": true,
+   "stars": 3,
+   "tutSeen": true,
+   "show期吞输入": true,
+   "教学期乱点无pageerror": true
+  },
+  "B_1-1_错3格+静置救援": {
+   "通关": true,
+   "stars": 1,
+   "rescues_delta": 1,
+   "救援重闪reflash格数": 0,
+   "救援语音": [
+    "K:mg_q|记住亮起来的格子哦"
+   ],
+   "pageerrors": []
+  },
+  "C_第2章2-1": {
+   "通关": true,
+   "stars": 2,
+   "章": 2,
+   "难度": "3x3 k=3(记忆量2→3)",
+   "pageerrors": []
+  }
+ }
+}

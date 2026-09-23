@@ -1,0 +1,91 @@
+[   0.9s] OPEN(fresh) file:///F:/claudecode/projects/active/kids-games/batch11/shadow/index.html
+[   1.5s] A 开档 tutorial='watch'
+[   1.7s] SNAP shadow_A0_tut_watch.png
+[   3.2s] A 教学乱点后 tut/step ('watch', 0)→('watch', 1)（不跳=False）新增pop=2
+[   5.0s] A 教学 help 到位=True ghost=''
+[   5.1s] SNAP shadow_A2_tut_help.png
+[   7.2s] A 帮期错点 miss=1 tut='help' dim=['0']（被容忍不中断教学）
+[   9.4s] A 首次答对后 tutorial='solo'（应 solo）
+[   9.4s] A2 flat0 第2题 target=rabbit(小兔) opts=['frog', 'rabbit', 'butterfly'] rot=[0, 0, 0] ans=1
+[  12.4s] A2 flat0 第3题 target=balloon(气球) opts=['fox', 'ball', 'balloon'] rot=[0, 0, 0] ans=2
+[  14.9s] A2 flat0 第4题 target=hamster(仓鼠) opts=['sun', 'frog', 'hamster'] rot=[0, 0, 0] ans=2
+[  17.4s] A2 flat0 第5题 target=dog(小狗) opts=['balloon', 'star', 'dog'] rot=[0, 0, 0] ans=2
+[  20.0s] A2 flat0 完成 用时=10.7s retries=1
+[  20.9s] A2_1-0 CELEBRATE 星星=2 文案='★/★/好棒！'
+[  20.9s] SNAP shadow_celebrate_A2_1-0.png
+[  26.3s] A2 存档 levels[1-0] = {'stars': 2, 'plays': 1}
+[  26.4s] A 下一关 flat=1
+[  26.4s] A3_1-1 flat1 第1题 target=sun(太阳) opts=['rabbit', 'dog', 'sun'] rot=[0, 0, 0] ans=2
+[  28.5s] A3_1-1 flat1 第2题 target=cat(小猫) opts=['balloon', 'cat', 'butterfly'] rot=[0, 0, 0] ans=1
+[  30.7s] A3_1-1 错1后 miss=1 dead=[0] breathe=False
+[  33.1s] A3_1-1 错2后 miss=2 dead=[0, 2] breathe=True
+[  35.9s] A3_1-1 flat1 第3题 target=frog(青蛙) opts=['ball', 'hamster', 'frog'] rot=[0, 0, 0] ans=2
+[  38.0s] A3_1-1 flat1 第4题 target=orange(橘子) opts=['cat', 'fox', 'orange'] rot=[0, 0, 0] ans=2
+[  40.2s] A3_1-1 flat1 第5题 target=star(星星) opts=['star', 'fox', 'bear'] rot=[0, 0, 0] ans=0
+[  42.3s] A3_1-1 flat1 完成 用时=15.9s retries=2
+[  43.1s] A3_1-1 CELEBRATE 星星=2 文案='★/★/好棒！'
+[  43.2s] SNAP shadow_celebrate_A3_1-1.png
+[  48.6s] A3 存档 levels[1-1] = {'stars': 2, 'plays': 1}
+[  48.6s] A4_1-2 flat2 第1题 target=fox(狐狸) opts=['fox', 'butterfly', 'balloon'] rot=[0, 0, 0] ans=0
+[  51.5s] A4_1-2 flat2 第2题 target=butterfly(蝴蝶) opts=['fox', 'rabbit', 'butterfly'] rot=[0, 0, 0] ans=2
+[  54.2s] A4_1-2 flat2 第3题 target=hamster(仓鼠) opts=['balloon', 'fish', 'hamster'] rot=[0, 0, 0] ans=2
+[  56.2s] A4_1-2 flat2 第4题 target=dog(小狗) opts=['dog', 'sun', 'balloon'] rot=[0, 0, 0] ans=0
+[  59.3s] A4_1-2 flat2 第5题 target=sun(太阳) opts=['sun', 'dog', 'balloon'] rot=[0, 0, 0] ans=0
+[  62.4s] A4_1-2 flat2 完成 用时=13.8s retries=0
+[  63.2s] A4_1-2 CELEBRATE 星星=3 文案='★/★/★/真棒！'
+[  63.3s] SNAP shadow_celebrate_A4_1-2.png
+[  68.7s] A4 存档 levels[1-2] = {'stars': 3, 'plays': 1}
+[  68.7s] A5 flat=3 第1题正常答对再发呆
+[  85.1s] A5 ★静置救援 @12.8s 语音=['T:找一找，谁的']
+[  85.1s] SNAP shadow_A5_rescue.png
+[  85.1s] A5 救援记录={'at_s': 12.8, 'voice': ['T:找一找，谁的'], 'breathe': 12.8}
+[  85.1s] A5_1-3 flat3 第2题 target=apple(苹果) opts=['apple', 'rabbit', 'star'] rot=[0, 0, 0] ans=0
+[  87.8s] A5_1-3 flat3 第3题 target=cat(小猫) opts=['orange', 'frog', 'cat'] rot=[0, 0, 0] ans=2
+[  89.9s] A5_1-3 flat3 第4题 target=apple(苹果) opts=['frog', 'apple', 'hamster'] rot=[0, 0, 0] ans=1
+[  91.9s] A5_1-3 flat3 第5题 target=rabbit(小兔) opts=['sun', 'rabbit', 'fish'] rot=[0, 0, 0] ans=1
+[  94.4s] A5_1-3 flat3 完成 用时=9.3s retries=0
+[  95.2s] A5_1-3 CELEBRATE 星星=3 文案='★/★/★/真棒！'
+[  95.3s] SNAP shadow_celebrate_A5_1-3.png
+[ 100.7s] A5 存档 levels[1-3] = {'stars': 3, 'plays': 1}
+[ 100.7s] A6_1-4 flat4 第1题 target=cat(小猫) opts=['cat', 'apple', 'orange'] rot=[0, 0, 0] ans=0
+[ 102.7s] A6_1-4 flat4 第2题 target=ball(皮球) opts=['star', 'ball', 'hamster'] rot=[0, 0, 0] ans=1
+[ 104.9s] A6_1-4 flat4 第3题 target=fish(小鱼) opts=['bear', 'fish', 'dog'] rot=[0, 0, 0] ans=1
+[ 107.1s] A6_1-4 flat4 第4题 target=butterfly(蝴蝶) opts=['fox', 'rabbit', 'butterfly'] rot=[0, 0, 0] ans=2
+[ 109.0s] A6_1-4 flat4 第5题 target=ball(皮球) opts=['cat', 'ball', 'frog'] rot=[0, 0, 0] ans=1
+[ 111.5s] A6_1-4 flat4 完成 用时=10.8s retries=0
+[ 112.4s] A6_1-4 CELEBRATE 星星=3 文案='★/★/★/真棒！'
+[ 112.4s] SNAP shadow_celebrate_A6_1-4.png
+[ 117.8s] A6 存档 levels[1-4] = {'stars': 3, 'plays': 1}
+[ 117.8s] A6 章末层={'sel': '.k-celebrate:0 .k-chapterend:1 .k-dayend:0 .k-panel:0', 'dayend': None, 'chapterend': '★/第 1 章 完成！/本章星星 13/明天：四个影子小伙伴来啦，长得有点像哦/明天见'}
+[ 118.4s] DISMISS .k-chapterend .k-btn
+[ 118.4s] A7 2-0 flat=5 q=target=hamster(仓鼠) opts=['bear', 'cat', 'fox', 'hamster'] rot=[0, 0, 0, 0] ans=3
+[ 118.4s] A7_2-0 flat5 第1题 target=hamster(仓鼠) opts=['bear', 'cat', 'fox', 'hamster'] rot=[0, 0, 0, 0] ans=3
+[ 120.6s] A7_2-0 错1后 miss=1 dead=[0] breathe=False
+[ 123.6s] A7_2-0 flat5 第2题 target=fish(小鱼) opts=['fish', 'star', 'frog', 'butterfly'] rot=[0, 0, 0, 0] ans=0
+[ 126.1s] A7_2-0 flat5 第3题 target=orange(橘子) opts=['orange', 'apple', 'ball', 'sun'] rot=[0, 0, 0, 0] ans=0
+[ 128.4s] A7_2-0 错1后 miss=1 dead=[1] breathe=False
+[ 131.0s] A7_2-0 flat5 第4题 target=ball(皮球) opts=['sun', 'orange', 'ball', 'apple'] rot=[0, 0, 0, 0] ans=2
+[ 133.7s] A7_2-0 flat5 第5题 target=apple(苹果) opts=['orange', 'sun', 'apple', 'ball'] rot=[0, 0, 0, 0] ans=2
+[ 136.1s] A7_2-0 flat5 完成 用时=17.7s retries=2
+[ 137.0s] A7_2-0 CELEBRATE 星星=2 文案='★/★/好棒！'
+[ 137.0s] SNAP shadow_celebrate_A7_2-0.png
+[ 142.4s] A7 存档 levels[2-0] = {'stars': 2, 'plays': 1}
+[ 143.4s] A7 日末层={'sel': '.k-celebrate:0 .k-chapterend:0 .k-dayend:1 .k-panel:0', 'dayend': '今天的新关卡玩完啦/明天：影子会转圈圈啦，转过的也要认出来/再玩玩旧关卡/明天见', 'chapterend': None}（首日 6 关打完）
+[ 143.5s] SNAP shadow_A7_dayend.png
+[ 143.5s] A 零文字审计={'chip_text': '', 'chip_aria': None, 'card_texts': ['', '', '', ''], 'card_aria': '小熊的影子', 'card_px': ['130x152', '130x152', '130x152', '130x152'], 'body_texts_nopict': ['今天的新关卡玩完啦', '明天：影子会转圈圈啦，转过的也要认出来', '再玩玩旧关卡', '明天见'], 'badge_html': None, 'badge_text': None}
+[ 143.5s] A 语音汇总={'T_find': 14, 'P_wrong': 1, 'S_pop': 0, 'S_coin': 14, 'clips': ['core_chapter_end#这一章完', 'core_day_end#今天的新', 'sha_hint#找一找一']}
+[   0.0s] B 种档 n=5 → 2-0 排除法链
+[   0.9s] OPEN(fresh) file:///F:/claudecode/projects/active/kids-games/batch11/shadow/index.html
+[   3.8s] B 2-0 首题 target=rabbit(小兔) opts=['frog', 'rabbit', 'butterfly'] rot=[0, 0, 0] ans=1 dead=[]
+[   5.9s] B 错1后 {'miss': 0, 'dead': [], 'breathe': -1, 'pe': ['auto', 'auto', 'auto'], 'op': [1, 1, 1]}
+[   8.1s] B 错2后 {'miss': 1, 'dead': [2], 'breathe': 1, 'pe': ['auto', 'auto', 'none'], 'op': [1, 1, 0.42]}
+[   8.1s] SNAP shadow_B_elimination.png
+[   8.1s] B 全灰后答案卡={'pe': 'auto', 'px': 130}（排除法可推出）
+[  11.4s] B 第2题 target=rabbit(小兔) opts=['frog', 'rabbit', 'butterfly'] rot=[0, 0, 0] ans=1
+[  24.6s] B ★救援1 @13.2s ['T:找一找，谁的']
+[  24.6s] SNAP shadow_B_rescue1.png
+[  25.4s] B 救援后错点 miss=1
+[  39.7s] B ★救援2 @14.3s ['T:找一找，谁的']（错点没掐断救援钟）
+[  49.7s] B_2-0 CELEBRATE 星星=2 文案='★/★/好棒！'
+[  49.7s] SNAP shadow_celebrate_B_2-0.png
+[  55.1s] B 存档 levels[2-0] = None（错3+救援期错1=4错 → 1★ 预期）

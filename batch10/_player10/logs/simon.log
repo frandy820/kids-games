@@ -1,0 +1,55 @@
+[   1.4s] OPEN file:///F:/claudecode/projects/active/kids-games/batch10/simon/index.html
+[   2.2s] A 开档 tutorial='watch'
+[   2.4s] SNAP simon_A0_tut_start.png
+[   3.6s] A watch期敲鼓后 tut='watch' phase='input' pos=0（吞输入=仍watch不推进）
+[   7.3s] A 教学help+input 幽灵手指class='show' seq=[2, 1]
+[   7.4s] SNAP simon_A2_tut_help.png
+[   7.4s] A 指令条='跟着敲一敲 0/2'
+[   9.7s] A 第1锤后 tutorial='solo'（应solo）
+[  12.0s] A2 1-0 第2题 序列=[0, 0](长2) 指令条='看小兔子敲小鼓'
+[  12.3s] A2 watch期敲鼓被吞=True phase='watch' pos=0
+[  12.7s] A2 1-0 第2题 序列=[0, 0](长2) 指令条='看小兔子敲小鼓'
+[  17.5s] A2 1-0 第3题 序列=[0, 0](长2) 指令条='看小兔子敲小鼓'
+[  23.1s] A2 1-0 第4题 序列=[0, 1](长2) 指令条='看小兔子敲小鼓'
+[  29.1s] A2 1-0 第5题 序列=[2, 3](长2) 指令条='看小兔子敲小鼓'
+[  34.7s] A2 1-0 序列记录 [{'seq': [0, 0], 'len': 2, 'speed': 500}, {'seq': [0, 0], 'len': 2, 'speed': 500}, {'seq': [0, 0], 'len': 2, 'speed': 500}, {'seq': [0, 1], 'len': 2, 'speed': 500}, {'seq': [2, 3], 'len': 2, 'speed': 500}]
+[  35.5s] A2 CELEBRATE 星星=3 文案='★/★/★/真棒！'
+[  35.6s] SNAP simon_celebrate_A2.png
+[  41.1s] A2 存档 levels[1-0] = {'stars': 3, 'plays': 1}
+[  41.1s] A2 当前关 flat=1（应自动进 1-1）
+[  42.1s] B 1-1 第1题 seq=[2, 2] pos=0
+[  43.4s] B 敲错后 立即 phase='watch' pos=0 miss=1
+[  45.3s] B 重播耗时≈2.4s 回到input pos=0（pos清零=True）miss=1
+[  45.4s] SNAP simon_B_replay.png
+[  50.9s] B 1-1 第2题 seq=[3, 3]
+[  53.4s] B 第2题敲错后 miss=1 重播≈2.5s
+[  77.7s] B 1-1 第3题 seq=[3, 3]
+[  80.9s] B 第3题敲错后 miss=2 pos=0（3次错未卡死）
+[ 105.2s] C 第4题 seq=[3, 3] 先敲对第1锤再发呆
+[ 105.8s] C ★救援触发 @0.0s rescues=3 phase='input' pos=1
+[ 119.6s] C ★救援触发 @13.8s rescues=4 phase='watch' pos=1
+[ 119.6s] C phase→'watch' @13.8s
+[ 120.1s] C ★鼓面亮起(序列视觉重现) @14.3s lit=['3']
+[ 120.2s] SNAP simon_C_rescue_replay.png
+[ 121.1s] C phase→'input' @15.3s
+[ 125.8s] C 静置结束 rescue={'at_s': 13.8, 'lit_seen': 14.3, 'phase flips': [(13.8, 'watch'), (15.3, 'input')]}
+[ 125.8s] C 救援后 pos=1（保留已敲进度=True）
+[ 125.9s] D1 seed n=6 关数=6 reload
+[ 128.6s] D1 DAYEND overlay=1 文案='今天的新关卡玩完啦/明天：接下来要敲四下，更长的鼓点/再玩玩旧关卡/明天见'
+[ 128.6s] D1 n=6 重开后 flat=0 ch=1 dayend=1
+[ 128.7s] SNAP simon_D1_dayend_n6.png
+[ 131.4s] D2 seed n=5 重开后 flat=5 ch=2 lv=0
+[ 131.5s] D2 DAYEND overlay=0 文案=None
+[ 131.5s] D2 2-0 第1题 序列=[1, 0, 2] 长=3（第2章=3步记忆）
+[ 136.8s] D2 2-0 第2题 序列=[1, 3, 0] 长=3（第2章=3步记忆）
+[ 143.9s] D2 ch2 敲错后 pos=0（已敲对2锤全清零）miss=1 重播重来
+[ 143.9s] SNAP simon_D2_wrong_reset.png
+[ 151.0s] D2 2-0 第3题 序列=[3, 0, 3] 长=3（第2章=3步记忆）
+[ 159.3s] D2 2-0 第4题 序列=[1, 2, 3] 长=3（第2章=3步记忆）
+[ 167.3s] D2 2-0 第5题 序列=[3, 3, 2] 长=3（第2章=3步记忆）
+[ 175.7s] D2 CELEBRATE 星星=2 文案='★/★/好棒！'
+[ 175.8s] SNAP simon_celebrate_D2.png
+[ 181.3s] D2 存档 levels[2-0] = {'stars': 2, 'plays': 1}
+[ 181.3s] D2后 DAYEND overlay=1 文案='今天的新关卡玩完啦/明天：接下来要敲四下，更长的鼓点/再玩玩旧关卡/明天见'
+[ 181.3s] E 审计 {'tip': '跟着敲一敲 2/3', 'pad_px': '270x270', 'pad_fs': '13.3333px'}
+[ 181.3s] DONE errors=[]

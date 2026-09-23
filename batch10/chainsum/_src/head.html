@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>算术接龙</title>
+<style>
+/* ================= 算术接龙 chainsum（batch10）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E、灰蓝错误色（不用大红）
+   玩法 = 小兔子火车接龙：首节车厢=起点数字，尾部空车厢上方运算牌（+3/-2 大字），
+   底部 3 张数字候选卡点选（主答案 ≥96 §0.9）；车厢为非交互数轴锚点（div 免 64 门，照 neighbors 房子）。
+   数字=训练目标大字恒亮（§0.19）；题面指令全语音承载（§0.19），题面行=等式装饰性冗余；
+   + 暖橙 / - 灰蓝 双色（与 batch8 up1/down1 同源）；overflowX 恒 0 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:38px;height:38px;border-radius:11px;background:#BFD9A8;display:flex;align-items:center;
+  justify-content:center;flex:0 0 38px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：草地铁道（小火车） + 题面行 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;overflow:hidden;padding:6px 10px}
+#field{position:relative;width:100%;max-width:1180px;flex:1 1 auto;min-height:200px;
+  background:#CBE7F0;border:3px solid #A8D3E2;border-radius:26px;overflow:hidden;
+  box-shadow:inset 0 0 0 6px rgba(255,249,238,.4)}
+#field .scene{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+
+/* ---------- 小火车（车厢横排，底部对齐坐轨；opsign 恒占位保车厢齐高）
+   car[0]=车头（起点数字），car[i]=quizzes[i-1].answer，尾部 1 节空车厢=当前题 ---------- */
+#trainwrap{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;
+  padding:14px 14px 20px;pointer-events:none}
+#trainwrap::before{content:'';position:absolute;left:16px;right:16px;bottom:24px;height:6px;
+  border-radius:3px;background:#C9A87C;box-shadow:0 3px 0 #B08A5E}
+#trainwrap::after{content:'';position:absolute;left:16px;right:16px;bottom:12px;height:10px;
+  background:repeating-linear-gradient(90deg,#B08A5E 0 12px,transparent 12px 27px);opacity:.75}
+#train{display:flex;align-items:flex-end;gap:9px;max-width:100%;z-index:1}
+.carslot{flex:1 1 0;max-width:122px;min-width:54px;display:flex;flex-direction:column;
+  align-items:center;justify-content:flex-end}
+/* 运算牌：+ 暖橙 / - 灰蓝；空车厢上方大字；已填车厢侧占位空 div 保对齐 */
+.opsign{height:46px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5px}
+.opsign b{display:inline-block;padding:3px 13px;border-radius:14px;background:#FFF9EE;
+  border:2.5px solid #4A3B2E;font-size:clamp(24px,4.4vmin,33px);font-weight:800;line-height:1.1;
+  box-shadow:0 3px 0 #D8C9B4;white-space:nowrap;font-variant-numeric:tabular-nums;
+  animation:op-bounce 1.5s ease-in-out infinite}
+.opsign.plus b{color:#E8873A}
+.opsign.minus b{color:#5E82A6}
+@keyframes op-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+/* 车厢：数字大字恒亮（§0.19 训练目标可见） */
+.car{position:relative;width:100%;aspect-ratio:5/4;max-height:100px;min-height:52px;
+  background:#FFF9EE;border:3px solid #4A3B2E;border-radius:14px;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center}
+.car .cv{font-size:clamp(24px,5vmin,42px);font-weight:800;color:#4A3B2E;line-height:1;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+/* 车头（首节=起点数字）：烟囱 + 暖色车身 */
+.carslot.head .car{background:#FBE9D2;border-color:#C77A42;box-shadow:0 4px 0 #D9B285}
+.carslot.head .car .cv{color:#B05F22}
+.carslot.head .car::before{content:'';position:absolute;top:-17px;left:50%;transform:translateX(-50%);
+  width:13px;height:16px;border-radius:4px 4px 0 0;background:#C77A42;border:2.5px solid #4A3B2E;
+  border-bottom:none}
+.carslot.head .car::after{content:'';position:absolute;top:-30px;left:50%;transform:translateX(-50%);
+  width:11px;height:11px;border-radius:50%;background:#E8DCC8;opacity:0;
+  animation:puff 2.6s ease-out infinite}
+@keyframes puff{0%{opacity:0;transform:translateX(-50%) translateY(0) scale(.5)}
+  25%{opacity:.85}100%{opacity:0;transform:translateX(-50%) translateY(-20px) scale(1.5)}}
+/* 空车厢：虚线框 + 问号 + 呼吸高亮（当前题目标位） */
+.car.empty{background:#FDF6E7;border:2.5px dashed #E8975A;box-shadow:0 4px 0 #E5D5BC}
+.car.empty .cv{color:#E8873A}
+.carslot.tail{animation:empty-breathe 1.9s ease-in-out infinite}
+@keyframes empty-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 10px rgba(232,151,90,.75))}}
+/* 刚填上：数字弹出 + 绿闪 */
+.car.justlit{background:#8FBF7F;border-color:#6FA063;box-shadow:0 4px 0 #6FA063;
+  animation:car-lit .5s cubic-bezier(.2,1.6,.4,1)}
+.car.justlit .cv{color:#FFF9EE;animation:cv-in .5s cubic-bezier(.2,1.7,.4,1)}
+@keyframes car-lit{0%{transform:scale(1)}45%{transform:scale(1.14)}100%{transform:scale(1)}}
+@keyframes cv-in{from{transform:scale(0)}to{transform:scale(1)}}
+/* 车轮（纯装饰） */
+.wheels{display:flex;gap:22%;justify-content:center;padding-top:3px;height:20px}
+.wheels i{width:15px;height:15px;border-radius:50%;background:#FBF7F0;border:3px solid #4A3B2E}
+
+/* ---------- 题面行：等式（数字+运算符装饰性冗余，指令全语音承载 §0.19） ---------- */
+#prompt{flex:0 0 auto;display:flex;align-items:center;justify-content:center;min-height:78px;
+  padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:12px;padding:6px 26px;min-height:66px;
+  border-radius:22px;background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  transition:transform .15s}
+#prompt-chip:active{transform:translateY(3px)}
+#prompt-chip .fnum{font-size:34px;font-weight:800;color:#4A3B2E;line-height:1;
+  font-variant-numeric:tabular-nums}
+#prompt-chip .fop{font-size:32px;font-weight:800;line-height:1}
+#prompt-chip .fop.plus{color:#E8873A}
+#prompt-chip .fop.minus{color:#5E82A6}
+#prompt-chip .feq{font-size:26px;font-weight:800;color:#8A7B6C;line-height:1}
+#prompt-chip .fq{font-size:34px;font-weight:800;color:#E8873A;line-height:1}
+
+/* ---------- 候选数字卡（主答案按钮 ≥96） ---------- */
+#cards{flex:0 0 auto;display:flex;justify-content:center;align-items:center;gap:22px;
+  padding:12px 10px 4px}
+.cardbtn{width:116px;height:128px;border-radius:22px;background:#FFF9EE;border:3px solid #4A3B2E;
+  box-shadow:0 5px 0 #D8C9B4;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:2px;transition:transform .15s,box-shadow .15s;position:relative}
+.cardbtn:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+.cardbtn .changer{width:44px;height:7px;border-radius:4px;background:#E5D5BC}
+.cardbtn .cv{font-size:54px;font-weight:800;color:#4A3B2E;line-height:1;
+  font-variant-numeric:tabular-nums}
+/* 答对：绿底弹起 */
+.cardbtn.lit{background:#8FBF7F;border-color:#6FA063;box-shadow:0 5px 0 #6FA063;
+  animation:opt-lit .5s cubic-bezier(.2,1.6,.4,1)}
+.cardbtn.lit .cv{color:#FFF9EE}
+@keyframes opt-lit{0%{transform:scale(1)}45%{transform:scale(1.12)}100%{transform:scale(1)}}
+/* 答错：晃动后灰掉（零惩罚，排除法保底）；已灰卡不可点（真实点击落空白轻提示路径 §0.7） */
+.cardbtn.wig{animation:an-wig .55s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-7deg)}
+  55%{transform:rotate(6deg)}80%{transform:rotate(-3deg)}}
+.cardbtn.dim{filter:grayscale(.75);opacity:.42;transform:scale(.93);pointer-events:none;
+  box-shadow:0 3px 0 #D8C9B4}
+/* 连错 2 次后 / 救援视觉重现：正确卡呼吸高亮（首错不 pulse，给再想机会） */
+.cardbtn.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+@keyframes an-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch8/9） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：候选卡/题面适配，主答案仍 ≥96 */
+@media (orientation:portrait){
+  .cardbtn{width:104px;height:116px}
+  .cardbtn .cv{font-size:48px}
+  #cards{gap:16px}
+  #prompt-chip{gap:10px;padding:5px 20px}
+  #prompt-chip .fnum,#prompt-chip .fq{font-size:29px}
+  #prompt-chip .fop{font-size:27px}
+  .opsign b{font-size:clamp(22px,4.6vw,29px)}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="算术接龙">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="field" aria-label="数字小火车">
+      <div class="scene" aria-hidden="true"></div>
+      <div id="trainwrap"><div id="train" aria-label="火车车厢数字"></div></div>
+    </div>
+    <div id="prompt">
+      <button id="prompt-chip" aria-label="题目，点我再听一遍"></button>
+    </div>
+    <div id="cards" aria-label="候选数字卡"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

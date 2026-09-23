@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>弹球进洞</title>
+<style>
+/* ================= 弹球进洞 bounce（batch18）=================
+   视觉按 SPEC-BATCH18 §3（承家族暖米底）：每题=弹球台 SVG 面板（6×5 格当量，
+   格点阵整数坐标）+球起点+2-3 张方向卡（8 方向：水平/垂直/对角线）+墙
+   （边界恒在+内部障碍墙段，含 ch3+ 的 45° 斜镜面）+洞 2-3 个（1 正确）。
+   点方向卡→球沿格点直线飞行，入射角=反射角（水平墙翻 vy/垂直墙翻 vx/
+   斜墙翻转轴向分解）→入正确洞=过关推进；入错洞/步数上限（8 段反弹）=
+   零惩罚可重点。触摸目标：方向卡 ≥64（实做 ≥96）、底栏按钮 ≥72 高；
+   pointerdown 即响应 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E7D8C0;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E7D8C0}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:12px;overflow:hidden;padding:4px 10px}
+
+/* ---------- 题面：弹球台 SVG ---------- */
+#board{position:relative;flex:0 0 auto;animation:board-in .4s cubic-bezier(.2,1.5,.4,1) both}
+@keyframes board-in{from{transform:scale(.7);opacity:0}to{transform:scale(1);opacity:1}}
+#field{width:456px;height:388px;max-width:94vw;height:auto;background:#F6ECD9;border-radius:20px;
+  box-shadow:0 5px 0 rgba(74,59,46,.2)}
+/* 边界墙（恒在）=面板四周厚描边矩形；被弹到时闪亮 */
+#field .bounds{fill:none;stroke:#7A5B41;stroke-width:8;transition:stroke .2s}
+#field .bounds.hitflash{stroke:#E8975A}
+/* 格点阵小圆点（帮孩子盯线） */
+#field .dot{fill:#DCCBAC}
+/* 内部墙段：厚圆头线；被弹到时 glow */
+#field line.wall{stroke:#7A5B41;stroke-width:10;stroke-linecap:round;transition:stroke .2s}
+#field line.wall.glow{stroke:#E8975A}
+/* 洞：外圈深棕+内坑更暗；吞球时绿圈扩散 */
+#field .hole .pit{fill:#3B2C20}
+#field .hole .dark{fill:#201710}
+#field .hole .ring{fill:none;stroke:transparent;stroke-width:3.5;
+  transform-box:fill-box;transform-origin:center}
+#field .hole.gulp .ring{stroke:#8FBF7F;animation:hole-gulp .55s ease both}
+@keyframes hole-gulp{from{transform:scale(1);opacity:1}to{transform:scale(1.9);opacity:0}}
+/* 起点标记：虚线圆环 */
+#field .start{fill:none;stroke:#C9A87C;stroke-width:2.5;stroke-dasharray:4 4}
+/* 已飞轨迹：暖橙细线（错后保留=回看弹点） */
+#field #trail{fill:none;stroke:#E8975A;stroke-width:4;opacity:.5;stroke-linecap:round;stroke-linejoin:round}
+/* 救援首段轨迹虚线（正确方向第一段） */
+#field .hole .wrong-x{stroke:#E0503C;stroke-width:4.5;stroke-linecap:round;animation:x-pop .35s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes x-pop{from{transform:scale(.2);opacity:0}to{transform:scale(1);opacity:1}}
+#field #rescue-line{stroke:#8FBF7F;stroke-width:5;stroke-dasharray:9 8;stroke-linecap:round;visibility:hidden}
+#field #rescue-line.show{visibility:visible;animation:rescue-blink 1.1s ease-in-out 3}
+@keyframes rescue-blink{0%,100%{opacity:.95}50%{opacity:.25}}
+/* 小球：CSS transform 平移（逐格飞行）；gone=淡出（入洞/步数上限） */
+#field #ball{transition:transform .09s linear,opacity .3s}
+#field #ball .body{fill:#E8975A;stroke:#4A3B2E;stroke-width:2.5}
+#field #ball .shine{fill:#FFF;opacity:.75}
+#field #ball.gone{opacity:0}
+
+/* ---------- 底部作答区：方向卡（≥64 实做 ≥96） ---------- */
+#answers{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:8px;min-height:132px;padding:2px 12px}
+#tip{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:700;color:#8A7B6C}
+#tip svg{width:32px;height:32px}
+#cards{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.dcard{min-width:104px;min-height:104px;padding:8px 20px;border-radius:24px;background:#FFFAF0;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #C9A87C;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:2px;transition:transform .15s,box-shadow .15s;
+  animation:board-in .38s cubic-bezier(.2,1.5,.4,1) both}
+.dcard:nth-child(2){animation-delay:.07s}
+.dcard:nth-child(3){animation-delay:.14s}
+.dcard:active{transform:translateY(3px);box-shadow:0 2px 0 #C9A87C}
+.dcard .a-ico{width:52px;height:52px;display:flex}
+.dcard .a-ico svg{width:100%;height:100%}
+.dcard .nm{font-size:19px;font-weight:800;color:#4A3B2E;letter-spacing:.08em}
+.dcard.breathe{animation:card-breathe 1.6s ease-in-out infinite}
+@keyframes card-breathe{0%,100%{transform:scale(1);box-shadow:0 5px 0 #C9A87C,0 0 0 rgba(143,191,127,0)}
+  50%{transform:scale(1.1);box-shadow:0 5px 0 #C9A87C,0 0 18px rgba(143,191,127,.9)}}
+.dcard.nudge{animation:card-nudge .4s ease}
+@keyframes card-nudge{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}
+  60%{transform:translateX(6px)}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-replay svg{width:42px;height:42px}
+
+/* ---------- 幽灵手指教学（照 mirrormaze/read） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFFAF0;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：方向卡仍 ≥64（实做 96），台面随宽缩放 */
+@media (orientation:portrait){
+  .dcard{min-width:96px;min-height:96px;padding:6px 16px}
+  .dcard .a-ico{width:46px;height:46px}
+  #tip{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="弹球进洞">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="board" aria-label="弹球台面">
+      <svg id="field" viewBox="0 0 456 388" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+    <div id="answers" aria-label="方向卡作答区"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

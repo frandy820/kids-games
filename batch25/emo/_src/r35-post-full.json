@@ -1,0 +1,6882 @@
+{
+ "0": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "h_icecream",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_egg",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_rain",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "s_icecream",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_blocks",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "1": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "s_icecream",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_sticker",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_snow",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_path",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_queue",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "2": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "c_dark",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_park",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "s_balloon",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_egg",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "3": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "s_balloon",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_bdog",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_icecream",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_mom",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_queue",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "4": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "s_flower",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_snow",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_grab",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_rain",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "5": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "a_grab",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_gift",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_grab",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_flower",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": "c_shot",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_snow",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_park",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "6": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "s_balloon",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_mom",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_shot",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "su_balls",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_sticker",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_grab",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_gift",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "7": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "a_grab",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": "a_grab",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": "c_shot",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "s_icecream",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_path",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_dark",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": "h_sticker",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_snow",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "8": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "c_bdog",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_party",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_sticker",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "h_park",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_thunder",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": "s_icecream",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_grab",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "9": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "s_icecream",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_laugh",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "h_icecream",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_queue",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_mom",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_dark",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": "su_egg",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "10": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "c_shot",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": "a_grab",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": "su_party",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_shot",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": "w_mom",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_icecream",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": "h_gift",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_icecream",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_laugh",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_path",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": "c_thunder",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "11": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "c_dark",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "a_laugh",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_thunder",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": "a_laugh",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": "w_mom",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": "su_party",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "w_rain",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": "c_shot",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "s_flower",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_bdog",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "12": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "c_shot",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_icecream",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_shot",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_grab",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_flower",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_mom",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": "su_party",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": "h_sticker",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "w_path",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_queue",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "13": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "s_teddy",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_grab",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_thunder",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_egg",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_queue",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_mom",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_bdog",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": "a_laugh",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "14": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "a_laugh",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_laugh",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_teddy",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": "h_gift",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_queue",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_bdog",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_mom",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_flower",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": "su_egg",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "15": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "su_egg",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "a_laugh",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_laugh",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_park",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_icecream",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_party",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_mom",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": "s_icecream",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": "h_gift",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_bdog",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_sticker",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "16": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "su_party",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_thunder",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": "su_party",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_queue",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "h_park",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": "w_mom",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "s_balloon",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "17": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "a_blocks",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_icecream",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "su_egg",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": "su_egg",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": "a_laugh",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": "su_party",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_sticker",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "18": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "w_path",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "su_party",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": "su_party",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_sticker",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_shot",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "a_laugh",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_laugh",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "19": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "a_laugh",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_teddy",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_shot",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_sticker",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_egg",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_park",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_queue",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": "c_thunder",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "20": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "s_teddy",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_mom",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_party",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": "c_thunder",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_rain",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_queue",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_laugh",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "21": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "s_teddy",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_sticker",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "a_laugh",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_party",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_laugh",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_rain",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_egg",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "22": {
+  "ch": 5,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "su_party",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "a_blocks",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_icecream",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_thunder",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_queue",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_park",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_mom",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "23": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "h_park",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_thunder",
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_laugh",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_queue",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_balloon",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "24": {
+  "ch": 5,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "h_park",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": "su_party",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_snow",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_flower",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_gift",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_thunder",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_dark",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_egg",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_queue",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "25": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "a_grab",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_balloon",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_queue",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_rain",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_bdog",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_egg",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": "a_laugh",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_party",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "26": {
+  "ch": 6,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "s_flower",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_icecream",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_balls",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_path",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_grab",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "27": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "c_bdog",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_mom",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_egg",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_queue",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "su_balls",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_gift",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_thunder",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_rain",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_balloon",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_party",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "28": {
+  "ch": 6,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "c_dark",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_rain",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "s_icecream",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_blocks",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_icecream",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "29": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "a_blocks",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_gift",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_shot",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_shot",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_queue",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "su_egg",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_mom",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_egg",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "30": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "w_mom",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_mom",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_grab",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_blocks",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_flower",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": "a_laugh",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": "h_sticker",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_dark",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "w_rain",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "31": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "s_icecream",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_icecream",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_gift",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "w_mom",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_mom",
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_laugh",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_bdog",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "a_queue",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_thunder",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_queue",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "32": {
+  "ch": 7,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "s_balloon",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_shot",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_icecream",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "c_bdog",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": "a_queue",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": "su_egg",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_blocks",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_snow",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "33": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "s_flower",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_bdog",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "w_rain",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_gift",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_park",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "su_balls",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": "su_balls",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": "s_icecream",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "34": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "c_dark",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_sticker",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_queue",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_flower",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_shot",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": "su_egg",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_laugh",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "w_mom",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": "w_mom",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_grab",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "35": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "su_egg",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "s_flower",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "h_gift",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_test",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": "h_gift",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "a_blocks",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "36": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "su_snow",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_dark",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "s_icecream",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_sticker",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_bdog",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_icecream",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "a_grab",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "37": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "w_rain",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_balloon",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": "h_gift",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "h_park",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "a_laugh",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_laugh",
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_egg",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "38": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "h_park",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_park",
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": "s_teddy",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_snow",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "s_balloon",
+    "emo": "sad",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "su_egg",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "sad",
+      "scene": "s_icecream",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": "su_egg",
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": "c_dark",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "happy",
+      "scene": "h_sticker",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "39": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "rev",
+    "scene": "a_blocks",
+    "emo": "angry",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "scared",
+      "scene": "c_shot",
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_path",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "angry",
+      "scene": "a_blocks",
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": "s_flower",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "c_thunder",
+    "emo": "scared",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "scared",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "w_test",
+    "emo": "worried",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "worried",
+      "scene": null,
+      "right": true
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "fwd",
+    "scene": "su_egg",
+    "emo": "surprised",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "angry",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f1",
+      "emo": "surprised",
+      "scene": null,
+      "right": true
+     },
+     {
+      "id": "f2",
+      "emo": "happy",
+      "scene": null,
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "sad",
+      "scene": null,
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "mode": "rev",
+    "scene": "h_icecream",
+    "emo": "happy",
+    "faces": [
+     {
+      "id": "f0",
+      "emo": "happy",
+      "scene": "h_icecream",
+      "right": true
+     },
+     {
+      "id": "f1",
+      "emo": "worried",
+      "scene": "w_rain",
+      "right": false
+     },
+     {
+      "id": "f2",
+      "emo": "surprised",
+      "scene": "su_party",
+      "right": false
+     },
+     {
+      "id": "f3",
+      "emo": "angry",
+      "scene": "a_grab",
+      "right": false
+     }
+    ],
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ }
+}

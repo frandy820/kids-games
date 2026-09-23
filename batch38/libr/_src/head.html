@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>分类归档小图书</title>
+<style>
+/* ================= libr 分类归档小图书（batch38 + R48 难度批）=================
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色 #E8975A、暖棕描边 #4A3B2E。
+   玩法 = 小图书室归档（SPEC-BATCH38 §0.92/§2 + SPEC-R48）：书架**恒四格**
+   （每格主题标签牌：小图标+主题名+主题色——R48 ch1 起即四格）+题面区双形态
+   （sort=当前卡大图 / pick=三卡跨维挑书盘，图形为主+名称小字——识字辅助非
+   依赖，TTS 双通道）。题面=提示句（say 非队列链，零文字依赖；普通「它住哪
+   一格呢」/维度句 R48 去泄漏只述标准/pick「帮X格挑一本新书」反向句）。
+   归对=卡片飞入格+书立起（格内已归卡可视化堆叠）+lb_right；归错=卡弹回
+   +lb_wrong+错链（lb_hint）+方向级=错链播毕重读题面句（不亮答案本体）。
+   ch1 四格普通/ch2 维度句/ch3 冲突深化/ch4 跨维二级题（pick 盘+目标格脉冲）。
+   触摸目标：书架格 ≥96×96（实测 ~132×128）、盘卡 ≥96×126；overflowX 恒 0。
+   四格主题色互异+标签牌小图标（识别锚=读标签，非颜色歧视）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:38px;height:38px;border-radius:11px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 38px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：图书室（当前卡大图+书架） ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:6px;overflow:hidden;padding:6px 12px}
+#scene{position:relative;flex:1 1 auto;width:100%;max-width:640px;min-height:230px;display:flex;
+  flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  background:linear-gradient(180deg,#FDF3E3 0%,#FAE9CF 100%);
+  border:3px solid #E5CDA6;border-radius:26px;overflow:hidden;
+  box-shadow:inset 0 0 0 5px rgba(255,249,238,.55);padding:10px 12px}
+/* 地毯线：图书室地面 */
+#scene .ground{position:absolute;left:8%;right:8%;bottom:16px;height:14px;border-radius:50%;
+  background:rgba(201,179,138,.3)}
+
+/* 当前卡区：大图（图形为主）+名称小字+提示句（TTS 同源文字） */
+#current-zone{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:2px;z-index:2}
+#card-big{position:relative;width:126px;height:126px;background:#FFF9EE;border:3px solid #4A3B2E;
+  border-radius:20px;box-shadow:0 5px 0 #D8C9B4;padding:6px;transition:transform .15s}
+#card-big svg{width:100%;height:100%}
+/* 卡出场弹入（题面态——契约 M DOM 类层锚：题面态无 away/fly/back） */
+#card-big.in{animation:cb-in .45s ease}
+@keyframes cb-in{0%{transform:translateY(-18px) scale(.86);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+/* 归对：卡片飞入格（缩落下渐隐——书立起为承载叙事的演出主体） */
+#card-big.fly{animation:cb-fly 1s ease forwards}
+@keyframes cb-fly{0%{transform:translateY(0) scale(1);opacity:1}
+  60%{transform:translateY(46px) scale(.62);opacity:.9}
+  100%{transform:translateY(74px) scale(.3);opacity:0}}
+/* 归错：卡弹回（摇头弹动——不指正确格本体） */
+#card-big.back{animation:cb-back .5s ease}
+@keyframes cb-back{0%,100%{transform:translateX(0)}25%{transform:translateX(-9px) rotate(-3deg)}
+  75%{transform:translateX(9px) rotate(3deg)}}
+#card-name{font-size:20px;font-weight:800;color:#4A3B2E;letter-spacing:2px}
+/* ---------- R48 跨维二级题：三卡挑书盘（#card-big 容器切 tray 形态） ---------- */
+#card-big.tray{width:auto;max-width:100%;height:auto;background:transparent;border:none;
+  box-shadow:none;padding:0;display:flex;gap:10px}
+#card-big.tray .tray-card{width:104px;min-height:140px;background:#FFF9EE;border:3px solid #4A3B2E;
+  border-radius:16px;box-shadow:0 5px 0 #D8C9B4;display:flex;flex-direction:column;align-items:center;
+  gap:2px;padding:8px 6px 6px;transition:transform .15s}
+#card-big.tray .tray-card:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+#card-big.tray .tray-card svg{width:82px;height:82px}
+#card-big.tray .tray-card b{font-size:16px;font-weight:800;color:#4A3B2E;letter-spacing:2px}
+/* 挑对：卡飞入目标格（缩落渐隐——书立起为承载叙事的演出主体，同 cb-fly 形态） */
+#card-big.tray .tray-card.fly{animation:cb-fly 1s ease forwards}
+/* 挑错：卡轻晃弹回（不亮正确卡本体——须靠跨维辨别） */
+#card-big.tray .tray-card.miss{animation:cb-back .5s ease}
+/* 答案级救援：正确卡高亮呼吸 */
+#card-big.tray .tray-card.breathe{animation:tc-hint 1.2s ease-in-out infinite}
+@keyframes tc-hint{0%,100%{box-shadow:0 5px 0 #D8C9B4}50%{box-shadow:0 5px 0 #D8C9B4,0 0 16px rgba(232,151,90,.95)}}
+/* 盘卡出场弹入（与格弹入同形态） */
+#card-big.tray .tray-card.pop{animation:sl-pop .45s ease backwards}
+/* pick 题目标格恒亮脉冲（目标格=题面已知量非答案泄漏——答案是卡） */
+.shelf-slot.target{border-color:#E8975A;box-shadow:0 5px 0 #D8C9B4,0 0 0 4px rgba(232,151,90,.35);
+  animation:sl-target 1.2s ease-in-out infinite}
+@keyframes sl-target{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+#hint-line{font-size:15px;color:#8A7B6C;letter-spacing:1px;max-width:420px;text-align:center}
+/* 提示牌重亮（方向级反馈/救援：重读维度提示配动效） */
+#hint-line.repop{animation:ht-re .6s ease}
+@keyframes ht-re{0%,100%{transform:scale(1);color:#8A7B6C}45%{transform:scale(1.08);color:#E8975A}}
+
+/* ---------- 书架：2-4 格（主题标签牌+格内已归书堆叠——进度可见） ---------- */
+#shelf{flex:0 0 auto;display:flex;justify-content:center;align-items:stretch;gap:10px;
+  width:100%;max-width:600px;position:relative;z-index:2}
+#shelf.wig{animation:sh-wig .5s ease}
+@keyframes sh-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-1.4deg)}75%{transform:rotate(1.4deg)}}
+#shelf.bump{animation:sh-bump .22s ease}
+@keyframes sh-bump{0%,100%{transform:scale(1)}45%{transform:scale(.97)}}
+.shelf-slot{display:flex;flex-direction:column;flex:1 1 0;min-width:96px;min-height:128px;
+  padding:6px 6px 8px;border-radius:16px;gap:3px;
+  background:#FFF9EE;border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  transition:transform .15s}
+.shelf-slot:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+/* 主题标签牌：主题色底+小图标+主题名（识别锚=读标签） */
+.shelf-slot .slot-tag{display:flex;align-items:center;justify-content:center;gap:4px;
+  padding:3px 6px;border-radius:10px;background:var(--tcol,#F2DDC0)}
+.shelf-slot .slot-tag svg{width:26px;height:26px}
+.shelf-slot .slot-tag b{font-size:16px;font-weight:800;color:#4A3B2E;letter-spacing:2px}
+/* 格内书堆叠（书立起可视化——契约 M 演出层 DOM 锚 .bk） */
+.shelf-slot .slot-books{flex:1 1 auto;display:flex;align-items:flex-end;justify-content:center;
+  gap:3px;padding:2px 2px 0;min-height:44px;
+  border-bottom:5px solid #C9A87C;border-radius:0 0 6px 6px}
+.shelf-slot .bk{display:block;width:15px;height:40px;border-radius:3px 3px 1px 1px;
+  border:2.2px solid #4A3B2E;position:relative}
+.shelf-slot .bk i{position:absolute;left:2.5px;top:5px;width:6px;height:26px;
+  border-radius:2px;background:rgba(255,249,238,.75)}
+/* 书立起弹立动画（归对时新增书脊） */
+.shelf-slot .bk.book-in{animation:bk-in .8s ease}
+@keyframes bk-in{0%{transform:translateY(-30px) scaleY(.4);opacity:0}
+  55%{transform:translateY(3px) scaleY(1.08);opacity:1}100%{transform:translateY(0) scaleY(1)}}
+/* 归对格：亮起一拍（演出层锚 .good——契约 M） */
+.shelf-slot.good{animation:sl-good 1.1s ease}
+@keyframes sl-good{0%{transform:scale(1)}35%{transform:scale(1.09) translateY(-4px)}100%{transform:scale(1)}}
+/* 归错格：轻晃（不指正确格本体） */
+.shelf-slot.miss{animation:sl-miss .5s ease}
+@keyframes sl-miss{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+/* 救援答案级：正确格高亮呼吸 */
+.shelf-slot.breathe{animation:sl-hint 1.2s ease-in-out infinite}
+@keyframes sl-hint{0%,100%{box-shadow:0 5px 0 #D8C9B4}50%{box-shadow:0 5px 0 #D8C9B4,0 0 16px rgba(232,151,90,.95)}}
+/* 出场弹入 */
+.shelf-slot.pop{animation:sl-pop .45s ease backwards}
+@keyframes sl-pop{0%{transform:translateY(26px) scale(.86);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+
+#q-text{flex:0 0 auto;font-size:15px;letter-spacing:2px;color:#8A7B6C;padding:0 0 6px}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（fixed 层，教学演示/帮共用；照家族形态） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:opacity .4s;transform:translate(-50%,-88%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-88%)}50%{transform:translate(-50%,-74%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：舞台收紧+格横排收窄 */
+@media (orientation:portrait){
+  #scene{min-height:200px;max-width:470px;gap:6px;padding:8px 8px}
+  #card-big{width:104px;height:104px}
+  #card-name{font-size:18px}
+  #hint-line{font-size:13px;max-width:330px}
+  #shelf{gap:8px;max-width:440px}
+  .shelf-slot{min-width:96px;min-height:118px;padding:4px 4px 6px}
+  .shelf-slot .slot-tag b{font-size:14px}
+  .shelf-slot .slot-tag svg{width:22px;height:22px}
+  .shelf-slot .bk{width:12px;height:34px}
+  .shelf-slot .bk i{left:2px;top:4px;width:4.5px;height:22px}
+  /* R48 挑书盘竖屏收紧（触摸目标 ≥96 保持） */
+  #card-big.tray{gap:8px}
+  #card-big.tray .tray-card{width:96px;min-height:126px;padding:6px 4px 5px}
+  #card-big.tray .tray-card svg{width:72px;height:72px}
+  #card-big.tray .tray-card b{font-size:14px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="分类归档小图书">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="scene" aria-label="小图书室归档">
+      <div class="ground" aria-hidden="true"></div>
+      <div id="current-zone" aria-hidden="true">
+        <div id="card-big"></div>
+        <div id="card-name"></div>
+        <div id="hint-line"></div>
+      </div>
+      <div id="shelf" aria-label="书架：点一格把书放回家"></div>
+    </div>
+    <div id="q-text" aria-hidden="true"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

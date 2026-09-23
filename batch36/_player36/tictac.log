@@ -1,0 +1,43 @@
+[09:51:04] [PASS] mulberry32 Python 复刻位级对齐 :: aligned
+[09:51:08] [PASS] 教学 watch 期演示吞输入 null :: 返回=None
+[09:51:15] [PASS] 教学 watch 末步 __tkDemoR=done（整局走完） :: 
+[09:51:15] [PASS] watch 实测 ≤16s :: 10743ms
+[09:51:15] [PASS] 教学 watch 语音 tk_tut_watch 在场（Audio 层） :: 前3=['tk_tut_watch', 'tk_right', 'tk_tut_turn']
+[09:51:24] [PASS] 教学 turn 帮→独后进 flat0 :: 
+[09:51:24] [PASS] 教学 turn 语音 tk_tut_turn :: 
+[09:51:24] [PASS] flat0 关参数 ch1/3局 :: {'flat': 0, 'ch': 1, 'dch': 1, 'lv': 0, 'round': 1, 'n': 3, 'score': 0, 'step': 0, 'done': False, 'won': False
+[09:51:24] [PASS] 兔子回合抢点=轻吞 false（不误判不落子） :: 返回=False
+[09:51:50] [PASS] 已占格=拒绝 false+bump（不响 wrong） :: 返回=False cls=cell x wig
+[09:52:16] [PASS] 胜线三格高亮(wincell) :: cls=cell x wincell line=[2, 4, 6]
+[09:52:20] [PASS] 兔子回合抢点=轻吞 false（不误判不落子） :: 返回=False
+[09:52:46] [PASS] 已占格=拒绝 false+bump（不响 wrong） :: 返回=False cls=cell x wig
+[09:53:12] [PASS] 胜线三格高亮(wincell) :: cls=cell x wincell line=[0, 4, 8]
+[09:53:15] [PASS] 兔子回合抢点=轻吞 false（不误判不落子） :: 返回=False
+[09:53:41] [PASS] 已占格=拒绝 false+bump（不响 wrong） :: 返回=False cls=cell x wig
+[09:54:33] [PASS] 胜线三格高亮(wincell) :: cls=cell x wincell line=[3, 4, 5]
+[09:54:37] [PASS] 3 局打完 :: results=['win', 'win', 'win']
+[09:54:37] [PASS] 胜局链=tk_right 单 clip :: 局末clip=['tk_right', 'tk_right', 'tk_right']
+[09:54:37] [PASS] miss 恒 0（策略款备案） :: miss=0
+[09:54:37] [PASS] flat0 过关庆祝≥2★ :: stars=3 results=['win', 'win', 'win']
+[09:54:40] [PASS] flat0 写档 :: {'stars': 3, 'plays': 1}
+[09:59:09] [PASS] 胜线三格高亮(wincell) :: cls=cell o wincell line=[2, 4, 6]
+[09:59:13] [PASS] ch4 不防守=负局路径走完 :: results=['draw', 'draw', 'lose']
+[09:59:13] [PASS] final() 终局快照 {result:lose,line} :: {'result': 'lose', 'line': [2, 4, 6]}
+[09:59:13] [PASS] 负局文案温和（兔子赢啦，再来一局） :: text='兔子赢啦，再来一局'
+[09:59:13] [PASS] 负局链=tk_lose 单 clip :: 局末clip=['tk_draw', 'tk_draw', 'tk_lose']
+[09:59:13] [PASS] 连败不增 miss :: miss=0
+[09:59:13] [PASS] 完成即星永不 0★（连败=1★兜底） :: stars=1
+[09:59:16] [PASS] flat15(4-0) 写档 1★ :: {'stars': 1, 'plays': 1}
+[09:59:20] js-retry#1 TimeoutError TK.autoSolve()
+[09:59:24] js-retry#2 TimeoutError TK.autoSolve()
+[09:59:28] js-retry#3 TimeoutError TK.autoSolve()
+[09:59:32] js-retry#4 TimeoutError TK.autoSolve()
+[09:59:35] [PASS] ch4 最优三局=3×平局(score1.5) :: score=1.5 stars=2
+[09:59:35] [PASS] 平局链=tk_draw 单 clip :: tk_draw×5
+[09:59:39] [PASS] 家长门错答一次 :: placeholder=再试一次
+[09:59:39] [PASS] bonusSet(5) limit 6→11 :: limit=11
+[10:00:32] [PASS] 胜线三格高亮(wincell) :: cls=cell x wincell line=[2, 4, 6]
+[10:01:28] [PASS] 胜线三格高亮(wincell) :: cls=cell x wincell line=[2, 4, 6]
+[10:02:23] [PASS] 胜线三格高亮(wincell) :: cls=cell x wincell line=[2, 4, 6]
+[10:02:27] [PASS] flat1 3 局打完 :: results=['win', 'win', 'win']
+[10:03:21] [PASS] 胜线三格高亮(wincell) :: cls=cell x wincell line=[0, 4, 8]

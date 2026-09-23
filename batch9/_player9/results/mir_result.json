@@ -1,0 +1,27 @@
+{
+ "game": "mirror 对称贴贴画",
+ "scens": {
+  "A_教学+第1关": {
+   "通关": true,
+   "stars": 3,
+   "tutSeen": true,
+   "教学吞输入": true,
+   "教学期乱点无pageerror": true
+  },
+  "B_1-1_连错+灰卡+救援": {
+   "通关": true,
+   "stars": 2,
+   "静置17s救援语音": [
+    "K:mir_q_v|镜子右边该贴哪一张呀"
+   ],
+   "pageerrors": []
+  },
+  "C_第2章2-1": {
+   "通关": true,
+   "stars": 2,
+   "章": 2,
+   "题型": "answer=镜像形, 干扰含原形",
+   "pageerrors": []
+  }
+ }
+}

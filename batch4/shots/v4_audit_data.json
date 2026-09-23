@@ -1,0 +1,5241 @@
+{
+ "clock": {
+  "states": {
+   "ch1_lp": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "opt",
+      "x": 392,
+      "y": 538,
+      "w": 152,
+      "h": 96,
+      "rgt": 544,
+      "btm": 634
+     },
+     {
+      "cls": "opt",
+      "x": 564,
+      "y": 538,
+      "w": 152,
+      "h": 96,
+      "rgt": 716,
+      "btm": 634
+     },
+     {
+      "cls": "opt",
+      "x": 736,
+      "y": 538,
+      "w": 152,
+      "h": 96,
+      "rgt": 888,
+      "btm": 634
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 700,
+      "w": 88,
+      "h": 88,
+      "rgt": 106,
+      "btm": 788
+     },
+     {
+      "cls": "",
+      "x": 608,
+      "y": 704,
+      "w": 80,
+      "h": 80,
+      "rgt": 688,
+      "btm": 784
+     },
+     {
+      "cls": "",
+      "x": 1190,
+      "y": 708,
+      "w": 72,
+      "h": 72,
+      "rgt": 1262,
+      "btm": 780
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": 20,
+     "vgap": null
+    },
+    "gapsDock": {
+     "hgap": 502,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 52
+     },
+     "stage": {
+      "x": 0,
+      "y": 52,
+      "w": 1280,
+      "h": 642
+     },
+     "clock-zone": {
+      "x": 475,
+      "y": 110,
+      "w": 330,
+      "h": 330
+     },
+     "prompt": {
+      "x": 632,
+      "y": 450,
+      "w": 16,
+      "h": 76
+     },
+     "answers": {
+      "x": 380,
+      "y": 536,
+      "w": 520,
+      "h": 100
+     },
+     "dock": {
+      "x": 0,
+      "y": 694,
+      "w": 1280,
+      "h": 106
+     }
+    },
+    "inputs": 0,
+    "clockSize": {
+     "w": 330,
+     "h": 330
+    },
+    "contrast": {
+     "opt": {
+      "fg": "rgb(74, 59, 46)",
+      "bg": "rgb(255,249,238)",
+      "ratio": 10.24,
+      "fontPx": "44px",
+      "weight": "800"
+     },
+     "cap": null,
+     "chip": null,
+     "readout": null,
+     "num": {
+      "opacity": 1,
+      "ratio": 10.24
+     },
+     "tickShort": {
+      "opacity": 0.55,
+      "ratio": 2.97
+     },
+     "hourHand": {
+      "color": "rgb(74, 59, 46)",
+      "ratio": 10.24
+     },
+     "minHand": {
+      "color": "rgb(199, 122, 66)",
+      "ratio": 3.19
+     }
+    },
+    "vp": "lp",
+    "state": "ch1"
+   },
+   "ch3_lp": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "clock-card drag",
+      "x": 475,
+      "y": 111,
+      "w": 330,
+      "h": 330,
+      "rgt": 805,
+      "btm": 441
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 700,
+      "w": 88,
+      "h": 88,
+      "rgt": 106,
+      "btm": 788
+     },
+     {
+      "cls": "",
+      "x": 608,
+      "y": 704,
+      "w": 80,
+      "h": 80,
+      "rgt": 688,
+      "btm": 784
+     },
+     {
+      "cls": "",
+      "x": 1190,
+      "y": 708,
+      "w": 72,
+      "h": 72,
+      "rgt": 1262,
+      "btm": 780
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": null,
+     "vgap": null
+    },
+    "gapsDock": {
+     "hgap": 502,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 52
+     },
+     "stage": {
+      "x": 0,
+      "y": 52,
+      "w": 1280,
+      "h": 642
+     },
+     "clock-zone": {
+      "x": 475,
+      "y": 111,
+      "w": 330,
+      "h": 330
+     },
+     "prompt": {
+      "x": 419,
+      "y": 451,
+      "w": 441,
+      "h": 77
+     },
+     "answers": {
+      "x": 628,
+      "y": 539,
+      "w": 24,
+      "h": 96
+     },
+     "dock": {
+      "x": 0,
+      "y": 694,
+      "w": 1280,
+      "h": 106
+     }
+    },
+    "inputs": 0,
+    "clockSize": {
+     "w": 330,
+     "h": 330
+    },
+    "contrast": {
+     "opt": null,
+     "cap": null,
+     "chip": {
+      "fg": "rgb(74, 59, 46)",
+      "bg": "rgb(255,249,238)",
+      "ratio": 10.24,
+      "fontPx": "52px",
+      "weight": "800"
+     },
+     "readout": {
+      "fg": "rgb(74, 59, 46)",
+      "bg": "rgb(239,227,205)",
+      "ratio": 8.45,
+      "fontPx": "34px",
+      "weight": "800"
+     },
+     "num": {
+      "opacity": 0.55,
+      "ratio": 2.97
+     },
+     "tickShort": {
+      "opacity": 0.55,
+      "ratio": 2.97
+     },
+     "hourHand": {
+      "color": "rgb(74, 59, 46)",
+      "ratio": 10.24
+     },
+     "minHand": {
+      "color": "rgb(199, 122, 66)",
+      "ratio": 3.19
+     }
+    },
+    "ring": {
+     "color": "rgb(232, 151, 90)",
+     "ratio": 2.16
+    },
+    "vp": "lp",
+    "state": "ch3"
+   },
+   "ch4_lp": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "opt",
+      "x": 320,
+      "y": 522,
+      "w": 200,
+      "h": 96,
+      "rgt": 520,
+      "btm": 618
+     },
+     {
+      "cls": "opt",
+      "x": 540,
+      "y": 522,
+      "w": 200,
+      "h": 96,
+      "rgt": 740,
+      "btm": 618
+     },
+     {
+      "cls": "opt",
+      "x": 760,
+      "y": 522,
+      "w": 200,
+      "h": 96,
+      "rgt": 960,
+      "btm": 618
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 700,
+      "w": 88,
+      "h": 88,
+      "rgt": 106,
+      "btm": 788
+     },
+     {
+      "cls": "",
+      "x": 608,
+      "y": 704,
+      "w": 80,
+      "h": 80,
+      "rgt": 688,
+      "btm": 784
+     },
+     {
+      "cls": "",
+      "x": 1190,
+      "y": 708,
+      "w": 72,
+      "h": 72,
+      "rgt": 1262,
+      "btm": 780
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": 20,
+     "vgap": null
+    },
+    "gapsDock": {
+     "hgap": 502,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 52
+     },
+     "stage": {
+      "x": 0,
+      "y": 52,
+      "w": 1280,
+      "h": 642
+     },
+     "clock-zone": {
+      "x": 361,
+      "y": 127,
+      "w": 558,
+      "h": 297
+     },
+     "prompt": {
+      "x": 464,
+      "y": 434,
+      "w": 352,
+      "h": 76
+     },
+     "answers": {
+      "x": 308,
+      "y": 520,
+      "w": 665,
+      "h": 100
+     },
+     "dock": {
+      "x": 0,
+      "y": 694,
+      "w": 1280,
+      "h": 106
+     }
+    },
+    "inputs": 0,
+    "clockSize": {
+     "w": 270,
+     "h": 270
+    },
+    "contrast": {
+     "opt": {
+      "fg": "rgb(74, 59, 46)",
+      "bg": "rgb(255,249,238)",
+      "ratio": 10.24,
+      "fontPx": "44px",
+      "weight": "800"
+     },
+     "cap": {
+      "fg": "rgb(138, 123, 108)",
+      "bg": "rgb(251,246,236)",
+      "ratio": 3.8,
+      "fontPx": "17px",
+      "weight": "700"
+     },
+     "chip": {
+      "fg": "rgb(74, 59, 46)",
+      "bg": "rgb(255,249,238)",
+      "ratio": 10.24,
+      "fontPx": "38px",
+      "weight": "800"
+     },
+     "readout": null,
+     "num": {
+      "opacity": 0.55,
+      "ratio": 2.97
+     },
+     "tickShort": {
+      "opacity": 0.55,
+      "ratio": 2.97
+     },
+     "hourHand": {
+      "color": "rgb(74, 59, 46)",
+      "ratio": 10.24
+     },
+     "minHand": {
+      "color": "rgb(199, 122, 66)",
+      "ratio": 3.19
+     }
+    },
+    "vp": "lp",
+    "state": "ch4"
+   },
+   "ch1_pt": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "opt",
+      "x": 133,
+      "y": 724,
+      "w": 165,
+      "h": 104,
+      "rgt": 298,
+      "btm": 828
+     },
+     {
+      "cls": "opt",
+      "x": 318,
+      "y": 724,
+      "w": 165,
+      "h": 104,
+      "rgt": 482,
+      "btm": 828
+     },
+     {
+      "cls": "opt",
+      "x": 502,
+      "y": 724,
+      "w": 165,
+      "h": 104,
+      "rgt": 667,
+      "btm": 828
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 1080,
+      "w": 88,
+      "h": 88,
+      "rgt": 106,
+      "btm": 1168
+     },
+     {
+      "cls": "",
+      "x": 368,
+      "y": 1084,
+      "w": 80,
+      "h": 80,
+      "rgt": 448,
+      "btm": 1164
+     },
+     {
+      "cls": "",
+      "x": 710,
+      "y": 1088,
+      "w": 72,
+      "h": 72,
+      "rgt": 782,
+      "btm": 1160
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": 20,
+     "vgap": null
+    },
+    "gapsDock": {
+     "hgap": 262,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 800,
+      "h": 52
+     },
+     "stage": {
+      "x": 0,
+      "y": 52,
+      "w": 800,
+      "h": 1022
+     },
+     "clock-zone": {
+      "x": 235,
+      "y": 296,
+      "w": 330,
+      "h": 330
+     },
+     "prompt": {
+      "x": 392,
+      "y": 636,
+      "w": 16,
+      "h": 76
+     },
+     "answers": {
+      "x": 121,
+      "y": 722,
+      "w": 558,
+      "h": 108
+     },
+     "dock": {
+      "x": 0,
+      "y": 1074,
+      "w": 800,
+      "h": 106
+     }
+    },
+    "inputs": 0,
+    "clockSize": {
+     "w": 330,
+     "h": 330
+    },
+    "contrast": {
+     "opt": {
+      "fg": "rgb(74, 59, 46)",
+      "bg": "rgb(255,249,238)",
+      "ratio": 10.24,
+      "fontPx": "50px",
+      "weight": "800"
+     },
+     "cap": null,
+     "chip": null,
+     "readout": null,
+     "num": {
+      "opacity": 1,
+      "ratio": 10.24
+     },
+     "tickShort": {
+      "opacity": 0.55,
+      "ratio": 2.97
+     },
+     "hourHand": {
+      "color": "rgb(74, 59, 46)",
+      "ratio": 10.24
+     },
+     "minHand": {
+      "color": "rgb(199, 122, 66)",
+      "ratio": 3.19
+     }
+    },
+    "vp": "pt",
+    "state": "ch1"
+   },
+   "ch3_pt": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "clock-card drag",
+      "x": 235,
+      "y": 302,
+      "w": 330,
+      "h": 330,
+      "rgt": 565,
+      "btm": 632
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 1080,
+      "w": 88,
+      "h": 88,
+      "rgt": 106,
+      "btm": 1168
+     },
+     {
+      "cls": "",
+      "x": 368,
+      "y": 1084,
+      "w": 80,
+      "h": 80,
+      "rgt": 448,
+      "btm": 1164
+     },
+     {
+      "cls": "",
+      "x": 710,
+      "y": 1088,
+      "w": 72,
+      "h": 72,
+      "rgt": 782,
+      "btm": 1160
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": null,
+     "vgap": null
+    },
+    "gapsDock": {
+     "hgap": 262,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 800,
+      "h": 52
+     },
+     "stage": {
+      "x": 0,
+      "y": 52,
+      "w": 800,
+      "h": 1022
+     },
+     "clock-zone": {
+      "x": 235,
+      "y": 302,
+      "w": 330,
+      "h": 330
+     },
+     "prompt": {
+      "x": 188,
+      "y": 642,
+      "w": 425,
+      "h": 76
+     },
+     "answers": {
+      "x": 388,
+      "y": 728,
+      "w": 24,
+      "h": 96
+     },
+     "dock": {
+      "x": 0,
+      "y": 1074,
+      "w": 800,
+      "h": 106
+     }
+    },
+    "inputs": 0,
+    "clockSize": {
+     "w": 330,
+     "h": 330
+    },
+    "contrast": {
+     "opt": null,
+     "cap": null,
+     "chip": {
+      "fg": "rgb(74, 59, 46)",
+      "bg": "rgb(255,249,238)",
+      "ratio": 10.24,
+      "fontPx": "46px",
+      "weight": "800"
+     },
+     "readout": {
+      "fg": "rgb(74, 59, 46)",
+      "bg": "rgb(239,227,205)",
+      "ratio": 8.45,
+      "fontPx": "34px",
+      "weight": "800"
+     },
+     "num": {
+      "opacity": 0.55,
+      "ratio": 2.97
+     },
+     "tickShort": {
+      "opacity": 0.55,
+      "ratio": 2.97
+     },
+     "hourHand": {
+      "color": "rgb(74, 59, 46)",
+      "ratio": 10.24
+     },
+     "minHand": {
+      "color": "rgb(199, 122, 66)",
+      "ratio": 3.19
+     }
+    },
+    "ring": {
+     "color": "rgb(232, 151, 90)",
+     "ratio": 2.16
+    },
+    "vp": "pt",
+    "state": "ch3"
+   },
+   "ch4_pt": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "opt",
+      "x": 50,
+      "y": 708,
+      "w": 220,
+      "h": 104,
+      "rgt": 270,
+      "btm": 812
+     },
+     {
+      "cls": "opt",
+      "x": 290,
+      "y": 708,
+      "w": 220,
+      "h": 104,
+      "rgt": 510,
+      "btm": 812
+     },
+     {
+      "cls": "opt",
+      "x": 530,
+      "y": 708,
+      "w": 220,
+      "h": 104,
+      "rgt": 750,
+      "btm": 812
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 1080,
+      "w": 88,
+      "h": 88,
+      "rgt": 106,
+      "btm": 1168
+     },
+     {
+      "cls": "",
+      "x": 368,
+      "y": 1084,
+      "w": 80,
+      "h": 80,
+      "rgt": 448,
+      "btm": 1164
+     },
+     {
+      "cls": "",
+      "x": 710,
+      "y": 1088,
+      "w": 72,
+      "h": 72,
+      "rgt": 782,
+      "btm": 1160
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": 20,
+     "vgap": null
+    },
+    "gapsDock": {
+     "hgap": 262,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 800,
+      "h": 52
+     },
+     "stage": {
+      "x": 0,
+      "y": 52,
+      "w": 800,
+      "h": 1022
+     },
+     "clock-zone": {
+      "x": 121,
+      "y": 313,
+      "w": 558,
+      "h": 297
+     },
+     "prompt": {
+      "x": 224,
+      "y": 620,
+      "w": 352,
+      "h": 76
+     },
+     "answers": {
+      "x": 38,
+      "y": 706,
+      "w": 723,
+      "h": 108
+     },
+     "dock": {
+      "x": 0,
+      "y": 1074,
+      "w": 800,
+      "h": 106
+     }
+    },
+    "inputs": 0,
+    "clockSize": {
+     "w": 270,
+     "h": 270
+    },
+    "contrast": {
+     "opt": {
+      "fg": "rgb(74, 59, 46)",
+      "bg": "rgb(255,249,238)",
+      "ratio": 10.24,
+      "fontPx": "50px",
+      "weight": "800"
+     },
+     "cap": {
+      "fg": "rgb(138, 123, 108)",
+      "bg": "rgb(251,246,236)",
+      "ratio": 3.8,
+      "fontPx": "17px",
+      "weight": "700"
+     },
+     "chip": {
+      "fg": "rgb(74, 59, 46)",
+      "bg": "rgb(255,249,238)",
+      "ratio": 10.24,
+      "fontPx": "38px",
+      "weight": "800"
+     },
+     "readout": null,
+     "num": {
+      "opacity": 0.55,
+      "ratio": 2.97
+     },
+     "tickShort": {
+      "opacity": 0.55,
+      "ratio": 2.97
+     },
+     "hourHand": {
+      "color": "rgb(74, 59, 46)",
+      "ratio": 10.24
+     },
+     "minHand": {
+      "color": "rgb(199, 122, 66)",
+      "ratio": 3.19
+     }
+    },
+    "vp": "pt",
+    "state": "ch4"
+   }
+  },
+  "feedback": {
+   "lp": {
+    "vp": "lp",
+    "wrong": {
+     "fg": "rgb(183, 170, 150)",
+     "bg": "rgb(239, 227, 205)",
+     "ratio": 1.8
+    },
+    "right": {
+     "fg": "rgb(74, 59, 46)",
+     "bg": "rgb(143, 191, 127)",
+     "ratio": 5.07,
+     "mark": {
+      "w": 42,
+      "h": 42
+     }
+    }
+   },
+   "pt": {
+    "vp": "pt",
+    "wrong": {
+     "fg": "rgb(183, 170, 150)",
+     "bg": "rgb(239, 227, 205)",
+     "ratio": 1.8
+    },
+    "right": {
+     "fg": "rgb(74, 59, 46)",
+     "bg": "rgb(143, 191, 127)",
+     "ratio": 5.07,
+     "mark": {
+      "w": 42,
+      "h": 42
+     }
+    }
+   }
+  },
+  "tutorial": {
+   "ghost": {
+    "show": true,
+    "opacity": "0.0235834",
+    "x": 780,
+    "y": 528,
+    "w": 64,
+    "h": 76,
+    "inViewport": true
+   },
+   "tutorial": "watch"
+  }
+ },
+ "times": {
+  "states": {
+   "aid_lp": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "fish-btn shake wrong",
+      "x": 29,
+      "y": 83,
+      "w": 294,
+      "h": 495,
+      "rgt": 323,
+      "btm": 578
+     },
+     {
+      "cls": "fish-btn alt",
+      "x": 339,
+      "y": 83,
+      "w": 294,
+      "h": 495,
+      "rgt": 632,
+      "btm": 578
+     },
+     {
+      "cls": "fish-btn",
+      "x": 648,
+      "y": 83,
+      "w": 294,
+      "h": 495,
+      "rgt": 942,
+      "btm": 578
+     },
+     {
+      "cls": "fish-btn alt pulse",
+      "x": 958,
+      "y": 83,
+      "w": 294,
+      "h": 495,
+      "rgt": 1251,
+      "btm": 578
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 700,
+      "w": 126,
+      "h": 88,
+      "rgt": 144,
+      "btm": 788
+     },
+     {
+      "cls": "",
+      "x": 623,
+      "y": 700,
+      "w": 88,
+      "h": 88,
+      "rgt": 711,
+      "btm": 788
+     },
+     {
+      "cls": "",
+      "x": 1190,
+      "y": 708,
+      "w": 72,
+      "h": 72,
+      "rgt": 1262,
+      "btm": 780
+     }
+    ],
+    "occl": [
+     {
+      "cls": "fish-btn alt",
+      "by": "DIV.aid-ans-row"
+     },
+     {
+      "cls": "fish-btn",
+      "by": "DIV.aid-ans-row"
+     },
+     {
+      "cls": "fish-btn alt pulse",
+      "by": "DIV.open"
+     }
+    ],
+    "gapsMain": {
+     "hgap": 16,
+     "vgap": null
+    },
+    "gapsDock": {
+     "hgap": 479,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 52
+     },
+     "pond-wrap": {
+      "x": 10,
+      "y": 54,
+      "w": 1260,
+      "h": 539
+     },
+     "fish-grid": {
+      "x": 29,
+      "y": 83,
+      "w": 1222,
+      "h": 495
+     },
+     "quiz-card": {
+      "x": 0,
+      "y": 593,
+      "w": 1280,
+      "h": 101
+     },
+     "dock": {
+      "x": 0,
+      "y": 694,
+      "w": 1280,
+      "h": 106
+     }
+    },
+    "inputs": 0,
+    "quiz": {
+     "fg": "rgb(74, 59, 46)",
+     "bg": "rgb(251,246,236)",
+     "ratio": 9.97,
+     "fontPx": "66px",
+     "weight": "800"
+    },
+    "qm": {
+     "fg": "rgb(199, 122, 66)",
+     "ratio": 3.1,
+     "fontPx": "66px"
+    },
+    "bubble": {
+     "fg": "rgb(183, 170, 150)",
+     "bg": "rgb(239,227,205)",
+     "ratio": 1.8,
+     "fontPx": "36px",
+     "weight": "800"
+    },
+    "bubbleW": {
+     "w": 70,
+     "h": 70
+    },
+    "fishSvgVsPond": [
+     {
+      "fish": 0,
+      "body": "#F0A868",
+      "vsPond": 1.61,
+      "vsWater": 1.28
+     },
+     {
+      "fish": 1,
+      "body": "#9CC98D",
+      "vsPond": 1.52,
+      "vsWater": 1.2
+     },
+     {
+      "fish": 2,
+      "body": "#F2B8C6",
+      "vsPond": 1.36,
+      "vsWater": 1.08
+     },
+     {
+      "fish": 3,
+      "body": "#A3B7C7",
+      "vsPond": 1.67,
+      "vsWater": 1.32
+     }
+    ],
+    "groupsBtn": {
+     "display": "flex",
+     "fg": "rgb(255, 255, 255)",
+     "ratio": 3.34,
+     "w": 126,
+     "h": 88
+    },
+    "quizTextR": {
+     "w": 448,
+     "fontPx": "66px"
+    },
+    "aid": {
+     "rect": {
+      "x": 13,
+      "y": 57,
+      "w": 1254,
+      "h": 533
+     },
+     "title": {
+      "fg": "rgb(94, 122, 110)",
+      "bg": "rgb(234,244,238)",
+      "ratio": 4.16,
+      "fontPx": "16px",
+      "weight": "700"
+     },
+     "cap": null,
+     "plus": {
+      "fg": "rgb(179, 106, 53)",
+      "bg": "rgb(234,244,238)",
+      "ratio": 3.71,
+      "fontPx": "34px",
+      "weight": "800"
+     },
+     "ansSize": [
+      {
+       "cls": "aid-ans wrong",
+       "x": 472,
+       "y": 331,
+       "w": 72,
+       "h": 72,
+       "rgt": 544,
+       "btm": 403
+      },
+      {
+       "cls": "aid-ans",
+       "x": 560,
+       "y": 331,
+       "w": 72,
+       "h": 72,
+       "rgt": 632,
+       "btm": 403
+      },
+      {
+       "cls": "aid-ans",
+       "x": 648,
+       "y": 331,
+       "w": 72,
+       "h": 72,
+       "rgt": 720,
+       "btm": 403
+      },
+      {
+       "cls": "aid-ans pulse",
+       "x": 736,
+       "y": 331,
+       "w": 72,
+       "h": 72,
+       "rgt": 808,
+       "btm": 403
+      }
+     ],
+     "ansOccl": [],
+     "groups": [
+      {
+       "cls": "a-group",
+       "x": 403,
+       "y": 276,
+       "w": 122,
+       "h": 38,
+       "rgt": 525,
+       "btm": 314
+      },
+      {
+       "cls": "a-group",
+       "x": 579,
+       "y": 276,
+       "w": 122,
+       "h": 38,
+       "rgt": 701,
+       "btm": 314
+      },
+      {
+       "cls": "a-group",
+       "x": 755,
+       "y": 276,
+       "w": 122,
+       "h": 38,
+       "rgt": 877,
+       "btm": 314
+      }
+     ],
+     "aidVsQuiz": {
+      "ox": 1254,
+      "oy": 0
+     },
+     "aidVsDock": {
+      "ox": 1254,
+      "oy": 0
+     },
+     "aidAnsGap": {
+      "hgap": 16,
+      "vgap": null
+     }
+    },
+    "vp": "lp",
+    "state": "aid"
+   },
+   "ch1_lp": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "fish-btn",
+      "x": 29,
+      "y": 83,
+      "w": 294,
+      "h": 495,
+      "rgt": 323,
+      "btm": 578
+     },
+     {
+      "cls": "fish-btn alt",
+      "x": 339,
+      "y": 83,
+      "w": 294,
+      "h": 495,
+      "rgt": 632,
+      "btm": 578
+     },
+     {
+      "cls": "fish-btn",
+      "x": 648,
+      "y": 83,
+      "w": 294,
+      "h": 495,
+      "rgt": 942,
+      "btm": 578
+     },
+     {
+      "cls": "fish-btn alt",
+      "x": 958,
+      "y": 83,
+      "w": 294,
+      "h": 495,
+      "rgt": 1251,
+      "btm": 578
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 700,
+      "w": 126,
+      "h": 88,
+      "rgt": 144,
+      "btm": 788
+     },
+     {
+      "cls": "",
+      "x": 623,
+      "y": 700,
+      "w": 88,
+      "h": 88,
+      "rgt": 711,
+      "btm": 788
+     },
+     {
+      "cls": "",
+      "x": 1190,
+      "y": 708,
+      "w": 72,
+      "h": 72,
+      "rgt": 1262,
+      "btm": 780
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": 16,
+     "vgap": null
+    },
+    "gapsDock": {
+     "hgap": 479,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 52
+     },
+     "pond-wrap": {
+      "x": 10,
+      "y": 54,
+      "w": 1260,
+      "h": 539
+     },
+     "fish-grid": {
+      "x": 29,
+      "y": 83,
+      "w": 1222,
+      "h": 495
+     },
+     "quiz-card": {
+      "x": 0,
+      "y": 593,
+      "w": 1280,
+      "h": 101
+     },
+     "dock": {
+      "x": 0,
+      "y": 694,
+      "w": 1280,
+      "h": 106
+     }
+    },
+    "inputs": 0,
+    "quiz": {
+     "fg": "rgb(74, 59, 46)",
+     "bg": "rgb(251,246,236)",
+     "ratio": 9.97,
+     "fontPx": "66px",
+     "weight": "800"
+    },
+    "qm": {
+     "fg": "rgb(199, 122, 66)",
+     "ratio": 3.1,
+     "fontPx": "66px"
+    },
+    "bubble": {
+     "fg": "rgb(74, 59, 46)",
+     "bg": "rgb(255,249,238)",
+     "ratio": 10.24,
+     "fontPx": "36px",
+     "weight": "800"
+    },
+    "bubbleW": {
+     "w": 70,
+     "h": 70
+    },
+    "fishSvgVsPond": [
+     {
+      "fish": 0,
+      "body": "#F0A868",
+      "vsPond": 1.61,
+      "vsWater": 1.28
+     },
+     {
+      "fish": 1,
+      "body": "#9CC98D",
+      "vsPond": 1.52,
+      "vsWater": 1.2
+     },
+     {
+      "fish": 2,
+      "body": "#F2B8C6",
+      "vsPond": 1.36,
+      "vsWater": 1.08
+     },
+     {
+      "fish": 3,
+      "body": "#A3B7C7",
+      "vsPond": 1.67,
+      "vsWater": 1.32
+     }
+    ],
+    "groupsBtn": {
+     "display": "flex",
+     "fg": "rgb(255, 255, 255)",
+     "ratio": 3.34,
+     "w": 126,
+     "h": 88
+    },
+    "quizTextR": {
+     "w": 448,
+     "fontPx": "66px"
+    },
+    "vp": "lp",
+    "state": "ch1",
+    "wrongFish": {
+     "fg": "rgb(183, 170, 150)",
+     "bg": "rgb(239, 227, 205)",
+     "ratio": 1.8
+    },
+    "aidOpen": "open"
+   },
+   "ch4_lp": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "fish-btn",
+      "x": 29,
+      "y": 83,
+      "w": 294,
+      "h": 495,
+      "rgt": 323,
+      "btm": 578
+     },
+     {
+      "cls": "fish-btn alt",
+      "x": 339,
+      "y": 83,
+      "w": 294,
+      "h": 495,
+      "rgt": 632,
+      "btm": 578
+     },
+     {
+      "cls": "fish-btn",
+      "x": 648,
+      "y": 83,
+      "w": 294,
+      "h": 495,
+      "rgt": 942,
+      "btm": 578
+     },
+     {
+      "cls": "fish-btn alt",
+      "x": 958,
+      "y": 83,
+      "w": 294,
+      "h": 495,
+      "rgt": 1251,
+      "btm": 578
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 700,
+      "w": 88,
+      "h": 88,
+      "rgt": 106,
+      "btm": 788
+     },
+     {
+      "cls": "",
+      "x": 1190,
+      "y": 708,
+      "w": 72,
+      "h": 72,
+      "rgt": 1262,
+      "btm": 780
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": 16,
+     "vgap": null
+    },
+    "gapsDock": {
+     "hgap": 1084,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 52
+     },
+     "pond-wrap": {
+      "x": 10,
+      "y": 54,
+      "w": 1260,
+      "h": 539
+     },
+     "fish-grid": {
+      "x": 29,
+      "y": 83,
+      "w": 1222,
+      "h": 495
+     },
+     "quiz-card": {
+      "x": 0,
+      "y": 593,
+      "w": 1280,
+      "h": 101
+     },
+     "dock": {
+      "x": 0,
+      "y": 694,
+      "w": 1280,
+      "h": 106
+     }
+    },
+    "inputs": 0,
+    "quiz": {
+     "fg": "rgb(74, 59, 46)",
+     "bg": "rgb(251,246,236)",
+     "ratio": 9.97,
+     "fontPx": "66px",
+     "weight": "800"
+    },
+    "qm": {
+     "fg": "rgb(199, 122, 66)",
+     "ratio": 3.1,
+     "fontPx": "66px"
+    },
+    "bubble": {
+     "fg": "rgb(74, 59, 46)",
+     "bg": "rgb(255,249,238)",
+     "ratio": 10.24,
+     "fontPx": "36px",
+     "weight": "800"
+    },
+    "bubbleW": {
+     "w": 70,
+     "h": 70
+    },
+    "fishSvgVsPond": [
+     {
+      "fish": 0,
+      "body": "#F0A868",
+      "vsPond": 1.61,
+      "vsWater": 1.28
+     },
+     {
+      "fish": 1,
+      "body": "#9CC98D",
+      "vsPond": 1.52,
+      "vsWater": 1.2
+     },
+     {
+      "fish": 2,
+      "body": "#F2B8C6",
+      "vsPond": 1.36,
+      "vsWater": 1.08
+     },
+     {
+      "fish": 3,
+      "body": "#A3B7C7",
+      "vsPond": 1.67,
+      "vsWater": 1.32
+     }
+    ],
+    "groupsBtn": {
+     "display": "none",
+     "fg": "rgb(255, 255, 255)",
+     "ratio": 3.34,
+     "w": 0,
+     "h": 0
+    },
+    "quizTextR": {
+     "w": 310,
+     "fontPx": "66px"
+    },
+    "vp": "lp",
+    "state": "ch4"
+   },
+   "aid_pt": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "fish-btn shake wrong",
+      "x": 29,
+      "y": 83,
+      "w": 363,
+      "h": 441,
+      "rgt": 392,
+      "btm": 524
+     },
+     {
+      "cls": "fish-btn alt",
+      "x": 408,
+      "y": 83,
+      "w": 363,
+      "h": 441,
+      "rgt": 771,
+      "btm": 524
+     },
+     {
+      "cls": "fish-btn",
+      "x": 29,
+      "y": 540,
+      "w": 363,
+      "h": 441,
+      "rgt": 392,
+      "btm": 980
+     },
+     {
+      "cls": "fish-btn alt pulse",
+      "x": 408,
+      "y": 540,
+      "w": 363,
+      "h": 441,
+      "rgt": 771,
+      "btm": 980
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 1080,
+      "w": 126,
+      "h": 88,
+      "rgt": 144,
+      "btm": 1168
+     },
+     {
+      "cls": "",
+      "x": 383,
+      "y": 1080,
+      "w": 88,
+      "h": 88,
+      "rgt": 471,
+      "btm": 1168
+     },
+     {
+      "cls": "",
+      "x": 710,
+      "y": 1088,
+      "w": 72,
+      "h": 72,
+      "rgt": 782,
+      "btm": 1160
+     }
+    ],
+    "occl": [
+     {
+      "cls": "fish-btn alt",
+      "by": "DIV.open"
+     },
+     {
+      "cls": "fish-btn",
+      "by": "DIV.open"
+     },
+     {
+      "cls": "fish-btn alt pulse",
+      "by": "DIV.open"
+     }
+    ],
+    "gapsMain": {
+     "hgap": null,
+     "vgap": -897
+    },
+    "gapsDock": {
+     "hgap": 239,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 800,
+      "h": 52
+     },
+     "pond-wrap": {
+      "x": 10,
+      "y": 54,
+      "w": 780,
+      "h": 941
+     },
+     "fish-grid": {
+      "x": 29,
+      "y": 83,
+      "w": 742,
+      "h": 897
+     },
+     "quiz-card": {
+      "x": 0,
+      "y": 995,
+      "w": 800,
+      "h": 79
+     },
+     "dock": {
+      "x": 0,
+      "y": 1074,
+      "w": 800,
+      "h": 106
+     }
+    },
+    "inputs": 0,
+    "quiz": {
+     "fg": "rgb(74, 59, 46)",
+     "bg": "rgb(251,246,236)",
+     "ratio": 9.97,
+     "fontPx": "49.6px",
+     "weight": "800"
+    },
+    "qm": {
+     "fg": "rgb(199, 122, 66)",
+     "ratio": 3.1,
+     "fontPx": "49.6px"
+    },
+    "bubble": {
+     "fg": "rgb(183, 170, 150)",
+     "bg": "rgb(239,227,205)",
+     "ratio": 1.8,
+     "fontPx": "36px",
+     "weight": "800"
+    },
+    "bubbleW": {
+     "w": 70,
+     "h": 70
+    },
+    "fishSvgVsPond": [
+     {
+      "fish": 0,
+      "body": "#F0A868",
+      "vsPond": 1.61,
+      "vsWater": 1.28
+     },
+     {
+      "fish": 1,
+      "body": "#9CC98D",
+      "vsPond": 1.52,
+      "vsWater": 1.2
+     },
+     {
+      "fish": 2,
+      "body": "#F2B8C6",
+      "vsPond": 1.36,
+      "vsWater": 1.08
+     },
+     {
+      "fish": 3,
+      "body": "#A3B7C7",
+      "vsPond": 1.67,
+      "vsWater": 1.32
+     }
+    ],
+    "groupsBtn": {
+     "display": "flex",
+     "fg": "rgb(255, 255, 255)",
+     "ratio": 3.34,
+     "w": 126,
+     "h": 88
+    },
+    "quizTextR": {
+     "w": 337,
+     "fontPx": "49.6px"
+    },
+    "aid": {
+     "rect": {
+      "x": 13,
+      "y": 57,
+      "w": 774,
+      "h": 935
+     },
+     "title": {
+      "fg": "rgb(94, 122, 110)",
+      "bg": "rgb(234,244,238)",
+      "ratio": 4.16,
+      "fontPx": "16px",
+      "weight": "700"
+     },
+     "cap": null,
+     "plus": {
+      "fg": "rgb(179, 106, 53)",
+      "bg": "rgb(234,244,238)",
+      "ratio": 3.71,
+      "fontPx": "34px",
+      "weight": "800"
+     },
+     "ansSize": [
+      {
+       "cls": "aid-ans wrong",
+       "x": 232,
+       "y": 532,
+       "w": 72,
+       "h": 72,
+       "rgt": 304,
+       "btm": 604
+      },
+      {
+       "cls": "aid-ans",
+       "x": 320,
+       "y": 532,
+       "w": 72,
+       "h": 72,
+       "rgt": 392,
+       "btm": 604
+      },
+      {
+       "cls": "aid-ans",
+       "x": 408,
+       "y": 532,
+       "w": 72,
+       "h": 72,
+       "rgt": 480,
+       "btm": 604
+      },
+      {
+       "cls": "aid-ans pulse",
+       "x": 496,
+       "y": 532,
+       "w": 72,
+       "h": 72,
+       "rgt": 568,
+       "btm": 604
+      }
+     ],
+     "ansOccl": [],
+     "groups": [
+      {
+       "cls": "a-group",
+       "x": 163,
+       "y": 477,
+       "w": 122,
+       "h": 38,
+       "rgt": 285,
+       "btm": 515
+      },
+      {
+       "cls": "a-group",
+       "x": 339,
+       "y": 477,
+       "w": 122,
+       "h": 38,
+       "rgt": 461,
+       "btm": 515
+      },
+      {
+       "cls": "a-group",
+       "x": 515,
+       "y": 477,
+       "w": 122,
+       "h": 38,
+       "rgt": 637,
+       "btm": 515
+      }
+     ],
+     "aidVsQuiz": {
+      "ox": 774,
+      "oy": 0
+     },
+     "aidVsDock": {
+      "ox": 774,
+      "oy": 0
+     },
+     "aidAnsGap": {
+      "hgap": 16,
+      "vgap": null
+     }
+    },
+    "vp": "pt",
+    "state": "aid"
+   },
+   "ch1_pt": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "fish-btn",
+      "x": 29,
+      "y": 83,
+      "w": 363,
+      "h": 441,
+      "rgt": 392,
+      "btm": 524
+     },
+     {
+      "cls": "fish-btn alt",
+      "x": 408,
+      "y": 83,
+      "w": 363,
+      "h": 441,
+      "rgt": 771,
+      "btm": 524
+     },
+     {
+      "cls": "fish-btn",
+      "x": 29,
+      "y": 540,
+      "w": 363,
+      "h": 441,
+      "rgt": 392,
+      "btm": 980
+     },
+     {
+      "cls": "fish-btn alt",
+      "x": 408,
+      "y": 540,
+      "w": 363,
+      "h": 441,
+      "rgt": 771,
+      "btm": 980
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 1080,
+      "w": 126,
+      "h": 88,
+      "rgt": 144,
+      "btm": 1168
+     },
+     {
+      "cls": "",
+      "x": 383,
+      "y": 1080,
+      "w": 88,
+      "h": 88,
+      "rgt": 471,
+      "btm": 1168
+     },
+     {
+      "cls": "",
+      "x": 710,
+      "y": 1088,
+      "w": 72,
+      "h": 72,
+      "rgt": 782,
+      "btm": 1160
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": null,
+     "vgap": -897
+    },
+    "gapsDock": {
+     "hgap": 239,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 800,
+      "h": 52
+     },
+     "pond-wrap": {
+      "x": 10,
+      "y": 54,
+      "w": 780,
+      "h": 941
+     },
+     "fish-grid": {
+      "x": 29,
+      "y": 83,
+      "w": 742,
+      "h": 897
+     },
+     "quiz-card": {
+      "x": 0,
+      "y": 995,
+      "w": 800,
+      "h": 79
+     },
+     "dock": {
+      "x": 0,
+      "y": 1074,
+      "w": 800,
+      "h": 106
+     }
+    },
+    "inputs": 0,
+    "quiz": {
+     "fg": "rgb(74, 59, 46)",
+     "bg": "rgb(251,246,236)",
+     "ratio": 9.97,
+     "fontPx": "49.6px",
+     "weight": "800"
+    },
+    "qm": {
+     "fg": "rgb(199, 122, 66)",
+     "ratio": 3.1,
+     "fontPx": "49.6px"
+    },
+    "bubble": {
+     "fg": "rgb(74, 59, 46)",
+     "bg": "rgb(255,249,238)",
+     "ratio": 10.24,
+     "fontPx": "36px",
+     "weight": "800"
+    },
+    "bubbleW": {
+     "w": 70,
+     "h": 70
+    },
+    "fishSvgVsPond": [
+     {
+      "fish": 0,
+      "body": "#F0A868",
+      "vsPond": 1.61,
+      "vsWater": 1.28
+     },
+     {
+      "fish": 1,
+      "body": "#9CC98D",
+      "vsPond": 1.52,
+      "vsWater": 1.2
+     },
+     {
+      "fish": 2,
+      "body": "#F2B8C6",
+      "vsPond": 1.36,
+      "vsWater": 1.08
+     },
+     {
+      "fish": 3,
+      "body": "#A3B7C7",
+      "vsPond": 1.67,
+      "vsWater": 1.32
+     }
+    ],
+    "groupsBtn": {
+     "display": "flex",
+     "fg": "rgb(255, 255, 255)",
+     "ratio": 3.34,
+     "w": 126,
+     "h": 88
+    },
+    "quizTextR": {
+     "w": 337,
+     "fontPx": "49.6px"
+    },
+    "vp": "pt",
+    "state": "ch1",
+    "wrongFish": {
+     "fg": "rgb(183, 170, 150)",
+     "bg": "rgb(239, 227, 205)",
+     "ratio": 1.8
+    },
+    "aidOpen": "open"
+   },
+   "ch4_pt": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "fish-btn",
+      "x": 29,
+      "y": 83,
+      "w": 363,
+      "h": 441,
+      "rgt": 392,
+      "btm": 524
+     },
+     {
+      "cls": "fish-btn alt",
+      "x": 408,
+      "y": 83,
+      "w": 363,
+      "h": 441,
+      "rgt": 771,
+      "btm": 524
+     },
+     {
+      "cls": "fish-btn",
+      "x": 29,
+      "y": 540,
+      "w": 363,
+      "h": 441,
+      "rgt": 392,
+      "btm": 980
+     },
+     {
+      "cls": "fish-btn alt",
+      "x": 408,
+      "y": 540,
+      "w": 363,
+      "h": 441,
+      "rgt": 771,
+      "btm": 980
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 1080,
+      "w": 88,
+      "h": 88,
+      "rgt": 106,
+      "btm": 1168
+     },
+     {
+      "cls": "",
+      "x": 710,
+      "y": 1088,
+      "w": 72,
+      "h": 72,
+      "rgt": 782,
+      "btm": 1160
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": null,
+     "vgap": -897
+    },
+    "gapsDock": {
+     "hgap": 604,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 800,
+      "h": 52
+     },
+     "pond-wrap": {
+      "x": 10,
+      "y": 54,
+      "w": 780,
+      "h": 941
+     },
+     "fish-grid": {
+      "x": 29,
+      "y": 83,
+      "w": 742,
+      "h": 897
+     },
+     "quiz-card": {
+      "x": 0,
+      "y": 995,
+      "w": 800,
+      "h": 79
+     },
+     "dock": {
+      "x": 0,
+      "y": 1074,
+      "w": 800,
+      "h": 106
+     }
+    },
+    "inputs": 0,
+    "quiz": {
+     "fg": "rgb(74, 59, 46)",
+     "bg": "rgb(251,246,236)",
+     "ratio": 9.97,
+     "fontPx": "49.6px",
+     "weight": "800"
+    },
+    "qm": {
+     "fg": "rgb(199, 122, 66)",
+     "ratio": 3.1,
+     "fontPx": "49.6px"
+    },
+    "bubble": {
+     "fg": "rgb(74, 59, 46)",
+     "bg": "rgb(255,249,238)",
+     "ratio": 10.24,
+     "fontPx": "36px",
+     "weight": "800"
+    },
+    "bubbleW": {
+     "w": 70,
+     "h": 70
+    },
+    "fishSvgVsPond": [
+     {
+      "fish": 0,
+      "body": "#F0A868",
+      "vsPond": 1.61,
+      "vsWater": 1.28
+     },
+     {
+      "fish": 1,
+      "body": "#9CC98D",
+      "vsPond": 1.52,
+      "vsWater": 1.2
+     },
+     {
+      "fish": 2,
+      "body": "#F2B8C6",
+      "vsPond": 1.36,
+      "vsWater": 1.08
+     },
+     {
+      "fish": 3,
+      "body": "#A3B7C7",
+      "vsPond": 1.67,
+      "vsWater": 1.32
+     }
+    ],
+    "groupsBtn": {
+     "display": "none",
+     "fg": "rgb(255, 255, 255)",
+     "ratio": 3.34,
+     "w": 0,
+     "h": 0
+    },
+    "quizTextR": {
+     "w": 233,
+     "fontPx": "49.6px"
+    },
+    "vp": "pt",
+    "state": "ch4"
+   }
+  },
+  "convert": {
+   "lp": {
+    "vp": "lp",
+    "qtype": "sum",
+    "convert": {
+     "shown": true,
+     "w": 477,
+     "h": 95,
+     "x": 402,
+     "y": 244,
+     "fontPx": "38px",
+     "overPondL": -392,
+     "overPondR": -392,
+     "sum": {
+      "fg": "rgb(138, 123, 108)",
+      "ratio": 3.91
+     },
+     "mul": {
+      "fg": "rgb(199, 122, 66)",
+      "ratio": 3.19
+     }
+    }
+   },
+   "pt": {
+    "vp": "pt",
+    "qtype": "sum",
+    "convert": {
+     "shown": true,
+     "w": 366,
+     "h": 79,
+     "x": 217,
+     "y": 429,
+     "fontPx": "27.2px",
+     "overPondL": -207,
+     "overPondR": -207,
+     "sum": {
+      "fg": "rgb(138, 123, 108)",
+      "ratio": 3.91
+     },
+     "mul": {
+      "fg": "rgb(199, 122, 66)",
+      "ratio": 3.19
+     }
+    }
+   }
+  },
+  "tutorial": {
+   "ghost": {
+    "show": true,
+    "opacity": "0.0651311",
+    "x": 740,
+    "y": 305,
+    "w": 64,
+    "h": 76,
+    "inViewport": true
+   },
+   "tutorial": "watch"
+  },
+  "right_lp": {
+   "bubble": {
+    "fg": "rgb(255, 255, 255)",
+    "bg": "rgb(143, 191, 127)",
+    "ratio": 2.12
+   },
+   "qmOk": {
+    "cls": "ok",
+    "fg": "rgb(111, 160, 99)",
+    "ratio": 2.83
+   }
+  },
+  "right_pt": {
+   "bubble": {
+    "fg": "rgb(255, 255, 255)",
+    "bg": "rgb(143, 191, 127)",
+    "ratio": 2.12
+   },
+   "qmOk": {
+    "cls": "ok",
+    "fg": "rgb(111, 160, 99)",
+    "ratio": 2.83
+   }
+  }
+ },
+ "sudoku": {
+  "states": {
+   "p4_lp": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "cell given",
+      "x": 405,
+      "y": 70,
+      "w": 110,
+      "h": 110,
+      "rgt": 515,
+      "btm": 180
+     },
+     {
+      "cls": "cell given",
+      "x": 525,
+      "y": 70,
+      "w": 110,
+      "h": 110,
+      "rgt": 635,
+      "btm": 180
+     },
+     {
+      "cls": "cell bl bx1 given",
+      "x": 649,
+      "y": 70,
+      "w": 110,
+      "h": 110,
+      "rgt": 759,
+      "btm": 180
+     },
+     {
+      "cls": "cell bx1",
+      "x": 765,
+      "y": 70,
+      "w": 110,
+      "h": 110,
+      "rgt": 875,
+      "btm": 180
+     },
+     {
+      "cls": "cell given",
+      "x": 405,
+      "y": 190,
+      "w": 110,
+      "h": 110,
+      "rgt": 515,
+      "btm": 300
+     },
+     {
+      "cls": "cell",
+      "x": 525,
+      "y": 190,
+      "w": 110,
+      "h": 110,
+      "rgt": 635,
+      "btm": 300
+     },
+     {
+      "cls": "cell bl bx1 given",
+      "x": 649,
+      "y": 190,
+      "w": 110,
+      "h": 110,
+      "rgt": 759,
+      "btm": 300
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 765,
+      "y": 190,
+      "w": 110,
+      "h": 110,
+      "rgt": 875,
+      "btm": 300
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 405,
+      "y": 314,
+      "w": 110,
+      "h": 110,
+      "rgt": 515,
+      "btm": 424
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 525,
+      "y": 314,
+      "w": 110,
+      "h": 110,
+      "rgt": 635,
+      "btm": 424
+     },
+     {
+      "cls": "cell bl bt",
+      "x": 649,
+      "y": 314,
+      "w": 110,
+      "h": 110,
+      "rgt": 759,
+      "btm": 424
+     },
+     {
+      "cls": "cell bt",
+      "x": 765,
+      "y": 314,
+      "w": 110,
+      "h": 110,
+      "rgt": 875,
+      "btm": 424
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 405,
+      "y": 434,
+      "w": 110,
+      "h": 110,
+      "rgt": 515,
+      "btm": 544
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 525,
+      "y": 434,
+      "w": 110,
+      "h": 110,
+      "rgt": 635,
+      "btm": 544
+     },
+     {
+      "cls": "cell bl given",
+      "x": 649,
+      "y": 434,
+      "w": 110,
+      "h": 110,
+      "rgt": 759,
+      "btm": 544
+     },
+     {
+      "cls": "cell",
+      "x": 765,
+      "y": 434,
+      "w": 110,
+      "h": 110,
+      "rgt": 875,
+      "btm": 544
+     },
+     {
+      "cls": "abtn",
+      "x": 408,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 512,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 528,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 632,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 648,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 752,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 768,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 872,
+      "btm": 672
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 690,
+      "w": 96,
+      "h": 96,
+      "rgt": 114,
+      "btm": 786
+     },
+     {
+      "cls": "",
+      "x": 610,
+      "y": 702,
+      "w": 72,
+      "h": 72,
+      "rgt": 682,
+      "btm": 774
+     },
+     {
+      "cls": "",
+      "x": 1178,
+      "y": 696,
+      "w": 84,
+      "h": 84,
+      "rgt": 1262,
+      "btm": 780
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": 16,
+     "vgap": -602
+    },
+    "gapsDock": {
+     "hgap": 496,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 56
+     },
+     "stage": {
+      "x": 0,
+      "y": 56,
+      "w": 1280,
+      "h": 502
+     },
+     "board": {
+      "x": 394,
+      "y": 59,
+      "w": 492,
+      "h": 496
+     },
+     "animals": {
+      "x": 0,
+      "y": 558,
+      "w": 1280,
+      "h": 124
+     },
+     "dock": {
+      "x": 0,
+      "y": 682,
+      "w": 1280,
+      "h": 118
+     }
+    },
+    "inputs": 0,
+    "n": 4,
+    "cells": [
+     {
+      "cls": "cell given",
+      "x": 405,
+      "y": 70,
+      "w": 110,
+      "h": 110,
+      "rgt": 515,
+      "btm": 180
+     },
+     {
+      "cls": "cell given",
+      "x": 525,
+      "y": 70,
+      "w": 110,
+      "h": 110,
+      "rgt": 635,
+      "btm": 180
+     },
+     {
+      "cls": "cell bl bx1 given",
+      "x": 649,
+      "y": 70,
+      "w": 110,
+      "h": 110,
+      "rgt": 759,
+      "btm": 180
+     },
+     {
+      "cls": "cell bx1",
+      "x": 765,
+      "y": 70,
+      "w": 110,
+      "h": 110,
+      "rgt": 875,
+      "btm": 180
+     },
+     {
+      "cls": "cell given",
+      "x": 405,
+      "y": 190,
+      "w": 110,
+      "h": 110,
+      "rgt": 515,
+      "btm": 300
+     },
+     {
+      "cls": "cell",
+      "x": 525,
+      "y": 190,
+      "w": 110,
+      "h": 110,
+      "rgt": 635,
+      "btm": 300
+     },
+     {
+      "cls": "cell bl bx1 given",
+      "x": 649,
+      "y": 190,
+      "w": 110,
+      "h": 110,
+      "rgt": 759,
+      "btm": 300
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 765,
+      "y": 190,
+      "w": 110,
+      "h": 110,
+      "rgt": 875,
+      "btm": 300
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 405,
+      "y": 314,
+      "w": 110,
+      "h": 110,
+      "rgt": 515,
+      "btm": 424
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 525,
+      "y": 314,
+      "w": 110,
+      "h": 110,
+      "rgt": 635,
+      "btm": 424
+     },
+     {
+      "cls": "cell bl bt",
+      "x": 649,
+      "y": 314,
+      "w": 110,
+      "h": 110,
+      "rgt": 759,
+      "btm": 424
+     },
+     {
+      "cls": "cell bt",
+      "x": 765,
+      "y": 314,
+      "w": 110,
+      "h": 110,
+      "rgt": 875,
+      "btm": 424
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 405,
+      "y": 434,
+      "w": 110,
+      "h": 110,
+      "rgt": 515,
+      "btm": 544
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 525,
+      "y": 434,
+      "w": 110,
+      "h": 110,
+      "rgt": 635,
+      "btm": 544
+     },
+     {
+      "cls": "cell bl given",
+      "x": 649,
+      "y": 434,
+      "w": 110,
+      "h": 110,
+      "rgt": 759,
+      "btm": 544
+     },
+     {
+      "cls": "cell",
+      "x": 765,
+      "y": 434,
+      "w": 110,
+      "h": 110,
+      "rgt": 875,
+      "btm": 544
+     }
+    ],
+    "abtns": [
+     {
+      "cls": "abtn",
+      "x": 408,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 512,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 528,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 632,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 648,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 752,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 768,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 872,
+      "btm": 672
+     }
+    ],
+    "gapCells": {
+     "hgap": null,
+     "vgap": -474
+    },
+    "gapAbtn": {
+     "hgap": 16,
+     "vgap": null
+    },
+    "board": {
+     "x": 394,
+     "y": 59,
+     "w": 492,
+     "h": 496
+    },
+    "contrast": {
+     "cellBorderVsSelf": {
+      "border": "rgb(216, 201, 180)",
+      "bg": "rgb(255, 249, 238)",
+      "ratio": 1.55
+     },
+     "bx1VsNormal": {
+      "normal": "rgb(255, 249, 238)",
+      "bx1": "rgb(240, 229, 201)",
+      "ratio": 1.2
+     },
+     "givenVsNormal": {
+      "ratio": 1.07,
+      "givenBorder": "rgb(201, 184, 150)",
+      "borderRatio": 1.45
+     },
+     "givenOnBx1VsBx1": 1.07,
+     "animals": [
+      {
+       "idx": 0,
+       "body": "#F5C89A",
+       "vsPaper": 1.47,
+       "vsBx1": 1.23,
+       "vsGiven": 1.15
+      },
+      {
+       "idx": 1,
+       "body": "#E8C9A8",
+       "vsPaper": 1.5,
+       "vsBx1": 1.26,
+       "vsGiven": 1.17
+      },
+      {
+       "idx": 2,
+       "body": "#C99B6F",
+       "vsPaper": 2.38,
+       "vsBx1": 1.99,
+       "vsGiven": 1.86
+      },
+      {
+       "idx": 3,
+       "body": "#CFC5E3",
+       "vsPaper": 1.57,
+       "vsBx1": 1.31,
+       "vsGiven": 1.23
+      }
+     ],
+     "paw": {
+      "ratio": 1.32
+     },
+     "lampLit": {
+      "bg": "rgb(242, 201, 76)",
+      "vsBody": 1.47
+     },
+     "lampOff": null,
+     "lampLitVsOff": null
+    },
+    "vp": "lp",
+    "state": "p4"
+   },
+   "p6_lp": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "cell given",
+      "x": 405,
+      "y": 68,
+      "w": 70,
+      "h": 70,
+      "rgt": 475,
+      "btm": 138
+     },
+     {
+      "cls": "cell given",
+      "x": 485,
+      "y": 68,
+      "w": 70,
+      "h": 70,
+      "rgt": 555,
+      "btm": 138
+     },
+     {
+      "cls": "cell given",
+      "x": 565,
+      "y": 68,
+      "w": 70,
+      "h": 70,
+      "rgt": 635,
+      "btm": 138
+     },
+     {
+      "cls": "cell bl bx1",
+      "x": 649,
+      "y": 68,
+      "w": 70,
+      "h": 70,
+      "rgt": 719,
+      "btm": 138
+     },
+     {
+      "cls": "cell bx1",
+      "x": 725,
+      "y": 68,
+      "w": 70,
+      "h": 70,
+      "rgt": 795,
+      "btm": 138
+     },
+     {
+      "cls": "cell bx1",
+      "x": 805,
+      "y": 68,
+      "w": 70,
+      "h": 70,
+      "rgt": 875,
+      "btm": 138
+     },
+     {
+      "cls": "cell given",
+      "x": 405,
+      "y": 148,
+      "w": 70,
+      "h": 70,
+      "rgt": 475,
+      "btm": 218
+     },
+     {
+      "cls": "cell given",
+      "x": 485,
+      "y": 148,
+      "w": 70,
+      "h": 70,
+      "rgt": 555,
+      "btm": 218
+     },
+     {
+      "cls": "cell",
+      "x": 565,
+      "y": 148,
+      "w": 70,
+      "h": 70,
+      "rgt": 635,
+      "btm": 218
+     },
+     {
+      "cls": "cell bl bx1",
+      "x": 649,
+      "y": 148,
+      "w": 70,
+      "h": 70,
+      "rgt": 719,
+      "btm": 218
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 725,
+      "y": 148,
+      "w": 70,
+      "h": 70,
+      "rgt": 795,
+      "btm": 218
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 805,
+      "y": 148,
+      "w": 70,
+      "h": 70,
+      "rgt": 875,
+      "btm": 218
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 405,
+      "y": 232,
+      "w": 70,
+      "h": 70,
+      "rgt": 475,
+      "btm": 302
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 485,
+      "y": 232,
+      "w": 70,
+      "h": 70,
+      "rgt": 555,
+      "btm": 302
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 565,
+      "y": 232,
+      "w": 70,
+      "h": 70,
+      "rgt": 635,
+      "btm": 302
+     },
+     {
+      "cls": "cell bl bt",
+      "x": 649,
+      "y": 232,
+      "w": 70,
+      "h": 70,
+      "rgt": 719,
+      "btm": 302
+     },
+     {
+      "cls": "cell bt given",
+      "x": 725,
+      "y": 232,
+      "w": 70,
+      "h": 70,
+      "rgt": 795,
+      "btm": 302
+     },
+     {
+      "cls": "cell bt given",
+      "x": 805,
+      "y": 232,
+      "w": 70,
+      "h": 70,
+      "rgt": 875,
+      "btm": 302
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 405,
+      "y": 312,
+      "w": 70,
+      "h": 70,
+      "rgt": 475,
+      "btm": 382
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 485,
+      "y": 312,
+      "w": 70,
+      "h": 70,
+      "rgt": 555,
+      "btm": 382
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 565,
+      "y": 312,
+      "w": 70,
+      "h": 70,
+      "rgt": 635,
+      "btm": 382
+     },
+     {
+      "cls": "cell bl given",
+      "x": 649,
+      "y": 312,
+      "w": 70,
+      "h": 70,
+      "rgt": 719,
+      "btm": 382
+     },
+     {
+      "cls": "cell given",
+      "x": 725,
+      "y": 312,
+      "w": 70,
+      "h": 70,
+      "rgt": 795,
+      "btm": 382
+     },
+     {
+      "cls": "cell given",
+      "x": 805,
+      "y": 312,
+      "w": 70,
+      "h": 70,
+      "rgt": 875,
+      "btm": 382
+     },
+     {
+      "cls": "cell bt",
+      "x": 405,
+      "y": 396,
+      "w": 70,
+      "h": 70,
+      "rgt": 475,
+      "btm": 466
+     },
+     {
+      "cls": "cell bt given",
+      "x": 485,
+      "y": 396,
+      "w": 70,
+      "h": 70,
+      "rgt": 555,
+      "btm": 466
+     },
+     {
+      "cls": "cell bt given",
+      "x": 565,
+      "y": 396,
+      "w": 70,
+      "h": 70,
+      "rgt": 635,
+      "btm": 466
+     },
+     {
+      "cls": "cell bl bt bx1 given",
+      "x": 649,
+      "y": 396,
+      "w": 70,
+      "h": 70,
+      "rgt": 719,
+      "btm": 466
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 725,
+      "y": 396,
+      "w": 70,
+      "h": 70,
+      "rgt": 795,
+      "btm": 466
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 805,
+      "y": 396,
+      "w": 70,
+      "h": 70,
+      "rgt": 875,
+      "btm": 466
+     },
+     {
+      "cls": "cell",
+      "x": 405,
+      "y": 476,
+      "w": 70,
+      "h": 70,
+      "rgt": 475,
+      "btm": 546
+     },
+     {
+      "cls": "cell given",
+      "x": 485,
+      "y": 476,
+      "w": 70,
+      "h": 70,
+      "rgt": 555,
+      "btm": 546
+     },
+     {
+      "cls": "cell given",
+      "x": 565,
+      "y": 476,
+      "w": 70,
+      "h": 70,
+      "rgt": 635,
+      "btm": 546
+     },
+     {
+      "cls": "cell bl bx1 given",
+      "x": 649,
+      "y": 476,
+      "w": 70,
+      "h": 70,
+      "rgt": 719,
+      "btm": 546
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 725,
+      "y": 476,
+      "w": 70,
+      "h": 70,
+      "rgt": 795,
+      "btm": 546
+     },
+     {
+      "cls": "cell bx1",
+      "x": 805,
+      "y": 476,
+      "w": 70,
+      "h": 70,
+      "rgt": 875,
+      "btm": 546
+     },
+     {
+      "cls": "abtn",
+      "x": 288,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 392,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 408,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 512,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 528,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 632,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 648,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 752,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 768,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 872,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 888,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 992,
+      "btm": 672
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 690,
+      "w": 96,
+      "h": 96,
+      "rgt": 114,
+      "btm": 786
+     },
+     {
+      "cls": "",
+      "x": 610,
+      "y": 702,
+      "w": 72,
+      "h": 72,
+      "rgt": 682,
+      "btm": 774
+     },
+     {
+      "cls": "",
+      "x": 1178,
+      "y": 696,
+      "w": 84,
+      "h": 84,
+      "rgt": 1262,
+      "btm": 780
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": null,
+     "vgap": -604
+    },
+    "gapsDock": {
+     "hgap": 496,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 56
+     },
+     "stage": {
+      "x": 0,
+      "y": 56,
+      "w": 1280,
+      "h": 502
+     },
+     "board": {
+      "x": 394,
+      "y": 57,
+      "w": 492,
+      "h": 500
+     },
+     "animals": {
+      "x": 0,
+      "y": 558,
+      "w": 1280,
+      "h": 124
+     },
+     "dock": {
+      "x": 0,
+      "y": 682,
+      "w": 1280,
+      "h": 118
+     }
+    },
+    "inputs": 0,
+    "n": 6,
+    "cells": [
+     {
+      "cls": "cell given",
+      "x": 405,
+      "y": 68,
+      "w": 70,
+      "h": 70,
+      "rgt": 475,
+      "btm": 138
+     },
+     {
+      "cls": "cell given",
+      "x": 485,
+      "y": 68,
+      "w": 70,
+      "h": 70,
+      "rgt": 555,
+      "btm": 138
+     },
+     {
+      "cls": "cell given",
+      "x": 565,
+      "y": 68,
+      "w": 70,
+      "h": 70,
+      "rgt": 635,
+      "btm": 138
+     },
+     {
+      "cls": "cell bl bx1",
+      "x": 649,
+      "y": 68,
+      "w": 70,
+      "h": 70,
+      "rgt": 719,
+      "btm": 138
+     },
+     {
+      "cls": "cell bx1",
+      "x": 725,
+      "y": 68,
+      "w": 70,
+      "h": 70,
+      "rgt": 795,
+      "btm": 138
+     },
+     {
+      "cls": "cell bx1",
+      "x": 805,
+      "y": 68,
+      "w": 70,
+      "h": 70,
+      "rgt": 875,
+      "btm": 138
+     },
+     {
+      "cls": "cell given",
+      "x": 405,
+      "y": 148,
+      "w": 70,
+      "h": 70,
+      "rgt": 475,
+      "btm": 218
+     },
+     {
+      "cls": "cell given",
+      "x": 485,
+      "y": 148,
+      "w": 70,
+      "h": 70,
+      "rgt": 555,
+      "btm": 218
+     },
+     {
+      "cls": "cell",
+      "x": 565,
+      "y": 148,
+      "w": 70,
+      "h": 70,
+      "rgt": 635,
+      "btm": 218
+     },
+     {
+      "cls": "cell bl bx1",
+      "x": 649,
+      "y": 148,
+      "w": 70,
+      "h": 70,
+      "rgt": 719,
+      "btm": 218
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 725,
+      "y": 148,
+      "w": 70,
+      "h": 70,
+      "rgt": 795,
+      "btm": 218
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 805,
+      "y": 148,
+      "w": 70,
+      "h": 70,
+      "rgt": 875,
+      "btm": 218
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 405,
+      "y": 232,
+      "w": 70,
+      "h": 70,
+      "rgt": 475,
+      "btm": 302
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 485,
+      "y": 232,
+      "w": 70,
+      "h": 70,
+      "rgt": 555,
+      "btm": 302
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 565,
+      "y": 232,
+      "w": 70,
+      "h": 70,
+      "rgt": 635,
+      "btm": 302
+     },
+     {
+      "cls": "cell bl bt",
+      "x": 649,
+      "y": 232,
+      "w": 70,
+      "h": 70,
+      "rgt": 719,
+      "btm": 302
+     },
+     {
+      "cls": "cell bt given",
+      "x": 725,
+      "y": 232,
+      "w": 70,
+      "h": 70,
+      "rgt": 795,
+      "btm": 302
+     },
+     {
+      "cls": "cell bt given",
+      "x": 805,
+      "y": 232,
+      "w": 70,
+      "h": 70,
+      "rgt": 875,
+      "btm": 302
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 405,
+      "y": 312,
+      "w": 70,
+      "h": 70,
+      "rgt": 475,
+      "btm": 382
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 485,
+      "y": 312,
+      "w": 70,
+      "h": 70,
+      "rgt": 555,
+      "btm": 382
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 565,
+      "y": 312,
+      "w": 70,
+      "h": 70,
+      "rgt": 635,
+      "btm": 382
+     },
+     {
+      "cls": "cell bl given",
+      "x": 649,
+      "y": 312,
+      "w": 70,
+      "h": 70,
+      "rgt": 719,
+      "btm": 382
+     },
+     {
+      "cls": "cell given",
+      "x": 725,
+      "y": 312,
+      "w": 70,
+      "h": 70,
+      "rgt": 795,
+      "btm": 382
+     },
+     {
+      "cls": "cell given",
+      "x": 805,
+      "y": 312,
+      "w": 70,
+      "h": 70,
+      "rgt": 875,
+      "btm": 382
+     },
+     {
+      "cls": "cell bt",
+      "x": 405,
+      "y": 396,
+      "w": 70,
+      "h": 70,
+      "rgt": 475,
+      "btm": 466
+     },
+     {
+      "cls": "cell bt given",
+      "x": 485,
+      "y": 396,
+      "w": 70,
+      "h": 70,
+      "rgt": 555,
+      "btm": 466
+     },
+     {
+      "cls": "cell bt given",
+      "x": 565,
+      "y": 396,
+      "w": 70,
+      "h": 70,
+      "rgt": 635,
+      "btm": 466
+     },
+     {
+      "cls": "cell bl bt bx1 given",
+      "x": 649,
+      "y": 396,
+      "w": 70,
+      "h": 70,
+      "rgt": 719,
+      "btm": 466
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 725,
+      "y": 396,
+      "w": 70,
+      "h": 70,
+      "rgt": 795,
+      "btm": 466
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 805,
+      "y": 396,
+      "w": 70,
+      "h": 70,
+      "rgt": 875,
+      "btm": 466
+     },
+     {
+      "cls": "cell",
+      "x": 405,
+      "y": 476,
+      "w": 70,
+      "h": 70,
+      "rgt": 475,
+      "btm": 546
+     },
+     {
+      "cls": "cell given",
+      "x": 485,
+      "y": 476,
+      "w": 70,
+      "h": 70,
+      "rgt": 555,
+      "btm": 546
+     },
+     {
+      "cls": "cell given",
+      "x": 565,
+      "y": 476,
+      "w": 70,
+      "h": 70,
+      "rgt": 635,
+      "btm": 546
+     },
+     {
+      "cls": "cell bl bx1 given",
+      "x": 649,
+      "y": 476,
+      "w": 70,
+      "h": 70,
+      "rgt": 719,
+      "btm": 546
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 725,
+      "y": 476,
+      "w": 70,
+      "h": 70,
+      "rgt": 795,
+      "btm": 546
+     },
+     {
+      "cls": "cell bx1",
+      "x": 805,
+      "y": 476,
+      "w": 70,
+      "h": 70,
+      "rgt": 875,
+      "btm": 546
+     }
+    ],
+    "abtns": [
+     {
+      "cls": "abtn",
+      "x": 288,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 392,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 408,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 512,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 528,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 632,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 648,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 752,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 768,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 872,
+      "btm": 672
+     },
+     {
+      "cls": "abtn",
+      "x": 888,
+      "y": 568,
+      "w": 104,
+      "h": 104,
+      "rgt": 992,
+      "btm": 672
+     }
+    ],
+    "gapCells": {
+     "hgap": null,
+     "vgap": -478
+    },
+    "gapAbtn": {
+     "hgap": 16,
+     "vgap": null
+    },
+    "board": {
+     "x": 394,
+     "y": 57,
+     "w": 492,
+     "h": 500
+    },
+    "contrast": {
+     "cellBorderVsSelf": {
+      "border": "rgb(216, 201, 180)",
+      "bg": "rgb(255, 249, 238)",
+      "ratio": 1.55
+     },
+     "bx1VsNormal": {
+      "normal": "rgb(255, 249, 238)",
+      "bx1": "rgb(240, 229, 201)",
+      "ratio": 1.2
+     },
+     "givenVsNormal": {
+      "ratio": 1.07,
+      "givenBorder": "rgb(201, 184, 150)",
+      "borderRatio": 1.45
+     },
+     "givenOnBx1VsBx1": 1.07,
+     "animals": [
+      {
+       "idx": 0,
+       "body": "#F5C89A",
+       "vsPaper": 1.47,
+       "vsBx1": 1.23,
+       "vsGiven": 1.15
+      },
+      {
+       "idx": 1,
+       "body": "#E8C9A8",
+       "vsPaper": 1.5,
+       "vsBx1": 1.26,
+       "vsGiven": 1.17
+      },
+      {
+       "idx": 2,
+       "body": "#C99B6F",
+       "vsPaper": 2.38,
+       "vsBx1": 1.99,
+       "vsGiven": 1.86
+      },
+      {
+       "idx": 3,
+       "body": "#CFC5E3",
+       "vsPaper": 1.57,
+       "vsBx1": 1.31,
+       "vsGiven": 1.23
+      },
+      {
+       "idx": 4,
+       "body": "#B5D99C",
+       "vsPaper": 1.5,
+       "vsBx1": 1.25,
+       "vsGiven": 1.17
+      },
+      {
+       "idx": 5,
+       "body": "#E8837B",
+       "vsPaper": 2.52,
+       "vsBx1": 2.1,
+       "vsGiven": 1.96
+      }
+     ],
+     "paw": {
+      "ratio": 1.32
+     },
+     "lampLit": {
+      "bg": "rgb(242, 201, 76)",
+      "vsBody": 1.47
+     },
+     "lampOff": null,
+     "lampLitVsOff": null
+    },
+    "vp": "lp",
+    "state": "p6"
+   },
+   "p4_pt": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "cell given",
+      "x": 85,
+      "y": 180,
+      "w": 150,
+      "h": 150,
+      "rgt": 235,
+      "btm": 330
+     },
+     {
+      "cls": "cell given",
+      "x": 245,
+      "y": 180,
+      "w": 150,
+      "h": 150,
+      "rgt": 395,
+      "btm": 330
+     },
+     {
+      "cls": "cell bl bx1 given",
+      "x": 409,
+      "y": 180,
+      "w": 150,
+      "h": 150,
+      "rgt": 559,
+      "btm": 330
+     },
+     {
+      "cls": "cell bx1",
+      "x": 565,
+      "y": 180,
+      "w": 150,
+      "h": 150,
+      "rgt": 715,
+      "btm": 330
+     },
+     {
+      "cls": "cell given",
+      "x": 85,
+      "y": 340,
+      "w": 150,
+      "h": 150,
+      "rgt": 235,
+      "btm": 490
+     },
+     {
+      "cls": "cell",
+      "x": 245,
+      "y": 340,
+      "w": 150,
+      "h": 150,
+      "rgt": 395,
+      "btm": 490
+     },
+     {
+      "cls": "cell bl bx1 given",
+      "x": 409,
+      "y": 340,
+      "w": 150,
+      "h": 150,
+      "rgt": 559,
+      "btm": 490
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 565,
+      "y": 340,
+      "w": 150,
+      "h": 150,
+      "rgt": 715,
+      "btm": 490
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 85,
+      "y": 504,
+      "w": 150,
+      "h": 150,
+      "rgt": 235,
+      "btm": 654
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 245,
+      "y": 504,
+      "w": 150,
+      "h": 150,
+      "rgt": 395,
+      "btm": 654
+     },
+     {
+      "cls": "cell bl bt",
+      "x": 409,
+      "y": 504,
+      "w": 150,
+      "h": 150,
+      "rgt": 559,
+      "btm": 654
+     },
+     {
+      "cls": "cell bt",
+      "x": 565,
+      "y": 504,
+      "w": 150,
+      "h": 150,
+      "rgt": 715,
+      "btm": 654
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 85,
+      "y": 664,
+      "w": 150,
+      "h": 150,
+      "rgt": 235,
+      "btm": 814
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 245,
+      "y": 664,
+      "w": 150,
+      "h": 150,
+      "rgt": 395,
+      "btm": 814
+     },
+     {
+      "cls": "cell bl given",
+      "x": 409,
+      "y": 664,
+      "w": 150,
+      "h": 150,
+      "rgt": 559,
+      "btm": 814
+     },
+     {
+      "cls": "cell",
+      "x": 565,
+      "y": 664,
+      "w": 150,
+      "h": 150,
+      "rgt": 715,
+      "btm": 814
+     },
+     {
+      "cls": "abtn",
+      "x": 168,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 272,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 288,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 392,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 408,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 512,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 528,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 632,
+      "btm": 1052
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 1070,
+      "w": 96,
+      "h": 96,
+      "rgt": 114,
+      "btm": 1166
+     },
+     {
+      "cls": "",
+      "x": 370,
+      "y": 1082,
+      "w": 72,
+      "h": 72,
+      "rgt": 442,
+      "btm": 1154
+     },
+     {
+      "cls": "",
+      "x": 698,
+      "y": 1076,
+      "w": 84,
+      "h": 84,
+      "rgt": 782,
+      "btm": 1160
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": 16,
+     "vgap": -872
+    },
+    "gapsDock": {
+     "hgap": 256,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 800,
+      "h": 56
+     },
+     "stage": {
+      "x": 0,
+      "y": 56,
+      "w": 800,
+      "h": 882
+     },
+     "board": {
+      "x": 74,
+      "y": 169,
+      "w": 652,
+      "h": 656
+     },
+     "animals": {
+      "x": 0,
+      "y": 938,
+      "w": 800,
+      "h": 124
+     },
+     "dock": {
+      "x": 0,
+      "y": 1062,
+      "w": 800,
+      "h": 118
+     }
+    },
+    "inputs": 0,
+    "n": 4,
+    "cells": [
+     {
+      "cls": "cell given",
+      "x": 85,
+      "y": 180,
+      "w": 150,
+      "h": 150,
+      "rgt": 235,
+      "btm": 330
+     },
+     {
+      "cls": "cell given",
+      "x": 245,
+      "y": 180,
+      "w": 150,
+      "h": 150,
+      "rgt": 395,
+      "btm": 330
+     },
+     {
+      "cls": "cell bl bx1 given",
+      "x": 409,
+      "y": 180,
+      "w": 150,
+      "h": 150,
+      "rgt": 559,
+      "btm": 330
+     },
+     {
+      "cls": "cell bx1",
+      "x": 565,
+      "y": 180,
+      "w": 150,
+      "h": 150,
+      "rgt": 715,
+      "btm": 330
+     },
+     {
+      "cls": "cell given",
+      "x": 85,
+      "y": 340,
+      "w": 150,
+      "h": 150,
+      "rgt": 235,
+      "btm": 490
+     },
+     {
+      "cls": "cell",
+      "x": 245,
+      "y": 340,
+      "w": 150,
+      "h": 150,
+      "rgt": 395,
+      "btm": 490
+     },
+     {
+      "cls": "cell bl bx1 given",
+      "x": 409,
+      "y": 340,
+      "w": 150,
+      "h": 150,
+      "rgt": 559,
+      "btm": 490
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 565,
+      "y": 340,
+      "w": 150,
+      "h": 150,
+      "rgt": 715,
+      "btm": 490
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 85,
+      "y": 504,
+      "w": 150,
+      "h": 150,
+      "rgt": 235,
+      "btm": 654
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 245,
+      "y": 504,
+      "w": 150,
+      "h": 150,
+      "rgt": 395,
+      "btm": 654
+     },
+     {
+      "cls": "cell bl bt",
+      "x": 409,
+      "y": 504,
+      "w": 150,
+      "h": 150,
+      "rgt": 559,
+      "btm": 654
+     },
+     {
+      "cls": "cell bt",
+      "x": 565,
+      "y": 504,
+      "w": 150,
+      "h": 150,
+      "rgt": 715,
+      "btm": 654
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 85,
+      "y": 664,
+      "w": 150,
+      "h": 150,
+      "rgt": 235,
+      "btm": 814
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 245,
+      "y": 664,
+      "w": 150,
+      "h": 150,
+      "rgt": 395,
+      "btm": 814
+     },
+     {
+      "cls": "cell bl given",
+      "x": 409,
+      "y": 664,
+      "w": 150,
+      "h": 150,
+      "rgt": 559,
+      "btm": 814
+     },
+     {
+      "cls": "cell",
+      "x": 565,
+      "y": 664,
+      "w": 150,
+      "h": 150,
+      "rgt": 715,
+      "btm": 814
+     }
+    ],
+    "abtns": [
+     {
+      "cls": "abtn",
+      "x": 168,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 272,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 288,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 392,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 408,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 512,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 528,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 632,
+      "btm": 1052
+     }
+    ],
+    "gapCells": {
+     "hgap": null,
+     "vgap": -634
+    },
+    "gapAbtn": {
+     "hgap": 16,
+     "vgap": null
+    },
+    "board": {
+     "x": 74,
+     "y": 169,
+     "w": 652,
+     "h": 656
+    },
+    "contrast": {
+     "cellBorderVsSelf": {
+      "border": "rgb(216, 201, 180)",
+      "bg": "rgb(255, 249, 238)",
+      "ratio": 1.55
+     },
+     "bx1VsNormal": {
+      "normal": "rgb(255, 249, 238)",
+      "bx1": "rgb(240, 229, 201)",
+      "ratio": 1.2
+     },
+     "givenVsNormal": {
+      "ratio": 1.07,
+      "givenBorder": "rgb(201, 184, 150)",
+      "borderRatio": 1.45
+     },
+     "givenOnBx1VsBx1": 1.07,
+     "animals": [
+      {
+       "idx": 0,
+       "body": "#F5C89A",
+       "vsPaper": 1.47,
+       "vsBx1": 1.23,
+       "vsGiven": 1.15
+      },
+      {
+       "idx": 1,
+       "body": "#E8C9A8",
+       "vsPaper": 1.5,
+       "vsBx1": 1.26,
+       "vsGiven": 1.17
+      },
+      {
+       "idx": 2,
+       "body": "#C99B6F",
+       "vsPaper": 2.38,
+       "vsBx1": 1.99,
+       "vsGiven": 1.86
+      },
+      {
+       "idx": 3,
+       "body": "#CFC5E3",
+       "vsPaper": 1.57,
+       "vsBx1": 1.31,
+       "vsGiven": 1.23
+      }
+     ],
+     "paw": {
+      "ratio": 1.32
+     },
+     "lampLit": {
+      "bg": "rgb(242, 201, 76)",
+      "vsBody": 1.47
+     },
+     "lampOff": null,
+     "lampLitVsOff": null
+    },
+    "vp": "pt",
+    "state": "p4"
+   },
+   "p6_pt": {
+    "overflowX": 0,
+    "main": [
+     {
+      "cls": "cell given",
+      "x": 51,
+      "y": 144,
+      "w": 108,
+      "h": 108,
+      "rgt": 159,
+      "btm": 252
+     },
+     {
+      "cls": "cell given",
+      "x": 169,
+      "y": 144,
+      "w": 108,
+      "h": 108,
+      "rgt": 277,
+      "btm": 252
+     },
+     {
+      "cls": "cell given",
+      "x": 287,
+      "y": 144,
+      "w": 108,
+      "h": 108,
+      "rgt": 395,
+      "btm": 252
+     },
+     {
+      "cls": "cell bl bx1",
+      "x": 409,
+      "y": 144,
+      "w": 108,
+      "h": 108,
+      "rgt": 517,
+      "btm": 252
+     },
+     {
+      "cls": "cell bx1",
+      "x": 523,
+      "y": 144,
+      "w": 108,
+      "h": 108,
+      "rgt": 631,
+      "btm": 252
+     },
+     {
+      "cls": "cell bx1",
+      "x": 641,
+      "y": 144,
+      "w": 108,
+      "h": 108,
+      "rgt": 749,
+      "btm": 252
+     },
+     {
+      "cls": "cell given",
+      "x": 51,
+      "y": 262,
+      "w": 108,
+      "h": 108,
+      "rgt": 159,
+      "btm": 370
+     },
+     {
+      "cls": "cell given",
+      "x": 169,
+      "y": 262,
+      "w": 108,
+      "h": 108,
+      "rgt": 277,
+      "btm": 370
+     },
+     {
+      "cls": "cell",
+      "x": 287,
+      "y": 262,
+      "w": 108,
+      "h": 108,
+      "rgt": 395,
+      "btm": 370
+     },
+     {
+      "cls": "cell bl bx1",
+      "x": 409,
+      "y": 262,
+      "w": 108,
+      "h": 108,
+      "rgt": 517,
+      "btm": 370
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 523,
+      "y": 262,
+      "w": 108,
+      "h": 108,
+      "rgt": 631,
+      "btm": 370
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 641,
+      "y": 262,
+      "w": 108,
+      "h": 108,
+      "rgt": 749,
+      "btm": 370
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 51,
+      "y": 384,
+      "w": 108,
+      "h": 108,
+      "rgt": 159,
+      "btm": 492
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 169,
+      "y": 384,
+      "w": 108,
+      "h": 108,
+      "rgt": 277,
+      "btm": 492
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 287,
+      "y": 384,
+      "w": 108,
+      "h": 108,
+      "rgt": 395,
+      "btm": 492
+     },
+     {
+      "cls": "cell bl bt",
+      "x": 409,
+      "y": 384,
+      "w": 108,
+      "h": 108,
+      "rgt": 517,
+      "btm": 492
+     },
+     {
+      "cls": "cell bt given",
+      "x": 523,
+      "y": 384,
+      "w": 108,
+      "h": 108,
+      "rgt": 631,
+      "btm": 492
+     },
+     {
+      "cls": "cell bt given",
+      "x": 641,
+      "y": 384,
+      "w": 108,
+      "h": 108,
+      "rgt": 749,
+      "btm": 492
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 51,
+      "y": 502,
+      "w": 108,
+      "h": 108,
+      "rgt": 159,
+      "btm": 610
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 169,
+      "y": 502,
+      "w": 108,
+      "h": 108,
+      "rgt": 277,
+      "btm": 610
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 287,
+      "y": 502,
+      "w": 108,
+      "h": 108,
+      "rgt": 395,
+      "btm": 610
+     },
+     {
+      "cls": "cell bl given",
+      "x": 409,
+      "y": 502,
+      "w": 108,
+      "h": 108,
+      "rgt": 517,
+      "btm": 610
+     },
+     {
+      "cls": "cell given",
+      "x": 523,
+      "y": 502,
+      "w": 108,
+      "h": 108,
+      "rgt": 631,
+      "btm": 610
+     },
+     {
+      "cls": "cell given",
+      "x": 641,
+      "y": 502,
+      "w": 108,
+      "h": 108,
+      "rgt": 749,
+      "btm": 610
+     },
+     {
+      "cls": "cell bt",
+      "x": 51,
+      "y": 624,
+      "w": 108,
+      "h": 108,
+      "rgt": 159,
+      "btm": 732
+     },
+     {
+      "cls": "cell bt given",
+      "x": 169,
+      "y": 624,
+      "w": 108,
+      "h": 108,
+      "rgt": 277,
+      "btm": 732
+     },
+     {
+      "cls": "cell bt given",
+      "x": 287,
+      "y": 624,
+      "w": 108,
+      "h": 108,
+      "rgt": 395,
+      "btm": 732
+     },
+     {
+      "cls": "cell bl bt bx1 given",
+      "x": 409,
+      "y": 624,
+      "w": 108,
+      "h": 108,
+      "rgt": 517,
+      "btm": 732
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 523,
+      "y": 624,
+      "w": 108,
+      "h": 108,
+      "rgt": 631,
+      "btm": 732
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 641,
+      "y": 624,
+      "w": 108,
+      "h": 108,
+      "rgt": 749,
+      "btm": 732
+     },
+     {
+      "cls": "cell",
+      "x": 51,
+      "y": 742,
+      "w": 108,
+      "h": 108,
+      "rgt": 159,
+      "btm": 850
+     },
+     {
+      "cls": "cell given",
+      "x": 169,
+      "y": 742,
+      "w": 108,
+      "h": 108,
+      "rgt": 277,
+      "btm": 850
+     },
+     {
+      "cls": "cell given",
+      "x": 287,
+      "y": 742,
+      "w": 108,
+      "h": 108,
+      "rgt": 395,
+      "btm": 850
+     },
+     {
+      "cls": "cell bl bx1 given",
+      "x": 409,
+      "y": 742,
+      "w": 108,
+      "h": 108,
+      "rgt": 517,
+      "btm": 850
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 523,
+      "y": 742,
+      "w": 108,
+      "h": 108,
+      "rgt": 631,
+      "btm": 850
+     },
+     {
+      "cls": "cell bx1",
+      "x": 641,
+      "y": 742,
+      "w": 108,
+      "h": 108,
+      "rgt": 749,
+      "btm": 850
+     },
+     {
+      "cls": "abtn",
+      "x": 48,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 152,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 168,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 272,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 288,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 392,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 408,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 512,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 528,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 632,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 648,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 752,
+      "btm": 1052
+     }
+    ],
+    "dock": [
+     {
+      "cls": "",
+      "x": 18,
+      "y": 1070,
+      "w": 96,
+      "h": 96,
+      "rgt": 114,
+      "btm": 1166
+     },
+     {
+      "cls": "",
+      "x": 370,
+      "y": 1082,
+      "w": 72,
+      "h": 72,
+      "rgt": 442,
+      "btm": 1154
+     },
+     {
+      "cls": "",
+      "x": 698,
+      "y": 1076,
+      "w": 84,
+      "h": 84,
+      "rgt": 782,
+      "btm": 1160
+     }
+    ],
+    "occl": [],
+    "gapsMain": {
+     "hgap": 16,
+     "vgap": -908
+    },
+    "gapsDock": {
+     "hgap": 256,
+     "vgap": null
+    },
+    "zones": {
+     "hud": {
+      "x": 0,
+      "y": 0,
+      "w": 800,
+      "h": 56
+     },
+     "stage": {
+      "x": 0,
+      "y": 56,
+      "w": 800,
+      "h": 882
+     },
+     "board": {
+      "x": 40,
+      "y": 133,
+      "w": 720,
+      "h": 728
+     },
+     "animals": {
+      "x": 0,
+      "y": 938,
+      "w": 800,
+      "h": 124
+     },
+     "dock": {
+      "x": 0,
+      "y": 1062,
+      "w": 800,
+      "h": 118
+     }
+    },
+    "inputs": 0,
+    "n": 6,
+    "cells": [
+     {
+      "cls": "cell given",
+      "x": 51,
+      "y": 144,
+      "w": 108,
+      "h": 108,
+      "rgt": 159,
+      "btm": 252
+     },
+     {
+      "cls": "cell given",
+      "x": 169,
+      "y": 144,
+      "w": 108,
+      "h": 108,
+      "rgt": 277,
+      "btm": 252
+     },
+     {
+      "cls": "cell given",
+      "x": 287,
+      "y": 144,
+      "w": 108,
+      "h": 108,
+      "rgt": 395,
+      "btm": 252
+     },
+     {
+      "cls": "cell bl bx1",
+      "x": 409,
+      "y": 144,
+      "w": 108,
+      "h": 108,
+      "rgt": 517,
+      "btm": 252
+     },
+     {
+      "cls": "cell bx1",
+      "x": 523,
+      "y": 144,
+      "w": 108,
+      "h": 108,
+      "rgt": 631,
+      "btm": 252
+     },
+     {
+      "cls": "cell bx1",
+      "x": 641,
+      "y": 144,
+      "w": 108,
+      "h": 108,
+      "rgt": 749,
+      "btm": 252
+     },
+     {
+      "cls": "cell given",
+      "x": 51,
+      "y": 262,
+      "w": 108,
+      "h": 108,
+      "rgt": 159,
+      "btm": 370
+     },
+     {
+      "cls": "cell given",
+      "x": 169,
+      "y": 262,
+      "w": 108,
+      "h": 108,
+      "rgt": 277,
+      "btm": 370
+     },
+     {
+      "cls": "cell",
+      "x": 287,
+      "y": 262,
+      "w": 108,
+      "h": 108,
+      "rgt": 395,
+      "btm": 370
+     },
+     {
+      "cls": "cell bl bx1",
+      "x": 409,
+      "y": 262,
+      "w": 108,
+      "h": 108,
+      "rgt": 517,
+      "btm": 370
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 523,
+      "y": 262,
+      "w": 108,
+      "h": 108,
+      "rgt": 631,
+      "btm": 370
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 641,
+      "y": 262,
+      "w": 108,
+      "h": 108,
+      "rgt": 749,
+      "btm": 370
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 51,
+      "y": 384,
+      "w": 108,
+      "h": 108,
+      "rgt": 159,
+      "btm": 492
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 169,
+      "y": 384,
+      "w": 108,
+      "h": 108,
+      "rgt": 277,
+      "btm": 492
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 287,
+      "y": 384,
+      "w": 108,
+      "h": 108,
+      "rgt": 395,
+      "btm": 492
+     },
+     {
+      "cls": "cell bl bt",
+      "x": 409,
+      "y": 384,
+      "w": 108,
+      "h": 108,
+      "rgt": 517,
+      "btm": 492
+     },
+     {
+      "cls": "cell bt given",
+      "x": 523,
+      "y": 384,
+      "w": 108,
+      "h": 108,
+      "rgt": 631,
+      "btm": 492
+     },
+     {
+      "cls": "cell bt given",
+      "x": 641,
+      "y": 384,
+      "w": 108,
+      "h": 108,
+      "rgt": 749,
+      "btm": 492
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 51,
+      "y": 502,
+      "w": 108,
+      "h": 108,
+      "rgt": 159,
+      "btm": 610
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 169,
+      "y": 502,
+      "w": 108,
+      "h": 108,
+      "rgt": 277,
+      "btm": 610
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 287,
+      "y": 502,
+      "w": 108,
+      "h": 108,
+      "rgt": 395,
+      "btm": 610
+     },
+     {
+      "cls": "cell bl given",
+      "x": 409,
+      "y": 502,
+      "w": 108,
+      "h": 108,
+      "rgt": 517,
+      "btm": 610
+     },
+     {
+      "cls": "cell given",
+      "x": 523,
+      "y": 502,
+      "w": 108,
+      "h": 108,
+      "rgt": 631,
+      "btm": 610
+     },
+     {
+      "cls": "cell given",
+      "x": 641,
+      "y": 502,
+      "w": 108,
+      "h": 108,
+      "rgt": 749,
+      "btm": 610
+     },
+     {
+      "cls": "cell bt",
+      "x": 51,
+      "y": 624,
+      "w": 108,
+      "h": 108,
+      "rgt": 159,
+      "btm": 732
+     },
+     {
+      "cls": "cell bt given",
+      "x": 169,
+      "y": 624,
+      "w": 108,
+      "h": 108,
+      "rgt": 277,
+      "btm": 732
+     },
+     {
+      "cls": "cell bt given",
+      "x": 287,
+      "y": 624,
+      "w": 108,
+      "h": 108,
+      "rgt": 395,
+      "btm": 732
+     },
+     {
+      "cls": "cell bl bt bx1 given",
+      "x": 409,
+      "y": 624,
+      "w": 108,
+      "h": 108,
+      "rgt": 517,
+      "btm": 732
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 523,
+      "y": 624,
+      "w": 108,
+      "h": 108,
+      "rgt": 631,
+      "btm": 732
+     },
+     {
+      "cls": "cell bt bx1 given",
+      "x": 641,
+      "y": 624,
+      "w": 108,
+      "h": 108,
+      "rgt": 749,
+      "btm": 732
+     },
+     {
+      "cls": "cell",
+      "x": 51,
+      "y": 742,
+      "w": 108,
+      "h": 108,
+      "rgt": 159,
+      "btm": 850
+     },
+     {
+      "cls": "cell given",
+      "x": 169,
+      "y": 742,
+      "w": 108,
+      "h": 108,
+      "rgt": 277,
+      "btm": 850
+     },
+     {
+      "cls": "cell given",
+      "x": 287,
+      "y": 742,
+      "w": 108,
+      "h": 108,
+      "rgt": 395,
+      "btm": 850
+     },
+     {
+      "cls": "cell bl bx1 given",
+      "x": 409,
+      "y": 742,
+      "w": 108,
+      "h": 108,
+      "rgt": 517,
+      "btm": 850
+     },
+     {
+      "cls": "cell bx1 given",
+      "x": 523,
+      "y": 742,
+      "w": 108,
+      "h": 108,
+      "rgt": 631,
+      "btm": 850
+     },
+     {
+      "cls": "cell bx1",
+      "x": 641,
+      "y": 742,
+      "w": 108,
+      "h": 108,
+      "rgt": 749,
+      "btm": 850
+     }
+    ],
+    "abtns": [
+     {
+      "cls": "abtn",
+      "x": 48,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 152,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 168,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 272,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 288,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 392,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 408,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 512,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 528,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 632,
+      "btm": 1052
+     },
+     {
+      "cls": "abtn",
+      "x": 648,
+      "y": 948,
+      "w": 104,
+      "h": 104,
+      "rgt": 752,
+      "btm": 1052
+     }
+    ],
+    "gapCells": {
+     "hgap": null,
+     "vgap": -706
+    },
+    "gapAbtn": {
+     "hgap": 16,
+     "vgap": null
+    },
+    "board": {
+     "x": 40,
+     "y": 133,
+     "w": 720,
+     "h": 728
+    },
+    "contrast": {
+     "cellBorderVsSelf": {
+      "border": "rgb(216, 201, 180)",
+      "bg": "rgb(255, 249, 238)",
+      "ratio": 1.55
+     },
+     "bx1VsNormal": {
+      "normal": "rgb(255, 249, 238)",
+      "bx1": "rgb(240, 229, 201)",
+      "ratio": 1.2
+     },
+     "givenVsNormal": {
+      "ratio": 1.07,
+      "givenBorder": "rgb(201, 184, 150)",
+      "borderRatio": 1.45
+     },
+     "givenOnBx1VsBx1": 1.07,
+     "animals": [
+      {
+       "idx": 0,
+       "body": "#F5C89A",
+       "vsPaper": 1.47,
+       "vsBx1": 1.23,
+       "vsGiven": 1.15
+      },
+      {
+       "idx": 1,
+       "body": "#E8C9A8",
+       "vsPaper": 1.5,
+       "vsBx1": 1.26,
+       "vsGiven": 1.17
+      },
+      {
+       "idx": 2,
+       "body": "#C99B6F",
+       "vsPaper": 2.38,
+       "vsBx1": 1.99,
+       "vsGiven": 1.86
+      },
+      {
+       "idx": 3,
+       "body": "#CFC5E3",
+       "vsPaper": 1.57,
+       "vsBx1": 1.31,
+       "vsGiven": 1.23
+      },
+      {
+       "idx": 4,
+       "body": "#B5D99C",
+       "vsPaper": 1.5,
+       "vsBx1": 1.25,
+       "vsGiven": 1.17
+      },
+      {
+       "idx": 5,
+       "body": "#E8837B",
+       "vsPaper": 2.52,
+       "vsBx1": 2.1,
+       "vsGiven": 1.96
+      }
+     ],
+     "paw": {
+      "ratio": 1.32
+     },
+     "lampLit": {
+      "bg": "rgb(242, 201, 76)",
+      "vsBody": 1.47
+     },
+     "lampOff": null,
+     "lampLitVsOff": null
+    },
+    "vp": "pt",
+    "state": "p6"
+   }
+  },
+  "conflict": {
+   "p4_lp": {
+    "ok": true,
+    "border": "rgb(217, 106, 90)",
+    "bg": "rgb(251, 235, 229)",
+    "borderVsBg": 2.94,
+    "borderVsPaper": 3.25,
+    "conflictedCount": 2,
+    "vp": "lp"
+   },
+   "p6_lp": {
+    "ok": true,
+    "border": "rgb(217, 106, 90)",
+    "bg": "rgb(251, 235, 229)",
+    "borderVsBg": 2.94,
+    "borderVsPaper": 3.25,
+    "conflictedCount": 2,
+    "vp": "lp"
+   },
+   "p4_pt": {
+    "ok": true,
+    "border": "rgb(217, 106, 90)",
+    "bg": "rgb(251, 235, 229)",
+    "borderVsBg": 2.94,
+    "borderVsPaper": 3.25,
+    "conflictedCount": 2,
+    "vp": "pt"
+   },
+   "p6_pt": {
+    "ok": true,
+    "border": "rgb(217, 106, 90)",
+    "bg": "rgb(251, 235, 229)",
+    "borderVsBg": 2.94,
+    "borderVsPaper": 3.25,
+    "conflictedCount": 2,
+    "vp": "pt"
+   }
+  },
+  "sel": {
+   "lp": {
+    "selected": true,
+    "border": "rgb(217, 106, 90)",
+    "bg": "rgb(251, 235, 229)",
+    "borderVsBg": 2.94,
+    "boxShadow": "rgba(232, 151, 90, 0.38) 0px 0px 0px 5px",
+    "vp": "lp"
+   },
+   "pt": {
+    "selected": true,
+    "border": "rgb(217, 106, 90)",
+    "bg": "rgb(251, 235, 229)",
+    "borderVsBg": 2.94,
+    "boxShadow": "rgba(232, 151, 90, 0.38) 0px 0px 0px 5px",
+    "vp": "pt"
+   }
+  },
+  "hint": {
+   "lp": {
+    "ok": true,
+    "cellPulse": true,
+    "abtnPulse": true,
+    "ghostShow": true,
+    "ghostRect": {
+     "x": 652,
+     "y": 41,
+     "w": 64,
+     "h": 76
+    },
+    "inViewport": true,
+    "ghostOpacity": "0.92",
+    "vp": "lp"
+   }
+  },
+  "tutorial": {
+   "ghost": {
+    "show": true,
+    "opacity": "0.697126",
+    "x": 788,
+    "y": 68,
+    "w": 64,
+    "h": 76,
+    "inViewport": true
+   },
+   "tutorial": "help"
+  }
+ }
+}

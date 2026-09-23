@@ -1,0 +1,20 @@
+[PASS] verify:cipher rc=0
+    [PASS] C-end 0 pageerror（复验全程） []
+    
+    TOTAL 10/10 PASS
+[PASS] verify:gomoku4 rc=0
+    [PASS] K-end 0 pageerror（复验全程） []
+    
+    TOTAL 10/10 PASS
+[PASS] verify:sudokunum rc=0
+    [PASS] S-end 0 pageerror（复验全程） []
+    
+    TOTAL 9/9 PASS
+[PASS] voice rc=0
+    [PASS] cipher clips=8 missing=[] bad=[] api={'play': True, 'queue': True} orderKeys=True
+    [PASS] gomoku4 clips=9 missing=[] bad=[] api={'play': True, 'queue': True} orderKeys=True
+    [PASS] sudokunum clips=8 missing=[] bad=[] api={'play': True, 'queue': True} orderKeys=True
+[PASS] parent-gate+bonus 题=44+24 limit=11
+[PASS] entries 两级入口+三产物冒烟（主入口 57 卡）
+
+TOTAL 6/6 PASS

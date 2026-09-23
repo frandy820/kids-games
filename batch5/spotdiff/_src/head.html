@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>找不同</title>
+<style>
+/* ================= 找不同 spotdiff（batch5 · 小兔子的花园）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、暖橙主色、灰蓝错误色（不用大红）
+   触摸目标：差异热区命中半径 ≥64px（透明 hit 圆，几何由 verify 量 DOM）；
+   两图各 ≥200px 高、宽 ≤800；兔/重玩按钮 ≥72px；pointerdown 即响应 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#found-dots{display:flex;gap:9px;align-items:center;flex:1 1 auto}
+#found-dots i{width:16px;height:16px;border-radius:50%;background:#E5D5BC;border:2.5px solid #D8C9B4;
+  transition:all .3s}
+#found-dots i.done{background:#8FBF7F;border-color:#6FA063;transform:scale(1.25)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：题面 + 上下两图 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:6px;overflow:hidden;padding:4px 8px}
+#prompt{flex:0 0 auto;display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:12px;padding:5px 24px;border-radius:20px;
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 4px 0 #D8C9B4}
+#prompt-chip .big{font-size:24px;font-weight:800;color:#4A3B2E;letter-spacing:.04em}
+#prompt-chip svg{width:32px;height:32px}
+
+#pics{display:flex;flex-direction:column;align-items:center;gap:8px;flex:0 0 auto}
+.pic{position:relative;border-radius:16px;overflow:hidden;line-height:0}
+.pic svg{width:var(--imgw,480px);height:auto}
+#pic-top{border:3px solid #D8C9B4}
+#pic-bottom{border:3px solid #E8975A;cursor:pointer}
+#pic-bottom:active{border-color:#C77A42}
+.pic .cap{position:absolute;right:8px;bottom:6px;line-height:1;font-size:13px;font-weight:700;
+  color:#4A3B2E;background:rgba(255,249,238,.88);border-radius:9px;padding:4px 9px;pointer-events:none}
+/* 点空白：下图轻摆（零惩罚） */
+#pic-bottom.wob svg{animation:picwob .5s ease}
+@keyframes picwob{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}
+  60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+/* 圈中动画（两图同步； SVG circle） */
+.ring{fill:none;stroke:#E85D75;stroke-width:7;stroke-linecap:round;
+  stroke-dasharray:353;stroke-dashoffset:353;animation:ring-draw .55s ease forwards;
+  filter:drop-shadow(0 0 4px rgba(232,93,117,.45))}
+@keyframes ring-draw{to{stroke-dashoffset:0}}
+/* 连错 2 次支架：剩余一处虚线圈呼吸（首错绝不出现——给再想机会） */
+.hintring{fill:none;stroke:#E8975A;stroke-width:6;stroke-dasharray:16 12;stroke-linecap:round;
+  animation:hint-b 1.2s ease infinite;pointer-events:none}
+@keyframes hint-b{0%,100%{opacity:.4}50%{opacity:1}}
+.hotzone{fill:none;stroke:none;pointer-events:none}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+
+/* ---------- 幽灵手指教学（照 batch4） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 横屏（宽>高）：两图左右并排——1280×800 每幅 483→~628 宽（5 岁半试玩 P1：竖排上下图幅不足） */
+@media (orientation:landscape){
+  #pics{flex-direction:row}
+}
+
+/* 竖屏（平板竖持）：题面字号微调 */
+@media (orientation:portrait){
+  #prompt-chip .big{font-size:22px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="找不同">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="found-dots" aria-label="找到的不同"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="prompt">
+      <div id="prompt-chip" role="heading" aria-label="题目"></div>
+    </div>
+    <div id="pics">
+      <div class="pic" id="pic-top" aria-label="上面的图"></div>
+      <div class="pic" id="pic-bottom" aria-label="下面的图，点一点哪里不一样"></div>
+    </div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

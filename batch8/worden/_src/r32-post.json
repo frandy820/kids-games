@@ -1,0 +1,1932 @@
+{
+ "0": [
+  {
+   "mode": "pic2word",
+   "target": "rice",
+   "options": [
+    "soup",
+    "bread",
+    "rice"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "hair",
+   "options": [
+    "foot",
+    "hair",
+    "ear"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "banana",
+   "options": [
+    "banana",
+    "lemon",
+    "peach"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "mouse",
+   "options": [
+    "mouse",
+    "cat",
+    "sheep"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "ear",
+   "options": [
+    "face",
+    "hand",
+    "ear"
+   ]
+  }
+ ],
+ "1": [
+  {
+   "mode": "pic2word",
+   "target": "cat",
+   "options": [
+    "fish",
+    "cat",
+    "rabbit"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "nose",
+   "options": [
+    "nose",
+    "ear",
+    "hand"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "hand",
+   "options": [
+    "eye",
+    "hand",
+    "tooth"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "brush",
+   "options": [
+    "boat",
+    "plant",
+    "brush"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "cake",
+   "options": [
+    "cake",
+    "rice",
+    "bread"
+   ]
+  }
+ ],
+ "2": [
+  {
+   "mode": "pic2word",
+   "target": "train",
+   "options": [
+    "train",
+    "boat",
+    "brush"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "lemon",
+   "options": [
+    "lemon",
+    "peach",
+    "pear"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "wind",
+   "options": [
+    "wind",
+    "rain",
+    "leaf"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "rain",
+   "options": [
+    "rain",
+    "leaf",
+    "star"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "cloud",
+   "options": [
+    "snow",
+    "star",
+    "cloud"
+   ]
+  }
+ ],
+ "3": [
+  {
+   "mode": "pic2word",
+   "target": "tooth",
+   "options": [
+    "foot",
+    "tooth",
+    "face"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "fish",
+   "options": [
+    "mouse",
+    "fish",
+    "horse"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "star",
+   "options": [
+    "sun",
+    "star",
+    "cloud"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "boat",
+   "options": [
+    "house",
+    "brush",
+    "boat"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "foot",
+   "options": [
+    "foot",
+    "face",
+    "tooth"
+   ]
+  }
+ ],
+ "4": [
+  {
+   "mode": "pic2word",
+   "target": "eye",
+   "options": [
+    "foot",
+    "eye",
+    "nose"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "apple",
+   "options": [
+    "apple",
+    "orange",
+    "banana"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "sheep",
+   "options": [
+    "mouse",
+    "rabbit",
+    "sheep"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "egg",
+   "options": [
+    "milk",
+    "egg",
+    "rice"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "leaf",
+   "options": [
+    "star",
+    "leaf",
+    "wind"
+   ]
+  }
+ ],
+ "5": [
+  {
+   "mode": "sound2pic",
+   "target": "ball",
+   "options": [
+    "ball",
+    "brush"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "hand",
+   "options": [
+    "hand",
+    "nose"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "rain",
+   "options": [
+    "rain",
+    "star"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "mouse",
+   "options": [
+    "horse",
+    "mouse"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "banana",
+   "options": [
+    "orange",
+    "banana"
+   ]
+  }
+ ],
+ "6": [
+  {
+   "mode": "sound2pic",
+   "target": "lemon",
+   "options": [
+    "lemon",
+    "pear",
+    "grape"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "moon",
+   "options": [
+    "moon",
+    "snow",
+    "sun"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "tree",
+   "options": [
+    "house",
+    "car",
+    "tree"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "face",
+   "options": [
+    "foot",
+    "face",
+    "ear"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "cat",
+   "options": [
+    "cat",
+    "horse",
+    "sheep"
+   ]
+  }
+ ],
+ "7": [
+  {
+   "mode": "sound2pic",
+   "target": "peach",
+   "options": [
+    "pear",
+    "banana",
+    "peach"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "leaf",
+   "options": [
+    "leaf",
+    "moon",
+    "rain"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "wind",
+   "options": [
+    "wind",
+    "snow",
+    "rain"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "plant",
+   "options": [
+    "brush",
+    "house",
+    "plant"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "foot",
+   "options": [
+    "tooth",
+    "foot",
+    "hand"
+   ]
+  }
+ ],
+ "8": [
+  {
+   "mode": "sound2pic",
+   "target": "pear",
+   "options": [
+    "pear",
+    "peach",
+    "orange"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "eye",
+   "options": [
+    "face",
+    "tooth",
+    "eye"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "horse",
+   "options": [
+    "bird",
+    "horse",
+    "rabbit"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "sheep",
+   "options": [
+    "horse",
+    "dog",
+    "sheep"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "soup",
+   "options": [
+    "milk",
+    "egg",
+    "soup"
+   ]
+  }
+ ],
+ "9": [
+  {
+   "mode": "sound2pic",
+   "target": "cake",
+   "options": [
+    "cake",
+    "rice",
+    "milk"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "milk",
+   "options": [
+    "cake",
+    "rice",
+    "milk"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "house",
+   "options": [
+    "ball",
+    "house",
+    "car"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "dog",
+   "options": [
+    "fish",
+    "dog",
+    "rabbit"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "bird",
+   "options": [
+    "fish",
+    "mouse",
+    "bird"
+   ]
+  }
+ ],
+ "10": [
+  {
+   "mode": "pic2word",
+   "target": "snow",
+   "options": [
+    "snow",
+    "slow",
+    "wind"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "cat",
+   "options": [
+    "mouse",
+    "cap",
+    "cat"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "cake",
+   "options": [
+    "c",
+    "a",
+    "e"
+   ],
+   "pick": "a",
+   "blankPos": 1
+  },
+  {
+   "mode": "pic2word",
+   "target": "book",
+   "options": [
+    "book",
+    "ball",
+    "look"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "snow",
+   "options": [
+    "s",
+    "o",
+    "u"
+   ],
+   "pick": "o",
+   "blankPos": 2
+  }
+ ],
+ "11": [
+  {
+   "mode": "pic2word",
+   "target": "train",
+   "options": [
+    "plant",
+    "brain",
+    "train"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "boat",
+   "options": [
+    "ball",
+    "boat",
+    "coat"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "mouse",
+   "options": [
+    "u",
+    "m",
+    "o"
+   ],
+   "pick": "o",
+   "blankPos": 1
+  },
+  {
+   "mode": "pic2word",
+   "target": "star",
+   "options": [
+    "stop",
+    "star",
+    "leaf"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "sheep",
+   "options": [
+    "a",
+    "s",
+    "e"
+   ],
+   "pick": "e",
+   "blankPos": 3
+  }
+ ],
+ "12": [
+  {
+   "mode": "pic2word",
+   "target": "hand",
+   "options": [
+    "head",
+    "hand",
+    "face"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "rice",
+   "options": [
+    "cake",
+    "race",
+    "rice"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "snow",
+   "options": [
+    "s",
+    "w",
+    "v"
+   ],
+   "pick": "w",
+   "blankPos": 3
+  },
+  {
+   "mode": "pic2word",
+   "target": "cat",
+   "options": [
+    "cat",
+    "dog",
+    "cap"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "cake",
+   "options": [
+    "a",
+    "e",
+    "c"
+   ],
+   "pick": "e",
+   "blankPos": 3
+  }
+ ],
+ "13": [
+  {
+   "mode": "pic2word",
+   "target": "book",
+   "options": [
+    "book",
+    "look",
+    "train"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "dog",
+   "options": [
+    "dog",
+    "dot",
+    "bird"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "train",
+   "options": [
+    "a",
+    "t",
+    "e"
+   ],
+   "pick": "a",
+   "blankPos": 2
+  },
+  {
+   "mode": "pic2word",
+   "target": "boat",
+   "options": [
+    "boat",
+    "coat",
+    "tree"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "mouse",
+   "options": [
+    "s",
+    "z",
+    "m"
+   ],
+   "pick": "s",
+   "blankPos": 3
+  }
+ ],
+ "14": [
+  {
+   "mode": "pic2word",
+   "target": "star",
+   "options": [
+    "stop",
+    "leaf",
+    "star"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "sheep",
+   "options": [
+    "sheep",
+    "rabbit",
+    "sheet"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "hand",
+   "options": [
+    "d",
+    "p",
+    "b"
+   ],
+   "pick": "d",
+   "blankPos": 3
+  },
+  {
+   "mode": "pic2word",
+   "target": "rice",
+   "options": [
+    "soup",
+    "rice",
+    "race"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "snow",
+   "options": [
+    "n",
+    "m",
+    "s"
+   ],
+   "pick": "n",
+   "blankPos": 1
+  }
+ ],
+ "15": [
+  {
+   "mode": "word2pic",
+   "target": "egg",
+   "options": [
+    "egg",
+    "bread",
+    "milk"
+   ]
+  },
+  {
+   "mode": "word2pic",
+   "target": "bread",
+   "options": [
+    "rice",
+    "cake",
+    "bread"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "rabbit",
+   "options": [
+    "d",
+    "b",
+    "q"
+   ],
+   "pick": "b",
+   "blankPos": 2
+  },
+  {
+   "mode": "pic2word",
+   "target": "mouse",
+   "options": [
+    "bird",
+    "sheep",
+    "mouse"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "orange",
+   "options": [
+    "orange",
+    "apple",
+    "peach"
+   ]
+  }
+ ],
+ "16": [
+  {
+   "mode": "word2pic",
+   "target": "moon",
+   "options": [
+    "moon",
+    "snow",
+    "star"
+   ]
+  },
+  {
+   "mode": "word2pic",
+   "target": "horse",
+   "options": [
+    "cat",
+    "horse",
+    "dog"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "duck",
+   "options": [
+    "c",
+    "d",
+    "g"
+   ],
+   "pick": "c",
+   "blankPos": 2
+  },
+  {
+   "mode": "word2pic",
+   "target": "cloud",
+   "options": [
+    "sun",
+    "rain",
+    "cloud"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "moon",
+   "options": [
+    "sun",
+    "wind",
+    "moon"
+   ]
+  }
+ ],
+ "17": [
+  {
+   "mode": "word2pic",
+   "target": "tooth",
+   "options": [
+    "foot",
+    "tooth",
+    "nose"
+   ]
+  },
+  {
+   "mode": "word2pic",
+   "target": "melon",
+   "options": [
+    "pear",
+    "peach",
+    "melon"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "house",
+   "options": [
+    "e",
+    "h",
+    "a"
+   ],
+   "pick": "e",
+   "blankPos": 4
+  },
+  {
+   "mode": "word2pic",
+   "target": "dog",
+   "options": [
+    "cat",
+    "dog",
+    "duck"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "foot",
+   "options": [
+    "tooth",
+    "hand",
+    "foot"
+   ]
+  }
+ ],
+ "18": [
+  {
+   "mode": "word2pic",
+   "target": "tree",
+   "options": [
+    "tree",
+    "house",
+    "car"
+   ]
+  },
+  {
+   "mode": "word2pic",
+   "target": "rice",
+   "options": [
+    "bread",
+    "rice",
+    "egg"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "rain",
+   "options": [
+    "m",
+    "n",
+    "r"
+   ],
+   "pick": "n",
+   "blankPos": 3
+  },
+  {
+   "mode": "sound2pic",
+   "target": "apple",
+   "options": [
+    "banana",
+    "apple",
+    "melon"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "nose",
+   "options": [
+    "nose",
+    "foot",
+    "hand"
+   ]
+  }
+ ],
+ "19": [
+  {
+   "mode": "word2pic",
+   "target": "leaf",
+   "options": [
+    "moon",
+    "sun",
+    "leaf"
+   ]
+  },
+  {
+   "mode": "word2pic",
+   "target": "milk",
+   "options": [
+    "soup",
+    "rice",
+    "milk"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "cake",
+   "options": [
+    "h",
+    "c",
+    "k"
+   ],
+   "pick": "k",
+   "blankPos": 2
+  },
+  {
+   "mode": "pic2word",
+   "target": "ear",
+   "options": [
+    "foot",
+    "face",
+    "ear"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "leaf",
+   "options": [
+    "leaf",
+    "snow",
+    "star"
+   ]
+  }
+ ],
+ "20": [
+  {
+   "mode": "pic2word",
+   "target": "peach",
+   "options": [
+    "pear",
+    "banana",
+    "peach"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "bread",
+   "options": [
+    "bread",
+    "rice",
+    "egg"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "car",
+   "options": [
+    "train",
+    "car",
+    "brush"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "house",
+   "options": [
+    "house",
+    "book",
+    "tree"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "book",
+   "options": [
+    "boat",
+    "book",
+    "house"
+   ]
+  }
+ ],
+ "21": [
+  {
+   "mode": "pic2word",
+   "target": "bird",
+   "options": [
+    "mouse",
+    "bird",
+    "rabbit"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "pear",
+   "options": [
+    "grape",
+    "pear",
+    "lemon"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "snow",
+   "options": [
+    "cloud",
+    "leaf",
+    "snow"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "melon",
+   "options": [
+    "melon",
+    "lemon",
+    "apple"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "rabbit",
+   "options": [
+    "sheep",
+    "fish",
+    "rabbit"
+   ]
+  }
+ ],
+ "22": [
+  {
+   "mode": "pic2word",
+   "target": "horse",
+   "options": [
+    "cat",
+    "horse",
+    "duck"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "grape",
+   "options": [
+    "grape",
+    "apple",
+    "lemon"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "plant",
+   "options": [
+    "brush",
+    "plant",
+    "book"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "soup",
+   "options": [
+    "soup",
+    "milk",
+    "egg"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "tree",
+   "options": [
+    "tree",
+    "brush",
+    "house"
+   ]
+  }
+ ],
+ "23": [
+  {
+   "mode": "pic2word",
+   "target": "moon",
+   "options": [
+    "wind",
+    "cloud",
+    "moon"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "milk",
+   "options": [
+    "soup",
+    "milk",
+    "egg"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "duck",
+   "options": [
+    "duck",
+    "horse",
+    "bird"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "ball",
+   "options": [
+    "ball",
+    "train",
+    "car"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "face",
+   "options": [
+    "face",
+    "hand",
+    "hair"
+   ]
+  }
+ ],
+ "24": [
+  {
+   "mode": "pic2word",
+   "target": "sun",
+   "options": [
+    "star",
+    "sun",
+    "cloud"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "orange",
+   "options": [
+    "grape",
+    "banana",
+    "orange"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "dog",
+   "options": [
+    "dog",
+    "rabbit",
+    "sheep"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "rice",
+   "options": [
+    "rice",
+    "cake",
+    "bread"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "hair",
+   "options": [
+    "tooth",
+    "hair",
+    "hand"
+   ]
+  }
+ ],
+ "25": [
+  {
+   "mode": "sound2pic",
+   "target": "ear",
+   "options": [
+    "eye",
+    "ear"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "melon",
+   "options": [
+    "melon",
+    "orange"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "boat",
+   "options": [
+    "house",
+    "boat"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "snow",
+   "options": [
+    "wind",
+    "snow"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "hair",
+   "options": [
+    "hair",
+    "hand"
+   ]
+  }
+ ],
+ "26": [
+  {
+   "mode": "sound2pic",
+   "target": "bread",
+   "options": [
+    "bread",
+    "rice",
+    "soup"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "book",
+   "options": [
+    "book",
+    "house",
+    "boat"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "rice",
+   "options": [
+    "egg",
+    "rice",
+    "milk"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "orange",
+   "options": [
+    "grape",
+    "orange",
+    "peach"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "sun",
+   "options": [
+    "leaf",
+    "star",
+    "sun"
+   ]
+  }
+ ],
+ "27": [
+  {
+   "mode": "sound2pic",
+   "target": "fish",
+   "options": [
+    "mouse",
+    "fish",
+    "rabbit"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "apple",
+   "options": [
+    "pear",
+    "banana",
+    "apple"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "train",
+   "options": [
+    "plant",
+    "train",
+    "ball"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "star",
+   "options": [
+    "star",
+    "rain",
+    "snow"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "egg",
+   "options": [
+    "bread",
+    "egg",
+    "rice"
+   ]
+  }
+ ],
+ "28": [
+  {
+   "mode": "sound2pic",
+   "target": "cloud",
+   "options": [
+    "cloud",
+    "rain",
+    "leaf"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "grape",
+   "options": [
+    "grape",
+    "melon",
+    "banana"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "tooth",
+   "options": [
+    "tooth",
+    "hand",
+    "foot"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "nose",
+   "options": [
+    "foot",
+    "eye",
+    "nose"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "duck",
+   "options": [
+    "sheep",
+    "dog",
+    "duck"
+   ]
+  }
+ ],
+ "29": [
+  {
+   "mode": "sound2pic",
+   "target": "brush",
+   "options": [
+    "car",
+    "book",
+    "brush"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "car",
+   "options": [
+    "book",
+    "car",
+    "tree"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "rabbit",
+   "options": [
+    "sheep",
+    "mouse",
+    "rabbit"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "ball",
+   "options": [
+    "car",
+    "ball",
+    "brush"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "hand",
+   "options": [
+    "tooth",
+    "eye",
+    "hand"
+   ]
+  }
+ ],
+ "30": [
+  {
+   "mode": "pic2word",
+   "target": "cat",
+   "options": [
+    "cap",
+    "fish",
+    "cat"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "cake",
+   "options": [
+    "rice",
+    "lake",
+    "cake"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "book",
+   "options": [
+    "b",
+    "h",
+    "k"
+   ],
+   "pick": "k",
+   "blankPos": 3
+  },
+  {
+   "mode": "pic2word",
+   "target": "dog",
+   "options": [
+    "fish",
+    "dog",
+    "dot"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "train",
+   "options": [
+    "i",
+    "l",
+    "t"
+   ],
+   "pick": "i",
+   "blankPos": 3
+  }
+ ],
+ "31": [
+  {
+   "mode": "pic2word",
+   "target": "boat",
+   "options": [
+    "tree",
+    "boat",
+    "coat"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "mouse",
+   "options": [
+    "dog",
+    "moose",
+    "mouse"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "star",
+   "options": [
+    "a",
+    "e",
+    "s"
+   ],
+   "pick": "a",
+   "blankPos": 2
+  },
+  {
+   "mode": "pic2word",
+   "target": "sheep",
+   "options": [
+    "dog",
+    "sheep",
+    "sheet"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "hand",
+   "options": [
+    "p",
+    "b",
+    "d"
+   ],
+   "pick": "d",
+   "blankPos": 3
+  }
+ ],
+ "32": [
+  {
+   "mode": "pic2word",
+   "target": "rice",
+   "options": [
+    "rice",
+    "race",
+    "cake"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "snow",
+   "options": [
+    "cloud",
+    "slow",
+    "snow"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "cake",
+   "options": [
+    "h",
+    "k",
+    "c"
+   ],
+   "pick": "k",
+   "blankPos": 2
+  },
+  {
+   "mode": "pic2word",
+   "target": "book",
+   "options": [
+    "look",
+    "tree",
+    "book"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "rice",
+   "options": [
+    "c",
+    "g",
+    "r"
+   ],
+   "pick": "c",
+   "blankPos": 2
+  }
+ ],
+ "33": [
+  {
+   "mode": "pic2word",
+   "target": "dog",
+   "options": [
+    "dog",
+    "fish",
+    "dot"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "train",
+   "options": [
+    "train",
+    "brain",
+    "plant"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "boat",
+   "options": [
+    "u",
+    "b",
+    "o"
+   ],
+   "pick": "o",
+   "blankPos": 1
+  },
+  {
+   "mode": "pic2word",
+   "target": "mouse",
+   "options": [
+    "moose",
+    "bird",
+    "mouse"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "star",
+   "options": [
+    "s",
+    "a",
+    "e"
+   ],
+   "pick": "a",
+   "blankPos": 2
+  }
+ ],
+ "34": [
+  {
+   "mode": "pic2word",
+   "target": "sheep",
+   "options": [
+    "sheep",
+    "bird",
+    "sheet"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "hand",
+   "options": [
+    "hair",
+    "head",
+    "hand"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "rice",
+   "options": [
+    "e",
+    "a",
+    "r"
+   ],
+   "pick": "e",
+   "blankPos": 3
+  },
+  {
+   "mode": "pic2word",
+   "target": "snow",
+   "options": [
+    "snow",
+    "slow",
+    "sun"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "sheep",
+   "options": [
+    "h",
+    "k",
+    "s"
+   ],
+   "pick": "h",
+   "blankPos": 1
+  }
+ ],
+ "35": [
+  {
+   "mode": "word2pic",
+   "target": "ball",
+   "options": [
+    "ball",
+    "house",
+    "plant"
+   ]
+  },
+  {
+   "mode": "word2pic",
+   "target": "hand",
+   "options": [
+    "foot",
+    "hand",
+    "face"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "face",
+   "options": [
+    "e",
+    "a",
+    "f"
+   ],
+   "pick": "e",
+   "blankPos": 3
+  },
+  {
+   "mode": "sound2pic",
+   "target": "bird",
+   "options": [
+    "rabbit",
+    "bird",
+    "mouse"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "star",
+   "options": [
+    "cloud",
+    "star",
+    "sun"
+   ]
+  }
+ ],
+ "36": [
+  {
+   "mode": "word2pic",
+   "target": "lemon",
+   "options": [
+    "peach",
+    "apple",
+    "lemon"
+   ]
+  },
+  {
+   "mode": "word2pic",
+   "target": "eye",
+   "options": [
+    "hand",
+    "eye",
+    "face"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "grape",
+   "options": [
+    "a",
+    "e",
+    "g"
+   ],
+   "pick": "a",
+   "blankPos": 2
+  },
+  {
+   "mode": "sound2pic",
+   "target": "book",
+   "options": [
+    "brush",
+    "plant",
+    "book"
+   ]
+  },
+  {
+   "mode": "word2pic",
+   "target": "lemon",
+   "options": [
+    "orange",
+    "apple",
+    "lemon"
+   ]
+  }
+ ],
+ "37": [
+  {
+   "mode": "word2pic",
+   "target": "hair",
+   "options": [
+    "nose",
+    "hair",
+    "hand"
+   ]
+  },
+  {
+   "mode": "word2pic",
+   "target": "pear",
+   "options": [
+    "orange",
+    "lemon",
+    "pear"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "boat",
+   "options": [
+    "b",
+    "u",
+    "o"
+   ],
+   "pick": "o",
+   "blankPos": 1
+  },
+  {
+   "mode": "sound2pic",
+   "target": "fish",
+   "options": [
+    "cat",
+    "sheep",
+    "fish"
+   ]
+  },
+  {
+   "mode": "word2pic",
+   "target": "sheep",
+   "options": [
+    "sheep",
+    "bird",
+    "duck"
+   ]
+  }
+ ],
+ "38": [
+  {
+   "mode": "word2pic",
+   "target": "snow",
+   "options": [
+    "leaf",
+    "rain",
+    "snow"
+   ]
+  },
+  {
+   "mode": "word2pic",
+   "target": "plant",
+   "options": [
+    "house",
+    "plant",
+    "tree"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "train",
+   "options": [
+    "t",
+    "l",
+    "i"
+   ],
+   "pick": "i",
+   "blankPos": 3
+  },
+  {
+   "mode": "sound2pic",
+   "target": "wind",
+   "options": [
+    "cloud",
+    "leaf",
+    "wind"
+   ]
+  },
+  {
+   "mode": "pic2word",
+   "target": "banana",
+   "options": [
+    "grape",
+    "pear",
+    "banana"
+   ]
+  }
+ ],
+ "39": [
+  {
+   "mode": "word2pic",
+   "target": "soup",
+   "options": [
+    "soup",
+    "cake",
+    "egg"
+   ]
+  },
+  {
+   "mode": "word2pic",
+   "target": "peach",
+   "options": [
+    "peach",
+    "melon",
+    "apple"
+   ]
+  },
+  {
+   "mode": "blank",
+   "target": "brush",
+   "options": [
+    "r",
+    "n",
+    "b"
+   ],
+   "pick": "r",
+   "blankPos": 1
+  },
+  {
+   "mode": "sound2pic",
+   "target": "egg",
+   "options": [
+    "bread",
+    "rice",
+    "egg"
+   ]
+  },
+  {
+   "mode": "sound2pic",
+   "target": "bread",
+   "options": [
+    "cake",
+    "egg",
+    "bread"
+   ]
+  }
+ ]
+}

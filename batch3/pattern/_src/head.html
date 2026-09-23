@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>规律侦探</title>
+<style>
+/* ================= 规律侦探 pattern =================
+   视觉按 DESIGN-SPEC §8：奶油暖白底、暖橙主色、灰蓝错误色（不用大红）、状态不单靠红绿
+   触摸目标：选项按钮 ≥80px（实际 ≥96）；序列卡按 stage 实测算尺寸（下限 64）；间距 ≥16 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏：图标 + 本关题目进度点 + 章节点 ---------- */
+#hud{height:58px;flex:0 0 58px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:12px}
+#logo{width:44px;height:44px;border-radius:12px;background:#E8975A;display:flex;align-items:center;justify-content:center;flex:0 0 44px}
+#quiz-tray{display:flex;gap:7px;align-items:center;flex:1 1 auto;flex-wrap:wrap;overflow:hidden}
+#quiz-tray i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s ease}
+#quiz-tray i.cur{background:#E8975A;transform:scale(1.25)}
+#quiz-tray i.on{background:#8FBF7F}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 序列区 ---------- */
+#stage{flex:1 1 auto;position:relative;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;min-height:130px}
+#seq{display:flex;gap:var(--gap,16px);align-items:center;justify-content:center;flex-wrap:nowrap}
+.seqcard{width:var(--card);height:var(--card);flex:0 0 auto;border-radius:calc(var(--card) * .16);
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  display:flex;align-items:center;justify-content:center;position:relative}
+.seqcard>svg{width:78%;height:78%}
+/* 问号卡：3D 翻转（答对翻开） */
+.seqcard.q{background:#E8975A;box-shadow:0 5px 0 #C77A42;perspective:560px}
+.seqcard .qinner{position:absolute;inset:0;transform-style:preserve-3d;
+  transition:transform .38s cubic-bezier(.3,1.2,.4,1)}
+.seqcard.q.rev .qinner{transform:rotateY(180deg)}
+.seqcard .qface,.seqcard .aface{position:absolute;inset:0;backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;border-radius:inherit;display:flex;align-items:center;justify-content:center}
+.seqcard .qface svg{width:58%;height:58%}
+.seqcard .aface{background:#FFF9EE;border:2.5px solid #4A3B2E;transform:rotateY(180deg)}
+.seqcard .aface svg{width:74%;height:74%}
+/* 答对后序列逐张弹跳回放（强化规律感） */
+.seqcard.bounce{animation:seq-bounce .55s cubic-bezier(.3,1.5,.4,1)}
+@keyframes seq-bounce{0%,100%{transform:none}
+  35%{transform:translateY(-16%) scale(1.1)}70%{transform:translateY(3%) scale(.97)}}
+/* 教学"帮"：高亮序列前段（规律起点） */
+.seqcard.lead{animation:lead-glow 1s ease 2}
+@keyframes lead-glow{0%,100%{filter:none;box-shadow:0 5px 0 #D8C9B4}
+  50%{filter:drop-shadow(0 0 12px rgba(232,151,90,.9));box-shadow:0 5px 0 #E8975A}}
+
+/* ---------- 选项：3 选 1 大按钮（≥80px，实际按 vw 放大到 ~96-148） ---------- */
+#choices{flex:0 0 auto;display:flex;gap:18px;align-items:center;justify-content:center;padding:10px 14px}
+.choice{width:clamp(96px,24vw,148px);height:clamp(96px,24vw,148px);border-radius:24px;
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  display:flex;align-items:center;justify-content:center;transition:transform .15s,opacity .3s}
+.choice:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+.choice svg{width:70%;height:70%}
+/* 答对 */
+.choice.right{border-color:#8FBF7F;box-shadow:0 5px 0 #8FBF7F;animation:choice-pop .45s ease}
+@keyframes choice-pop{0%,100%{transform:none}45%{transform:scale(1.12)}}
+/* 答错：晃 + 灰蓝描边（不用大红）+ 灰掉不可再点；正确项高亮 1.2s（支架） */
+.choice.wrong{animation:choice-shake .45s ease;border-color:#8A9BAE;opacity:.5;pointer-events:none}
+@keyframes choice-shake{0%,100%{transform:translateX(0)}
+  20%{transform:translateX(-7px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(3px)}}
+.choice.reveal{animation:choice-reveal 1.2s ease;border-color:#8FBF7F}
+@keyframes choice-reveal{0%,100%{filter:none}
+  50%{filter:drop-shadow(0 0 14px rgba(143,191,127,.95))}}
+
+/* ---------- 底栏：小兔子（鼓励）+ 再看一看 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:8px 18px 14px;gap:12px}
+#btn-rabbit{width:96px;height:96px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:78px;height:78px}
+#btn-rabbit.hop{animation:hop .45s ease 2}
+@keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:44px;height:44px}
+
+/* ---------- 幽灵手指教学 ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:40vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 宽屏（≥820px）：序列区限宽居中 */
+@media (min-width:820px){
+  #seq{max-width:900px}
+}
+/* 竖屏（平板竖持）：选项按钮放大（宽度充裕，视觉评估 P1） */
+@media (orientation:portrait) and (min-width:600px){
+  .choice{width:168px;height:168px}
+}
+</style>
+</head>

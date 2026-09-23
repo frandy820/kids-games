@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>镜像迷宫</title>
+<style>
+/* ================= 镜像迷宫 mirrormaze（batch17 r14 轴向族版）=================
+   视觉按 SPEC-BATCH17 §6（承家族暖米底）：每题=方盘网格（ch1 4×4 / ch2 5×5 / ch3-4 6×6）+
+   源侧色格 + 对称轴（轴向族六 kind：v 竖直/h 水平/d1 主对角/d2 反对角/pv·ph 双向/
+   vv 平行双镜/r180 垂直双镜=转半圈）。点空格补全镜像：
+   点对（=某源格的镜像位）→该格点亮成同色；点非镜像位→格子闪一下不点亮可重点
+   （低挫败零惩罚，miss 照计=星级口径）；全部镜像位补齐→对称轴闪+图案完整→下一题。
+   对称轴按 kind 渲染（#axis 容器内 .axl 线段，几何由 game-main 按格心连线计算——
+   竖/横/斜 45°/双平行线/十字全走同一 generic 线段）。
+   触摸目标：格子 ≥64、提示按钮 ≥96 高、底栏按钮 ≥72 高；pointerdown 即响应 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E7D8C0;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E7D8C0}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:12px;overflow:hidden;padding:4px 10px}
+
+/* ---------- 题面：网格棋盘 + 对称轴（轴向族） ---------- */
+#board{position:relative;flex:0 0 auto;padding:6px;animation:board-in .4s cubic-bezier(.2,1.5,.4,1) both}
+@keyframes board-in{from{transform:scale(.7);opacity:0}to{transform:scale(1);opacity:1}}
+#board.g4{--cs:92px}
+#board.g5{--cs:82px}
+#board.g6{--cs:72px}
+#grid{display:grid;gap:8px;position:relative}
+/* 格子：空=虚线暖沙；点亮=实色卡（源格 given / 补对 lit）；错点=blink 闪不点亮 */
+.cell{width:var(--cs);height:var(--cs);padding:0;border-radius:16px;background:#F6ECD9;
+  border:3px dashed #C9A87C;transition:transform .15s}
+.cell:active{transform:translateY(3px)}
+.cell.lit{border-style:solid;border-color:#4A3B2E;box-shadow:0 4px 0 rgba(74,59,46,.22)}
+.cell.given{animation:cell-in .4s cubic-bezier(.2,1.5,.4,1) both}
+.cell.given:nth-child(2n){animation-delay:.06s}
+.cell.given:nth-child(3n){animation-delay:.12s}
+.cell.lit:not(.given){animation:cell-in .32s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes cell-in{from{transform:scale(.2)}to{transform:scale(1)}}
+.cell.blink{animation:cell-blink .42s ease}
+@keyframes cell-blink{0%,100%{background:#F6ECD9;border-color:#C9A87C}
+  45%{background:#F3C9BC;border-color:#D98A7A}}
+.cell.breathe{animation:cell-breathe 1.6s ease-in-out infinite}
+@keyframes cell-breathe{0%,100%{transform:scale(1);box-shadow:0 0 0 rgba(232,151,90,0)}
+  50%{transform:scale(1.12);box-shadow:0 0 16px rgba(232,151,90,.85)}}
+.cell.pulse{animation:cell-pulse .5s ease 3}
+@keyframes cell-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.22)}}
+/* 对称轴（r14 轴向族）：#axis=容器（与 #grid 同域），内放 .axl generic 线段——
+   几何（起止/角度）由 game-main 按 kind 的轴两端格心连线实算（竖/横/斜/双平行/十字）；
+   补齐时容器加 .flash 全线段齐闪 */
+#axis{position:absolute;inset:0;pointer-events:none;z-index:6;overflow:visible}
+#axis .axl{position:absolute;left:0;top:0;height:0;border-top:3px dashed rgba(201,168,124,.95);
+  transform-origin:0 0;pointer-events:none}
+#axis.flash .axl{animation:axis-flash .95s ease}
+@keyframes axis-flash{0%,100%{border-top:3px dashed rgba(201,168,124,.95);filter:none}
+  35%{border-top:4px solid #E8975A;filter:drop-shadow(0 0 12px rgba(232,151,90,.95))}}
+
+/* ---------- 底部作答区：「提示」主按钮（≥96，未补镜像位 breathe+对应源格 pulse） ---------- */
+#answers{flex:0 0 auto;display:flex;justify-content:center;align-items:center;gap:20px;
+  flex-wrap:wrap;min-height:118px;padding:2px 12px}
+#tip{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:700;color:#8A7B6C}
+#tip svg{width:34px;height:34px}
+#hint-btn{min-width:200px;min-height:96px;padding:0 36px;border-radius:26px;background:#8FBF7F;
+  border:3px solid #4A3B2E;box-shadow:0 6px 0 #6FA063;color:#FFF9EE;font-size:32px;font-weight:800;
+  letter-spacing:.08em;display:flex;align-items:center;justify-content:center;gap:12px;
+  transition:transform .15s,box-shadow .15s;animation:board-in .38s cubic-bezier(.2,1.5,.4,1) both}
+#hint-btn:active{transform:translateY(3px);box-shadow:0 3px 0 #6FA063}
+#hint-btn svg{width:44px;height:44px}
+#hint-btn.nudge{animation:hint-nudge .4s ease}
+@keyframes hint-nudge{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}
+  60%{transform:translateX(6px)}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-replay svg{width:42px;height:42px}
+
+/* ---------- 幽灵手指教学（照 spellen/read） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFFAF0;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持，通道 A=@media）：格子仍 ≥64（g4 84/g5 72/g6 66），提示按钮 ≥96 高 */
+@media (orientation:portrait){
+  #board.g4{--cs:84px}
+  #board.g5{--cs:72px}
+  #board.g6{--cs:66px}
+  #grid{gap:7px}
+  #hint-btn{min-width:180px;font-size:28px}
+}
+/* 竖屏通道 B：body.port 类（verify simView 模拟竖屏——与上方 @media 逐条等值，双通道同步） */
+body.port #board.g4{--cs:84px}
+body.port #board.g5{--cs:72px}
+body.port #board.g6{--cs:66px}
+body.port #grid{gap:7px}
+body.port #hint-btn{min-width:180px;font-size:28px}
+</style>
+</head>
+<body>
+<div id="game" aria-label="镜像迷宫">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="board" class="g4" aria-label="对称图案棋盘">
+      <div id="grid" aria-label="图案格子"></div>
+      <div id="axis" aria-hidden="true"></div>
+    </div>
+    <div id="answers" aria-label="作答区"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

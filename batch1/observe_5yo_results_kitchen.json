@@ -1,0 +1,228 @@
+[
+ {
+  "game": "kitchen",
+  "phase": "K1教学",
+  "claim": "全新存档直接进教学曲（小星星）play 场景",
+  "detail": {
+   "scene": "play",
+   "song": 0,
+   "playing": true,
+   "ended": false,
+   "hit": 0,
+   "miss": 0,
+   "combo": 0,
+   "total": 28,
+   "stars": 0
+  }
+ },
+ {
+  "game": "kitchen",
+  "phase": "K1教学",
+  "claim": "引导手指出现后约0.4s即消失（t0=Infinity 等待期再无可见提示，直到孩子碰巧点击才开始）——疑似P1：被动等待的孩子可能永远等不到开始",
+  "detail": {
+   "fingerShownThenOff": true,
+   "fingerOffAtGameClock": 0.4913000001907349
+  }
+ },
+ {
+  "game": "kitchen",
+  "phase": "K1教学",
+  "claim": "首次点按锚定后\"看\"段第1音自动命中；t0 取该时刻（游戏时钟域）",
+  "detail": {
+   "anchorClockGameDomain": 6.123199999809265,
+   "t0": 1.591
+  }
+ },
+ {
+  "game": "kitchen",
+  "phase": "K1教学",
+  "claim": "演示中她中途乱点1次=空挥无惩罚（hit不变、无扣分、不破坏教学）",
+  "detail": {
+   "hitBefore": 4,
+   "hitAfter": 4
+  }
+ },
+ {
+  "game": "kitchen",
+  "phase": "K1教学",
+  "claim": "\"帮\"阶段4音手指提示模仿点击（计划偏晚250ms，实测见achievedOff）",
+  "detail": {
+   "perNote": [
+    {
+     "note": 4,
+     "achievedOff": 0.254,
+     "hitD": 1,
+     "missD": 0
+    },
+    {
+     "note": 5,
+     "achievedOff": 0.251,
+     "hitD": 1,
+     "missD": 0
+    },
+    {
+     "note": 6,
+     "achievedOff": 0.26,
+     "hitD": 1,
+     "missD": 0
+    },
+    {
+     "note": 7,
+     "achievedOff": 0.258,
+     "hitD": 1,
+     "missD": 0
+    }
+   ],
+   "allHit": true
+  }
+ },
+ {
+  "game": "kitchen",
+  "phase": "K1教学",
+  "claim": "独奏段完成：迟到窗实测（实测偏晚150-300ms=hit / >300ms=miss）+ 空挥冷却",
+  "detail": {
+   "finalHit": 23,
+   "finalMiss": 5,
+   "total": 28,
+   "lateWindowHits": [
+    {
+     "n": 10,
+     "off": 0.221
+    },
+    {
+     "n": 11,
+     "off": 0.25
+    },
+    {
+     "n": 15,
+     "off": 0.26
+    }
+   ],
+   "lateWindowMiss": [],
+   "tapsNoEffect": [
+    {
+     "n": 9,
+     "off": 0.313,
+     "planned": 0.303
+    },
+    {
+     "n": 17,
+     "off": 0.327,
+     "planned": 0.328
+    },
+    {
+     "n": 19,
+     "off": -0.058,
+     "planned": -0.064
+    },
+    {
+     "n": 21,
+     "off": 0.337,
+     "planned": 0.333
+    },
+    {
+     "n": 22,
+     "off": 0.015,
+     "planned": 0.014
+    }
+   ],
+   "comboBunnyShown": true
+  }
+ },
+ {
+  "game": "kitchen",
+  "phase": "K1教学",
+  "claim": "曲终装盘结算层出现（切中数/猫收走数 零文字图标）",
+  "detail": {
+   "shown": true,
+   "stats": "235"
+  }
+ },
+ {
+  "game": "kitchen",
+  "phase": "K1教学",
+  "claim": "首曲结算星数与存档",
+  "detail": {
+   "stars": 2,
+   "save_1_0": {
+    "stars": 2,
+    "plays": 1
+   }
+  }
+ },
+ {
+  "game": "kitchen",
+  "phase": "K1教学",
+  "claim": "庆祝后回到首页（可继续选曲）",
+  "detail": ""
+ },
+ {
+  "game": "kitchen",
+  "phase": "K2试玩",
+  "claim": "首页 4 张曲卡（3曲+自由琴键），她点了第2张\"两只老虎\"",
+  "detail": {
+   "cards": 4
+  }
+ },
+ {
+  "game": "kitchen",
+  "phase": "K2试玩",
+  "claim": "第二曲（无教学）70/30 节奏完成",
+  "detail": {
+   "hit": 10,
+   "miss": 4,
+   "total": 14,
+   "lateHits": [
+    {
+     "n": 3,
+     "off": 0.283
+    },
+    {
+     "n": 7,
+     "off": 0.264
+    }
+   ],
+   "lateMiss": [],
+   "noEffect": [
+    {
+     "n": 4,
+     "off": -0.058,
+     "planned": -0.065
+    },
+    {
+     "n": 8,
+     "off": 0.041,
+     "planned": 0.054
+    },
+    {
+     "n": 10,
+     "off": 0.278,
+     "planned": 0.279
+    },
+    {
+     "n": 13,
+     "off": 0.369,
+     "planned": 0.358
+    }
+   ]
+  }
+ },
+ {
+  "game": "kitchen",
+  "phase": "K2试玩",
+  "claim": "第二曲结算+存档+回到首页（今日点数）",
+  "detail": {
+   "stars": 1,
+   "save_1_1": {
+    "stars": 1,
+    "plays": 1
+   },
+   "scene": "home",
+   "todayDots": [
+    "tdot",
+    "tdot",
+    "tdot"
+   ]
+  }
+ }
+]

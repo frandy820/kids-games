@@ -1,0 +1,332 @@
+{
+ "tut_random_click": {
+  "tut_after": "watch",
+  "pageerrors": []
+ },
+ "level_1_0": [
+  {
+   "cur": 4,
+   "op": "+",
+   "d": 1,
+   "answer": 5,
+   "options": [
+    5,
+    4,
+    6
+   ]
+  },
+  {
+   "cur": 5,
+   "op": "-",
+   "d": 2,
+   "answer": 3,
+   "options": [
+    4,
+    3,
+    2
+   ]
+  },
+  {
+   "cur": 3,
+   "op": "+",
+   "d": 2,
+   "answer": 5,
+   "options": [
+    5,
+    4,
+    6
+   ]
+  },
+  {
+   "cur": 5,
+   "op": "-",
+   "d": 1,
+   "answer": 4,
+   "options": [
+    3,
+    4,
+    5
+   ]
+  }
+ ],
+ "stars_1_0": {
+  "stars": 3,
+  "plays": 1
+ },
+ "wrong_obs_1_1": [
+  {
+   "n": 1,
+   "miss": 1,
+   "wrong_cls": "cardbtn wig dim",
+   "correct_cls": "cardbtn"
+  },
+  {
+   "n": 2,
+   "miss": 2,
+   "correct_cls": "cardbtn breathe"
+  },
+  {
+   "n": 3,
+   "tap_dimmed": true,
+   "miss_before": 2,
+   "miss_after": 2
+  }
+ ],
+ "rescue_idle": {
+  "first_breathe_s": 13.1,
+  "samples": [
+   [
+    0.0,
+    "cardbtn"
+   ],
+   [
+    0.5,
+    "cardbtn"
+   ],
+   [
+    1.0,
+    "cardbtn"
+   ],
+   [
+    1.5,
+    "cardbtn"
+   ],
+   [
+    2.0,
+    "cardbtn"
+   ],
+   [
+    2.5,
+    "cardbtn"
+   ],
+   [
+    3.0,
+    "cardbtn"
+   ],
+   [
+    3.5,
+    "cardbtn"
+   ],
+   [
+    4.0,
+    "cardbtn"
+   ],
+   [
+    4.5,
+    "cardbtn"
+   ],
+   [
+    5.0,
+    "cardbtn"
+   ],
+   [
+    5.5,
+    "cardbtn"
+   ],
+   [
+    6.0,
+    "cardbtn"
+   ],
+   [
+    6.6,
+    "cardbtn"
+   ],
+   [
+    7.1,
+    "cardbtn"
+   ],
+   [
+    7.6,
+    "cardbtn"
+   ],
+   [
+    8.1,
+    "cardbtn"
+   ],
+   [
+    8.6,
+    "cardbtn"
+   ],
+   [
+    9.1,
+    "cardbtn"
+   ],
+   [
+    9.6,
+    "cardbtn"
+   ],
+   [
+    10.1,
+    "cardbtn"
+   ],
+   [
+    10.6,
+    "cardbtn"
+   ],
+   [
+    11.1,
+    "cardbtn"
+   ],
+   [
+    11.6,
+    "cardbtn"
+   ],
+   [
+    12.1,
+    "cardbtn"
+   ],
+   [
+    12.6,
+    "cardbtn"
+   ],
+   [
+    13.1,
+    "cardbtn breathe"
+   ],
+   [
+    13.7,
+    "cardbtn breathe"
+   ],
+   [
+    14.2,
+    "cardbtn breathe"
+   ],
+   [
+    14.7,
+    "cardbtn breathe"
+   ],
+   [
+    15.2,
+    "cardbtn breathe"
+   ],
+   [
+    15.7,
+    "cardbtn breathe"
+   ],
+   [
+    16.2,
+    "cardbtn breathe"
+   ],
+   [
+    16.7,
+    "cardbtn breathe"
+   ],
+   [
+    17.2,
+    "cardbtn breathe"
+   ],
+   [
+    17.7,
+    "cardbtn breathe"
+   ],
+   [
+    18.2,
+    "cardbtn breathe"
+   ],
+   [
+    18.7,
+    "cardbtn breathe"
+   ],
+   [
+    19.2,
+    "cardbtn breathe"
+   ],
+   [
+    19.7,
+    "cardbtn breathe"
+   ]
+  ]
+ },
+ "seed_n6": {
+  "flat": 0,
+  "ch": 1,
+  "dayend": 1,
+  "dayend_text": "今天的新关卡玩完啦/明天：车厢数字变大啦，开进二十以内/再玩玩旧关卡/明天见"
+ },
+ "level_2_0": [
+  {
+   "cur": 4,
+   "op": "+",
+   "d": 3,
+   "answer": 7,
+   "options": [
+    6,
+    8,
+    7
+   ]
+  },
+  {
+   "cur": 7,
+   "op": "+",
+   "d": 3,
+   "answer": 10,
+   "options": [
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "cur": 10,
+   "op": "-",
+   "d": 3,
+   "answer": 7,
+   "options": [
+    7,
+    8,
+    6
+   ]
+  },
+  {
+   "cur": 7,
+   "op": "-",
+   "d": 4,
+   "answer": 3,
+   "options": [
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "cur": 3,
+   "op": "+",
+   "d": 3,
+   "answer": 6,
+   "options": [
+    6,
+    7,
+    5
+   ]
+  }
+ ],
+ "ch_compare": {
+  "ch1_d": [
+   1,
+   2,
+   2,
+   1
+  ],
+  "ch2_d": [
+   3,
+   3,
+   3,
+   4,
+   3
+  ],
+  "ch1_max_num": 5,
+  "ch2_max_num": 10
+ },
+ "stars_2_0": {
+  "stars": 2,
+  "plays": 1
+ },
+ "text_audit": {
+  "chip_text": "4\n+\n3\n=\n?",
+  "fnum_px": "34px",
+  "cardnum_px": "54px",
+  "opsign_b_px": "33px",
+  "logo_title": null
+ },
+ "pageerrors": []
+}

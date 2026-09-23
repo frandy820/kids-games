@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小兔子的游戏屋 · 又来三款新游戏</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#FBF3E4;color:#4A3B2E;font-family:system-ui,-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+       min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;padding:34px 22px}
+  .logo{width:150px;height:150px}
+  h1{font-size:clamp(26px,5vw,38px);letter-spacing:.05em}
+  .ageband{display:inline-flex;align-items:center;gap:8px;background:#E8975A;color:#fff;font-size:16px;font-weight:700;
+           padding:7px 18px;border-radius:999px;letter-spacing:.04em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:24px;width:100%;max-width:760px}
+  a.card{display:flex;flex-direction:column;align-items:center;gap:14px;padding:28px 16px 24px;border-radius:26px;
+         background:#FFF9EE;border:2.5px solid #4A3B2E;text-decoration:none;color:#4A3B2E;
+         box-shadow:0 5px 0 #D8C9B4;transition:transform .2s}
+  a.card:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+  @media (hover:hover){
+    a.card:hover{transform:translateY(-4px);box-shadow:0 9px 0 #D8C9B4}
+  }
+  .card .icon{width:92px;height:92px}
+  .card .name{font-size:22px;font-weight:700}
+  .card .desc{font-size:14px;color:#8A7B6C;line-height:1.6;text-align:center}
+  .foot{font-size:12.5px;color:#8A7B6C;text-align:center;line-height:1.8;max-width:520px}
+</style>
+</head>
+<body>
+  <div class="logo" id="logo"></div>
+  <h1>小兔子的游戏屋 · 又来三款新游戏</h1>
+  <div class="ageband">★ 6-7 岁 · 幼小衔接 ★</div>
+  <div class="grid">
+    <a class="card" href="ruler/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="12" y="46" width="76" height="22" rx="5" fill="#F2C94C" stroke="#4A3B2E" stroke-width="2.6"/>
+        <path d="M22 46 v8 M32 46 v11 M42 46 v8 M52 46 v11 M62 46 v8 M72 46 v11" stroke="#4A3B2E" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M14 30 h16 M34 30 h16 M54 30 h16 M74 30 h12" stroke="#7FB3E0" stroke-width="3" stroke-linecap="round"/>
+        <path d="M22 24 v12 M42 24 v12 M62 24 v12 M82 24 v6" stroke="#7FB3E0" stroke-width="3" stroke-linecap="round"/>
+        <path d="M40 84 q4 -7 8 0 q4 7 8 0" stroke="#E8975A" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+        <circle cx="44" cy="78" r="2" fill="#4A3B2E"/><circle cx="52" cy="78" r="2" fill="#4A3B2E"/>
+      </svg></div>
+      <div class="name">测量小尺</div>
+      <div class="desc">用回形针量一量<br>铅笔有几根长</div>
+    </a>
+    <a class="card" href="coin/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="34" cy="38" r="24" fill="#F2C94C" stroke="#4A3B2E" stroke-width="2.8"/>
+        <circle cx="34" cy="38" r="17" fill="none" stroke="#4A3B2E" stroke-width="1.8" opacity=".5"/>
+        <text x="34" y="47" font-size="21" font-weight="700" text-anchor="middle" fill="#4A3B2E" font-family="Arial">5</text>
+        <path d="M28 26 q3 -5 6 0 M34 24 q3 -5 6 0" stroke="#E8975A" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <rect x="52" y="48" width="38" height="24" rx="3.5" fill="#9CC288" stroke="#4A3B2E" stroke-width="2.6"/>
+        <circle cx="59" cy="60" r="3.4" fill="#FFF9EE" opacity=".85"/>
+        <text x="76" y="65" font-size="13" font-weight="700" text-anchor="middle" fill="#FFF" font-family="Arial">10</text>
+        <path d="M52 54 h38 M52 66 h38" stroke="#4A3B2E" stroke-width="1.4" opacity=".35"/>
+        <circle cx="18" cy="74" r="8" fill="#D9D9E3" stroke="#4A3B2E" stroke-width="2.2"/>
+        <text x="18" y="77.5" font-size="9" font-weight="700" text-anchor="middle" fill="#4A3B2E" font-family="Arial">1</text>
+      </svg></div>
+      <div class="name">硬币认钱</div>
+      <div class="desc">看看数字和颜色<br>认认一元五角</div>
+    </a>
+    <a class="card" href="notebird/index.html">
+      <div class="icon"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 66 Q28 60 50 64 T92 62" stroke="#4A3B2E" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+        <line x1="10" y1="66" x2="10" y2="86" stroke="#8A7B6C" stroke-width="2.6" stroke-linecap="round"/>
+        <line x1="90" y1="64" x2="90" y2="86" stroke="#8A7B6C" stroke-width="2.6" stroke-linecap="round"/>
+        <g>
+          <ellipse cx="24" cy="56" rx="7.5" ry="6.5" fill="#E8975A" stroke="#4A3B2E" stroke-width="2"/>
+          <circle cx="30" cy="47" r="4.5" fill="#E8975A" stroke="#4A3B2E" stroke-width="2"/>
+          <path d="M34 47 l4 1.6 -4 1.6" fill="#F2B8C6" stroke="#4A3B2E" stroke-width="1.4" stroke-linejoin="round"/>
+          <circle cx="28.6" cy="46" r="1" fill="#4A3B2E"/>
+          <path d="M31 51 l3 2" stroke="#4A3B2E" stroke-width="1.4" stroke-linecap="round"/>
+        </g>
+        <g>
+          <ellipse cx="58" cy="48" rx="7.5" ry="6.5" fill="#7FB3E0" stroke="#4A3B2E" stroke-width="2"/>
+          <circle cx="64" cy="39" r="4.5" fill="#7FB3E0" stroke="#4A3B2E" stroke-width="2"/>
+          <path d="M68 39 l4 1.6 -4 1.6" fill="#F2B8C6" stroke="#4A3B2E" stroke-width="1.4" stroke-linejoin="round"/>
+          <circle cx="62.6" cy="38" r="1" fill="#4A3B2E"/>
+          <path d="M65 43 l3 2" stroke="#4A3B2E" stroke-width="1.4" stroke-linecap="round"/>
+        </g>
+        <text x="42" y="30" font-size="15" font-weight="700" fill="#E05A5A" font-family="Arial">♪</text>
+        <text x="52" y="22" font-size="12" font-weight="700" fill="#E8975A" font-family="Arial">♫</text>
+        <text x="74" y="34" font-size="14" font-weight="700" fill="#9CC288" font-family="Arial">♪</text>
+      </svg></div>
+      <div class="name">音阶小鸟</div>
+      <div class="desc">听一听谁在唱歌<br>左边的低右边的高</div>
+    </a>
+  </div>
+    <p class="foot">每天有新关卡，玩完今天的小兔子会说"明天见"。<br>每款游戏右上角 🔒 家长面板：进度 / 时长 / 今日多玩关数。<br>完全离线，无广告无内购，进度保存在本机。</p>
+<script>
+/* 入口页不内嵌完整 core（无存档/会话需求），仅复用小兔子形象保持 IP 一致 */
+document.getElementById('logo').innerHTML = '<svg viewBox="0 0 120 120" width="150" height="150" xmlns="http://www.w3.org/2000/svg" fill="none"><ellipse cx="60" cy="96" rx="26" ry="12" fill="#EFE3CD"/><ellipse cx="45" cy="28" rx="10" ry="26" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5" transform="rotate(-10 45 28)"/><ellipse cx="45" cy="30" rx="4.5" ry="17" fill="#F2B8C6" transform="rotate(-10 45 30)"/><ellipse cx="76" cy="26" rx="10" ry="27" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5" transform="rotate(14 76 26)"/><ellipse cx="76" cy="28" rx="4.5" ry="18" fill="#F2B8C6" transform="rotate(14 76 28)"/><circle cx="60" cy="68" r="38" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5"/><ellipse cx="54" cy="56" rx="3" ry="2.2" fill="#D98A8A"/><ellipse cx="66" cy="56" rx="3" ry="2.2" fill="#D98A8A"/><ellipse cx="37" cy="74" rx="6.5" ry="4.5" fill="#F2B8C6" opacity=".8"/><ellipse cx="83" cy="74" rx="6.5" ry="4.5" fill="#F2B8C6" opacity=".8"/><path d="M44 62 q5 -7 10 0" stroke="#4A3B2E" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M66 62 q5 -7 10 0" stroke="#4A3B2E" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M55 74 q5 6 10 0" stroke="#4A3B2E" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="18" cy="55" r="9" fill="#FBF7F0" stroke="#4A3B2E" stroke-width="2.5"/></svg>';
+</script>
+</body>
+</html>

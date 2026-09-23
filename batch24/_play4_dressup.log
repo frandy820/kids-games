@@ -1,0 +1,143 @@
+[   1.15s] == A 教学链 watch→help→solo（雨衣+雨靴两件两击演示）==
+[   2.80s] 载入后 tutorial = watch （期望 watch）
+[   3.03s]   shot dru-01-教学watch两击演示.png
+[  13.30s] watch→help 耗时 12.1s __drDemoR=right
+[  13.30s]   watch 段语音序列 = ['n:740Hz', 's:coin', 's:click', 'n:740Hz', 's:coin', 'n:659Hz', 'n:880Hz', 'c:装扮好啦，真好看', 'c:你来装扮它']
+[  13.35s]   shot dru-02-教学help指向.png
+[  13.35s] == B flat0 整关（贴错弹回/again/unsel/连点吞/无选中重读题面）==
+[  13.42s]   tap q0 贴错片 选中(第一击) @(299,426)
+[  13.81s]   tap q0 贴错片 贴上(第二击) @(740,313)
+[  15.08s]   q0 贴错弹回 wig=True heard=['s:click', 'n:587Hz', 'c:现在不用这个哦'] miss=1
+[  15.14s]   shot dru-03-贴错弹回.png
+[  15.16s]   tap q0 第1件 选中(第一击) @(461,427)
+[  15.53s]   tap q0 第1件 贴上(第二击) @(754,313)
+[  16.80s]   q0 第1件挂起 hold badge=1
+[  16.85s]   shot dru-04-挂badge.png
+[  16.87s]   tap q0 第2件 选中(第一击) @(550,429)
+[  17.24s]   tap q0 第2件 贴上(第二击) @(741,326)
+[  18.49s]   q0 完成 step=1
+[  18.50s]   q1 主题=winter need=['coat', 'scarf']
+[  18.51s]   tap q1 选中(第一击) @(473,429)
+[  18.84s]   tap q1 再点选中片(unsel) @(462,439)
+[  19.17s]   tap q1 无选中点兔子(重读题面) @(753,314)
+[  19.78s]   选中=True→取消=True；无选中点场景 heard=['s:pop', 'n:880Hz']
+[  19.78s]   q1 主题=winter need=['coat', 'scarf'] 候选=6片
+[  19.80s]   tap q1 选中(第一击) @(461,427)
+[  20.18s]   tap q1 贴上(第二击) @(752,315)
+[  21.46s]   tap q1 选中(第一击) @(462,439)
+[  21.84s]   tap q1 贴上(第二击) @(754,298)
+[  23.13s]   tap q1 选中(第一击) @(636,427)
+[  23.50s]   tap q1 贴上(第二击) @(753,313)
+[  24.77s]   q1 完成 step=2
+[  24.77s]   q2 主题=rain need=['raincoat', 'rboots']
+[  24.78s]   tap q2 选中 @(636,420)
+[  25.11s]   tap q2 贴上 @(752,323)
+[  25.13s]   tap q2 连点(飞行窗应吞) @(740,312)
+[  26.55s]   连点被吞 heard=['n:880Hz', 's:pop', 'n:880Hz'] badge=0
+[  26.55s]   q2-余件 主题=rain need=['raincoat', 'rboots'] 候选=6片
+[  26.57s]   tap q2-余件 选中(第一击) @(651,419)
+[  26.94s]   tap q2-余件 贴上(第二击) @(741,315)
+[  28.23s]   tap q2-余件 选中(第一击) @(638,439)
+[  28.61s]   tap q2-余件 贴上(第二击) @(754,313)
+[  29.88s]   tap q2-余件 选中(第一击) @(725,441)
+[  30.25s]   tap q2-余件 贴上(第二击) @(739,312)
+[  31.51s]   q2 完成 step=3
+[  31.51s]   q3 主题=winter need=['gloves', 'scarf']
+[  31.53s]   tap q3 选中(边缘) @(257,395) 边缘
+[  31.84s]   tap q3 贴上(边缘) @(740,323)
+[  33.12s]   tap q3 点已贴片(again) @(649,428)
+[  33.63s]   again heard=['s:pop', 'n:880Hz'] miss=0（零惩罚）
+[  33.64s]   q3-余件 主题=winter need=['gloves', 'scarf'] 候选=6片
+[  33.65s]   tap q3-余件 选中(第一击) @(298,440)
+[  34.02s]   tap q3-余件 贴上(第二击) @(754,328)
+[  35.30s]   tap q3-余件 选中(第一击) @(299,441)
+[  35.66s]   tap q3-余件 贴上(第二击) @(741,326)
+[  36.95s]   tap q3-余件 选中(第一击) @(649,429)
+[  37.32s]   tap q3-余件 贴上(第二击) @(739,327)
+[  38.58s]   q3 完成 step=4
+[  38.59s]   q4兜底0 主题=rain need=['raincoat', 'rboots'] 候选=6片
+[  38.61s]   tap q4兜底0 选中(第一击) @(372,442)
+[  38.98s]   tap q4兜底0 贴上(第二击) @(753,313)
+[  40.27s]   tap q4兜底0 选中(第一击) @(372,426)
+[  40.64s]   tap q4兜底0 贴上(第二击) @(740,314)
+[  41.91s]   tap q4兜底0 选中(第一击) @(373,427)
+[  42.30s]   tap q4兜底0 贴上(第二击) @(752,326)
+[  43.59s]   tap q4兜底0 选中(第一击) @(562,428)
+[  43.96s]   tap q4兜底0 贴上(第二击) @(754,327)
+[  46.10s]   shot dru-05-通关celebrate.png
+[  46.10s]   通关 celebrate=False 整关净用时 32.8s
+[  49.71s]   写档 levels={} 当前 flat=0
+[  49.71s] == C 救援：flat1 发呆 36s ==
+[  50.54s]   开始发呆 主题=winter need=['scarf', 'coat'] placed=[]
+[  58.70s]   [8.2s] 方向级 pulse=False heard=['c:雨天出门，穿什么？']
+[  58.75s]   shot dru-06-救援14s方向级.png
+[  84.29s]   [33.7s] 答案级 演示真贴一件 placed=['rboots'] badge=1
+[  84.35s]   shot dru-07-救援30s答案级.png
+[  84.35s]   救援小结：方向级 @8.150002241134644 / 答案级 @33.735822916030884
+[  84.35s]   flat1被救后 主题=rain need=['raincoat', 'rboots'] 候选=6片
+[  84.37s]   tap flat1被救后 选中(第一击) @(561,439)
+[  84.74s]   tap flat1被救后 贴上(第二击) @(754,299)
+[  86.01s]   tap flat1被救后 选中(第一击) @(562,427)
+[  86.38s]   tap flat1被救后 贴上(第二击) @(752,326)
+[  87.64s]   被救后继续 ✓ step=1
+[  87.64s] == D 难度探视 ==
+[  88.55s]   flat5 ch2 三件 主题=school need=['sbag', 'sunhat', 'satchel'] 候选=7片
+[  88.57s]   tap flat5 ch2 三件 贴错片 选中(第一击) @(242,439)
+[  88.94s]   tap flat5 ch2 三件 贴错片 贴上(第二击) @(741,315)
+[  90.21s]     贴错弹回 wig=True heard=['s:click', 'n:587Hz', 'c:现在不用这个哦'] miss=1
+[  90.23s]   tap flat5 ch2 三件 选中(第一击) @(342,427)
+[  90.60s]   tap flat5 ch2 三件 选中(第一击)(重试) @(343,426)
+[  90.98s]   tap flat5 ch2 三件 贴上(第二击) @(752,326)
+[  92.27s]   tap flat5 ch2 三件 选中(第一击) @(418,429)
+[  92.65s]   tap flat5 ch2 三件 贴上(第二击) @(740,314)
+[  93.92s]   tap flat5 ch2 三件 选中(第一击) @(783,442)
+[  94.29s]   tap flat5 ch2 三件 贴上(第二击) @(752,313)
+[  95.55s]     flat5 首题完成 step=1
+[  96.47s]   flat10 ch3 候选8 主题=nap need=['ncap', 'pjy', 'bear'] 候选=8片
+[  96.48s]   tap flat10 ch3 候选8 选中(第一击) @(210,440)
+[  96.86s]   tap flat10 ch3 候选8 贴上(第二击) @(740,314)
+[  98.14s]   tap flat10 ch3 候选8 选中(第一击) @(297,440)
+[  98.51s]   tap flat10 ch3 候选8 贴上(第二击) @(740,312)
+[  99.78s]   tap flat10 ch3 候选8 选中(第一击) @(474,428)
+[ 100.15s]   tap flat10 ch3 候选8 贴上(第二击) @(752,325)
+[ 101.42s]     flat10 首题完成 step=1
+[ 101.46s]   shot dru-08-ch3候选8.png
+[ 102.38s]   flat15 ch4 混合 主题=rain need=['raincoat', 'rboots'] 候选=8片
+[ 102.39s]   tap flat15 ch4 混合 选中(第一击) @(197,440)
+[ 102.76s]   tap flat15 ch4 混合 贴上(第二击) @(753,327)
+[ 104.03s]   tap flat15 ch4 混合 选中(第一击) @(299,442)
+[ 104.40s]   tap flat15 ch4 混合 贴上(第二击) @(740,313)
+[ 105.66s]     flat15 首题完成 step=1
+[ 105.71s]   shot dru-09-ch4混合.png
+[ 105.71s] == E 自由装扮（零判定零写档）==
+[ 105.74s]   tap 切自由模式(真实点击) @(104,34)
+[ 106.76s]   mode=free 清空钮显示=True 贴纸池=19片 heard=['s:click', 'c:自由装扮时间']
+[ 106.77s]   tap free 选中片1 @(154,341)
+[ 107.09s]   tap free 贴上片1 @(740,216)
+[ 108.01s]     贴1后 badge=1
+[ 108.02s]   tap free 选中片2 @(329,330)
+[ 108.34s]   tap free 贴上片2 @(741,208)
+[ 109.25s]     贴2后 badge=2
+[ 109.26s]   tap free 选中片3 @(504,343)
+[ 109.58s]   tap free 贴上片3 @(753,205)
+[ 110.49s]     贴3后 badge=3
+[ 110.50s]   tap free 选中片4 @(694,329)
+[ 110.82s]   tap free 贴上片4 @(754,219)
+[ 111.74s]     贴4后 badge=4
+[ 111.80s]   shot dru-10-自由模式贴4片.png
+[ 111.81s]   tap 揭下第1个badge @(717,147)
+[ 112.33s]   揭下后 badge=3 heard=['s:pop', 'n:880Hz']
+[ 112.35s]   tap free 点已贴片(again) @(330,341)
+[ 112.77s]   free again heard=['s:pop', 'n:880Hz'] badge=3
+[ 112.79s]   tap 清空钮 @(890,637)
+[ 113.40s]   清空后 badge=0 heard=['s:pop', 'n:880Hz']
+[ 113.45s]   shot dru-11-自由模式清空后.png
+[ 113.47s]   free 期间 quiz 静止=True 写档不变=True
+[ 113.48s]   tap 切回任务模式 @(206,33)
+[ 114.70s]   切回任务 mode=task flat=15 step=0（当前关确定性重发）
+[ 114.70s]   全程 free 零写档=True
+[ 114.70s] == F 预置档不重置 ==
+[ 117.07s]   预置档校验: v=1.0 levels={"1-0": {"stars": 3, "plays": 1}} settings.sound=False
+[ 117.08s]   落关 flat=1（期望1）tut=none（期望 none）mode=task
+[ 117.13s]   shot dru-12-预置档不重置.png
+DONE dressup 117.3s

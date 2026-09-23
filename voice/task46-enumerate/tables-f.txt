@@ -1,0 +1,30 @@
+=== season  [game-data.js]
+TEMPS = { |   cold: { n: '很冷', deg: 0,  seasons: ['winter'] },            // 场景=冬景 |   cool: { n: '凉爽', deg: 15, seasons: ['spring', 'autumn'] },  // 场景=春/秋景（seeded） |   hot:  { n: '很热', deg: 35, seasons: ['summer'] }             // 场景
+=== season  [game-data.js]
+OCCS = { |   school: { n: '去上学' }, sport: { n: '做运动' }, |   sleep:  { n: '去睡觉' }, party: { n: '去派对' } | }; | const ALL_OCCS = Object.keys(OCCS);                              // 封闭 4 场合 | /* sleep 场合无三件套（睡衣+拖鞋=2 件）——ch2（三件套章）池排除 sleep */ | c
+=== coin  [game-data.js]
+COMBOS = { |   c_yj_j: { coins: ['yuan1', 'jiao5'], jiao: 15, text: '1元5角', |             say: '一枚一元，一枚五角，一共是多少钱', confirm: '一元加五角，是一元五角' }, |   c_j5j5: { coins: ['jiao5', 'jiao5'], jiao: 10, text: '1元', |             say: '两个五角，一共是多少钱', confirm: '两个五角，就是一元' }, |   c_yy:   { coins: ['yuan1', 'yuan1'], jiao: 20, text: '2元', |             say: '两枚一元，一共是多少钱', confirm: '两个一元，是两元' } | }; | const COMBO_IDS = Object.keys(COMBOS);
+=== coin  [game-data.js]
+confirmOf = (kind, face) => { |   if (kind === 'coin' || kind === 'bill') return '这是' + cnOf(MONEY[face].jiao); |   if (kind === 'sameval') return face === 'yuan1' ? '一元硬币和一元纸币一样多' |                                                   : '一元纸币和一元硬币一样多'; |   return COMBOS[face].confirm; | }; | /* 角值→汉字面额读法（TTS 拼句用）：1角/5角/1元/5元/10元/20元/1元5角/2元 */ | function cnOf(jiao) { |   const yuan = Math.floor(jiao / 10), j = jiao % 10; |   /* 试玩 P1-2：CN 表缺 10/20 → yuan10/yuan20 确认句播「这是undefi
+=== coin  MISS
+=== coin  [game-data.js]
+MONEY = { |   jiao1:  { n: '一角硬币', kind: 'coin', jiao: 1,   text: '1角',  color: 'silver', flower: '兰花', r: 34 }, |   jiao5:  { n: '五角硬币', kind: 'coin', jiao: 5,   text: '5角',  color: 'gold',   flower: '荷花', r: 42 }, |   yuan1:  { n: '一元硬币', kind: 'coin', jiao: 10,  text: '1元',  color: 'silver', flower: '菊花', r: 50 }, |   yuan1p: { n: '一元纸币', kind: 'bill', jiao: 10,  text: '1元',  color: 'green',  num: '1' }, |   yuan
+=== notebird  [game-data.js]
+confirmText = q => |   q.kind === 'higher' ? '对啦，' + NOTES[q.ansNote].cn + '小鸟的声音高' |                       : '对啦，' + NOTES[q.ansNote].cn + '小鸟在唱歌'; | /* find 错反馈方向句（照 calendar 序数比较语义：所点比答案低→答案在右→往右找更高； |    所点比答案高→答案在左→往左找更低——独立于引擎的 verify 硬编码表对账） */ | const GUIDE_FIND = { right: '再往右找找，声音更高的', left: '再往左找找，声音更低的' }; | const GUIDE_HIGHER = '左边的声音低，右边的声音高，再听一听'; // higher 错（最长引导句 16 汉字） | /* 教学主线句（锚定位置↔音高映射，题面/教学句锚定——SPEC §
+=== notebird  [game-data.js]
+NOTES = { |   do:  { n: 'do',  freq: 261.63, c: '#E8483C', cn: '红' }, |   re:  { n: 're',  freq: 293.66, c: '#F08C2E', cn: '橙' }, |   mi:  { n: 'mi',  freq: 329.63, c: '#F5C445', cn: '黄' }, |   fa:  { n: 'fa',  freq: 349.23, c: '#57B368', cn: '绿' }, |   sol: { n: 'sol', c: '#2E6FB8', freq: 392.00, cn: '蓝' }, |   la:  { n: 'la',  freq: 440.
+=== notebird  [game-data.js]
+MAIN_LINE = '电线左边低，右边高';   /* M1 压缩版（9 字符，estMs 3105）：语义=SPEC 主线「左低右高」位置映射 */ |  | /* --------
+=== notebird  [game-data.js]
+GUIDE_FIND = { right: '再往右找找，声音更高的', left: '再往左找找，声音更低的' }; | const GUIDE_HIGHER = '左边的声音低，右边的声音高，再听一听'; // higher 错（最长引导句 16 汉字） | /* 教学主线句（锚定位置↔音高映射，题面/教学句锚定——SPEC §0.66） */ | const MAIN_LINE = '电线左边低，右边高';   /* M1 压
+=== notebird  [game-data.js]
+GUIDE_HIGHER = '左边的声音低，右边的声音高，再听一听'; // higher 错（最长引导句 16 汉字） | /* 教学主线句（锚定位置↔音高映射，题面/教学句锚定——SPEC §0.66） */ | const MAIN_LINE = '电线左边低，右边高
+=== ruler  [game-data.js]
+quizText = q => q.kind === 'cmp' |   ? '谁更长？' |   : ITEMS[q.item].n + '有几' + UNITS[q.unit].q + UNITS[q.unit].n + '长？'; | const confirmText = q => q.kind === 'cmp' |   ? ITEMS[q.item].n + '更长，有' + NUMCN[q.units] + UNITS[q.unit].q + UNITS[q.unit].n + '长' |   : ITEMS[q.item].n + '有' + NUMCN[q.units] + UNITS[q.unit].q + UNITS[q.unit].n + '长'; |  | /* ---------- 错反馈语义引导句（SPEC §0.64：count 按所点数字大小方向 / cmp 按所点物品单位） */ | const GUID
+=== ruler  [game-data.js]
+confirmText = q => q.kind === 'cmp' |   ? ITEMS[q.item].n + '更长，有' + NUMCN[q.units] + UNITS[q.unit].q + UNITS[q.unit].n + '长' |   : ITEMS[q.item].n + '有' + NUMCN[q.units] + UNITS[q.unit].q + UNITS[q.unit].n + '长'; |  | /* ---------- 错反馈语义引导句（SPEC §0.64：count 按所点数字大小方向 / cmp 按所点物品单位） */ | const GUIDE = { |   count_over:  '没有那么多，再数数',            // 所点 > 真值 |   count_under: '还有一小段，再多数一根'
+=== ruler  MISS
+=== ruler  [game-data.js]
+TRAPS = [ |   { a: { item: 'book',   unit: 'stick', units: 3 }, b: { item: 'crayon', unit: 'clip', units: 3 } },  // 6 vs 3 同数3 |   { a: { item: 'pencil', unit: 'stick', units: 2 }, b: { item: 'eraser', unit: 'clip', units: 2 } },  // 4 vs 2 同数2 |   { a: { item: 'crayon', unit: 'block', units: 1 }, b: { item: 'era
+=== ruler  [game-data.js]
+GUIDE = { |   count_over:  '没有那么多，再数数',            // 所点 > 真值 |   count_under: '还有一小段，再多数一根',        // 所点 < 真值（还剩一小段没量到） |   cmp_clip:    '回形针短，数得多也不一定长哦',  // 点了 clip 卡（数字大/同但真长短） |   cmp_stick:   '小棒长，根数少也可能长哦',      // 点了 stick 卡（SPEC 锚句） |   cmp_block:   '积木长，块数少也可能长哦'       // 点了 block 卡 | }; | const guideText = (q, i) => q.kind === 'count' |   ? (q.opts[i].num > q.units ? GUI

@@ -1,0 +1,341 @@
+{
+ "game": "shadow",
+ "tut_initial": {
+  "tut": "watch",
+  "quiz": "target=sun(太阳) opts=['fox', 'sun', 'hamster'] rot=[0, 0, 0] ans=1"
+ },
+ "tut_random_click": {
+  "before": [
+   "watch",
+   0
+  ],
+  "after": [
+   "watch",
+   1
+  ],
+  "pops_added": 2,
+  "swallowed": false
+ },
+ "tut_help": {
+  "ghost_class": "show",
+  "quiz": "target=sun(太阳) opts=['fox', 'sun', 'hamster'] rot=[0, 0, 0] ans=1"
+ },
+ "tut_help_wrong": {
+  "miss": 1,
+  "tut": "help",
+  "dim": [
+   "0"
+  ]
+ },
+ "tut_solo_at": "solo",
+ "level_1_0": {
+  "secs": 10.7,
+  "retries": 1,
+  "per_q": [
+   {
+    "q": "target=rabbit(小兔) opts=['frog', 'rabbit', 'butterfly'] rot=[0, 0, 0] ans=1",
+    "dead0": 0
+   },
+   {
+    "q": "target=balloon(气球) opts=['fox', 'ball', 'balloon'] rot=[0, 0, 0] ans=2",
+    "dead0": 0
+   },
+   {
+    "q": "target=hamster(仓鼠) opts=['sun', 'frog', 'hamster'] rot=[0, 0, 0] ans=2",
+    "dead0": 0
+   },
+   {
+    "q": "target=dog(小狗) opts=['balloon', 'star', 'dog'] rot=[0, 0, 0] ans=2",
+    "dead0": 0
+   }
+  ]
+ },
+ "stars_1_0": {
+  "stars": 2,
+  "plays": 1
+ },
+ "level_1_1": {
+  "secs": 15.9,
+  "retries": 2,
+  "per_q": [
+   {
+    "q": "target=sun(太阳) opts=['rabbit', 'dog', 'sun'] rot=[0, 0, 0] ans=2",
+    "dead0": 0
+   },
+   {
+    "q": "target=cat(小猫) opts=['balloon', 'cat', 'butterfly'] rot=[0, 0, 0] ans=1",
+    "dead0": 0
+   },
+   {
+    "q": "target=frog(青蛙) opts=['ball', 'hamster', 'frog'] rot=[0, 0, 0] ans=2",
+    "dead0": 0
+   },
+   {
+    "q": "target=orange(橘子) opts=['cat', 'fox', 'orange'] rot=[0, 0, 0] ans=2",
+    "dead0": 0
+   },
+   {
+    "q": "target=star(星星) opts=['star', 'fox', 'bear'] rot=[0, 0, 0] ans=0",
+    "dead0": 0
+   }
+  ]
+ },
+ "stars_1_1": {
+  "stars": 2,
+  "plays": 1
+ },
+ "level_1_2": {
+  "secs": 13.8,
+  "retries": 0,
+  "per_q": [
+   {
+    "q": "target=fox(狐狸) opts=['fox', 'butterfly', 'balloon'] rot=[0, 0, 0] ans=0",
+    "dead0": 0
+   },
+   {
+    "q": "target=butterfly(蝴蝶) opts=['fox', 'rabbit', 'butterfly'] rot=[0, 0, 0] ans=2",
+    "dead0": 0
+   },
+   {
+    "q": "target=hamster(仓鼠) opts=['balloon', 'fish', 'hamster'] rot=[0, 0, 0] ans=2",
+    "dead0": 0
+   },
+   {
+    "q": "target=dog(小狗) opts=['dog', 'sun', 'balloon'] rot=[0, 0, 0] ans=0",
+    "dead0": 0
+   },
+   {
+    "q": "target=sun(太阳) opts=['sun', 'dog', 'balloon'] rot=[0, 0, 0] ans=0",
+    "dead0": 0
+   }
+  ]
+ },
+ "stars_1_2": {
+  "stars": 3,
+  "plays": 1
+ },
+ "rescue_idle_1_3": {
+  "at_s": 12.8,
+  "voice": [
+   "T:找一找，谁的"
+  ],
+  "breathe": 12.8
+ },
+ "level_1_3": {
+  "secs": 9.3,
+  "retries": 0,
+  "per_q": [
+   {
+    "q": "target=apple(苹果) opts=['apple', 'rabbit', 'star'] rot=[0, 0, 0] ans=0",
+    "dead0": 0
+   },
+   {
+    "q": "target=cat(小猫) opts=['orange', 'frog', 'cat'] rot=[0, 0, 0] ans=2",
+    "dead0": 0
+   },
+   {
+    "q": "target=apple(苹果) opts=['frog', 'apple', 'hamster'] rot=[0, 0, 0] ans=1",
+    "dead0": 0
+   },
+   {
+    "q": "target=rabbit(小兔) opts=['sun', 'rabbit', 'fish'] rot=[0, 0, 0] ans=1",
+    "dead0": 0
+   }
+  ]
+ },
+ "stars_1_3": {
+  "stars": 3,
+  "plays": 1
+ },
+ "level_1_4": {
+  "secs": 10.8,
+  "retries": 0,
+  "per_q": [
+   {
+    "q": "target=cat(小猫) opts=['cat', 'apple', 'orange'] rot=[0, 0, 0] ans=0",
+    "dead0": 0
+   },
+   {
+    "q": "target=ball(皮球) opts=['star', 'ball', 'hamster'] rot=[0, 0, 0] ans=1",
+    "dead0": 0
+   },
+   {
+    "q": "target=fish(小鱼) opts=['bear', 'fish', 'dog'] rot=[0, 0, 0] ans=1",
+    "dead0": 0
+   },
+   {
+    "q": "target=butterfly(蝴蝶) opts=['fox', 'rabbit', 'butterfly'] rot=[0, 0, 0] ans=2",
+    "dead0": 0
+   },
+   {
+    "q": "target=ball(皮球) opts=['cat', 'ball', 'frog'] rot=[0, 0, 0] ans=1",
+    "dead0": 0
+   }
+  ]
+ },
+ "stars_1_4": {
+  "stars": 3,
+  "plays": 1
+ },
+ "chapterend": {
+  "sel": ".k-celebrate:0 .k-chapterend:1 .k-dayend:0 .k-panel:0",
+  "dayend": null,
+  "chapterend": "★/第 1 章 完成！/本章星星 13/明天：四个影子小伙伴来啦，长得有点像哦/明天见"
+ },
+ "level_2_0": {
+  "secs": 17.7,
+  "retries": 2,
+  "per_q": [
+   {
+    "q": "target=hamster(仓鼠) opts=['bear', 'cat', 'fox', 'hamster'] rot=[0, 0, 0, 0] ans=3",
+    "dead0": 0
+   },
+   {
+    "q": "target=fish(小鱼) opts=['fish', 'star', 'frog', 'butterfly'] rot=[0, 0, 0, 0] ans=0",
+    "dead0": 0
+   },
+   {
+    "q": "target=orange(橘子) opts=['orange', 'apple', 'ball', 'sun'] rot=[0, 0, 0, 0] ans=0",
+    "dead0": 0
+   },
+   {
+    "q": "target=ball(皮球) opts=['sun', 'orange', 'ball', 'apple'] rot=[0, 0, 0, 0] ans=2",
+    "dead0": 0
+   },
+   {
+    "q": "target=apple(苹果) opts=['orange', 'sun', 'apple', 'ball'] rot=[0, 0, 0, 0] ans=2",
+    "dead0": 0
+   }
+  ]
+ },
+ "stars_2_0": {
+  "stars": 2,
+  "plays": 1
+ },
+ "dayend": {
+  "sel": ".k-celebrate:0 .k-chapterend:0 .k-dayend:1 .k-panel:0",
+  "dayend": "今天的新关卡玩完啦/明天：影子会转圈圈啦，转过的也要认出来/再玩玩旧关卡/明天见",
+  "chapterend": null
+ },
+ "text_audit": {
+  "chip_text": "",
+  "chip_aria": null,
+  "card_texts": [
+   "",
+   "",
+   "",
+   ""
+  ],
+  "card_aria": "小熊的影子",
+  "card_px": [
+   "130x152",
+   "130x152",
+   "130x152",
+   "130x152"
+  ],
+  "body_texts_nopict": [
+   "今天的新关卡玩完啦",
+   "明天：影子会转圈圈啦，转过的也要认出来",
+   "再玩玩旧关卡",
+   "明天见"
+  ],
+  "badge_html": null,
+  "badge_text": null
+ },
+ "vlog_summary_A": {
+  "T_find": 14,
+  "P_wrong": 1,
+  "S_pop": 0,
+  "S_coin": 14,
+  "clips": [
+   "core_chapter_end#这一章完",
+   "core_day_end#今天的新",
+   "sha_hint#找一找一"
+  ]
+ },
+ "errors_A": [],
+ "wrong_chain_2_0": [
+  {
+   "miss": 1,
+   "dead": [
+    0
+   ],
+   "breathe": -1,
+   "pe": [
+    "none",
+    "auto",
+    "auto",
+    "auto"
+   ],
+   "op": [
+    0.42,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "miss": 2,
+   "dead": [
+    0,
+    1
+   ],
+   "breathe": 3,
+   "pe": [
+    "none",
+    "none",
+    "auto",
+    "auto"
+   ],
+   "op": [
+    0.42,
+    0.42,
+    1,
+    1
+   ]
+  },
+  {
+   "miss": 3,
+   "dead": [
+    0,
+    1,
+    2
+   ],
+   "breathe": 3,
+   "pe": [
+    "none",
+    "none",
+    "none",
+    "auto"
+   ],
+   "op": [
+    0.42,
+    0.42,
+    0.42,
+    1
+   ]
+  }
+ ],
+ "rescue_B_1": {
+  "at_s": 13.5,
+  "voice": [
+   "T:找一找，谁的"
+  ],
+  "breathe": 13.5
+ },
+ "rescue_B_2": {
+  "at_s": 14.3,
+  "voice": [
+   "T:找一找，谁的"
+  ]
+ },
+ "stars_2_0_B": {
+  "stars": 1,
+  "plays": 1
+ },
+ "errors_B": [],
+ "errors_all": {
+  "A": [],
+  "B": []
+ }
+}

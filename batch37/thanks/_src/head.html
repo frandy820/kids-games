@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>感谢的话</title>
+<style>
+/* ================= thanks 感谢的话（batch37）=================
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色 #E8975A、暖棕描边 #4A3B2E。
+   玩法 = 帮助情景选回应卡（r12 难度改造 2026-09-15，SPEC-BATCH37 §7 真值现行版；
+   v1 好坏二分/§1 作历史存档）：朋友帮了「你」（受助视角——主语反转，与 b36
+   comfort 差异声明三重差异之一），舞台小动物朋友帮你后期待地看着你（角色
+   SVG+期待表情），题面=情景句 keyless TTS（say 非队列链，零文字依赖）+
+   题型框架锚串播（fit/size=tha_fit「想一想，哪个最合适」/ anti=tha_not
+   「哪一句，现在不该说」——反向题）；下方 2-3 张回应卡（tier 图+短词）：
+   ch1-2 fit 场合适配两选（对老师/家人同伴——同 label 跨情景 tier 翻转防
+   「永远鞠躬」启发式）/ ch3 size 强度匹配三选（大帮忙热烈·小帮忙轻声）/
+   ch4 anti 反向辨析三选（点**不该说**的那句=对——比赛输了谢对手=合时宜 ok）。
+   选答案卡=朋友开心演出+right+th_right；选灰卡（择优次档）=朋友半好态
+   meh+tha_gray「有点用，还有更合适的哦」（SEL 温和不否定）；anti 点 ok 卡=
+   meh+tha_ok 消除式反馈；选 bad 卡=wrong+th_wrong「朋友会伤心的」
+   （SEL 铁律：温和指向行为后果，禁人身评价）。
+   触摸目标：回应卡 ≥96×96（实测 ~160）；overflowX 恒 0。
+   各 tier 卡视觉同构（不靠颜色歧视——语义承载在图+语音）。
+   竖屏双通道：@media (orientation:portrait) + body.port 类通道逐条等值
+   （r9 M-A1/r11 M-1 同型——verify simView 无真 orientation 时类通道兜底）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:38px;height:38px;border-radius:11px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 38px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：朋友演出区（帮完你→期待回应） ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:6px;overflow:hidden;padding:6px 12px}
+#scene{position:relative;flex:1 1 auto;width:100%;max-width:560px;min-height:230px;display:flex;
+  align-items:center;justify-content:center;flex-direction:column;gap:2px;
+  background:linear-gradient(180deg,#FDF3E3 0%,#FAE9CF 100%);
+  border:3px solid #E5CDA6;border-radius:26px;overflow:hidden;
+  box-shadow:inset 0 0 0 5px rgba(255,249,238,.55)}
+/* 地面线：朋友站的地方 */
+#scene .ground{position:absolute;left:8%;right:8%;bottom:34px;height:14px;border-radius:50%;
+  background:rgba(201,179,138,.35)}
+#friend{width:168px;height:156px;pointer-events:none;position:relative;z-index:2}
+#friend svg{width:100%;height:100%}
+/* 表情组切换（容器类控 mood：sad 题面期待态 / meh r12 半好态 / happy 开心演出
+   ——契约 M DOM 类层锚）
+   th 语义：sad 类=朋友帮完你后期待地看着你（睁眼微笑+小盼头）非伤心；
+   meh 类=灰卡/anti-ok 后果（平眉睁眼小平笑——有点用还没到最好，不否定已选） */
+#friend .fx-happy,#friend .fx-meh{display:none}
+#friend.meh .fx-sad{display:none}
+#friend.meh .fx-meh{display:block}
+#friend.happy .fx-sad,#friend.happy .fx-meh{display:none}
+#friend.happy .fx-happy{display:block}
+/* 期待出场：轻轻左右盼（头微摆+小浮） */
+#friend.sad{animation:fr-sway 2.4s ease-in-out infinite}
+@keyframes fr-sway{0%,100%{transform:rotate(0) translateY(0)}50%{transform:rotate(-1.2deg) translateY(1px)}}
+/* 半好态（r12 灰卡/anti-ok：轻晃一下——不期待也不失落） */
+#friend.meh{animation:fr-meh 1.8s ease-in-out infinite}
+@keyframes fr-meh{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(2px) rotate(1.2deg)}}
+/* 重播期待：重演点头一拍（方向级救援/重听配动效） */
+#friend.wait{animation:fr-nod 1.1s ease}
+@keyframes fr-nod{0%,100%{transform:translateY(0) rotate(0)}40%{transform:translateY(5px) rotate(2.5deg)}}
+/* 失落（点坏卡瞬间：低头垂肩一拍——SEL：指向行为后果不羞辱） */
+#friend.sadder{animation:fr-down .5s ease}
+@keyframes fr-down{0%,100%{transform:translateY(0) rotate(0)}40%{transform:translateY(10px) rotate(-3deg)}}
+/* 开心：跳两下（答案卡=朋友开心演出） */
+#friend.happy{animation:fr-joy .55s ease 2}
+@keyframes fr-joy{0%,100%{transform:translateY(0)}45%{transform:translateY(-16px) scale(1.04)}}
+/* 期待小星（fx-sad 组内，一闪一闪） */
+#friend .wish{animation:wish-tw 1.4s ease-in-out infinite}
+@keyframes wish-tw{0%,100%{opacity:.25;transform:scale(.85)}50%{opacity:1;transform:scale(1.12)}}
+/* 情景道具（舞台右下小图标） */
+#prop{position:absolute;right:16px;bottom:14px;width:56px;height:56px;z-index:1;opacity:.95}
+#prop svg{width:100%;height:100%}
+/* 星星彩带（开心演出层：JS 撒 6 颗） */
+.spark{position:absolute;z-index:5;pointer-events:none;width:22px;height:22px;
+  animation:spark-fly .9s ease-out forwards}
+@keyframes spark-fly{0%{transform:translateY(0) scale(.4);opacity:1}
+  100%{transform:translate(var(--dx),var(--dy)) scale(1.1);opacity:0}}
+#q-text{flex:0 0 auto;font-size:15px;letter-spacing:2px;color:#8A7B6C;padding:0 0 6px}
+
+/* ---------- 回应 2-3 张：大卡（图+短词），≥96×96 ---------- */
+#cards{flex:0 0 auto;display:flex;justify-content:center;align-items:stretch;gap:18px;
+  width:100%;max-width:760px;padding:4px 14px 10px}
+#cards.wig{animation:cds-wig .5s ease}
+@keyframes cds-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-1.6deg)}75%{transform:rotate(1.6deg)}}
+#cards.bump{animation:cds-bump .22s ease}
+@keyframes cds-bump{0%,100%{transform:scale(1)}45%{transform:scale(.96)}}
+.card-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  width:210px;min-height:158px;padding:10px 12px 12px;border-radius:22px;
+  background:#FFF9EE;border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  transition:transform .15s}
+.card-wrap:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+.card-wrap .art{width:104px;height:76px;pointer-events:none}
+.card-wrap .art svg{width:100%;height:100%}
+.card-wrap .word{font-size:21px;font-weight:800;color:#4A3B2E;letter-spacing:1px}
+/* 好卡被选中：亮起+心跳（演出层锚 .good——契约 M） */
+.card-wrap.good{animation:cd-good 1.1s ease}
+@keyframes cd-good{0%{transform:scale(1)}35%{transform:scale(1.12) translateY(-6px)}100%{transform:scale(1)}}
+/* 坏卡被点：左右摇头（行为后果反馈，不羞辱） */
+.card-wrap.bad{animation:cd-bad .5s ease}
+@keyframes cd-bad{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+/* 灰卡/anti-ok 被点（r12）：轻降饱和+微缩一拍（SEL 温和——次优非错误，不摇头） */
+.card-wrap.gray{animation:cd-gray .5s ease;filter:saturate(.55) brightness(.97)}
+@keyframes cd-gray{0%,100%{transform:scale(1)}45%{transform:scale(.97)}}
+/* 救援答案级：好卡高亮呼吸 */
+.card-wrap.breathe{animation:cd-hint 1.2s ease-in-out infinite}
+@keyframes cd-hint{0%,100%{box-shadow:0 5px 0 #D8C9B4}50%{box-shadow:0 5px 0 #D8C9B4,0 0 16px rgba(232,151,90,.95)}}
+/* 出场弹入 */
+.card-wrap.pop{animation:cd-pop .45s ease backwards}
+@keyframes cd-pop{0%{transform:translateY(26px) scale(.86);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（fixed 层，教学演示/帮共用；照家族形态） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:opacity .4s;transform:translate(-50%,-88%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-88%)}50%{transform:translate(-50%,-74%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：舞台收紧+卡横排收窄。
+   双通道（r9 M-A1/r11 M-1 定版）：@media 真竖屏 + body.port 类通道（verify
+   simView 在横视口下用类通道模拟竖屏——两段规则逐条等值，改必同步）；
+   #friend 横 168/竖 140=portStyle 固定尺寸判别锚（verify 断言）。 */
+@media (orientation:portrait){
+  #scene{min-height:200px;max-width:460px}
+  #friend{width:140px;height:130px}
+  #cards{gap:12px;max-width:640px}
+  .card-wrap{width:168px;min-height:140px}
+  .card-wrap .art{width:88px;height:64px}
+  .card-wrap .word{font-size:18px}
+}
+body.port #scene{min-height:200px;max-width:460px}
+body.port #friend{width:140px;height:130px}
+body.port #cards{gap:12px;max-width:640px}
+body.port .card-wrap{width:168px;min-height:140px}
+body.port .card-wrap .art{width:88px;height:64px}
+body.port .card-wrap .word{font-size:18px}
+</style>
+</head>
+<body>
+<div id="game" aria-label="感谢的话">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="scene" aria-label="朋友帮助你的情景">
+      <div class="ground" aria-hidden="true"></div>
+      <div id="friend" aria-hidden="true"></div>
+      <div id="prop" aria-hidden="true"></div>
+    </div>
+    <div id="q-text" aria-hidden="true"></div>
+    <div id="cards" aria-label="选一个感谢朋友的回应"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

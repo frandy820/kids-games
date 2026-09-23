@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>单词拼图</title>
+<style>
+/* ================= 单词拼图 wordpuz（batch29）=================
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E；
+   6-7 岁幼小衔接段：题面 = 目标词插图（简笔 SVG）+ 中文提示徽章 + 题面句条；
+   中部槽位行（词长 3-4 格）；下方字母卡乱序（ch3+ 池=词字母+1 干扰卡）。
+   点下一个所需字母卡 = 字母飞入槽位；槽位填满且串接=目标词 = right（多重集语义：
+   重复字母点任一同字母未用卡均合法）；点非所需 = wrong+miss+wig；已用卡再点 =
+   pop+bump 轻反馈不记 miss。miss≥2 首字母槽亮提示（sp_first 先例）。
+   触摸目标：字母卡 ≥64×64、槽位 ≥56×56（§0.9 本款口径）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 50px;display:flex;align-items:center;padding:5px 60px 0 14px;gap:14px}
+#logo{width:40px;height:40px;border-radius:12px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 40px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：题面卡（插图+中文徽章）→ 槽位行 → 字母卡排 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:12px;overflow:hidden;padding:6px 12px}
+
+/* 题面卡：可点重听题面（重播 wpu_q+词音）；插图 ≥140 宽承载题面真值 */
+#scene{position:relative;width:min(300px,60vw);border-radius:26px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;overflow:hidden;padding:10px 12px 12px;
+  transition:transform .15s}
+#scene:active{transform:translateY(3px)}
+#scene .q-text{position:relative;z-index:3;margin:0 auto 4px;width:max-content;max-width:100%;
+  background:#FBF6EC;border:2.5px solid #4A3B2E;border-radius:16px;
+  padding:3px 16px;font-size:20px;font-weight:700;letter-spacing:1px;white-space:nowrap}
+#scene .pic{width:150px;height:150px;margin:0 auto;display:flex;align-items:center;justify-content:center}
+#scene .pic svg{width:100%;height:100%}
+#scene .zh{position:relative;z-index:3;display:block;width:max-content;margin:2px auto 0;
+  background:#E8975A;border:2.5px solid #4A3B2E;border-radius:14px;color:#FFF9EE;
+  padding:2px 18px;font-size:24px;font-weight:700;letter-spacing:2px}
+/* 救援方向级：题面卡 pulse（呼吸放大 3 次）；点题面轻弹 */
+#scene.pulse{animation:scene-pulse 1s ease-in-out 3}
+@keyframes scene-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+#scene.bounce{animation:scene-b .4s ease}
+@keyframes scene-b{0%,100%{transform:scale(1)}45%{transform:scale(.97)}}
+
+/* ---------- 槽位行：词长 3-4 格，格 ≥56×56；空格=浅底虚线，填入=字母弹入 ---------- */
+#slots{display:flex;gap:12px;justify-content:center;align-items:stretch;flex:0 0 auto;
+  width:100%;max-width:480px}
+#slots .cell{position:relative;width:64px;height:64px;border-radius:16px;background:#FBF6EC;
+  border:3px dashed #C9A87C;display:flex;align-items:center;justify-content:center;
+  transition:background .25s,border-color .25s;padding:0}
+#slots .cell.full{background:#FFF9EE;border:3px solid #4A3B2E;box-shadow:0 3px 0 #D8C9B4}
+#slots .cell .lt{font-size:38px;font-weight:700;line-height:1;color:#4A3B2E}
+#slots .cell .lt:empty{visibility:hidden}
+#slots .cell.full .lt{animation:lt-in .34s cubic-bezier(.2,1.6,.4,1)}
+@keyframes lt-in{from{transform:scale(.2) translateY(-16px);opacity:0}to{transform:scale(1);opacity:1}}
+/* 词完成：整排槽亮绿 + 轻弹 */
+#slots .cell.win{background:#EAF2DC;border-color:#6FA063;box-shadow:0 3px 0 #8FBF7F;
+  animation:cell-win .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes cell-win{0%{transform:scale(1)}45%{transform:scale(1.14)}100%{transform:scale(1)}}
+/* miss≥2 首字母槽亮提示（sp_first 先例）+ 30s 答案级救援视觉 */
+#slots .cell.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+@keyframes an-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.95))}}
+#slots.wig{animation:slots-wig .5s ease}
+@keyframes slots-wig{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}
+  50%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
+
+/* ---------- 字母卡排（池 3-5 张）：卡 ≥64×64；吞输入=容器 bump（家族 D） ---------- */
+#board{display:flex;gap:14px;justify-content:center;align-items:stretch;flex:0 0 auto;
+  width:100%;max-width:560px;padding:0 2px}
+#board.bump{animation:board-bump .22s ease}
+@keyframes board-bump{0%,100%{transform:scale(1)}45%{transform:scale(.96)}}
+.ltr{position:relative;background:#FFF9EE;border:3px solid #4A3B2E;border-radius:20px;
+  box-shadow:0 5px 0 #D8C9B4;flex:0 0 auto;width:88px;height:96px;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .15s;overflow:hidden;padding:0}
+.ltr:active{transform:translateY(3px)}
+.ltr .ch{font-size:52px;font-weight:700;line-height:1;color:#4A3B2E;font-family:Georgia,"Times New Roman",serif}
+.ltr.pop{animation:card-in .42s cubic-bezier(.2,1.6,.4,1) backwards}
+@keyframes card-in{from{transform:scale(.3) rotate(-6deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}
+/* 已用卡（字母已入槽）：轻灰缩（不可再点） */
+.ltr.gone{opacity:.28;transform:scale(.88);filter:grayscale(.9);pointer-events:none;
+  animation:card-gone .4s ease}
+@keyframes card-gone{0%{transform:scale(1);opacity:1}100%{transform:scale(.88);opacity:.28}}
+/* 答错：摇头晃动（不灰掉可重选——探索不罚） */
+.ltr.wig{animation:an-wig .6s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}22%{transform:rotate(-8deg) translateX(-4px)}
+  50%{transform:rotate(7deg) translateX(3px)}78%{transform:rotate(-4deg) translateX(-2px)}}
+/* 30s 答案级救援：应点卡呼吸高亮循环（§0.21） */
+.ltr.breathe{animation:ltr-breathe 1.6s ease-in-out infinite}
+@keyframes ltr-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:86px;height:86px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch21-28） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板/手机竖持）：插图与卡适配，卡仍 ≥64、槽 ≥56 */
+@media (orientation:portrait){
+  #scene{width:min(230px,56vw)}
+  #scene .q-text{font-size:17px;padding:2px 12px}
+  #scene .pic{width:118px;height:118px}
+  #scene .zh{font-size:20px;padding:2px 14px}
+  #slots{gap:9px}
+  #slots .cell{width:56px;height:56px;border-radius:14px}
+  #slots .cell .lt{font-size:33px}
+  #board{gap:9px}
+  .ltr{width:68px;height:78px;border-radius:17px}
+  .ltr .ch{font-size:42px}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="单词拼图">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <button id="scene" aria-label="看图拼单词，点我再听一遍"></button>
+    <div id="slots" aria-label="单词槽位"></div>
+    <div id="board" aria-label="字母卡"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

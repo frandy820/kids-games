@@ -1,0 +1,7759 @@
+{
+ "game": "clock",
+ "wallSec": 205.7,
+ "stats": {
+  "levelsPlayed": [
+   {
+    "flat": 0,
+    "questions": 5
+   },
+   {
+    "flat": 1,
+    "questions": 5
+   },
+   {
+    "flat": 5,
+    "questions": 5,
+    "mirrorErrors": 3
+   },
+   {
+    "flat": 10,
+    "questions": 5
+   },
+   {
+    "flat": 15,
+    "questions": 3
+   }
+  ],
+  "questions": 23,
+  "wrongs": 0,
+  "idles": [
+   {
+    "at": "1-0_q2_thinking",
+    "secs": 21,
+    "rescue": "something",
+    "voiceCalls": 2,
+    "domChanged": false
+   },
+   {
+    "at": "flat5_q3_stuck",
+    "secs": 24,
+    "rescue": "none",
+    "voiceCalls": 0,
+    "domChanged": false
+   },
+   {
+    "at": "flat10_dial_stuck",
+    "secs": 22,
+    "rescue": "none",
+    "voiceCalls": 0,
+    "domChanged": false
+   },
+   {
+    "at": "flat15_stuck",
+    "secs": 22,
+    "rescue": "none",
+    "voiceCalls": 0,
+    "domChanged": false
+   }
+  ],
+  "pageerrors": []
+ },
+ "obs": {
+  "voices": [
+   {
+    "wall": 1788694869605,
+    "key": "clk_tut_turn",
+    "text": "你来点一点"
+   },
+   {
+    "wall": 1788694870111,
+    "key": "clk_hint",
+    "text": "看看长针指在哪里"
+   },
+   {
+    "wall": 1788694894073,
+    "key": "clk_hint",
+    "text": "看看长针指在哪里"
+   },
+   {
+    "wall": 1788694906263,
+    "key": "clk_hint",
+    "text": "看看长针指在哪里"
+   },
+   {
+    "wall": 1788694911603,
+    "key": "clk_hint",
+    "text": "看看长针指在哪里"
+   },
+   {
+    "wall": 1788694924442,
+    "key": "clk_hint",
+    "text": "看看长针指在哪里"
+   }
+  ],
+  "sfx": [
+   {
+    "wall": 1788694868708,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694870111,
+    "n": "fail"
+   },
+   {
+    "wall": 1788694873805,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694897703,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694899568,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694900984,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694902734,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694903627,
+    "n": "win"
+   },
+   {
+    "wall": 1788694910537,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694911603,
+    "n": "fail"
+   },
+   {
+    "wall": 1788694914953,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694917321,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694918653,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694920917,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694921799,
+    "n": "win"
+   },
+   {
+    "wall": 1788694930700,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694933583,
+    "n": "fail"
+   },
+   {
+    "wall": 1788694936466,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694966735,
+    "n": "fail"
+   },
+   {
+    "wall": 1788694969536,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694972101,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694975788,
+    "n": "fail"
+   },
+   {
+    "wall": 1788694978714,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694979607,
+    "n": "win"
+   },
+   {
+    "wall": 1788694986182,
+    "n": "pop"
+   },
+   {
+    "wall": 1788694986307,
+    "n": "pop"
+   },
+   {
+    "wall": 1788694986428,
+    "n": "pop"
+   },
+   {
+    "wall": 1788694986555,
+    "n": "pop"
+   },
+   {
+    "wall": 1788694986678,
+    "n": "pop"
+   },
+   {
+    "wall": 1788694986801,
+    "n": "pop"
+   },
+   {
+    "wall": 1788694986924,
+    "n": "pop"
+   },
+   {
+    "wall": 1788694987044,
+    "n": "pop"
+   },
+   {
+    "wall": 1788694987172,
+    "n": "pop"
+   },
+   {
+    "wall": 1788694987294,
+    "n": "pop"
+   },
+   {
+    "wall": 1788694987421,
+    "n": "pop"
+   },
+   {
+    "wall": 1788694987544,
+    "n": "pop"
+   },
+   {
+    "wall": 1788694991017,
+    "n": "fail"
+   },
+   {
+    "wall": 1788694995040,
+    "n": "coin"
+   },
+   {
+    "wall": 1788694998515,
+    "n": "coin"
+   },
+   {
+    "wall": 1788695024805,
+    "n": "coin"
+   },
+   {
+    "wall": 1788695028574,
+    "n": "coin"
+   },
+   {
+    "wall": 1788695032063,
+    "n": "coin"
+   },
+   {
+    "wall": 1788695032950,
+    "n": "win"
+   },
+   {
+    "wall": 1788695038384,
+    "n": "fail"
+   },
+   {
+    "wall": 1788695041851,
+    "n": "coin"
+   },
+   {
+    "wall": 1788695044964,
+    "n": "coin"
+   },
+   {
+    "wall": 1788695048136,
+    "n": "coin"
+   }
+  ],
+  "errs": [],
+  "patchErr": [
+   null,
+   null
+  ]
+ },
+ "timeline": [
+  {
+   "wall": 1.41,
+   "kind": "snap",
+   "tag": "tut_watch_early",
+   "s": {
+    "wall": 1788694867425,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": "#answers .opt[2]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 360,
+      "items": [
+       "7:00",
+       "6:30",
+       "6:00"
+      ],
+      "answer": 2,
+      "step": 0
+     },
+     "tut": "watch"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "7:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "6:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "6:00",
+      "cls": "opt pulse"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(180.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 2.23,
+   "kind": "snap",
+   "tag": "tut_watch_ghost",
+   "s": {
+    "wall": 1788694868247,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": "#answers .opt[2]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 360,
+      "items": [
+       "7:00",
+       "6:30",
+       "6:00"
+      ],
+      "answer": 2,
+      "step": 0
+     },
+     "tut": "watch"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "7:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "6:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "6:00",
+      "cls": "opt pulse"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(180.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 3.05,
+   "kind": "snap",
+   "tag": "tut_watch_press",
+   "s": {
+    "wall": 1788694869069,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": "#answers .opt[2]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "watch"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "7:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "6:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "6:00",
+      "cls": "opt right"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(180.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 3.87,
+   "kind": "snap",
+   "tag": "tut_watch_pick",
+   "s": {
+    "wall": 1788694869886,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": "#answers .opt[2]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "watch"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 4.53,
+   "kind": "tut_watch_tap_during_demo",
+   "d": "step 1->0 (locked ok)"
+  },
+  {
+   "wall": 5.74,
+   "kind": "snap",
+   "tag": "tut_help_ghost",
+   "s": {
+    "wall": 1788694871757,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": "#answers .opt[2]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 360,
+      "items": [
+       "7:00",
+       "6:30",
+       "6:00"
+      ],
+      "answer": 2,
+      "step": 0
+     },
+     "tut": "help"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "7:00",
+      "cls": "opt wrong"
+     },
+     {
+      "i": "1",
+      "txt": "6:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "6:00",
+      "cls": "opt pulse"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(180.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 8.72,
+   "kind": "snap",
+   "tag": "tut_help_followed",
+   "s": {
+    "wall": 1788694874736,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 8.72,
+   "kind": "tut_solo_entered",
+   "d": "tut=solo"
+  },
+  {
+   "wall": 10.16,
+   "kind": "idle_start",
+   "d": "1-0_q2_thinking"
+  },
+  {
+   "wall": 11.48,
+   "kind": "snap",
+   "tag": "idle_1-0_q2_thinking_t0",
+   "s": {
+    "wall": 1788694877501,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 13.5,
+   "kind": "snap",
+   "tag": "idle_1-0_q2_thinking_t+2s",
+   "s": {
+    "wall": 1788694879517,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 15.52,
+   "kind": "snap",
+   "tag": "idle_1-0_q2_thinking_t+4s",
+   "s": {
+    "wall": 1788694881536,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 17.54,
+   "kind": "snap",
+   "tag": "idle_1-0_q2_thinking_t+6s",
+   "s": {
+    "wall": 1788694883558,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 19.56,
+   "kind": "snap",
+   "tag": "idle_1-0_q2_thinking_t+8s",
+   "s": {
+    "wall": 1788694885572,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 21.57,
+   "kind": "snap",
+   "tag": "idle_1-0_q2_thinking_t+10s",
+   "s": {
+    "wall": 1788694887586,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 23.6,
+   "kind": "snap",
+   "tag": "idle_1-0_q2_thinking_t+12s",
+   "s": {
+    "wall": 1788694889614,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 25.61,
+   "kind": "snap",
+   "tag": "idle_1-0_q2_thinking_t+14s",
+   "s": {
+    "wall": 1788694891629,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 27.62,
+   "kind": "snap",
+   "tag": "idle_1-0_q2_thinking_t+16s",
+   "s": {
+    "wall": 1788694893640,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 29.64,
+   "kind": "snap",
+   "tag": "idle_1-0_q2_thinking_t+18s",
+   "s": {
+    "wall": 1788694895657,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 31.65,
+   "kind": "snap",
+   "tag": "idle_1-0_q2_thinking_t+20s",
+   "s": {
+    "wall": 1788694897673,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 31.66,
+   "kind": "snap",
+   "tag": "idle_1-0_q2_thinking_end",
+   "s": {
+    "wall": 1788694897680,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 0,
+      "items": [
+       "1:00",
+       "12:30",
+       "12:00"
+      ],
+      "answer": 2,
+      "step": 1
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "12:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 31.66,
+   "kind": "idle_end",
+   "d": "1-0_q2_thinking rescue=something"
+  },
+  {
+   "wall": 33.87,
+   "kind": "snap",
+   "tag": "q3_doubleclick_during_lock",
+   "s": {
+    "wall": 1788694899890,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 90,
+      "items": [
+       "1:30",
+       "1:00",
+       "12:30"
+      ],
+      "answer": 0,
+      "step": 3
+     },
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "9:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "10:00",
+      "cls": "opt right"
+     },
+     {
+      "i": "2",
+      "txt": "10:30",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(300.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 36.73,
+   "kind": "snap",
+   "tag": "level_1_0_win_anim",
+   "s": {
+    "wall": 1788694902744,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 5,
+      "retries": 1,
+      "done": true,
+      "won": false
+     },
+     "quiz": null,
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "7:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "7:30",
+      "cls": "opt right"
+     },
+     {
+      "i": "2",
+      "txt": "8:30",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(225.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "done",
+      "cur"
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 40.05,
+   "kind": "snap",
+   "tag": "after_1_0",
+   "s": {
+    "wall": 1788694906063,
+    "ov": {
+     "cls": "k-ov k-celebrate",
+     "text": "★ ★ 好棒！"
+    },
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 0,
+      "ch": 1,
+      "dch": 1,
+      "lv": 0,
+      "n": 5,
+      "step": 5,
+      "retries": 1,
+      "done": true,
+      "won": true
+     },
+     "quiz": null,
+     "tut": "solo"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "7:00",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "7:30",
+      "cls": "opt right"
+     },
+     {
+      "i": "2",
+      "txt": "8:30",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(225.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "done",
+      "cur"
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 42.64,
+   "kind": "auto_proceed_flat1",
+   "d": "True"
+  },
+  {
+   "wall": 46.3,
+   "kind": "snap",
+   "tag": "B_wrong_feedback",
+   "s": {
+    "wall": 1788694912317,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 812,
+     "y": 598
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 1,
+      "ch": 1,
+      "dch": 1,
+      "lv": 1,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 60,
+      "items": [
+       "1:00",
+       "1:30",
+       "12:00"
+      ],
+      "answer": 0,
+      "step": 1
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:00",
+      "cls": "opt pulse"
+     },
+     {
+      "i": "1",
+      "txt": "1:30",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "12:00",
+      "cls": "opt wrong"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(30.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "cur",
+      "",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 61.18,
+   "kind": "snap",
+   "tag": "C_flat5_loaded",
+   "s": {
+    "wall": 1788694927201,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 195,
+      "items": [
+       "3:20",
+       "4:45",
+       "3:15"
+      ],
+      "answer": 2,
+      "step": 0
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "3:20",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "4:45",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "3:15",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(97.50 100 100)",
+      "mrot": "rotate(90.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 61.18,
+   "kind": "jump_flat5",
+   "d": "ok=True dch=2"
+  },
+  {
+   "wall": 68.39,
+   "kind": "snap",
+   "tag": "C_mirror_wrong_q1",
+   "s": {
+    "wall": 1788694934404,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 1,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 50,
+      "items": [
+       "1:10",
+       "12:50",
+       "12:45"
+      ],
+      "answer": 1,
+      "step": 1
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "1:10",
+      "cls": "opt wrong"
+     },
+     {
+      "i": "1",
+      "txt": "12:50",
+      "cls": "opt pulse"
+     },
+     {
+      "i": "2",
+      "txt": "12:45",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(25.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "cur",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 68.39,
+   "kind": "C_mirror_wrong",
+   "d": "q1 voices_delta=0 (flat>=3 语音应哑)"
+  },
+  {
+   "wall": 70.45,
+   "kind": "idle_start",
+   "d": "flat5_q3_stuck"
+  },
+  {
+   "wall": 71.78,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t0",
+   "s": {
+    "wall": 1788694937795,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 73.8,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t+2s",
+   "s": {
+    "wall": 1788694939817,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 75.82,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t+4s",
+   "s": {
+    "wall": 1788694941836,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 77.83,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t+6s",
+   "s": {
+    "wall": 1788694943851,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 79.86,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t+8s",
+   "s": {
+    "wall": 1788694945880,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 81.87,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t+10s",
+   "s": {
+    "wall": 1788694947892,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 83.91,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t+12s",
+   "s": {
+    "wall": 1788694949914,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 85.93,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t+14s",
+   "s": {
+    "wall": 1788694951947,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 87.96,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t+16s",
+   "s": {
+    "wall": 1788694953974,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 89.97,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t+18s",
+   "s": {
+    "wall": 1788694955990,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 91.99,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t+20s",
+   "s": {
+    "wall": 1788694958005,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 94.0,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t+22s",
+   "s": {
+    "wall": 1788694960020,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 96.02,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_t+24s",
+   "s": {
+    "wall": 1788694962033,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 96.02,
+   "kind": "snap",
+   "tag": "idle_flat5_q3_stuck_end",
+   "s": {
+    "wall": 1788694962042,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 96.02,
+   "kind": "idle_end",
+   "d": "flat5_q3_stuck rescue=none"
+  },
+  {
+   "wall": 96.66,
+   "kind": "snap",
+   "tag": "flat5_rabbit_pressed",
+   "s": {
+    "wall": 1788694962679,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 97.32,
+   "kind": "snap",
+   "tag": "flat5_hear_pressed",
+   "s": {
+    "wall": 1788694963334,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 101.53,
+   "kind": "snap",
+   "tag": "C_mirror_wrong_q2",
+   "s": {
+    "wall": 1788694967553,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 2,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 530,
+      "items": [
+       "8:50",
+       "9:10",
+       "8:55"
+      ],
+      "answer": 0,
+      "step": 2
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "8:50",
+      "cls": "opt pulse"
+     },
+     {
+      "i": "1",
+      "txt": "9:10",
+      "cls": "opt wrong"
+     },
+     {
+      "i": "2",
+      "txt": "8:55",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(265.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 101.54,
+   "kind": "C_mirror_wrong",
+   "d": "q2 voices_delta=0 (flat>=3 语音应哑)"
+  },
+  {
+   "wall": 110.59,
+   "kind": "snap",
+   "tag": "C_mirror_wrong_q4",
+   "s": {
+    "wall": 1788694976604,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 5,
+      "ch": 2,
+      "dch": 2,
+      "lv": 0,
+      "n": 5,
+      "step": 4,
+      "retries": 3,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "read",
+      "clockMin": 450,
+      "items": [
+       "7:30",
+       "7:25",
+       "8:30"
+      ],
+      "answer": 0,
+      "step": 4
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "7:30",
+      "cls": "opt pulse"
+     },
+     {
+      "i": "1",
+      "txt": "7:25",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "8:30",
+      "cls": "opt wrong"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card",
+      "w": 330,
+      "hrot": "rotate(225.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": false,
+     "txt": ""
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "done",
+      "cur"
+     ],
+     "ch": [
+      "done",
+      "cur",
+      "",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 110.59,
+   "kind": "C_mirror_wrong",
+   "d": "q4 voices_delta=0 (flat>=3 语音应哑)"
+  },
+  {
+   "wall": 119.59,
+   "kind": "snap",
+   "tag": "D_dialdemo_0",
+   "s": {
+    "wall": 1788694985612,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": "#clock-zone .clock-card[]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 55,
+      "items": [
+       "12:55"
+      ],
+      "answer": 0,
+      "step": 0,
+      "targetMin": 55
+     },
+     "tut": "watch"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag pulse",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "12:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "12:55"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 120.21,
+   "kind": "snap",
+   "tag": "D_dialdemo_1",
+   "s": {
+    "wall": 1788694986231,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": "#clock-zone .clock-card[]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 55,
+      "items": [
+       "12:55"
+      ],
+      "answer": 0,
+      "step": 0,
+      "targetMin": 55
+     },
+     "tut": "watch"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag pulse",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "12:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "12:55"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 120.83,
+   "kind": "snap",
+   "tag": "D_dialdemo_2",
+   "s": {
+    "wall": 1788694986850,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": "#clock-zone .clock-card[]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 55,
+      "items": [
+       "12:55"
+      ],
+      "answer": 0,
+      "step": 0,
+      "targetMin": 55
+     },
+     "tut": "watch"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag pulse",
+      "w": 330,
+      "hrot": "rotate(12.50 100 100)",
+      "mrot": "rotate(150.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "12:25"
+    },
+    "chip": {
+     "show": true,
+     "txt": "12:55"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 121.46,
+   "kind": "snap",
+   "tag": "D_dialdemo_3",
+   "s": {
+    "wall": 1788694987474,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": "#clock-zone .clock-card[]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 55,
+      "items": [
+       "12:55"
+      ],
+      "answer": 0,
+      "step": 0,
+      "targetMin": 55
+     },
+     "tut": "watch"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag pulse",
+      "w": 330,
+      "hrot": "rotate(25.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "12:50"
+    },
+    "chip": {
+     "show": true,
+     "txt": "12:55"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 122.07,
+   "kind": "snap",
+   "tag": "D_dialdemo_4",
+   "s": {
+    "wall": 1788694988091,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": "#clock-zone .clock-card[]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 55,
+      "items": [
+       "12:55"
+      ],
+      "answer": 0,
+      "step": 0,
+      "targetMin": 55
+     },
+     "tut": "watch"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag pulse",
+      "w": 330,
+      "hrot": "rotate(27.50 100 100)",
+      "mrot": "rotate(330.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "12:55"
+    },
+    "chip": {
+     "show": true,
+     "txt": "12:55"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 122.69,
+   "kind": "snap",
+   "tag": "D_dialdemo_5",
+   "s": {
+    "wall": 1788694988711,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 55,
+      "items": [
+       "12:55"
+      ],
+      "answer": 0,
+      "step": 0,
+      "targetMin": 55
+     },
+     "tut": "help"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "12:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "12:55"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 123.31,
+   "kind": "snap",
+   "tag": "D_dialdemo_6",
+   "s": {
+    "wall": 1788694989325,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": "#clock-zone .clock-card[]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 55,
+      "items": [
+       "12:55"
+      ],
+      "answer": 0,
+      "step": 0,
+      "targetMin": 55
+     },
+     "tut": "help"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag pulse",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "12:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "12:55"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 123.39,
+   "kind": "snap",
+   "tag": "D_dialdemo_end",
+   "s": {
+    "wall": 1788694989407,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": "#clock-zone .clock-card[]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 55,
+      "items": [
+       "12:55"
+      ],
+      "answer": 0,
+      "step": 0,
+      "targetMin": 55
+     },
+     "tut": "help"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag pulse",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "12:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "12:55"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 123.39,
+   "kind": "dial_demo",
+   "d": "readout=12:00 tut=help ghost={'show': True, 'pressing': False, 'x': 640, 'y': 316}"
+  },
+  {
+   "wall": 124.4,
+   "kind": "snap",
+   "tag": "D_dial_help",
+   "s": {
+    "wall": 1788694990420,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": "#clock-zone .clock-card[]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 55,
+      "items": [
+       "12:55"
+      ],
+      "answer": 0,
+      "step": 0,
+      "targetMin": 55
+     },
+     "tut": "help"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag pulse",
+      "w": 330,
+      "hrot": "rotate(0.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "12:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "12:55"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 124.99,
+   "kind": "snap",
+   "tag": "dial_hold_at_10(target 55)",
+   "s": {
+    "wall": 1788694991011,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": "#clock-zone .clock-card[]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 55,
+      "items": [
+       "12:55"
+      ],
+      "answer": 0,
+      "step": 0,
+      "targetMin": 55
+     },
+     "tut": "help"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag pulse",
+      "w": 330,
+      "hrot": "rotate(5.00 100 100)",
+      "mrot": "rotate(60.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "12:10"
+    },
+    "chip": {
+     "show": true,
+     "txt": "12:55"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 125.81,
+   "kind": "snap",
+   "tag": "D_dial_overshoot_wrong",
+   "s": {
+    "wall": 1788694991829,
+    "ov": null,
+    "ghost": {
+     "show": true,
+     "pressing": true,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": "#clock-zone .clock-card[]",
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 55,
+      "items": [
+       "12:55"
+      ],
+      "answer": 0,
+      "step": 0,
+      "targetMin": 55
+     },
+     "tut": "help"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag pulse wob",
+      "w": 330,
+      "hrot": "rotate(5.00 100 100)",
+      "mrot": "rotate(60.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "12:10"
+    },
+    "chip": {
+     "show": true,
+     "txt": "12:55"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 132.5,
+   "kind": "idle_start",
+   "d": "flat10_dial_stuck"
+  },
+  {
+   "wall": 133.81,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_t0",
+   "s": {
+    "wall": 1788694999830,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 135.82,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_t+2s",
+   "s": {
+    "wall": 1788695001840,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 137.84,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_t+4s",
+   "s": {
+    "wall": 1788695003861,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 139.86,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_t+6s",
+   "s": {
+    "wall": 1788695005879,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 141.89,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_t+8s",
+   "s": {
+    "wall": 1788695007905,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 143.93,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_t+10s",
+   "s": {
+    "wall": 1788695009929,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 145.95,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_t+12s",
+   "s": {
+    "wall": 1788695011966,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 147.97,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_t+14s",
+   "s": {
+    "wall": 1788695013988,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 149.99,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_t+16s",
+   "s": {
+    "wall": 1788695016005,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 152.01,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_t+18s",
+   "s": {
+    "wall": 1788695018027,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 154.03,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_t+20s",
+   "s": {
+    "wall": 1788695020050,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 156.05,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_t+22s",
+   "s": {
+    "wall": 1788695022065,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 156.05,
+   "kind": "snap",
+   "tag": "idle_flat10_dial_stuck_end",
+   "s": {
+    "wall": 1788695022073,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 2,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 290,
+      "items": [
+       "4:50"
+      ],
+      "answer": 0,
+      "step": 2,
+      "targetMin": 50
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(120.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "4:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 156.05,
+   "kind": "idle_end",
+   "d": "flat10_dial_stuck rescue=none"
+  },
+  {
+   "wall": 159.36,
+   "kind": "snap",
+   "tag": "dial_hold_at_30(target 15)",
+   "s": {
+    "wall": 1788695025382,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 125,
+      "items": [
+       "2:05"
+      ],
+      "answer": 0,
+      "step": 3,
+      "targetMin": 5
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag ok",
+      "w": 330,
+      "hrot": "rotate(145.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": true,
+     "txt": "4:50"
+    },
+    "chip": {
+     "show": true,
+     "txt": "4:50"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "cur",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 160.19,
+   "kind": "snap",
+   "tag": "D_dial_wrong_q4",
+   "s": {
+    "wall": 1788695026205,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "dial",
+      "clockMin": 125,
+      "items": [
+       "2:05"
+      ],
+      "answer": 0,
+      "step": 3,
+      "targetMin": 5
+     },
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag",
+      "w": 330,
+      "hrot": "rotate(60.00 100 100)",
+      "mrot": "rotate(0.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": false,
+     "txt": "2:00"
+    },
+    "chip": {
+     "show": true,
+     "txt": "2:05"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 169.06,
+   "kind": "snap",
+   "tag": "D_after_flat10",
+   "s": {
+    "wall": 1788695035080,
+    "ov": {
+     "cls": "k-ov k-celebrate show",
+     "text": "★ ★ 好棒！"
+    },
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 640,
+     "y": 316
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 10,
+      "ch": 3,
+      "dch": 3,
+      "lv": 0,
+      "n": 5,
+      "step": 5,
+      "retries": 1,
+      "done": true,
+      "won": true
+     },
+     "quiz": null,
+     "tut": "solo"
+    },
+    "opts": [],
+    "cards": [
+     {
+      "cls": "clock-card drag ok",
+      "w": 330,
+      "hrot": "rotate(87.50 100 100)",
+      "mrot": "rotate(330.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": true,
+     "ok": true,
+     "txt": "2:55"
+    },
+    "chip": {
+     "show": true,
+     "txt": "2:55"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "done",
+      "cur"
+     ],
+     "ch": [
+      "done",
+      "done",
+      "cur",
+      ""
+     ]
+    }
+   }
+  },
+  {
+   "wall": 169.55,
+   "kind": "snap",
+   "tag": "E_flat15_loaded",
+   "s": {
+    "wall": 1788695035567,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 0,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 570,
+      "items": [
+       "35分钟",
+       "25分钟",
+       "40分钟"
+      ],
+      "answer": 0,
+      "step": 0,
+      "endMin": 605,
+      "dur": 35
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "35分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "25分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "40分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(285.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(302.50 100 100)",
+      "mrot": "rotate(30.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 173.19,
+   "kind": "snap",
+   "tag": "E_elapsed_wrong",
+   "s": {
+    "wall": 1788695039212,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 0,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 570,
+      "items": [
+       "35分钟",
+       "25分钟",
+       "40分钟"
+      ],
+      "answer": 0,
+      "step": 0,
+      "endMin": 605,
+      "dur": 35
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "35分钟",
+      "cls": "opt pulse"
+     },
+     {
+      "i": "1",
+      "txt": "25分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "40分钟",
+      "cls": "opt wrong"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(285.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(302.50 100 100)",
+      "mrot": "rotate(30.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "cur",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 173.2,
+   "kind": "E_wrong_voice_delta",
+   "d": "0"
+  },
+  {
+   "wall": 182.12,
+   "kind": "idle_start",
+   "d": "flat15_stuck"
+  },
+  {
+   "wall": 183.44,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t0",
+   "s": {
+    "wall": 1788695049458,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 185.45,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+2s",
+   "s": {
+    "wall": 1788695051467,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 187.48,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+4s",
+   "s": {
+    "wall": 1788695053497,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 189.5,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+6s",
+   "s": {
+    "wall": 1788695055520,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 191.52,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+8s",
+   "s": {
+    "wall": 1788695057536,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 193.54,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+10s",
+   "s": {
+    "wall": 1788695059560,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 195.57,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+12s",
+   "s": {
+    "wall": 1788695061587,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 197.59,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+14s",
+   "s": {
+    "wall": 1788695063605,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 199.61,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+16s",
+   "s": {
+    "wall": 1788695065623,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 201.63,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+18s",
+   "s": {
+    "wall": 1788695067647,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 203.65,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+20s",
+   "s": {
+    "wall": 1788695069663,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 205.67,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_t+22s",
+   "s": {
+    "wall": 1788695071685,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 205.68,
+   "kind": "snap",
+   "tag": "idle_flat15_stuck_end",
+   "s": {
+    "wall": 1788695071697,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  },
+  {
+   "wall": 205.68,
+   "kind": "idle_end",
+   "d": "flat15_stuck rescue=none"
+  },
+  {
+   "wall": 205.68,
+   "kind": "snap",
+   "tag": "E_end",
+   "s": {
+    "wall": 1788695071701,
+    "ov": null,
+    "ghost": {
+     "show": false,
+     "pressing": false,
+     "x": 0,
+     "y": 0
+    },
+    "ghostAt": null,
+    "errs": 0,
+    "hk": {
+     "level": {
+      "flat": 15,
+      "ch": 4,
+      "dch": 4,
+      "lv": 0,
+      "n": 5,
+      "step": 3,
+      "retries": 1,
+      "done": false,
+      "won": false
+     },
+     "quiz": {
+      "type": "elapsed",
+      "clockMin": 630,
+      "items": [
+       "40分钟",
+       "15分钟",
+       "20分钟"
+      ],
+      "answer": 2,
+      "step": 3,
+      "endMin": 650,
+      "dur": 20
+     },
+     "tut": "none"
+    },
+    "opts": [
+     {
+      "i": "0",
+      "txt": "40分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "1",
+      "txt": "15分钟",
+      "cls": "opt"
+     },
+     {
+      "i": "2",
+      "txt": "20分钟",
+      "cls": "opt"
+     }
+    ],
+    "cards": [
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(315.00 100 100)",
+      "mrot": "rotate(180.00 100 100)"
+     },
+     {
+      "cls": "clock-card small",
+      "w": 270,
+      "hrot": "rotate(325.00 100 100)",
+      "mrot": "rotate(300.00 100 100)"
+     }
+    ],
+    "readout": {
+     "show": false,
+     "ok": false,
+     "txt": ""
+    },
+    "chip": {
+     "show": true,
+     "txt": "过了多久？"
+    },
+    "dots": {
+     "step": [
+      "done",
+      "done",
+      "done",
+      "cur",
+      ""
+     ],
+     "ch": [
+      "done",
+      "done",
+      "done",
+      "cur"
+     ]
+    }
+   }
+  }
+ ]
+}

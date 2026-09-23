@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>逻辑三人组</title>
+<style>
+/* ================= 逻辑三人组 logicwho（batch15）=================
+   视觉按 SPEC-BATCH15 §2 + 家族暖底：暖米底 #FBF6EC、暖橙主色 #E8975A、暖棕描边 #4A3B2E
+   舞台四行纵叠：问句条（上）→ 排排坐座位（帽色/物品可见、住客"?"隐藏）→ 线索卡 2-3 条
+   → 动物卡 3 张（主答案 ≥96，§0.9）；flex 纵向 + space-evenly，横竖屏同一结构 overflowX 恒 0
+   点对：座位揭幕（?身体→动物）+徽章绿光+动物卡跳一下；点错：卡晃动+关键线索卡高亮一下（§2）
+   负线索 ✗ 徽记 / 相对位置 ← 徽记（7-8 岁可读辅助）；观察者视角"左边"=屏幕左 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#FDEBD2;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;align-items:center;
+  justify-content:space-evenly;padding:6px 8px;overflow:hidden}
+
+/* 问句条（点击重听=主动学习动作，重置救援钟 §0.7a） */
+#tip{min-height:64px;max-width:94%;padding:9px 30px;border-radius:32px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;
+  justify-content:center;gap:12px;transition:transform .15s;flex:0 0 auto}
+#tip.flash{animation:tip-b .5s ease}
+@keyframes tip-b{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+#tip-ico{flex:0 0 auto;display:flex;align-items:center}
+#tip-text{font-size:clamp(20px,2.8vw,26px);font-weight:800;color:#4A3B2E;line-height:1.2;white-space:nowrap}
+
+/* 排排坐座位：帽子可见+住客"?"（ch4 加物品角标）；点对=揭幕+绿光 */
+#bench{display:flex;align-items:flex-end;justify-content:center;gap:clamp(10px,2vw,24px);
+  padding:4px 6px;max-width:100%}
+.seat{width:clamp(148px,19vw,200px);height:clamp(150px,21vh,204px);border-radius:24px;
+  background:#FFF9EE;border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  padding:8px 8px 12px;position:relative;transition:transform .15s}
+.seat:active{transform:translateY(3px)}
+.seat .s-hat{flex:0 0 auto;height:clamp(46px,7vh,58px);margin-bottom:-10px;z-index:2}
+.seat .s-hat svg{height:100%;width:auto}
+.seat .s-body{flex:0 0 auto;width:66%;display:flex;justify-content:center}
+.seat .s-body svg{width:100%;height:auto}
+.seat .s-item{position:absolute;right:4px;bottom:4px;width:clamp(36px,5vw,48px);height:clamp(36px,5vw,48px);
+  border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 2px 0 #D8C9B4;
+  display:flex;align-items:center;justify-content:center;z-index:3}
+.seat .s-item svg{width:68%;height:68%}
+.seat.nudge{animation:seat-b .4s ease}
+@keyframes seat-b{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+.seat.lit{border-color:#6FA063;background:#F3F8EC;
+  box-shadow:0 5px 0 #9CBF8C,0 0 18px rgba(143,191,127,.7)}
+.seat.reveal .s-body{animation:seat-pop .5s cubic-bezier(.2,1.7,.4,1)}
+@keyframes seat-pop{0%{transform:scale(.4) rotate(-8deg)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+
+/* 线索卡：卡片式逐条列出（icon 徽记 + 文字）；点=重听该线索（主动学习重置） */
+#clues{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:10px;
+  padding:2px 6px;max-width:100%}
+.clue{min-height:64px;padding:8px 16px;border-radius:18px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;
+  gap:10px;transition:transform .15s}
+.clue:active{transform:translateY(2px)}
+.clue .cb{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#FDEBD2;
+  border:2.5px solid #4A3B2E;display:flex;align-items:center;justify-content:center;
+  font-size:23px;font-weight:800;color:#4A3B2E;line-height:1}
+.clue .cb.neg{background:#F6DFD8;color:#B0785A}
+.clue .cb.pos{border-color:#FFF9EE;box-shadow:0 0 0 2.5px #4A3B2E inset}
+.clue .cb svg{width:28px;height:28px}
+.clue .ct{font-size:clamp(16px,2.2vw,19px);font-weight:800;color:#4A3B2E;line-height:1.25;
+  white-space:nowrap}
+.clue.flash{animation:clue-flash .9s ease}
+@keyframes clue-flash{0%,100%{background:#FFF9EE;transform:scale(1)}
+  40%{background:#FDEBD2;transform:scale(1.05)}}
+.clue.pulse3{animation:clue-p3 .55s ease-in 3}
+@keyframes clue-p3{0%,100%{box-shadow:0 4px 0 #D8C9B4}
+  50%{box-shadow:0 4px 0 #D8C9B4,0 0 16px rgba(232,151,90,.95)}}
+.clue.breathe{animation:clue-b 1.6s ease-in-out infinite}
+@keyframes clue-b{0%,100%{transform:scale(1)}50%{transform:scale(1.03);background:#FDF3DF}}
+
+/* 动物卡（主答案按钮 ≥96，§0.9）：点对=跳一下；点错=晃动（零惩罚可重点） */
+#cards{display:flex;justify-content:center;align-items:stretch;gap:clamp(12px,2.4vw,26px);
+  padding:2px 6px;max-width:100%}
+.card{width:clamp(104px,14vw,144px);border-radius:22px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:2px;padding:10px 6px 8px;
+  transition:transform .15s,box-shadow .15s}
+.card:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+.card svg{width:clamp(66px,9vw,90px);height:auto}
+.card .nm{font-size:clamp(17px,2.4vw,21px);font-weight:800;color:#4A3B2E;line-height:1}
+.card.wig{animation:an-wig .55s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-6deg)}
+  55%{transform:rotate(5deg)}80%{transform:rotate(-3deg)}}
+.card.hop{animation:card-hop .55s cubic-bezier(.2,1.6,.4,1)}
+@keyframes card-hop{0%,100%{transform:translateY(0)}45%{transform:translateY(-16px) scale(1.05)}}
+.card.pulse{animation:card-pulse 1s ease 2}
+@keyframes card-pulse{0%,100%{filter:none}50%{filter:drop-shadow(0 0 12px rgba(232,151,90,.9))}}
+.card.breathe{animation:card-breathe 1.6s ease-in-out infinite}
+@keyframes card-breathe{0%,100%{transform:scale(1);box-shadow:0 5px 0 #D8C9B4}
+  50%{transform:scale(1.05);box-shadow:0 5px 0 #D8C9B4,0 0 18px rgba(232,151,90,.9)}}
+.card.nudge{animation:card-nudge .34s ease}
+@keyframes card-nudge{0%{outline:7px solid #F5C445;outline-offset:0}
+  100%{outline:7px solid transparent;outline-offset:10px}}
+.card.dim{opacity:.35;filter:grayscale(.55)}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照家族） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：纵向余量大——座位/动物卡放大，行距收紧防溢出 */
+@media (orientation:portrait){
+  .seat{width:clamp(160px,26vw,210px);height:clamp(168px,20vh,216px)}
+  .card{width:clamp(112px,25vw,150px)}
+  .card svg{width:clamp(74px,16vw,96px)}
+  .clue{padding:8px 18px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="逻辑三人组">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="tip" aria-live="polite"><span id="tip-ico" aria-hidden="true"></span><span id="tip-text"></span></div>
+    <div id="bench" aria-label="排排坐的座位"></div>
+    <div id="clues" aria-label="线索卡"></div>
+    <div id="cards" aria-label="动物卡"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

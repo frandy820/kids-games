@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>应用题剧场</title>
+<style>
+/* ================= 应用题剧场 wordprob（batch13）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、暖橙主色、灰蓝错误色（不用大红）
+   三段式舞台（SPEC §2 r13）：场景插画区（上）/ 题面大字逐词 3-4 句（中）/ 4 选 1 答案大数字卡（下）
+   触摸目标：答案卡 ≥96×96、底栏按钮 ≥72；数字大字（关键数字不依赖阅读 §0.19）；
+   插画数字与确切数量不入画（防数元素代替运算） */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台三段式 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:6px;overflow:hidden;padding:4px 10px}
+
+/* 段一：场景插画（入场轻弹；高度钳制防挤占题面/答案） */
+#scene{flex:0 0 auto;width:100%;max-width:560px;display:flex;justify-content:center;
+  animation:scene-in .45s cubic-bezier(.2,1.5,.4,1) both}
+#scene svg{width:100%;max-height:min(30vh,190px);aspect-ratio:320/150}
+@keyframes scene-in{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+#scene:active{transform:scale(.99)}
+
+/* 段二：题面（大字逐词：文字段 21px + 数字大字 38px 橙） */
+#prompt-chip{flex:0 0 auto;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;
+  gap:4px 10px;max-width:860px;width:100%;min-height:76px;padding:8px 22px;border-radius:22px;
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  animation:scene-in .4s .08s cubic-bezier(.2,1.5,.4,1) both}
+#prompt-chip .seg{font-size:21px;font-weight:800;color:#4A3B2E;line-height:1.35}
+#prompt-chip .num{display:inline-block;min-width:46px;padding:0 6px;text-align:center;
+  color:#E8873A;font-size:38px;font-weight:800;line-height:1;
+  font-variant-numeric:tabular-nums;animation:num-pop .4s cubic-bezier(.2,1.6,.4,1) both}
+#prompt-chip .num:nth-of-type(2){animation-delay:.1s}
+@keyframes num-pop{from{transform:scale(.2) rotate(-12deg)}to{transform:scale(1) rotate(0)}}
+
+/* 段三：答案区：4 张数字大卡（答案+干扰三元组，≥96×96；窄屏 flex-wrap 两行兜底） */
+#answers{flex:0 0 auto;display:flex;justify-content:center;align-items:center;gap:20px;
+  flex-wrap:wrap;min-height:118px;padding:2px 12px}
+.opt{min-width:132px;min-height:96px;padding:0 26px;border-radius:26px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;font-size:44px;font-weight:800;color:#4A3B2E;
+  font-variant-numeric:tabular-nums;transition:transform .15s,box-shadow .15s;position:relative;
+  animation:opt-in .38s cubic-bezier(.2,1.5,.4,1) both}
+.opt:nth-child(2){animation-delay:.07s}.opt:nth-child(3){animation-delay:.14s}
+@keyframes opt-in{from{transform:scale(0) rotate(-8deg)}to{transform:scale(1) rotate(0)}}
+.opt:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+/* 不灰化款：错卡=晃动不灰掉可重点（SPEC §2） */
+.opt.wrong{animation:opt-shake .42s ease}
+@keyframes opt-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}
+  40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.opt.right{background:#8FBF7F;color:#4A3B2E;border-color:#6FA063;box-shadow:0 5px 0 #6FA063}
+.opt.right .mark{position:absolute;top:-13px;right:-13px;width:40px;height:40px;border-radius:50%;
+  background:#8FBF7F;border:2.5px solid #FFF9EE;display:flex;align-items:center;justify-content:center;
+  animation:opt-pop .45s cubic-bezier(.2,1.6,.4,1)}
+.opt.right .mark svg{width:26px;height:26px}
+@keyframes opt-pop{from{transform:scale(0) rotate(-20deg)}to{transform:scale(1) rotate(0)}}
+/* 救援视觉：正确卡 breathe 持续循环（§0.21） */
+.opt.breathe{animation:opt-breathe 1.6s ease-in-out infinite}
+@keyframes opt-breathe{0%,100%{transform:scale(1);box-shadow:0 5px 0 #D8C9B4}
+  50%{transform:scale(1.07);box-shadow:0 5px 0 #D8C9B4,0 0 16px rgba(232,151,90,.9)}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 divide/fraction） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：插画收窄、题面数字放大、答案卡加大
+   双通道（r9 M-A1/r11 M-1/r12 M3 同型定版）：@media 真竖屏 + body.port 类通道
+   （verify simView 横视口下类通道模拟竖屏——两段规则逐条等值，改必同步）；
+   #logo 横 42/竖 34=portStyle 固定尺寸判别锚（verify 断言 offsetWidth，与内容无关）。 */
+@media (orientation:portrait){
+  #scene svg{max-height:24vh}
+  #prompt-chip .seg{font-size:23px}
+  #prompt-chip .num{font-size:42px;min-width:52px}
+  .opt{min-width:150px;min-height:104px;font-size:50px}
+  #logo{width:34px;height:34px;flex:0 0 34px}
+}
+body.port #scene svg{max-height:24vh}
+body.port #prompt-chip .seg{font-size:23px}
+body.port #prompt-chip .num{font-size:42px;min-width:52px}
+body.port .opt{min-width:150px;min-height:104px;font-size:50px}
+body.port #logo{width:34px;height:34px;flex:0 0 34px}
+</style>
+</head>
+<body>
+<div id="game" aria-label="应用题剧场">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="scene" aria-hidden="true"></div>
+    <div id="prompt-chip" role="heading" aria-label="题目"></div>
+    <div id="answers" aria-label="答案选项"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="读题"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

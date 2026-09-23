@@ -1,0 +1,5144 @@
+{
+ "log": [
+  {
+   "t": 0.01,
+   "tag": "page_loaded",
+   "title": "音阶小鸟"
+  },
+  {
+   "t": 0.01,
+   "tag": "phase",
+   "name": "教学关 flat0（watch 演示）"
+  },
+  {
+   "t": 1.58,
+   "tag": "shot",
+   "file": "notebird_f0_teach.png"
+  },
+  {
+   "t": 1.59,
+   "tag": "tut_watch_state",
+   "state": "watch"
+  },
+  {
+   "t": 2.9,
+   "tag": "tut_watch_tap_swallowed",
+   "step_same": true,
+   "voice": [
+    "<clip:not_tut_watch>",
+    "TTS:听！小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 12.82,
+   "tag": "tut_state",
+   "state": "help",
+   "wait_s": 9.9
+  },
+  {
+   "t": 13.69,
+   "tag": "shot",
+   "file": "notebird_f0_turn.png"
+  },
+  {
+   "t": 13.7,
+   "tag": "nb_demoR_after_watch",
+   "r": "right"
+  },
+  {
+   "t": 13.7,
+   "tag": "phase",
+   "name": "notebird ch1 自由点鸟探索"
+  },
+  {
+   "t": 27.62,
+   "tag": "tap",
+   "card": 1,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":0,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_tut_turn>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "TTS:电线左边低，右边高"
+   ]
+  },
+  {
+   "t": 29.04,
+   "tag": "ch1_free_result",
+   "bird": "re",
+   "miss_same": true
+  },
+  {
+   "t": 30.14,
+   "tag": "tap",
+   "card": 2,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":0,\"m\":0}",
+   "bump": "bump",
+   "voice": []
+  },
+  {
+   "t": 31.55,
+   "tag": "ch1_free_result",
+   "bird": "mi",
+   "miss_same": true
+  },
+  {
+   "t": 32.66,
+   "tag": "tap",
+   "card": 3,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":0,\"m\":0}",
+   "bump": "bump",
+   "voice": []
+  },
+  {
+   "t": 34.07,
+   "tag": "ch1_free_result",
+   "bird": "fa",
+   "miss_same": true
+  },
+  {
+   "t": 35.18,
+   "tag": "tap",
+   "card": 0,
+   "note": "ch1 点答案鸟",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，红小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 53.86,
+   "tag": "tap",
+   "card": 0,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>"
+   ]
+  },
+  {
+   "t": 55.28,
+   "tag": "ch1_free_result",
+   "bird": "do",
+   "miss_same": true
+  },
+  {
+   "t": 56.39,
+   "tag": "tap",
+   "card": 1,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": []
+  },
+  {
+   "t": 57.81,
+   "tag": "ch1_free_result",
+   "bird": "re",
+   "miss_same": true
+  },
+  {
+   "t": 58.91,
+   "tag": "tap",
+   "card": 3,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": []
+  },
+  {
+   "t": 60.33,
+   "tag": "ch1_free_result",
+   "bird": "dop",
+   "miss_same": true
+  },
+  {
+   "t": 61.43,
+   "tag": "tap",
+   "card": 2,
+   "note": "ch1 点答案鸟",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，蓝小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 80.13,
+   "tag": "tap",
+   "card": 1,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>"
+   ]
+  },
+  {
+   "t": 81.54,
+   "tag": "ch1_free_result",
+   "bird": "fa",
+   "miss_same": true
+  },
+  {
+   "t": 82.65,
+   "tag": "tap",
+   "card": 2,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": []
+  },
+  {
+   "t": 84.07,
+   "tag": "ch1_free_result",
+   "bird": "la",
+   "miss_same": true
+  },
+  {
+   "t": 85.16,
+   "tag": "tap",
+   "card": 3,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": []
+  },
+  {
+   "t": 86.57,
+   "tag": "ch1_free_result",
+   "bird": "si",
+   "miss_same": true
+  },
+  {
+   "t": 87.68,
+   "tag": "tap",
+   "card": 0,
+   "note": "ch1 点答案鸟",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，黄小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 106.38,
+   "tag": "tap",
+   "card": 1,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>"
+   ]
+  },
+  {
+   "t": 107.79,
+   "tag": "ch1_free_result",
+   "bird": "fa",
+   "miss_same": true
+  },
+  {
+   "t": 108.9,
+   "tag": "tap",
+   "card": 2,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": []
+  },
+  {
+   "t": 110.32,
+   "tag": "ch1_free_result",
+   "bird": "sol",
+   "miss_same": true
+  },
+  {
+   "t": 111.4,
+   "tag": "tap",
+   "card": 3,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": []
+  },
+  {
+   "t": 112.82,
+   "tag": "ch1_free_result",
+   "bird": "si",
+   "miss_same": true
+  },
+  {
+   "t": 113.91,
+   "tag": "tap",
+   "card": 0,
+   "note": "ch1 点答案鸟",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，红小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 132.57,
+   "tag": "tap",
+   "card": 0,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>"
+   ]
+  },
+  {
+   "t": 133.99,
+   "tag": "ch1_free_result",
+   "bird": "do",
+   "miss_same": true
+  },
+  {
+   "t": 135.1,
+   "tag": "tap",
+   "card": 2,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": []
+  },
+  {
+   "t": 136.51,
+   "tag": "ch1_free_result",
+   "bird": "sol",
+   "miss_same": true
+  },
+  {
+   "t": 137.62,
+   "tag": "tap",
+   "card": 3,
+   "note": "ch1 自由点鸟 free",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": []
+  },
+  {
+   "t": 139.04,
+   "tag": "ch1_free_result",
+   "bird": "dop",
+   "miss_same": true
+  },
+  {
+   "t": 140.15,
+   "tag": "tap",
+   "card": 1,
+   "note": "ch1 点答案鸟",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，黄小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 152.95,
+   "tag": "flat_done",
+   "flat": 0,
+   "level": "1-0",
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  {
+   "t": 152.95,
+   "tag": "phase",
+   "name": "flat1 点空白+正常玩"
+  },
+  {
+   "t": 170.21,
+   "tag": "blank_tap",
+   "note": "flat1 点左上空白",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":0,\"m\":0}",
+   "voice": [
+    "<clip:not_right>",
+    "<clip:not_q>"
+   ]
+  },
+  {
+   "t": 170.21,
+   "tag": "blank_result",
+   "no_reaction": false
+  },
+  {
+   "t": 185.42,
+   "tag": "tap",
+   "card": 2,
+   "note": "flat1 题1",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，蓝小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 206.16,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat1 题2",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，粉小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 226.67,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat1 题3",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，红小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 246.9,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat1 题4",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，粉小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 267.57,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat1 题5",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，蓝小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 280.38,
+   "tag": "flat_done",
+   "flat": 1,
+   "level": "1-1",
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  {
+   "t": 280.38,
+   "tag": "phase",
+   "name": "flat2 首题犹豫 15.5s（观察 14s 方向级救援）"
+  },
+  {
+   "t": 308.77,
+   "tag": "idle",
+   "sec": 15.5,
+   "note": "flat2 首题犹豫",
+   "voice": [
+    "<clip:not_right>",
+    "<clip:not_q>"
+   ]
+  },
+  {
+   "t": 308.77,
+   "tag": "rescue_check",
+   "waited_s": 15.5,
+   "voices": [
+    "<clip:not_right>",
+    "<clip:not_q>"
+   ]
+  },
+  {
+   "t": 308.82,
+   "tag": "shot",
+   "file": "notebird_f2_rescue.png"
+  },
+  {
+   "t": 311.37,
+   "tag": "replay_btn",
+   "voice": [
+    "<clip:not_q>"
+   ],
+   "nb_new": [
+    {
+     "t": 1788992903065,
+     "freq": 349.23,
+     "when": 0,
+     "dur": 0.7,
+     "via": "play"
+    },
+    {
+     "t": 1788992903065,
+     "freq": 349.23,
+     "when": 0,
+     "dur": 0.7,
+     "via": "tone"
+    }
+   ]
+  },
+  {
+   "t": 327.55,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat2 题1",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，绿小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 347.6,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat2 题2",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，粉小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 367.57,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat2 题3",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，黄小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 387.43,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat2 题4",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，红小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 408.01,
+   "tag": "tap",
+   "card": 2,
+   "note": "flat2 题5",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，绿小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 420.84,
+   "tag": "flat_done",
+   "flat": 2,
+   "level": "1-2",
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  {
+   "t": 420.84,
+   "tag": "phase",
+   "name": "flat3 手痒连点+错反馈节流"
+  },
+  {
+   "t": 434.75,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat3 题1 错1",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":0,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_right>",
+    "<clip:not_q>"
+   ]
+  },
+  {
+   "t": 437.4,
+   "tag": "shot",
+   "file": "notebird_f3_wrongfb.png"
+  },
+  {
+   "t": 438.2,
+   "tag": "rapid_double_tap",
+   "miss_before": 0,
+   "miss_after": 0,
+   "voice": []
+  },
+  {
+   "t": 438.24,
+   "tag": "shot",
+   "file": "notebird_f3_rapidtap.png"
+  },
+  {
+   "t": 439.34,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat3 节流窗内二击（预期 miss+1 零语音）",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":0,\"m\":0}",
+   "bump": "bump",
+   "voice": []
+  },
+  {
+   "t": 440.57,
+   "tag": "throttle_window",
+   "miss_before": 0,
+   "miss_after": 0,
+   "voice": []
+  },
+  {
+   "t": 441.68,
+   "tag": "tap",
+   "card": 2,
+   "note": "flat3 题1 对",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，粉小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 462.09,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat3 题2",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，绿小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 482.09,
+   "tag": "tap",
+   "card": 2,
+   "note": "flat3 题3",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，紫小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 501.82,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat3 题4",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，橙小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 521.74,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat3 题5",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，绿小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 534.57,
+   "tag": "flat_done",
+   "flat": 3,
+   "level": "1-3",
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  {
+   "t": 534.57,
+   "tag": "phase",
+   "name": "flat4 正常玩 顺利"
+  },
+  {
+   "t": 549.97,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat4 题1 对",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_right>",
+    "<clip:not_q>",
+    "TTS:对啦，红小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 570.51,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat4 题2 对",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，紫小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 590.99,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat4 题3 对",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，橙小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 611.79,
+   "tag": "tap",
+   "card": 2,
+   "note": "flat4 题4 对",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，粉小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 632.11,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat4 题5 对",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，橙小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 643.02,
+   "tag": "panel_close",
+   "pattern": "明天见",
+   "btn": "明天见"
+  },
+  {
+   "t": 643.64,
+   "tag": "flat_done",
+   "flat": 4,
+   "level": "1-4",
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  {
+   "t": 643.64,
+   "tag": "phase",
+   "name": "flat5 正常玩 当日最后一关"
+  },
+  {
+   "t": 659.82,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat5 题1 对",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_right>",
+    "<clip:core_chapter_end>",
+    "<clip:not_q>",
+    "TTS:对啦，黄小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 680.84,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat5 题2 对",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，橙小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 700.73,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat5 题3 对",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，紫小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 720.52,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat5 题4 对",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，黄小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 740.92,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat5 题5 对",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_q>",
+    "TTS:对啦，白小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 746.12,
+   "tag": "flat_done",
+   "flat": 5,
+   "level": null,
+   "stars": null
+  },
+  {
+   "t": 748.63,
+   "tag": "phase",
+   "name": "dayEnd 明天预告+家长门"
+  },
+  {
+   "t": 749.15,
+   "tag": "dayend_panels",
+   "panels": [
+    {
+     "cls": "pulse",
+     "txt": "NaN#4A3B2E\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"rou"
+    },
+    {
+     "cls": "bird-card pop",
+     "txt": "re♪"
+    },
+    {
+     "cls": "bird-card pop",
+     "txt": "sol♪"
+    },
+    {
+     "cls": "bird-card pop",
+     "txt": "la♪"
+    },
+    {
+     "cls": "bird-card pop singing lit",
+     "txt": "do'♪"
+    },
+    {
+     "cls": "k-parentbtn",
+     "txt": "👪"
+    },
+    {
+     "cls": "k-btn ghost",
+     "txt": "再玩玩旧关卡"
+    },
+    {
+     "cls": "k-btn",
+     "txt": "明天见"
+    }
+   ]
+  },
+  {
+   "t": 749.19,
+   "tag": "shot",
+   "file": "notebird_dayend.png"
+  },
+  {
+   "t": 749.21,
+   "tag": "click_by_text",
+   "pattern": "再玩|旧关|明天见",
+   "hit": "再玩玩旧关卡",
+   "note": "dayEnd/章末 关闭"
+  },
+  {
+   "t": 751.99,
+   "tag": "parent_panels",
+   "panels": [
+    {
+     "cls": "pulse",
+     "txt": "NaN#4A3B2E\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"rou"
+    },
+    {
+     "cls": "bird-card pop",
+     "txt": "re♪"
+    },
+    {
+     "cls": "bird-card pop",
+     "txt": "sol♪"
+    },
+    {
+     "cls": "bird-card pop",
+     "txt": "la♪"
+    },
+    {
+     "cls": "bird-card pop singing lit",
+     "txt": "do'♪"
+    },
+    {
+     "cls": "k-parentbtn",
+     "txt": "👪"
+    },
+    {
+     "cls": "k-panel",
+     "txt": "家长验证33 + 29 = ?0123456789⌫确定取消"
+    },
+    {
+     "cls": "",
+     "txt": "0"
+    },
+    {
+     "cls": "",
+     "txt": "1"
+    },
+    {
+     "cls": "",
+     "txt": "2"
+    },
+    {
+     "cls": "",
+     "txt": "3"
+    },
+    {
+     "cls": "",
+     "txt": "4"
+    },
+    {
+     "cls": "",
+     "txt": "5"
+    },
+    {
+     "cls": "",
+     "txt": "6"
+    },
+    {
+     "cls": "",
+     "txt": "7"
+    },
+    {
+     "cls": "",
+     "txt": "8"
+    },
+    {
+     "cls": "",
+     "txt": "9"
+    },
+    {
+     "cls": "",
+     "txt": "⌫"
+    },
+    {
+     "cls": "mbtn",
+     "txt": "确定"
+    },
+    {
+     "cls": "mbtn ghost",
+     "txt": "取消"
+    }
+   ]
+  },
+  {
+   "t": 752.04,
+   "tag": "shot",
+   "file": "notebird_parentpanel.png"
+  },
+  {
+   "t": 752.05,
+   "tag": "parent_gate_q",
+   "q": "33 + 29 = ?"
+  },
+  {
+   "t": 752.07,
+   "tag": "click_by_text",
+   "pattern": "^6$",
+   "hit": "6",
+   "note": "家长门数字 6"
+  },
+  {
+   "t": 752.5,
+   "tag": "click_by_text",
+   "pattern": "^2$",
+   "hit": "2",
+   "note": "家长门数字 2"
+  },
+  {
+   "t": 754.72,
+   "tag": "parent_unlock_answer",
+   "q": "33 + 29 = ?",
+   "ans": "62"
+  },
+  {
+   "t": 754.77,
+   "tag": "shot",
+   "file": "notebird_parentpanel_after.png"
+  },
+  {
+   "t": 754.77,
+   "tag": "phase",
+   "name": "flat6-9 快进 autoSolve（真实判定链）"
+  },
+  {
+   "t": 837.77,
+   "tag": "panel_close_not_effective",
+   "pattern": "好的"
+  },
+  {
+   "t": 843.52,
+   "tag": "panel_close_not_effective",
+   "pattern": "明天见"
+  },
+  {
+   "t": 850.48,
+   "tag": "panel_close_not_effective",
+   "pattern": "再玩玩旧关卡"
+  },
+  {
+   "t": 856.24,
+   "tag": "panel_close_not_effective",
+   "pattern": "好的"
+  },
+  {
+   "t": 859.21,
+   "tag": "panel_close",
+   "pattern": "好的",
+   "btn": "好的"
+  },
+  {
+   "t": 859.83,
+   "tag": "flat_done",
+   "flat": 6,
+   "level": null,
+   "stars": null,
+   "auto": true
+  },
+  {
+   "t": 940.07,
+   "tag": "panel_close",
+   "pattern": "再玩玩旧关卡",
+   "btn": "再玩玩旧关卡"
+  },
+  {
+   "t": 940.68,
+   "tag": "flat_done",
+   "flat": 7,
+   "level": null,
+   "stars": null,
+   "auto": true
+  },
+  {
+   "t": 1020.77,
+   "tag": "panel_close",
+   "pattern": "再玩玩旧关卡",
+   "btn": "再玩玩旧关卡"
+  },
+  {
+   "t": 1021.39,
+   "tag": "flat_done",
+   "flat": 8,
+   "level": null,
+   "stars": null,
+   "auto": true
+  },
+  {
+   "t": 1101.57,
+   "tag": "panel_close",
+   "pattern": "再玩玩旧关卡",
+   "btn": "再玩玩旧关卡"
+  },
+  {
+   "t": 1102.19,
+   "tag": "flat_done",
+   "flat": 9,
+   "level": null,
+   "stars": null,
+   "auto": true
+  },
+  {
+   "t": 1102.19,
+   "tag": "phase",
+   "name": "flat10 ch3 难关真实点击"
+  },
+  {
+   "t": 1142.53,
+   "tag": "shot",
+   "file": "notebird_f10_ch3.png"
+  },
+  {
+   "t": 1167.19,
+   "tag": "idle",
+   "sec": 8.5,
+   "note": "flat10 题1 读题后静置",
+   "voice": [
+    "<clip:core_rest>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_right>",
+    "<clip:core_day_end>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_right>",
+    "<clip:core_day_end>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_right>",
+    "<clip:core_day_end>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_q>",
+    "<clip:not_right>",
+    "<clip:core_day_end>",
+    "<clip:not_q>",
+    "TTS:对啦，黄小鸟在唱歌",
+    "TTS:对啦，橙小鸟在唱歌",
+    "TTS:对啦，紫小鸟在唱歌",
+    "TTS:对啦，黄小鸟在唱歌",
+    "TTS:对啦，白小鸟在唱歌",
+    "TTS:对啦，黄小鸟在唱歌",
+    "TTS:对啦，橙小鸟在唱歌",
+    "TTS:对啦，紫小鸟在唱歌",
+    "TTS:对啦，黄小鸟在唱歌",
+    "TTS:对啦，白小鸟在唱歌",
+    "TTS:对啦，黄小鸟在唱歌",
+    "TTS:对啦，橙小鸟在唱歌",
+    "TTS:对啦，紫小鸟在唱歌",
+    "TTS:对啦，黄小鸟在唱歌",
+    "TTS:对啦，白小鸟在唱歌",
+    "TTS:对啦，黄小鸟在唱歌",
+    "TTS:对啦，橙小鸟在唱歌",
+    "TTS:对啦，紫小鸟在唱歌",
+    "TTS:对啦，黄小鸟在唱歌",
+    "TTS:对啦，白小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 1168.29,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat10 题1 定向错点",
+   "before": "{\"s\":0,\"m\":0}",
+   "after": "{\"s\":0,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_wrong>"
+   ]
+  },
+  {
+   "t": 1168.34,
+   "tag": "shot",
+   "file": "notebird_f10_wrongfb.png"
+  },
+  {
+   "t": 1179.55,
+   "tag": "wrong_chain",
+   "q": {
+    "kind": "find",
+    "sang": [
+     "mi"
+    ],
+    "picked": "re",
+    "answer_note": "mi"
+   },
+   "chain_voice": [
+    "<clip:not_wrong>",
+    "TTS:再往右找找，声音更高的"
+   ],
+   "mid_voice": [
+    "<clip:not_wrong>",
+    "TTS:再往右找找，声音更高的"
+   ]
+  },
+  {
+   "t": 1181.43,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat10 题1 对",
+   "before": "{\"s\":0,\"m\":1}",
+   "after": "{\"s\":1,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，黄小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 1210.91,
+   "tag": "idle",
+   "sec": 8.5,
+   "note": "flat10 题2 读题后静置",
+   "voice": [
+    "<clip:not_q>"
+   ]
+  },
+  {
+   "t": 1212.0,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat10 题2 定向错点",
+   "before": "{\"s\":1,\"m\":0}",
+   "after": "{\"s\":1,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_wrong>"
+   ]
+  },
+  {
+   "t": 1223.21,
+   "tag": "wrong_chain",
+   "q": {
+    "kind": "find",
+    "sang": [
+     "re"
+    ],
+    "picked": "do",
+    "answer_note": "re"
+   },
+   "chain_voice": [
+    "<clip:not_wrong>",
+    "TTS:再往右找找，声音更高的"
+   ],
+   "mid_voice": [
+    "<clip:not_wrong>",
+    "TTS:再往右找找，声音更高的"
+   ]
+  },
+  {
+   "t": 1225.14,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat10 题2 对",
+   "before": "{\"s\":1,\"m\":1}",
+   "after": "{\"s\":2,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，橙小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 1254.58,
+   "tag": "idle",
+   "sec": 8.5,
+   "note": "flat10 题3 读题后静置",
+   "voice": [
+    "<clip:not_q>"
+   ]
+  },
+  {
+   "t": 1255.66,
+   "tag": "tap",
+   "card": 2,
+   "note": "flat10 题3 定向错点",
+   "before": "{\"s\":2,\"m\":0}",
+   "after": "{\"s\":2,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_wrong>"
+   ]
+  },
+  {
+   "t": 1266.87,
+   "tag": "wrong_chain",
+   "q": {
+    "kind": "find",
+    "sang": [
+     "la"
+    ],
+    "picked": "sol",
+    "answer_note": "la"
+   },
+   "chain_voice": [
+    "<clip:not_wrong>",
+    "TTS:再往右找找，声音更高的"
+   ],
+   "mid_voice": [
+    "<clip:not_wrong>",
+    "TTS:再往右找找，声音更高的"
+   ]
+  },
+  {
+   "t": 1268.79,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat10 题3 对",
+   "before": "{\"s\":2,\"m\":1}",
+   "after": "{\"s\":3,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，紫小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 1298.21,
+   "tag": "idle",
+   "sec": 8.5,
+   "note": "flat10 题4 读题后静置",
+   "voice": [
+    "<clip:not_q>"
+   ]
+  },
+  {
+   "t": 1299.31,
+   "tag": "tap",
+   "card": 0,
+   "note": "flat10 题4 定向错点",
+   "before": "{\"s\":3,\"m\":0}",
+   "after": "{\"s\":3,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_wrong>"
+   ]
+  },
+  {
+   "t": 1310.51,
+   "tag": "wrong_chain",
+   "q": {
+    "kind": "find",
+    "sang": [
+     "mi"
+    ],
+    "picked": "re",
+    "answer_note": "mi"
+   },
+   "chain_voice": [
+    "<clip:not_wrong>",
+    "TTS:再往右找找，声音更高的"
+   ],
+   "mid_voice": [
+    "<clip:not_wrong>",
+    "TTS:再往右找找，声音更高的"
+   ]
+  },
+  {
+   "t": 1312.41,
+   "tag": "tap",
+   "card": 1,
+   "note": "flat10 题4 对",
+   "before": "{\"s\":3,\"m\":1}",
+   "after": "{\"s\":4,\"m\":0}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，黄小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 1341.86,
+   "tag": "idle",
+   "sec": 8.5,
+   "note": "flat10 题5 读题后静置",
+   "voice": [
+    "<clip:not_q>"
+   ]
+  },
+  {
+   "t": 1342.96,
+   "tag": "tap",
+   "card": 2,
+   "note": "flat10 题5 定向错点",
+   "before": "{\"s\":4,\"m\":0}",
+   "after": "{\"s\":4,\"m\":1}",
+   "bump": "bump",
+   "voice": [
+    "<clip:not_wrong>"
+   ]
+  },
+  {
+   "t": 1354.18,
+   "tag": "wrong_chain",
+   "q": {
+    "kind": "find",
+    "sang": [
+     "dop"
+    ],
+    "picked": "la",
+    "answer_note": "dop"
+   },
+   "chain_voice": [
+    "<clip:not_wrong>",
+    "TTS:再往右找找，声音更高的"
+   ],
+   "mid_voice": [
+    "<clip:not_wrong>",
+    "TTS:再往右找找，声音更高的"
+   ]
+  },
+  {
+   "t": 1356.1,
+   "tag": "tap",
+   "card": 3,
+   "note": "flat10 题5 对",
+   "before": "{\"s\":4,\"m\":1}",
+   "after": "{\"s\":-1,\"m\":-1}",
+   "bump": "bump",
+   "voice": [
+    "TTS:对啦，白小鸟在唱歌"
+   ]
+  },
+  {
+   "t": 1366.98,
+   "tag": "panel_close",
+   "pattern": "再玩玩旧关卡",
+   "btn": "再玩玩旧关卡"
+  },
+  {
+   "t": 1407.95,
+   "tag": "flat_done",
+   "flat": 10,
+   "level": null,
+   "stars": null
+  },
+  {
+   "t": 1409.46,
+   "tag": "end_panels",
+   "panels": [
+    {
+     "cls": "pulse",
+     "txt": "NaN#4A3B2E\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"rou"
+    },
+    {
+     "cls": "bird-card pop",
+     "txt": "re♪"
+    },
+    {
+     "cls": "bird-card pop breathe singing",
+     "txt": "mi♪"
+    },
+    {
+     "cls": "bird-card pop",
+     "txt": "fa♪"
+    },
+    {
+     "cls": "bird-card pop",
+     "txt": "la♪"
+    },
+    {
+     "cls": "k-parentbtn",
+     "txt": "👪"
+    }
+   ]
+  },
+  {
+   "t": 1409.52,
+   "tag": "shot",
+   "file": "notebird_chapend.png"
+  },
+  {
+   "t": 1409.52,
+   "tag": "session_end",
+   "page_errors": []
+  }
+ ],
+ "spy": {
+  "tts": [
+   {
+    "t": 1788992591616,
+    "text": "听！小鸟在唱歌"
+   },
+   {
+    "t": 1788992599686,
+    "text": "电线左边低，右边高"
+   },
+   {
+    "t": 1788992629212,
+    "text": "对啦，红小鸟在唱歌"
+   },
+   {
+    "t": 1788992655484,
+    "text": "对啦，蓝小鸟在唱歌"
+   },
+   {
+    "t": 1788992681716,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788992707959,
+    "text": "对啦，红小鸟在唱歌"
+   },
+   {
+    "t": 1788992734181,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788992779461,
+    "text": "对啦，蓝小鸟在唱歌"
+   },
+   {
+    "t": 1788992800197,
+    "text": "对啦，粉小鸟在唱歌"
+   },
+   {
+    "t": 1788992820708,
+    "text": "对啦，红小鸟在唱歌"
+   },
+   {
+    "t": 1788992840928,
+    "text": "对啦，粉小鸟在唱歌"
+   },
+   {
+    "t": 1788992861640,
+    "text": "对啦，蓝小鸟在唱歌"
+   },
+   {
+    "t": 1788992921583,
+    "text": "对啦，绿小鸟在唱歌"
+   },
+   {
+    "t": 1788992941654,
+    "text": "对啦，粉小鸟在唱歌"
+   },
+   {
+    "t": 1788992961607,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788992981457,
+    "text": "对啦，红小鸟在唱歌"
+   },
+   {
+    "t": 1788993002045,
+    "text": "对啦，绿小鸟在唱歌"
+   },
+   {
+    "t": 1788993035715,
+    "text": "对啦，粉小鸟在唱歌"
+   },
+   {
+    "t": 1788993056120,
+    "text": "对啦，绿小鸟在唱歌"
+   },
+   {
+    "t": 1788993076132,
+    "text": "对啦，紫小鸟在唱歌"
+   },
+   {
+    "t": 1788993095859,
+    "text": "对啦，橙小鸟在唱歌"
+   },
+   {
+    "t": 1788993115786,
+    "text": "对啦，绿小鸟在唱歌"
+   },
+   {
+    "t": 1788993144002,
+    "text": "对啦，红小鸟在唱歌"
+   },
+   {
+    "t": 1788993164547,
+    "text": "对啦，紫小鸟在唱歌"
+   },
+   {
+    "t": 1788993185016,
+    "text": "对啦，橙小鸟在唱歌"
+   },
+   {
+    "t": 1788993205846,
+    "text": "对啦，粉小鸟在唱歌"
+   },
+   {
+    "t": 1788993226163,
+    "text": "对啦，橙小鸟在唱歌"
+   },
+   {
+    "t": 1788993253849,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788993274866,
+    "text": "对啦，橙小鸟在唱歌"
+   },
+   {
+    "t": 1788993294777,
+    "text": "对啦，紫小鸟在唱歌"
+   },
+   {
+    "t": 1788993314556,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788993334948,
+    "text": "对啦，白小鸟在唱歌"
+   },
+   {
+    "t": 1788993390131,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788993397214,
+    "text": "对啦，橙小鸟在唱歌"
+   },
+   {
+    "t": 1788993404265,
+    "text": "对啦，紫小鸟在唱歌"
+   },
+   {
+    "t": 1788993411347,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788993418397,
+    "text": "对啦，白小鸟在唱歌"
+   },
+   {
+    "t": 1788993495258,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788993502295,
+    "text": "对啦，橙小鸟在唱歌"
+   },
+   {
+    "t": 1788993509326,
+    "text": "对啦，紫小鸟在唱歌"
+   },
+   {
+    "t": 1788993516429,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788993523478,
+    "text": "对啦，白小鸟在唱歌"
+   },
+   {
+    "t": 1788993575844,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788993582943,
+    "text": "对啦，橙小鸟在唱歌"
+   },
+   {
+    "t": 1788993590023,
+    "text": "对啦，紫小鸟在唱歌"
+   },
+   {
+    "t": 1788993597075,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788993604176,
+    "text": "对啦，白小鸟在唱歌"
+   },
+   {
+    "t": 1788993656791,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788993663840,
+    "text": "对啦，橙小鸟在唱歌"
+   },
+   {
+    "t": 1788993670890,
+    "text": "对啦，紫小鸟在唱歌"
+   },
+   {
+    "t": 1788993677973,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788993685007,
+    "text": "对啦，白小鸟在唱歌"
+   },
+   {
+    "t": 1788993764483,
+    "text": "再往右找找，声音更高的"
+   },
+   {
+    "t": 1788993775500,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788993808192,
+    "text": "再往右找找，声音更高的"
+   },
+   {
+    "t": 1788993819169,
+    "text": "对啦，橙小鸟在唱歌"
+   },
+   {
+    "t": 1788993851857,
+    "text": "再往右找找，声音更高的"
+   },
+   {
+    "t": 1788993862832,
+    "text": "对啦，紫小鸟在唱歌"
+   },
+   {
+    "t": 1788993895488,
+    "text": "再往右找找，声音更高的"
+   },
+   {
+    "t": 1788993906465,
+    "text": "对啦，黄小鸟在唱歌"
+   },
+   {
+    "t": 1788993939149,
+    "text": "再往右找找，声音更高的"
+   },
+   {
+    "t": 1788993950135,
+    "text": "对啦，白小鸟在唱歌"
+   }
+  ],
+  "clips": [
+   {
+    "t": 1788992591614,
+    "key": "not_tut_watch"
+   },
+   {
+    "t": 1788992606837,
+    "key": "not_tut_turn"
+   },
+   {
+    "t": 1788992607849,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992608947,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992635332,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992661614,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992687839,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992714080,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992739304,
+    "key": "not_right"
+   },
+   {
+    "t": 1788992743358,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992785588,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992806326,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992826830,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992847042,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992866766,
+    "key": "not_right"
+   },
+   {
+    "t": 1788992870811,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992904077,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992927715,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992947774,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992967729,
+    "key": "not_q"
+   },
+   {
+    "t": 1788992987576,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993007164,
+    "key": "not_right"
+   },
+   {
+    "t": 1788993011208,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993041850,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993062234,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993082252,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993101974,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993120907,
+    "key": "not_right"
+   },
+   {
+    "t": 1788993124948,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993150140,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993170676,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993191147,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993211975,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993231280,
+    "key": "not_right"
+   },
+   {
+    "t": 1788993234312,
+    "key": "core_chapter_end"
+   },
+   {
+    "t": 1788993238719,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993259969,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993280984,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993300900,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993320690,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993340066,
+    "key": "not_right"
+   },
+   {
+    "t": 1788993343095,
+    "key": "core_day_end"
+   },
+   {
+    "t": 1788993347518,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993371628,
+    "key": "core_rest"
+   },
+   {
+    "t": 1788993396260,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993403347,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993410400,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993417474,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993423504,
+    "key": "not_right"
+   },
+   {
+    "t": 1788993426541,
+    "key": "core_day_end"
+   },
+   {
+    "t": 1788993430950,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993501376,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993508412,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993515453,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993522555,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993528600,
+    "key": "not_right"
+   },
+   {
+    "t": 1788993531639,
+    "key": "core_day_end"
+   },
+   {
+    "t": 1788993536063,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993581979,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993589060,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993596148,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993603211,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993609295,
+    "key": "not_right"
+   },
+   {
+    "t": 1788993612346,
+    "key": "core_day_end"
+   },
+   {
+    "t": 1788993616768,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993662919,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993669967,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993677011,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993684100,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993690110,
+    "key": "not_right"
+   },
+   {
+    "t": 1788993693143,
+    "key": "core_day_end"
+   },
+   {
+    "t": 1788993697563,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993761431,
+    "key": "not_wrong"
+   },
+   {
+    "t": 1788993781626,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993805143,
+    "key": "not_wrong"
+   },
+   {
+    "t": 1788993825288,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993848812,
+    "key": "not_wrong"
+   },
+   {
+    "t": 1788993868958,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993892450,
+    "key": "not_wrong"
+   },
+   {
+    "t": 1788993912602,
+    "key": "not_q"
+   },
+   {
+    "t": 1788993936096,
+    "key": "not_wrong"
+   },
+   {
+    "t": 1788993955239,
+    "key": "not_right"
+   },
+   {
+    "t": 1788993958283,
+    "key": "core_day_end"
+   },
+   {
+    "t": 1788993962694,
+    "key": "not_q"
+   }
+  ],
+  "nbSang": [
+   {
+    "t": 1788992595240,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.45,
+    "via": "play"
+   },
+   {
+    "t": 1788992595792,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.45,
+    "via": "play"
+   },
+   {
+    "t": 1788992595852,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992595854,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.45,
+    "via": "tone"
+   },
+   {
+    "t": 1788992595854,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.45,
+    "via": "tone"
+   },
+   {
+    "t": 1788992596348,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.45,
+    "via": "play"
+   },
+   {
+    "t": 1788992596348,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.45,
+    "via": "tone"
+   },
+   {
+    "t": 1788992596902,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.45,
+    "via": "play"
+   },
+   {
+    "t": 1788992596902,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.45,
+    "via": "tone"
+   },
+   {
+    "t": 1788992597463,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.45,
+    "via": "play"
+   },
+   {
+    "t": 1788992597463,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.45,
+    "via": "tone"
+   },
+   {
+    "t": 1788992598019,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.45,
+    "via": "play"
+   },
+   {
+    "t": 1788992598019,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.45,
+    "via": "tone"
+   },
+   {
+    "t": 1788992598579,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.45,
+    "via": "play"
+   },
+   {
+    "t": 1788992598579,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.45,
+    "via": "tone"
+   },
+   {
+    "t": 1788992599135,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.45,
+    "via": "play"
+   },
+   {
+    "t": 1788992599135,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.45,
+    "via": "tone"
+   },
+   {
+    "t": 1788992603792,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992603792,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992605931,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992605931,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992606837,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992606837,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992620751,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992620751,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992623274,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992623274,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992625791,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992625791,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992628310,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992628310,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992634329,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992634329,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992642617,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992642617,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992646988,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992646988,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992649515,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992649515,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992652045,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992652045,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992654572,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992654572,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992660608,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992660608,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992668611,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992668612,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992673253,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992673253,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992675780,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992675780,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992678308,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992678308,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992680814,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992680814,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992686832,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992686832,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992695625,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992695625,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992699503,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992699503,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992702032,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992702032,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992704552,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992704552,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992707054,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992707054,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992713077,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992713077,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992721626,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992721626,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992725708,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992725708,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992728231,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992728231,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992730752,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992730752,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992733279,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992733279,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992742350,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992742350,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992756616,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992756616,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992771620,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992771620,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992772614,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992772614,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992778555,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992778555,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992784581,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992784581,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992792624,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992792624,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992799290,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992799290,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992805321,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992805321,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992813619,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992813619,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992819798,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992819798,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992825825,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992825825,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992834620,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992834620,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992840027,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992840027,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992846033,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992846033,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992854617,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992854617,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992860731,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992860731,
+    "freq": 392,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992869804,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992869804,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992884619,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992884619,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992899624,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992899624,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992900616,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992900616,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992903065,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992903065,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992917619,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992917619,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992920680,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992920680,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992926713,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992926713,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992935626,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992935626,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992940744,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992940744,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992946768,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992946768,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992955623,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992955623,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992960704,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992960704,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992966725,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992966725,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992975619,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992975619,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992980553,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992980553,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992986571,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992986571,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788992994620,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788992994620,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993001139,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993001139,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993010206,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993010206,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993024625,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993024625,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993027886,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993027886,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993031636,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993031636,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993031699,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993031699,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993032481,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993032481,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993034807,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993034807,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993040842,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993040842,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993049627,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993049627,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993055219,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993055219,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993061228,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993061228,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993069625,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993069625,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993075222,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993075222,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993081244,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993081244,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993089621,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993089621,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993094954,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993094954,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993100969,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993100969,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993109621,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993109621,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993114879,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993114879,
+    "freq": 349.23,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993123944,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993123944,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993138620,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993138620,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993143097,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993143097,
+    "freq": 261.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993149130,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993149130,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993157620,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993157620,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993163643,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993163643,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993169671,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993169671,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993178629,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993178629,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993184116,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993184116,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993190141,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993190141,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993198625,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993198625,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993204935,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993204935,
+    "freq": 493.88,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993210965,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993210965,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993219619,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993219619,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993225257,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993225257,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993237715,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993237715,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993252628,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993252628,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993252945,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993252945,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993258962,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993258962,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993267620,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993267620,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993273966,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993273966,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993279981,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993279981,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993288625,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993288625,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993293868,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993293868,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993299894,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993299895,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993308622,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993308622,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993313655,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993313655,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993319689,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993319689,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993328622,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993328622,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993334048,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993334048,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993346512,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993346512,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993360620,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993360620,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993374627,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993374627,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993376625,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993376625,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993389227,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993389227,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993395253,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993395253,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993396308,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993396308,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993402341,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993402341,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993403363,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993403364,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993409396,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993409396,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993410447,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993410447,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993416468,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993416468,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993417489,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993417489,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993429943,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993429943,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993444633,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993444633,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993459623,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993459623,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993460630,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993460630,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993475628,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993475628,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993489629,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993489629,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993491628,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993491628,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993494350,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993494350,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993500371,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993500371,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993501391,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993501392,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993507407,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993507407,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993508415,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993508415,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993514445,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993514445,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993515516,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993515516,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993521548,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993521548,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993522571,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993522571,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993535055,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993535055,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993549635,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993549635,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993564636,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993564636,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993565627,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993565627,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993574935,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993574935,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993580969,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993580969,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993582041,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993582041,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993588052,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993588052,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993589121,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993589121,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993595140,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993595140,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993596163,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993596163,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993602202,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993602202,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993603272,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993603272,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993615758,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993615758,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993630636,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993630636,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993645630,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993645630,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993646626,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993646626,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993655889,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993655889,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993661916,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993661916,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993662935,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993662935,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993668962,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993668962,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993669982,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993669982,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993676004,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993676004,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993677072,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993677072,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993683098,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993683098,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993684103,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993684103,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993696558,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993696558,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993710630,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993710630,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993724639,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993724639,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993726627,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993726627,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993740630,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993740630,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993754632,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993754632,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993757633,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993757633,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993771638,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993771638,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993774596,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993774596,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993780618,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993780618,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993788637,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993788637,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993803638,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993803638,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993804632,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993804632,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993818263,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993818263,
+    "freq": 293.66,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993824286,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993824286,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993832639,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993832639,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993847640,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993847640,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993848631,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993848631,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993861920,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993861920,
+    "freq": 440,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993867951,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993867951,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993876632,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993876632,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993890633,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993890633,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993903629,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993903629,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993905558,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993905558,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993911592,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993911592,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993919637,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993919637,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993934637,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993934637,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993935633,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993935633,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993949233,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993949233,
+    "freq": 523.25,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993961688,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993961688,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993976637,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993976637,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993991636,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993991636,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   },
+   {
+    "t": 1788993992632,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "play"
+   },
+   {
+    "t": 1788993992632,
+    "freq": 329.63,
+    "when": 0,
+    "dur": 0.7,
+    "via": "tone"
+   }
+  ]
+ },
+ "save": {
+  "v": "1.0",
+  "game": "notebird",
+  "firstDay": "2026-09-10",
+  "lastDay": "2026-09-10",
+  "levels": {
+   "1-0": {
+    "stars": 3,
+    "plays": 1
+   },
+   "1-1": {
+    "stars": 3,
+    "plays": 1
+   },
+   "1-2": {
+    "stars": 3,
+    "plays": 1
+   },
+   "1-3": {
+    "stars": 3,
+    "plays": 1
+   },
+   "1-4": {
+    "stars": 3,
+    "plays": 1
+   },
+   "2-0": {
+    "stars": 3,
+    "plays": 6
+   }
+  },
+  "dailyMin": {
+   "2026-09-10": 23
+  },
+  "settings": {
+   "sound": true,
+   "tts": true,
+   "vol": 0.6
+  },
+  "restTip": {
+   "day": "2026-09-10",
+   "shown": 13
+  },
+  "notebird": {
+   "tutSeen": true
+  }
+ },
+ "perr": [],
+ "ctxState": "err"
+}

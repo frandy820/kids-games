@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>轮流浇花</title>
+<style>
+/* ================= 轮流浇花 turntake（batch35·扩容批 5；2026-09-13 难度升级改造）
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色 #E8975A、暖棕描边 #4A3B2E；
+   玩法 = 花圃 3 盆花轮流浇水（渴度比较+排序判定层）：
+   每回合三盆都有渴度梯度（t1 稍低土微干 / t2 低垂叶弯 / t3 垂地土裂+枯色），
+   顶部双头像指示轮到谁（孩子头像亮=轮到你 / 兔子头像亮=轮到小兔子；ch1-2 另有大箭头）；
+   孩子回合：ch1-2=点「最渴的」一盆（ch1 {1,1,3} 档差大 / ch2 {2,2,3} 档差细微）；
+   ch3-4=按最渴→最不渴排序浇 3 步（点序错=wrong 不罚退已浇，miss≥2=应点花 breathe）；
+   兔子回合=兔子走位浇水演出 1.2s，seeded 约 1/3 浇错——浇错开纠错回合
+   （quiz.turn='k'+「小兔子浇错啦，帮帮它」，孩子点应点盆纠正；演出期点击=抢点温和提醒不罚）。
+   回合序列 turnSeq：每关孩子回合恒 5、兔子 4-6；ch1-2 严格交替起 K；
+   ch3-4 不规则 seeded（首 K、连续同方≤2）。渴度 seeded 相邻回合 argmax 互异。
+   触摸目标：花盆按钮 ≥96×96（横竖双档核）；overflowX 恒 0。
+   款内自建 button 带显式 color（契约 O：不依赖 core 兜底）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 46px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:36px;height:36px;border-radius:11px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 36px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 轮到指示条：双头像 + 大箭头（ch1-2；ch3-4 .no-arrow 隐藏箭头，头像亮灯恒在） ---------- */
+#turn-bar{flex:0 0 auto;position:relative;display:flex;justify-content:center;gap:56px;padding:4px 0 2px}
+.who{display:flex;flex-direction:column;align-items:center;gap:2px;width:76px}
+.who .avatar{width:54px;height:54px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;transition:all .25s}
+.who .avatar svg{width:80%;height:80%}
+.who .name{font-size:13px;font-weight:700;opacity:.5;transition:all .25s}
+.who.active .avatar{box-shadow:0 0 0 5px rgba(232,151,90,.55);animation:tt-who .8s ease infinite alternate}
+.who.active .name{opacity:1;color:#C4702F}
+.who:not(.active) .avatar{filter:grayscale(.55);opacity:.55}
+@keyframes tt-who{from{transform:scale(1)}to{transform:scale(1.07)}}
+#turn-arrow{position:absolute;top:-31px;width:44px;height:38px;transform:translateX(-50%);
+  pointer-events:none;transition:left .4s ease}
+#turn-arrow svg{width:100%;height:100%;animation:tt-ar .7s ease infinite alternate}
+@keyframes tt-ar{from{transform:translateY(0)}to{transform:translateY(5px)}}
+#turn-arrow.at-k{left:calc(50% - 66px)}
+#turn-arrow.at-r{left:calc(50% + 66px)}
+#turn-bar.no-arrow #turn-arrow{display:none}
+
+/* ---------- 舞台：花圃场景（主点选区）+ 题面句条 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;overflow:hidden;padding:4px 12px}
+
+/* 场景垫：暖色花园垫（草地+太阳+栅栏 SVG 铺底），3 盆花浮层 */
+#scene{position:relative;flex:0 0 auto;width:min(460px,94vw,calc((100vh - 340px)*1.31));
+  aspect-ratio:420/320;border-radius:24px;overflow:hidden;cursor:pointer;
+  background:linear-gradient(180deg,#FDF3DC 0%,#F6E9C8 55%,#E9DCB4 100%);
+  border:3px solid #4A3B2E;box-shadow:0 4px 0 #D8C9B4}
+#scene.bump{animation:tt-bump .22s ease}
+@keyframes tt-bump{0%,100%{transform:scale(1)}45%{transform:scale(.97)}}
+#bg-svg{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+
+/* 花层：3 盆花恒全摆（每回合三盆都有渴度梯度 t1/t2/t3——姿态+土色双通道可辨） */
+#flowers{position:absolute;left:3%;right:3%;bottom:5%;height:80%;display:flex;
+  justify-content:space-between;align-items:flex-end;z-index:10}
+.flower{position:relative;width:29%;height:100%;display:flex;align-items:flex-end;
+  justify-content:center;transition:transform .15s}
+.flower:active{transform:scale(.96)}
+.flower svg.plant{width:100%;height:auto;transition:filter .6s;overflow:visible}
+/* 渴度三档·姿态通道：t1 花头稍低 / t2 花头低垂叶弯 / t3 花头垂地+轻微枯色（三档角度差 ≥13deg 可辨） */
+.flower [data-anim="head"]{transform-box:fill-box;transform-origin:50% 88%;transition:transform .6s ease}
+.flower.t1 [data-anim="head"]{transform:rotate(11deg) translate(2px,4px)}
+.flower.t2 [data-anim="head"]{transform:rotate(26deg) translate(5px,11px)}
+.flower.t3 [data-anim="head"]{transform:rotate(44deg) translate(9px,22px) scale(.94)}
+.flower .leaf{transform-box:fill-box;transition:transform .6s ease}
+.flower.t1 .leaf-l{transform:rotate(-10deg)}
+.flower.t1 .leaf-r{transform:rotate(10deg)}
+.flower.t2 .leaf-l{transform:rotate(-24deg)}
+.flower.t2 .leaf-r{transform:rotate(24deg)}
+.flower.t3 .leaf-l{transform:rotate(-42deg)}
+.flower.t3 .leaf-r{transform:rotate(42deg)}
+.flower.t2 svg.plant{filter:saturate(.8)}
+.flower.t3 svg.plant{filter:saturate(.55) brightness(.95)}
+/* 渴度三档·土色通道：越渴土越浅发干；t3 裂纹显（.cracks 默认隐） */
+.flower .soil{transition:fill .6s ease}
+.flower.t1 .soil{fill:#936434}
+.flower.t2 .soil{fill:#A1733F}
+.flower.t3 .soil{fill:#B08450}
+.flower .cracks{display:none}
+.flower.t3 .cracks{display:block}
+.flower.pop-in{animation:tt-pop .4s cubic-bezier(.2,1.5,.4,1) backwards}
+@keyframes tt-pop{0%{transform:scale(.4);opacity:0}100%{transform:scale(1);opacity:1}}
+/* 渴度水滴气泡（演出层锚：三盆都渴都挂——不单独标答案，判定材料=梯度本身） */
+.drop{position:absolute;top:-7%;left:56%;width:38%;aspect-ratio:1;display:flex;align-items:center;
+  justify-content:center;background:#FFF9EE;border:2.5px solid #4A3B2E;border-radius:50%;
+  box-shadow:0 3px 0 #D8C9B4;animation:tt-dropb 1.6s ease-in-out infinite;z-index:5}
+.drop svg{width:56%;height:56%}
+@keyframes tt-dropb{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+/* 教学渴度圈注（仅教学演示期渲染：每盆挂 thirst 枚小水滴=1/2/3，教「比一比谁最渴」） */
+.tbadge{position:absolute;top:-18%;left:6%;display:flex;gap:3px;z-index:6}
+.tbadge i{width:13px;height:16px;background:#9CC6E8;border:2.5px solid #4A3B2E;
+  border-radius:50% 50% 60% 60%;box-shadow:0 2px 0 #D8C9B4}
+/* 反馈动效：pulse=方向级一轮（首错）/ breathe=答案级（miss≥2）/ wig=错点摇头 / watered=花开 */
+.flower.pulse{animation:tt-pulse .95s ease 1}
+@keyframes tt-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.09)}}
+.flower.breathe{animation:tt-br 1.2s ease-in-out infinite}
+@keyframes tt-br{0%,100%{filter:drop-shadow(0 0 0 rgba(232,151,90,0))}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+.flower.wig{animation:tt-wig .4s ease}
+@keyframes tt-wig{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.flower.watered{animation:tt-bloom .8s cubic-bezier(.2,1.6,.4,1)}
+@keyframes tt-bloom{0%{transform:scale(1)}45%{transform:scale(1.15)}100%{transform:scale(1)}}
+
+/* 浇水演出：水壶倾斜 + 水滴（孩子/兔子回合共用，JS 挂 #scene 顶部目标花上方） */
+.can-wrap{position:absolute;top:9%;z-index:30;pointer-events:none;width:21%;
+  transform:translateX(-50%)}
+.can-wrap .can{width:100%;animation:tt-tilt 1.4s ease-in-out}
+@keyframes tt-tilt{0%,15%{transform:rotate(0)}45%,80%{transform:rotate(-26deg)}100%{transform:rotate(0)}}
+.can-wrap i{position:absolute;bottom:-6px;left:30%;width:7px;height:11px;opacity:0;
+  border-radius:50% 50% 60% 60%;background:#7FB3D5;animation:tt-drip 1.15s ease-in infinite}
+.can-wrap i:nth-child(2){left:46%;animation-delay:.18s}
+.can-wrap i:nth-child(3){left:62%;animation-delay:.36s}
+.can-wrap i:nth-child(4){left:54%;animation-delay:.55s}
+@keyframes tt-drip{0%{opacity:0;transform:translateY(0)}25%{opacity:.95}100%{opacity:0;transform:translateY(70px)}}
+
+/* 兔子走位（兔子回合演出：从场边走到目标花旁浇水——1.2s=走位 500+浇水 700，缩短无效等待） */
+.bunny-g{position:absolute;bottom:3%;left:-22%;width:17%;z-index:8;pointer-events:none;opacity:0;
+  transition:left .45s ease,opacity .3s ease}
+.bunny-g.show{opacity:1}
+.bunny-g.hop{animation:tt-bhop .5s ease 3}
+@keyframes tt-bhop{0%,100%{margin-bottom:0}50%{margin-bottom:8px}}
+.bunny-g .bsvg{width:100%;height:auto}
+.bunny-g .mini-can{position:absolute;right:-16%;top:6%;width:62%;transform:rotate(-18deg)}
+
+/* 题面句条 */
+#qbar{flex:0 0 auto;max-width:94vw}
+#qbar .q-text{font-size:21px;font-weight:700;padding:3px 18px;border-radius:14px;
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 3px 0 #D8C9B4}
+#qbar.jump{animation:tt-qjump .5s ease 2}
+@keyframes tt-qjump{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:86px;height:86px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:tt-hearb .45s ease}
+@keyframes tt-hearb{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch21-34） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板/手机竖持）：场景收紧，花盆仍 ≥96×96 */
+@media (orientation:portrait){
+  #scene{width:min(400px,94vw)}
+  #qbar .q-text{font-size:18px;padding:3px 14px}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="轮流浇花">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="turn-bar" aria-label="轮到谁">
+    <div id="turn-arrow" aria-hidden="true"></div>
+    <div class="who who-k" data-side="k"><div class="avatar"></div><div class="name">你</div></div>
+    <div class="who who-r" data-side="r"><div class="avatar"></div><div class="name">小兔子</div></div>
+  </div>
+  <div id="stage">
+    <div id="scene" aria-label="花圃，点空白再听一遍">
+      <svg id="bg-svg" viewBox="0 0 420 320" preserveAspectRatio="none" aria-hidden="true"></svg>
+      <div id="flowers" aria-label="三盆花"></div>
+    </div>
+    <div id="qbar"><div class="q-text"></div></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

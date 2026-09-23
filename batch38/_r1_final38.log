@@ -1,0 +1,10 @@
+[PASS] R1 stamp 复验全绿  | TOTAL 13/13 PASS
+[PASS] R2 libr 复验全绿  | TOTAL 12/12 PASS
+[PASS] R3 gear 复验全绿  | TOTAL 12/12 PASS
+[PASS] R4 三款 clips 键+注入在场  | ok
+[PASS] R5 家长门抽测 KIDS+家长面板+存档  | KIDS=True parent=True v=1.0
+[PASS] R6 两级入口 120+3+子页  | main=120 b38inMain=3 ent=3 subs=[True, True, True]
+[PASS] R7 href 全可达  | ok
+[PASS] R8 真实路径推进 bonus→flat10 ch 档题型+写档  | stamp dch=[2, 2, 2, 2, 3](exp [2, 2, 2, 2, 3]) f10q={'unit': {'colors': ['R', 'Y', 'B'], 'shapes': ['T', 'C', 'S', 'C', 'S', 'T']}, 'nshelf': 0, 'nslots': 0} rec=5; libr dch=[2, 2, 2, 2, 3](exp [2, 2, 2, 2, 3]) f10q={'unit': None, 'nshelf': 4, 'nslots': 0} rec=5; gear dch=[2, 2, 2, 2, 3](exp [2, 2, 2, 2, 3]) f10q={'unit': None, 'nshelf': 0, 'nslots': 5} rec=5
+
+TOTAL 8/8 PASS

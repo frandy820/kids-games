@@ -1,0 +1,276 @@
+{
+ "game": "tictac",
+ "results": [
+  {
+   "ok": true,
+   "name": "mulberry32 Python 复刻位级对齐",
+   "detail": "aligned"
+  },
+  {
+   "ok": true,
+   "name": "教学 watch 期演示吞输入 null",
+   "detail": "返回=None"
+  },
+  {
+   "ok": true,
+   "name": "教学 watch 末步 __tkDemoR=done（整局走完）",
+   "detail": ""
+  },
+  {
+   "ok": true,
+   "name": "watch 实测 ≤16s",
+   "detail": "10743ms"
+  },
+  {
+   "ok": true,
+   "name": "教学 watch 语音 tk_tut_watch 在场（Audio 层）",
+   "detail": "前3=['tk_tut_watch', 'tk_right', 'tk_tut_turn']"
+  },
+  {
+   "ok": true,
+   "name": "教学 turn 帮→独后进 flat0",
+   "detail": ""
+  },
+  {
+   "ok": true,
+   "name": "教学 turn 语音 tk_tut_turn",
+   "detail": ""
+  },
+  {
+   "ok": true,
+   "name": "flat0 关参数 ch1/3局",
+   "detail": "{'flat': 0, 'ch': 1, 'dch': 1, 'lv': 0, 'round': 1, 'n': 3, 'score': 0, 'step': 0, 'done': False, 'won': False"
+  },
+  {
+   "ok": true,
+   "name": "兔子回合抢点=轻吞 false（不误判不落子）",
+   "detail": "返回=False"
+  },
+  {
+   "ok": true,
+   "name": "已占格=拒绝 false+bump（不响 wrong）",
+   "detail": "返回=False cls=cell x wig"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell x wincell line=[2, 4, 6]"
+  },
+  {
+   "ok": true,
+   "name": "兔子回合抢点=轻吞 false（不误判不落子）",
+   "detail": "返回=False"
+  },
+  {
+   "ok": true,
+   "name": "已占格=拒绝 false+bump（不响 wrong）",
+   "detail": "返回=False cls=cell x wig"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell x wincell line=[0, 4, 8]"
+  },
+  {
+   "ok": true,
+   "name": "兔子回合抢点=轻吞 false（不误判不落子）",
+   "detail": "返回=False"
+  },
+  {
+   "ok": true,
+   "name": "已占格=拒绝 false+bump（不响 wrong）",
+   "detail": "返回=False cls=cell x wig"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell x wincell line=[3, 4, 5]"
+  },
+  {
+   "ok": true,
+   "name": "3 局打完",
+   "detail": "results=['win', 'win', 'win']"
+  },
+  {
+   "ok": true,
+   "name": "胜局链=tk_right 单 clip",
+   "detail": "局末clip=['tk_right', 'tk_right', 'tk_right']"
+  },
+  {
+   "ok": true,
+   "name": "miss 恒 0（策略款备案）",
+   "detail": "miss=0"
+  },
+  {
+   "ok": true,
+   "name": "flat0 过关庆祝≥2★",
+   "detail": "stars=3 results=['win', 'win', 'win']"
+  },
+  {
+   "ok": true,
+   "name": "flat0 写档",
+   "detail": "{'stars': 3, 'plays': 1}"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell o wincell line=[2, 4, 6]"
+  },
+  {
+   "ok": true,
+   "name": "ch4 不防守=负局路径走完",
+   "detail": "results=['draw', 'draw', 'lose']"
+  },
+  {
+   "ok": true,
+   "name": "final() 终局快照 {result:lose,line}",
+   "detail": "{'result': 'lose', 'line': [2, 4, 6]}"
+  },
+  {
+   "ok": true,
+   "name": "负局文案温和（兔子赢啦，再来一局）",
+   "detail": "text='兔子赢啦，再来一局'"
+  },
+  {
+   "ok": true,
+   "name": "负局链=tk_lose 单 clip",
+   "detail": "局末clip=['tk_draw', 'tk_draw', 'tk_lose']"
+  },
+  {
+   "ok": true,
+   "name": "连败不增 miss",
+   "detail": "miss=0"
+  },
+  {
+   "ok": true,
+   "name": "完成即星永不 0★（连败=1★兜底）",
+   "detail": "stars=1"
+  },
+  {
+   "ok": true,
+   "name": "flat15(4-0) 写档 1★",
+   "detail": "{'stars': 1, 'plays': 1}"
+  },
+  {
+   "ok": true,
+   "name": "ch4 最优三局=3×平局(score1.5)",
+   "detail": "score=1.5 stars=2"
+  },
+  {
+   "ok": true,
+   "name": "平局链=tk_draw 单 clip",
+   "detail": "tk_draw×5"
+  },
+  {
+   "ok": true,
+   "name": "家长门错答一次",
+   "detail": "placeholder=再试一次"
+  },
+  {
+   "ok": true,
+   "name": "bonusSet(5) limit 6→11",
+   "detail": "limit=11"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell x wincell line=[2, 4, 6]"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell x wincell line=[2, 4, 6]"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell x wincell line=[2, 4, 6]"
+  },
+  {
+   "ok": true,
+   "name": "flat1 3 局打完",
+   "detail": "results=['win', 'win', 'win']"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell x wincell line=[0, 4, 8]"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell x wincell line=[2, 4, 6]"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell x wincell line=[0, 4, 8]"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell x wincell line=[2, 4, 6]"
+  },
+  {
+   "ok": true,
+   "name": "flat2 3 局打完",
+   "detail": "results=['win', 'win', 'win']"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell x wincell line=[2, 4, 6]"
+  },
+  {
+   "ok": true,
+   "name": "胜线三格高亮(wincell)",
+   "detail": "cls=cell x wincell line=[1, 4, 7]"
+  },
+  {
+   "ok": true,
+   "name": "flat3 3 局打完",
+   "detail": "results=['draw', 'win', 'win']"
+  },
+  {
+   "ok": true,
+   "name": "多玩 flat1-3 写档",
+   "detail": "keys=['1-0', '1-1', '1-2', '1-3', '4-0', '4-1']"
+  },
+  {
+   "ok": true,
+   "name": "restTip 13 分钟档触发",
+   "detail": "text='z z\\n小兔子的眼睛要休息啦\\n去看看远处的大树，明天再一起玩\\n好的'"
+  },
+  {
+   "ok": true,
+   "name": "restTip.shown=13 写档",
+   "detail": "{'day': '2026-09-12', 'shown': 13}"
+  },
+  {
+   "ok": true,
+   "name": "dailyMin ≥13 入账",
+   "detail": "dailyMin={'2026-09-12': 31}"
+  },
+  {
+   "ok": true,
+   "name": "dayEnd=今日玩完+明日预告",
+   "detail": "text='今天的新关卡玩完啦\\n明天：最厉害的兔子来啦\\n再玩玩旧关卡\\n明天见' 期望明天：最厉害的兔子来啦"
+  },
+  {
+   "ok": true,
+   "name": "dayEnd 可关",
+   "detail": ""
+  },
+  {
+   "ok": true,
+   "name": "ch2 block-only：威胁点兔子大概率落堵点（实测采样）",
+   "detail": "threats=4 blocked=4 results=['draw', 'draw']"
+  },
+  {
+   "ok": true,
+   "name": "tictac pageerror=0",
+   "detail": "errors=[]"
+  }
+ ],
+ "console_err": []
+}

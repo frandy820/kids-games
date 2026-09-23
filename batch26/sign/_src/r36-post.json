@@ -1,0 +1,2642 @@
+[
+ {
+  "flat": 0,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "walk",
+     "zebra",
+     "bridge",
+     "light"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "tunnel",
+     "walk",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "walk",
+     "light",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "tunnel",
+     "bridge",
+     "walk"
+    ]
+   },
+   {
+    "sign": "walk",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "light",
+     "walk",
+     "tunnel"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 1,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "walk",
+     "light",
+     "zebra",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "light",
+     "tunnel",
+     "walk"
+    ]
+   },
+   {
+    "sign": "walk",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "tunnel",
+     "walk",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "walk",
+     "light",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "walk",
+     "light",
+     "tunnel",
+     "zebra"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 2,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "light",
+     "tunnel",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "light",
+     "walk",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "walk",
+     "tunnel",
+     "bridge",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "walk",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "light",
+     "zebra",
+     "walk"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "tunnel",
+     "bridge",
+     "walk"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 3,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "light",
+     "walk",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "walk",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "walk",
+     "bridge",
+     "light"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "zebra",
+     "walk",
+     "light"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "light",
+     "bridge",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "bridge",
+     "walk",
+     "zebra"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 4,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "bridge",
+     "walk",
+     "light"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "light",
+     "walk",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "light",
+     "zebra",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "zebra",
+     "tunnel",
+     "walk"
+    ]
+   },
+   {
+    "sign": "walk",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "walk",
+     "light",
+     "tunnel",
+     "zebra"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 5,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "rail",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "rail",
+     "work",
+     "ped",
+     "slip"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "horn",
+     "noentry",
+     "nocar"
+    ]
+   },
+   {
+    "sign": "turn",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "turn",
+     "slip",
+     "work"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "nocar",
+     "noentry",
+     "noped",
+     "nobike"
+    ]
+   },
+   {
+    "sign": "slip",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "slip",
+     "cross",
+     "slow",
+     "ped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 6,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "turn",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "rail",
+     "turn",
+     "child",
+     "slow"
+    ]
+   },
+   {
+    "sign": "nocar",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "nocar",
+     "nobike",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "cross",
+     "child",
+     "rail",
+     "work"
+    ]
+   },
+   {
+    "sign": "horn",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "nobike",
+     "nocar",
+     "noped",
+     "horn"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "nobike",
+     "nocar",
+     "noentry",
+     "noped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 7,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "nocar",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "nocar",
+     "noped",
+     "nobike"
+    ]
+   },
+   {
+    "sign": "rail",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slip",
+     "ped",
+     "rail",
+     "child"
+    ]
+   },
+   {
+    "sign": "turn",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "ped",
+     "turn",
+     "child",
+     "rail"
+    ]
+   },
+   {
+    "sign": "horn",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "noped",
+     "nobike",
+     "horn",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "work",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "cross",
+     "slip",
+     "rail",
+     "work"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 8,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "nobike",
+     "noped",
+     "horn",
+     "nocar"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "cross",
+     "turn",
+     "child",
+     "work"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "noped",
+     "nobike",
+     "noentry",
+     "horn"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "turn",
+     "work",
+     "cross",
+     "child"
+    ]
+   },
+   {
+    "sign": "slow",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "turn",
+     "slow",
+     "work",
+     "ped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 9,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "cross",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "ped",
+     "work",
+     "cross",
+     "turn"
+    ]
+   },
+   {
+    "sign": "work",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "work",
+     "turn",
+     "rail",
+     "slip"
+    ]
+   },
+   {
+    "sign": "rail",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "slip",
+     "work",
+     "cross",
+     "rail"
+    ]
+   },
+   {
+    "sign": "horn",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "nobike",
+     "noped",
+     "noentry",
+     "horn"
+    ]
+   },
+   {
+    "sign": "nocar",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "nocar",
+     "horn",
+     "noentry",
+     "noped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 10,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "walk",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "rail",
+     "walk",
+     "ped",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "yield",
+     "slip",
+     "stop",
+     "rail"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "rail",
+     "walk",
+     "yield"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "ped",
+     "horn",
+     "straight"
+    ]
+   },
+   {
+    "sign": "goright",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "horn",
+     "work",
+     "goright",
+     "goleft"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 11,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "straight",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "oneway",
+     "nobike",
+     "walk",
+     "straight"
+    ]
+   },
+   {
+    "sign": "slip",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "slow",
+     "bridge",
+     "slip",
+     "goleft"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "yield",
+     "walk",
+     "turn",
+     "stop"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "cross",
+     "tunnel",
+     "noentry",
+     "nocar"
+    ]
+   },
+   {
+    "sign": "cross",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "cross",
+     "child",
+     "turn",
+     "work"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 12,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "zebra",
+     "child",
+     "goleft",
+     "walk"
+    ]
+   },
+   {
+    "sign": "slip",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "slow",
+     "slip",
+     "ped",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "ped",
+     "noentry",
+     "noped",
+     "nocar"
+    ]
+   },
+   {
+    "sign": "turn",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "turn",
+     "slip",
+     "goright",
+     "cross"
+    ]
+   },
+   {
+    "sign": "slow",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "slow",
+     "light",
+     "slip",
+     "child"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 13,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "goleft",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noped",
+     "goleft",
+     "slip",
+     "goright"
+    ]
+   },
+   {
+    "sign": "walk",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "goright",
+     "zebra",
+     "walk",
+     "child"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noped",
+     "nobike",
+     "yield",
+     "work"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "ped",
+     "oneway",
+     "zebra",
+     "child"
+    ]
+   },
+   {
+    "sign": "cross",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "turn",
+     "bridge",
+     "nobike",
+     "cross"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 14,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "yield",
+     "goleft",
+     "tunnel",
+     "stop"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "cross",
+     "ped",
+     "stop",
+     "child"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "turn",
+     "noped",
+     "nobike",
+     "goright"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "yield",
+     "goleft",
+     "oneway",
+     "stop"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "slow",
+     "goleft",
+     "ped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 15,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "yield",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "light",
+     "yield",
+     "oneway"
+    ]
+   },
+   {
+    "sign": "walk",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "zebra",
+     "rail",
+     "noped",
+     "walk"
+    ]
+   },
+   {
+    "sign": "straight",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "straight",
+     "cross",
+     "oneway",
+     "nobike"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "nobike",
+     "nocar",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "noped",
+     "nobike",
+     "zebra",
+     "oneway"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 16,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "oneway",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "oneway",
+     "bridge",
+     "walk"
+    ]
+   },
+   {
+    "sign": "slip",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "goright",
+     "nobike",
+     "slow",
+     "slip"
+    ]
+   },
+   {
+    "sign": "slow",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "ped",
+     "slip",
+     "work"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "noentry",
+     "child",
+     "ped",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "zebra",
+     "nobike",
+     "goright",
+     "noped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 17,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "oneway",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "walk",
+     "bridge",
+     "oneway",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "stop",
+     "child",
+     "cross",
+     "yield"
+    ]
+   },
+   {
+    "sign": "nocar",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "nocar",
+     "oneway",
+     "noped",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "goleft",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "goright",
+     "goleft",
+     "noentry",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "work",
+     "ped",
+     "slow",
+     "rail"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 18,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "goleft",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "yield",
+     "straight",
+     "goright",
+     "goleft"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "turn",
+     "yield",
+     "oneway",
+     "stop"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "slip",
+     "child",
+     "ped",
+     "yield"
+    ]
+   },
+   {
+    "sign": "goleft",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "goleft",
+     "noentry",
+     "goright",
+     "straight"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "rail",
+     "stop",
+     "work",
+     "yield"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 19,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "goleft",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "slow",
+     "goright",
+     "stop",
+     "goleft"
+    ]
+   },
+   {
+    "sign": "walk",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "goright",
+     "zebra",
+     "slow",
+     "walk"
+    ]
+   },
+   {
+    "sign": "slip",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "rail",
+     "cross",
+     "slip"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "nobike",
+     "horn",
+     "noentry",
+     "nocar"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "zebra",
+     "yield",
+     "slip",
+     "stop"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 20,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "turn",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "nocar",
+     "turn",
+     "cross"
+    ]
+   },
+   {
+    "sign": "straight",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "work",
+     "goleft",
+     "straight",
+     "oneway"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "yield",
+     "light",
+     "rail",
+     "stop"
+    ]
+   },
+   {
+    "sign": "oneway",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "straight",
+     "oneway",
+     "slow",
+     "child"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "stop",
+     "ped",
+     "cross"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 21,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "work",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "work",
+     "slow",
+     "cross",
+     "slip"
+    ]
+   },
+   {
+    "sign": "turn",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "work",
+     "slip",
+     "turn"
+    ]
+   },
+   {
+    "sign": "cross",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "rail",
+     "turn",
+     "ped",
+     "cross"
+    ]
+   },
+   {
+    "sign": "nocar",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "nocar",
+     "horn",
+     "noped",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "nocar",
+     "horn",
+     "noped",
+     "nobike"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 22,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "slow",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "slip",
+     "ped",
+     "work"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "straight",
+     "nobike",
+     "noped",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "goleft",
+     "ped",
+     "goright",
+     "child"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "oneway",
+     "walk",
+     "bridge",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "yield",
+     "ped",
+     "stop",
+     "cross"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 23,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "cross",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "ped",
+     "cross",
+     "rail"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "nobike",
+     "noentry",
+     "horn",
+     "noped"
+    ]
+   },
+   {
+    "sign": "work",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "cross",
+     "slow",
+     "work",
+     "turn"
+    ]
+   },
+   {
+    "sign": "cross",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "cross",
+     "turn",
+     "rail",
+     "work"
+    ]
+   },
+   {
+    "sign": "rail",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "cross",
+     "rail",
+     "work",
+     "turn"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 24,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "oneway",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "oneway",
+     "tunnel",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "cross",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "ped",
+     "turn",
+     "cross",
+     "goright"
+    ]
+   },
+   {
+    "sign": "oneway",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "straight",
+     "bridge",
+     "oneway",
+     "child"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "goleft",
+     "yield",
+     "stop",
+     "work"
+    ]
+   },
+   {
+    "sign": "oneway",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "walk",
+     "zebra",
+     "oneway",
+     "bridge"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 25,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "nobike",
+     "noped",
+     "horn"
+    ]
+   },
+   {
+    "sign": "slip",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "turn",
+     "cross",
+     "ped",
+     "slip"
+    ]
+   },
+   {
+    "sign": "rail",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "cross",
+     "rail",
+     "slow",
+     "work"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "nobike",
+     "nocar",
+     "noentry",
+     "horn"
+    ]
+   },
+   {
+    "sign": "slip",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "ped",
+     "work",
+     "slip",
+     "cross"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 26,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "walk",
+     "bridge",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "walk",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "walk",
+     "zebra",
+     "bridge",
+     "light"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "walk",
+     "zebra",
+     "bridge",
+     "light"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "light",
+     "zebra",
+     "walk"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "tunnel",
+     "zebra",
+     "light"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 27,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "bridge",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "oneway",
+     "bridge",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "slow",
+     "work",
+     "nocar"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "ped",
+     "goleft",
+     "child",
+     "nobike"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "nobike",
+     "horn",
+     "zebra",
+     "noped"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "walk",
+     "zebra",
+     "stop",
+     "oneway"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 28,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "bridge",
+     "zebra",
+     "walk"
+    ]
+   },
+   {
+    "sign": "walk",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "walk",
+     "bridge",
+     "light",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "walk",
+     "zebra",
+     "light",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "bridge",
+     "zebra",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "zebra",
+     "light",
+     "tunnel"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 29,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "child",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "cross",
+     "rail",
+     "turn"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "yield",
+     "straight",
+     "noentry",
+     "stop"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "walk",
+     "noentry",
+     "zebra",
+     "straight"
+    ]
+   },
+   {
+    "sign": "nocar",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "nobike",
+     "nocar",
+     "noentry",
+     "noped"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "cross",
+     "rail",
+     "ped",
+     "child"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 30,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "straight",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "cross",
+     "oneway",
+     "straight",
+     "nobike"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "goright",
+     "noped",
+     "tunnel",
+     "nobike"
+    ]
+   },
+   {
+    "sign": "walk",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "zebra",
+     "bridge",
+     "walk",
+     "slip"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "yield",
+     "nocar",
+     "rail"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "walk",
+     "yield",
+     "nobike",
+     "stop"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 31,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "goleft",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "goleft",
+     "goright",
+     "nocar"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "stop",
+     "nocar",
+     "noentry",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noped",
+     "zebra",
+     "nobike",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "goleft",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "bridge",
+     "goleft",
+     "goright",
+     "horn"
+    ]
+   },
+   {
+    "sign": "oneway",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "oneway",
+     "straight",
+     "goright",
+     "noped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 32,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "horn",
+     "noentry",
+     "nocar",
+     "noped"
+    ]
+   },
+   {
+    "sign": "slip",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "rail",
+     "cross",
+     "slip"
+    ]
+   },
+   {
+    "sign": "slow",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "slow",
+     "work",
+     "child",
+     "slip"
+    ]
+   },
+   {
+    "sign": "turn",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "slip",
+     "turn",
+     "rail",
+     "cross"
+    ]
+   },
+   {
+    "sign": "horn",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "nocar",
+     "horn",
+     "nobike"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 33,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "goright",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "goleft",
+     "zebra",
+     "goright"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "yield",
+     "slip",
+     "nobike",
+     "goright"
+    ]
+   },
+   {
+    "sign": "goleft",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "slow",
+     "turn",
+     "goleft",
+     "goright"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "ped",
+     "noentry",
+     "light",
+     "rail"
+    ]
+   },
+   {
+    "sign": "oneway",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "turn",
+     "oneway",
+     "straight",
+     "child"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 34,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noped",
+     "nobike",
+     "goleft",
+     "work"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "light",
+     "slip",
+     "yield"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noped",
+     "nocar",
+     "noentry",
+     "walk"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "horn",
+     "noped",
+     "ped"
+    ]
+   },
+   {
+    "sign": "straight",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "turn",
+     "oneway",
+     "straight",
+     "walk"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 35,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "ped",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "ped",
+     "rail",
+     "slow",
+     "work"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "zebra",
+     "noped",
+     "walk",
+     "slow"
+    ]
+   },
+   {
+    "sign": "work",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "turn",
+     "cross",
+     "work",
+     "ped"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "nobike",
+     "oneway",
+     "noped",
+     "straight"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noped",
+     "stop",
+     "zebra",
+     "yield"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 36,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "nobike",
+     "noentry",
+     "horn",
+     "nocar"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "rail",
+     "slip",
+     "slow"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "turn",
+     "stop",
+     "rail",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "work",
+     "nocar",
+     "yield",
+     "nobike"
+    ]
+   },
+   {
+    "sign": "slip",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "slip",
+     "turn",
+     "slow"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 37,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "nobike",
+     "noped",
+     "noentry",
+     "nocar"
+    ]
+   },
+   {
+    "sign": "slow",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "work",
+     "rail",
+     "cross"
+    ]
+   },
+   {
+    "sign": "cross",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "ped",
+     "work",
+     "rail",
+     "cross"
+    ]
+   },
+   {
+    "sign": "slip",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "ped",
+     "turn",
+     "slip",
+     "cross"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "horn",
+     "nobike",
+     "nocar",
+     "noped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 38,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "rail",
+     "yield",
+     "nocar",
+     "stop"
+    ]
+   },
+   {
+    "sign": "turn",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "slip",
+     "turn",
+     "ped"
+    ]
+   },
+   {
+    "sign": "slip",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "slip",
+     "child",
+     "work",
+     "ped"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": true,
+    "near": false,
+    "cards": [
+     "cross",
+     "ped",
+     "child",
+     "slow"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "nobike",
+     "horn",
+     "noped",
+     "noentry"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 39,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "nocar",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "slip",
+     "noped",
+     "nocar",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "yield",
+    "kind": "mean",
+    "flash": true,
+    "near": true,
+    "cards": [
+     "yield",
+     "ped",
+     "stop",
+     "oneway"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "zebra",
+     "walk",
+     "oneway"
+    ]
+   },
+   {
+    "sign": "nobike",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noped",
+     "zebra",
+     "nobike",
+     "goleft"
+    ]
+   },
+   {
+    "sign": "nocar",
+    "kind": "act",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "nocar",
+     "nobike",
+     "noped"
+    ]
+   }
+  ]
+ }
+]

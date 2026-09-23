@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>数的邻居</title>
+<style>
+/* ================= 数的邻居 neighbors（batch8）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E、灰蓝错误色（不用大红）
+   数字小街 = 数轴具象化：房子按序排（S 形续排），门牌数字恒亮（空房除外）——
+   空房左右邻居房号恒亮 = 数轴锚点，孩子可"顺着数"自行验证（数感支架非记忆测试）
+   触摸目标：候选门牌 3 张 ≥96×96（主答案 §0.9）、底栏按钮 ≥72；房子为非交互锚点（div 免 64 门）
+   题面指令全语音承载（§0.19），题面行文字=数字+图标装饰性冗余；overflowX 恒 0 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#BFD9A8;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：数字小街（天空场地） + 题面行 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:10px;overflow:hidden;padding:6px 10px}
+#field{position:relative;width:100%;max-width:1180px;flex:1 1 auto;min-height:200px;
+  background:#CBE7F0;border:3px solid #A8D3E2;border-radius:26px;overflow:hidden;
+  box-shadow:inset 0 0 0 6px rgba(255,249,238,.4)}
+#field .scene{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+
+/* ---------- 房子网格（S 形续排：上排左→右，下排右→左，折点小箭头）
+   房子=非交互数轴锚点（div 非 button，pointer-events:none——点击落空白轻提示路径 §0.16） ---------- */
+#street{position:absolute;inset:30px 16px 16px;display:grid;
+  grid-template-columns:repeat(var(--cols,10),1fr);gap:10px;pointer-events:none}
+.house{position:relative;max-width:170px;max-height:250px;width:100%;height:100%;
+  justify-self:center;align-self:center;display:flex;flex-direction:column;align-items:center}
+.house .roof{width:112%;height:30%;background:linear-gradient(180deg,#E98B6A 0%,#D97852 100%);
+  clip-path:polygon(50% 0,100% 100%,0 100%);border-radius:6px;flex:0 0 auto;
+  filter:drop-shadow(0 2px 0 rgba(199,122,66,.35))}
+.house .wall{width:86%;flex:1 1 auto;background:#FFF9EE;border:2.5px solid #C9BDA8;
+  border-radius:8px 8px 12px 12px;position:relative;display:flex;align-items:center;
+  justify-content:center;box-shadow:0 3px 0 rgba(201,189,168,.55)}
+/* 窗户：小动物住在这里；填对亮灯（暖黄光） */
+.house .win{width:46%;aspect-ratio:1;max-width:56px;max-height:56px;border-radius:50%;
+  background:#EFE9DB;border:2.5px solid #C9BDA8;display:flex;align-items:center;
+  justify-content:center;overflow:hidden}
+.house .win svg{width:88%;height:88%}
+/* 门牌号：数字大字恒亮（§0.19 训练目标可见；空房显示 ? 待挂） */
+.house .plate{position:absolute;bottom:-13px;left:50%;transform:translateX(-50%);
+  min-width:44px;padding:2px 9px;border-radius:11px;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  font-size:clamp(21px,4.6vmin,36px);font-weight:800;line-height:1.15;color:#4A3B2E;
+  font-variant-numeric:tabular-nums;text-align:center;box-shadow:0 2px 0 #D8C9B4;white-space:nowrap}
+/* 空房：虚线墙 + 问号旗（高亮脉冲柔和不频闪） */
+.house.empty .wall{background:#FDF6E7;border:2.5px dashed #E8975A}
+.house.empty .win{background:#F6EFDD;opacity:.75}
+.house.empty .plate{color:#E8975A;border-style:dashed}
+.house.empty .qflag{position:absolute;top:-56%;left:62%;width:34%;min-width:30px;z-index:2;
+  transform-origin:50% 100%;animation:qf-wave 2.2s ease-in-out infinite}
+@keyframes qf-wave{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(4deg)}}
+.house.empty{animation:empty-breathe 1.9s ease-in-out infinite}
+@keyframes empty-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 10px rgba(232,151,90,.75))}}
+/* 参照房（题面报的号 / mid 两侧锚点）：柔绿描边圈（数轴锚点强调） */
+.house.ref .wall{border-color:#8FBF7F;box-shadow:0 3px 0 rgba(143,191,127,.6),inset 0 0 0 3px rgba(143,191,127,.28)}
+.house.ref .plate{border-color:#6FA063}
+/* r31 盲牌（藏门牌，SPEC-R31 §R1 藏牌律）：墙/窗/动物照常，牌面渲染 '·'——
+   视觉诚实铁律：藏=牌面视觉无数字（孩子不可从街面读出，须从 ref 心算跨步） */
+.house.blind .plate{color:#C9BDA8;border-color:#C9BDA8;background:#F3EDDF;opacity:.9}
+/* r31 dual 两跳演出：锚点房跳一下 / 中间步房临时揭示（答后验算或 miss≥2 支架） */
+.house.jump{animation:house-jump .42s ease}
+@keyframes house-jump{0%,100%{transform:translateY(0)}45%{transform:translateY(-9px)}}
+.house.reveal .wall{border-color:#E2B13C;box-shadow:0 3px 0 rgba(226,177,60,.6),inset 0 0 0 3px rgba(226,177,60,.3)}
+.house.reveal .plate{border-color:#E2B13C;color:#B57F16}
+/* 填对：门牌弹出 + 窗户亮灯 + 小动物搬进来 */
+.house.filled{animation:empty-off .1s forwards}   /* 关掉空房呼吸 */
+@keyframes empty-off{to{animation:none;filter:none}}
+.house.filled .wall{background:#F3F7E9;border:2.5px solid #8FBF7F;border-style:solid}
+.house.filled .win{background:#FFE9A8;border-color:#E2B13C;
+  box-shadow:0 0 14px rgba(255,222,120,.95),inset 0 0 6px rgba(226,177,60,.5)}
+.house.filled .plate{border-style:solid;animation:plate-pop .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes plate-pop{from{transform:translateX(-50%) scale(0) rotate(-14deg)}
+  to{transform:translateX(-50%) scale(1) rotate(0)}}
+.house.filled .win svg{animation:animal-in .5s cubic-bezier(.2,1.7,.4,1)}
+@keyframes animal-in{from{transform:scale(0)}to{transform:scale(1)}}
+/* 折点小箭头（上排末房右下角指向下排开头，纯装饰 DOM） */
+.house .foldarrow{position:absolute;right:-17px;bottom:4px;width:18px;height:18px;pointer-events:none}
+/* ---------- 题面行：数字 + 方向图标（装饰性冗余，指令全语音承载） ---------- */
+#prompt{flex:0 0 auto;display:flex;align-items:center;justify-content:center;min-height:78px;
+  padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:13px;padding:6px 26px;min-height:66px;
+  border-radius:22px;background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  transition:transform .15s}
+#prompt-chip:active{transform:translateY(3px)}
+#prompt-chip .fnum{font-size:34px;font-weight:800;color:#4A3B2E;line-height:1;
+  font-variant-numeric:tabular-nums}
+#prompt-chip .fdir{width:40px;height:40px;flex:0 0 40px}
+#prompt-chip .fstep{display:flex;align-items:center;gap:2px;flex:0 0 auto}   /* r31 dual 两步小图标 */
+#prompt-chip .fstep svg{width:30px;height:30px}
+#prompt-chip .fq{font-size:34px;font-weight:800;color:#E8873A;line-height:1}
+#prompt-chip .fmid{font-size:22px;font-weight:800;color:#8A7B6C;line-height:1}
+
+/* ---------- 候选门牌（主答案按钮 ≥96） ---------- */
+#plates{flex:0 0 auto;display:flex;justify-content:center;align-items:center;gap:22px;
+  padding:12px 10px 4px}
+.platebtn{width:118px;height:132px;border-radius:22px;background:#FFF9EE;border:3px solid #4A3B2E;
+  box-shadow:0 5px 0 #D8C9B4;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:2px;transition:transform .15s,box-shadow .15s;position:relative}
+.platebtn:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+.platebtn .pv{font-size:56px;font-weight:800;color:#4A3B2E;line-height:1;
+  font-variant-numeric:tabular-nums}
+.platebtn .phanger{width:44px;height:7px;border-radius:4px;background:#E5D5BC}
+/* 答对：绿底弹起 */
+.platebtn.lit{background:#8FBF7F;border-color:#6FA063;box-shadow:0 5px 0 #6FA063;
+  animation:opt-lit .5s cubic-bezier(.2,1.6,.4,1)}
+.platebtn.lit .pv{color:#FFF9EE}
+@keyframes opt-lit{0%{transform:scale(1)}45%{transform:scale(1.12)}100%{transform:scale(1)}}
+/* 答错：晃动后灰掉（零惩罚）；已灰卡不可点（真实点击落空白轻提示路径 §0.7） */
+.platebtn.wig{animation:an-wig .55s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-7deg)}
+  55%{transform:rotate(6deg)}80%{transform:rotate(-3deg)}}
+.platebtn.dim{filter:grayscale(.75);opacity:.42;transform:scale(.93);pointer-events:none;
+  box-shadow:0 3px 0 #D8C9B4}
+/* 连错 2 次后：正确卡呼吸高亮（首错不 pulse，给再想机会） */
+.platebtn.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+@keyframes an-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch6/7） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：门牌/题面适配，主答案仍 ≥96 */
+@media (orientation:portrait){
+  .platebtn{width:106px;height:118px}
+  .platebtn .pv{font-size:48px}
+  #plates{gap:16px}
+  #prompt-chip .fnum,#prompt-chip .fq{font-size:29px}
+  .house{max-height:280px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="数的邻居">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="field" aria-label="数字小街">
+      <div class="scene" aria-hidden="true"></div>
+      <div id="street" aria-label="小房子门牌"></div>
+    </div>
+    <div id="prompt">
+      <button id="prompt-chip" aria-label="题目，点我再听一遍"></button>
+    </div>
+    <div id="plates" aria-label="候选门牌"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

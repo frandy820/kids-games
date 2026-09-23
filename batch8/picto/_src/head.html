@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>象形字</title>
+<style>
+/* ================= 象形字 picto（batch8）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E、灰蓝错误色（不用大红）
+   触摸目标：选项卡 ≥96（主答案）、题面卡 ≥150、底栏按钮 ≥72；
+   汉字卡大字 84px（§0.19 训练目标可见，楷体=教材惯例）；象形图卡内 SVG ≥84（≥64 免外扩）
+   布局纯 flex 纵向堆叠（题面在上、选项行在下），横竖屏同一结构，overflowX 恒 0 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8B86A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：题面（古画卷轴框）在上 / 选项行在下 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:16px;overflow:hidden;padding:8px 10px}
+/* 题面卡：toChar=象形图 / toPic=大汉字；可点重听题面指令（10s 节流） */
+#prompt-card{width:172px;height:172px;border-radius:30px;background:#FFF9EE;border:3px solid #4A3B2E;
+  box-shadow:0 5px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;
+  transition:transform .15s;position:relative}
+#prompt-card:active{transform:translateY(3px)}
+#prompt-card .zi{font-family:"KaiTi","STKaiti","Kaiti SC",serif;font-size:108px;font-weight:700;
+  line-height:1;color:#4A3B2E}
+#prompt-card .pic{width:132px;height:132px}
+/* 答对亮起：题面+正确卡一起变绿弹起（正确色柔绿，非大红） */
+#prompt-card.lit{background:#8FBF7F;border-color:#6FA063;box-shadow:0 5px 0 #6FA063;
+  animation:card-lit .6s cubic-bezier(.2,1.6,.4,1)}
+#prompt-card.lit .zi{color:#FFF9EE}
+@keyframes card-lit{0%{transform:scale(1)}45%{transform:scale(1.12) rotate(2deg)}100%{transform:scale(1)}}
+#prompt-card.bounce{animation:card-b .4s ease}
+@keyframes card-b{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+/* r12 字源推演题面：演变序列行 [古形 → 甲骨 → ?]（题面不含答案字形） */
+#prompt-card.evo{width:auto;max-width:min(94vw,640px);height:auto;min-height:154px;padding:12px 16px}
+#prompt-card.evo .evo-row{display:flex;align-items:center;gap:12px}
+#prompt-card.evo .pic{width:106px;height:106px;flex:0 0 106px}
+#prompt-card.evo .evo-arrow{width:36px;height:36px;flex:0 0 36px;display:flex;align-items:center;justify-content:center}
+#prompt-card.evo .evo-arrow svg{width:32px;height:32px}
+#prompt-card.evo .evo-q{width:92px;height:106px;flex:0 0 92px;border:3px dashed #C9A87C;border-radius:18px;
+  display:flex;align-items:center;justify-content:center;font-family:"KaiTi","STKaiti","Kaiti SC",serif;
+  font-size:64px;font-weight:700;color:#C9A87C}
+/* 模式角标（非文字依赖：小耳朵/小画笔图标随模式切换，视觉自解释） */
+#prompt-card .tag{position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);
+  width:40px;height:40px;border-radius:50%;background:#E8975A;border:2.5px solid #FFF9EE;
+  display:flex;align-items:center;justify-content:center;pointer-events:none}
+#prompt-card .tag svg{width:24px;height:24px}
+
+/* ---------- 选项行（主答案按钮 ≥96） ---------- */
+#opts{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px;
+  padding:14px 12px 4px;max-width:100%}
+.opt{width:132px;height:138px;border-radius:26px;background:#FFF9EE;border:3px solid #4A3B2E;
+  box-shadow:0 5px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;
+  transition:transform .15s,box-shadow .15s;position:relative}
+.opt:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+/* 汉字卡：大字楷体（§0.19 训练目标=认的对象） */
+.opt .zi{font-family:"KaiTi","STKaiti","Kaiti SC",serif;font-size:86px;font-weight:700;
+  line-height:1;color:#4A3B2E}
+/* 象形图卡 */
+.opt .pic{width:100px;height:100px}
+/* 答对：绿底弹起 */
+.opt.lit{background:#8FBF7F;border-color:#6FA063;box-shadow:0 5px 0 #6FA063;
+  animation:opt-lit .5s cubic-bezier(.2,1.6,.4,1)}
+.opt.lit .zi{color:#FFF9EE}
+@keyframes opt-lit{0%{transform:scale(1)}45%{transform:scale(1.12)}100%{transform:scale(1)}}
+/* 答错：晃动后灰掉可重点（零惩罚）；已灰卡不可点（真实点击落空白轻提示路径 §0.7） */
+.opt.wig{animation:an-wig .55s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-7deg)}
+  55%{transform:rotate(6deg)}80%{transform:rotate(-3deg)}}
+.opt.dim{filter:grayscale(.75);opacity:.42;transform:scale(.93);pointer-events:none;
+  box-shadow:0 3px 0 #D8C9B4}
+/* 连错 2 次后：正确卡呼吸高亮（首错不 pulse，给再想机会） */
+.opt.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+@keyframes an-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch6/7） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：选项/题面略缩，主答案仍 ≥96、汉字仍 ≥80、象形图 ≥84 */
+@media (orientation:portrait){
+  #prompt-card{width:154px;height:154px}
+  #prompt-card .zi{font-size:94px}
+  #prompt-card .pic{width:118px;height:118px}
+  .opt{width:118px;height:122px}
+  .opt .zi{font-size:82px}
+  .opt .pic{width:90px;height:90px}
+  #opts{gap:18px}
+  #prompt-card.evo{max-width:96vw;min-height:140px;padding:10px 10px}
+  #prompt-card.evo .evo-row{gap:8px}
+  #prompt-card.evo .pic{width:88px;height:88px;flex:0 0 88px}
+  #prompt-card.evo .evo-arrow{width:26px;height:26px;flex:0 0 26px}
+  #prompt-card.evo .evo-q{width:72px;height:88px;flex:0 0 72px;font-size:52px}
+}
+/* body.port = verify simView 竖屏通道（r12 坑⑥）：与上行 @media portrait 段等值副本——
+   两段同步改（改一处必须改另一处）；simView 对 800x1180 模拟挂 body.port 并断言 portStyle 生效 */
+body.port #prompt-card{width:154px;height:154px}
+body.port #prompt-card .zi{font-size:94px}
+body.port #prompt-card .pic{width:118px;height:118px}
+body.port .opt{width:118px;height:122px}
+body.port .opt .zi{font-size:82px}
+body.port .opt .pic{width:90px;height:90px}
+body.port #opts{gap:18px}
+body.port #prompt-card.evo{max-width:96vw;min-height:140px;padding:10px 10px}
+body.port #prompt-card.evo .evo-row{gap:8px}
+body.port #prompt-card.evo .pic{width:88px;height:88px;flex:0 0 88px}
+body.port #prompt-card.evo .evo-arrow{width:26px;height:26px;flex:0 0 26px}
+body.port #prompt-card.evo .evo-q{width:72px;height:88px;flex:0 0 72px;font-size:52px}
+</style>
+</head>
+<body>
+<div id="game" aria-label="象形字">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <button id="prompt-card" aria-label="题面"></button>
+    <div id="opts" aria-label="选项卡"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

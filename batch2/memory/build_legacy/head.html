@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>记忆翻牌配对</title>
+<style>
+/* ================= 记忆翻牌配对 memory =================
+   视觉按 DESIGN-SPEC §8：奶油暖白底、暖橙主色、灰蓝错误色（不用大红）
+   触摸目标：牌面 ≥96×96（JS 按 stage 实测算尺寸，下限 96），间距 ≥16 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏：图标 + 配对进度盘 + 章节点 ---------- */
+#hud{height:58px;flex:0 0 58px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:12px}
+#logo{width:44px;height:44px;border-radius:12px;background:#E8975A;display:flex;align-items:center;justify-content:center;flex:0 0 44px}
+#pairs-tray{display:flex;gap:5px;align-items:center;flex:1 1 auto;flex-wrap:wrap;overflow:hidden}
+#pairs-tray .mini{width:32px;height:32px;opacity:.22;transform:scale(.82);
+  transition:all .35s cubic-bezier(.2,1.6,.4,1)}
+#pairs-tray .mini.on{opacity:1;transform:scale(1)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 牌面区 ---------- */
+#stage{flex:1 1 auto;position:relative;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;min-height:120px}
+#boardwrap{padding:8px}
+#board{display:grid;grid-template-columns:repeat(4,var(--card));grid-auto-rows:var(--card);gap:var(--gap,16px)}
+
+/* ---------- 卡牌：3D 翻转 ---------- */
+.card{width:var(--card);height:var(--card);perspective:640px;position:relative;
+  border-radius:calc(var(--card) * .17);transition:opacity .45s ease,transform .45s ease}
+.card-inner{position:absolute;inset:0;transform-style:preserve-3d;
+  transition:transform .3s cubic-bezier(.3,1.2,.4,1)}
+.card.up .card-inner{transform:rotateY(180deg)}
+.card .face{position:absolute;inset:0;border-radius:inherit;backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;display:flex;align-items:center;justify-content:center;
+  border:2.5px solid #4A3B2E}
+.card .face.back{background:#E8975A;box-shadow:0 5px 0 #C77A42}
+.card .face.back svg{width:56%;height:56%}
+.card .face.front{background:#FFF9EE;box-shadow:0 5px 0 #D8C9B4;transform:rotateY(180deg)}
+.card .face.front svg{width:70%;height:70%}
+.card:not(.up):not(.gone):active{transform:translateY(2px)}
+/* 失误提示：灰蓝描边（不用大红），随盖回消失 */
+.card.miss .face.front{border-color:#8A9BAE;box-shadow:0 2px 0 #8A9BAE}
+/* 配对收走：缩小淡出，保留网格槽位防跳动 */
+.card.gone{opacity:0;transform:scale(.35);pointer-events:none}
+.card.gone .face.front{box-shadow:none}
+/* 支架高亮脉冲（与幽灵手指并用） */
+.card.pulse{animation:card-pulse 1s ease 2}
+@keyframes card-pulse{0%,100%{filter:none}
+  50%{filter:drop-shadow(0 0 12px rgba(232,151,90,.85))}}
+
+/* ---------- 底栏：小兔子（鼓励）+ 再玩一次 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:8px 18px 14px;gap:12px}
+#btn-rabbit{width:96px;height:96px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;
+  transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:78px;height:78px}
+#btn-rabbit.hop{animation:hop .45s ease 2}
+@keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;
+  transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:44px;height:44px}
+
+/* ---------- 幽灵手指教学 ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:40vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 宽屏（≥820px）：牌区限宽居中 */
+@media (min-width:820px){
+  #boardwrap{max-width:860px}
+}
+</style>
+</head>

@@ -1,0 +1,98 @@
+[   0.9s] OPEN(fresh) file:///F:/claudecode/projects/active/kids-games/batch11/sortsize/index.html
+[   1.6s] A 开档 tutorial='watch'
+[   1.8s] SNAP sortsize_A0_tut_watch.png
+[   3.3s] A 教学乱点 ('watch', 0)→('watch', 0) 不跳=True
+[   5.7s] A help 到位=True ghost='show'
+[   5.7s] SNAP sortsize_A2_tut_help.png
+[   7.6s] A 帮期错点 miss=1 tut='help'
+[   9.7s] A 首次答对 tutorial='solo'（应 solo）
+[   9.7s] A2_1-0 第1题 kind=dog order=big items=[34, 77, 51] left=[0, 2] pos=1 ans=2
+[  14.8s] A2_1-0 第2题 kind=balloon order=big items=[51, 34, 77] left=[0, 1, 2] pos=0 ans=2
+[  21.0s] A2_1-0 第3题 kind=rabbit order=big items=[34, 77, 51] left=[0, 1, 2] pos=0 ans=1
+[  28.6s] A2_1-0 第4题 kind=star order=big items=[77, 34, 51] left=[0, 1, 2] pos=0 ans=0
+[  35.8s] A2_1-0 第5题 kind=ball order=big items=[77, 34, 51] left=[0, 1, 2] pos=0 ans=0
+[  43.6s] A2_1-0 完成 用时=33.9s retries=1
+[  43.7s] A2_1-0 CELEBRATE 星星=2 文案='★/★/好棒！'
+[  43.8s] SNAP sortsize_celebrate_A2_1-0.png
+[  49.2s] A2 存档 levels[1-0] = {'stars': 2, 'plays': 1}
+[  49.2s] A3 下一关 flat=1
+[  49.2s] A3 第2题开始前先看第1题：kind=rabbit order=big items=[34, 77, 51] left=[0, 1, 2] pos=0 ans=1
+[  50.8s] A3 同卡第1次后 {'n': 1, 'miss': 1, 'card_pe': 'auto', 'breathe': []}
+[  52.3s] A3 同卡第2次后 {'n': 2, 'miss': 2, 'card_pe': 'auto', 'breathe': ['1']}
+[  54.4s] A3 同卡第3次后 {'n': 3, 'miss': 3, 'card_pe': 'auto', 'breathe': ['1']}
+[  54.4s] A3_1-1 第1题 kind=rabbit order=big items=[34, 77, 51] left=[0, 1, 2] pos=0 ans=1
+[  61.2s] A3_1-1 第2题 kind=dog order=big items=[51, 77, 34] left=[0, 1, 2] pos=0 ans=1
+[  68.6s] A3_1-1 第3题 kind=bear order=big items=[51, 77, 34] left=[0, 1, 2] pos=0 ans=1
+[  75.9s] A3_1-1 第4题 kind=cat order=big items=[51, 77, 34] left=[0, 1, 2] pos=0 ans=1
+[  84.0s] A3_1-1 第5题 kind=ball order=big items=[34, 77, 51] left=[0, 1, 2] pos=0 ans=1
+[  92.0s] A3_1-1 完成 用时=37.6s retries=3
+[  92.0s] A3_1-1 CELEBRATE 星星=1 文案='★/好棒！'
+[  92.1s] SNAP sortsize_celebrate_A3_1-1.png
+[  97.5s] A3 存档 levels[1-1] = {'stars': 1, 'plays': 1}
+[  97.5s] A4_1-2 第1题 kind=apple order=big items=[34, 77, 51] left=[0, 1, 2] pos=0 ans=1
+[ 105.1s] A4_1-2 第2题 kind=star order=big items=[51, 34, 77] left=[0, 1, 2] pos=0 ans=2
+[ 112.7s] A4_1-2 第3题 kind=bear order=big items=[34, 77, 51] left=[0, 1, 2] pos=0 ans=1
+[ 120.2s] A4_1-2 第4题 kind=balloon order=big items=[51, 77, 34] left=[0, 1, 2] pos=0 ans=1
+[ 126.6s] A4_1-2 第5题 kind=cat order=big items=[51, 77, 34] left=[0, 1, 2] pos=0 ans=1
+[ 133.9s] A4_1-2 完成 用时=36.4s retries=0
+[ 134.0s] A4_1-2 CELEBRATE 星星=3 文案='★/★/★/真棒！'
+[ 134.0s] SNAP sortsize_celebrate_A4_1-2.png
+[ 139.4s] A4 存档 levels[1-2] = {'stars': 3, 'plays': 1}
+[ 139.4s] A5 flat=3 第1题点对一步再发呆
+[ 156.1s] A5 ★应点卡脉冲 @12.6s
+[ 156.2s] SNAP sortsize_A5_rescue_pulse.png
+[ 167.6s] A5 救援={'at_s': None, 'voice': [], 'pulse_seen': 12.6, 'pulse_bursts': 24}（三连脉冲观测 bursts=24）
+[ 167.6s] A5_1-3 第1题 kind=apple order=big items=[51, 77, 34] left=[0, 2] pos=1 ans=0
+[ 173.6s] A5_1-3 第2题 kind=star order=big items=[34, 77, 51] left=[0, 1, 2] pos=0 ans=1
+[ 181.6s] A5_1-3 第3题 kind=ball order=big items=[51, 34, 77] left=[0, 1, 2] pos=0 ans=2
+[ 188.9s] A5_1-3 第4题 kind=dog order=big items=[51, 34, 77] left=[0, 1, 2] pos=0 ans=2
+[ 195.7s] A5_1-3 第5题 kind=cat order=big items=[77, 34, 51] left=[0, 1, 2] pos=0 ans=0
+[ 203.9s] A5_1-3 完成 用时=36.3s retries=0
+[ 204.0s] A5_1-3 CELEBRATE 星星=3 文案='★/★/★/真棒！'
+[ 204.0s] SNAP sortsize_celebrate_A5_1-3.png
+[ 209.4s] A5 存档 levels[1-3] = {'stars': 3, 'plays': 1}
+[ 209.4s] A6_1-4 第1题 kind=apple order=big items=[77, 34, 51] left=[0, 1, 2] pos=0 ans=0
+[ 216.7s] A6_1-4 第2题 kind=bear order=big items=[34, 77, 51] left=[0, 1, 2] pos=0 ans=1
+[ 224.5s] A6_1-4 第3题 kind=balloon order=big items=[34, 77, 51] left=[0, 1, 2] pos=0 ans=1
+[ 232.3s] A6_1-4 第4题 kind=star order=big items=[51, 77, 34] left=[0, 1, 2] pos=0 ans=1
+[ 239.7s] A6_1-4 第5题 kind=rabbit order=big items=[34, 77, 51] left=[0, 1, 2] pos=0 ans=1
+[ 246.8s] A6_1-4 完成 用时=37.3s retries=0
+[ 246.8s] A6_1-4 CELEBRATE 星星=3 文案='★/★/★/真棒！'
+[ 246.9s] SNAP sortsize_celebrate_A6_1-4.png
+[ 252.3s] A6 存档 levels[1-4] = {'stars': 3, 'plays': 1}
+[ 252.3s] A6 章末层={'sel': '.k-celebrate:0 .k-chapterend:1 .k-dayend:0 .k-panel:0', 'dayend': None, 'chapterend': '★/第 1 章 完成！/本章星星 12/明天：四个小伙伴也来排排队/明天见'}
+[ 252.9s] DISMISS .k-chapterend .k-btn
+[ 252.9s] A7 2-0 kind=star order=big items=[42, 95, 63, 28] left=[0, 1, 2, 3] pos=0 ans=1
+[ 252.9s] A7_2-0 第1题 kind=star order=big items=[42, 95, 63, 28] left=[0, 1, 2, 3] pos=0 ans=1
+[ 254.8s] A7_2-0 错1后 miss=1 wig类=['3'] 可再点=4 breathe=[]
+[ 265.1s] A7_2-0 第2题 kind=ball order=big items=[28, 42, 95, 63] left=[0, 1, 2, 3] pos=0 ans=2
+[ 275.0s] A7_2-0 第3题 kind=cat order=big items=[28, 63, 95, 42] left=[0, 1, 2, 3] pos=0 ans=2
+[ 277.2s] A7_2-0 错1后 miss=1 wig类=['3'] 可再点=4 breathe=[]
+[ 285.9s] A7_2-0 第4题 kind=rabbit order=big items=[63, 28, 42, 95] left=[0, 1, 2, 3] pos=0 ans=3
+[ 297.1s] A7_2-0 第5题 kind=balloon order=big items=[42, 95, 63, 28] left=[0, 1, 2, 3] pos=0 ans=1
+[ 307.3s] A7_2-0 完成 用时=54.4s retries=2
+[ 307.4s] A7_2-0 CELEBRATE 星星=2 文案='★/★/好棒！'
+[ 307.4s] SNAP sortsize_celebrate_A7_2-0.png
+[ 312.8s] A7 存档 levels[2-0] = {'stars': 2, 'plays': 1}
+[ 313.8s] A7 日末层={'sel': '.k-celebrate:0 .k-chapterend:0 .k-dayend:1 .k-panel:0', 'dayend': '今天的新关卡玩完啦/明天：这次从最小的开始排哦/再玩玩旧关卡/明天见', 'chapterend': None}
+[ 313.9s] SNAP sortsize_A7_dayend.png
+[ 313.9s] A 零文字审计={'chip_text': '', 'chip_aria': None, 'card_texts': ['', '', '', ''], 'card_aria': '星星，大', 'card_px': ['200x132', '200x132', '202x134', '208x137'], 'body_texts_nopict': ['今天的新关卡玩完啦', '明天：这次从最小的开始排哦', '再玩玩旧关卡', '明天见'], 'badge_html': 473, 'badge_text': ''} dir_badge={'order': 'big', 'hasSvg': True, 'txt': '🐘\n🐘\n🐜\n🐜', 'len': 473} strip={'txt': '1\n2\n3\n4', 'nchild': 4}
+[ 313.9s] A 语音汇总={'T_dir': 0, 'P_wrong': 2, 'S_pop': 0, 'S_coin': 15, 'clips': ['core_chapter_end', 'core_day_end']}
+[   0.0s] B 种档 n=5 → 2-0
+[   0.9s] OPEN(fresh) file:///F:/claudecode/projects/active/kids-games/batch11/sortsize/index.html
+[   3.9s] B 2-0 首题 kind=star order=big items=[42, 95, 63, 28] left=[0, 1, 2, 3] pos=0 ans=1
+[   5.6s] B 同卡错1后 {'miss': 1, 'gone': 0, 'breathe': -1, 'pe_all': True}
+[   7.4s] B 同卡错2后 {'miss': 2, 'gone': 0, 'breathe': 1, 'pe_all': True}
+[   9.2s] B 同卡错3后 {'miss': 3, 'gone': 0, 'breathe': 1, 'pe_all': True}
+[   9.3s] SNAP sortsize_B_nogray.png
+[  18.3s] B 第2题 kind=ball order=big items=[28, 42, 95, 63] left=[0, 1, 2, 3] pos=0 ans=2
+[  32.8s] SNAP sortsize_B_rescue1.png
+[  41.2s] B 救援后错点 miss=1
+[  99.1s] B_2-0 CELEBRATE 星星=1 文案='★/好棒！'
+[  99.2s] SNAP sortsize_celebrate_B_2-0.png
+[ 104.6s] B 存档 levels[2-0] = {'stars': 1, 'plays': 1}（同卡3错+救援期1错=4错 → 1★ 预期）
+[   0.9s] OPEN(fresh) file:///F:/claudecode/projects/active/kids-games/batch11/sortsize/index.html
+[   3.9s] 题面语音通道补证 2-0
+[   3.9s] quiz={'kind': 'star', 'order': 'big', 'items': [42, 95, 63, 28], 'left': [0, 1, 2, 3], 'pos': 0, 'answerIdx': 1, 'step': 0, 'miss': 0}
+[   3.9s] 开场期 vlog=[]
+[  15.8s] ★救援语音(queue通道) @11.9s = ['Q:'] pulse=True

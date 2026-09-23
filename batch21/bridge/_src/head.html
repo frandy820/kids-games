@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>过河石桥</title>
+<style>
+/* ================= 过河石桥 bridge（batch21 r9 纠错式改造）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E。
+   r9 玩法 = 规律纠错（SPEC-BATCH21 §3-r9）：河面横列 6/8 块石头构成完整周期
+   pattern 行，其中恰埋 1 块错石（位置 ≥ 首个完整周期后，视觉无标记）。
+   find 找错：点中错石 = 该石弹跳高亮 + brg_found + 候选盘滑入；
+   点其他石 = 晃动 + sayW + 零惩罚（miss≥2 浮现 pattern 提示条——规律可视化不指认）。
+   fix 修错：候选 3 块（干扰恰差一属性），点对 = 错石替换 + 兔子逐石跳过河（演出）；
+   点错候选 = 晃动零惩罚（miss≥2 正确候选 breathe §0.21）。
+   零文字依赖（§0.19）：题面/候选全图形+语音承载。触摸目标：石头/候选 = 主答案
+   按钮 ≥64；底栏按钮 ≥64；overflowX 恒 0；布局量测走 offsetWidth/offsetHeight。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:38px;height:38px;border-radius:11px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 38px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- pattern 提示条（find miss≥2 救援：完整周期色点序列，规律可视化不指认错石；
+   dual 章点内嵌形状缩形 ---------- */
+#pat-tip{position:absolute;left:50%;top:2.5%;transform:translateX(-50%) translateY(-16px);
+  display:flex;align-items:center;gap:8px;padding:7px 14px;background:#FFF9EE;
+  border:2.5px solid #4A3B2E;border-radius:26px;box-shadow:0 3px 0 rgba(74,59,46,.25);
+  opacity:0;pointer-events:none;transition:opacity .35s,transform .35s;z-index:8}
+#pat-tip.show{opacity:1;transform:translateX(-50%) translateY(0)}
+#pat-tip i{width:22px;height:22px;border:2px solid #4A3B2E;flex:0 0 auto}
+#pat-tip i.p-sq{border-radius:6px}
+#pat-tip i.p-rd{border-radius:50%}
+
+/* ---------- 舞台：河面 + 石头行 + 兔子（布局坐标同系：石头/岸/兔子均以 #scene 为参照，
+   量测用 offsetLeft/offsetTop/offsetWidth/offsetHeight，禁 getBoundingClientRect 动画帧坑） ---------- */
+#scene{position:relative;flex:1 1 auto;min-height:180px;overflow:hidden}
+#river{position:absolute;left:0;right:0;top:26%;bottom:26%;
+  background:linear-gradient(180deg,#CFEBE5 0%,#BCDFD7 100%);
+  border-top:3px solid #9FD2C9;border-bottom:3px solid #9FD2C9}
+#river::before{content:'';position:absolute;left:4%;right:4%;top:22%;height:3px;border-radius:2px;
+  background:rgba(255,255,255,.55);box-shadow:0 16px 0 rgba(255,255,255,.38),0 34px 0 rgba(255,255,255,.28)}
+.bank{position:absolute;top:21%;bottom:21%;width:72px;background:#BFDCA6;
+  border:2.5px solid #4A3B2E;border-radius:16px;display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 -8px 0 rgba(122,158,92,.4)}
+#bank-l{left:10px}
+#bank-r{right:10px}
+#bank-l .flag{font-size:34px;line-height:1;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+#bank-r .goal{font-size:38px;line-height:1;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;
+  animation:goal-bob 1.6s ease-in-out infinite}
+@keyframes goal-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+
+/* ---------- 石头行：6/8 块石头横列（主答案按钮 ≥64，8 石章自动收紧），奇偶错落 ----------
+   dual 章形状：.s-round=椭圆石（默认）/ .s-square=圆角方石（色+形第二维） */
+#stones{position:absolute;left:0;right:0;top:26%;bottom:26%;display:flex;align-items:center;
+  justify-content:center;gap:18px;padding:0 96px}
+#stones.tight{gap:12px;padding:0 90px}
+.stone{position:relative;flex:0 0 auto;width:86px;height:70px;
+  border-radius:50% 50% 46% 46%/58% 58% 42% 42%;
+  border:3px solid #4A3B2E;box-shadow:0 4px 0 rgba(74,59,46,.28);
+  transition:transform .15s}
+.stone:active{transform:translateY(2px)}
+.stone:nth-child(even){margin-top:18px}
+.stone.c-stone{background:radial-gradient(ellipse at 38% 30%,var(--c-body) 0%,var(--c-body) 58%,var(--c-deep) 100%)}
+.stone.c-stone::after{content:'';position:absolute;left:18%;top:13%;width:27%;height:16%;
+  border-radius:50%;background:rgba(255,255,255,.5)}
+.stone.s-square{border-radius:16px 16px 12px 12px}
+.stone.s-square::after{border-radius:45%}
+/* 入场弹跳（换桥 stagger） */
+.stone.pop{animation:stone-in .42s cubic-bezier(.2,1.6,.4,1) backwards}
+@keyframes stone-in{from{transform:scale(.3) translateY(14px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
+/* find 找对错石：弹跳 + 高亮标记（此刻起错石不再是秘密） */
+.stone.baddie{animation:an-baddie .6s cubic-bezier(.2,1.6,.4,1)}
+@keyframes an-baddie{0%{transform:scale(1)}45%{transform:scale(1.18) rotate(-4deg)}100%{transform:scale(1)}}
+.stone.baddie{box-shadow:0 4px 0 rgba(74,59,46,.28),0 0 0 6px rgba(232,151,90,.75)}
+/* fix 修对：新石弹入替换 */
+.stone.fixed-in{animation:an-fixedin .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes an-fixedin{0%{transform:scale(.2);opacity:0}70%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
+/* 兔子跳上：落点脉冲 */
+.stone.lit{animation:stone-lit .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes stone-lit{0%{transform:scale(1)}45%{transform:scale(1.12)}100%{transform:scale(1)}}
+/* 兔子走过的石头：降饱和 + 脚印（walk 演出逐石盖） */
+.stone.done{filter:saturate(.5) brightness(.97)}
+.stone .paw{position:absolute;right:5px;bottom:0;font-size:17px;line-height:1;opacity:.9;
+  font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+/* 点错（find 点非错石 / fix 点错候选）：晃动（零惩罚可重点） */
+.stone.wig{animation:an-wig .55s ease}
+.cand.wig{animation:an-wig .55s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-7deg)}
+  55%{transform:rotate(6deg)}80%{transform:rotate(-3deg)}}
+/* 救援方向级：已确认正确的石头序列 flash（这些排得对——间接定位错石） */
+.stone.flash{animation:an-flash .5s ease}
+@keyframes an-flash{0%,100%{box-shadow:0 4px 0 rgba(74,59,46,.28)}
+  50%{box-shadow:0 0 0 9px rgba(232,151,90,.55),0 4px 0 rgba(74,59,46,.28)}}
+/* 救援答案级（fix miss≥2）：正确候选 breathe 循环（§0.21 在屏） */
+.cand.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+@keyframes an-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+
+/* ---------- 兔子（过河 walk 演出：外层 left/top transition + 内层跳弧） ---------- */
+#rabbit{position:absolute;left:0;top:0;width:56px;height:56px;z-index:6;pointer-events:none;
+  transition:left .42s cubic-bezier(.45,.05,.35,1),top .42s cubic-bezier(.45,.05,.35,1)}
+#rabbit .rab-in{width:100%;height:100%}
+#rabbit .rab-in.hop{animation:rab-hop .42s ease}
+@keyframes rab-hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-30px) scale(1.06)}
+  70%{transform:translateY(2px) scaleY(.94)}}
+
+/* ---------- 候选盘（fix 修错步）：河面下方横排 3 块候选石（≥64），find 阶段收起 ---------- */
+#cands{position:absolute;left:0;right:0;bottom:4.5%;display:flex;align-items:center;
+  justify-content:center;gap:26px;transform:translateY(150%);opacity:0;
+  transition:transform .38s cubic-bezier(.2,1.4,.4,1),opacity .3s;z-index:7}
+#cands.show{transform:translateY(0);opacity:1}
+.cand{position:relative;flex:0 0 auto;width:78px;height:64px;
+  border-radius:50% 50% 46% 46%/58% 58% 42% 42%;
+  border:3px solid #4A3B2E;box-shadow:0 4px 0 rgba(74,59,46,.28);
+  transition:transform .15s}
+.cand:active{transform:translateY(2px)}
+.cand.c-stone{background:radial-gradient(ellipse at 38% 30%,var(--c-body) 0%,var(--c-body) 58%,var(--c-deep) 100%)}
+.cand.c-stone::after{content:'';position:absolute;left:18%;top:13%;width:27%;height:16%;
+  border-radius:50%;background:rgba(255,255,255,.5)}
+.cand.s-square{border-radius:14px 14px 11px 11px}
+.cand.s-square::after{border-radius:45%}
+.cand.pop{animation:stone-in .42s cubic-bezier(.2,1.6,.4,1) backwards}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch9-11） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：石头/候选仍 ≥64（§0.10），8 石章间距收紧。
+   body.port=竖屏规则的类通道：媒体查询跟视口不跟元素，verify simView 页内模拟竖屏
+   靠注入 .port 才能真正吃到这段 CSS（REPORT-REVIEW-r9 M-A1），两段规则必须同步改 */
+@media (orientation:portrait){
+  #stones{gap:12px;padding:0 84px}
+  #stones.tight{gap:6px;padding:0 74px}
+  .stone{width:72px;height:64px}
+  #stones.tight .stone{width:64px;height:64px}
+  .stone:nth-child(even){margin-top:14px}
+  .bank{width:60px}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+  #cands{gap:16px}
+  .cand{width:70px;height:64px}
+}
+body.port #stones{gap:12px;padding:0 84px}
+body.port #stones.tight{gap:6px;padding:0 74px}
+body.port .stone{width:72px;height:64px}
+body.port #stones.tight .stone{width:64px;height:64px}
+body.port .stone:nth-child(even){margin-top:14px}
+body.port .bank{width:60px}
+body.port #btn-rabbit{width:78px;height:78px}
+body.port #btn-rabbit svg{width:64px;height:64px}
+body.port #cands{gap:16px}
+body.port .cand{width:70px;height:64px}
+</style>
+</head>
+<body>
+<div id="game" aria-label="过河石桥">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="scene">
+    <div id="pat-tip" aria-hidden="true"></div>
+    <div id="river" aria-hidden="true"></div>
+    <div id="bank-l" class="bank" aria-hidden="true"><span class="flag">🚩</span></div>
+    <div id="bank-r" class="bank" aria-hidden="true"><span class="goal">🥕</span></div>
+    <div id="stones" aria-label="过河石头"></div>
+    <div id="cands" aria-label="候选石头"></div>
+    <div id="rabbit" aria-hidden="true"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

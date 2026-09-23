@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>乘法对战</title>
+<style>
+/* ================= 乘法对战 multibattle（batch14）=================
+   视觉按 SPEC-BATCH14 §2：暖米底 #FBF3E4、小兔子 IP 赛跑对抗
+   顶部赛道横条：孩子白兔（下泳道）vs 对手灰兔（上泳道）同起点，答对进 1 格；
+   对手答题钟进度条渐满（ch1 8000ms → ch4 5000ms 真实时长）；
+   算式题面大字 + 3 选 1 大数字答案卡（≥96）；答错晃动零惩罚不灰化（钟不停）；
+   触摸目标：答案卡 ≥96、底栏按钮 ≥72 高；pointerdown 即响应 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E7D8C0;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E7D8C0}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;overflow:hidden;padding:4px 10px}
+
+/* ---------- 赛道区：两条泳道 + 终点旗 ---------- */
+#track{flex:0 0 auto;width:100%;max-width:1080px;position:relative;padding:2px 40px 2px 6px}
+.lane{position:relative;height:56px;border-radius:28px;margin-bottom:8px;
+  border:2.5px solid #D9C5A6;overflow:hidden}
+.lane-mine{background:#EAF4E4;border-color:#A8C79B}
+.lane-foe{background:#EFEAE0;border-color:#C9BFA9}
+/* 格点刻度：5 格均分竖线（终点线加粗） */
+.lane .tick{position:absolute;top:6px;bottom:6px;width:0;border-left:2px dashed rgba(74,59,46,.14)}
+.lane .tick:last-of-type{border-left:3px solid rgba(74,59,46,.28)}
+/* 选手：外层 .pos 定位（left% 过渡），内层 .bun 兔子（hop 动画独立 transform） */
+.pos{position:absolute;top:50%;left:4%;transform:translate(-50%,-50%);
+  transition:left .65s cubic-bezier(.3,1.25,.4,1);z-index:2}
+.bun{display:flex;flex-direction:column;align-items:center;pointer-events:none}
+.bun svg{width:46px;height:46px;filter:drop-shadow(0 2px 0 rgba(74,59,46,.15))}
+.bun .tag{margin-top:-6px;padding:1px 10px;border-radius:10px;background:#FFFAF0;
+  border:2px solid #4A3B2E;font-size:13px;font-weight:800;line-height:1.4;white-space:nowrap}
+.pos.hop .bun{animation:bun-hop .5s ease}
+@keyframes bun-hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-13px) scale(1.06)}}
+/* 计分角标（泳道左端内嵌） */
+.lane .score{position:absolute;left:10px;top:50%;transform:translateY(-50%);z-index:3;
+  display:flex;align-items:center;gap:3px;font-size:16px;font-weight:800;color:#8A7B6C;
+  background:rgba(255,250,240,.85);border-radius:12px;padding:2px 10px;line-height:1.3}
+.lane .score b{font-size:20px;color:#4A3B2E;font-variant-numeric:tabular-nums}
+/* 终点旗：赛道右缘中垂（两泳道共用） */
+#flagpole{position:absolute;right:2px;top:50%;transform:translateY(-50%);z-index:3}
+
+/* ---------- 对手答题钟（进度条渐满；走完=对手进格） ---------- */
+#foe-clock{flex:0 0 auto;width:100%;max-width:1080px;display:flex;align-items:center;gap:10px;
+  padding:4px 12px;border-radius:18px;background:#F6ECD9;border:2.5px dashed #D9C5A6}
+#foe-clock .face{flex:0 0 30px;width:30px;height:30px}
+#foe-clock .fc-bar{flex:1 1 auto;height:18px;border-radius:9px;background:#FFFAF0;
+  border:2px solid #C9BFA9;overflow:hidden;position:relative}
+#fc-fill{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:7px;
+  background:repeating-linear-gradient(45deg,#8FA2B5 0 10px,#A9B8C6 10px 20px);
+  transition:width .1s linear}
+#foe-clock.full #fc-fill{background:#D98A8A}
+#foe-clock .fc-txt{flex:0 0 auto;font-size:15px;font-weight:700;color:#8A7B6C;white-space:nowrap}
+
+/* ---------- 题面：乘法算式大字 ---------- */
+#board{flex:0 0 auto;display:flex;align-items:center;justify-content:center;min-height:78px;padding:0 8px}
+#prompt-chip{display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 34px;
+  border-radius:22px;background:#FFFAF0;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #DFCFB6}
+#expr{display:flex;align-items:baseline;gap:9px;white-space:nowrap;
+  font-variant-numeric:tabular-nums;font-weight:800}
+#expr b{font-size:50px;line-height:1;color:#4A3B2E}
+#expr i{font-style:normal;font-size:34px;color:#E8873A}
+#expr em{font-style:normal;font-size:34px;color:#8A7B6C}
+#ex-q{font-size:50px;line-height:1;color:#E8873A;min-width:1.2em;text-align:center}
+#ex-q.ok{color:#5E9455}
+#prompt-chip .vs{font-size:17px;font-weight:800;color:#8A7B6C;margin-left:6px;white-space:nowrap}
+
+/* ---------- 底部答案区：3 张大数字答案卡 ---------- */
+#answers{flex:0 0 auto;display:flex;justify-content:center;align-items:center;gap:20px;
+  flex-wrap:wrap;min-height:118px;padding:2px 12px}
+.opt{min-width:136px;min-height:100px;padding:0 30px;border-radius:26px;background:#FFFAF0;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #DFCFB6;font-size:46px;font-weight:800;color:#4A3B2E;
+  font-variant-numeric:tabular-nums;transition:transform .15s,box-shadow .15s;position:relative;
+  animation:opt-in .38s cubic-bezier(.2,1.5,.4,1) both}
+.opt:nth-child(2){animation-delay:.07s}.opt:nth-child(3){animation-delay:.14s}
+@keyframes opt-in{from{transform:scale(0) rotate(-8deg)}to{transform:scale(1) rotate(0)}}
+.opt:active{transform:translateY(3px);box-shadow:0 2px 0 #DFCFB6}
+/* 不灰化款：错卡=晃动不灰掉可重点（SPEC §2） */
+.opt.wrong{animation:opt-shake .42s ease}
+@keyframes opt-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}
+  40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.opt.right{background:#8FBF7F;color:#4A3B2E;border-color:#6FA063;box-shadow:0 5px 0 #6FA063}
+.opt.right .mark{position:absolute;top:-13px;right:-13px;width:40px;height:40px;border-radius:50%;
+  background:#8FBF7F;border:2.5px solid #FFFAF0;display:flex;align-items:center;justify-content:center;
+  animation:opt-pop .45s cubic-bezier(.2,1.6,.4,1)}
+.opt.right .mark svg{width:26px;height:26px}
+@keyframes opt-pop{from{transform:scale(0) rotate(-20deg)}to{transform:scale(1) rotate(0)}}
+/* 救援视觉：正确卡 breathe 持续循环（§0.21） */
+.opt.breathe{animation:opt-breathe 1.6s ease-in-out infinite}
+@keyframes opt-breathe{0%,100%{transform:scale(1);box-shadow:0 5px 0 #DFCFB6}
+  50%{transform:scale(1.07);box-shadow:0 5px 0 #DFCFB6,0 0 16px rgba(232,151,90,.9)}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop2 .45s ease 2}
+@keyframes bun-hop2{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 money/times） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* ---------- 关末鼓励收尾层（<3 格；不锁关不惩罚，SPEC §2） ---------- */
+.mb-ov{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:18px;background:rgba(251,243,228,.94);touch-action:none;opacity:0;
+  transition:opacity .3s}
+.mb-ov.show{opacity:1}
+.mb-ov .mb-stars{display:flex;gap:8px;font-size:56px;line-height:1;color:#F5C445;
+  text-shadow:0 3px 0 #D8862B}
+.mb-ov .mb-big{font-size:30px;font-weight:700;color:#4A3B2E;letter-spacing:.06em;text-align:center;padding:0 26px}
+.mb-ov .mb-sub{font-size:19px;color:#8A7B6C;text-align:center;padding:0 26px}
+.mb-ov .mb-btn{min-width:72px;min-height:72px;padding:0 34px;border:none;border-radius:24px;
+  background:#E8975A;color:#fff;font-size:22px;font-weight:700;font-family:inherit;cursor:pointer;
+  box-shadow:0 4px 0 #C77A42;transition:transform .15s}
+.mb-ov .mb-btn:active{transform:translateY(3px);box-shadow:0 1px 0 #C77A42}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFFAF0;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：赛道/钟/算式/答案卡适配 */
+@media (orientation:portrait){
+  .lane{height:54px}
+  .bun svg{width:44px;height:44px}
+  #expr b{font-size:44px}
+  #ex-q{font-size:44px}
+  #prompt-chip{padding:8px 26px}
+  .opt{min-width:150px;min-height:108px;font-size:52px}
+  #btn-rabbit{width:84px;height:84px}
+  #foe-clock .fc-txt{font-size:14px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="乘法对战">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="track" aria-label="赛跑赛道">
+      <div class="lane lane-foe">
+        <span class="score">灰兔 <b id="foe-score">0</b></span>
+        <div class="pos" id="foe-pos"><div class="bun" id="foe-bun"></div></div>
+      </div>
+      <div class="lane lane-mine">
+        <span class="score">我 <b id="my-score">0</b></span>
+        <div class="pos" id="my-pos"><div class="bun" id="my-bun"></div></div>
+      </div>
+      <div id="flagpole" aria-hidden="true"></div>
+    </div>
+    <div id="foe-clock" aria-label="兔子答题钟">
+      <span class="face" aria-hidden="true"></span>
+      <div class="fc-bar"><i id="fc-fill"></i></div>
+      <span class="fc-txt">兔子正在算…</span>
+    </div>
+    <div id="board">
+      <div id="prompt-chip" role="heading" aria-label="题目"></div>
+    </div>
+    <div id="answers" aria-label="作答区"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="读题"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

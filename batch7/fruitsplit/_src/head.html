@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>水果切切</title>
+<style>
+/* ================= 水果切切 fruitsplit（batch7 · r7 难度改造）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、木案浅色场景、暖橙主色、灰蓝错误色（不用大红）
+   五模式：辨识（一半，含一大一小陷阱）/ 等分选择（2/3/4 人选切法）/ 公平判断 /
+   切分（点刀→判公平两段）/ 拼合（半块配对）
+   触摸目标：大卡 ≥128×148、拼合候选 ≥128×148、小刀按钮 ≥128×128、底栏按钮 ≥64；
+   pointerdown 即响应；两半 SVG 由同一路径镜像 + 等宽 clipPath 生成（严格等大）；
+   等分切块=扇形中心角相等（构造性等大），不公平展示是题面判断对象非错误示范 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#F2B8C6;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：木案 + 题面 + 模式板 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;overflow:hidden;padding:6px 10px}
+/* 木案：浅木色圆角台面（低干扰装饰条，pointer-events:none） */
+#board-wrap{position:relative;width:100%;max-width:1180px;flex:1 1 auto;min-height:200px;
+  background:linear-gradient(180deg,#F6ECD9 0%,#F1E3C8 70%,#ECDDBE 100%);
+  border:3px solid #DDC9A4;border-radius:26px;overflow:hidden;
+  box-shadow:inset 0 0 0 6px rgba(255,249,238,.55)}
+#board-wrap .wood{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.5}
+#board{position:relative;width:100%;height:100%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:12px;padding:10px}
+
+/* ---------- 辨识模式：大卡 ---------- */
+#cards{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;align-items:stretch;padding:4px}
+.card{position:relative;min-width:150px;min-height:170px;padding:10px 14px;border-radius:26px;
+  background:#FFF9EE;border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  transition:transform .15s,box-shadow .15s}
+.card:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+.card .art{width:118px;height:118px;display:flex;align-items:center;justify-content:center;gap:5px}
+.card .art svg{max-width:100%;max-height:100%}
+.card.right{background:#8FBF7F;border-color:#6FA063;box-shadow:0 5px 0 #6FA063}
+.card.right .mark{position:absolute;top:-13px;right:-13px;width:40px;height:40px;border-radius:50%;
+  background:#8FBF7F;border:2.5px solid #FFF9EE;display:flex;align-items:center;justify-content:center;
+  animation:opt-pop .45s cubic-bezier(.2,1.6,.4,1)}
+.card.right .mark svg{width:26px;height:26px}
+@keyframes opt-pop{from{transform:scale(0) rotate(-20deg)}to{transform:scale(1) rotate(0)}}
+.card.wrong{background:#EFE3CD;border-color:#C9BDA8;box-shadow:0 3px 0 #C9BDA8;
+  opacity:.55;pointer-events:none;animation:shake .42s ease}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}
+  60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.card.pulse{animation:opt-pulse 1s ease 2}
+@keyframes opt-pulse{0%,100%{filter:none}50%{filter:drop-shadow(0 0 12px rgba(232,151,90,.9))}}
+
+/* ---------- 切分模式：大水果 + 小刀 + 两个娃娃 ---------- */
+#cut-zone{display:flex;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap;padding:4px}
+#fruit-wrap{position:relative;width:250px;height:250px;display:flex;align-items:center;justify-content:center}
+#fruit-whole{width:230px;height:230px;transition:opacity .3s,transform .3s}
+#fruit-whole.wig{animation:fruit-wig .5s ease}
+@keyframes fruit-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-6deg)}
+  55%{transform:rotate(5deg)}80%{transform:rotate(-3deg)}}
+#fruit-whole.hide{opacity:0;transform:scale(.9);pointer-events:none}
+.fhalf{position:absolute;left:50%;top:50%;width:125px;height:250px;transform:translate(-50%,-50%);
+  opacity:0;pointer-events:none}
+.fhalf svg{width:100%;height:100%}
+.fhalf.go-l{animation:spread-l .6s cubic-bezier(.25,1,.4,1) forwards}
+.fhalf.go-r{animation:spread-r .6s cubic-bezier(.25,1,.4,1) forwards}
+@keyframes spread-l{0%{opacity:0;transform:translate(-50%,-50%) rotate(0)}
+  25%{opacity:1}
+  100%{opacity:1;transform:translate(-118%,-50%) rotate(-6deg)}}
+@keyframes spread-r{0%{opacity:0;transform:translate(-50%,-50%) rotate(0)}
+  25%{opacity:1}
+  100%{opacity:1;transform:translate(18%,-50%) rotate(6deg)}}
+#btn-knife{width:132px;height:132px;border-radius:28px;background:#FFF9EE;border:3px solid #4A3B2E;
+  box-shadow:0 5px 0 #C9A87C;display:flex;align-items:center;justify-content:center;
+  transition:transform .15s,box-shadow .15s;animation:knife-breathe 1.8s ease-in-out infinite}
+#btn-knife:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-knife svg{width:92px;height:92px}
+#btn-knife.off{display:none}
+@keyframes knife-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+/* 切完：两个娃娃各拿一半 + 语义字幕 */
+#cut-result{display:none;align-items:center;justify-content:center;gap:34px;flex-wrap:wrap;padding:4px}
+#cut-result.on{display:flex;animation:rise-in .5s cubic-bezier(.2,1.5,.4,1)}
+@keyframes rise-in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.taker{display:flex;flex-direction:column;align-items:center;gap:4px}
+.taker .who{display:flex;align-items:flex-end;gap:2px}
+.taker .who svg.doll{width:104px;height:104px}
+.taker .who .phalf{width:56px;height:112px;margin-bottom:10px}
+.taker .phalf svg{width:100%;height:100%}
+#cut-say{min-height:56px;padding:4px 26px;border-radius:20px;background:#FFF9EE;
+  border:2.5px solid #4A3B2E;box-shadow:0 4px 0 #D8C9B4;font-size:25px;font-weight:800;color:#4A3B2E}
+
+/* ---------- 拼合模式：给半块 + 空槽 + 3 候选 ---------- */
+#match-zone{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:4px}
+#match-top{display:flex;align-items:center;justify-content:center;gap:22px}
+.mhalf{width:124px;height:160px;border-radius:24px;background:#FFF9EE;border:3px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;padding:6px}
+.mhalf svg{width:100%;height:100%}
+#given-slot .mhalf{background:#F6EEDD;border-style:dashed;box-shadow:none}
+#slot{position:relative;background:#FFFDF6}
+#slot.dashed{border:3px dashed #C9BDA8;background:#FFFDF6;box-shadow:none}
+#slot .seam{position:absolute;left:50%;top:12%;height:76%;border-left:3px dashed rgba(74,59,46,.4);
+  transform:translateX(-50%);pointer-events:none}
+#slot.lit{background:#8FBF7F;border-color:#6FA063;box-shadow:0 4px 0 #6FA063;animation:opt-pop .5s cubic-bezier(.2,1.6,.4,1)}
+.mplus{font-size:52px;font-weight:800;color:#C9BDA8;line-height:1}
+.mq{font-size:44px;font-weight:800;color:#E8873A;line-height:1}
+#cands{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}
+.mopt{position:relative;min-width:128px;min-height:164px;padding:8px 12px;border-radius:26px;
+  background:#FFF9EE;border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  display:flex;align-items:center;justify-content:center;transition:transform .15s,box-shadow .15s}
+.mopt:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+.mopt .art{width:104px;height:132px;display:flex;align-items:center;justify-content:center}
+.mopt .art svg{width:100%;height:100%}
+.mopt.right{background:#8FBF7F;border-color:#6FA063;box-shadow:0 5px 0 #6FA063}
+.mopt.right .mark{position:absolute;top:-13px;right:-13px;width:40px;height:40px;border-radius:50%;
+  background:#8FBF7F;border:2.5px solid #FFF9EE;display:flex;align-items:center;justify-content:center;
+  animation:opt-pop .45s cubic-bezier(.2,1.6,.4,1)}
+.mopt.right .mark svg{width:26px;height:26px}
+.mopt.wrong{background:#EFE3CD;border-color:#C9BDA8;box-shadow:0 3px 0 #C9BDA8;
+  opacity:.55;pointer-events:none;animation:shake .42s ease}
+.mopt.pulse{animation:opt-pulse 1s ease 2}
+
+/* ---------- r7 choose 等分选择：人数图示 + 主水果 + 切法卡 + 分块演出 ---------- */
+#choose-zone{display:flex;flex-direction:column;align-items:center;gap:10px;padding:4px}
+#cho-people{display:flex;gap:8px}
+#cho-people .dhead{width:56px;height:56px}
+#cho-fruit{width:176px;height:176px;display:flex;align-items:center;justify-content:center}
+#cho-fruit>svg{width:164px;height:164px}
+.cho-pieces{display:flex;align-items:center;justify-content:center;gap:4px}
+.chop{width:66px;height:66px;animation:chop-fly .7s cubic-bezier(.25,1,.4,1) forwards}
+.chop svg{width:100%;height:100%}
+@keyframes chop-fly{from{transform:translate(-50%,0)}to{transform:translate(calc(-50% + var(--dx)),0)}}
+#cho-takers{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;animation:rise-in .5s cubic-bezier(.2,1.5,.4,1)}
+.piecehold{width:54px;height:54px;margin-bottom:12px}
+.piecehold svg{width:100%;height:100%}
+.unevenpair{display:flex;align-items:center;justify-content:center;gap:2px}
+.unevenpair svg:first-child{width:34%;height:56%}
+.unevenpair svg:last-child{width:58%;height:98%}
+.cutcard .art{width:112px;height:112px}
+
+/* ---------- r7 fair 公平判断：两块展示 + 2 娃娃 + 公平/不公平按钮 ---------- */
+#fair-zone{display:flex;flex-direction:column;align-items:center;gap:10px;padding:4px}
+#fair-show{display:flex;align-items:center;justify-content:center;gap:26px}
+.fpiece{width:122px;height:122px;display:flex;align-items:center;justify-content:center}
+.fpiece svg{width:100%;height:100%}
+#fair-show.recut .fpiece{animation:opt-pop .5s cubic-bezier(.2,1.6,.4,1)}
+#fair-people{display:flex;gap:10px}
+#fair-people .dhead{width:56px;height:56px}
+#fair-people.happy .dhead,#cut-result.happy .taker{animation:hop2 .45s ease 2}
+@keyframes hop2{0%,100%{margin-top:0}50%{margin-top:-12px}}
+.fbtn .art{width:110px;height:110px}
+#judge-row{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}
+
+/* ---------- 题面行 ---------- */
+#prompt{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+  min-height:72px;padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:14px;padding:6px 26px;border-radius:22px;
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4}
+#prompt-chip .big{font-size:32px;font-weight:800;color:#4A3B2E;line-height:1.25;white-space:nowrap}
+#prompt-chip svg.pm{width:46px;height:46px;flex:0 0 46px}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch5 countchick） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：大卡与拼合区适配（gap 收窄、卡宽微降，仍 ≥96 主触摸目标） */
+@media (orientation:portrait){
+  .card{min-width:140px;min-height:160px;gap:4px}
+  .card .art{width:106px;height:106px}
+  #cut-zone{gap:26px}
+  #fruit-wrap{width:224px;height:224px}
+  #fruit-whole{width:206px;height:206px}
+  .fhalf{width:112px;height:224px}
+  .mhalf{width:112px;height:146px}
+  .mopt{min-width:118px;min-height:150px}
+  .mopt .art{width:94px;height:120px}
+  #prompt-chip .big{font-size:28px}
+  #cho-fruit{width:150px;height:150px}
+  #cho-fruit>svg{width:140px;height:140px}
+  .chop{width:56px;height:56px}
+  #cho-people .dhead,#fair-people .dhead{width:48px;height:48px}
+  .fpiece{width:104px;height:104px}
+  .cutcard .art{width:98px;height:98px}
+  .fbtn .art{width:98px;height:98px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="水果切切">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="board-wrap" aria-label="木案">
+      <div class="wood" aria-hidden="true"></div>
+      <div id="board" aria-label="游戏区"></div>
+    </div>
+    <div id="prompt">
+      <div id="prompt-chip" role="heading" aria-label="题目"></div>
+    </div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="读题"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

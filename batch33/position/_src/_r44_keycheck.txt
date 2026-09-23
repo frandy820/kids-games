@@ -1,0 +1,23 @@
+DUAL_TTS found: True
+const DUAL_TTS = {};
+FLIP_TTS found: True
+const FLIP_TTS = {};
+FLIPY_TTS found: True
+const FLIPY_TTS = {};
+---- SPEC 16 rows ----
+ps_dual_lu | 兔子藏在树的左边，也在房子的上面
+ps_dual_dr | 兔子藏在树的下面，也在房子的右边
+ps_dual_ru | 兔子藏在树的右边，也在房子的上面
+ps_dual_dl | 兔子藏在树的下面，也在房子的左边
+ps_flip_front | 兔子转过身去啦，它的前面是树的哪边呀
+ps_flip_back | 兔子转过身去啦，它的后面是树的哪边呀
+ps_flip_left | 兔子转过身去啦，它的左边是树的哪边呀
+ps_flip_right | 兔子转过身去啦，它的右边是树的哪边呀
+ps_flip_up | 兔子转过身去啦，它的上面是树的哪边呀
+ps_flip_down | 兔子转过身去啦，它的下面是树的哪边呀
+ps_fy_front | 转身以后，它的前面就是树的后面呀
+ps_fy_back | 转身以后，它的后面就是树的前面呀
+ps_fy_left | 转身以后，它的左边就是树的右边呀
+ps_fy_right | 转身以后，它的右边就是树的左边呀
+ps_fy_up | 转身以后，它的上面就是树的上面呀
+ps_fy_down | 转身以后，它的下面就是树的下面呀

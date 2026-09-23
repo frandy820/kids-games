@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>规律画画</title>
+<style>
+/* ================= stamp 规律画画（batch38 v3 难度升档）=================
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色 #E8975A、暖棕描边 #4A3B2E。
+   玩法 = 给围巾/桌布盖花边（SPEC v3：段基线 5.5-6.5 幼小衔接）：
+   载体横条一排格位——前段已印好规律示范段，后续空位续盖；题面只播
+   任务框架句（去语音泄题——规律只靠看）；下方印章盘 3-4 枚（正确 1+
+   干扰 2-3，ch3-4 干扰=单色对/单形对单属性满足章）：
+   ch1 ABC 三周期 / ch2 AABB·ABCC 双同块 / ch3 双线索（颜色周期×形状
+   周期独立错位——池 8 双属性图案）/ ch4 体检纠错（满盖含 1 错章：先点
+   格找错 found→suspect 标记，再选正确章盖换 fixed）。
+   盖对 = 印章砸下+图案弹现永久留格（svg[data-motif] DOM 留存）+spm_right；
+   盖错 = 图案虚影抖动消散（不留格）+spm_wrong+miss。
+   与「规律侦探」差异=识别→生成→纠错体检（Bloom 两级升）+载体创作+印章
+   具身操作；与「对称贴贴画」差异=平移周期序列 vs 镜像变换。
+   触摸目标：印章 ≥96×96（实测 ~108）；overflowX 恒 0（ch3-4 13 格走
+   .wide 收窄档）；好坏章视觉同构（不靠颜色歧视）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:38px;height:38px;border-radius:11px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 38px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 作品栏（已完成花边缩略——进度可见+关末成品展示） ---------- */
+#gallery{flex:0 0 34px;display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;max-width:640px;margin:2px auto 0;min-height:0}
+#gallery:empty{visibility:hidden}
+.gal-item{display:flex;align-items:center;gap:1px;padding:3px 6px;border-radius:9px;
+  background:#FDF3E3;border:2px solid #E5CDA6;animation:gal-pop .45s ease backwards}
+.gal-item .g-cell{width:13px;height:13px;flex:0 0 13px}
+.gal-item .g-cell svg{width:100%;height:100%}
+@keyframes gal-pop{0%{transform:translateY(10px) scale(.7);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+#gallery.finale .gal-item{animation:gal-bounce .6s ease 2}
+@keyframes gal-bounce{0%,100%{transform:translateY(0)}45%{transform:translateY(-8px) scale(1.06)}}
+
+/* ---------- 舞台：围巾载体（花边格位横条） ---------- */
+#stage{flex:1 1 auto;min-height:110px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:5px;overflow:hidden;padding:4px 12px}
+/* 载体（围巾横条）：暖色布带+两端流苏；dch2/4=桌布青绿带（章间换载体色） */
+#scarf{position:relative;flex:0 1 auto;width:auto;max-width:100%;display:flex;align-items:center;
+  justify-content:center;padding:20px 34px;border-radius:22px;
+  background:linear-gradient(180deg,#FBE3D5 0%,#F6CFBB 100%);
+  border:3px solid #E5CDA6;box-shadow:inset 0 0 0 5px rgba(255,249,238,.5),0 4px 0 #E0CBB2}
+#scarf::before,#scarf::after{content:"";position:absolute;top:14%;bottom:14%;width:16px;
+  background:repeating-linear-gradient(180deg,#F2A88C 0 12px,#E8975A 12px 16px);border-radius:6px}
+#scarf::before{left:-15px}
+#scarf::after{right:-15px}
+#scarf.cloth{background:linear-gradient(180deg,#E3EFE0 0%,#CFE3CE 100%);
+  box-shadow:inset 0 0 0 5px rgba(255,249,238,.55),0 4px 0 #C6D8C4}
+#scarf.cloth::before,#scarf.cloth::after{background:repeating-linear-gradient(180deg,#9FBF9C 0 12px,#8FB08C 12px 16px)}
+#scarf.enter{animation:scarf-in .45s ease}
+@keyframes scarf-in{0%{transform:translateY(18px) scale(.94);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+#scarf.wig{animation:scarf-wig .55s ease}
+@keyframes scarf-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-1.4deg)}75%{transform:rotate(1.4deg)}}
+/* 格位：示范格已印（done）/空位（blank）/当前空位（cur）/孩子盖印格（stamped 留格）/
+   ch4 体检：suspect=找到的错章标记 / deny=点了非错章轻抖否认 / breathe=答案级救援呼吸 */
+#strip{display:flex;align-items:center;gap:7px;--cs:min(64px,8.6vw)}
+#strip.wide{--cs:min(54px,6.2vw);gap:5px}       /* ch3-4 13 格横条收窄档（竖屏适配） */
+.cell{position:relative;width:var(--cs);height:var(--cs);flex:0 0 auto;border-radius:12px;
+  display:flex;align-items:center;justify-content:center}
+.cell svg{width:100%;height:100%}
+.cell.done{background:rgba(255,249,238,.5)}
+#strip[data-kind="fix"] .cell.done{cursor:pointer}   /* ch4 找错期：格位可点 */
+.cell.blank{background:rgba(255,249,238,.28);border:2.5px dashed #C9A87C}
+.cell.cur{border-color:#E8975A;background:rgba(255,249,238,.6);
+  animation:cell-pulse 1.3s ease-in-out infinite}
+@keyframes cell-pulse{0%,100%{box-shadow:0 0 0 0 rgba(232,151,90,.0)}50%{box-shadow:0 0 0 6px rgba(232,151,90,.28)}}
+.cell.suspect{outline:3.5px dashed #E86A6A;outline-offset:2px;
+  animation:cell-pulse 1.1s ease-in-out infinite}
+.cell.deny{animation:cell-deny .5s ease}
+@keyframes cell-deny{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.cell.breathe{animation:cell-breathe 1.2s ease-in-out infinite}
+@keyframes cell-breathe{0%,100%{box-shadow:0 0 0 0 rgba(232,110,110,0)}50%{box-shadow:0 0 0 7px rgba(232,151,90,.85)}}
+/* 盖印永久留格：孩子盖的图案弹现+淡墨晕底（创作载体锚——svg[data-motif] DOM 留存） */
+.cell.stamped{background:rgba(255,249,238,.72);animation:none}
+.cell.stamped svg{animation:motif-pop .55s cubic-bezier(.2,1.6,.4,1) backwards}
+.cell.stamped::after{content:"";position:absolute;inset:-4px;border-radius:14px;z-index:-1;
+  background:radial-gradient(circle,rgba(232,151,90,.22) 0%,rgba(232,151,90,0) 70%)}
+@keyframes motif-pop{0%{transform:scale(2.1) rotate(-14deg);opacity:0}
+  55%{transform:scale(.82) rotate(3deg);opacity:1}100%{transform:scale(1) rotate(0)}}
+/* 盖错虚影：抖动消散不留格（JS 在 SHAKE_MS 后移除） */
+.cell .ghost{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  pointer-events:none;z-index:3;animation:ghost-out .95s ease forwards}
+.cell .ghost svg{width:100%;height:100%;filter:grayscale(.35);opacity:.55}
+@keyframes ghost-out{0%{transform:translateX(0) scale(1.5);opacity:0}
+  18%{transform:translateX(0) scale(1);opacity:.8}
+  30%{transform:translateX(-7px) scale(1)}45%{transform:translateX(7px) scale(1)}
+  60%{transform:translateX(-5px) scale(1)}75%{transform:translateX(5px) scale(.96)}
+  100%{transform:translateY(4px) scale(.7);opacity:0}}
+#q-text{flex:0 0 auto;font-size:15px;letter-spacing:2px;color:#8A7B6C;padding:0 0 2px}
+
+/* ---------- 印章盘 3-4 枚（主答案目标 ≥96×96）；ch4 找错期=提示占位 ---------- */
+#tray{flex:0 0 auto;display:flex;justify-content:center;align-items:flex-end;gap:22px;
+  width:100%;max-width:700px;padding:2px 14px 8px;min-height:118px}
+.find-tip{align-self:center;padding:10px 22px;border-radius:14px;background:#FDF3E3;
+  border:2.5px dashed #C9A87C;color:#8A7B6C;font-size:15px;letter-spacing:1px}
+#tray.wig{animation:try-wig .5s ease}
+@keyframes try-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-1.6deg)}75%{transform:rotate(1.6deg)}}
+#tray.bump{animation:try-bump .22s ease}
+@keyframes try-bump{0%,100%{transform:scale(1)}45%{transform:scale(.96)}}
+.stamp-wrap{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  width:104px;min-height:104px;padding:4px 6px 6px;border-radius:20px;
+  background:#FFF9EE;border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;
+  transition:transform .15s}
+.stamp-wrap:active{transform:translateY(4px) scale(1.03);box-shadow:0 1px 0 #D8C9B4}
+.stamp-wrap .art{width:76px;height:90px;pointer-events:none}
+.stamp-wrap .art svg{width:100%;height:100%}
+/* 盖对：印章闪亮一拍（演出层锚 .good——契约 M） */
+.stamp-wrap.good{animation:st-good 1.05s ease}
+@keyframes st-good{0%{transform:scale(1)}35%{transform:scale(1.14) translateY(-8px)}100%{transform:scale(1)}}
+/* 盖错：摇头（行为后果反馈，不羞辱） */
+.stamp-wrap.bad{animation:st-bad .5s ease}
+@keyframes st-bad{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+/* 救援答案级：正确章高亮呼吸 */
+.stamp-wrap.breathe{animation:st-hint 1.2s ease-in-out infinite}
+@keyframes st-hint{0%,100%{box-shadow:0 5px 0 #D8C9B4}50%{box-shadow:0 5px 0 #D8C9B4,0 0 18px rgba(232,151,90,.95)}}
+/* 出场弹入 */
+.stamp-wrap.pop{animation:st-pop .45s ease backwards}
+@keyframes st-pop{0%{transform:translateY(24px) scale(.86);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（fixed 层，教学演示/帮共用；照家族形态） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:opacity .4s;transform:translate(-50%,-88%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-88%)}50%{transform:translate(-50%,-74%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：舞台收紧+盘横排收窄 */
+@media (orientation:portrait){
+  #strip{--cs:min(56px,8.8vw);gap:5px}
+  #strip.wide{--cs:min(46px,5.8vw);gap:4px}
+  #scarf{padding:16px 24px}
+  #tray{gap:14px;max-width:620px}
+  .stamp-wrap{width:96px;min-height:96px}
+  .stamp-wrap .art{width:68px;height:82px}
+  #gallery{max-width:520px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="规律画画">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="gallery" aria-label="已盖好的花边"></div>
+    <div id="scarf" aria-label="花边围巾">
+      <div id="strip" aria-label="花边规律"></div>
+    </div>
+    <div id="q-text" aria-hidden="true"></div>
+    <div id="tray" aria-label="选一枚印章盖花边"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

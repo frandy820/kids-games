@@ -1,0 +1,362 @@
+Traceback (most recent call last):
+  File "F:\claudecode\projects\active\kids-games\batch27\_play6yo_b27.py", line 643, in run_game
+    await ch3_real_play(pl)
+  File "F:\claudecode\projects\active\kids-games\batch27\_play6yo_b27.py", line 596, in ch3_real_play
+    w, why = pick_ch3_wrong(game, q)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\claudecode\projects\active\kids-games\batch27\_play6yo_b27.py", line 546, in pick_ch3_wrong
+    true_n = RULER_BASE[q['item']] // RULER_UNIT[q['unit']]
+                                      ^^^^^^^^^^
+NameError: name 'RULER_UNIT' is not defined
+====== ruler ======
+  [   0.01] page_loaded {"title": "测量小尺"}
+  [   0.01] phase {"name": "教学关 flat0（watch 演示）"}
+  [   1.68] shot {"file": "ruler_f0_teach.png"}
+  [   1.69] tut_watch_state {"state": "watch"}
+  [   3.01] tut_watch_tap_swallowed {"step_same": true, "voice": ["<clip:rul_tut_watch>", "TTS:看！用回形针量一量", "TTS:铅笔有四根回形针长"]}
+  [   7.35] tut_state {"state": "help", "wait_s": 4.3}
+  [   8.21] shot {"file": "ruler_f0_turn.png"}
+  [   9.28] tap {"card": 0, "note": "teach 题1 错1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":1}", "bump": "bump", "voice": ["<clip:rul_tut_turn>", "<cli
+  [  15.21] shot {"file": "ruler_f0_wrong.png"}
+  [  16.28] tap {"card": 0, "note": "teach 题1 重复同错卡（手痒）", "before": "{\"s\":0,\"m\":1}", "after": "{\"s\":0,\"m\":2}", "bump": "bump", "voice": ["<clip:rul_q>", "<cli
+  [  23.22] tap {"card": 2, "note": "teach 题1 点对", "before": "{\"s\":0,\"m\":2}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:还有一小段，再多数一根", "TTS:铅笔有四
+  [  28.99] tap {"card": 0, "note": "teach 题2 错1", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":1,\"m\":1}", "bump": "bump", "voice": ["<clip:rul_q>", "<clip:rul_w
+  [  35.92] tap {"card": 3, "note": "teach 题2 点对", "before": "{\"s\":1,\"m\":1}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["TTS:没有那么多，再数数", "TTS:蜡笔有三根回
+  [  43.07] tap {"card": 1, "note": "teach 题3 点对", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:橡皮有二根回形
+  [  49.45] tap {"card": 1, "note": "teach 题4 点对", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:剪刀有四根回形
+  [  55.75] tap {"card": 3, "note": "teach 题5 点对", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:玩具车有五
+  [  67.78] flat_done {"flat": 0, "level": "1-0", "stars": {"stars": 1, "plays": 1}}
+  [  67.78] phase {"name": "flat1 点空白+正常玩"}
+  [  72.22] blank_tap {"note": "flat1 点左上空白", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":0}", "voice": ["<clip:rul_right>", "<clip:rul_q>"]}
+  [  72.22] blank_result {"no_reaction": false}
+  [  75.10] tap {"card": 3, "note": "flat1 题1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:蜡笔有三根回形针长"]}
+  [  82.04] tap {"card": 3, "note": "flat1 题2", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:橡皮有二根回形针长"
+  [  88.78] tap {"card": 3, "note": "flat1 题3", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:剪刀有四根回形针长"
+  [  95.86] tap {"card": 0, "note": "flat1 题4", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:玩具车有五根回形针长
+  [ 102.07] tap {"card": 3, "note": "flat1 题5", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:故事书有六根回形
+  [ 114.09] flat_done {"flat": 1, "level": "1-1", "stars": {"stars": 3, "plays": 1}}
+  [ 114.09] phase {"name": "flat2 首题犹豫 15.5s（观察 14s 方向级救援）"}
+  [ 129.62] idle {"sec": 15.5, "note": "flat2 首题犹豫", "voice": ["<clip:rul_right>", "<clip:rul_q>", "<clip:rul_q>"]}
+  [ 129.62] rescue_check {"waited_s": 15.5, "voices": ["<clip:rul_right>", "<clip:rul_q>", "<clip:rul_q>"]}
+  [ 129.66] shot {"file": "ruler_f2_rescue.png"}
+  [ 131.95] tap {"card": 3, "note": "flat2 题1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:橡皮有二根回形针长"]}
+  [ 138.20] tap {"card": 1, "note": "flat2 题2", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:剪刀有四根回形针长"
+  [ 145.13] tap {"card": 1, "note": "flat2 题3", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:玩具车有五根回形针长
+  [ 152.16] tap {"card": 0, "note": "flat2 题4", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:故事书有六根回形针长
+  [ 158.69] tap {"card": 0, "note": "flat2 题5", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:铅笔有四根回形针
+  [ 170.72] flat_done {"flat": 2, "level": "1-2", "stars": {"stars": 3, "plays": 1}}
+  [ 170.72] phase {"name": "flat3 手痒连点+错反馈节流"}
+  [ 171.80] tap {"card": 0, "note": "flat3 题1 错1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":1}", "bump": "bump", "voice": ["<clip:rul_right>", "<clip:r
+  [ 174.44] shot {"file": "ruler_f3_wrongfb.png"}
+  [ 175.23] rapid_double_tap {"miss_before": 1, "miss_after": 2, "voice": ["TTS:没有那么多，再数数"]}
+  [ 175.27] shot {"file": "ruler_f3_rapidtap.png"}
+  [ 176.32] tap {"card": 0, "note": "flat3 节流窗内二击（预期 miss+1 零语音）", "before": "{\"s\":0,\"m\":2}", "after": "{\"s\":0,\"m\":2}", "bump": "bump", "voice": []}
+  [ 177.55] throttle_window {"miss_before": 2, "miss_after": 2, "voice": []}
+  [ 178.62] tap {"card": 1, "note": "flat3 题1 对", "before": "{\"s\":0,\"m\":2}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:剪刀有四根回形针长"]}
+  [ 184.80] tap {"card": 2, "note": "flat3 题2", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:玩具车有五根回形针长
+  [ 191.62] tap {"card": 2, "note": "flat3 题3", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:故事书有六根回形针长
+  [ 197.96] tap {"card": 0, "note": "flat3 题4", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:铅笔有四根回形针长"
+  [ 204.18] tap {"card": 2, "note": "flat3 题5", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:蜡笔有三根回形针
+  [ 216.23] flat_done {"flat": 3, "level": "1-3", "stars": {"stars": 2, "plays": 1}}
+  [ 216.23] phase {"name": "flat4 正常玩 顺利"}
+  [ 218.71] tap {"card": 0, "note": "flat4 题1 对", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_right>", "<clip:ru
+  [ 225.09] tap {"card": 1, "note": "flat4 题2 对", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:故事书有六根回形
+  [ 231.78] tap {"card": 1, "note": "flat4 题3 对", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:铅笔有四根回形针
+  [ 238.96] tap {"card": 2, "note": "flat4 题4 对", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:蜡笔有三根回形针
+  [ 245.98] tap {"card": 1, "note": "flat4 题5 对", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:橡皮有二根回
+  [ 256.12] panel_close {"pattern": "明天见", "btn": "明天见"}
+  [ 257.26] flat_done {"flat": 4, "level": "1-4", "stars": {"stars": 3, "plays": 1}}
+  [ 257.26] phase {"name": "flat5 正常玩 当日最后一关"}
+  [ 260.64] tap {"card": 3, "note": "flat5 题1 对", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_right>", "<clip:co
+  [ 267.59] tap {"card": 0, "note": "flat5 题2 对", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["TTS:橡皮有几根小棒长？", "TTS:橡皮有一根小棒
+  [ 274.49] tap {"card": 2, "note": "flat5 题3 对", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["TTS:剪刀有几根小棒长？", "TTS:剪刀有二根小棒
+  [ 280.83] tap {"card": 0, "note": "flat5 题4 对", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["TTS:故事书有几根小棒长？", "TTS:故事书有三根
+  [ 291.01] cards_mismatch {"idx": 2, "want": "1根", "got": "1块", "cards": ["2块", "3块", "1块", "4块"]}
+  [ 292.05] tap {"card": 2, "note": "flat5 题5 对", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["TTS:蜡笔有几块积木长？", "TTS:蜡笔有一块
+  [ 296.48] flat_done {"flat": 5, "level": null, "stars": null}
+  [ 298.99] phase {"name": "dayEnd 明天预告+家长门"}
+  [ 299.51] dayend_panels {"panels": [{"cls": "pulse", "txt": "蜡笔有几块积木长？"}, {"cls": "ncard card pop", "txt": "2块"}, {"cls": "ncard card pop", "txt": "3块"}, {"cls": "ncard card 
+  [ 299.55] shot {"file": "ruler_dayend.png"}
+  [ 299.57] click_by_text {"pattern": "再玩|旧关|明天见", "hit": "再玩玩旧关卡", "note": "dayEnd/章末 关闭"}
+  [ 302.35] parent_panels {"panels": [{"cls": "pulse", "txt": "蜡笔有几块积木长？"}, {"cls": "ncard card pop", "txt": "2块"}, {"cls": "ncard card pop", "txt": "3块"}, {"cls": "ncard card 
+  [ 302.40] shot {"file": "ruler_parentpanel.png"}
+  [ 302.41] parent_gate_q {"q": "13 + 45 = ?"}
+  [ 302.42] click_by_text {"pattern": "^5$", "hit": "5", "note": "家长门数字 5"}
+  [ 302.86] click_by_text {"pattern": "^8$", "hit": "8", "note": "家长门数字 8"}
+  [ 305.09] parent_unlock_answer {"q": "13 + 45 = ?", "ans": "58"}
+  [ 305.14] shot {"file": "ruler_parentpanel_after.png"}
+  [ 305.14] phase {"name": "flat6-9 快进 autoSolve（真实判定链）"}
+  [ 382.14] panel_close_not_effective {"pattern": "再玩玩旧关卡"}
+  [ 383.90] panel_close {"pattern": "明天见", "btn": "明天见"}
+  [ 384.51] flat_done {"flat": 6, "level": null, "stars": null, "auto": true}
+  [ 457.54] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [ 458.15] flat_done {"flat": 7, "level": null, "stars": null, "auto": true}
+  [ 531.19] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [ 531.81] flat_done {"flat": 8, "level": null, "stars": null, "auto": true}
+  [ 604.80] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [ 605.42] flat_done {"flat": 9, "level": null, "stars": null, "auto": true}
+  [ 605.42] phase {"name": "flat10 ch3 难关真实点击"}
+  [ 645.77] shot {"file": "ruler_f10_ch3.png"}
+  [ 657.65] idle {"sec": 8.5, "note": "flat10 题1 读题后静置", "voice": ["<clip:rul_right>", "<clip:core_day_end>", "<clip:rul_right>", "<clip:core_day_end>", "<clip:rul_rig
+  [ 657.65] SCRIPT_ERROR {"err": "NameError(\"name 'RULER_UNIT' is not defined\")"}
+  -> play_log_ruler.json  events=91 tts=98 clips=48 nb=0 perr=[]
+====== coin ======
+  [   0.00] page_loaded {"title": "硬币认钱"}
+  [   0.00] phase {"name": "教学关 flat0（watch 演示）"}
+  [   1.58] shot {"file": "coin_f0_teach.png"}
+  [   1.58] tut_watch_state {"state": "watch"}
+  [   2.89] tut_watch_tap_swallowed {"step_same": false, "voice": ["<clip:coi_tut_watch>", "TTS:看！这是多少钱", "TTS:这是一元"]}
+  [   7.55] tut_state {"state": "help", "wait_s": 4.7}
+  [   8.41] shot {"file": "coin_f0_turn.png"}
+  [   9.48] tap {"card": 0, "note": "teach 题1 错1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":1}", "bump": "bump", "voice": ["<clip:coi_tut_turn>", "<cli
+  [  15.11] shot {"file": "coin_f0_wrong.png"}
+  [  16.18] tap {"card": 0, "note": "teach 题1 重复同错卡（手痒）", "before": "{\"s\":0,\"m\":1}", "after": "{\"s\":0,\"m\":2}", "bump": "bump", "voice": ["<clip:coi_q>", "<cli
+  [  22.83] tap {"card": 1, "note": "teach 题1 点对", "before": "{\"s\":0,\"m\":2}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:看看数字，再看看颜色", "TTS:这是一元"
+  [  28.56] tap {"card": 0, "note": "teach 题2 错1", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":1,\"m\":1}", "bump": "bump", "voice": ["<clip:coi_q>", "<clip:coi_w
+  [  35.20] tap {"card": 3, "note": "teach 题2 点对", "before": "{\"s\":1,\"m\":1}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["TTS:看看颜色，金色的是五角", "TTS:这是一角
+  [  41.96] tap {"card": 2, "note": "teach 题3 点对", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是五角"]}
+  [  49.22] tap {"card": 0, "note": "teach 题4 点对", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一元"]}
+  [  55.28] tap {"card": 2, "note": "teach 题5 点对", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一角"
+  [  67.32] flat_done {"flat": 0, "level": "1-0", "stars": {"stars": 1, "plays": 1}}
+  [  67.32] phase {"name": "flat1 点空白+正常玩"}
+  [  71.75] blank_tap {"note": "flat1 点左上空白", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":0}", "voice": ["<clip:coi_right>", "<clip:coi_q>"]}
+  [  71.75] blank_result {"no_reaction": false}
+  [  74.28] tap {"card": 0, "note": "flat1 题1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:这是五角"]}
+  [  81.13] tap {"card": 3, "note": "flat1 题2", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一元"]}
+  [  87.50] tap {"card": 2, "note": "flat1 题3", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一角"]}
+  [  94.74] tap {"card": 1, "note": "flat1 题4", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是五角"]}
+  [ 101.06] tap {"card": 1, "note": "flat1 题5", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一元"]}
+  [ 113.08] flat_done {"flat": 1, "level": "1-1", "stars": {"stars": 3, "plays": 1}}
+  [ 113.08] phase {"name": "flat2 首题犹豫 15.5s（观察 14s 方向级救援）"}
+  [ 128.60] idle {"sec": 15.5, "note": "flat2 首题犹豫", "voice": ["<clip:coi_right>", "<clip:coi_q>", "<clip:coi_q>"]}
+  [ 128.60] rescue_check {"waited_s": 15.5, "voices": ["<clip:coi_right>", "<clip:coi_q>", "<clip:coi_q>"]}
+  [ 128.64] shot {"file": "coin_f2_rescue.png"}
+  [ 131.26] tap {"card": 3, "note": "flat2 题1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:这是五角"]}
+  [ 137.92] tap {"card": 1, "note": "flat2 题2", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一元"]}
+  [ 144.37] tap {"card": 0, "note": "flat2 题3", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一角"]}
+  [ 151.56] tap {"card": 1, "note": "flat2 题4", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是五角"]}
+  [ 158.18] tap {"card": 1, "note": "flat2 题5", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一元"]}
+  [ 170.20] flat_done {"flat": 2, "level": "1-2", "stars": {"stars": 3, "plays": 1}}
+  [ 170.20] phase {"name": "flat3 手痒连点+错反馈节流"}
+  [ 171.27] tap {"card": 0, "note": "flat3 题1 错1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":1}", "bump": "bump", "voice": ["<clip:coi_right>", "<clip:c
+  [ 173.93] shot {"file": "coin_f3_wrongfb.png"}
+  [ 174.73] rapid_double_tap {"miss_before": 1, "miss_after": 2, "voice": ["TTS:看看颜色，金色的是五角"]}
+  [ 174.77] shot {"file": "coin_f3_rapidtap.png"}
+  [ 175.84] tap {"card": 0, "note": "flat3 节流窗内二击（预期 miss+1 零语音）", "before": "{\"s\":0,\"m\":2}", "after": "{\"s\":0,\"m\":2}", "bump": "bump", "voice": []}
+  [ 177.07] throttle_window {"miss_before": 2, "miss_after": 2, "voice": []}
+  [ 178.12] tap {"card": 3, "note": "flat3 题1 对", "before": "{\"s\":0,\"m\":2}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:这是一元"]}
+  [ 184.85] tap {"card": 2, "note": "flat3 题2", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一角"]}
+  [ 191.53] tap {"card": 0, "note": "flat3 题3", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是五角"]}
+  [ 198.46] tap {"card": 0, "note": "flat3 题4", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一元"]}
+  [ 205.41] tap {"card": 0, "note": "flat3 题5", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一角"]}
+  [ 217.44] flat_done {"flat": 3, "level": "1-3", "stars": {"stars": 2, "plays": 1}}
+  [ 217.44] phase {"name": "flat4 正常玩 顺利"}
+  [ 220.67] tap {"card": 3, "note": "flat4 题1 对", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_right>", "<clip:co
+  [ 227.65] tap {"card": 2, "note": "flat4 题2 对", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是五角"]}
+  [ 233.75] tap {"card": 3, "note": "flat4 题3 对", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一元"]}
+  [ 240.94] tap {"card": 2, "note": "flat4 题4 对", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一角"]}
+  [ 248.09] tap {"card": 0, "note": "flat4 题5 对", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是五角"]
+  [ 258.22] panel_close {"pattern": "明天见", "btn": "明天见"}
+  [ 259.35] flat_done {"flat": 4, "level": "1-4", "stars": {"stars": 3, "plays": 1}}
+  [ 259.35] phase {"name": "flat5 正常玩 当日最后一关"}
+  [ 262.49] tap {"card": 0, "note": "flat5 题1 对", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_right>", "<clip:co
+  [ 269.26] tap {"card": 0, "note": "flat5 题2 对", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是undefi
+  [ 276.11] tap {"card": 1, "note": "flat5 题3 对", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是undefi
+  [ 282.50] tap {"card": 0, "note": "flat5 题4 对", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是一元"]}
+  [ 289.69] tap {"card": 1, "note": "flat5 题5 对", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是五元"]
+  [ 294.09] flat_done {"flat": 5, "level": null, "stars": null}
+  [ 296.60] phase {"name": "dayEnd 明天预告+家长门"}
+  [ 297.12] dayend_panels {"panels": [{"cls": "pulse", "txt": "5元这是多少钱？"}, {"cls": "card pop t-card", "txt": "1元"}, {"cls": "card pop t-card lit", "txt": "5元"}, {"cls": "card p
+  [ 297.16] shot {"file": "coin_dayend.png"}
+  [ 297.18] click_by_text {"pattern": "再玩|旧关|明天见", "hit": "再玩玩旧关卡", "note": "dayEnd/章末 关闭"}
+  [ 299.98] parent_panels {"panels": [{"cls": "pulse", "txt": "5元这是多少钱？"}, {"cls": "card pop t-card", "txt": "1元"}, {"cls": "card pop t-card lit", "txt": "5元"}, {"cls": "card p
+  [ 300.02] shot {"file": "coin_parentpanel.png"}
+  [ 300.03] parent_gate_q {"q": "19 + 38 = ?"}
+  [ 300.05] click_by_text {"pattern": "^5$", "hit": "5", "note": "家长门数字 5"}
+  [ 300.48] click_by_text {"pattern": "^7$", "hit": "7", "note": "家长门数字 7"}
+  [ 302.72] parent_unlock_answer {"q": "19 + 38 = ?", "ans": "57"}
+  [ 302.77] shot {"file": "coin_parentpanel_after.png"}
+  [ 302.77] phase {"name": "flat6-9 快进 autoSolve（真实判定链）"}
+  [ 379.78] panel_close_not_effective {"pattern": "再玩玩旧关卡"}
+  [ 381.55] panel_close {"pattern": "明天见", "btn": "明天见"}
+  [ 382.17] flat_done {"flat": 6, "level": null, "stars": null, "auto": true}
+  [ 455.17] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [ 455.79] flat_done {"flat": 7, "level": null, "stars": null, "auto": true}
+  [ 528.80] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [ 529.42] flat_done {"flat": 8, "level": null, "stars": null, "auto": true}
+  [ 602.46] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [ 603.06] flat_done {"flat": 9, "level": null, "stars": null, "auto": true}
+  [ 603.06] phase {"name": "flat10 ch3 难关真实点击"}
+  [ 643.38] shot {"file": "coin_f10_ch3.png"}
+  [ 655.25] idle {"sec": 8.5, "note": "flat10 题1 读题后静置", "voice": ["<clip:coi_q>", "<clip:coi_q>", "<clip:coi_q>", "<clip:coi_q>", "<clip:coi_q>", "<clip:coi_q>", "<cl
+  [ 656.32] tap {"card": 1, "note": "flat10 题1 定向错点", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":1}", "bump": "bump", "voice": ["<clip:coi_wrong>"]}
+  [ 656.37] shot {"file": "coin_f10_wrongfb.png"}
+  [ 667.31] wrong_chain {"q": {"near": "(fallback)", "kind": "bill", "face": "yuan5"}, "chain_voice": ["<clip:coi_wrong>", "<clip:coi_q>", "TTS:看看上面的大数字"], "mid_voice": ["<cl
+  [ 669.20] tap {"card": 0, "note": "flat10 题1 对", "before": "{\"s\":0,\"m\":1}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:这是五元"]}
+  [ 685.06] idle {"sec": 8.5, "note": "flat10 题2 读题后静置", "voice": ["<clip:coi_q>", "<clip:coi_q>"]}
+  [ 686.12] tap {"card": 1, "note": "flat10 题2 定向错点", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":1,\"m\":1}", "bump": "bump", "voice": ["<clip:coi_wrong>"]}
+  [ 697.07] wrong_chain {"q": {"near": "(fallback)", "kind": "bill", "face": "yuan10"}, "chain_voice": ["<clip:coi_wrong>", "<clip:coi_q>", "TTS:看看上面的大数字"], "mid_voice": ["<c
+  [ 698.95] tap {"card": 0, "note": "flat10 题2 对", "before": "{\"s\":1,\"m\":1}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["TTS:这是undefined元"]}
+  [ 714.83] idle {"sec": 8.5, "note": "flat10 题3 读题后静置", "voice": ["<clip:coi_q>", "<clip:coi_q>"]}
+  [ 715.88] tap {"card": 0, "note": "flat10 题3 定向错点", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":2,\"m\":1}", "bump": "bump", "voice": ["<clip:coi_wrong>"]}
+  [ 726.82] wrong_chain {"q": {"near": "(fallback)", "kind": "bill", "face": "yuan20"}, "chain_voice": ["<clip:coi_wrong>", "TTS:看看上面的大数字"], "mid_voice": ["<clip:coi_wrong>",
+  [ 728.68] tap {"card": 1, "note": "flat10 题3 对", "before": "{\"s\":2,\"m\":1}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:coi_q>", "TTS:这是undef
+  [ 744.55] idle {"sec": 8.5, "note": "flat10 题4 读题后静置", "voice": ["<clip:coi_q>", "<clip:coi_q>"]}
+  [ 745.61] tap {"card": 1, "note": "flat10 题4 定向错点", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":3,\"m\":1}", "bump": "bump", "voice": ["<clip:coi_wrong>"]}
+  [ 756.57] wrong_chain {"q": {"near": "(fallback)", "kind": "bill", "face": "yuan1p"}, "chain_voice": ["<clip:coi_wrong>", "<clip:coi_q>", "TTS:看看上面的大数字"], "mid_voice": ["<c
+  [ 758.43] tap {"card": 0, "note": "flat10 题4 对", "before": "{\"s\":3,\"m\":1}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["TTS:这是一元"]}
+  [ 774.27] idle {"sec": 8.5, "note": "flat10 题5 读题后静置", "voice": ["<clip:coi_q>", "<clip:coi_q>"]}
+  [ 775.32] tap {"card": 0, "note": "flat10 题5 定向错点", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":4,\"m\":1}", "bump": "bump", "voice": ["<clip:coi_wrong>"]}
+  [ 786.28] wrong_chain {"q": {"near": "(fallback)", "kind": "bill", "face": "yuan5"}, "chain_voice": ["<clip:coi_wrong>", "<clip:core_rest>", "TTS:看看上面的大数字"], "mid_voice": [
+  [ 788.15] tap {"card": 1, "note": "flat10 题5 对", "before": "{\"s\":4,\"m\":1}", "after": "{\"s\":4,\"m\":1}", "bump": "bump", "voice": ["<clip:coi_q>", "<clip:coi_q
+  [ 817.47] flat_done {"flat": 10, "level": null, "stars": null}
+  [ 818.97] end_panels {"panels": [{"cls": "pulse", "txt": "5元这是多少钱？"}, {"cls": "card pop t-card wig", "txt": "1元"}, {"cls": "card pop t-card breathe", "txt": "5元"}, {"cls":
+  [ 819.03] shot {"file": "coin_chapend.png"}
+  -> play_log_coin.json  events=112 tts=80 clips=114 nb=0 perr=[]
+====== notebird ======
+  [   0.01] page_loaded {"title": "音阶小鸟"}
+  [   0.01] phase {"name": "教学关 flat0（watch 演示）"}
+  [   1.58] shot {"file": "notebird_f0_teach.png"}
+  [   1.59] tut_watch_state {"state": "watch"}
+  [   2.90] tut_watch_tap_swallowed {"step_same": true, "voice": ["<clip:not_tut_watch>", "TTS:听！小鸟在唱歌"]}
+  [  12.82] tut_state {"state": "help", "wait_s": 9.9}
+  [  13.69] shot {"file": "notebird_f0_turn.png"}
+  [  13.70] nb_demoR_after_watch {"r": "right"}
+  [  13.70] phase {"name": "notebird ch1 自由点鸟探索"}
+  [  27.62] tap {"card": 1, "note": "ch1 自由点鸟 free", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":0}", "bump": "bump", "voice": ["<clip:not_tut_turn>", "<c
+  [  29.04] ch1_free_result {"bird": "re", "miss_same": true}
+  [  30.14] tap {"card": 2, "note": "ch1 自由点鸟 free", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":0}", "bump": "bump", "voice": []}
+  [  31.55] ch1_free_result {"bird": "mi", "miss_same": true}
+  [  32.66] tap {"card": 3, "note": "ch1 自由点鸟 free", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":0}", "bump": "bump", "voice": []}
+  [  34.07] ch1_free_result {"bird": "fa", "miss_same": true}
+  [  35.18] tap {"card": 0, "note": "ch1 点答案鸟", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:对啦，红小鸟在唱歌"]}
+  [  53.86] tap {"card": 0, "note": "ch1 自由点鸟 free", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>"]}
+  [  55.28] ch1_free_result {"bird": "do", "miss_same": true}
+  [  56.39] tap {"card": 1, "note": "ch1 自由点鸟 free", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": []}
+  [  57.81] ch1_free_result {"bird": "re", "miss_same": true}
+  [  58.91] tap {"card": 3, "note": "ch1 自由点鸟 free", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": []}
+  [  60.33] ch1_free_result {"bird": "dop", "miss_same": true}
+  [  61.43] tap {"card": 2, "note": "ch1 点答案鸟", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["TTS:对啦，蓝小鸟在唱歌"]}
+  [  80.13] tap {"card": 1, "note": "ch1 自由点鸟 free", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>"]}
+  [  81.54] ch1_free_result {"bird": "fa", "miss_same": true}
+  [  82.65] tap {"card": 2, "note": "ch1 自由点鸟 free", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": []}
+  [  84.07] ch1_free_result {"bird": "la", "miss_same": true}
+  [  85.16] tap {"card": 3, "note": "ch1 自由点鸟 free", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": []}
+  [  86.57] ch1_free_result {"bird": "si", "miss_same": true}
+  [  87.68] tap {"card": 0, "note": "ch1 点答案鸟", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["TTS:对啦，黄小鸟在唱歌"]}
+  [ 106.38] tap {"card": 1, "note": "ch1 自由点鸟 free", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>"]}
+  [ 107.79] ch1_free_result {"bird": "fa", "miss_same": true}
+  [ 108.90] tap {"card": 2, "note": "ch1 自由点鸟 free", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": []}
+  [ 110.32] ch1_free_result {"bird": "sol", "miss_same": true}
+  [ 111.40] tap {"card": 3, "note": "ch1 自由点鸟 free", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": []}
+  [ 112.82] ch1_free_result {"bird": "si", "miss_same": true}
+  [ 113.91] tap {"card": 0, "note": "ch1 点答案鸟", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["TTS:对啦，红小鸟在唱歌"]}
+  [ 132.57] tap {"card": 0, "note": "ch1 自由点鸟 free", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>"]}
+  [ 133.99] ch1_free_result {"bird": "do", "miss_same": true}
+  [ 135.10] tap {"card": 2, "note": "ch1 自由点鸟 free", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": []}
+  [ 136.51] ch1_free_result {"bird": "sol", "miss_same": true}
+  [ 137.62] tap {"card": 3, "note": "ch1 自由点鸟 free", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": []}
+  [ 139.04] ch1_free_result {"bird": "dop", "miss_same": true}
+  [ 140.15] tap {"card": 1, "note": "ch1 点答案鸟", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["TTS:对啦，黄小鸟在唱歌"]}
+  [ 152.95] flat_done {"flat": 0, "level": "1-0", "stars": {"stars": 3, "plays": 1}}
+  [ 152.95] phase {"name": "flat1 点空白+正常玩"}
+  [ 170.21] blank_tap {"note": "flat1 点左上空白", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":0}", "voice": ["<clip:not_right>", "<clip:not_q>"]}
+  [ 170.21] blank_result {"no_reaction": false}
+  [ 185.42] tap {"card": 2, "note": "flat1 题1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:对啦，蓝小鸟在唱歌"]}
+  [ 206.16] tap {"card": 3, "note": "flat1 题2", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，粉小鸟在唱歌"
+  [ 226.67] tap {"card": 0, "note": "flat1 题3", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，红小鸟在唱歌"
+  [ 246.90] tap {"card": 3, "note": "flat1 题4", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，粉小鸟在唱歌"
+  [ 267.57] tap {"card": 1, "note": "flat1 题5", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，蓝小鸟在唱
+  [ 280.38] flat_done {"flat": 1, "level": "1-1", "stars": {"stars": 3, "plays": 1}}
+  [ 280.38] phase {"name": "flat2 首题犹豫 15.5s（观察 14s 方向级救援）"}
+  [ 308.77] idle {"sec": 15.5, "note": "flat2 首题犹豫", "voice": ["<clip:not_right>", "<clip:not_q>"]}
+  [ 308.77] rescue_check {"waited_s": 15.5, "voices": ["<clip:not_right>", "<clip:not_q>"]}
+  [ 308.82] shot {"file": "notebird_f2_rescue.png"}
+  [ 311.37] replay_btn {"voice": ["<clip:not_q>"], "nb_new": [{"t": 1788992903065, "freq": 349.23, "when": 0, "dur": 0.7, "via": "play"}, {"t": 1788992903065, "freq": 349.23
+  [ 327.55] tap {"card": 3, "note": "flat2 题1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:对啦，绿小鸟在唱歌"]}
+  [ 347.60] tap {"card": 3, "note": "flat2 题2", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，粉小鸟在唱歌"
+  [ 367.57] tap {"card": 1, "note": "flat2 题3", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，黄小鸟在唱歌"
+  [ 387.43] tap {"card": 0, "note": "flat2 题4", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，红小鸟在唱歌"
+  [ 408.01] tap {"card": 2, "note": "flat2 题5", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，绿小鸟在唱
+  [ 420.84] flat_done {"flat": 2, "level": "1-2", "stars": {"stars": 3, "plays": 1}}
+  [ 420.84] phase {"name": "flat3 手痒连点+错反馈节流"}
+  [ 434.75] tap {"card": 0, "note": "flat3 题1 错1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":0}", "bump": "bump", "voice": ["<clip:not_right>", "<clip:n
+  [ 437.40] shot {"file": "notebird_f3_wrongfb.png"}
+  [ 438.20] rapid_double_tap {"miss_before": 0, "miss_after": 0, "voice": []}
+  [ 438.24] shot {"file": "notebird_f3_rapidtap.png"}
+  [ 439.34] tap {"card": 0, "note": "flat3 节流窗内二击（预期 miss+1 零语音）", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":0}", "bump": "bump", "voice": []}
+  [ 440.57] throttle_window {"miss_before": 0, "miss_after": 0, "voice": []}
+  [ 441.68] tap {"card": 2, "note": "flat3 题1 对", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:对啦，粉小鸟在唱歌"]}
+  [ 462.09] tap {"card": 1, "note": "flat3 题2", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，绿小鸟在唱歌"
+  [ 482.09] tap {"card": 2, "note": "flat3 题3", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，紫小鸟在唱歌"
+  [ 501.82] tap {"card": 0, "note": "flat3 题4", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，橙小鸟在唱歌"
+  [ 521.74] tap {"card": 1, "note": "flat3 题5", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，绿小鸟在唱
+  [ 534.57] flat_done {"flat": 3, "level": "1-3", "stars": {"stars": 3, "plays": 1}}
+  [ 534.57] phase {"name": "flat4 正常玩 顺利"}
+  [ 549.97] tap {"card": 0, "note": "flat4 题1 对", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["<clip:not_right>", "<clip:no
+  [ 570.51] tap {"card": 3, "note": "flat4 题2 对", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，紫小鸟在唱
+  [ 590.99] tap {"card": 0, "note": "flat4 题3 对", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，橙小鸟在唱
+  [ 611.79] tap {"card": 2, "note": "flat4 题4 对", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，粉小鸟在唱
+  [ 632.11] tap {"card": 0, "note": "flat4 题5 对", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，橙小鸟
+  [ 643.02] panel_close {"pattern": "明天见", "btn": "明天见"}
+  [ 643.64] flat_done {"flat": 4, "level": "1-4", "stars": {"stars": 3, "plays": 1}}
+  [ 643.64] phase {"name": "flat5 正常玩 当日最后一关"}
+  [ 659.82] tap {"card": 1, "note": "flat5 题1 对", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["<clip:not_right>", "<clip:co
+  [ 680.84] tap {"card": 1, "note": "flat5 题2 对", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，橙小鸟在唱
+  [ 700.73] tap {"card": 3, "note": "flat5 题3 对", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，紫小鸟在唱
+  [ 720.52] tap {"card": 1, "note": "flat5 题4 对", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，黄小鸟在唱
+  [ 740.92] tap {"card": 3, "note": "flat5 题5 对", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:not_q>", "TTS:对啦，白小鸟
+  [ 746.12] flat_done {"flat": 5, "level": null, "stars": null}
+  [ 748.63] phase {"name": "dayEnd 明天预告+家长门"}
+  [ 749.15] dayend_panels {"panels": [{"cls": "pulse", "txt": "NaN#4A3B2E\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"rou"}, {"cls": "bird-card pop", "txt": "re♪"}, {"c
+  [ 749.19] shot {"file": "notebird_dayend.png"}
+  [ 749.21] click_by_text {"pattern": "再玩|旧关|明天见", "hit": "再玩玩旧关卡", "note": "dayEnd/章末 关闭"}
+  [ 751.99] parent_panels {"panels": [{"cls": "pulse", "txt": "NaN#4A3B2E\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"rou"}, {"cls": "bird-card pop", "txt": "re♪"}, {"c
+  [ 752.04] shot {"file": "notebird_parentpanel.png"}
+  [ 752.05] parent_gate_q {"q": "33 + 29 = ?"}
+  [ 752.07] click_by_text {"pattern": "^6$", "hit": "6", "note": "家长门数字 6"}
+  [ 752.50] click_by_text {"pattern": "^2$", "hit": "2", "note": "家长门数字 2"}
+  [ 754.72] parent_unlock_answer {"q": "33 + 29 = ?", "ans": "62"}
+  [ 754.77] shot {"file": "notebird_parentpanel_after.png"}
+  [ 754.77] phase {"name": "flat6-9 快进 autoSolve（真实判定链）"}
+  [ 837.77] panel_close_not_effective {"pattern": "好的"}
+  [ 843.52] panel_close_not_effective {"pattern": "明天见"}
+  [ 850.48] panel_close_not_effective {"pattern": "再玩玩旧关卡"}
+  [ 856.24] panel_close_not_effective {"pattern": "好的"}
+  [ 859.21] panel_close {"pattern": "好的", "btn": "好的"}
+  [ 859.83] flat_done {"flat": 6, "level": null, "stars": null, "auto": true}
+  [ 940.07] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [ 940.68] flat_done {"flat": 7, "level": null, "stars": null, "auto": true}
+  [1020.77] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [1021.39] flat_done {"flat": 8, "level": null, "stars": null, "auto": true}
+  [1101.57] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [1102.19] flat_done {"flat": 9, "level": null, "stars": null, "auto": true}
+  [1102.19] phase {"name": "flat10 ch3 难关真实点击"}
+  [1142.53] shot {"file": "notebird_f10_ch3.png"}
+  [1167.19] idle {"sec": 8.5, "note": "flat10 题1 读题后静置", "voice": ["<clip:core_rest>", "<clip:not_q>", "<clip:not_q>", "<clip:not_q>", "<clip:not_q>", "<clip:not_right
+  [1168.29] tap {"card": 0, "note": "flat10 题1 定向错点", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":1}", "bump": "bump", "voice": ["<clip:not_wrong>"]}
+  [1168.34] shot {"file": "notebird_f10_wrongfb.png"}
+  [1179.55] wrong_chain {"q": {"kind": "find", "sang": ["mi"], "picked": "re", "answer_note": "mi"}, "chain_voice": ["<clip:not_wrong>", "TTS:再往右找找，声音更高的"], "mid_voice": ["<c
+  [1181.43] tap {"card": 1, "note": "flat10 题1 对", "before": "{\"s\":0,\"m\":1}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:对啦，黄小鸟在唱歌"]}
+  [1210.91] idle {"sec": 8.5, "note": "flat10 题2 读题后静置", "voice": ["<clip:not_q>"]}
+  [1212.00] tap {"card": 0, "note": "flat10 题2 定向错点", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":1,\"m\":1}", "bump": "bump", "voice": ["<clip:not_wrong>"]}
+  [1223.21] wrong_chain {"q": {"kind": "find", "sang": ["re"], "picked": "do", "answer_note": "re"}, "chain_voice": ["<clip:not_wrong>", "TTS:再往右找找，声音更高的"], "mid_voice": ["<c
+  [1225.14] tap {"card": 1, "note": "flat10 题2 对", "before": "{\"s\":1,\"m\":1}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["TTS:对啦，橙小鸟在唱歌"]}
+  [1254.58] idle {"sec": 8.5, "note": "flat10 题3 读题后静置", "voice": ["<clip:not_q>"]}
+  [1255.66] tap {"card": 2, "note": "flat10 题3 定向错点", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":2,\"m\":1}", "bump": "bump", "voice": ["<clip:not_wrong>"]}
+  [1266.87] wrong_chain {"q": {"kind": "find", "sang": ["la"], "picked": "sol", "answer_note": "la"}, "chain_voice": ["<clip:not_wrong>", "TTS:再往右找找，声音更高的"], "mid_voice": ["<
+  [1268.79] tap {"card": 3, "note": "flat10 题3 对", "before": "{\"s\":2,\"m\":1}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["TTS:对啦，紫小鸟在唱歌"]}
+  [1298.21] idle {"sec": 8.5, "note": "flat10 题4 读题后静置", "voice": ["<clip:not_q>"]}
+  [1299.31] tap {"card": 0, "note": "flat10 题4 定向错点", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":3,\"m\":1}", "bump": "bump", "voice": ["<clip:not_wrong>"]}
+  [1310.51] wrong_chain {"q": {"kind": "find", "sang": ["mi"], "picked": "re", "answer_note": "mi"}, "chain_voice": ["<clip:not_wrong>", "TTS:再往右找找，声音更高的"], "mid_voice": ["<c
+  [1312.41] tap {"card": 1, "note": "flat10 题4 对", "before": "{\"s\":3,\"m\":1}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["TTS:对啦，黄小鸟在唱歌"]}
+  [1341.86] idle {"sec": 8.5, "note": "flat10 题5 读题后静置", "voice": ["<clip:not_q>"]}
+  [1342.96] tap {"card": 2, "note": "flat10 题5 定向错点", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":4,\"m\":1}", "bump": "bump", "voice": ["<clip:not_wrong>"]}
+  [1354.18] wrong_chain {"q": {"kind": "find", "sang": ["dop"], "picked": "la", "answer_note": "dop"}, "chain_voice": ["<clip:not_wrong>", "TTS:再往右找找，声音更高的"], "mid_voice": ["
+  [1356.10] tap {"card": 3, "note": "flat10 题5 对", "before": "{\"s\":4,\"m\":1}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["TTS:对啦，白小鸟在唱歌"]}
+  [1366.98] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [1407.95] flat_done {"flat": 10, "level": null, "stars": null}
+  [1409.46] end_panels {"panels": [{"cls": "pulse", "txt": "NaN#4A3B2E\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"rou"}, {"cls": "bird-card pop", "txt": "re♪"}, {"c
+  [1409.52] shot {"file": "notebird_chapend.png"}
+  -> play_log_notebird.json  events=145 tts=62 clips=84 nb=425 perr=[]
+DONE

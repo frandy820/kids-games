@@ -1,0 +1,153 @@
+[
+ {
+  "game": "pipe",
+  "phase": "P1教学",
+  "claim": "全新存档进入教学关 1-0",
+  "detail": {
+   "level": "1-0"
+  }
+ },
+ {
+  "game": "pipe",
+  "phase": "P1教学",
+  "claim": "\"看\"演示期点管件：无旋转无响应（干扰被安全吞掉）",
+  "detail": {
+   "frozen": true,
+   "tap": "OK"
+  }
+ },
+ {
+  "game": "pipe",
+  "phase": "P1教学",
+  "claim": "教学关上手=全部摆好只留1格错位；幽灵手指出现",
+  "detail": {
+   "wrongCells": [
+    {
+     "x": 1,
+     "y": 2,
+     "t": "I",
+     "rot": 1,
+     "sol": 0
+    }
+   ],
+   "ghostOn": true
+  }
+ },
+ {
+  "game": "pipe",
+  "phase": "P1教学",
+  "claim": "她第一次点的是旁边的管（非手指目标）：旋转生效，现在两根都错",
+  "detail": {
+   "otherCell": [
+    2,
+    2
+   ],
+   "rotNow": 1,
+   "wrongN": 2
+  }
+ },
+ {
+  "game": "pipe",
+  "phase": "P1教学",
+  "claim": "首次旋转后幽灵手指消失（点错格也算\"第一步\"，引导即停）",
+  "detail": {
+   "ghostGone": true
+  }
+ },
+ {
+  "game": "pipe",
+  "phase": "P1教学",
+  "claim": "3次点击后通关（第1次点错=多花2步）；庆祝层期间乱点4次全被吞",
+  "detail": {
+   "wrongNAfter2ndTap": 1,
+   "won": true,
+   "celebrateSeen": true,
+   "swallowed": true,
+   "save_1_0": null
+  }
+ },
+ {
+  "game": "pipe",
+  "phase": "P2试玩",
+  "claim": "通关后自动推进到 1-1",
+  "detail": ""
+ },
+ {
+  "game": "pipe",
+  "phase": "P2试玩",
+  "claim": "先乱转一个已正确的无关格（+1圈）",
+  "detail": {
+   "cell": [
+    2,
+    1
+   ]
+  }
+ },
+ {
+  "game": "pipe",
+  "phase": "P2试玩",
+  "claim": "点空格无响应不崩溃（她不理解也乱点）",
+  "detail": {
+   "cell": {
+    "x": "0",
+    "y": "0",
+    "cls": "cell empty"
+   },
+   "tapResult": "OK"
+  }
+ },
+ {
+  "game": "pipe",
+  "phase": "P2试玩",
+  "claim": "1-1 纠错式通关",
+  "detail": {
+   "won": true,
+   "followTaps": 5,
+   "save_1_1": {
+    "stars": 2,
+    "plays": 1
+   }
+  }
+ },
+ {
+  "game": "pipe",
+  "phase": "P3试玩",
+  "claim": "推进到 1-2，开始 16 秒发呆/无进展观察",
+  "detail": ""
+ },
+ {
+  "game": "pipe",
+  "phase": "P3试玩",
+  "claim": "卡住16秒：无幽灵手指/无弹层救援（仅语音重播，语音无DOM痕迹→推断）",
+  "detail": {
+   "anyDomRescue": false,
+   "samples": [
+    {
+     "ghost": false,
+     "overlay": false
+    },
+    {
+     "ghost": false,
+     "overlay": false
+    },
+    {
+     "ghost": false,
+     "overlay": false
+    }
+   ]
+  }
+ },
+ {
+  "game": "pipe",
+  "phase": "P3试玩",
+  "claim": "1-2 通关+日历推进",
+  "detail": {
+   "won": true,
+   "save_1_2": {
+    "stars": 2,
+    "plays": 1
+   },
+   "nextLevel": "1-3"
+  }
+ }
+]

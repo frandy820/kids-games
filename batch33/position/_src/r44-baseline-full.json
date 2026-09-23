@@ -1,0 +1,5282 @@
+{
+ "0": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "1": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "2": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "3": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "4": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "5": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "6": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "7": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "8": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "9": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "10": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "11": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "12": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "13": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "14": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "right",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "15": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "right",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "right",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "16": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "17": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "18": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "right",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "19": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "right",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "20": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "21": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "22": {
+  "ch": 5,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "23": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "24": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "25": {
+  "ch": 6,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "26": {
+  "ch": 6,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "right",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "27": {
+  "ch": 6,
+  "dch": 1,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "28": {
+  "ch": 6,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "29": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "30": {
+  "ch": 7,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "31": {
+  "ch": 7,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "32": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "33": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "right",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "34": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "35": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "36": {
+  "ch": 8,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "right",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "right",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "37": {
+  "ch": 8,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 4,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "left",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "38": {
+  "ch": 8,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "back",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "back",
+    "answer": 1,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "front",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "findpos",
+    "ask": "up",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 2,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ },
+ "39": {
+  "ch": 8,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "findpos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "down",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "front",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "right",
+    "answer": 0,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "down",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "up",
+    "answer": 5,
+    "_miss": 0,
+    "_answered": false
+   },
+   {
+    "kind": "placepos",
+    "ask": "right",
+    "cells": [
+     {
+      "pos": "front"
+     },
+     {
+      "pos": "back"
+     },
+     {
+      "pos": "left"
+     },
+     {
+      "pos": "right"
+     },
+     {
+      "pos": "up"
+     },
+     {
+      "pos": "down"
+     }
+    ],
+    "bunnyAt": "left",
+    "answer": 3,
+    "_miss": 0,
+    "_answered": false
+   }
+  ]
+ }
+}

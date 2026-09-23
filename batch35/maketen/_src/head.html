@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>凑十小铺</title>
+<style>
+/* ================= 凑十小铺 maketen（batch35·扩容批 5）
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色 #E8975A、暖棕描边 #4A3B2E；
+   玩法 = 伙伴卡配对收银（SPEC-BATCH35 §0.86/§2，6-7 岁数感·凑十）：
+   题面顶部大字 target（10/15/20）→ 柜台中央伙伴卡数字 a → 下方卡池 4-5 张
+   数字卡点一张 x：a+x=target → 收进店里（钱币叮当+货架+1）；≠target →
+   两级方向数感反馈（和>target「多了一点，换张小一点的」/和<target
+   「少了一点，换张大一点的」——按和值分派 mt_wrong_more/mt_wrong_less）。
+   触摸目标：卡池卡 ≥96×96、底栏按钮 ≥72；overflowX 恒 0。
+   款内自建 button 带显式 color（契约 O：不依赖 core 兜底）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:38px;height:38px;border-radius:11px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 38px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 题面：本凑目标大字（SPEC §0.86——三目标切换=认知坡度主体） ---------- */
+#target-bar{flex:0 0 auto;display:flex;align-items:center;gap:12px;padding:6px 24px 6px 20px;
+  border-radius:20px;background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 3px 0 #D8C9B4}
+#target-bar .tb-label{font-size:24px;font-weight:700;letter-spacing:2px}
+#target-num{font-size:54px;font-weight:900;color:#E8975A;line-height:1;min-width:66px;text-align:center}
+#target-bar.pulse{animation:mt-tp .45s ease-in-out 3}
+@keyframes mt-tp{50%{transform:scale(1.14)}}
+
+/* ---------- 舞台：小铺（货架 + 柜台 + 伙伴卡） ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:10px;overflow:hidden;padding:6px 12px}
+#scene{flex:0 0 auto;position:relative;width:min(640px,94vw);border-radius:24px;
+  background:linear-gradient(180deg,#FDF3DC 0%,#F6E2BE 100%);border:3px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;flex-direction:column;align-items:center;
+  justify-content:flex-end;padding:10px 14px 12px}
+#shelf{display:flex;gap:10px;justify-content:center;align-items:center;padding:2px 0 10px;width:100%}
+.slot{width:46px;height:46px;border-radius:50%;border:2.5px dashed #C9A87C;background:rgba(255,249,238,.55);
+  display:flex;align-items:center;justify-content:center;transition:all .3s}
+.slot.fill{border:2.5px solid #4A3B2E;background:radial-gradient(circle at 35% 30%,#F7D154 0%,#E5A93D 78%);
+  animation:mt-coin .5s cubic-bezier(.2,1.6,.4,1)}
+.slot.fill::after{content:'★';font-size:22px;color:#FFF9EE;text-shadow:0 1px 0 #C08A2D}
+@keyframes mt-coin{0%{transform:scale(.2) rotate(-40deg)}70%{transform:scale(1.2)}100%{transform:scale(1)}}
+
+/* 伙伴卡：柜台中央的大数字卡（小店伙伴举着的卡）——契约 M 锚 data-role="buddy" */
+#buddy-card{width:104px;height:126px;border-radius:18px;background:#FDF3DC;border:3px solid #4A3B2E;
+  box-shadow:0 5px 0 #D8C9B4;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:1px;position:relative;z-index:2;margin-bottom:-6px}
+#buddy-card .buddy-tag{font-size:13px;font-weight:700;color:#8A7B6C;letter-spacing:1px}
+#buddy-card .buddy-face{width:36px;height:36px}
+#buddy-num{font-size:52px;font-weight:900;line-height:1;color:#4A3B2E}
+#buddy-card.pulse{animation:mt-tp .45s ease-in-out 3}
+#counter{width:100%;height:16px;border-radius:12px;background:#E9CD9F;border:2.5px solid #4A3B2E;
+  box-shadow:0 3px 0 #D8C9B4;flex:0 0 auto}
+
+/* ---------- 卡池（恒全摆 4-5 张互异数字卡；契约 M 锚 data-i） ---------- */
+#pool{flex:0 0 auto;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:stretch;
+  max-width:min(680px,96vw)}
+#pool.bump{animation:mt-bump .22s ease}
+@keyframes mt-bump{0%,100%{transform:scale(1)}45%{transform:scale(.97)}}
+.card{width:98px;height:122px;border-radius:16px;background:#FFF9EE;border:3px solid #4A3B2E;
+  box-shadow:0 5px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;
+  transition:transform .15s,box-shadow .15s}
+.card .cv{font-size:50px;font-weight:900;line-height:1}
+.card:active{transform:translateY(4px);box-shadow:0 1px 0 #D8C9B4}
+.card.wig{animation:mt-wig .4s ease}
+@keyframes mt-wig{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}
+  50%{transform:translateX(7px)}75%{transform:translateX(-5px)}}
+.card.breathe{animation:mt-br 1.2s ease-in-out infinite}
+@keyframes mt-br{0%,100%{transform:scale(1)}50%{transform:scale(1.07);
+  box-shadow:0 5px 0 #D8C9B4,0 0 16px rgba(232,151,90,.95)}}
+/* 收银：点中卡飞进店里（gone=契约 M 收银帧锚——池恒全摆下的已收标记） */
+.card.gone{animation:mt-fly .6s cubic-bezier(.4,0,.8,1) forwards;pointer-events:none}
+@keyframes mt-fly{55%{transform:translateY(-120px) scale(.5) rotate(10deg);opacity:.9}
+  100%{transform:translateY(-175px) scale(.22) rotate(18deg);opacity:0;visibility:hidden}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:flex-start;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:86px;height:86px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:mt-hop .45s ease 2}
+@keyframes mt-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#dock-tip{font-size:15px;color:#8A7B6C;padding-left:4px}
+
+/* ---------- 幽灵手指教学（照 batch21-34） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板/手机竖持）：舞台收紧，卡触摸面仍 ≥96 */
+@media (orientation:portrait){
+  #target-bar{padding:4px 18px 4px 16px;gap:8px}
+  #target-bar .tb-label{font-size:20px}
+  #target-num{font-size:44px;min-width:54px}
+  #scene{width:min(460px,96vw)}
+  .slot{width:40px;height:40px}
+  .slot.fill::after{font-size:18px}
+  #buddy-card{width:96px;height:118px}
+  #buddy-num{font-size:46px}
+  .card{width:96px;height:118px}
+  .card .cv{font-size:46px}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="凑十小铺">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="target-bar" aria-label="本凑目标"><span class="tb-label">凑</span><span id="target-num">10</span></div>
+    <div id="scene" aria-label="小铺柜台，货架和伙伴卡">
+      <div id="shelf" aria-label="收银货架"></div>
+      <div id="buddy-card" data-role="buddy" aria-label="伙伴卡">
+        <div class="buddy-tag">伙伴卡</div>
+        <div class="buddy-face" id="buddy-face" aria-hidden="true"></div>
+        <div id="buddy-num">3</div>
+      </div>
+      <div id="counter" aria-hidden="true"></div>
+    </div>
+    <div id="pool" aria-label="数字卡池"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子提示"></button>
+    <div id="dock-tip">点一张卡，和伙伴卡凑出目标数</div>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

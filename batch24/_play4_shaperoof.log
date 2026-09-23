@@ -1,0 +1,66 @@
+[   1.19s] == A 教学链 watch→help→solo ==
+[   2.56s] 载入后 tutorial = watch （期望 watch）
+[   2.64s]   教学期点空白（应被吞） heard=['s:pop']
+[   2.93s]   shot sr-01-教学watch幽灵手指.png
+[   5.55s] watch→help 耗时 4.4s __srDemoR=right tut=help
+[   8.16s]   watch 段语音序列 = ['c:看！屋顶缺了一块', 's:pop', 'n:659Hz', 'n:880Hz', 's:coin', 'n:988Hz', 'n:1319Hz', 'c:你来补一补', 'c:补屋顶咯']
+[   8.21s]   shot sr-02-教学help指向.png
+[   8.22s]   交接语音（turn→题面接力）= ['c:看！屋顶缺了一块', 's:pop', 'n:659Hz', 'n:880Hz', 's:coin', 'n:988Hz', 'n:1319Hz', 'c:你来补一补', 'c:补屋顶咯']
+[   8.22s] == B flat0 整关（歪手/连点/空白/边缘/点错）==
+[   8.64s]   q1 点空白反馈 = ['c:看看洞的形状']
+[   8.68s]   shot sr-03-flat0首题.png
+[   8.73s]   tap q1 正确瓦片(边缘) @(526,351) 边缘
+[   9.02s]   tap q1 连点(应吞) @(573,435)
+[  10.13s]   q1 连点被吞 heard=['n:988Hz', 'n:1319Hz', 'c:补屋顶咯'] bump=
+[  10.13s]   q1 完成 step=1 lit窗=1
+[  10.16s]   tap q2 干扰瓦片(点错) @(307,410)
+[  10.58s]   q2 点错 wig=circle heard=['n:587Hz', 'c:这块的边对不上哦']（语义反馈，无「错了」）
+[  10.63s]   shot sr-04-点错摇头.png
+[  11.66s]   tap q2 正确瓦片 @(744,436)
+[  11.66s]   q2 完成 step=2 miss=1
+[  11.68s]   tap 戳兔子 @(46,636)
+[  12.31s]   tap 再听一遍 @(532,635)
+[  13.03s]   q3 兔子/再听 heard=['n:988Hz', 'n:1319Hz', 's:pop', 'n:880Hz', 'c:补屋顶咯']
+[  13.04s]   tap q3 正确瓦片(歪手) @(307,431)
+[  13.05s]   q3 完成 step=3
+[  13.10s]   shot sr-05-补洞亮窗.png
+[  13.11s]   tap q4 正确瓦片(歪手) @(743,435)
+[  22.22s]   q4 完成 step=3
+[  22.24s]   tap q5 正确瓦片(歪手) @(717,413)
+[  23.82s]   shot sr-06-通关celebrate.png
+[  23.82s]   通关 celebrate=False 用时 15.6s（含教学）
+[  26.83s]   写档 levels={}（通关铁证）
+[  26.84s]   当前关 = {'flat': 0, 'ch': 1, 'lv': 0}
+[  26.84s] == C 救援：flat1 发呆 35s 观测 14s/30s 两级 ==
+[  27.67s]   开始发呆 t=1788935313014 quiz.shape=square
+[  42.03s]   [14.3s] 方向级出现 pulse=True heard=['c:补屋顶咯']
+[  42.10s]   shot sr-07-救援14s方向级.png
+[  57.43s]   [29.7s] 答案级出现 breathe=True heard=['c:补屋顶咯', 'c:补屋顶咯', 'c:补屋顶咯']
+[  57.49s]   shot sr-08-救援30s答案级.png
+[  57.49s]   救援小结：方向级 @14.3s / 答案级 @29.7s
+[  58.32s]   tap 被救后补对 @(453,431)
+[  58.32s]   被救后继续 ✓ step=1
+[  58.32s] == D 难度探视 ==
+[  59.24s]   flat5 ch2 扩展形 洞=triangle 瓦片=['triangle', 'star', 'square', 'diamond'] near=None
+[  59.31s]   tap flat5 探索点错 @(426,436)
+[  60.59s]     点错反馈=['n:587Hz', 'c:这块的边对不上哦'] miss=1
+[  60.69s]   tap flat5 补对 @(305,433)
+[  60.72s]     补对 step=1
+[  61.68s]   flat10 ch3 近形 洞=circle 瓦片=['heart', 'trapezoid', 'semicircle', 'circle'] near=None
+[  61.82s]   shot sr-09-ch3近形题.png
+[  61.97s]   tap flat10 探索点错 @(278,431)
+[  63.79s]     点错反馈=['n:587Hz'] miss=1
+[  64.01s]   tap flat10 补对 @(744,433)
+[  64.02s]     补对 step=1
+[  64.96s]   flat15 ch4 生成关 洞=trapezoid 瓦片=['diamond', 'trapezoid', 'triangle', 'semicircle'] near=None
+[  65.00s]   tap flat15 探索点错 @(304,412)
+[  66.27s]     点错反馈=['n:587Hz'] miss=1
+[  66.30s]   tap flat15 补对 @(451,408)
+[  66.30s]     补对 step=1
+[  66.37s]   shot sr-10-ch4生成关.png
+[  66.37s] == E 预置档不重置 ==
+[  68.88s]   预置档原文头60={"v":"1.0","game":"shaperoof","firstDay":"2026-09-09","lastD…
+[  68.99s]   预置档校验: v=1.0 levels={"1-0": {"stars": 3, "plays": 1}} settings.sound=False（应原样保留非重置）
+[  69.04s]   落关 flat=1（期望1=1-1，教学不复活 tut=none）
+[  69.20s]   shot sr-11-预置档不重置.png
+DONE shaperoof 69.5s

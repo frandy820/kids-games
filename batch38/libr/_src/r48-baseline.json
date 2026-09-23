@@ -1,0 +1,2488 @@
+{
+ "0": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 0,
+  "shelf": [
+   "food",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "cat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "apple",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "bread",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "chick",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   }
+  ]
+ },
+ "1": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 1,
+  "shelf": [
+   "food",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "apple",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "bread",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "chick",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "cat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   }
+  ]
+ },
+ "2": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 2,
+  "shelf": [
+   "animal",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "bread",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "chick",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "cat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "apple",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   }
+  ]
+ },
+ "3": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 3,
+  "shelf": [
+   "animal",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "bread",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "chick",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "cat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "apple",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   }
+  ]
+ },
+ "4": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 4,
+  "shelf": [
+   "animal",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "chick",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "cat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "apple",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "bread",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   }
+  ]
+ },
+ "5": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 0,
+  "shelf": [
+   "animal",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "goldfish",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "banana",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "elephant",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "milk",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   }
+  ]
+ },
+ "6": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 1,
+  "shelf": [
+   "animal",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "banana",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "elephant",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "milk",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "goldfish",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   }
+  ]
+ },
+ "7": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 2,
+  "shelf": [
+   "food",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "elephant",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "milk",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "goldfish",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "banana",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   }
+  ]
+ },
+ "8": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 3,
+  "shelf": [
+   "food",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "milk",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "goldfish",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "banana",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "elephant",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   }
+  ]
+ },
+ "9": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 4,
+  "shelf": [
+   "animal",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "goldfish",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "banana",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "elephant",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "milk",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   }
+  ]
+ },
+ "10": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 0,
+  "shelf": [
+   "clothes",
+   "animal",
+   "vehicle",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "coat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "car",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "farm",
+    "say": "它住在农场，是动物",
+    "answer": 1,
+    "n": 4
+   }
+  ]
+ },
+ "11": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 1,
+  "shelf": [
+   "animal",
+   "food",
+   "vehicle",
+   "clothes"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "car",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "farm",
+    "say": "它住在农场，是动物",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "coat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   }
+  ]
+ },
+ "12": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 2,
+  "shelf": [
+   "food",
+   "animal",
+   "clothes",
+   "vehicle"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "farm",
+    "say": "它住在农场，是动物",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "coat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "car",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   }
+  ]
+ },
+ "13": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 3,
+  "shelf": [
+   "vehicle",
+   "food",
+   "clothes",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "farm",
+    "say": "它住在农场，是动物",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "coat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "car",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   }
+  ]
+ },
+ "14": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 4,
+  "shelf": [
+   "food",
+   "animal",
+   "vehicle",
+   "clothes"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "farm",
+    "say": "它住在农场，是动物",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "coat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "car",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   }
+  ]
+ },
+ "15": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 0,
+  "shelf": [
+   "vehicle",
+   "clothes",
+   "food",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "egg",
+    "target": null,
+    "cards": null,
+    "hint": "eat",
+    "say": "我们能吃它，是食物",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "glove",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "pet",
+    "say": "毛茸茸的朋友是动物",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 1,
+    "n": 4
+   }
+  ]
+ },
+ "16": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 1,
+  "shelf": [
+   "food",
+   "vehicle",
+   "clothes",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "glove",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "pet",
+    "say": "毛茸茸的朋友是动物",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "egg",
+    "target": null,
+    "cards": null,
+    "hint": "eat",
+    "say": "我们能吃它，是食物",
+    "answer": 0,
+    "n": 4
+   }
+  ]
+ },
+ "17": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 2,
+  "shelf": [
+   "animal",
+   "clothes",
+   "food",
+   "vehicle"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "pet",
+    "say": "毛茸茸的朋友是动物",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "egg",
+    "target": null,
+    "cards": null,
+    "hint": "eat",
+    "say": "我们能吃它，是食物",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "glove",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 4
+   }
+  ]
+ },
+ "18": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 3,
+  "shelf": [
+   "vehicle",
+   "food",
+   "animal",
+   "clothes"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "egg",
+    "target": null,
+    "cards": null,
+    "hint": "eat",
+    "say": "我们能吃它，是食物",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "glove",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "pet",
+    "say": "毛茸茸的朋友是动物",
+    "answer": 2,
+    "n": 4
+   }
+  ]
+ },
+ "19": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 4,
+  "shelf": [
+   "animal",
+   "clothes",
+   "vehicle",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "egg",
+    "target": null,
+    "cards": null,
+    "hint": "eat",
+    "say": "我们能吃它，是食物",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "glove",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "pet",
+    "say": "毛茸茸的朋友是动物",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   }
+  ]
+ },
+ "20": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 0,
+  "shelf": [
+   "food",
+   "animal",
+   "clothes",
+   "vehicle"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "coat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "pet",
+    "say": "毛茸茸的朋友是动物",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "glove",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   }
+  ]
+ },
+ "21": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 1,
+  "shelf": [
+   "food",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "elephant",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "cat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "apple",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "chick",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   }
+  ]
+ },
+ "22": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 2,
+  "shelf": [
+   "clothes",
+   "animal",
+   "vehicle",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "pet",
+    "say": "毛茸茸的朋友是动物",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "egg",
+    "target": null,
+    "cards": null,
+    "hint": "eat",
+    "say": "我们能吃它，是食物",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   }
+  ]
+ },
+ "23": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 3,
+  "shelf": [
+   "vehicle",
+   "clothes",
+   "animal",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "farm",
+    "say": "它住在农场，是动物",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "pet",
+    "say": "毛茸茸的朋友是动物",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "glove",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   }
+  ]
+ },
+ "24": {
+  "ch": 5,
+  "dch": 1,
+  "lv": 4,
+  "shelf": [
+   "food",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "chick",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "cat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "elephant",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "bread",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   }
+  ]
+ },
+ "25": {
+  "ch": 6,
+  "dch": 3,
+  "lv": 0,
+  "shelf": [
+   "vehicle",
+   "animal",
+   "clothes",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "car",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "coat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   }
+  ]
+ },
+ "26": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 1,
+  "shelf": [
+   "animal",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "cat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "chick",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "banana",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "apple",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   }
+  ]
+ },
+ "27": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 2,
+  "shelf": [
+   "food",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "elephant",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "bread",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "goldfish",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "banana",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "apple",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   }
+  ]
+ },
+ "28": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 3,
+  "shelf": [
+   "animal",
+   "food",
+   "clothes",
+   "vehicle"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "farm",
+    "say": "它住在农场，是动物",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "car",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "egg",
+    "target": null,
+    "cards": null,
+    "hint": "eat",
+    "say": "我们能吃它，是食物",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   }
+  ]
+ },
+ "29": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 4,
+  "shelf": [
+   "clothes",
+   "animal",
+   "vehicle",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "pet",
+    "say": "毛茸茸的朋友是动物",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "glove",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   }
+  ]
+ },
+ "30": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 0,
+  "shelf": [
+   "food",
+   "vehicle",
+   "clothes",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "car",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "farm",
+    "say": "它住在农场，是动物",
+    "answer": 3,
+    "n": 4
+   }
+  ]
+ },
+ "31": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 1,
+  "shelf": [
+   "food",
+   "clothes",
+   "vehicle",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "pet",
+    "say": "毛茸茸的朋友是动物",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 1,
+    "n": 4
+   }
+  ]
+ },
+ "32": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 2,
+  "shelf": [
+   "vehicle",
+   "animal",
+   "clothes",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "farm",
+    "say": "它住在农场，是动物",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "glove",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "coat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   }
+  ]
+ },
+ "33": {
+  "ch": 7,
+  "dch": 1,
+  "lv": 3,
+  "shelf": [
+   "food",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "apple",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "bread",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "milk",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   }
+  ]
+ },
+ "34": {
+  "ch": 7,
+  "dch": 2,
+  "lv": 4,
+  "shelf": [
+   "food",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "milk",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "elephant",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "goldfish",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "chick",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "rabbit",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   }
+  ]
+ },
+ "35": {
+  "ch": 8,
+  "dch": 1,
+  "lv": 0,
+  "shelf": [
+   "animal",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "cat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "apple",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "milk",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "goldfish",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   },
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 2
+   }
+  ]
+ },
+ "36": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 1,
+  "shelf": [
+   "vehicle",
+   "food",
+   "clothes",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "coat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "egg",
+    "target": null,
+    "cards": null,
+    "hint": "eat",
+    "say": "我们能吃它，是食物",
+    "answer": 1,
+    "n": 4
+   }
+  ]
+ },
+ "37": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 2,
+  "shelf": [
+   "clothes",
+   "animal",
+   "vehicle",
+   "food"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "egg",
+    "target": null,
+    "cards": null,
+    "hint": "eat",
+    "say": "我们能吃它，是食物",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "car",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 2,
+    "n": 4
+   }
+  ]
+ },
+ "38": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 3,
+  "shelf": [
+   "vehicle",
+   "food",
+   "animal",
+   "clothes"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "egg",
+    "target": null,
+    "cards": null,
+    "hint": "eat",
+    "say": "我们能吃它，是食物",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "glove",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "car",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "skirt",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 3,
+    "n": 4
+   }
+  ]
+ },
+ "39": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 4,
+  "shelf": [
+   "clothes",
+   "vehicle",
+   "food",
+   "animal"
+  ],
+  "qs": [
+   {
+    "kind": "sort",
+    "card": "scarf",
+    "target": null,
+    "cards": null,
+    "hint": "wear",
+    "say": "天冷戴在脖子上是衣物",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "plane",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "coat",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 0,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "ship",
+    "target": null,
+    "cards": null,
+    "hint": "none",
+    "say": "它住哪一格呢",
+    "answer": 1,
+    "n": 4
+   },
+   {
+    "kind": "sort",
+    "card": "cow",
+    "target": null,
+    "cards": null,
+    "hint": "farm",
+    "say": "它住在农场，是动物",
+    "answer": 3,
+    "n": 4
+   }
+  ]
+ }
+}

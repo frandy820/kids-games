@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小兔百科问答</title>
+<style>
+/* ================= 小兔百科问答 quiz（batch20 升档）=================
+   视觉按 SPEC-BATCH20 §3（承家族暖米底）：每题=题面大卡（领域小标签+题面文字，
+   点题面卡=重听题句）+4 张带图选项卡（SVG 自绘小图标+文字）。点卡即判：
+   对=绿框闪光+qz_right+下一题；错=该卡抖动+零惩罚可重选（单选制，卡不消失），
+   1000ms 防重入窗。救援：方向级=题面类别小标签 pulse；答案级（miss≥2）=正确卡 breathe。
+   触摸目标：选项卡 ≥64、题面卡/底栏按钮 ≥72 高；pointerdown 即响应 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:40px;height:40px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 40px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E7D8C0;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E7D8C0}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:10px;overflow:hidden;padding:4px 12px}
+#tip{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:#8A7B6C}
+#tip .dot{width:10px;height:10px;border-radius:50%;background:#E8975A;flex:0 0 10px}
+#tip.flash{animation:tip-flash .55s ease}
+@keyframes tip-flash{0%,100%{background:none}40%{background:#F6E3C5;border-radius:10px}}
+
+/* ---------- 题面大卡（类别小标签 + 题面文字；点=重听题句） ---------- */
+#ask-area{flex:0 0 auto;width:100%;max-width:860px;display:flex;justify-content:center}
+#ask{position:relative;width:100%;min-height:96px;border-radius:22px;background:#F6ECD9;
+  border:2.5px solid #D9C5A6;box-shadow:0 3px 0 rgba(74,59,46,.12);cursor:pointer;
+  display:flex;align-items:center;gap:14px;padding:12px 18px 12px 14px;
+  transition:transform .15s;animation:ask-in .4s ease both}
+@keyframes ask-in{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+#ask:active{transform:translateY(2px)}
+#ask.flash{animation:ask-flash .55s ease 3}
+@keyframes ask-flash{0%,100%{background:#F6ECD9}40%{background:#F6E3C5}}
+#ask.breathe{animation:ask-breathe 1.6s ease-in-out infinite}
+@keyframes ask-breathe{0%,100%{box-shadow:0 3px 0 rgba(74,59,46,.12)}
+  50%{box-shadow:0 3px 14px rgba(232,151,90,.85)}}
+/* 类别小标签（方向级救援 pulse 目标）：竖排在题面卡左侧 */
+#ask-cat{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:3px;
+  min-width:64px;padding:6px 8px;border-radius:14px;background:#FFFAF0;
+  border:2px solid #E3D5BC}
+#ask-cat svg{width:34px;height:34px}
+#ask-cat .cn{font-size:13px;font-weight:800;color:#8A7B6C;letter-spacing:1px;white-space:nowrap}
+#ask-cat.pulse{animation:cat-pulse .5s ease 3}
+@keyframes cat-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.16) rotate(-4deg)}}
+#ask-text{flex:1 1 auto;font-size:23px;font-weight:800;line-height:1.4;color:#4A3B2E}
+
+/* ---------- 选项卡池（4 张带图卡：1 正确+3 同域干扰，升档） ---------- */
+#opt-area{flex:1 1 auto;min-height:130px;width:100%;max-width:1000px;display:flex;
+  flex-direction:column;justify-content:center;gap:6px}
+#opt-pool{display:flex;flex-wrap:wrap;justify-content:center;align-content:center;
+  gap:12px 14px;min-height:104px;padding:10px 12px;border-radius:22px;
+  background:#F6ECD9;border:2.5px dashed #D9C5A6}
+/* 选项卡：上图下字；点即判（对=.ok 绿框闪光；错=.wig 抖动不消失） */
+.opt{position:relative;width:206px;min-height:138px;border-radius:20px;background:#FFFAF0;
+  border:2.5px solid #4A3B2E;box-shadow:0 4px 0 rgba(74,59,46,.28);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  padding:9px 10px;transition:transform .15s;
+  animation:opt-in .4s cubic-bezier(.2,1.5,.4,1) both}
+.opt:nth-child(2n){animation-delay:.06s}.opt:nth-child(3n){animation-delay:.12s}
+@keyframes opt-in{from{transform:scale(0) rotate(-10deg)}to{transform:scale(1) rotate(0)}}
+.opt:active{transform:translateY(3px)}
+.opt .oi{height:48px;display:flex;align-items:center;justify-content:center}
+.opt .oi svg{width:46px;height:46px}
+.opt .ov{font-size:19px;font-weight:800;color:#4A3B2E;line-height:1.32;text-align:center}
+.opt.wig{animation:opt-wig .5s ease}
+@keyframes opt-wig{0%,100%{transform:translateX(0)}20%{transform:translateX(-10px)}
+  45%{transform:translateX(9px)}70%{transform:translateX(-6px)}90%{transform:translateX(3px)}}
+.opt.ok{border-color:#8FBF7F;background:#EDF5E3;animation:opt-ok .55s ease}
+@keyframes opt-ok{0%{transform:scale(1)}45%{transform:scale(1.08)}100%{transform:scale(1)}}
+.opt.dim{opacity:.45;pointer-events:none}
+.opt.breathe{animation:opt-breathe 1.6s ease-in-out infinite}
+@keyframes opt-breathe{0%,100%{transform:scale(1);box-shadow:0 4px 0 rgba(74,59,46,.28)}
+  50%{transform:scale(1.1);box-shadow:0 4px 14px rgba(232,151,90,.85)}}
+.opt.pulse{animation:opt-pulse .5s ease 3}
+@keyframes opt-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18) rotate(5deg)}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 cipher/read 家族） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFFAF0;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：4 卡一行仍 ≥64；题面字略缩 */
+@media (orientation:portrait){
+  .opt{width:176px;min-height:128px}
+  .opt .oi svg{width:42px;height:42px}
+  .opt .ov{font-size:16px}
+  #ask-text{font-size:20px}
+  #ask-cat svg{width:30px;height:30px}
+  #opt-pool{gap:10px 10px}
+  #opt-area{min-height:150px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="小兔百科问答">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="tip" aria-label="玩法提示"><span class="dot"></span><span id="tip-text">听一听题目，点你喜欢的答案卡</span></div>
+    <div id="ask-area">
+      <button id="ask" aria-label="题目，点一点再听一遍">
+        <span id="ask-cat" aria-hidden="true"></span>
+        <span id="ask-text"></span>
+      </button>
+    </div>
+    <div id="opt-area">
+      <div id="opt-pool" aria-label="答案卡"></div>
+    </div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="读一读题目"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>分数披萨</title>
+<style>
+/* ================= fraction 分数披萨（batch12 · r15 难度改造 2026-09-16）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E、灰蓝错误色（不用大红）
+   玩法 = 四题型点选（灰化款；r15 五章×8 题，AUDIT-78:78）：
+   A cut 切分判断（4 选 1）——"哪一个是平均分成了 3 份"（正确=n 等分披萨；干扰=n 份不均[角宽差≥1.5 倍]/
+     (n+1) 等分/(n+1) 份不均[r15 非平均切干扰]），题面文字含大数字；
+   B read 分数识别——题面披萨涂色 k/n 份，选项=大分数字卡（干扰=k/(n+1)、(k+1)/n、n/k
+     按值域过滤取真分数）；
+   C cmp 比大小——两块同尺寸披萨块（同分子/同分母对），"哪一块大"点大的；
+   E eq 等值匹配（r15 新题型）——题面参照披萨块，"哪一块和它一样大"点等值块（1/2=2/4）。
+   披萨/披萨块全部 SVG 扇形 path 生成（等分角计算，结构化图形禁栅格）。
+   答错 = 晃动灰掉 pointer-events:none（排除法保底）；首错不 pulse，miss≥2 正确卡
+   pulse（1s ease 2 两遍，math/worden 家族）；救援 14s = 重读题面 + 正确卡 breathe 循环。
+   触摸目标：答案卡 = 主答案按钮 ≥96×96（§0.9）；底栏按钮 ≥64；overflowX 恒 0。
+   竖屏双通道（r15 三件套）：@media (orientation:portrait) 与 body.port 类逐条等值——
+   body.port 供 verify simView 在横屏视口内模拟竖屏（与 @media 双通道同步维护）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 48px;display:flex;align-items:center;padding:4px 60px 0 14px;gap:14px}
+#logo{width:38px;height:38px;border-radius:11px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 38px}
+#step-dots{display:flex;gap:6px;align-items:center;flex:1 1 auto}
+#step-dots i{width:11px;height:11px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：题面行（问句文字 / read=涂色披萨 / eq=参照披萨块，+小问句）+ 答案卡区 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:14px;overflow:hidden;padding:8px 14px}
+
+/* 题面卡：点题卡 = 重听题面（儿童高发探索动作） */
+#prompt{flex:0 0 auto;display:flex;align-items:center;justify-content:center;min-height:118px;padding:0 8px}
+#prompt-chip{position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;
+  min-width:180px;min-height:104px;padding:10px 36px 12px;border-radius:26px;background:#FFF9EE;
+  border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;transition:transform .15s}
+#prompt-chip:active{transform:translateY(3px)}
+.qtext{font-size:25px;font-weight:700;letter-spacing:.02em;animation:q-in .3s ease}
+.qtext b{display:inline-block;font-size:42px;line-height:1;color:#C77A42;padding:0 5px;vertical-align:-5px}
+.qtext.small{font-size:19px;color:#8A7B6C;font-weight:600}
+@keyframes q-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.pwrap{width:128px;height:128px;animation:q-in .3s ease}
+/* 答对：题面亮绿 + 弹一下 */
+#prompt-chip.paired{border-color:#6FA063;box-shadow:0 5px 0 #8FBF7F;
+  animation:chip-pair .55s cubic-bezier(.2,1.6,.4,1)}
+@keyframes chip-pair{0%{transform:scale(1)}45%{transform:scale(1.08)}100%{transform:scale(1)}}
+
+/* ---------- 答案卡区：cut 4 披萨卡（r15）/ read 3 分数卡 / cmp 2·eq 3 披萨块卡，卡 = 主答案 ≥96×96 ---------- */
+#board{flex:0 0 auto;display:flex;gap:18px;justify-content:center;align-items:stretch;
+  width:100%;max-width:820px;padding:0 2px}
+.card{position:relative;background:#FFF9EE;border:3px solid #4A3B2E;border-radius:22px;
+  box-shadow:0 5px 0 #D8C9B4;flex:0 0 auto;width:136px;min-height:158px;
+  display:flex;align-items:center;justify-content:center;transition:transform .15s}
+.card:active{transform:translateY(3px)}
+#board[data-k="cmp"] .card,#board[data-k="eq"] .card{width:172px;min-height:180px}
+.card .gwrap{width:114px;height:114px;display:flex;align-items:center;justify-content:center;pointer-events:none}
+#board[data-k="cmp"] .card .gwrap,#board[data-k="eq"] .card .gwrap{width:148px;height:148px}
+/* 分数字卡：分子/横线/分母 大字（§0.19 关键数字大字） */
+.frac{display:inline-flex;flex-direction:column;align-items:center;line-height:1;pointer-events:none}
+.frac b{font-size:46px;font-weight:800;color:#4A3B2E}
+.fbar{width:64px;height:5.5px;border-radius:4px;background:#4A3B2E;margin:7px 0}
+/* 入场弹跳（换题 stagger） */
+.card.pop{animation:card-in .42s cubic-bezier(.2,1.6,.4,1) backwards}
+@keyframes card-in{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+/* 答对：卡绿 + 弹一下 */
+.card.lit{border-color:#6FA063;box-shadow:0 5px 0 #8FBF7F;
+  animation:card-lit .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes card-lit{0%{transform:scale(1)}45%{transform:scale(1.1)}100%{transform:scale(1)}}
+/* 答错：晃动后灰掉（零惩罚排除法保底；已灰卡不可点——真实点击落穿到空白轻提示路径 §0.7/§0.16） */
+.card.wig{animation:an-wig .55s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-7deg)}
+  55%{transform:rotate(6deg)}80%{transform:rotate(-3deg)}}
+.card.dim{opacity:.42;transform:scale(.93);pointer-events:none;box-shadow:0 3px 0 #D8C9B4}
+/* 连错 2 次后：正确卡 pulse 两遍（首错不 pulse，math/worden 家族 1s ease 2） */
+.card.pulse{animation:card-pulse 1s ease 2}
+@keyframes card-pulse{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+/* 救援视觉重现（§0.21）：正确卡 breathe 循环持续在屏 */
+.card.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+@keyframes an-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch9-11） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* ---------- 竖屏通道 A：@media（平板竖持）：r15 四卡（cut 4×120+3×16=528 ≤800）----------
+   主答案卡仍 ≥96；eq 卡随 cmp 档 */
+@media (orientation:portrait){
+  #board{gap:16px}
+  .card{width:120px;min-height:144px}
+  #board[data-k="cmp"] .card,#board[data-k="eq"] .card{width:156px;min-height:164px}
+  .card .gwrap{width:100px;height:100px}
+  #board[data-k="cmp"] .card .gwrap,#board[data-k="eq"] .card .gwrap{width:132px;height:132px}
+  .frac b{font-size:42px}
+  .fbar{width:56px}
+  #prompt{min-height:112px}
+  #prompt-chip{min-width:158px;min-height:100px;padding:8px 28px 10px}
+  .pwrap{width:118px;height:118px}
+  .qtext{font-size:23px}
+  .qtext b{font-size:38px}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+}
+/* ---------- 竖屏通道 B：body.port 类（verify simView 模拟竖屏——与上方 @media 逐条等值，双通道同步 r15） ---------- */
+body.port #board{gap:16px}
+body.port .card{width:120px;min-height:144px}
+body.port #board[data-k="cmp"] .card,body.port #board[data-k="eq"] .card{width:156px;min-height:164px}
+body.port .card .gwrap{width:100px;height:100px}
+body.port #board[data-k="cmp"] .card .gwrap,body.port #board[data-k="eq"] .card .gwrap{width:132px;height:132px}
+body.port .frac b{font-size:42px}
+body.port .fbar{width:56px}
+body.port #prompt{min-height:112px}
+body.port #prompt-chip{min-width:158px;min-height:100px;padding:8px 28px 10px}
+body.port .pwrap{width:118px;height:118px}
+body.port .qtext{font-size:23px}
+body.port .qtext b{font-size:38px}
+body.port #btn-rabbit{width:78px;height:78px}
+body.port #btn-rabbit svg{width:64px;height:64px}
+</style>
+</head>
+<body>
+<div id="game" aria-label="分数披萨">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="prompt">
+      <button id="prompt-chip" aria-label="题目，点我再听一遍"></button>
+    </div>
+    <div id="board" aria-label="答案卡片"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

@@ -1,0 +1,47 @@
+[   0.9s] OPEN file:///F:/claudecode/projects/active/kids-games/batch10/habit/index.html
+[   1.7s] A 开档 tutorial='watch' 题面='✋\n洗手\n，先做什么呀？'
+[   1.9s] SNAP habit_A0_tut_start.png
+[   2.4s] A 乱点天空后 tutorial='watch'
+[   2.8s] A 乱点错误卡后 tutorial='watch' pos=0 miss=0（应仍watch/0/0）
+[   4.6s] A 教学进入 help 幽灵手指class=''
+[   4.7s] SNAP habit_A2_tut_help.png
+[   7.6s] A 教学首答后 tutorial='solo'（应solo）
+[   7.7s] A2 1-0 第1题 流程='洗手'(xishou) 5步 卡=['0:🧼|抹肥皂搓泡泡', '1:💧|冲掉泡泡', '2:🚰|关水龙头', '3:🧺|毛巾擦干', '4:(gone)']
+[  17.3s] A2 1-0 第2题 流程='起床'(qichuang) 5步 卡=['0:🥱|睁开眼坐起来', '1:🥣|吃早餐', '2:👕|穿好衣服', '3:🪥|刷牙洗脸', '4:🧦|穿袜子鞋子']
+[  30.3s] A2 1-0 第3题 流程='洗手'(xishou) 5步 卡=['0:💧|冲掉泡泡', '1:🚰|关水龙头', '2:🧺|毛巾擦干', '3:🚿|开龙头冲湿手', '4:🧼|抹肥皂搓泡泡']
+[  43.1s] A2 1-0 第4题 流程='洗手'(xishou) 5步 卡=['0:🚰|关水龙头', '1:🧼|抹肥皂搓泡泡', '2:🚿|开龙头冲湿手', '3:🧺|毛巾擦干', '4:💧|冲掉泡泡']
+[  57.3s] A2 1-0 第5题 流程='洗手'(xishou) 5步 卡=['0:🚰|关水龙头', '1:🚿|开龙头冲湿手', '2:🧼|抹肥皂搓泡泡', '3:🧺|毛巾擦干', '4:💧|冲掉泡泡']
+[  69.7s] A2 1-0 流程记录 [{'hid': 'xishou', 'name': '洗手', 'steps': 5}, {'hid': 'qichuang', 'name': '起床', 'steps': 5}, {'hid': 'xishou', 'name': '洗手', 'steps': 5}, {'hid': 'xishou', 'name': '洗手', 'steps': 5}, {'hid': 'xishou', 'name': '洗手', 'steps': 5}]
+[  69.8s] A2 CELEBRATE 星星=3 文案='★/★/★/真棒！'
+[  69.8s] SNAP habit_celebrate_A2.png
+[  75.3s] A2 存档 levels[1-0] = {'stars': 3, 'plays': 1}
+[  75.3s] A2 当前关 flat=1（应自动进 1-1）
+[  76.3s] B 1-1 第1题 流程='洗手' 卡=['0:🧺|毛巾擦干', '1:💧|冲掉泡泡', '2:🧼|抹肥皂搓泡泡', '3:🚰|关水龙头', '4:🚿|开龙头冲湿手']
+[  78.4s] B 错1后 miss=1 错卡class='card pop wig' 应点卡class='card pop'（首错不pulse）
+[  79.3s] B 错2后 miss=2 应点卡class='card pop breathe'（breathe=高亮提示）
+[  79.3s] SNAP habit_B2_wrong2_breathe.png
+[  80.1s] B 错3后 miss=3（不灰化不卡死，可无限重点）
+[  82.5s] B 纠正后 pos=1 step=0（推进）
+[  92.0s] C 静置前 流程='起床' pos=0
+[ 105.1s] C ★救援视觉出现 @13.1s 应点卡class='card pop pulse' pos未推进=0
+[ 105.2s] SNAP habit_C_rescue_pulse.png
+[ 112.2s] C 静置结束 first_pulse=13.1
+[ 112.2s] D1 seed n=6 关数=6 reload
+[ 115.0s] D1 DAYEND overlay=1 文案='今天的新关卡玩完啦/明天：过马路和睡前准备，都要记住哦/再玩玩旧关卡/明天见'
+[ 115.0s] D1 n=6 重开后 flat=0 ch=1 dayend=1
+[ 115.0s] SNAP habit_D1_dayend_n6.png
+[ 117.8s] D2 seed n=5 重开后 flat=5 ch=2 lv=0
+[ 117.8s] D2 DAYEND overlay=0 文案=None
+[ 117.8s] SNAP habit_D2_ch2_start.png
+[ 117.8s] D2 2-0 第1题 流程='穿衣'(chuanyi) 4步 卡=['0:🧥|拉好拉链', '1:🙌|先穿袖子', '2:🔍|分清前后', '3:✨|照照镜子'] 题面='🎽\n穿衣\n，先做什么呀？'
+[ 128.6s] D2 2-0 第2题 流程='刷牙'(shuaya) 4步 卡=['0:🦷|上下刷刷', '1:😊|擦嘴挂好毛巾', '2:💦|漱口', '3:🧴|挤牙膏'] 题面='😁\n刷牙\n，先做什么呀？'
+[ 130.7s] D2 ch2 错1次后 miss=1 应点卡class='card pop'
+[ 140.4s] D2 2-0 第3题 流程='刷牙'(shuaya) 4步 卡=['0:🧴|挤牙膏', '1:🦷|上下刷刷', '2:😊|擦嘴挂好毛巾', '3:💦|漱口'] 题面='😁\n刷牙\n，先做什么呀？'
+[ 150.7s] D2 2-0 第4题 流程='穿衣'(chuanyi) 4步 卡=['0:🔍|分清前后', '1:🧥|拉好拉链', '2:✨|照照镜子', '3:🙌|先穿袖子'] 题面='🎽\n穿衣\n，先做什么呀？'
+[ 161.1s] D2 2-0 第5题 流程='刷牙'(shuaya) 4步 卡=['0:💦|漱口', '1:🧴|挤牙膏', '2:🦷|上下刷刷', '3:😊|擦嘴挂好毛巾'] 题面='😁\n刷牙\n，先做什么呀？'
+[ 171.8s] D2 CELEBRATE 星星=2 文案='★/★/好棒！'
+[ 171.9s] SNAP habit_celebrate_D2.png
+[ 177.4s] D2 存档 levels[2-0] = {'stars': 2, 'plays': 1}
+[ 177.4s] D2后 DAYEND overlay=1 文案='今天的新关卡玩完啦/明天：过马路和睡前准备，都要记住哦/再玩玩旧关卡/明天见'
+[ 177.4s] E 审计 {'prompt': '😁\n刷牙\n，先做什么呀？', 'p_name_px': '32px', 'c_word_px': '17px', 'c_emoji_px': '44px'}
+[ 177.4s] DONE errors=[]

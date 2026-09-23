@@ -1,0 +1,117 @@
+====== ruler ======
+  [   0.01] page_loaded {"title": "测量小尺"}
+  [   0.01] phase {"name": "教学关 flat0（watch 演示）"}
+  [   1.70] shot {"file": "ruler_f0_teach.png"}
+  [   1.70] tut_watch_state {"state": "watch"}
+  [   3.01] tut_watch_tap_swallowed {"step_same": true, "voice": ["<clip:rul_tut_watch>", "TTS:看！用回形针量一量", "TTS:铅笔有四根回形针长"]}
+  [   7.36] tut_state {"state": "help", "wait_s": 4.3}
+  [   8.24] shot {"file": "ruler_f0_turn.png"}
+  [   9.31] tap {"card": 0, "note": "teach 题1 错1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":1}", "bump": "bump", "voice": ["<clip:rul_tut_turn>", "<cli
+  [  15.26] shot {"file": "ruler_f0_wrong.png"}
+  [  16.32] tap {"card": 0, "note": "teach 题1 重复同错卡（手痒）", "before": "{\"s\":0,\"m\":1}", "after": "{\"s\":0,\"m\":2}", "bump": "bump", "voice": ["<clip:rul_q>", "<cli
+  [  23.28] tap {"card": 2, "note": "teach 题1 点对", "before": "{\"s\":0,\"m\":2}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:还有一小段，再多数一根", "TTS:铅笔有四
+  [  29.07] tap {"card": 0, "note": "teach 题2 错1", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":1,\"m\":1}", "bump": "bump", "voice": ["<clip:rul_q>", "<clip:rul_w
+  [  36.03] tap {"card": 3, "note": "teach 题2 点对", "before": "{\"s\":1,\"m\":1}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["TTS:没有那么多，再数数", "TTS:蜡笔有三根回
+  [  43.17] tap {"card": 1, "note": "teach 题3 点对", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:橡皮有二根回形
+  [  49.57] tap {"card": 1, "note": "teach 题4 点对", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:剪刀有四根回形
+  [  55.86] tap {"card": 3, "note": "teach 题5 点对", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:玩具车有五
+  [  67.88] flat_done {"flat": 0, "level": "1-0", "stars": {"stars": 1, "plays": 1}}
+  [  67.88] phase {"name": "flat1 点空白+正常玩"}
+  [  72.32] blank_tap {"note": "flat1 点左上空白", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":0}", "voice": ["<clip:rul_right>", "<clip:rul_q>"]}
+  [  72.32] blank_result {"no_reaction": false}
+  [  75.22] tap {"card": 3, "note": "flat1 题1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:蜡笔有三根回形针长"]}
+  [  82.17] tap {"card": 3, "note": "flat1 题2", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:橡皮有二根回形针长"
+  [  88.91] tap {"card": 3, "note": "flat1 题3", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:剪刀有四根回形针长"
+  [  95.97] tap {"card": 0, "note": "flat1 题4", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:玩具车有五根回形针长
+  [ 102.14] tap {"card": 3, "note": "flat1 题5", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:故事书有六根回形
+  [ 114.19] flat_done {"flat": 1, "level": "1-1", "stars": {"stars": 3, "plays": 1}}
+  [ 114.19] phase {"name": "flat2 首题犹豫 15.5s（观察 14s 方向级救援）"}
+  [ 129.71] idle {"sec": 15.5, "note": "flat2 首题犹豫", "voice": ["<clip:rul_right>", "<clip:rul_q>", "<clip:rul_q>"]}
+  [ 129.71] rescue_check {"waited_s": 15.5, "voices": ["<clip:rul_right>", "<clip:rul_q>", "<clip:rul_q>"]}
+  [ 129.76] shot {"file": "ruler_f2_rescue.png"}
+  [ 132.05] tap {"card": 3, "note": "flat2 题1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:橡皮有二根回形针长"]}
+  [ 138.28] tap {"card": 1, "note": "flat2 题2", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:剪刀有四根回形针长"
+  [ 145.19] tap {"card": 1, "note": "flat2 题3", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:玩具车有五根回形针长
+  [ 152.23] tap {"card": 0, "note": "flat2 题4", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:故事书有六根回形针长
+  [ 158.78] tap {"card": 0, "note": "flat2 题5", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:铅笔有四根回形针
+  [ 170.81] flat_done {"flat": 2, "level": "1-2", "stars": {"stars": 3, "plays": 1}}
+  [ 170.81] phase {"name": "flat3 手痒连点+错反馈节流"}
+  [ 171.88] tap {"card": 0, "note": "flat3 题1 错1", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":1}", "bump": "bump", "voice": ["<clip:rul_right>", "<clip:r
+  [ 174.54] shot {"file": "ruler_f3_wrongfb.png"}
+  [ 175.34] rapid_double_tap {"miss_before": 1, "miss_after": 2, "voice": ["TTS:没有那么多，再数数"]}
+  [ 175.38] shot {"file": "ruler_f3_rapidtap.png"}
+  [ 176.43] tap {"card": 0, "note": "flat3 节流窗内二击（预期 miss+1 零语音）", "before": "{\"s\":0,\"m\":2}", "after": "{\"s\":0,\"m\":2}", "bump": "bump", "voice": []}
+  [ 177.65] throttle_window {"miss_before": 2, "miss_after": 2, "voice": []}
+  [ 178.71] tap {"card": 1, "note": "flat3 题1 对", "before": "{\"s\":0,\"m\":2}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:剪刀有四根回形针长"]}
+  [ 184.89] tap {"card": 2, "note": "flat3 题2", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:玩具车有五根回形针长
+  [ 191.70] tap {"card": 2, "note": "flat3 题3", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:故事书有六根回形针长
+  [ 198.04] tap {"card": 0, "note": "flat3 题4", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:铅笔有四根回形针长"
+  [ 204.29] tap {"card": 2, "note": "flat3 题5", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:蜡笔有三根回形针
+  [ 216.33] flat_done {"flat": 3, "level": "1-3", "stars": {"stars": 2, "plays": 1}}
+  [ 216.33] phase {"name": "flat4 正常玩 顺利"}
+  [ 218.79] tap {"card": 0, "note": "flat4 题1 对", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_right>", "<clip:ru
+  [ 225.20] tap {"card": 1, "note": "flat4 题2 对", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:故事书有六根回形
+  [ 231.91] tap {"card": 1, "note": "flat4 题3 对", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:铅笔有四根回形针
+  [ 239.11] tap {"card": 2, "note": "flat4 题4 对", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:蜡笔有三根回形针
+  [ 246.14] tap {"card": 1, "note": "flat4 题5 对", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["<clip:rul_q>", "TTS:橡皮有二根回
+  [ 256.28] panel_close {"pattern": "明天见", "btn": "明天见"}
+  [ 257.41] flat_done {"flat": 4, "level": "1-4", "stars": {"stars": 3, "plays": 1}}
+  [ 257.41] phase {"name": "flat5 正常玩 当日最后一关"}
+  [ 260.78] tap {"card": 3, "note": "flat5 题1 对", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["<clip:rul_right>", "<clip:co
+  [ 267.74] tap {"card": 0, "note": "flat5 题2 对", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["TTS:橡皮有几根小棒长？", "TTS:橡皮有一根小棒
+  [ 274.63] tap {"card": 2, "note": "flat5 题3 对", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["TTS:剪刀有几根小棒长？", "TTS:剪刀有二根小棒
+  [ 280.94] tap {"card": 0, "note": "flat5 题4 对", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["TTS:故事书有几根小棒长？", "TTS:故事书有三根
+  [ 291.14] cards_mismatch {"idx": 2, "want": "1根", "got": "1块", "cards": ["2块", "3块", "1块", "4块"]}
+  [ 292.20] tap {"card": 2, "note": "flat5 题5 对", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":-1,\"m\":-1}", "bump": "bump", "voice": ["TTS:蜡笔有几块积木长？", "TTS:蜡笔有一块
+  [ 296.63] flat_done {"flat": 5, "level": null, "stars": null}
+  [ 299.14] phase {"name": "dayEnd 明天预告+家长门"}
+  [ 299.65] dayend_panels {"panels": [{"cls": "pulse", "txt": "蜡笔有几块积木长？"}, {"cls": "ncard card pop", "txt": "2块"}, {"cls": "ncard card pop", "txt": "3块"}, {"cls": "ncard card 
+  [ 299.70] shot {"file": "ruler_dayend.png"}
+  [ 299.71] click_by_text {"pattern": "再玩|旧关|明天见", "hit": "再玩玩旧关卡", "note": "dayEnd/章末 关闭"}
+  [ 302.50] parent_panels {"panels": [{"cls": "pulse", "txt": "蜡笔有几块积木长？"}, {"cls": "ncard card pop", "txt": "2块"}, {"cls": "ncard card pop", "txt": "3块"}, {"cls": "ncard card 
+  [ 302.56] shot {"file": "ruler_parentpanel.png"}
+  [ 302.56] parent_gate_q {"q": "41 + 35 = ?"}
+  [ 302.58] click_by_text {"pattern": "^7$", "hit": "7", "note": "家长门数字 7"}
+  [ 303.01] click_by_text {"pattern": "^6$", "hit": "6", "note": "家长门数字 6"}
+  [ 305.23] parent_unlock_answer {"q": "41 + 35 = ?", "ans": "76"}
+  [ 305.28] shot {"file": "ruler_parentpanel_after.png"}
+  [ 305.28] phase {"name": "flat6-9 快进 autoSolve（真实判定链）"}
+  [ 382.25] panel_close_not_effective {"pattern": "再玩玩旧关卡"}
+  [ 384.02] panel_close {"pattern": "明天见", "btn": "明天见"}
+  [ 384.64] flat_done {"flat": 6, "level": null, "stars": null, "auto": true}
+  [ 457.69] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [ 458.31] flat_done {"flat": 7, "level": null, "stars": null, "auto": true}
+  [ 531.32] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [ 531.93] flat_done {"flat": 8, "level": null, "stars": null, "auto": true}
+  [ 604.98] panel_close {"pattern": "再玩玩旧关卡", "btn": "再玩玩旧关卡"}
+  [ 605.58] flat_done {"flat": 9, "level": null, "stars": null, "auto": true}
+  [ 605.58] phase {"name": "flat10 ch3 难关真实点击"}
+  [ 645.89] shot {"file": "ruler_f10_ch3.png"}
+  [ 657.77] idle {"sec": 8.5, "note": "flat10 题1 读题后静置", "voice": ["<clip:rul_right>", "<clip:core_day_end>", "<clip:rul_right>", "<clip:core_day_end>", "<clip:rul_rig
+  [ 658.82] tap {"card": 1, "note": "flat10 题1 定向错点", "before": "{\"s\":0,\"m\":0}", "after": "{\"s\":0,\"m\":1}", "bump": "bump", "voice": ["<clip:rul_wrong>"]}
+  [ 658.87] shot {"file": "ruler_f10_wrongfb.png"}
+  [ 670.12] wrong_chain {"q": {"kind": "count", "item": "pencil", "unit": "stick", "true_recalc": 2, "impl_units": 2, "picked": 3}, "chain_voice": ["<clip:rul_wrong>", "TTS:没
+  [ 672.00] tap {"card": 3, "note": "flat10 题1 对", "before": "{\"s\":0,\"m\":1}", "after": "{\"s\":1,\"m\":0}", "bump": "bump", "voice": ["TTS:铅笔有二根小棒长"]}
+  [ 687.89] idle {"sec": 8.5, "note": "flat10 题2 读题后静置", "voice": ["TTS:橡皮有几根小棒长？", "TTS:橡皮有几根小棒长？"]}
+  [ 688.95] tap {"card": 2, "note": "flat10 题2 定向错点", "before": "{\"s\":1,\"m\":0}", "after": "{\"s\":1,\"m\":1}", "bump": "bump", "voice": ["<clip:rul_wrong>"]}
+  [ 700.19] wrong_chain {"q": {"kind": "count", "item": "eraser", "unit": "stick", "true_recalc": 1, "impl_units": 1, "picked": 2}, "chain_voice": ["<clip:rul_wrong>", "TTS:没
+  [ 702.08] tap {"card": 0, "note": "flat10 题2 对", "before": "{\"s\":1,\"m\":1}", "after": "{\"s\":2,\"m\":0}", "bump": "bump", "voice": ["TTS:橡皮有几根小棒长？", "TTS:橡皮有一根小
+  [ 717.97] idle {"sec": 8.5, "note": "flat10 题3 读题后静置", "voice": ["TTS:剪刀有几根小棒长？", "TTS:剪刀有几根小棒长？"]}
+  [ 719.03] tap {"card": 1, "note": "flat10 题3 定向错点", "before": "{\"s\":2,\"m\":0}", "after": "{\"s\":2,\"m\":1}", "bump": "bump", "voice": ["<clip:rul_wrong>"]}
+  [ 730.29] wrong_chain {"q": {"kind": "count", "item": "scissors", "unit": "stick", "true_recalc": 2, "impl_units": 2, "picked": 1}, "chain_voice": ["<clip:rul_wrong>", "TTS
+  [ 732.17] tap {"card": 2, "note": "flat10 题3 对", "before": "{\"s\":2,\"m\":1}", "after": "{\"s\":3,\"m\":0}", "bump": "bump", "voice": ["TTS:剪刀有几根小棒长？", "TTS:剪刀有二根小
+  [ 748.04] idle {"sec": 8.5, "note": "flat10 题4 读题后静置", "voice": ["TTS:故事书有几根小棒长？", "TTS:故事书有几根小棒长？"]}
+  [ 749.10] tap {"card": 2, "note": "flat10 题4 定向错点", "before": "{\"s\":3,\"m\":0}", "after": "{\"s\":3,\"m\":1}", "bump": "bump", "voice": ["<clip:rul_wrong>"]}
+  [ 760.35] wrong_chain {"q": {"kind": "count", "item": "book", "unit": "stick", "true_recalc": 3, "impl_units": 3, "picked": 2}, "chain_voice": ["<clip:rul_wrong>", "TTS:还有一
+  [ 762.22] tap {"card": 0, "note": "flat10 题4 对", "before": "{\"s\":3,\"m\":1}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": ["TTS:故事书有几根小棒长？", "TTS:故事书有三
+  [ 778.11] idle {"sec": 8.5, "note": "flat10 题5 读题后静置", "voice": ["<clip:core_rest>", "TTS:蜡笔有几块积木长？", "TTS:蜡笔有几块积木长？"]}
+  [ 782.39] cards_mismatch {"idx": 0, "want": "2根", "got": "2块", "cards": ["2块", "3块", "1块", "4块"]}
+  [ 783.45] tap {"card": 0, "note": "flat10 题5 定向错点", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": []}
+  [ 794.71] wrong_chain {"q": {"kind": "count", "item": "crayon", "unit": "block", "true_recalc": 1, "impl_units": 1, "picked": 2}, "chain_voice": ["TTS:蜡笔有几块积木长？", "TTS:蜡笔有几
+  [ 799.80] cards_mismatch {"idx": 2, "want": "1根", "got": "1块", "cards": ["2块", "3块", "1块", "4块"]}
+  [ 800.86] tap {"card": 2, "note": "flat10 题5 对", "before": "{\"s\":4,\"m\":0}", "after": "{\"s\":4,\"m\":0}", "bump": "bump", "voice": []}
+  [ 829.88] flat_done {"flat": 10, "level": null, "stars": null}
+  [ 831.39] end_panels {"panels": [{"cls": "pulse", "txt": "蜡笔有几块积木长？"}, {"cls": "ncard card pop", "txt": "2块"}, {"cls": "ncard card pop", "txt": "3块"}, {"cls": "ncard card 
+  [ 831.45] shot {"file": "ruler_chapend.png"}
+  -> play_log_ruler.json  events=115 tts=123 clips=53 nb=0 perr=[]
+DONE

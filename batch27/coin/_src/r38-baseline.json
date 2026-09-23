@@ -1,0 +1,5082 @@
+{
+ "0": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   }
+  ]
+ },
+ "1": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   }
+  ]
+ },
+ "2": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   }
+  ]
+ },
+ "3": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   }
+  ]
+ },
+ "4": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   }
+  ]
+ },
+ "5": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   }
+  ]
+ },
+ "6": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   }
+  ]
+ },
+ "7": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   }
+  ]
+ },
+ "8": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   }
+  ]
+ },
+ "9": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   }
+  ]
+ },
+ "10": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "yuan20",
+      "text": "20元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   }
+  ]
+ },
+ "11": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan20",
+      "text": "20元"
+     },
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "yuan20",
+      "text": "20元"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     }
+    ]
+   }
+  ]
+ },
+ "12": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "yuan5",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     }
+    ]
+   }
+  ]
+ },
+ "13": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     }
+    ]
+   }
+  ]
+ },
+ "14": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan20",
+      "text": "20元"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   }
+  ]
+ },
+ "15": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     }
+    ]
+   }
+  ]
+ },
+ "16": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan20",
+      "text": "20元"
+     }
+    ]
+   }
+  ]
+ },
+ "17": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   }
+  ]
+ },
+ "18": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     }
+    ]
+   }
+  ]
+ },
+ "19": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     }
+    ]
+   }
+  ]
+ },
+ "20": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "yuan5",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     }
+    ]
+   }
+  ]
+ },
+ "21": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   }
+  ]
+ },
+ "22": {
+  "ch": 5,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     },
+     {
+      "id": "jiao5",
+      "text": "5角"
+     }
+    ]
+   }
+  ]
+ },
+ "23": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   }
+  ]
+ },
+ "24": {
+  "ch": 5,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   }
+  ]
+ },
+ "25": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   }
+  ]
+ },
+ "26": {
+  "ch": 6,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   }
+  ]
+ },
+ "27": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan20",
+      "text": "20元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     },
+     {
+      "id": "yuan20",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     }
+    ]
+   }
+  ]
+ },
+ "28": {
+  "ch": 6,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   }
+  ]
+ },
+ "29": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     }
+    ]
+   }
+  ]
+ },
+ "30": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "yuan20",
+      "text": "20元"
+     },
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   }
+  ]
+ },
+ "31": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan20",
+      "text": "20元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     },
+     {
+      "id": "jiao5",
+      "text": "5角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   }
+  ]
+ },
+ "32": {
+  "ch": 7,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   }
+  ]
+ },
+ "33": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   }
+  ]
+ },
+ "34": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "combo",
+    "face": "c_j5j5",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yy",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:2元",
+      "text": "2元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan5",
+      "text": "5元"
+     }
+    ]
+   }
+  ]
+ },
+ "35": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "jiao1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "combo",
+    "face": "c_yj_j",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:1元5角",
+      "text": "1元5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:2元",
+      "text": "2元"
+     }
+    ]
+   }
+  ]
+ },
+ "36": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     }
+    ]
+   }
+  ]
+ },
+ "37": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   }
+  ]
+ },
+ "38": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan1p",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan5",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan10",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1元",
+      "text": "1元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:20元",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "bill",
+    "face": "yuan20",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:20元",
+      "text": "20元"
+     },
+     {
+      "id": "t:10元",
+      "text": "10元"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   }
+  ]
+ },
+ "39": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan5",
+      "text": "5元"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "yuan20",
+      "text": "20元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     }
+    ]
+   },
+   {
+    "kind": "coin",
+    "face": "yuan1",
+    "near": false,
+    "coins": null,
+    "opts": [
+     {
+      "id": "t:1角",
+      "text": "1角"
+     },
+     {
+      "id": "t:5元",
+      "text": "5元"
+     },
+     {
+      "id": "t:5角",
+      "text": "5角"
+     },
+     {
+      "id": "t:1元",
+      "text": "1元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "yuan1p",
+      "text": "1元"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan20",
+      "text": "20元"
+     }
+    ]
+   },
+   {
+    "kind": "sameval",
+    "face": "yuan1p",
+    "near": true,
+    "coins": null,
+    "opts": [
+     {
+      "id": "yuan1",
+      "text": "1元"
+     },
+     {
+      "id": "jiao5",
+      "text": "5角"
+     },
+     {
+      "id": "jiao1",
+      "text": "1角"
+     },
+     {
+      "id": "yuan10",
+      "text": "10元"
+     }
+    ]
+   }
+  ]
+ }
+}

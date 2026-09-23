@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>古诗连句</title>
+<style>
+/* ================= 古诗连句 poemfill（batch17 r13 难度改造 2026-09-15）=================
+   r13（AUDIT-78：挖 1-2 字+整首朗读=重度脚手架再认 → 升整句回忆）：
+   F/R=给上（下）句选下（上）句·句卡候选；O=句序重组（给首句排 2-4 句三槽）；
+   FF=飞花令（指定字飞/春/花，跨诗选含字句）。整首朗读退出题面（首字提示改由
+   「提示」按钮亮下句首字）；触摸目标：句卡/句槽 ≥64、读音/提示 ≥96、底栏 ≥72；
+   楷体系诗字体、家族暖米底。
+   竖屏双通道（r9 M-A1/r11 M-1/r12 M3 同型定版）：@media 真竖屏 + body.port 类通道
+   逐条等值两段同步——.scard 固定高（横 76/竖 66）=portStyle 判别锚（verify 断言）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E7D8C0;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E7D8C0}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;overflow:hidden;padding:4px 10px}
+
+/* ---------- 古诗卡：标题行（书名号标题+作者+读音按钮=读题面上句）+ 诗句行 ---------- */
+#pcard{flex:0 0 auto;width:min(96%,680px);background:#FFFAF0;border:3px solid #C9A87C;
+  border-radius:24px;box-shadow:0 5px 0 rgba(201,168,124,.4);padding:8px 18px 12px;
+  animation:card-in .4s cubic-bezier(.2,1.5,.4,1) both}
+@keyframes card-in{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+#pcard-head{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:2px 2px 6px;border-bottom:2px dashed #E3D4BC;margin-bottom:6px}
+#poem-title{font-family:"KaiTi","STKaiti","Kaiti SC",serif;font-size:32px;font-weight:700;
+  color:#4A3B2E;letter-spacing:.06em}
+#poem-title .au{font-size:22px;color:#8A7B6C;margin-left:8px;font-weight:600}
+#speaker-btn{width:96px;height:96px;border-radius:50%;background:#E8975A;border:3px solid #4A3B2E;
+  box-shadow:0 6px 0 #C77A42;display:flex;align-items:center;justify-content:center;flex:0 0 96px;
+  transition:transform .15s,box-shadow .15s}
+#speaker-btn:active{transform:translateY(3px);box-shadow:0 3px 0 #C77A42}
+#speaker-btn svg{width:52px;height:52px}
+#speaker-btn.bounce{animation:spk-b .45s ease}
+@keyframes spk-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* 诗句行：一行一句居中；题面句 .lead 微青底；O 型首句同款；句槽行 .blank-line 浅黄底 */
+#poem-lines{display:flex;flex-direction:column;align-items:center;gap:5px}
+.pline{display:flex;align-items:center;justify-content:center;gap:5px;border-radius:14px;
+  padding:2px 14px;min-height:60px;animation:line-in .34s ease both}
+.pline:nth-child(1){animation-delay:.04s}.pline:nth-child(2){animation-delay:.09s}
+.pline:nth-child(3){animation-delay:.14s}.pline:nth-child(4){animation-delay:.19s}
+@keyframes line-in{from{transform:translateY(8px);opacity:0}to{transform:translateY(0);opacity:1}}
+.pline .ch{font-family:"KaiTi","STKaiti","Kaiti SC",serif;font-size:40px;font-weight:700;
+  line-height:1;color:#4A3B2E;width:42px;text-align:center}
+.pline.lead{background:#EAF3E6}
+.pline.blank-line{background:#FDF3DC}
+.pline.wig{animation:line-wig .5s ease}
+@keyframes line-wig{0%,100%{transform:translateX(0)}20%{transform:translateX(-10px)}
+  40%{transform:translateX(10px)}60%{transform:translateX(-7px)}80%{transform:translateX(7px)}}
+.pline.win-line{background:#DCEBD4}
+.pline.win-line .ch{color:#4F7A44}
+.pline.flash .ch{animation:ch-flash .8s ease}
+@keyframes ch-flash{0%,100%{color:#4A3B2E}40%{color:#E8975A;transform:scale(1.15)}}
+
+/* 句槽（r13 整句槽）：虚线宽槽→实心句（可点退回）；首字提示格 .given；救援 breathe；win 绿 */
+.bslot{min-width:250px;min-height:72px;padding:6px 16px;border-radius:16px;background:#F6ECD9;
+  border:3px dashed #C9A87C;display:flex;align-items:center;justify-content:center;gap:7px;
+  transition:transform .15s,background .2s,border-color .2s}
+.bslot .cell{width:22px;height:34px;border-radius:6px;background:#FFF7E6;border:2px solid #E3D4BC;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"KaiTi","STKaiti","Kaiti SC",serif;font-size:30px;font-weight:800;color:#E8975A}
+.bslot .cell.given .lt{color:#4A3B2E}
+.bslot .lt{font-family:"KaiTi","STKaiti","Kaiti SC",serif;font-size:34px;font-weight:800;line-height:1;color:#4A3B2E}
+.bslot.full{background:#FFFAF0;border-style:solid}
+.bslot.full .lt{animation:lt-in .32s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes lt-in{from{transform:scale(.5) translateY(10px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
+.bslot.full:active{transform:translateY(3px)}
+.bslot.win{background:#8FBF7F;border-color:#6FA063}
+.bslot.win .lt{color:#FFF9EE}
+.bslot.win .cell{background:#7FB373;border-color:#6FA063}
+.bslot.breathe{animation:blank-breathe 1.6s ease-in-out infinite}
+@keyframes blank-breathe{0%,100%{transform:scale(1);box-shadow:0 0 0 rgba(232,151,90,0)}
+  50%{transform:scale(1.06);box-shadow:0 0 16px rgba(232,151,90,.85)}}
+
+/* ---------- 飞花令面板（ch4）：指定字大徽章+题面句；过关揭示出处 ---------- */
+#ff-panel{flex:0 0 auto;display:none;align-items:center;justify-content:center;gap:20px;
+  padding:6px 10px;animation:card-in .4s cubic-bezier(.2,1.5,.4,1) both}
+#ff-panel.show{display:flex}
+#ff-char{width:104px;height:104px;border-radius:50%;background:#8FBF7F;border:3px solid #4A3B2E;
+  box-shadow:0 6px 0 #6FA063;display:flex;align-items:center;justify-content:center;flex:0 0 104px;
+  font-family:"KaiTi","STKaiti","Kaiti SC",serif;font-size:60px;font-weight:800;color:#FFF9EE}
+#ff-char.breathe{animation:blank-breathe 1.6s ease-in-out infinite}
+#ff-char.wig{animation:line-wig .5s ease}
+#ff-ask{font-size:30px;font-weight:800;color:#4A3B2E}
+#ff-src{display:none;font-family:"KaiTi","STKaiti","Kaiti SC",serif;font-size:26px;font-weight:700;
+  color:#4F7A44;background:#DCEBD4;border-radius:14px;padding:4px 14px}
+#ff-src.show{display:block}
+
+/* ---------- 桌面：句卡池 ---------- */
+#table-area{flex:1 1 auto;min-height:120px;width:100%;max-width:1120px;display:flex;
+  flex-direction:column;justify-content:center;gap:8px}
+#card-pool{display:flex;flex-wrap:wrap;justify-content:center;align-content:center;
+  gap:12px 14px;min-height:76px;padding:8px 10px;border-radius:20px;
+  background:#F6ECD9;border:2.5px dashed #D9C5A6}
+/* 句卡：暖色积木卡五色轮换（确定性按序）；点后 .gone（入槽）；救援/帮 breathe、pulse 三连
+   （固定高横 76/竖 66=portStyle 判别锚） */
+.scard{position:relative;min-width:150px;height:76px;padding:0 26px;border-radius:18px;
+  border:2.5px solid #4A3B2E;box-shadow:0 4px 0 rgba(74,59,46,.28);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .15s;animation:tile-in .4s cubic-bezier(.2,1.5,.4,1) both}
+.scard:nth-child(2n){animation-delay:.06s}.scard:nth-child(3n){animation-delay:.12s}
+@keyframes tile-in{from{transform:scale(0) rotate(-8deg)}to{transform:scale(1) rotate(0)}}
+.scard:active{transform:translateY(3px)}
+.scard .lt{font-family:"KaiTi","STKaiti","Kaiti SC",serif;font-size:32px;font-weight:800;line-height:1;color:#4A3B2E}
+.scard.gone{visibility:hidden;pointer-events:none}
+.scard.breathe{animation:tile-breathe 1.6s ease-in-out infinite}
+@keyframes tile-breathe{0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(232,151,90,0))}
+  50%{transform:scale(1.08);filter:drop-shadow(0 0 12px rgba(232,151,90,.85))}}
+.scard.pulse{animation:tile-pulse .5s ease 3}
+@keyframes tile-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18) rotate(4deg)}}
+
+/* ---------- 底部作答区：「提示」主按钮（≥96，亮下句首字不自动填入） ---------- */
+#answers{flex:0 0 auto;display:flex;justify-content:center;align-items:center;gap:20px;
+  flex-wrap:wrap;min-height:118px;padding:2px 12px}
+#tip{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:700;color:#8A7B6C}
+#tip svg{width:34px;height:34px}
+#hint-btn{min-width:200px;min-height:96px;padding:0 36px;border-radius:26px;background:#8FBF7F;
+  border:3px solid #4A3B2E;box-shadow:0 6px 0 #6FA063;color:#FFF9EE;font-size:32px;font-weight:800;
+  letter-spacing:.08em;display:flex;align-items:center;justify-content:center;gap:12px;
+  transition:transform .15s,box-shadow .15s;animation:card-in .38s cubic-bezier(.2,1.5,.4,1) both}
+#hint-btn:active{transform:translateY(3px);box-shadow:0 3px 0 #6FA063}
+#hint-btn svg{width:44px;height:44px}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:spk-b .45s ease}
+
+/* ---------- 幽灵手指教学（照家族） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFFAF0;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏通道 A：@media 真竖屏（平板竖持）——句卡/句槽仍 ≥64 */
+@media (orientation:portrait){
+  #pcard{width:min(96%,600px);padding:6px 12px 10px}
+  #poem-title{font-size:28px}
+  #poem-title .au{font-size:20px}
+  .pline{gap:4px;min-height:64px;padding:2px 6px}
+  .pline .ch{font-size:36px;width:38px}
+  .bslot{min-height:64px;padding:4px 12px}
+  .bslot .cell{width:20px;height:30px;font-size:26px}
+  .bslot .lt{font-size:30px}
+  #ff-char{width:96px;height:96px;flex-basis:96px;font-size:52px}
+  #ff-ask{font-size:26px}
+  .scard{min-width:130px;height:66px;padding:0 18px}
+  .scard .lt{font-size:28px}
+  #card-pool{gap:10px 12px}
+  #hint-btn{min-width:180px;font-size:28px}
+  #poem-lines{gap:4px}
+}
+/* 竖屏通道 B：body.port 类（verify simView 模拟竖屏——与 @media 逐条等值，M3 双通道） */
+body.port #pcard{width:min(96%,600px);padding:6px 12px 10px}
+body.port #poem-title{font-size:28px}
+body.port #poem-title .au{font-size:20px}
+body.port .pline{gap:4px;min-height:64px;padding:2px 6px}
+body.port .pline .ch{font-size:36px;width:38px}
+body.port .bslot{min-height:64px;padding:4px 12px}
+body.port .bslot .cell{width:20px;height:30px;font-size:26px}
+body.port .bslot .lt{font-size:30px}
+body.port #ff-char{width:96px;height:96px;flex-basis:96px;font-size:52px}
+body.port #ff-ask{font-size:26px}
+body.port .scard{min-width:130px;height:66px;padding:0 18px}
+body.port .scard .lt{font-size:28px}
+body.port #card-pool{gap:10px 12px}
+body.port #hint-btn{min-width:180px;font-size:28px}
+body.port #poem-lines{gap:4px}
+</style>
+</head>
+<body>
+<div id="game" aria-label="古诗连句">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="pcard" class="pcard">
+      <div id="pcard-head">
+        <div id="poem-title" aria-live="polite"></div>
+        <button id="speaker-btn" aria-label="再听一遍题面这句诗"></button>
+      </div>
+      <div id="poem-lines" aria-label="诗句区"></div>
+    </div>
+    <div id="ff-panel">
+      <div id="ff-char" aria-live="polite"></div>
+      <div id="ff-ask"></div>
+      <div id="ff-src"></div>
+    </div>
+    <div id="table-area">
+      <div id="card-pool" aria-label="句卡池"></div>
+    </div>
+    <div id="answers" aria-label="作答区"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍题面"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

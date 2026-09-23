@@ -1,0 +1,93 @@
+[   0.9s] OPEN(fresh) file:///F:/claudecode/projects/active/kids-games/batch11/shapeshome/index.html
+[   1.5s] A 开档 tutorial='watch'
+[   1.7s] SNAP shapeshome_A0_tut_watch.png
+[   3.5s] A 教学乱点 ('watch', 0)→('watch', 1) 不跳=False（此段 pop 总数=2，含 watch 期错卡/家卡轻反馈）
+[   5.0s] A help 到位=True ghost='show'
+[   5.1s] SNAP shapeshome_A2_tut_help.png
+[   7.0s] A 帮期错点 miss=1 tut='help' wrong类=['1']
+[   9.3s] A 首次答对 tutorial='solo'（应 solo）
+[   9.3s] A2_1-0 第2题 dim=color tc=purple ts=circle opts=[('purple', 'circle'), ('red', 'triangle'), ('yellow', 'star')] ans=0
+[  12.0s] A2_1-0 第3题 dim=color tc=green ts=circle opts=[('purple', 'star'), ('green', 'circle'), ('orange', 'square')] ans=1
+[  14.6s] A2_1-0 第4题 dim=color tc=red ts=circle opts=[('red', 'circle'), ('green', 'triangle'), ('purple', 'star')] ans=0
+[  16.9s] A2_1-0 第5题 dim=color tc=yellow ts=circle opts=[('orange', 'star'), ('red', 'square'), ('yellow', 'circle')] ans=2
+[  19.9s] A2_1-0 完成 用时=10.6s retries=1
+[  20.7s] A2_1-0 CELEBRATE 星星=2 文案='★/★/好棒！'
+[  20.8s] SNAP shapeshome_celebrate_A2_1-0.png
+[  26.2s] A2 存档 levels[1-0] = {'stars': 2, 'plays': 1}
+[  26.2s] A3 下一关 flat=1
+[  26.2s] A3_1-1 第1题 dim=color tc=green ts=circle opts=[('green', 'circle'), ('red', 'triangle'), ('yellow', 'square')] ans=0
+[  29.2s] A3_1-1 第2题 dim=color tc=red ts=circle opts=[('green', 'star'), ('blue', 'triangle'), ('red', 'circle')] ans=2
+[  31.4s] A3_1-1 错1后 miss=1 wrong类=['0'] pulse=[]
+[  33.6s] A3_1-1 错2后 miss=2 wrong类=['0', '1'] pulse=['2']
+[  35.9s] A3_1-1 第3题 dim=color tc=blue ts=circle opts=[('orange', 'star'), ('blue', 'circle'), ('red', 'square')] ans=1
+[  38.0s] A3_1-1 第4题 dim=color tc=red ts=circle opts=[('purple', 'star'), ('green', 'square'), ('red', 'circle')] ans=2
+[  40.4s] A3_1-1 第5题 dim=color tc=green ts=circle opts=[('red', 'star'), ('green', 'circle'), ('yellow', 'triangle')] ans=1
+[  43.2s] A3_1-1 完成 用时=17.0s retries=2
+[  44.0s] A3_1-1 CELEBRATE 星星=2 文案='★/★/好棒！'
+[  44.0s] SNAP shapeshome_celebrate_A3_1-1.png
+[  49.4s] A3 存档 levels[1-1] = {'stars': 2, 'plays': 1}
+[  52.0s] A4 家卡重听 第1次记到 1 条 / 连点后共 1 条（3s 节流）
+[  52.0s] SNAP shapeshome_A4_home.png
+[  52.0s] A4_1-2 第1题 dim=color tc=blue ts=circle opts=[('blue', 'circle'), ('yellow', 'square'), ('green', 'star')] ans=0
+[  55.0s] A4_1-2 第2题 dim=color tc=purple ts=circle opts=[('purple', 'circle'), ('red', 'triangle'), ('green', 'square')] ans=0
+[  57.3s] A4_1-2 第3题 dim=color tc=orange ts=circle opts=[('purple', 'star'), ('blue', 'square'), ('orange', 'circle')] ans=2
+[  59.6s] A4_1-2 第4题 dim=color tc=yellow ts=circle opts=[('blue', 'square'), ('yellow', 'circle'), ('purple', 'star')] ans=1
+[  61.7s] A4_1-2 第5题 dim=color tc=orange ts=circle opts=[('purple', 'square'), ('orange', 'circle'), ('green', 'triangle')] ans=1
+[  64.9s] A4_1-2 完成 用时=12.9s retries=0
+[  65.7s] A4_1-2 CELEBRATE 星星=3 文案='★/★/★/真棒！'
+[  65.8s] SNAP shapeshome_celebrate_A4_1-2.png
+[  71.2s] A4 存档 levels[1-2] = {'stars': 3, 'plays': 1}
+[  71.2s] A5 flat=3 第1题正常答对再发呆
+[  88.0s] A5 ★救援 @13.1s ['T:找一找，黄色']
+[  88.1s] SNAP shapeshome_A5_rescue.png
+[  88.1s] A5 救援={'at_s': 13.1, 'voice': ['T:找一找，黄色'], 'breathe': 13.1}
+[  88.1s] A5_1-3 第2题 dim=color tc=yellow ts=circle opts=[('red', 'square'), ('yellow', 'circle'), ('blue', 'triangle')] ans=1
+[  91.2s] A5_1-3 第3题 dim=color tc=orange ts=circle opts=[('orange', 'circle'), ('purple', 'star'), ('yellow', 'triangle')] ans=0
+[  93.9s] A5_1-3 第4题 dim=color tc=red ts=circle opts=[('red', 'circle'), ('yellow', 'star'), ('blue', 'square')] ans=0
+[  96.0s] A5_1-3 第5题 dim=color tc=orange ts=circle opts=[('purple', 'square'), ('orange', 'circle'), ('green', 'star')] ans=1
+[  98.4s] A5_1-3 完成 用时=10.3s retries=0
+[  99.2s] A5_1-3 CELEBRATE 星星=3 文案='★/★/★/真棒！'
+[  99.3s] SNAP shapeshome_celebrate_A5_1-3.png
+[ 104.7s] A5 存档 levels[1-3] = {'stars': 3, 'plays': 1}
+[ 104.7s] A6_1-4 第1题 dim=color tc=red ts=circle opts=[('blue', 'triangle'), ('red', 'circle'), ('purple', 'star')] ans=1
+[ 107.3s] A6_1-4 第2题 dim=color tc=blue ts=circle opts=[('red', 'square'), ('orange', 'triangle'), ('blue', 'circle')] ans=2
+[ 109.5s] A6_1-4 第3题 dim=color tc=green ts=circle opts=[('green', 'circle'), ('purple', 'triangle'), ('blue', 'star')] ans=0
+[ 112.7s] A6_1-4 第4题 dim=color tc=purple ts=circle opts=[('yellow', 'triangle'), ('purple', 'circle'), ('red', 'star')] ans=1
+[ 115.1s] A6_1-4 第5题 dim=color tc=yellow ts=circle opts=[('green', 'star'), ('red', 'triangle'), ('yellow', 'circle')] ans=2
+[ 117.3s] A6_1-4 完成 用时=12.6s retries=0
+[ 118.2s] A6_1-4 CELEBRATE 星星=3 文案='★/★/★/真棒！'
+[ 118.2s] SNAP shapeshome_celebrate_A6_1-4.png
+[ 123.6s] A6 存档 levels[1-4] = {'stars': 3, 'plays': 1}
+[ 123.6s] A6 章末层={'sel': '.k-celebrate:0 .k-chapterend:1 .k-dayend:0 .k-panel:0', 'dayend': None, 'chapterend': '★/第 1 章 完成！/本章星星 13/明天：接下来家里的屋顶只看形状，把一样的形状送回家/明天见'}
+[ 124.2s] DISMISS .k-chapterend .k-btn
+[ 124.3s] A7 2-0 dim=shape tc=None ts=square opts=[('red', 'triangle'), ('orange', 'square'), ('blue', 'circle')] ans=1
+[ 124.3s] A7_2-0 第1题 dim=shape tc=None ts=square opts=[('red', 'triangle'), ('orange', 'square'), ('blue', 'circle')] ans=1
+[ 126.7s] A7_2-0 错1后 miss=1 wrong类=['0'] pulse=[]
+[ 128.9s] A7_2-0 第2题 dim=shape tc=None ts=triangle opts=[('red', 'triangle'), ('blue', 'star'), ('yellow', 'circle')] ans=0
+[ 132.0s] A7_2-0 第3题 dim=shape tc=None ts=square opts=[('blue', 'square'), ('purple', 'circle'), ('yellow', 'star')] ans=0
+[ 134.2s] A7_2-0 错1后 miss=1 wrong类=['1'] pulse=[]
+[ 136.9s] A7_2-0 第4题 dim=shape tc=None ts=circle opts=[('orange', 'triangle'), ('red', 'circle'), ('yellow', 'star')] ans=1
+[ 139.3s] A7_2-0 第5题 dim=shape tc=None ts=triangle opts=[('orange', 'circle'), ('green', 'star'), ('red', 'triangle')] ans=2
+[ 141.9s] A7_2-0 完成 用时=17.7s retries=2
+[ 142.8s] A7_2-0 CELEBRATE 星星=2 文案='★/★/好棒！'
+[ 142.8s] SNAP shapeshome_celebrate_A7_2-0.png
+[ 148.2s] A7 存档 levels[2-0] = {'stars': 2, 'plays': 1}
+[ 149.3s] A7 日末层={'sel': '.k-celebrate:0 .k-chapterend:0 .k-dayend:1 .k-panel:0', 'dayend': '今天的新关卡玩完啦/明天：接下来要颜色和形状都一样，才能回家哦/再玩玩旧关卡/明天见', 'chapterend': None}
+[ 149.3s] SNAP shapeshome_A7_dayend.png
+[ 149.3s] A 零文字审计={'chip_text': '', 'chip_aria': '图形的家，点我听题目', 'card_texts': ['', '', ''], 'card_aria': '红色三角形图形', 'card_px': ['150x136', '150x136', '150x136'], 'body_texts_nopict': ['今天的新关卡玩完啦', '明天：接下来要颜色和形状都一样，才能回家哦', '再玩玩旧关卡', '明天见'], 'badge_html': None, 'badge_text': None}
+[ 149.3s] A 语音汇总={'T_find': 14, 'P_wrong': 1, 'S_pop': 0, 'S_coin': 14, 'S_fail': 2, 'clips': ['core_chapter_end', 'core_day_end', 'shp_hint', 'shp_wrong']}
+[   0.0s] B 种档 n=5 → 2-0 排除法链
+[   0.9s] OPEN(fresh) file:///F:/claudecode/projects/active/kids-games/batch11/shapeshome/index.html
+[   3.7s] B 2-0 首题 dim=shape tc=None ts=square opts=[('red', 'triangle'), ('orange', 'square'), ('blue', 'circle')] ans=1 dead=[False, False, False]
+[   6.2s] B 错1后 {'miss': 1, 'dead': [True, False, False], 'hi': -1, 'pe': ['none', 'auto', 'auto'], 'op': [0.5, 1, 1]}
+[   8.1s] B 错2后 {'miss': 2, 'dead': [True, False, True], 'hi': 1, 'pe': ['none', 'auto', 'none'], 'op': [0.5, 1, 0.5]}
+[   8.1s] SNAP shapeshome_B_elimination.png
+[   8.1s] B 全灰后答案卡={'pe': 'auto', 'px': 150}
+[  10.9s] B 第2题 dim=shape tc=None ts=triangle opts=[('red', 'triangle'), ('blue', 'star'), ('yellow', 'circle')] ans=0
+[  23.7s] B ★救援1 @12.5s ['T:找一找，三角']
+[  24.1s] SNAP shapeshome_B_rescue1.png
+[  25.3s] B 救援后错点 miss=1
+[  38.6s] B ★救援2 @13.2s ['T:找一找，三角']（错点没掐断救援钟）
+[  49.1s] B_2-0 CELEBRATE 星星=1 文案='★/好棒！'
+[  49.1s] SNAP shapeshome_celebrate_B_2-0.png
+[  54.5s] B 存档 levels[2-0] = {'stars': 1, 'plays': 1}（错2+救援期错1=3错 → 1★ 预期）

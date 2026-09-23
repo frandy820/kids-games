@@ -1,0 +1,239 @@
+{
+ "game": "shapeshome",
+ "tut_initial": {
+  "tut": "watch",
+  "quiz": "dim=color tc=green ts=circle opts=[('green', 'circle'), ('blue', 'star'), ('purple', 'triangle')] ans=0"
+ },
+ "tut_random_click": {
+  "before": [
+   "watch",
+   0
+  ],
+  "after": [
+   "watch",
+   1
+  ],
+  "pops_total": 2,
+  "swallowed": false
+ },
+ "tut_help": {
+  "ghost": "show",
+  "quiz": "dim=color tc=green ts=circle opts=[('green', 'circle'), ('blue', 'star'), ('purple', 'triangle')] ans=0"
+ },
+ "tut_help_wrong": {
+  "miss": 1,
+  "tut": "help",
+  "wrong_cls": [
+   "1"
+  ]
+ },
+ "tut_solo_at": "solo",
+ "level_1_0": {
+  "secs": 10.6,
+  "retries": 1,
+  "per_q": [
+   "dim=color tc=purple ts=circle opts=[('purple', 'circle'), ('red', 'triangle'), ('yellow', 'star')] ans=0",
+   "dim=color tc=green ts=circle opts=[('purple', 'star'), ('green', 'circle'), ('orange', 'square')] ans=1",
+   "dim=color tc=red ts=circle opts=[('red', 'circle'), ('green', 'triangle'), ('purple', 'star')] ans=0",
+   "dim=color tc=yellow ts=circle opts=[('orange', 'star'), ('red', 'square'), ('yellow', 'circle')] ans=2"
+  ]
+ },
+ "stars_1_0": {
+  "stars": 2,
+  "plays": 1
+ },
+ "level_1_1": {
+  "secs": 17.0,
+  "retries": 2,
+  "per_q": [
+   "dim=color tc=green ts=circle opts=[('green', 'circle'), ('red', 'triangle'), ('yellow', 'square')] ans=0",
+   "dim=color tc=red ts=circle opts=[('green', 'star'), ('blue', 'triangle'), ('red', 'circle')] ans=2",
+   "dim=color tc=blue ts=circle opts=[('orange', 'star'), ('blue', 'circle'), ('red', 'square')] ans=1",
+   "dim=color tc=red ts=circle opts=[('purple', 'star'), ('green', 'square'), ('red', 'circle')] ans=2",
+   "dim=color tc=green ts=circle opts=[('red', 'star'), ('green', 'circle'), ('yellow', 'triangle')] ans=1"
+  ]
+ },
+ "stars_1_1": {
+  "stars": 2,
+  "plays": 1
+ },
+ "home_replay": {
+  "first": 1,
+  "after_second_tap_total": 1
+ },
+ "level_1_2": {
+  "secs": 12.9,
+  "retries": 0,
+  "per_q": [
+   "dim=color tc=blue ts=circle opts=[('blue', 'circle'), ('yellow', 'square'), ('green', 'star')] ans=0",
+   "dim=color tc=purple ts=circle opts=[('purple', 'circle'), ('red', 'triangle'), ('green', 'square')] ans=0",
+   "dim=color tc=orange ts=circle opts=[('purple', 'star'), ('blue', 'square'), ('orange', 'circle')] ans=2",
+   "dim=color tc=yellow ts=circle opts=[('blue', 'square'), ('yellow', 'circle'), ('purple', 'star')] ans=1",
+   "dim=color tc=orange ts=circle opts=[('purple', 'square'), ('orange', 'circle'), ('green', 'triangle')] ans=1"
+  ]
+ },
+ "stars_1_2": {
+  "stars": 3,
+  "plays": 1
+ },
+ "rescue_idle_1_3": {
+  "at_s": 13.1,
+  "voice": [
+   "T:找一找，黄色"
+  ],
+  "breathe": 13.1
+ },
+ "level_1_3": {
+  "secs": 10.3,
+  "retries": 0,
+  "per_q": [
+   "dim=color tc=yellow ts=circle opts=[('red', 'square'), ('yellow', 'circle'), ('blue', 'triangle')] ans=1",
+   "dim=color tc=orange ts=circle opts=[('orange', 'circle'), ('purple', 'star'), ('yellow', 'triangle')] ans=0",
+   "dim=color tc=red ts=circle opts=[('red', 'circle'), ('yellow', 'star'), ('blue', 'square')] ans=0",
+   "dim=color tc=orange ts=circle opts=[('purple', 'square'), ('orange', 'circle'), ('green', 'star')] ans=1"
+  ]
+ },
+ "stars_1_3": {
+  "stars": 3,
+  "plays": 1
+ },
+ "level_1_4": {
+  "secs": 12.6,
+  "retries": 0,
+  "per_q": [
+   "dim=color tc=red ts=circle opts=[('blue', 'triangle'), ('red', 'circle'), ('purple', 'star')] ans=1",
+   "dim=color tc=blue ts=circle opts=[('red', 'square'), ('orange', 'triangle'), ('blue', 'circle')] ans=2",
+   "dim=color tc=green ts=circle opts=[('green', 'circle'), ('purple', 'triangle'), ('blue', 'star')] ans=0",
+   "dim=color tc=purple ts=circle opts=[('yellow', 'triangle'), ('purple', 'circle'), ('red', 'star')] ans=1",
+   "dim=color tc=yellow ts=circle opts=[('green', 'star'), ('red', 'triangle'), ('yellow', 'circle')] ans=2"
+  ]
+ },
+ "stars_1_4": {
+  "stars": 3,
+  "plays": 1
+ },
+ "chapterend": {
+  "sel": ".k-celebrate:0 .k-chapterend:1 .k-dayend:0 .k-panel:0",
+  "dayend": null,
+  "chapterend": "★/第 1 章 完成！/本章星星 13/明天：接下来家里的屋顶只看形状，把一样的形状送回家/明天见"
+ },
+ "level_2_0": {
+  "secs": 17.7,
+  "retries": 2,
+  "per_q": [
+   "dim=shape tc=None ts=square opts=[('red', 'triangle'), ('orange', 'square'), ('blue', 'circle')] ans=1",
+   "dim=shape tc=None ts=triangle opts=[('red', 'triangle'), ('blue', 'star'), ('yellow', 'circle')] ans=0",
+   "dim=shape tc=None ts=square opts=[('blue', 'square'), ('purple', 'circle'), ('yellow', 'star')] ans=0",
+   "dim=shape tc=None ts=circle opts=[('orange', 'triangle'), ('red', 'circle'), ('yellow', 'star')] ans=1",
+   "dim=shape tc=None ts=triangle opts=[('orange', 'circle'), ('green', 'star'), ('red', 'triangle')] ans=2"
+  ]
+ },
+ "stars_2_0": {
+  "stars": 2,
+  "plays": 1
+ },
+ "dayend": {
+  "sel": ".k-celebrate:0 .k-chapterend:0 .k-dayend:1 .k-panel:0",
+  "dayend": "今天的新关卡玩完啦/明天：接下来要颜色和形状都一样，才能回家哦/再玩玩旧关卡/明天见",
+  "chapterend": null
+ },
+ "text_audit": {
+  "chip_text": "",
+  "chip_aria": "图形的家，点我听题目",
+  "card_texts": [
+   "",
+   "",
+   ""
+  ],
+  "card_aria": "红色三角形图形",
+  "card_px": [
+   "150x136",
+   "150x136",
+   "150x136"
+  ],
+  "body_texts_nopict": [
+   "今天的新关卡玩完啦",
+   "明天：接下来要颜色和形状都一样，才能回家哦",
+   "再玩玩旧关卡",
+   "明天见"
+  ],
+  "badge_html": null,
+  "badge_text": null
+ },
+ "vlog_summary_A": {
+  "T_find": 14,
+  "P_wrong": 1,
+  "S_pop": 0,
+  "S_coin": 14,
+  "S_fail": 2,
+  "clips": [
+   "core_chapter_end",
+   "core_day_end",
+   "shp_hint",
+   "shp_wrong"
+  ]
+ },
+ "errors_A": [],
+ "wrong_chain_2_0": [
+  {
+   "miss": 1,
+   "dead": [
+    true,
+    false,
+    false
+   ],
+   "hi": -1,
+   "pe": [
+    "none",
+    "auto",
+    "auto"
+   ],
+   "op": [
+    0.5,
+    1,
+    1
+   ]
+  },
+  {
+   "miss": 2,
+   "dead": [
+    true,
+    false,
+    true
+   ],
+   "hi": 1,
+   "pe": [
+    "none",
+    "auto",
+    "none"
+   ],
+   "op": [
+    0.5,
+    1,
+    0.5
+   ]
+  }
+ ],
+ "rescue_B_1": {
+  "at_s": 12.5,
+  "voice": [
+   "T:找一找，三角"
+  ],
+  "breathe": 12.5
+ },
+ "rescue_B_2": {
+  "at_s": 13.2,
+  "voice": [
+   "T:找一找，三角"
+  ]
+ },
+ "stars_2_0_B": {
+  "stars": 1,
+  "plays": 1
+ },
+ "errors_B": [],
+ "errors_all": {
+  "A": [],
+  "B": []
+ }
+}

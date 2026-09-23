@@ -1,0 +1,77 @@
+F:\claudecode\projects\active\kids-games\batch32\evidence\_src\_selftest.py:145: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  px = list(im.getdata())
+PASS | verify title | VERIFY PASS 59/59
+PASS | verify JSON pass==total + layoutOk | pass=59/59
+PASS | verify 32 static levels all ok (8 quizzes each) | levels=32
+PASS | verify gen levels flat32-39 all ok | {'32': 1, '33': 3, '34': 3, '35': 1, '36': 1, '37': 4, '38': 1, '39': 2}
+PASS | verify units all ok (tapFindexact/tapFindall/tapReverse/findallEnd/frame/tutorial/swallow/clips/stars/contract/hints/estWin/modeled/speed) | {}
+PASS | verify layout sims 6/6 (3 flats x 2 viewports) | []
+PASS | duration model r17: modeled(0)=88100 min, DECIDE 3-kind, voiceWin<=DECIDE | {'ok': True, 'flat0': 88100, 'min': 88100, 'max': 116100, 'minBad': 0, 'voiceWinBad': 0, 'decide': True}
+PASS | clips injected 31 (evi 28 + core 3) + durations in tolerance | n=31
+PASS | evi_* clips injected = 28 (r17: 7 + evi_q3 + 20 concl) | n=28
+PASS | start at flat0 ch1 (8 quizzes) | {'flat': 0, 'ch': 1, 'dch': 1, 'lv': 0, 'n': 8, 'step': 0, 'done': False, 'won': False, 'miss': 0, 'stars': 3}
+PASS | tutorial skipped (preset) 
+PASS | quiz hook contract {kind,concl,opts,answer,answers,picked,text,step,miss} | findexact
+PASS | first wrong: wig + zero penalty (step/miss) + no breathe on answer card | {'retries': 1, 'step': 0, 'miss': 1, 'wig': True, 'breathe': False}
+PASS | finished 8 quizzes by real click (flat0 all findexact) | quizzes=8 kinds={'findexact'}
+PASS | submit button hidden for findexact level (2a) 
+PASS | real-click win -> .k-celebrate 2 stars (1 wrong tap) | stars=2
+PASS | auto-proceed to flat=1 | {'flat': 1, 'ch': 1, 'dch': 1, 'lv': 1, 'n': 8, 'step': 0, 'done': False, 'won': False, 'miss': 0, 'stars': 3}
+PASS | save levels["1-0"].stars >= 1 (actual 2) | stars=2
+PASS | evidence.tutSeen kept true | {'tutSeen': True}
+PASS | tutorial watch swallows input (real click + hook) with pop ding | {'step': 0, 'miss': 0, 'tut': 'watch', 'pop': True}
+PASS | watch demo effect __evDemoR === right (ghost tapped puddle ~7.7s) | right
+PASS | tutorial watch done -> level reset to quiz 0 | findexact
+PASS | tutorial help ghost visible 
+PASS | first correct -> solo (ghost hidden) | {'tut': 'solo', 'ghost': False}
+PASS | tutorial level playable -> .k-celebrate (8 quizzes total) | remaining quizzes=7
+PASS | evidence.tutSeen persisted after tutorial | {'tutSeen': True}
+PASS | tutorial level 1-0 saved | {'1-0': {'stars': 3, 'plays': 1}}
+PASS | seeded (done 0-23 + bonus30) -> start flat=24 ch=4 dch=4 | {'flat': 24, 'ch': 4, 'dch': 4, 'lv': 0, 'n': 8, 'step': 0, 'done': False, 'won': False, 'miss': 0, 'stars': 3}
+PASS | ch4 mixed level: all three kinds present (findexact/findall/reverse) | quizzes=8 kinds=['findall', 'findexact', 'reverse']
+PASS | submit button visibility follows kind (findall shown / others hidden) 
+PASS | level flat24 real-click win 3 stars (0 wrong) | stars=3
+PASS | save levels["4-0"].stars >= 1 (actual 3) | stars=3
+PASS | vp ch1-findexact overflowX==0 + cards=4(>=96) + buttons>=48 + submit visibility | ox=0 cards=4 cMin=110 bad=[] kind=findexact subW=0
+PASS | vp ch1-findexact card width anchor 126 + body.port channel -> 104 (PORT-CLS live) | live=126 portCls=104
+PASS | screenshot ch1-findexact 1280x800 non-blank (stdev>10) | PIL pixel stdev=15.6
+PASS | vp ch3-findall overflowX==0 + cards=4(>=96) + buttons>=48 + submit visibility | ox=0 cards=4 cMin=110 bad=[] kind=findall subW=78
+PASS | vp ch3-findall card width anchor 126 + body.port channel -> 104 (PORT-CLS live) | live=126 portCls=104
+PASS | screenshot ch3-findall 1280x800 non-blank (stdev>10) | PIL pixel stdev=15.5
+PASS | vp ch4-mixed overflowX==0 + cards=4(>=96) + buttons>=48 + submit visibility | ox=0 cards=4 cMin=126 bad=[] kind=reverse subW=0
+PASS | vp ch4-mixed card width anchor 126 + body.port channel -> 104 (PORT-CLS live) | live=126 portCls=104
+PASS | screenshot ch4-mixed 1280x800 non-blank (stdev>10) | PIL pixel stdev=15.9
+PASS | P1b real portrait viewport (800x1180 -> @media channel active) 
+PASS | P1b ch1-findexact overflowX==0 + cards=4(>=96) + buttons>=48 + submit visibility | ox=0 cards=4 cMin=100 bad=[] kind=findexact subW=0
+PASS | P1b ch1-findexact card width 104 (real @media == body.port channel) | cw=104
+PASS | screenshot ch1-findexact 800x1180 non-blank (stdev>10) | PIL pixel stdev=13.8
+PASS | P1b ch3-findall overflowX==0 + cards=4(>=96) + buttons>=48 + submit visibility | ox=0 cards=4 cMin=104 bad=[] kind=findall subW=70
+PASS | P1b ch3-findall card width 104 (real @media == body.port channel) | cw=104
+PASS | screenshot ch3-findall 800x1180 non-blank (stdev>10) | PIL pixel stdev=14.3
+PASS | P1b ch4-mixed overflowX==0 + cards=4(>=96) + buttons>=48 + submit visibility | ox=0 cards=4 cMin=104 bad=[] kind=reverse subW=0
+PASS | P1b ch4-mixed card width 104 (real @media == body.port channel) | cw=104
+PASS | screenshot ch4-mixed 800x1180 non-blank (stdev>10) | PIL pixel stdev=14.3
+PASS | seeded save (firstDay -3d + bonus30) -> limit=42 (reaches gen flat32-41) | lim=42
+PASS | auto-start at flat=32 gen level (ch=5, dch in 1-4) | {'flat': 32, 'ch': 5, 'dch': 1, 'lv': 0, 'n': 8, 'step': 0, 'done': False, 'won': False, 'miss': 0, 'stars': 3}
+PASS | gen nextHint(32) = GEN_HINTS[genLevel(33).dch-1] (family F real calc) 
+PASS | flat41 level state (ch=6, lv=1, dch 1-4) | {'flat': 41, 'ch': 6, 'dch': 3, 'lv': 1, 'n': 8, 'step': 0, 'done': False, 'won': False, 'miss': 0, 'stars': 3}
+PASS | gen nextHint(41) real calc too 
+PASS | gen level 41 real-click full chain win (8 quizzes -> celebrate) | quizzes=8 kinds=['findall']
+PASS | gen level saved under ch6 key "6-1" (dirty-key guard allows ch>=5) | ['4-5', '4-6', '4-7', '6-1']
+PASS | migration old-base-conflict: invalid save reset (levels emptied) | kept=0
+PASS | migration new-base-valid+gen: valid new-base save kept (incl gen ch>=5) | kept=10 want=10
+PASS | migration dirty-key-1-9: invalid save reset (levels emptied) | kept=0
+PASS | S1 starts at flat=3 (>=3, throttle tier) 
+PASS | S1 state1: wrong#1 plays chain + sets window (in-window tap#2 swallowed, miss stays 1) | {'r1': 'wrong', 'miss': 1, 'chains': 1} {'r2': False, 'miss': 1, 'chains': 1}
+PASS | S1 state2: throttle window sayW=false (no chain, no window set -> tap#4 NOT swallowed) | {'r3': 'wrong', 'miss': 2, 'chains': 1} {'r4': 'wrong', 'miss': 3, 'chains': 1}
+PASS | S1 state3: 10s throttle expiry -> chain replays | {'r5': 'wrong', 'miss': 4, 'chains': 2}
+PASS | S1 control flat0 (<3): no 10s throttle (two wrongs 6.2s apart both chain) | miss=2 chains=2
+PASS | S2 rescue not fired before 14s idle (wrong tap set chain window only) | early=0
+PASS | S2 direction rescue by idle 14s (re-queue concl+q chain + pulse, wrong tap NOT resetting anchor) | rescues=1 pulse=True breathe=False t=12.4s
+PASS | S2 direction tier leaks no answer (no .breathe at direction fire) | {'rescues': 1, 'pulse': True, 'breathe': False}
+PASS | S2 answer rescue by idle 30s (correct card breathe appears) | breathe=True rescues=3 t=27.4s
+PASS | fully offline (no http(s) requests at runtime) | []
+PASS | zero pageerror across all scenarios | []
+PASS | zero sound events across all scenarios (INIT_SND+STUB_SND+sound:false) | [('ctx', 'verify', 0), ('ctx', '2a', 0), ('ctx', '2b', 0), ('ctx', '2c', 0), ('ctx', 'vp1280', 0), ('ctx', 'vp800', 0), ('ctx', '2e', 0), ('ctx', '2f-new-base-valid+gen', 0), ('ctx', 'S1', 0), ('ctx', 'S2', 0)]
+
+==== SELFTEST 73/73 PASS (estMs(4)=1980 chain-win=4542) ====

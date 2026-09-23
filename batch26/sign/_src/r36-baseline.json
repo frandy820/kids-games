@@ -1,0 +1,2642 @@
+[
+ {
+  "flat": 0,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "light",
+     "zebra",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "bridge",
+     "tunnel",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "zebra",
+     "light",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "zebra",
+     "light",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "tunnel",
+     "light",
+     "zebra"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 1,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "light",
+     "tunnel",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "light",
+     "zebra",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "light",
+     "tunnel",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "bridge",
+     "zebra",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "zebra",
+     "tunnel",
+     "bridge"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 2,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "bridge",
+     "zebra",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "tunnel",
+     "zebra",
+     "light"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "light",
+     "bridge",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "zebra",
+     "tunnel",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "light",
+     "bridge",
+     "zebra"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 3,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "tunnel",
+     "bridge",
+     "light"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "bridge",
+     "tunnel",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "bridge",
+     "zebra",
+     "light"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "bridge",
+     "zebra",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "bridge",
+     "tunnel",
+     "zebra"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 4,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "zebra",
+     "light",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "bridge",
+     "light",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "zebra",
+     "bridge",
+     "light"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "bridge",
+     "light",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "light",
+     "bridge",
+     "tunnel"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 5,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "noped",
+     "child",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "noentry",
+     "ped",
+     "stop"
+    ]
+   },
+   {
+    "sign": "work",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "work",
+     "child",
+     "ped"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "ped",
+     "stop",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "oneway",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "noentry",
+     "oneway",
+     "stop"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 6,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "stop",
+     "oneway",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "ped",
+     "work",
+     "slow"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "slow",
+     "stop",
+     "noped"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "ped",
+     "child",
+     "work",
+     "slow"
+    ]
+   },
+   {
+    "sign": "slow",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "ped",
+     "work",
+     "slow"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 7,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "noentry",
+     "noped",
+     "ped"
+    ]
+   },
+   {
+    "sign": "work",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "work",
+     "slow",
+     "ped",
+     "child"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "noped",
+     "slow",
+     "stop"
+    ]
+   },
+   {
+    "sign": "oneway",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "oneway",
+     "stop",
+     "child",
+     "slow"
+    ]
+   },
+   {
+    "sign": "slow",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "work",
+     "ped",
+     "slow"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 8,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "child",
+     "stop",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "stop",
+     "noped",
+     "work"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "slow",
+     "noentry",
+     "noped"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "stop",
+     "noped",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "ped",
+     "work",
+     "slow"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 9,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "oneway",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "oneway",
+     "work",
+     "child"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "stop",
+     "noentry",
+     "child"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "ped",
+     "noentry",
+     "noped"
+    ]
+   },
+   {
+    "sign": "work",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "slow",
+     "ped",
+     "work"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "ped",
+     "work",
+     "child",
+     "slow"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 10,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "noped",
+     "stop",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "tunnel",
+     "ped",
+     "work"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "ped",
+     "stop",
+     "light"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "ped",
+     "noentry",
+     "work",
+     "child"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noped",
+     "ped",
+     "noentry",
+     "stop"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 11,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "tunnel",
+     "ped",
+     "child",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "slow",
+     "noentry",
+     "ped"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "noentry",
+     "work",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "bridge",
+     "noentry",
+     "noped"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "tunnel",
+     "noentry",
+     "stop",
+     "child"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 12,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "ped",
+     "bridge",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "ped",
+     "stop",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "work",
+     "noentry",
+     "ped"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "noped",
+     "ped",
+     "oneway"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "tunnel",
+     "stop",
+     "bridge",
+     "noentry"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 13,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "stop",
+     "bridge",
+     "work"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "ped",
+     "slow",
+     "child",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "bridge",
+     "stop",
+     "work"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "oneway",
+     "slow",
+     "noentry",
+     "stop"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "noped",
+     "light",
+     "ped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 14,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "light",
+     "noentry",
+     "tunnel",
+     "stop"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "noped",
+     "stop",
+     "light"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "ped",
+     "stop",
+     "noped",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noped",
+     "oneway",
+     "stop",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "ped",
+     "child",
+     "light",
+     "oneway"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 15,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "oneway",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "oneway",
+     "tunnel",
+     "light"
+    ]
+   },
+   {
+    "sign": "work",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "oneway",
+     "bridge",
+     "work"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "child",
+     "tunnel",
+     "noped"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "noped",
+     "stop",
+     "slow"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "noentry",
+     "stop",
+     "noped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 16,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "slow",
+     "bridge",
+     "child",
+     "ped"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "light",
+     "noentry",
+     "stop",
+     "noped"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "oneway",
+     "stop",
+     "light",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "zebra",
+     "tunnel",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "tunnel",
+     "slow",
+     "child"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 17,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "noped",
+     "slow",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "tunnel",
+     "ped",
+     "noentry",
+     "stop"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "work",
+     "ped",
+     "child"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "light",
+     "ped",
+     "slow"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "stop",
+     "light",
+     "ped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 18,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "stop",
+     "slow",
+     "oneway"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "child",
+     "bridge",
+     "noped"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "ped",
+     "noped",
+     "oneway"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "work",
+     "zebra",
+     "stop"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "oneway",
+     "light",
+     "child",
+     "work"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 19,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "child",
+     "oneway",
+     "ped"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "oneway",
+     "noentry",
+     "stop",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "tunnel",
+     "ped",
+     "noped"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "child",
+     "zebra",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "child",
+     "work",
+     "stop"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 20,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "oneway",
+     "ped",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "tunnel",
+     "stop",
+     "child",
+     "ped"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "slow",
+     "stop",
+     "noped",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "light",
+     "slow",
+     "ped",
+     "child"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "ped",
+     "noentry",
+     "bridge",
+     "stop"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 21,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "child",
+     "noentry",
+     "stop"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "ped",
+     "slow",
+     "work",
+     "child"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "work",
+     "ped",
+     "child"
+    ]
+   },
+   {
+    "sign": "work",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "slow",
+     "ped",
+     "work"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "slow",
+     "ped",
+     "work"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 22,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "light",
+     "work",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "zebra",
+     "light",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "oneway",
+     "noentry",
+     "stop"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "work",
+     "child",
+     "bridge",
+     "noped"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "noentry",
+     "bridge",
+     "tunnel"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 23,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "slow",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "work",
+     "ped",
+     "slow",
+     "child"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "oneway",
+     "stop",
+     "noped"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "ped",
+     "child",
+     "work",
+     "slow"
+    ]
+   },
+   {
+    "sign": "work",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "child",
+     "work",
+     "ped"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "noentry",
+     "oneway",
+     "stop"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 24,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "light",
+     "zebra",
+     "noentry",
+     "stop"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "ped",
+     "oneway",
+     "child",
+     "noped"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "oneway",
+     "bridge",
+     "tunnel",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "child",
+     "stop",
+     "ped"
+    ]
+   },
+   {
+    "sign": "slow",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "slow",
+     "light",
+     "noped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 25,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "ped",
+     "noped",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "oneway",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "oneway",
+     "child",
+     "work"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "noped",
+     "oneway",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "oneway",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "noentry",
+     "oneway",
+     "work"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "noentry",
+     "noped",
+     "slow"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 26,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "tunnel",
+     "zebra",
+     "light"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "zebra",
+     "bridge",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "light",
+     "bridge",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "light",
+     "tunnel",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "bridge",
+     "light",
+     "zebra"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 27,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "tunnel",
+     "child",
+     "light"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "noentry",
+     "child",
+     "oneway"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "tunnel",
+     "oneway",
+     "stop",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "ped",
+     "child",
+     "light",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "work",
+     "noped",
+     "noentry"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 28,
+  "dch": 1,
+  "quizzes": [
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "zebra",
+     "light",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "light",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "bridge",
+     "tunnel",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "zebra",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "light",
+     "zebra",
+     "bridge",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "tunnel",
+     "zebra",
+     "light"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "tunnel",
+     "zebra",
+     "light"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 29,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "work",
+     "oneway",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "oneway",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "zebra",
+     "noped",
+     "oneway"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "child",
+     "oneway",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "stop",
+     "slow",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "slow",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "slow",
+     "work",
+     "noentry"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 30,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "light",
+     "noped",
+     "stop",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "light",
+     "ped",
+     "bridge",
+     "child"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "ped",
+     "noped",
+     "zebra",
+     "child"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "oneway",
+     "noentry",
+     "stop",
+     "child"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "work",
+     "child",
+     "ped",
+     "noped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 31,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "light",
+     "stop",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "work",
+     "child",
+     "ped",
+     "stop"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "light",
+     "oneway",
+     "stop",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "slow",
+     "ped",
+     "child",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noped",
+     "ped",
+     "zebra",
+     "child"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 32,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "stop",
+     "noped",
+     "work"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "ped",
+     "child",
+     "work"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "child",
+     "stop",
+     "noped"
+    ]
+   },
+   {
+    "sign": "work",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "work",
+     "ped",
+     "child"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "noentry",
+     "noped",
+     "work"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 33,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "slow",
+     "stop",
+     "noentry",
+     "ped"
+    ]
+   },
+   {
+    "sign": "work",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noped",
+     "child",
+     "work",
+     "oneway"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "stop",
+     "tunnel",
+     "child"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "bridge",
+     "work",
+     "child",
+     "slow"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "tunnel",
+     "noentry",
+     "work",
+     "light"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 34,
+  "dch": 3,
+  "quizzes": [
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "tunnel",
+     "light",
+     "ped",
+     "child"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "work",
+     "stop",
+     "noped",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "stop",
+     "child",
+     "noped"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "slow",
+     "stop",
+     "noentry"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "zebra",
+     "noentry",
+     "ped",
+     "stop"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 35,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "bridge",
+     "ped",
+     "child",
+     "noped"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "light",
+     "noentry",
+     "child",
+     "ped"
+    ]
+   },
+   {
+    "sign": "bridge",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "oneway",
+     "bridge",
+     "slow",
+     "zebra"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "oneway",
+     "noentry",
+     "stop",
+     "child"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "work",
+     "ped",
+     "child",
+     "oneway"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 36,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "slow",
+     "child",
+     "ped",
+     "work"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "ped",
+     "noped",
+     "stop"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "ped",
+     "work",
+     "slow"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "oneway",
+     "noped",
+     "noentry",
+     "stop"
+    ]
+   },
+   {
+    "sign": "child",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "ped",
+     "slow",
+     "work"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 37,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "work",
+     "noentry",
+     "noped",
+     "stop"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "oneway",
+     "stop",
+     "noped"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "noentry",
+     "stop",
+     "child",
+     "noped"
+    ]
+   },
+   {
+    "sign": "slow",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "ped",
+     "slow",
+     "child",
+     "work"
+    ]
+   },
+   {
+    "sign": "noped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "noentry",
+     "noped",
+     "ped"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 38,
+  "dch": 2,
+  "quizzes": [
+   {
+    "sign": "slow",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "child",
+     "work",
+     "slow",
+     "ped"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "noped",
+     "noentry",
+     "child"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "stop",
+     "noped",
+     "noentry",
+     "ped"
+    ]
+   },
+   {
+    "sign": "slow",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "work",
+     "slow",
+     "child",
+     "ped"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "ped",
+     "child",
+     "work",
+     "slow"
+    ]
+   }
+  ]
+ },
+ {
+  "flat": 39,
+  "dch": 4,
+  "quizzes": [
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "child",
+     "stop",
+     "noentry",
+     "tunnel"
+    ]
+   },
+   {
+    "sign": "noentry",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "noentry",
+     "light",
+     "zebra",
+     "stop"
+    ]
+   },
+   {
+    "sign": "stop",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "stop",
+     "noentry",
+     "ped",
+     "work"
+    ]
+   },
+   {
+    "sign": "tunnel",
+    "kind": "mean",
+    "flash": false,
+    "near": false,
+    "cards": [
+     "zebra",
+     "stop",
+     "tunnel",
+     "bridge"
+    ]
+   },
+   {
+    "sign": "ped",
+    "kind": "mean",
+    "flash": false,
+    "near": true,
+    "cards": [
+     "oneway",
+     "child",
+     "ped",
+     "tunnel"
+    ]
+   }
+  ]
+ }
+]

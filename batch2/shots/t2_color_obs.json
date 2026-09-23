@@ -1,0 +1,425 @@
+{
+ "meta": {
+  "game": "color",
+  "started": "2026-09-06T09:33:53.716200",
+  "viewport": "800x1180 headless",
+  "finished": "2026-09-06T09:35:30.007098",
+  "duration_s": 97.1
+ },
+ "timeline": [
+  {
+   "t": 1.4,
+   "msg": "首进直接教学关",
+   "data": {
+    "level": "1-0",
+    "regions": 10
+   }
+  },
+  {
+   "t": 2.6,
+   "msg": "教学\"看\"中途点区域0→立即被填色?",
+   "data": {
+    "region0_color": 0
+   }
+  },
+  {
+   "t": 3.0,
+   "msg": "教学\"看\"又点区域1",
+   "data": {
+    "region1_color": 0
+   }
+  },
+  {
+   "t": 5.6,
+   "msg": "演示链走完后的教学状态（帮是否接管）",
+   "data": {
+    "finger_go": true,
+    "swatch_pulse": true,
+    "demo_filled_last": 0,
+    "n_filled": 3
+   }
+  },
+  {
+   "t": 5.8,
+   "msg": "调色盘几何",
+   "data": {
+    "rows": {
+     "1024": 9,
+     "1104": 3
+    },
+    "min_w": 64,
+    "min_h": 64
+   }
+  },
+  {
+   "t": 6.2,
+   "msg": "误点邻近色7(紫,本想8粉)",
+   "data": {
+    "selected": "7"
+   }
+  },
+  {
+   "t": 11.7,
+   "msg": "孩子填满2区域后教学是否收手",
+   "data": {
+    "finger_go": false,
+    "pulse_on": "0"
+   }
+  },
+  {
+   "t": 26.0,
+   "msg": "只剩最后一块",
+   "data": {
+    "filled": 10,
+    "total": 10
+   }
+  },
+  {
+   "t": 26.7,
+   "msg": "已填区域换色重填",
+   "data": {
+    "sel": "7",
+    "before": 0,
+    "after": 0
+   }
+  },
+  {
+   "t": 27.1,
+   "msg": "填满自动过关+演出期间乱点",
+   "data": {
+    "stars": 0,
+    "sel_before": "7",
+    "sel_after_clicks": "7"
+   }
+  },
+  {
+   "t": 30.2,
+   "msg": "进入1-1",
+   "data": {
+    "level": "1-1",
+    "regions": 6,
+    "tutorial_absent": false
+   }
+  },
+  {
+   "t": 37.6,
+   "msg": "30%点完成→温和提示",
+   "data": {
+    "toast": {
+     "show": true,
+     "text": "还有空白哦"
+    },
+    "still_play": true,
+    "voice_col_hint": [
+     {
+      "t": 36003,
+      "api": "voice",
+      "key": "col_hint",
+      "text": "点颜色，再点图画"
+     }
+    ]
+   }
+  },
+  {
+   "t": 39.8,
+   "msg": "提示自动消失",
+   "data": {
+    "show": false
+   }
+  },
+  {
+   "t": 60.9,
+   "msg": "卡住21秒的帮扶",
+   "data": {
+    "voice": [
+     {
+      "t": 54042,
+      "api": "voice",
+      "key": "col_hint",
+      "text": "点颜色，再点图画"
+     }
+    ]
+   }
+  },
+  {
+   "t": 66.3,
+   "msg": "50%再点完成",
+   "data": {
+    "toast": {
+     "show": false
+    },
+    "filled": 3,
+    "n": 6
+   }
+  },
+  {
+   "t": 66.4,
+   "msg": "60%+点完成过关",
+   "data": {
+    "stars": 1,
+    "filled_ratio": 0.5
+   }
+  },
+  {
+   "t": 69.5,
+   "msg": "进入1-2",
+   "data": {
+    "level": "1-2",
+    "regions": 8
+   }
+  },
+  {
+   "t": 74.5,
+   "msg": "误点主页再进→进度是否丢失",
+   "data": {
+    "level": "1-2",
+    "filled_before_home": 2,
+    "filled_after_reenter": 0
+   }
+  },
+  {
+   "t": 74.5,
+   "msg": "小区域命中外扩(hitaid)",
+   "data": {
+    "count": 4
+   }
+  },
+  {
+   "t": 75.0,
+   "msg": "点击外扩命中圈",
+   "data": {
+    "target_region": "0",
+    "filled": true
+   }
+  },
+  {
+   "t": 75.4,
+   "msg": "撤销",
+   "data": {
+    "filled_before": 1,
+    "filled_after": 0
+   }
+  },
+  {
+   "t": 93.8,
+   "msg": "1-2涂满自动过关",
+   "data": {
+    "stars": 3
+   }
+  },
+  {
+   "t": 96.8,
+   "msg": "存档",
+   "data": {
+    "1-0": {
+     "stars": 3,
+     "plays": 1
+    },
+    "1-1": {
+     "stars": 1,
+     "plays": 1
+    },
+    "1-2": {
+     "stars": 3,
+     "plays": 1
+    }
+   }
+  }
+ ],
+ "errors": [],
+ "vlog": [
+  {
+   "t": 36,
+   "api": "tts",
+   "text": "看！点颜色，再点图画"
+  },
+  {
+   "t": 1141,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 1483,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 1745,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 1745,
+   "api": "voice",
+   "key": "col_tut_turn",
+   "text": "你来挑一个颜色吧"
+  },
+  {
+   "t": 4656,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 5087,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 7729,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 10575,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 13836,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 16984,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 19111,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 22404,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 23209,
+   "api": "sfx",
+   "key": "win"
+  },
+  {
+   "t": 28996,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 33382,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 36003,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 36003,
+   "api": "voice",
+   "key": "col_hint",
+   "text": "点颜色，再点图画"
+  },
+  {
+   "t": 54042,
+   "api": "voice",
+   "key": "col_hint",
+   "text": "点颜色，再点图画"
+  },
+  {
+   "t": 59717,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 62722,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 64732,
+   "api": "sfx",
+   "key": "win"
+  },
+  {
+   "t": 68283,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 72696,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 73032,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 73354,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 73371,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 73403,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 73817,
+   "api": "sfx",
+   "key": "click"
+  },
+  {
+   "t": 74241,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 77094,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 79643,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 82199,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 83753,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 85413,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 88275,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 90538,
+   "api": "sfx",
+   "key": "pop"
+  },
+  {
+   "t": 91352,
+   "api": "sfx",
+   "key": "win"
+  }
+ ]
+}

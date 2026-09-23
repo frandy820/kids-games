@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>除法分糖</title>
+<style>
+/* ================= 除法分糖 divide（batch12）=================
+   视觉按 DESIGN-SPEC §8：暖米底 #FBF6EC、桌面浅暖场景、暖橙主色、灰蓝错误色（不用大红）
+   玩法两段：deal 发放期（逐颗点糖→飞到当前轮到的盘子，轮流=天然均匀）→ ask 答问期（3 选 1 数字卡）
+   触摸目标：糖果热区 ≥68、答案卡 ≥96×96、底栏按钮 ≥72 高；间距 ≥16；pointerdown 即响应
+   轮到的盘子呼吸高亮（孩子知道下一颗去哪）；盘子角标=已放糖数（点数角标，subbug 模式） */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;overflow:hidden;padding:4px 10px}
+
+/* ---------- 题面行（ch1-3 图文章面 / ch4 黑板算式） ---------- */
+#board{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+  min-height:72px;padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:12px;padding:7px 22px;border-radius:22px;
+  background:#FFF9EE;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4}
+#prompt-chip .seg{display:flex;align-items:center;gap:7px}
+#prompt-chip b{color:#E8873A;font-size:36px;font-variant-numeric:tabular-nums;line-height:1}
+#prompt-chip .lb{font-size:17px;font-weight:700;color:#8A7B6C}
+#prompt-chip svg.cm{width:40px;height:40px;flex:0 0 40px}
+#prompt-chip .x{font-size:20px;font-weight:800;color:#C9BDA8}
+/* 黑板算式（ch4）：深绿板面+粉笔白大字；? 答对后变绿 */
+#prompt-chip.board{background:#3F5E52;border-color:#2E463D;box-shadow:0 5px 0 #2E463D}
+#formula{font-size:clamp(30px,4.2vw,44px);font-weight:800;color:#F5F1E6;letter-spacing:.04em;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+#formula .qm{color:#F2C98C}
+#formula .qm.ok{color:#9FD98F;animation:qm-pop .45s cubic-bezier(.2,1.6,.4,1)}
+@keyframes qm-pop{from{transform:scale(.2) rotate(-14deg);display:inline-block}
+  to{transform:scale(1) rotate(0);display:inline-block}}
+/* 发放进度小条（题面右侧持续可见：已发 k/需发 K） */
+#dealcount{display:flex;align-items:center;gap:6px;height:52px;padding:0 14px;border-radius:16px;
+  background:#F6EEDD;border:2.5px dashed #C9BDA8;font-size:20px;font-weight:800;color:#8A7B6C;
+  font-variant-numeric:tabular-nums;flex:0 0 auto}
+#dealcount b{color:#E8873A;font-size:26px}
+
+/* ---------- 桌面：糖果托盘（上）+ 盘子行（下） ---------- */
+#table-area{flex:1 1 auto;min-height:220px;width:100%;max-width:1180px;display:flex;
+  flex-direction:column;justify-content:center;gap:6px}
+#candy-tray{display:flex;flex-wrap:wrap;justify-content:center;align-content:center;
+  gap:14px 18px;min-height:76px;padding:4px 6px}
+/* 糖果按钮：进场弹出；点后 .gone；余数糖 .leftover（降饱和，不循环呼吸防诱导点击） */
+.candy{position:relative;width:68px;height:68px;padding:0;border-radius:50%;
+  transition:transform .15s;animation:candy-in .4s cubic-bezier(.2,1.5,.4,1) both}
+.candy:nth-child(2n){animation-delay:.06s}.candy:nth-child(3n){animation-delay:.12s}
+@keyframes candy-in{from{transform:scale(0) rotate(-24deg)}to{transform:scale(1) rotate(0)}}
+.candy:active{transform:translateY(3px)}
+.candy svg{width:100%;height:100%;pointer-events:none;
+  filter:drop-shadow(0 3px 0 rgba(74,59,46,.14))}
+.candy.gone{visibility:hidden;pointer-events:none}
+.candy.leftover{filter:saturate(.4);opacity:.7}
+.candy.leftover svg{filter:none}
+.candy.wig{animation:candy-wig .5s ease}
+@keyframes candy-wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg)}
+  55%{transform:rotate(7deg)}80%{transform:rotate(-4deg)}}
+.candy.breathe{animation:candy-breathe 1.6s ease-in-out infinite}
+@keyframes candy-breathe{0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(232,151,90,0))}
+  50%{transform:scale(1.12);filter:drop-shadow(0 0 12px rgba(232,151,90,.85))}}
+/* 飞行糖（fixed 克隆，JS 设起止坐标；transform 过渡到目标盘） */
+.fly-candy{position:fixed;z-index:60;width:56px;height:56px;pointer-events:none;
+  transition:transform .48s cubic-bezier(.35,.05,.6,1),opacity .48s;will-change:transform}
+
+/* 盘子行：M 个小动物盘子（落点视觉锚点；轮到的呼吸高亮） */
+#plate-row{display:flex;justify-content:center;align-items:flex-end;gap:22px;flex-wrap:wrap;
+  padding:2px 6px}
+.plate{position:relative;width:132px;min-height:118px;display:flex;flex-direction:column;
+  align-items:center;justify-content:flex-end;gap:0;border-radius:18px;padding:2px 4px 6px}
+.plate .face{width:52px;height:52px;margin-bottom:-8px;position:relative;z-index:2;
+  transition:transform .2s}
+.plate .dish{position:relative;z-index:1}
+.plate .dish svg{width:124px;height:64px}
+/* 盘内糖堆（发放到达后：按已放数渲染小糖点排） */
+.plate .pile{position:absolute;left:50%;top:22px;transform:translateX(-50%);z-index:1;
+  display:flex;flex-wrap:wrap;gap:2px;max-width:104px;justify-content:center}
+.plate .pile i{width:17px;height:17px;border-radius:50%;border:2px solid rgba(74,59,46,.4);
+  animation:candy-in .32s cubic-bezier(.2,1.5,.4,1) both}
+/* 盘角标：已放糖数（发放到达 +1 弹出） */
+.plate .badge{position:absolute;top:-6px;right:2px;min-width:36px;height:36px;padding:0 6px;
+  border-radius:18px;background:#FFF9EE;border:3px solid #E8975A;color:#4A3B2E;
+  font-size:22px;font-weight:800;display:none;align-items:center;justify-content:center;
+  font-variant-numeric:tabular-nums;box-shadow:0 2px 0 #D8C9B4;z-index:3}
+.plate .badge.on{display:flex;animation:badge-pop .4s cubic-bezier(.2,1.6,.4,1)}
+@keyframes badge-pop{from{transform:scale(0) rotate(-18deg)}to{transform:scale(1) rotate(0)}}
+/* 轮到的盘子：呼吸高亮（下一颗糖去哪）+ 虚线落点框 */
+.plate.turn{background:rgba(232,151,90,.13);border:2.5px dashed #E8975A}
+.plate.turn .face{animation:plate-breathe 1.6s ease-in-out infinite}
+@keyframes plate-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.09)}}
+.plate.land{animation:plate-land .45s cubic-bezier(.2,1.6,.4,1)}
+@keyframes plate-land{0%{transform:scale(1)}45%{transform:scale(1.07)}100%{transform:scale(1)}}
+
+/* ---------- 答案区：deal 期提示条 / ask 期 3 张数字大卡 ---------- */
+#answers{flex:0 0 auto;display:flex;justify-content:center;align-items:center;gap:20px;
+  flex-wrap:wrap;min-height:118px;padding:2px 12px}
+#deal-tip{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:700;color:#8A7B6C}
+#deal-tip svg{width:34px;height:34px}
+.opt{min-width:132px;min-height:96px;padding:0 26px;border-radius:26px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;font-size:44px;font-weight:800;color:#4A3B2E;
+  font-variant-numeric:tabular-nums;transition:transform .15s,box-shadow .15s;position:relative;
+  animation:candy-in .38s cubic-bezier(.2,1.5,.4,1) both}
+.opt:nth-child(2){animation-delay:.07s}.opt:nth-child(3){animation-delay:.14s}
+.opt:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+/* 不灰化款：错卡=晃动不灰掉可重点（divide SPEC §1） */
+.opt.wrong{animation:opt-shake .42s ease}
+@keyframes opt-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}
+  40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.opt.right{background:#8FBF7F;color:#4A3B2E;border-color:#6FA063;box-shadow:0 5px 0 #6FA063}
+.opt.right .mark{position:absolute;top:-13px;right:-13px;width:40px;height:40px;border-radius:50%;
+  background:#8FBF7F;border:2.5px solid #FFF9EE;display:flex;align-items:center;justify-content:center;
+  animation:opt-pop .45s cubic-bezier(.2,1.6,.4,1)}
+.opt.right .mark svg{width:26px;height:26px}
+@keyframes opt-pop{from{transform:scale(0) rotate(-20deg)}to{transform:scale(1) rotate(0)}}
+/* 救援视觉：正确卡 breathe 持续循环（§0.21） */
+.opt.breathe{animation:opt-breathe 1.6s ease-in-out infinite}
+@keyframes opt-breathe{0%,100%{transform:scale(1);box-shadow:0 5px 0 #D8C9B4}
+  50%{transform:scale(1.07);box-shadow:0 5px 0 #D8C9B4,0 0 16px rgba(232,151,90,.9)}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 subbug/sortsize） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：糖 wrap 两行、题面与答案卡适配 */
+@media (orientation:portrait){
+  .candy{width:64px;height:64px}
+  #candy-tray{gap:12px 14px}
+  .plate{width:112px;min-height:104px}
+  .plate .dish svg{width:104px;height:54px}
+  .plate .face{width:44px;height:44px}
+  .opt{min-width:150px;min-height:104px;font-size:50px}
+  #prompt-chip b{font-size:32px}
+  #formula{font-size:34px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="除法分糖">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="board">
+      <div id="prompt-chip" role="heading" aria-label="题目"></div>
+      <div id="dealcount" aria-label="发放进度"></div>
+    </div>
+    <div id="table-area">
+      <div id="candy-tray" aria-label="糖果堆"></div>
+      <div id="plate-row" aria-label="小盘子"></div>
+    </div>
+    <div id="answers" aria-label="答案选项"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="读题"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

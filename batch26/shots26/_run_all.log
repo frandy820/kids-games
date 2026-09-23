@@ -1,0 +1,330 @@
+==================== sign 交通标志 ====================
+  [    0.0s] page_loaded {}
+  [    0.2s] shot {'file': 'sign_f0_teach.png'}
+  [    1.5s] tut_watch_tap_swallowed {'step_same': True, 'bump': 'bump'}
+  [    1.5s] phase {'name': '教学关 flat0（watch 演示）'}
+  [   10.7s] tut_state {'state': 'help'}
+  [   10.7s] shot {'file': 'sign_f0_turn.png'}
+  [   13.4s] phase {'name': 'flat0 题1 故意点错（听错反馈）'}
+  [   16.7s] tap {'card': 0, 'result': 'wrong', 'voice': ['<clip:sgn_wrong> + TTS:看看灯的颜色再走']}
+  [   16.8s] shot {'file': 'sign_f0_wrong.png'}
+  [   26.3s] tap {'card': 1, 'result': 'right', 'voice': ['<clip:sgn_q> + TTS:这个标志是什么意思', 'TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [   36.8s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:过马路，走斑马线', 'TTS:过马路，走斑马线']}
+  [   44.9s] phase {'name': 'flat0 题3 点错+重复点同卡'}
+  [   47.0s] tap {'card': 0, 'result': 'wrong', 'voice': ['<clip:sgn_wrong> + TTS:蓝牌子说，这样走']}
+  [   49.2s] tap {'card': 0, 'result': 'wrong', 'voice': ['<clip:sgn_wrong> + TTS:蓝牌子说，这样走']}
+  [   49.2s] repeat_wrong_tap {'second': 'wrong', 'voice2': ['<clip:sgn_wrong> + TTS:蓝牌子说，这样走']}
+  [   50.9s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:过马路，走天桥', 'TTS:过马路，走天桥']}
+  [   61.2s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:过马路，走地下通道', 'TTS:过马路，走地下通道']}
+  [   71.5s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [   79.6s] tut_done {'tut': 'none'}
+  [   96.1s] level_done {'flat': 0, 'key': '1-0', 'stars': 1, 'miss': 0}
+  [   97.2s] phase {'name': 'flat1 正常玩+点空白'}
+  [   99.7s] blank_tap {'voice': ['<clip:sgn_hint> + TTS:再看看标志的样子']}
+  [  100.5s] level_start {'flat': 1}
+  [  102.6s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:过马路，走天桥', 'TTS:过马路，走天桥']}
+  [  112.7s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:过马路，走地下通道', 'TTS:过马路，走地下通道']}
+  [  122.9s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [  133.3s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:过马路，走斑马线', 'TTS:过马路，走斑马线']}
+  [  143.8s] tap {'card': 3, 'result': 'done', 'voice': ['TTS:过马路，走天桥', 'TTS:过马路，走天桥']}
+  [  171.1s] level_done {'flat': 1, 'key': '1-1', 'stars': 3, 'miss': 0}
+  [  171.9s] level_start {'flat': 2}
+  [  173.8s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:过马路，走斑马线', 'TTS:过马路，走斑马线']}
+  [  181.9s] phase {'name': '犹豫测试：静置等 14s 方向级救援'}
+  [  199.5s] rescue_probe {'voice': ['<clip:sgn_q> + TTS:这个标志是什么意思'], 'scene_cls': 'pulse -> pulse'}
+  [  199.5s] shot {'file': 'sign_f2_rescue.png'}
+  [  201.8s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:过马路，走天桥', 'TTS:过马路，走天桥']}
+  [  212.1s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:过马路，走地下通道', 'TTS:过马路，走地下通道']}
+  [  222.5s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [  232.2s] tap {'card': 3, 'result': 'done', 'voice': ['TTS:过马路，走斑马线', 'TTS:过马路，走斑马线']}
+  [  259.5s] level_done {'flat': 2, 'key': '1-2', 'stars': 3, 'miss': 0}
+  [  260.3s] level_start {'flat': 3}
+  [  260.3s] phase {'name': '手痒连点测试'}
+  [  264.4s] rapidtap {'miss': (0, 0), 'step': 1, 'voice': ['TTS:过马路，走地下通道', 'TTS:过马路，走地下通道']}
+  [  264.5s] shot {'file': 'sign_f3_rapidtap.png'}
+  [  264.5s] phase {'name': 'flat≥3 语义反馈+10s 节流测试'}
+  [  266.2s] tap {'card': 1, 'result': 'swallowed', 'voice': []}
+  [  266.3s] shot {'file': 'sign_f3_wrongfb.png'}
+  [  275.8s] tap {'card': 1, 'result': 'wrong', 'voice': ['<clip:sgn_wrong> + TTS:看看灯的颜色再走']}
+  [  275.8s] throttle_second_wrong {'result': 'wrong', 'voice2': ['<clip:sgn_wrong> + TTS:看看灯的颜色再走']}
+  [  280.4s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [  290.7s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:过马路，走斑马线', 'TTS:过马路，走斑马线']}
+  [  301.2s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:过马路，走天桥', 'TTS:过马路，走天桥']}
+  [  311.1s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:过马路，走地下通道', 'TTS:过马路，走地下通道']}
+  [  338.4s] level_done {'flat': 3, 'key': '1-3', 'stars': 2, 'miss': 0}
+  [  339.2s] level_start {'flat': 4}
+  [  341.4s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [  351.1s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:过马路，走斑马线', 'TTS:过马路，走斑马线']}
+  [  361.6s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:过马路，走天桥', 'TTS:过马路，走天桥']}
+  [  371.5s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:过马路，走地下通道', 'TTS:过马路，走地下通道']}
+  [  381.6s] tap {'card': 1, 'result': 'done', 'voice': ['TTS:红灯停，绿灯行', 'TTS:红灯停，绿灯行']}
+  [  393.6s] chapterend_shown {'text': '★ | 第 1 章 完成！ | 本章星星 12 | 明天：红圈圈和蓝牌子要来啦 | 明天见'}
+  [  393.6s] shot {'file': 'sign_chapend.png'}
+  [  394.1s] level_done {'flat': 4, 'key': '1-4', 'stars': 3, 'miss': 0}
+  [  394.9s] level_start {'flat': 5}
+  [  396.8s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红八角，停下看一看', 'TTS:红八角，停下看一看']}
+  [  406.5s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红圈圈，行人不能进', 'TTS:红圈圈，行人不能进']}
+  [  416.2s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:黄三角，前方在施工', 'TTS:黄三角，前方在施工']}
+  [  426.3s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:红八角，停下看一看', 'TTS:红八角，停下看一看']}
+  [  436.5s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:蓝牌子，只往前走', 'TTS:蓝牌子，只往前走']}
+  [  448.4s] dayend_shown {'text': '今天的新关卡玩完啦 | 明天：长得像的标志要仔细看哦 | 再玩玩旧关卡 | 明天见'}
+  [  448.5s] shot {'file': 'sign_dayend.png'}
+  [  448.9s] dayend_closed_btn {'btn': '再玩玩旧关卡'}
+  [  448.9s] level_done {'flat': 5, 'key': '2-0', 'stars': 3, 'miss': 0}
+  [  450.9s] phase {'name': '家长门解锁多玩 9 关'}
+  [  451.6s] parent_gate {'quiz': '36+49'}
+  [  452.4s] shot {'file': 'sign_parentpanel.png'}
+  [  452.9s] bonus_set {'limit': 15}
+  [  453.4s] after_bonus_at {'flat': 5}
+  [  453.4s] level_start {'flat': 5}
+  [  455.6s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红八角，停下看一看', 'TTS:红八角，停下看一看']}
+  [  466.0s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红圈圈，行人不能进', 'TTS:红圈圈，行人不能进']}
+  [  476.0s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:黄三角，前方在施工', 'TTS:黄三角，前方在施工']}
+  [  486.4s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:红八角，停下看一看', 'TTS:红八角，停下看一看']}
+  [  496.2s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:蓝牌子，只往前走', 'TTS:蓝牌子，只往前走']}
+  [  525.5s] level_done {'flat': 5, 'key': '2-0', 'stars': 3, 'miss': 0}
+  [  525.5s] now_at {'flat': 6}
+  [  557.7s] autosolve_done {'flat': 6, 'res': {'done': True, 'taps': 5}, 'stars': 3}
+  [  590.0s] autosolve_done {'flat': 7, 'res': {'done': True, 'taps': 5}, 'stars': 3}
+  [  622.2s] autosolve_done {'flat': 8, 'res': {'done': True, 'taps': 5}, 'stars': 3}
+  [  654.4s] chapterend_shown {'text': '★ | 第 2 章 完成！ | 本章星星 15 | 明天：长得像的标志要仔细看哦 | 明天见'}
+  [  654.4s] shot {'file': 'sign_chapend.png'}
+  [  654.9s] autosolve_done {'flat': 9, 'res': {'done': True, 'taps': 5}, 'stars': 3}
+  [  654.9s] phase {'name': 'ch3 近对/反向章 flat10 真实玩'}
+  [  657.2s] shot {'file': 'sign_f10_ch3.png'}
+  [  657.2s] ch3_q1 {'q': {'sign': 'noentry'}}
+  [  663.3s] tap {'card': 2, 'result': 'wrong', 'voice': ['<clip:sgn_wrong> + TTS:红圈圈说，不能做']}
+  [  663.4s] shot {'file': 'sign_f10_wrongfb.png'}
+  [  669.9s] wrongchain_guard {'wrong_voice': ['<clip:sgn_wrong> + TTS:红圈圈说，不能做'], 'during_chain_voice': [], 'rescue_cut_suspect': False}
+  [  674.9s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:红圈圈，这里不能走', 'TTS:红圈圈，这里不能走']}
+  [  685.4s] tap {'card': 2, 'result': 'wrong', 'voice': ['<clip:sgn_wrong> + TTS:黄三角说，要小心']}
+  [  696.0s] tap {'card': 2, 'result': 'wrong', 'voice': ['<clip:sgn_wrong> + TTS:黄三角说，要小心']}
+  [  696.0s] ch3_repeat_wrong {'result': 'wrong', 'voice2': ['<clip:sgn_wrong> + TTS:黄三角说，要小心']}
+  [  700.4s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:黄三角，前方有小朋友', 'TTS:黄三角，前方有小朋友']}
+  [  710.5s] tap {'card': 0, 'result': 'wrong', 'voice': ['<clip:sgn_wrong> + TTS:红八角说，停下来']}
+  [  720.8s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:红八角，停下看一看', 'TTS:红八角，停下看一看']}
+  [  730.5s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:黄三角，前方有小朋友', 'TTS:黄三角，前方有小朋友']}
+  [  740.7s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:红圈圈，这里不能走', 'TTS:红圈圈，这里不能走']}
+  [  750.8s] ch3_done {'stars': 1}
+  [  750.8s] final_save {'levels': {'1-0': {'stars': 1, 'plays': 1}, '1-1': {'stars': 3, 'plays': 1}, '1-2': {'stars': 3, 'plays': 1}, '1-3': {'stars': 2, 'plays': 1}, '1-4': {'stars': 3, 'plays': 1}, '2-0': {'stars': 3, 'plays': 2}, '2-1': {'stars': 3, 'plays': 1}, '2-2': {'stars': 3, 'plays': 1}, '2-3': {'stars': 3, 'plays': 1}, '2-4': {'stars': 3, 'plays': 1}, '3-0': {'stars': 1, 'plays': 1}}, 'dailyMin': {'2026-09-09': 12}}
+==== sign DONE ====
+==================== season 季节衣橱 ====================
+  [    0.0s] page_loaded {}
+  [    0.1s] shot {'file': 'season_f0_teach.png'}
+  [    1.4s] tut_watch_tap_swallowed {'step_same': True, 'bump': 'bump'}
+  [    1.4s] phase {'name': '教学关 flat0（watch 演示）'}
+  [   10.6s] tut_state {'state': 'help'}
+  [   10.7s] shot {'file': 'season_f0_turn.png'}
+  [   13.3s] phase {'name': 'flat0 题1 故意点错（听错反馈）'}
+  [   16.1s] tap {'card': 1, 'result': 'wrong', 'voice': ['TTS:长裤是秋天穿的哦', 'TTS:长裤是秋天穿的哦']}
+  [   16.2s] shot {'file': 'season_f0_wrong.png'}
+  [   23.8s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:春天带上小雨伞，不怕雨', 'TTS:春天带上小雨伞，不怕雨']}
+  [   34.6s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:夏天穿上小凉鞋，凉凉的', 'TTS:夏天穿上小凉鞋，凉凉的']}
+  [   43.0s] phase {'name': 'flat0 题3 点错+重复点同卡'}
+  [   44.8s] tap {'card': 0, 'result': 'wrong', 'voice': ['TTS:春天还没那么冷哦', 'TTS:春天还没那么冷哦']}
+  [   47.1s] tap {'card': 0, 'result': 'wrong', 'voice': ['TTS:春天还没那么冷哦', 'TTS:春天还没那么冷哦']}
+  [   47.1s] repeat_wrong_tap {'second': 'wrong', 'voice2': ['TTS:春天还没那么冷哦', 'TTS:春天还没那么冷哦']}
+  [   49.3s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:春天放起小风筝，飞得高', 'TTS:春天放起小风筝，飞得高']}
+  [   60.0s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:夏天戴上遮阳帽，不怕晒', 'TTS:夏天戴上遮阳帽，不怕晒']}
+  [   70.0s] tap {'card': 0, 'result': 'done', 'voice': ['TTS:春天穿上小雨靴，踩水花', 'TTS:春天穿上小雨靴，踩水花']}
+  [   78.3s] tut_done {'tut': 'none'}
+  [   95.0s] level_done {'flat': 0, 'key': '1-0', 'stars': 1, 'miss': 0}
+  [   96.0s] phase {'name': 'flat1 正常玩+点空白'}
+  [   98.9s] blank_tap {'voice': ['<clip:sea_hint> + TTS:想想现在是什么季节']}
+  [   99.7s] level_start {'flat': 1}
+  [  101.4s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:夏天穿上小短袖，真凉快', 'TTS:夏天穿上小短袖，真凉快']}
+  [  111.9s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:春天放起小风筝，飞得高', 'TTS:春天放起小风筝，飞得高']}
+  [  122.6s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:夏天穿上小凉鞋，凉凉的', 'TTS:夏天穿上小凉鞋，凉凉的']}
+  [  133.1s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:春天穿上小雨靴，踩水花', 'TTS:春天穿上小雨靴，踩水花']}
+  [  143.4s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:夏天戴好小泳镜，去游泳', 'TTS:夏天戴好小泳镜，去游泳']}
+  [  170.9s] level_done {'flat': 1, 'key': '1-1', 'stars': 3, 'miss': 0}
+  [  171.7s] level_start {'flat': 2}
+  [  173.4s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:春天穿上小雨靴，踩水花', 'TTS:春天穿上小雨靴，踩水花']}
+  [  181.7s] phase {'name': '犹豫测试：静置等 14s 方向级救援'}
+  [  199.2s] rescue_probe {'voice': ['<clip:sea_q> + TTS:这个季节要穿什么'], 'scene_cls': 'pulse -> pulse'}
+  [  199.3s] shot {'file': 'season_f2_rescue.png'}
+  [  201.0s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:夏天穿上小短袖，真凉快', 'TTS:夏天穿上小短袖，真凉快']}
+  [  211.1s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:春天穿上薄外套，刚刚好', 'TTS:春天穿上薄外套，刚刚好']}
+  [  221.1s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:夏天戴好小泳镜，去游泳', 'TTS:夏天戴好小泳镜，去游泳']}
+  [  231.1s] tap {'card': 1, 'result': 'done', 'voice': ['TTS:春天带上小雨伞，不怕雨', 'TTS:春天带上小雨伞，不怕雨']}
+  [  258.5s] level_done {'flat': 2, 'key': '1-2', 'stars': 3, 'miss': 0}
+  [  259.3s] level_start {'flat': 3}
+  [  259.3s] phase {'name': '手痒连点测试'}
+  [  264.0s] rapidtap {'miss': (0, 0), 'step': 1, 'voice': ['TTS:夏天戴上遮阳帽，不怕晒', 'TTS:夏天戴上遮阳帽，不怕晒']}
+  [  264.1s] shot {'file': 'season_f3_rapidtap.png'}
+  [  264.1s] phase {'name': 'flat≥3 语义反馈+10s 节流测试'}
+  [  265.9s] tap {'card': 0, 'result': 'swallowed', 'voice': []}
+  [  266.0s] shot {'file': 'season_f3_wrongfb.png'}
+  [  274.3s] tap {'card': 0, 'result': 'wrong', 'voice': ['TTS:春天还没那么冷哦', 'TTS:春天还没那么冷哦']}
+  [  274.3s] throttle_second_wrong {'result': 'wrong', 'voice2': ['TTS:春天还没那么冷哦', 'TTS:春天还没那么冷哦']}
+  [  279.0s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:春天带上小雨伞，不怕雨', 'TTS:春天带上小雨伞，不怕雨']}
+  [  289.6s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:夏天穿上小短袖，真凉快', 'TTS:夏天穿上小短袖，真凉快']}
+  [  300.2s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:春天穿上薄外套，刚刚好', 'TTS:春天穿上薄外套，刚刚好']}
+  [  310.7s] tap {'card': 0, 'result': 'done', 'voice': ['TTS:夏天戴好小泳镜，去游泳', 'TTS:夏天戴好小泳镜，去游泳']}
+  [  338.1s] level_done {'flat': 3, 'key': '1-3', 'stars': 2, 'miss': 0}
+  [  338.9s] level_start {'flat': 4}
+  [  340.8s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:春天放起小风筝，飞得高', 'TTS:春天放起小风筝，飞得高']}
+  [  351.1s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:夏天戴好小泳镜，去游泳', 'TTS:夏天戴好小泳镜，去游泳']}
+  [  361.3s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:春天穿上小雨靴，踩水花', 'TTS:春天穿上小雨靴，踩水花']}
+  [  371.2s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:夏天戴上遮阳帽，不怕晒', 'TTS:夏天戴上遮阳帽，不怕晒']}
+  [  381.1s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:春天带上小雨伞，不怕雨', 'TTS:春天带上小雨伞，不怕雨']}
+  [  393.3s] chapterend_shown {'text': '★ | 第 1 章 完成！ | 本章星星 12 | 明天：秋天冬天的衣服也要来啦 | 明天见'}
+  [  393.4s] shot {'file': 'season_chapend.png'}
+  [  393.8s] level_done {'flat': 4, 'key': '1-4', 'stars': 3, 'miss': 0}
+  [  394.6s] level_start {'flat': 5}
+  [  396.7s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:秋天穿上小马甲，真精神', 'TTS:秋天穿上小马甲，真精神']}
+  [  407.0s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:冬天戴上厚围巾，暖暖的', 'TTS:冬天戴上厚围巾，暖暖的']}
+  [  417.7s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:秋天穿上小风衣，真神气', 'TTS:秋天穿上小风衣，真神气']}
+  [  428.1s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:冬天戴好小手套，手暖暖', 'TTS:冬天戴好小手套，手暖暖']}
+  [  438.6s] tap {'card': 3, 'result': 'done', 'voice': ['TTS:秋天穿好长裤子，腿暖暖', 'TTS:秋天穿好长裤子，腿暖暖']}
+  [  450.8s] dayend_shown {'text': '今天的新关卡玩完啦 | 明天：长得像的衣服要仔细看哦 | 再玩玩旧关卡 | 明天见'}
+  [  450.9s] shot {'file': 'season_dayend.png'}
+  [  451.3s] dayend_closed_btn {'btn': '再玩玩旧关卡'}
+  [  451.3s] level_done {'flat': 5, 'key': '2-0', 'stars': 3, 'miss': 0}
+  [  453.4s] phase {'name': '家长门解锁多玩 9 关'}
+  [  454.1s] parent_gate {'quiz': '49+20'}
+  [  454.9s] shot {'file': 'season_parentpanel.png'}
+  [  455.4s] bonus_set {'limit': 15}
+  [  455.9s] after_bonus_at {'flat': 5}
+  [  455.9s] level_start {'flat': 5}
+  [  457.9s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:秋天穿上小马甲，真精神', 'TTS:秋天穿上小马甲，真精神']}
+  [  468.2s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:冬天戴上厚围巾，暖暖的', 'TTS:冬天戴上厚围巾，暖暖的']}
+  [  478.8s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:秋天穿上小风衣，真神气', 'TTS:秋天穿上小风衣，真神气']}
+  [  488.7s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:冬天戴好小手套，手暖暖', 'TTS:冬天戴好小手套，手暖暖']}
+  [  498.6s] tap {'card': 3, 'result': 'done', 'voice': ['TTS:秋天穿好长裤子，腿暖暖', 'TTS:秋天穿好长裤子，腿暖暖']}
+  [  528.1s] level_done {'flat': 5, 'key': '2-0', 'stars': 3, 'miss': 0}
+  [  528.1s] now_at {'flat': 6}
+  [  560.3s] autosolve_done {'flat': 6, 'res': {'done': True, 'taps': 5}, 'stars': 3}
+  [  592.5s] autosolve_done {'flat': 7, 'res': {'done': True, 'taps': 5}, 'stars': 3}
+  [  624.7s] autosolve_done {'flat': 8, 'res': {'done': True, 'taps': 5}, 'stars': 3}
+  [  656.9s] chapterend_shown {'text': '★ | 第 2 章 完成！ | 本章星星 15 | 明天：长得像的衣服要仔细看哦 | 明天见'}
+  [  656.9s] shot {'file': 'season_chapend.png'}
+  [  657.4s] autosolve_done {'flat': 9, 'res': {'done': True, 'taps': 5}, 'stars': 3}
+  [  657.4s] phase {'name': 'ch3 近对/反向章 flat10 真实玩'}
+  [  659.8s] shot {'file': 'season_f10_ch3.png'}
+  [  659.8s] ch3_q1 {'q': {'season': 'spring', 'item': 'rainboots'}}
+  [  663.8s] tap {'card': 3, 'result': 'wrong', 'voice': ['TTS:春天穿薄外套就好', 'TTS:春天穿薄外套就好']}
+  [  663.9s] shot {'file': 'season_f10_wrongfb.png'}
+  [  668.9s] wrongchain_guard {'wrong_voice': ['TTS:春天穿薄外套就好', 'TTS:春天穿薄外套就好'], 'during_chain_voice': [], 'rescue_cut_suspect': False}
+  [  673.2s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:春天穿上小雨靴，踩水花', 'TTS:春天穿上小雨靴，踩水花']}
+  [  683.5s] tap {'card': 0, 'result': 'wrong', 'voice': ['TTS:放风筝是春天的游戏哦', 'TTS:放风筝是春天的游戏哦']}
+  [  691.7s] tap {'card': 0, 'result': 'wrong', 'voice': []}
+  [  691.7s] ch3_repeat_wrong {'result': 'wrong', 'voice2': []}
+  [  695.9s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:秋天穿上小马甲，真精神', 'TTS:秋天穿上小马甲，真精神']}
+  [  705.9s] tap {'card': 0, 'result': 'wrong', 'voice': ['TTS:长裤是秋天穿的哦', 'TTS:长裤是秋天穿的哦']}
+  [  714.1s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:春天穿上薄外套，刚刚好', 'TTS:春天穿上薄外套，刚刚好']}
+  [  724.0s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:冬天戴好小手套，手暖暖', 'TTS:冬天戴好小手套，手暖暖']}
+  [  734.0s] tap {'card': 3, 'result': 'done', 'voice': ['TTS:春天带上小雨伞，不怕雨', 'TTS:春天带上小雨伞，不怕雨']}
+  [  744.3s] ch3_done {'stars': 1}
+  [  744.3s] final_save {'levels': {'1-0': {'stars': 1, 'plays': 1}, '1-1': {'stars': 3, 'plays': 1}, '1-2': {'stars': 3, 'plays': 1}, '1-3': {'stars': 2, 'plays': 1}, '1-4': {'stars': 3, 'plays': 1}, '2-0': {'stars': 3, 'plays': 2}, '2-1': {'stars': 3, 'plays': 1}, '2-2': {'stars': 3, 'plays': 1}, '2-3': {'stars': 3, 'plays': 1}, '2-4': {'stars': 3, 'plays': 1}, '3-0': {'stars': 1, 'plays': 1}}, 'dailyMin': {'2026-09-09': 12}}
+==== season DONE ====
+==================== calendar 日历小星 ====================
+  [    0.0s] page_loaded {}
+  [    0.1s] shot {'file': 'calendar_f0_teach.png'}
+  [    1.4s] tut_watch_tap_swallowed {'step_same': True, 'bump': 'bump'}
+  [    1.4s] phase {'name': '教学关 flat0（watch 演示）'}
+  [   10.1s] tut_state {'state': 'help'}
+  [   10.1s] shot {'file': 'calendar_f0_turn.png'}
+  [   12.7s] phase {'name': 'flat0 题1 故意点错（听错反馈）'}
+  [   17.5s] tap {'card': 1, 'result': 'wrong', 'voice': ['TTS:它排在后面哦，往前找找', 'TTS:它排在后面哦，往前找找']}
+  [   17.6s] shot {'file': 'calendar_f0_wrong.png'}
+  [   32.0s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:星期三的后面是星期四', 'TTS:星期三的后面是星期四']}
+  [   47.3s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:星期五的后面是星期六', 'TTS:星期五的后面是星期六']}
+  [   60.4s] phase {'name': 'flat0 题3 点错+重复点同卡'}
+  [   62.8s] tap {'card': 0, 'result': 'wrong', 'voice': ['TTS:就是今天哦，找它后面的', 'TTS:就是今天哦，找它后面的']}
+  [   65.0s] tap {'card': 0, 'result': 'wrong', 'voice': ['TTS:就是今天哦，找它后面的', 'TTS:就是今天哦，找它后面的']}
+  [   65.0s] repeat_wrong_tap {'second': 'wrong', 'voice2': ['TTS:就是今天哦，找它后面的', 'TTS:就是今天哦，找它后面的']}
+  [   67.0s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:星期二的后面是星期三', 'TTS:星期二的后面是星期三']}
+  [   82.4s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:星期四的后面是星期五', 'TTS:星期四的后面是星期五']}
+  [   97.6s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:星期一的后面是星期二', 'TTS:星期一的后面是星期二']}
+  [  110.8s] tut_done {'tut': 'none'}
+  [  127.4s] level_done {'flat': 0, 'key': '1-0', 'stars': 1, 'miss': 0}
+  [  128.4s] phase {'name': 'flat1 正常玩+点空白'}
+  [  131.3s] blank_tap {'voice': ['<clip:cal_hint> + TTS:想想它的后面是谁']}
+  [  132.1s] level_start {'flat': 1}
+  [  134.0s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:星期日的后面是星期一', 'TTS:星期日的后面是星期一']}
+  [  148.8s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:星期六的后面是星期日', 'TTS:星期六的后面是星期日']}
+  [  164.3s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:星期三的后面是星期四', 'TTS:星期三的后面是星期四']}
+  [  179.3s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:星期五的后面是星期六', 'TTS:星期五的后面是星期六']}
+  [  194.3s] tap {'card': 2, 'result': 'done', 'voice': ['TTS:星期二的后面是星期三', 'TTS:星期二的后面是星期三']}
+  [  226.5s] level_done {'flat': 1, 'key': '1-1', 'stars': 3, 'miss': 0}
+  [  227.3s] level_start {'flat': 2}
+  [  229.1s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:星期四的后面是星期五', 'TTS:星期四的后面是星期五']}
+  [  242.2s] phase {'name': '犹豫测试：静置等 14s 方向级救援'}
+  [  259.7s] rescue_probe {'voice': ['<clip:cal_q> + TTS:星期一的后面是星期几？'], 'scene_cls': 'pulse -> pulse'}
+  [  259.7s] shot {'file': 'calendar_f2_rescue.png'}
+  [  261.8s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:星期一的后面是星期二', 'TTS:星期一的后面是星期二']}
+  [  277.3s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:星期日的后面是星期一', 'TTS:星期日的后面是星期一']}
+  [  292.3s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:星期六的后面是星期日', 'TTS:星期六的后面是星期日']}
+  [  307.6s] tap {'card': 1, 'result': 'done', 'voice': ['TTS:星期三的后面是星期四', 'TTS:星期三的后面是星期四']}
+  [  339.9s] level_done {'flat': 2, 'key': '1-2', 'stars': 3, 'miss': 0}
+  [  340.7s] level_start {'flat': 3}
+  [  340.7s] phase {'name': '手痒连点测试'}
+  [  345.2s] rapidtap {'miss': (0, 0), 'step': 1, 'voice': ['TTS:星期五的后面是星期六', 'TTS:星期五的后面是星期六']}
+  [  345.3s] shot {'file': 'calendar_f3_rapidtap.png'}
+  [  345.3s] phase {'name': 'flat≥3 语义反馈+10s 节流测试'}
+  [  348.0s] tap {'card': 0, 'result': 'swallowed', 'voice': ['TTS:星期二的后面是星期几？', 'TTS:星期二的后面是星期几？']}
+  [  348.1s] shot {'file': 'calendar_f3_wrongfb.png'}
+  [  356.6s] tap {'card': 0, 'result': 'wrong', 'voice': ['TTS:它排在后面哦，往前找找', 'TTS:它排在后面哦，往前找找']}
+  [  356.6s] throttle_second_wrong {'result': 'wrong', 'voice2': ['TTS:它排在后面哦，往前找找', 'TTS:它排在后面哦，往前找找']}
+  [  361.3s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:星期二的后面是星期三', 'TTS:星期二的后面是星期三']}
+  [  376.7s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:星期四的后面是星期五', 'TTS:星期四的后面是星期五']}
+  [  391.4s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:星期一的后面是星期二', 'TTS:星期一的后面是星期二']}
+  [  406.2s] tap {'card': 3, 'result': 'done', 'voice': ['TTS:星期日的后面是星期一', 'TTS:星期日的后面是星期一']}
+  [  438.5s] level_done {'flat': 3, 'key': '1-3', 'stars': 2, 'miss': 0}
+  [  439.3s] level_start {'flat': 4}
+  [  441.1s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:星期六的后面是星期日', 'TTS:星期六的后面是星期日']}
+  [  455.9s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:星期三的后面是星期四', 'TTS:星期三的后面是星期四']}
+  [  470.8s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:星期五的后面是星期六', 'TTS:星期五的后面是星期六']}
+  [  485.8s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:星期二的后面是星期三', 'TTS:星期二的后面是星期三']}
+  [  500.8s] tap {'card': 3, 'result': 'done', 'voice': ['TTS:星期四的后面是星期五', 'TTS:星期四的后面是星期五']}
+  [  517.7s] chapterend_shown {'text': '★ | 第 1 章 完成！ | 本章星星 12 | 明天：十二个月份也要排排队哦 | 明天见'}
+  [  517.8s] shot {'file': 'calendar_chapend.png'}
+  [  518.2s] level_done {'flat': 4, 'key': '1-4', 'stars': 3, 'miss': 0}
+  [  519.0s] level_start {'flat': 5}
+  [  521.1s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:五月的后面是六月', 'TTS:五月的后面是六月']}
+  [  535.8s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:二月的后面是三月', 'TTS:二月的后面是三月']}
+  [  551.2s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:三月的后面是四月', 'TTS:三月的后面是四月']}
+  [  566.5s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:六月的后面是七月', 'TTS:六月的后面是七月']}
+  [  581.2s] tap {'card': 3, 'result': 'done', 'voice': ['TTS:一月的后面是二月', 'TTS:一月的后面是二月']}
+  [  613.5s] level_done {'flat': 5, 'key': '2-0', 'stars': 3, 'miss': 0}
+  [  615.5s] phase {'name': '家长门解锁多玩 9 关'}
+  [  616.2s] parent_gate {'quiz': '45+44'}
+  [  617.0s] shot {'file': 'calendar_parentpanel.png'}
+  [  617.5s] bonus_set {'limit': 21}
+  [  618.0s] after_bonus_at {'flat': 6}
+  [  618.0s] level_start {'flat': 5}
+  [  644.1s] wait_flat_timeout {'want': 5, 'now': 6, 'won': False}
+  [  645.9s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:七月的后面是八月', 'TTS:七月的后面是八月']}
+  [  661.2s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:十一月的后面是十二月', 'TTS:十一月的后面是十二月']}
+  [  676.0s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:九月的后面是十月', 'TTS:九月的后面是十月']}
+  [  691.3s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:十二月的后面是一月', 'TTS:十二月的后面是一月']}
+  [  706.0s] tap {'card': 3, 'result': 'done', 'voice': ['TTS:八月的后面是九月', 'TTS:八月的后面是九月']}
+  [  740.2s] level_done {'flat': 5, 'key': '2-0', 'stars': 3, 'miss': 0}
+  [  740.2s] now_at {'flat': 7}
+  [  768.8s] autosolve_done {'flat': 6, 'res': {'done': True, 'taps': 5}, 'stars': 3}
+  [  796.6s] resttip_shown {'text': 'z z\n小兔子的眼睛要休息啦\n去看看远处的大树，明天再一起玩\n好的'}
+  [  796.6s] shot {'file': 'calendar_resttip.png'}
+  [  797.1s] autosolve_done {'flat': 7, 'res': {'done': True, 'taps': 5}, 'stars': 3}
+  [  825.2s] autosolve_done {'flat': 8, 'res': {'done': True, 'taps': 5}, 'stars': 3}
+  [  853.4s] chapterend_shown {'text': '★ | 第 2 章 完成！ | 本章星星 15 | 明天：倒着想一想，昨天是哪一个 | 明天见'}
+  [  853.5s] shot {'file': 'calendar_chapend.png'}
+  [  854.0s] autosolve_done {'flat': 9, 'res': {'done': True, 'taps': 5}, 'stars': 3}
+  [  854.0s] phase {'name': 'ch3 近对/反向章 flat10 真实玩'}
+  [  856.3s] shot {'file': 'calendar_f10_ch3.png'}
+  [  856.3s] ch3_q1 {'q': {'kind': 'day_rev', 'base': '星期二', 'answer': '星期一'}}
+  [  862.9s] tap {'card': 0, 'result': 'wrong', 'voice': ['TTS:它在前面，昨天在后面', 'TTS:它在前面，昨天在后面']}
+  [  862.9s] shot {'file': 'calendar_f10_wrongfb.png'}
+  [  867.9s] wrongchain_guard {'wrong_voice': ['TTS:它在前面，昨天在后面', 'TTS:它在前面，昨天在后面'], 'during_chain_voice': [], 'rescue_cut_suspect': False}
+  [  876.5s] tap {'card': 3, 'result': 'right', 'voice': ['TTS:星期二的前面是星期一', 'TTS:星期二的前面是星期一']}
+  [  891.6s] tap {'card': 0, 'result': 'wrong', 'voice': ['TTS:它在前面，上个月在后面', 'TTS:它在前面，上个月在后面']}
+  [  902.9s] tap {'card': 0, 'result': 'wrong', 'voice': ['TTS:它在前面，上个月在后面', 'TTS:它在前面，上个月在后面']}
+  [  902.9s] ch3_repeat_wrong {'result': 'wrong', 'voice2': ['TTS:它在前面，上个月在后面', 'TTS:它在前面，上个月在后面']}
+  [  908.4s] tap {'card': 1, 'result': 'right', 'voice': ['TTS:十二月的前面是十一月', 'TTS:十二月的前面是十一月']}
+  [  923.8s] tap {'card': 1, 'result': 'wrong', 'voice': ['TTS:就是这个月哦，找它前面的', 'TTS:就是这个月哦，找它前面的']}
+  [  934.0s] tap {'card': 0, 'result': 'right', 'voice': ['TTS:三月的前面是二月', 'TTS:三月的前面是二月']}
+  [  949.1s] tap {'card': 2, 'result': 'right', 'voice': ['TTS:十二月的后面是一月', 'TTS:十二月的后面是一月']}
+  [  963.9s] tap {'card': 3, 'result': 'done', 'voice': ['TTS:星期日的前面是星期六', 'TTS:星期日的前面是星期六']}
+  [  979.0s] ch3_done {'stars': 1}
+  [  979.0s] final_save {'levels': {'1-0': {'stars': 1, 'plays': 1}, '1-1': {'stars': 3, 'plays': 1}, '1-2': {'stars': 3, 'plays': 1}, '1-3': {'stars': 2, 'plays': 1}, '1-4': {'stars': 3, 'plays': 1}, '2-0': {'stars': 3, 'plays': 1}, '2-1': {'stars': 3, 'plays': 2}, '2-2': {'stars': 3, 'plays': 1}, '2-3': {'stars': 3, 'plays': 1}, '2-4': {'stars': 3, 'plays': 1}, '3-0': {'stars': 1, 'plays': 1}}, 'dailyMin': {'2026-09-09': 5, '2026-09-10': 11}}
+==== calendar DONE ====

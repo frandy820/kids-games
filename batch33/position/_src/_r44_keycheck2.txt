@@ -1,0 +1,44 @@
+{
+ "dualKeys": [
+  "lu",
+  "dr",
+  "ru",
+  "dl"
+ ],
+ "pos6": [
+  "front",
+  "back",
+  "left",
+  "right",
+  "up",
+  "down"
+ ],
+ "total": 16,
+ "mismatch": [],
+ "dualCombos": [
+  {
+   "key": "lu",
+   "house": "left-down",
+   "tree": "left",
+   "houseDir": "up"
+  },
+  {
+   "key": "dr",
+   "house": "left-down",
+   "tree": "down",
+   "houseDir": "right"
+  },
+  {
+   "key": "ru",
+   "house": "right-down",
+   "tree": "right",
+   "houseDir": "up"
+  },
+  {
+   "key": "dl",
+   "house": "right-down",
+   "tree": "down",
+   "houseDir": "left"
+  }
+ ]
+}

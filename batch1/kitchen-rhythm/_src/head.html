@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>厨房节奏</title>
+<style>
+/* ============ 厨房节奏 kitchen-rhythm（batch1 · r18 老结构重建·难度改造）
+   家族基调：暖米底 #FBF3E4、暖橙主色 #E8975A、暖棕描边 #4A3B2E（视觉默认沿老款 spec §8）。
+   r18（SPEC-R18-KITCHEN）：曲库 10（含变速/长曲/双轨）+ 连击门槛星级 + 双轨双时间轴
+   （上轨=lane0 左圈 / 下轨=lane1；点按按上下半屏分流）。章爬升 ch1 恒速→ch2 变速→
+   ch3 长曲→ch4 双轨；生成关 flat≥32。 ============ */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:#FBF3E4;color:#4A3B2E;font-family:system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;
+  overflow:hidden;-webkit-user-select:none;user-select:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+button{font-family:inherit;touch-action:manipulation;cursor:pointer;border:none;background:none;color:#4A3B2E}
+#app{height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.scene{display:none;flex:1 1 auto;min-height:0;flex-direction:column}
+.scene.on{display:flex}
+
+/* ---------- 首页（曲目选择，零文字：10 曲卡+自由琴键） ---------- */
+#scene-home{overflow-y:auto;overflow-x:hidden;padding:16px 16px 28px;-webkit-overflow-scrolling:touch}
+#logo-row{display:flex;justify-content:center;padding:6px 0 2px}
+#logo-row svg{width:96px;height:96px}
+#today-dots{display:flex;justify-content:center;gap:16px;padding:8px 0 16px}
+.tdot{width:28px;height:28px;border-radius:50%;border:3px solid #E8B27E;background:#FFF9EE;transition:background .4s,border-color .4s}
+.tdot.done{background:#8FBF7F;border-color:#8FBF7F}
+#song-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:18px;max-width:880px;width:100%;margin:0 auto}
+.song-card{background:#FFF9EE;border-radius:26px;border:3px solid #EFE3CD;box-shadow:0 6px 0 #EFE3CD;
+  padding:16px 12px 14px;display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;
+  transition:transform .15s;min-height:196px;justify-content:space-between;min-width:0}
+.song-card:active{transform:translateY(3px)}
+.song-card .art{width:84px;height:84px;flex:0 0 auto}
+.song-card .stars{display:flex;gap:4px;min-height:24px}
+.song-card .stars span{font-size:22px;line-height:1;color:#E4D5BC}
+.song-card .stars span.on{color:#F0B429}
+.listen-btn{width:64px;height:64px;border-radius:50%;border:none;background:#F2B8C6;box-shadow:0 4px 0 #D998A8;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;flex:0 0 auto}
+.listen-btn:active{transform:translateY(2px);box-shadow:0 1px 0 #D998A8}
+.listen-btn svg{width:34px;height:34px}
+
+/* ---------- 游戏区（canvas 双轨两条时间轴；吞输入容器 bump——家族 D） ---------- */
+#scene-play{position:relative;touch-action:none;min-height:0}
+#stage-wrap{position:relative;flex:1;min-height:0;touch-action:none;overflow:hidden}
+#stage-wrap.bump{animation:wrap-bump .22s ease}
+@keyframes wrap-bump{0%,100%{transform:scale(1)}45%{transform:scale(.985)}}
+#stage{position:absolute;inset:0;width:100%;height:100%;display:block}
+#btn-cut{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom));
+  width:132px;height:132px;border-radius:50%;border:none;background:rgba(232,151,90,.94);box-shadow:0 7px 0 #C77A42;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;pointer-events:none;
+  transition:transform .12s;z-index:5}
+#btn-cut.pressed{transform:translateX(-50%) scale(.88)}
+#btn-cut svg{width:72px;height:72px}
+/* 双轨：上/下半屏各一刀（视觉锚，pointer-events:none——点击按上下半屏分流 lane） */
+#btn-cut.dual{left:32%;bottom:auto;top:30%;width:104px;height:104px;opacity:.92}
+#btn-cut-l1{position:absolute;right:18%;bottom:calc(30px + env(safe-area-inset-bottom));width:104px;height:104px;
+  border-radius:50%;border:none;background:rgba(147,191,127,.92);box-shadow:0 7px 0 #7BA36C;
+  display:none;align-items:center;justify-content:center;cursor:pointer;pointer-events:none;
+  transition:transform .12s;z-index:5}
+#btn-cut-l1.dual{display:flex}
+#btn-cut-l1.pressed{transform:scale(.88)}
+#btn-cut-l1 svg{width:58px;height:58px}
+#btn-back,#btn-back2{width:64px;height:64px;border-radius:18px;border:none;background:rgba(255,249,238,.92);
+  box-shadow:0 4px 0 #E0D2BC;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:8;flex:0 0 auto}
+#btn-back{position:absolute;top:12px;left:12px}
+#btn-back:active,#btn-back2:active{transform:translateY(2px);box-shadow:0 1px 0 #E0D2BC}
+#btn-back svg,#btn-back2 svg{width:34px;height:34px}
+#combo-bunny{position:absolute;top:7%;right:3%;width:108px;height:108px;display:none;z-index:4;transform-origin:50% 92%;pointer-events:none}
+#combo-bunny.show{display:block;animation:bny-dance .6s ease-in-out infinite alternate}
+@keyframes bny-dance{from{transform:rotate(-7deg) scale(1)}to{transform:rotate(7deg) scale(1.06)}}
+#combo-n{position:absolute;top:calc(7% + 106px);right:5%;min-width:46px;height:46px;padding:0 8px;background:#F0B429;
+  border-radius:23px;display:none;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:#fff;
+  z-index:4;box-shadow:0 3px 0 #C8920E;opacity:0;transition:opacity .3s;pointer-events:none}
+#combo-n.show{display:flex;opacity:1}
+
+/* ---------- 幽灵手指（教学帮阶段/救援答案级/等手势起拍，缩放渐变无频闪） ---------- */
+#tut-finger{position:absolute;width:58px;height:78px;left:22%;top:34%;z-index:7;opacity:0;transition:opacity .4s;pointer-events:none}
+#tut-finger.on{opacity:.88}
+#tut-finger.press{animation:finger-press .3s ease-out}
+@keyframes finger-press{0%{transform:scale(1)}45%{transform:scale(.78) translateY(8px)}100%{transform:scale(1)}}
+
+/* ---------- 自由琴键 ---------- */
+#scene-free{padding:14px;gap:12px}
+#free-head{display:flex;justify-content:flex-start}
+#keys{flex:1;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:1fr;gap:16px;max-width:760px;width:100%;
+  margin:0 auto;padding:4px 2px calc(12px + env(safe-area-inset-bottom))}
+.kkey{border-radius:20px;border:3px solid rgba(74,59,46,.5);display:flex;align-items:flex-end;justify-content:center;
+  padding-bottom:10px;color:rgba(74,59,46,.78);font-size:22px;font-weight:800;cursor:pointer;
+  transition:transform .1s;min-height:64px;min-width:64px}
+.kkey.down{transform:translateY(5px) scale(.97);filter:brightness(.94)}
+
+/* ---------- 曲终结算（.k-song-end 供验收断言；全图标+数字+连击行） ---------- */
+.k-song-end{position:fixed;inset:0;z-index:9998;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:12px;background:rgba(251,243,228,.96);opacity:0;transition:opacity .35s;touch-action:none;overflow-y:auto;padding:20px 0}
+.k-song-end.show{opacity:1}
+.se-plate{width:232px;height:148px;flex:0 0 auto}
+.se-foods{display:flex;gap:5px;margin-top:-56px;flex-wrap:wrap;max-width:340px;justify-content:center;min-height:38px}
+.se-foods svg{width:34px;height:34px}
+.se-foods .more{font-weight:800;color:#4A3B2E;font-size:20px;align-self:center;margin-left:4px}
+.se-stats{display:flex;gap:36px;margin-top:8px}
+.se-row{display:flex;align-items:center;gap:8px;font-size:30px;font-weight:800;color:#4A3B2E}
+.se-row svg{width:38px;height:38px}
+.se-row.se-combo svg{width:44px;height:44px}
+.se-stars{display:flex;gap:6px;min-height:60px}
+.se-stars span{font-size:54px;line-height:1;color:#E4D5BC}
+.se-stars span.on{color:#F0B429;animation:k-pop .5s cubic-bezier(.2,1.6,.4,1) both}
+.se-stars span.on:nth-child(2){animation-delay:.12s}
+.se-stars span.on:nth-child(3){animation-delay:.24s}
+.se-go{min-width:96px;min-height:78px;border-radius:24px;display:flex;align-items:center;justify-content:center}
+.se-go svg{width:34px;height:34px}
+
+/* ---------- verify 输出（仅测试态） ---------- */
+#verify-result{position:fixed;left:0;right:0;bottom:0;max-height:38vh;overflow:auto;background:rgba(74,59,46,.93);
+  color:#D8CDBB;font:11px/1.5 Consolas,monospace;padding:8px 10px;z-index:199999;display:none;white-space:pre-wrap;word-break:break-all}
+body.verify #verify-result{display:block}
+
+/* ---------- 竖屏（r18 双通道）：真视口媒体查询 + body.port 类模拟（verify 竖屏模拟/
+   自测 P1b），两条通道规则逐行相同（PORT-CLS 标记段，build.py 逐行全等断言） ---------- */
+@media (orientation:portrait){
+  #song-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+  .song-card{min-height:168px;padding:12px 8px 10px}
+  .song-card .art{width:68px;height:68px}
+  #btn-cut{width:116px;height:116px}
+  #btn-cut svg{width:64px;height:64px}
+  #btn-cut.dual{width:88px;height:88px;top:24%}
+  #btn-cut-l1{width:88px;height:88px}
+  #btn-cut-l1 svg{width:50px;height:50px}
+  #combo-bunny{width:88px;height:88px}
+  .se-row{font-size:24px}
+  .se-row svg{width:32px;height:32px}
+  .se-stars span{font-size:44px}
+}
+/*PORT-CLS*/
+body.port #song-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+body.port .song-card{min-height:168px;padding:12px 8px 10px}
+body.port .song-card .art{width:68px;height:68px}
+body.port #btn-cut{width:116px;height:116px}
+body.port #btn-cut svg{width:64px;height:64px}
+body.port #btn-cut.dual{width:88px;height:88px;top:24%}
+body.port #btn-cut-l1{width:88px;height:88px}
+body.port #btn-cut-l1 svg{width:50px;height:50px}
+body.port #combo-bunny{width:88px;height:88px}
+body.port .se-row{font-size:24px}
+body.port .se-row svg{width:32px;height:32px}
+body.port .se-stars span{font-size:44px}
+</style>
+</head>
+<body>
+<div id="app" aria-label="厨房节奏">
+  <section id="scene-home" class="scene">
+    <div id="logo-row"></div>
+    <div id="today-dots"></div>
+    <div id="song-grid"></div>
+  </section>
+  <section id="scene-play" class="scene">
+    <div id="stage-wrap">
+      <canvas id="stage"></canvas>
+      <div id="combo-bunny"></div>
+      <div id="combo-n"></div>
+      <div id="tut-finger"></div>
+      <button id="btn-cut" aria-label="切"></button>
+      <button id="btn-cut-l1" aria-label="切下轨"></button>
+      <button id="btn-back" aria-label="返回首页"></button>
+    </div>
+  </section>
+  <section id="scene-free" class="scene">
+    <div id="free-head"><button id="btn-back2" aria-label="返回首页"></button></div>
+    <div id="keys"></div>
+  </section>
+</div>
+<pre id="verify-result" aria-hidden="true"></pre>

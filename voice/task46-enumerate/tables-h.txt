@@ -1,0 +1,32 @@
+=== teach  MISS
+=== senses AGAINS [game-data.js]
+SENSE_AGAIN = '再想一想，用什么呢';      // findsense 错链尾（9 字） | const THING_AGAIN =
+=== position  [game-data.js]
+PLACE_TTS = {};                                   // 「把兔子放到树的前面」×6（9 字 estMs 口径） | const CONFIRM_TTS = {};                                 // 「兔子在树的前面呀」×6 | for (const p of POS6) { |   PLACE_TTS[p] = '把兔子放到树的' + POS_NAME[p]; |   CONFIRM_TTS[p] = '兔子在树的' + POS_NAME[p] + '呀'; | } |  | /* ---------- 章配置（章号 1 基；生成关 flat≥20 每关随机章参
+=== slide  [game-data.js]
+function quizSpeech() { return '把小兔子的照片拼好吧'; } |  | /* ---------- 照片库：小兔子主题 4 张 SVG（viewBox 240×240 正方，与盘面同 aspect， |    按关轮换 picOf(flat)=flat%4）。四角+中心特征分散（左上装饰/右上天象/ |    中央主角/左下/右下道具）——
+=== bodyen  [game-data.js]
+HEAR_AGAIN = '再听一遍这个单词'; | const SEE_AGAIN = '再看看它指的地方'; |  | /* ---------- 章配
+=== poem  [game-data.js]
+GUIDE_NEXT = '再读读上一行，找找接下来那句';     // 14 字符（estMs=5430，链豁免下界依据） | const GUIDE_HEAR =
+=== wordpuz  [game-data.js]
+GUIDE = { wrong: '看看图画，想想怎么拼' };   // SPEC §0.72 错反馈语义句 | const DEMO_SAY = '点字母，放进格子里';            // 教学演示机制句（9 字符） |  | /* ---------- 词插图（20 幅简笔 SVG，viewBox 0 0 100 100，INK 描
+=== babylove  [game-data.js]
+AGAIN_OF = { findmom: MOM_AGAIN, findbaby: BABY_AGAIN, grow: GROW_AGAIN, habitat: HAB_AGAIN }; |  | /* ---------- 章配置（章号 1 基；r10 五章；生成关 flat≥25 每关随机章参数 dch=ri(1,5)） |    hint=章末预告**下一章**文案（hint[i] ↔ CHAPTERS[i+1]，家族 F 禁右移）； |    GEN_HINTS[k] ↔ dch=k+1（verify 带 C7 关键词断言） */ | const CHAPTERS = { |   1: { name: '宝宝找妈妈',   hin
+=== maze  [game-data.js]
+DEMO_SENT = '点旁边的格子走路';   // 教学演示句（8 字 estMs=3360） | const GETKEY_SENT = '拿到钥匙啦';  
+=== storybed  [game-data.js]
+GUIDE = { |   wrong: '再想想现在做哪一件事', |   distract: '这一步不在这个流程里', |   miss: '再看看少了哪一步' | }; | /* estMs 全字符口径（家族 T，b25 定版：SAPI ~345ms/字符+600 落定余量，标点计入） */ | const estMs = s => s.length * 345 + 600; |  | /* ---------- 流程库 FLOWS（SPEC-BATCH30 §0.74 流程表为源——build.py 正则提 SPE
+=== animalmenu  [game-data.js]
+FOOD_AGAIN = '再看看它爱吃什么';      // findfood 错链尾（8 字） | const WHO_AGAIN = '再想
+=== iftrain  [game-data.js]
+APPLY_AGAIN = '再看看外面是什么天气'; | const BACK_AGAIN = '再想想什么时候用它'; |  | /* ---------- 章配置（章号 1
+=== evidence  [game-data.js]
+WRONG_AGAIN = '能证明吗'; |  | /* ---------- 结论封闭 20（SPEC §-r17-evidence §1 逐字
+=== robotpaint  [game-data.js]
+MEM_TEXT = '看清楚啦，把它记住，等一会儿画出来';   // 17 字符（含标点） | const FLASH_WIN = estMs(MEM_TEXT) + 300;            
+=== brk  [game-data.js]
+TMPL = '帮小兔子拆一拆';                // 题面模板句 7 字（keyless 居链尾——契约 N） | const PRESENT_TTS = 5
+=== weather  [game-data.js]
+CH1_ROWS = [ |   { id: 'r0', scene: 'school',   weather: 'rain', need: 'raincoat',  stem: '下雨啦，去上学，穿什么' }, |   { id: 'r1', scene: 'puddle',   weather: 'rain', need: 'rainboots', stem: '下雨啦，去踩水坑，穿什么' }, |   { id: 'r2', scene: 'school',   weather: 'sun',  need: 'sunhat',    stem: '太阳晒晒，去上学，戴什么' }, |   { id: 'r3', scene: 'beach',    weather: 'sun',  need: 'shorts',    stem: '太阳晒晒，去沙滩，穿什么' }, |   { id: 'r4', scene: 'swim',     weather: 'sun',  need: 'swimwear',  stem: '太阳晒晒，去游泳，穿什么' }, |   { id: 'r5', scene: 'school',   weather: 'snow', need: 'coat',      stem: '下雪啦，去上学，穿什么' }, |   { id: 'r6', scene: 'snowman',  weather:
+=== weather  MISS

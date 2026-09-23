@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>竖式小黑板</title>
+<style>
+/* ================= 竖式小黑板 column（batch12 r15 难度改造 2026-09-16）=================
+   小黑板：深绿板面 #2F5D44 + 木框 #9C6B43 + 粉笔白 #F7F3E7（HTML/CSS 结构化渲染，禁 SVG 文字）
+   r15：4 列竖式 grid（op|百|十|个，两位数百位列空）+ 顶部标记带（进位小 1 槽）+
+   被减数位格退位点槽（玩家自己点亮=操作步）+ 两步题 ①② 步标
+   视觉基调按 DESIGN-SPEC §8：暖米底 #FBF6EC、暖橙主色、暖棕描边、灰蓝/暖红错误色（不用饱和大红）
+   触摸目标：数字键盘 0-9 ≥64（3×4 网格）、标记槽 ≥64、底栏按钮 ≥72；黑板数字 ≥40px（--bbfs）
+   竖屏双通道（r9 M-A1/r11 M-1/r12 M3 意图、JS 实测布局款落地形态）：本款黑板‖键盘方向与键径由
+   layout() 实测计算（CSS @media 无法承载），body.port 类通道=layout() 强制竖排判据 +
+   verify simView portStyle 锚（#table.col）+ _selftest P1b 真竖 800×1180 全量 verify 重跑
+   pointerdown 即响应；教学/演出期点键盘=吞输入+轻叮+键圈轻闪（§0.22） */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:6px;align-items:center;flex:1 1 auto}
+#step-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：指令条（上）+ 桌面（黑板‖键盘，方向由 layout() 实测+body.port 双通道） ---------- */
+#stage{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;align-items:center;
+  padding:4px 8px;overflow:hidden}
+#tip{min-height:54px;max-width:94%;padding:9px 30px;border-radius:27px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;
+  justify-content:center;transition:transform .15s;flex:0 0 auto}
+#tip.flash{animation:tip-b .5s ease}
+@keyframes tip-b{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+#tip-text{font-size:clamp(20px,2.8vw,27px);font-weight:800;color:#4A3B2E;line-height:1.2}
+#tip.watch{background:#FFF4E0}
+#tip.help{background:#FDF3DF}
+
+#table{flex:1 1 auto;min-height:0;width:100%;display:flex;align-items:center;
+  justify-content:center;gap:20px;padding:8px 4px}
+#table.col{flex-direction:column;gap:10px}
+
+/* ---------- 小黑板（竖式 4 列：op|百|十|个；两位数百位列渲染为空） ---------- */
+#boardwrap{flex:1 1 auto;min-width:0;min-height:0;display:flex;align-items:center;justify-content:center}
+#bb{position:relative;width:min(100%,440px);max-height:100%;background:#2F5D44;
+  border:11px solid #9C6B43;border-radius:18px;padding:8px 14px 12px;overflow:hidden;
+  box-shadow:0 6px 0 #D8C9B4,inset 0 0 26px rgba(0,0,0,.22)}
+#bb-face{display:flex;flex-direction:column;justify-content:center;transition:opacity .3s .22s}
+#bb.wiped #bb-face{opacity:0}
+#bb.stepswap #bb-face{animation:face-swap .4s ease}
+@keyframes face-swap{0%{opacity:0;transform:translateY(10px)}100%{opacity:1;transform:translateY(0)}}
+/* 竖式行：op 列 + 百 + 十 + 个 四列 grid（数位天然对齐——布局病害铁律：结构化内容用 grid） */
+.brow{display:grid;grid-template-columns:.8fr 1fr 1fr 1fr;align-items:center;justify-items:center}
+/* 标记带（进位小 1 槽）：高 ≥64 保触摸目标；槽视觉小、命中区整格 */
+.mband{height:calc(var(--mbd, 68px))}
+.numrow{height:max(68px,calc(var(--bbfs,44px) * 1.32))}
+.bn{font-size:var(--bbfs,44px);font-weight:800;color:#F7F3E7;line-height:1;
+  font-variant-numeric:tabular-nums;text-shadow:0 2px 0 rgba(0,0,0,.28)}
+.bop{font-size:calc(var(--bbfs,44px) * .9);font-weight:800;color:#EFE7CF;line-height:1;
+  text-shadow:0 2px 0 rgba(0,0,0,.28)}
+/* 步标（两步题 ①②；单步空） */
+#step-chip{font-size:calc(var(--bbfs,44px) * .5);font-weight:800;color:#F7E7A1;line-height:1}
+/* 标记槽（r15 操作步）：加法=标记带小"1"槽；减法=被减数十/百位格退位点槽（整格按钮 ≥64）
+   .arm=本题该 op 该列槽在场（淡虚线锚，提示可点）；.cur=当前应点（呼吸闪烁）；
+   .lit=已点亮（小 1/圆点显形+弹入）；.shake=错点亮晃动（暖红） */
+.mzone{position:relative;min-width:64px;min-height:64px;display:flex;align-items:center;
+  justify-content:center;border-radius:12px;-webkit-tap-highlight-color:transparent}
+.mzone[hidden]{display:none}
+.mzone .mslot{width:calc(var(--bbfs,44px) * .52);height:calc(var(--bbfs,44px) * .52);
+  border:3px dashed rgba(247,231,161,.34);border-radius:50%;opacity:0;transition:opacity .2s}
+.mzone.arm .mslot{opacity:1}
+.mzone.cur{animation:mz-blink 1.15s ease infinite}
+@keyframes mz-blink{0%,100%{background:rgba(247,231,161,.08)}
+  50%{background:rgba(247,231,161,.32)}}
+.mzone .mval{position:absolute;font-size:calc(var(--bbfs,44px) * .5);font-weight:800;color:#F7E7A1;
+  line-height:1;opacity:0;transform:scale(.2)}
+.mzone.lit .mval{opacity:1;transform:scale(1);animation:mz-pop .45s cubic-bezier(.2,1.7,.4,1)}
+.mzone.lit .mslot{opacity:0}
+@keyframes mz-pop{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
+/* 退位点：被减数位格右上角小圆点（.lit 显形；.cur 呼吸） */
+.mzone.borrow .bn{pointer-events:none}
+.mzone.borrow::after{content:"";position:absolute;top:.1em;right:.42em;width:.17em;height:.17em;
+  border-radius:50%;background:#F7E7A1;opacity:0;transition:opacity .15s}
+.mzone.borrow.lit::after{opacity:1}
+.mzone.borrow .mslot{position:absolute;top:-.05em;right:.16em;width:.4em;height:.4em;border-radius:50%}
+.mzone.borrow .mval{display:none}
+.mzone.shake{animation:mz-shake .5s ease}
+@keyframes mz-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}
+  40%{transform:translateX(7px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+/* 粉笔横线 */
+#bline{height:calc(var(--bbfs,44px) * .12);min-height:5px;margin:calc(var(--bbfs,44px) * .07) 6%;
+  border-radius:4px;background:#F7F3E7;opacity:.92;box-shadow:0 1px 0 rgba(0,0,0,.2)}
+/* 答案三格：百|十|个；当前格高亮闪烁（慢频 1.15s，无频闪）；填对=粉笔白亮；填错=暖红晃 */
+.bcell{min-width:calc(var(--bbfs,44px) * 1.06);height:calc(var(--bbfs,44px) * 1.18);
+  display:flex;align-items:center;justify-content:center;border:3px dashed rgba(247,243,231,.5);
+  border-radius:10px;font-size:var(--bbfs,44px);font-weight:800;color:#F7F3E7;line-height:1;
+  font-variant-numeric:tabular-nums;text-shadow:0 2px 0 rgba(0,0,0,.28)}
+.bcell.cur{border-color:#F7E7A1;animation:cellblink 1.15s ease infinite}
+@keyframes cellblink{0%,100%{background:rgba(247,231,161,.1);border-color:rgba(247,231,161,.55)}
+  50%{background:rgba(247,231,161,.3);border-color:#F7E7A1}}
+.bcell.lit{border-style:solid;border-color:rgba(247,243,231,.85);color:#FFFDF6;
+  animation:cell-pop .4s cubic-bezier(.2,1.7,.4,1)}
+@keyframes cell-pop{0%{transform:scale(.55)}70%{transform:scale(1.12)}100%{transform:scale(1)}}
+.bcell.bad{border-color:#E8796B;color:#F5A79B;animation:cellshake .5s ease}
+@keyframes cellshake{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}
+  40%{transform:translateX(7px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+/* 板擦（过题横扫动画）：木背+深灰毛毡 */
+#eraser{position:absolute;top:16%;left:-96px;width:92px;height:46px;border-radius:11px;
+  background:#B98A5F;border:5px solid #8B5E3C;opacity:0;pointer-events:none;
+  box-shadow:0 3px 0 rgba(0,0,0,.18)}
+#eraser::after{content:"";position:absolute;left:7px;right:7px;top:6px;bottom:6px;
+  border-radius:6px;background:#5A5F66}
+#bb.sweep #eraser{animation:erase-sweep .85s ease-in-out forwards}
+@keyframes erase-sweep{0%{left:-96px;opacity:0;transform:rotate(0deg)}8%{opacity:1}
+  50%{transform:rotate(-6deg)}100%{left:calc(100% + 26px);opacity:1;transform:rotate(4deg)}}
+
+/* ---------- 数字键盘（3×4：1-9 + 末行空|0|空；键径 --key 由 layout() 实测，下限 64）
+   标记相位键盘降权（#keys.dim）：底色变浅+描边减淡（数字恒深棕保对比），仍可点（miss 反馈） ---------- */
+#keys{display:grid;grid-template-columns:repeat(3,var(--key,88px));grid-auto-rows:var(--key,88px);
+  gap:13px;flex:0 0 auto;transition:opacity .2s}
+#keys.dim .key{border-color:rgba(74,59,46,.4);background:#F3EBDA;box-shadow:0 3px 0 #D8C9B4}
+.key{width:var(--key,88px);height:var(--key,88px);border-radius:20px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;display:flex;align-items:center;
+  justify-content:center;font-size:calc(var(--key,88px) * .46);font-weight:800;color:#4A3B2E;
+  font-variant-numeric:tabular-nums;transition:transform .12s,box-shadow .12s}
+.key:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+/* 救援视觉（§0.21）：当前应填数字键 breathe 持续循环（慢频 1.25s，静音环境屏幕可感知） */
+.key.breathe{animation:key-breathe 1.25s ease infinite}
+@keyframes key-breathe{0%,100%{box-shadow:0 5px 0 #D8C9B4,0 0 0 0 rgba(232,151,90,.6);transform:scale(1)}
+  50%{box-shadow:0 5px 0 #D8C9B4,0 0 0 15px rgba(232,151,90,0);background:#FDF0DA;transform:scale(1.07)}}
+/* 吞输入期轻反馈（§0.22）：被吞键黄圈轻闪一拍 */
+.key.nudge{animation:key-nudge .34s ease}
+@keyframes key-nudge{0%{outline:7px solid #F5C445;outline-offset:0}
+  100%{outline:7px solid transparent;outline-offset:10px}}
+.keysp{width:var(--key,88px);height:var(--key,88px)}   /* 末行两侧占位（非按钮，不参与触摸审计） */
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch3-11 家族） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+</style>
+</head>
+<body>
+<div id="game" aria-label="竖式小黑板">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="tip" aria-live="polite"><span id="tip-text">加法竖式，算一算</span></div>
+    <div id="table">
+      <div id="boardwrap" aria-label="竖式小黑板">
+        <div id="bb">
+          <div id="bb-face">
+            <div class="brow mband">
+              <span></span>
+              <button id="mz-c2" class="mzone carry" aria-label="百位进位小1"><span class="mslot"></span><b class="mval">1</b></button>
+              <button id="mz-c1" class="mzone carry" aria-label="十位进位小1"><span class="mslot"></span><b class="mval">1</b></button>
+              <span></span>
+            </div>
+            <div class="brow numrow">
+              <span class="bop"></span>
+              <button id="mz-b2" class="mzone borrow" aria-label="百位退位点"><span class="bn" id="a-h"></span><span class="mslot"></span></button>
+              <button id="mz-b1" class="mzone borrow" aria-label="十位退位点"><span class="bn" id="a-t"></span><span class="mslot"></span></button>
+              <span class="bn" id="a-o"></span>
+            </div>
+            <div class="brow numrow">
+              <span class="bop" id="op-sign">+</span>
+              <span class="bn" id="b-h"></span>
+              <span class="bn" id="b-t"></span>
+              <span class="bn" id="b-o"></span>
+            </div>
+            <div id="bline"></div>
+            <div class="brow numrow">
+              <span class="bop" id="step-chip"></span>
+              <span class="bcell" id="c-h"></span>
+              <span class="bcell" id="c-t"></span>
+              <span class="bcell" id="c-o"></span>
+            </div>
+          </div>
+          <div id="eraser"></div>
+        </div>
+      </div>
+      <div id="keys" aria-label="数字键盘"></div>
+    </div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

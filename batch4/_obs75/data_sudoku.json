@@ -1,0 +1,180 @@
+{
+ "game": "sudoku",
+ "steps": {
+  "A_tutorial": {
+   "watch_board_moves": null,
+   "watch_click_cells_changed": null,
+   "tut_help_reached_ms": 3986,
+   "solo_first_fill": {
+    "i": 3,
+    "v": 2,
+    "cells_i": 2,
+    "ok": true
+   },
+   "solo_reached": true,
+   "vc_teach": [
+    "sud_tut_turn"
+   ]
+  },
+  "B_flat0": {
+   "fills": 3,
+   "conflict_demo": {
+    "i": 5,
+    "vconf": 3,
+    "conflictCls": true,
+    "val": 3,
+    "cleared": true,
+    "wrongs_before": 0,
+    "wrongs_after": 1
+   },
+   "saved": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  "C_flat1_hint1": {
+   "hint_state_before": {
+    "spent": false,
+    "lamps": null,
+    "used": 0
+   },
+   "after_hint": {
+    "hintsUsed": 1,
+    "lamps": null,
+    "filled": 11
+   },
+   "fills": 5,
+   "saved": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  "B2_flat2": {
+   "fills": 6,
+   "saved": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  "D_flat3": {
+   "chain3": [
+    {
+     "round": 1,
+     "wrongs_before": 0,
+     "conflict": true,
+     "wrongs": 1,
+     "vc": [
+      "sud_hint"
+     ]
+    },
+    {
+     "round": 2,
+     "wrongs_before": 1,
+     "conflict": true,
+     "wrongs": 2,
+     "vc": [
+      "sud_hint"
+     ]
+    },
+    {
+     "round": 3,
+     "wrongs_before": 2,
+     "conflict": true,
+     "wrongs": 3,
+     "vc": [
+      "sud_hint"
+     ]
+    }
+   ],
+   "dblclick": {
+    "i": 3,
+    "vAfterFill": 3,
+    "vQuickTap": 3,
+    "kept": true,
+    "dt": 0
+   },
+   "slowtap_cleared": true,
+   "wig": {
+    "selBefore": -1,
+    "wigAfter": true
+   },
+   "rescue": {
+    "before": [
+     "sud_hint",
+     "sud_hint",
+     "sud_hint"
+    ],
+    "new_keys": [
+     "sud_hint"
+    ],
+    "rescue_played": true
+   }
+  },
+  "E_layout": [
+   {
+    "w": 1280,
+    "h": 800,
+    "flat0": {
+     "overflowX": 0,
+     ".cell": {
+      "n": 16,
+      "w": 110,
+      "h": 110
+     },
+     ".abtn": {
+      "n": 4,
+      "w": 104,
+      "h": 104
+     }
+    },
+    "flat10": {
+     "overflowX": 0,
+     ".cell": {
+      "n": 36,
+      "w": 70,
+      "h": 70
+     },
+     ".abtn": {
+      "n": 6,
+      "w": 104,
+      "h": 104
+     }
+    },
+    "pageerrors": []
+   },
+   {
+    "w": 800,
+    "h": 1180,
+    "flat0": {
+     "overflowX": 0,
+     ".cell": {
+      "n": 16,
+      "w": 150,
+      "h": 150
+     },
+     ".abtn": {
+      "n": 4,
+      "w": 104,
+      "h": 104
+     }
+    },
+    "flat10": {
+     "overflowX": 0,
+     ".cell": {
+      "n": 36,
+      "w": 108,
+      "h": 108
+     },
+     ".abtn": {
+      "n": 6,
+      "w": 104,
+      "h": 104
+     }
+    },
+    "pageerrors": []
+   }
+  ]
+ },
+ "pageerrors": [],
+ "hook_install": "hooked"
+}

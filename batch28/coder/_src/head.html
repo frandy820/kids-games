@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>指令小兔</title>
+<style>
+/* ================= 指令小兔 coder（batch28）=================
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E；
+   6-7 岁幼小衔接段：题面 = 草地网格（ch1/2 3×3，ch3 起 4×4——r40 扩容；
+   小兔 / 萝卜 / 石头 SVG）+ 题面句文字条；
+   下方方向指令卡（箭头 SVG + 汉字，封闭 4 方向）或 path 题 3-4 格候选卡。
+   点一张方向卡 = 小兔走一格（走格动画 + transition）；到达萝卜 = right（殊途同达合法）；
+   撞石头 / 出界 = 该卡吞（卡灰飞 + 小兔朝向顶一下 + 「往这边走不过去哦」TTS，不记 miss）；
+   卡池点完未到达 = wrong + miss + 复位（小兔回起点、卡池恢复）。
+   path 题（ch3+）：题面指令条按序展示 2-3 步箭头 + 语音念，「小兔子会走到哪？」3/4 格卡。
+   触摸目标：网格格 ≥72×72、指令/格候选卡 ≥64×64（§0.9 本款口径；4×4 档格 72.75-73.75）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 50px;display:flex;align-items:center;padding:5px 60px 0 14px;gap:14px}
+#logo{width:40px;height:40px;border-radius:12px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 40px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：题面卡（网格 + 题面句）→ 指令卡 / 格候选卡排 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:12px;overflow:hidden;padding:6px 12px}
+
+/* 题面卡：可点重听题面；题面句条 + 3×3 网格 */
+#scene{position:relative;width:min(400px,94vw);border-radius:26px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;overflow:hidden;padding:10px 12px 12px;
+  transition:transform .15s}
+#scene:active{transform:translateY(3px)}
+#scene .q-text{position:relative;z-index:3;margin:0 auto 8px;width:max-content;max-width:100%;
+  background:#FBF6EC;border:2.5px solid #4A3B2E;border-radius:16px;
+  padding:4px 18px;font-size:23px;font-weight:700;letter-spacing:1px;white-space:nowrap}
+/* path 题指令条：按序 2-3 步箭头（卡面顺序展示 + 语音念——SPEC §1；r40 seq3 三张卡 188px 内） */
+#scene .seq-strip{position:relative;z-index:3;display:flex;gap:10px;justify-content:center;margin:0 0 8px}
+#scene .seq-card{position:relative;width:56px;height:56px;border-radius:14px;background:#FBF6EC;
+  border:2.5px solid #4A3B2E;box-shadow:0 3px 0 #D8C9B4;display:flex;align-items:center;
+  justify-content:center;animation:seq-in .42s cubic-bezier(.2,1.6,.4,1) backwards}
+#scene .seq-card svg{width:38px;height:38px}
+#scene .seq-card .seq-no{position:absolute;left:-7px;top:-7px;width:20px;height:20px;border-radius:50%;
+  background:#E8975A;border:2px solid #4A3B2E;color:#FFF9EE;font-size:13px;font-weight:700;
+  display:flex;align-items:center;justify-content:center}
+@keyframes seq-in{from{transform:scale(.3) translateY(-12px);opacity:0}to{transform:scale(1);opacity:1}}
+/* 3×3 网格：格 ≥72×72（触摸目标）；草地浅绿格；r40：ch3 起 .g4 四列大草地（格 73.75 ≥72） */
+#scene .grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);
+  grid-auto-rows:1fr;gap:7px;width:300px;height:300px;margin:0 auto}
+#scene .grid.g4{grid-template-columns:repeat(4,1fr);width:316px;height:316px}
+#scene .cell{position:relative;border-radius:14px;background:#EAF2DC;
+  border:2.5px solid #C9CFA9;display:flex;align-items:center;justify-content:center}
+#scene .cell svg{width:74%;height:74%}
+#scene .cell.stone{background:#E4E2DC}
+#scene .cell.goal-cell{background:#FDE8C8}
+/* 小兔：绝对定位于网格，left/top 按格心 transition（走格动画）；g4 档缩小防越格 */
+#scene .bun{position:absolute;z-index:5;width:86px;height:86px;left:0;top:0;
+  transition:left .35s cubic-bezier(.3,1.2,.4,1),top .35s cubic-bezier(.3,1.2,.4,1);
+  display:flex;align-items:center;justify-content:center;pointer-events:none}
+#scene .bun svg{width:76px;height:76px;filter:drop-shadow(0 3px 0 rgba(74,59,46,.2))}
+#scene .grid.g4 .bun{width:68px;height:68px}
+#scene .grid.g4 .bun svg{width:60px;height:60px}
+/* 撞石头 / 出界：小兔朝该方向顶一下弹回（4 向 nudge） */
+#scene .bun.nudge-up{animation:nd-up .38s ease}
+#scene .bun.nudge-down{animation:nd-down .38s ease}
+#scene .bun.nudge-left{animation:nd-left .38s ease}
+#scene .bun.nudge-right{animation:nd-right .38s ease}
+@keyframes nd-up{0%,100%{margin-top:0}45%{margin-top:-20px}}
+@keyframes nd-down{0%,100%{margin-top:0}45%{margin-top:20px}}
+@keyframes nd-left{0%,100%{margin-left:0}45%{margin-left:-20px}}
+@keyframes nd-right{0%,100%{margin-left:0}45%{margin-left:20px}}
+/* 到达萝卜：小兔开心连跳 */
+#scene .bun.reach{animation:bun-reach .55s cubic-bezier(.2,1.6,.4,1) 2}
+@keyframes bun-reach{0%,100%{margin-top:0}40%{margin-top:-16px}}
+/* 萝卜到达演出：萝卜摇摆放大 */
+#scene .cell .carrot-lit{animation:carrot-lit .6s cubic-bezier(.2,1.6,.4,1)}
+@keyframes carrot-lit{0%,100%{transform:scale(1)}45%{transform:scale(1.25) rotate(-6deg)}}
+/* 救援方向级：题面卡 pulse（呼吸放大 3 次） */
+#scene.pulse{animation:scene-pulse 1s ease-in-out 3}
+@keyframes scene-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+#scene.bounce{animation:scene-b .4s ease}
+@keyframes scene-b{0%,100%{transform:scale(1)}45%{transform:scale(.97)}}
+
+/* ---------- 指令卡排（run）：方向卡=箭头 SVG + 汉字，≥64×64；
+   格候选卡排（path）：mini 3×3/4×4 网格标记候选格；吞输入=容器 bump；
+   r40：flex-wrap 防溢出安全网 + .many 紧凑档（run 池 ≥5 张：6×80+5×14=550≤640 单行） ---------- */
+#board{display:flex;flex-wrap:wrap;row-gap:10px;gap:14px;justify-content:center;align-items:stretch;
+  flex:0 0 auto;width:100%;max-width:640px;padding:0 2px}
+#board.bump{animation:board-bump .22s ease}
+@keyframes board-bump{0%,100%{transform:scale(1)}45%{transform:scale(.96)}}
+.card{position:relative;background:#FFF9EE;border:3px solid #4A3B2E;border-radius:20px;
+  box-shadow:0 5px 0 #D8C9B4;flex:0 0 auto;width:96px;min-height:118px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  transition:transform .15s;overflow:hidden}
+/* r40 紧凑档（dch3/4 run 池 5-6 张）：≥64 触摸地板保持 */
+#board.many .card{width:80px;min-height:106px;border-radius:17px}
+#board.many .card .arrow svg{width:44px;height:44px}
+#board.many .card .d-label{font-size:21px;letter-spacing:1px}
+.card:active{transform:translateY(3px)}
+.card .arrow{width:54px;height:54px;display:flex;align-items:center;justify-content:center}
+.card .arrow svg{width:52px;height:52px}
+.card .d-label{font-size:24px;font-weight:700;letter-spacing:2px}
+.card.pop{animation:card-in .42s cubic-bezier(.2,1.6,.4,1) backwards}
+@keyframes card-in{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+.card.bump{animation:card-bump .22s ease}
+@keyframes card-bump{0%,100%{transform:scale(1)}45%{transform:scale(.94)}}
+/* 卡吞（撞石 / 出界）：灰缩飞走（该卡消耗掉，不记 miss——探索豁免） */
+.card.spent{opacity:.3;transform:scale(.88);filter:grayscale(.9);pointer-events:none;
+  animation:card-spent .45s ease}
+@keyframes card-spent{0%{transform:scale(1);opacity:1}55%{transform:scale(1.14) rotate(6deg);opacity:.7}
+  100%{transform:scale(.88) rotate(4deg);opacity:.3}}
+/* run 卡池消耗（moved 后正常用掉的卡）：轻灰 */
+.card.used-up{opacity:.45;filter:grayscale(.5)}
+/* 答对：卡绿 + 弹 */
+.card.lit{border-color:#6FA063;box-shadow:0 5px 0 #8FBF7F;
+  animation:card-lit .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes card-lit{0%{transform:scale(1)}45%{transform:scale(1.12)}100%{transform:scale(1)}}
+/* 答错：摇头晃动（不灰掉可重选——探索不罚） */
+.card.wig{animation:an-wig .6s ease}
+@keyframes an-wig{0%,100%{transform:rotate(0)}22%{transform:rotate(-8deg) translateX(-4px)}
+  50%{transform:rotate(7deg) translateX(3px)}78%{transform:rotate(-4deg) translateX(-2px)}}
+/* 30s 答案级救援：应点卡呼吸高亮循环（§0.21） */
+.card.breathe{animation:an-breathe 1.6s ease-in-out infinite}
+@keyframes an-breathe{0%,100%{filter:none}50%{filter:drop-shadow(0 0 13px rgba(232,151,90,.9))}}
+/* path 格候选卡：mini 3×3 网格（66×66）+ 高亮格；r40：.m4 四列档（74×74 与 4×4 真网格同构） */
+.card .mini{width:66px;height:66px;border-radius:10px;background:#FBF6EC;
+  border:2px solid #4A3B2E;padding:5px;display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.card .mini.m4{width:74px;height:74px;grid-template-columns:repeat(4,1fr);gap:2px;padding:4px}
+.card .mini i{border-radius:4px;background:#EAF2DC}
+.card .mini i.mk{background:#E8975A;border:1.5px solid #4A3B2E}
+.card .g-label{font-size:15px;font-weight:700;margin-top:5px;color:#8A7B66}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:86px;height:86px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch21-27） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：网格与卡适配，格仍 ≥72、卡 ≥64（r40：g4 档 312px 格 72.75、many 档 76px——r40 审查 m3 勘正：与下行 width:76px 一致） */
+@media (orientation:portrait){
+  #scene .q-text{font-size:20px;padding:3px 14px}
+  #scene .grid{width:288px;height:288px}
+  #scene .grid.g4{width:312px;height:312px}
+  #scene .bun{width:82px;height:82px}
+  #scene .bun svg{width:72px;height:72px}
+  #scene .grid.g4 .bun{width:66px;height:66px}
+  #scene .grid.g4 .bun svg{width:58px;height:58px}
+  #board{gap:11px}
+  .card{width:88px;min-height:110px}
+  .card .arrow svg{width:48px;height:48px}
+  .card .d-label{font-size:22px}
+  #board.many .card{width:76px;min-height:102px}
+  #board.many .card .arrow svg{width:40px;height:40px}
+  #board.many .card .d-label{font-size:19px}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="指令小兔">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <button id="scene" aria-label="帮小兔子走到萝卜，点我再听一遍"></button>
+    <div id="board" aria-label="方向指令卡"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

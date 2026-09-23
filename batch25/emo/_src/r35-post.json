@@ -1,0 +1,4882 @@
+{
+ "0": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_icecream",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_egg",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_rain",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_icecream",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_blocks",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "1": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_icecream",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_sticker",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_snow",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_path",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_queue",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "2": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_dark",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_park",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_balloon",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_egg",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "3": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_balloon",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_bdog",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_icecream",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_mom",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_queue",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "4": {
+  "ch": 1,
+  "dch": 1,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_flower",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_snow",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_grab",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_rain",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "5": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_grab",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_gift"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_grab"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_flower",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_shot"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_snow",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_park",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "6": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_balloon",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_mom"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_shot",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "surprised",
+    "scene": "su_balls",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_sticker"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_grab",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_gift",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "7": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_grab",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_grab"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_shot"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_icecream",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_path",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_dark",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_sticker"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_snow",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "8": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_bdog",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_party",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_sticker"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "happy",
+    "scene": "h_park",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_thunder"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_icecream"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_grab",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "9": {
+  "ch": 2,
+  "dch": 2,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_icecream",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_laugh",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "happy",
+    "scene": "h_icecream",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_queue"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_mom",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_dark",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_egg"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     }
+    ]
+   }
+  ]
+ },
+ "10": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_shot",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": "a_grab"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_party"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_shot"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_mom"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_icecream",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_gift"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_icecream"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_laugh",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_path",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_thunder"
+     }
+    ]
+   }
+  ]
+ },
+ "11": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_dark",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_laugh",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_thunder"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_laugh"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_mom"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_party"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "worried",
+    "scene": "w_rain",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_shot"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_flower",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_bdog",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "12": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_shot",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_icecream"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_shot"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_grab"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_flower",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_mom"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_party"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_sticker"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "worried",
+    "scene": "w_path",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_queue",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "13": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_teddy",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_grab",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_thunder"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_egg"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_queue"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_mom",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_bdog",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": "a_laugh"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     }
+    ]
+   }
+  ]
+ },
+ "14": {
+  "ch": 3,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_laugh",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_laugh"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_teddy",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_gift"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_queue"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_bdog",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_mom",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_flower",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_egg"
+     }
+    ]
+   }
+  ]
+ },
+ "15": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_egg",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_laugh",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_laugh"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_park",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_icecream",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_party"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_mom"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_icecream"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_gift"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_bdog",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_sticker"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     }
+    ]
+   }
+  ]
+ },
+ "16": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "surprised",
+    "scene": "su_party",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_thunder"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_party"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_queue",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "happy",
+    "scene": "h_park",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_mom"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_balloon",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "17": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_blocks",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_icecream"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "surprised",
+    "scene": "su_egg",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_egg"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": "a_laugh"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_party"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_sticker",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "18": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_path",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "surprised",
+    "scene": "su_party",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_party"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_sticker",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_shot",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_laugh",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_laugh"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     }
+    ]
+   }
+  ]
+ },
+ "19": {
+  "ch": 4,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_laugh",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_teddy",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_shot"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_sticker"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_egg",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_park",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_queue"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_thunder"
+     }
+    ]
+   }
+  ]
+ },
+ "20": {
+  "ch": 5,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_teddy",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_mom"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_party"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_thunder"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_rain",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_queue",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_laugh"
+     }
+    ]
+   }
+  ]
+ },
+ "21": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_teddy",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_sticker",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_laugh",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_party"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_laugh"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_rain",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_egg",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "22": {
+  "ch": 5,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_party",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_blocks",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_icecream"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_thunder"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_queue"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_park",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_mom",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "23": {
+  "ch": 5,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_park",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_thunder"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_laugh"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_queue",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_balloon",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     }
+    ]
+   }
+  ]
+ },
+ "24": {
+  "ch": 5,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "happy",
+    "scene": "h_park",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_party"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_snow",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_flower",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_gift"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_thunder"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_dark",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_egg"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_queue"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     }
+    ]
+   }
+  ]
+ },
+ "25": {
+  "ch": 6,
+  "dch": 2,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_grab",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_balloon",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_queue"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_rain",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_bdog",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_egg"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_laugh"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_party",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "26": {
+  "ch": 6,
+  "dch": 1,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_flower",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_icecream",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_balls",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_path",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_grab",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "27": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_bdog",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_mom"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_egg"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_queue",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "surprised",
+    "scene": "su_balls",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_gift"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_thunder"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_rain",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_balloon",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_party"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     }
+    ]
+   }
+  ]
+ },
+ "28": {
+  "ch": 6,
+  "dch": 1,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_dark",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_rain",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_icecream",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_blocks",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_icecream",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "29": {
+  "ch": 6,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_blocks",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_gift",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_shot",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_shot"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_queue"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "surprised",
+    "scene": "su_egg",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_mom"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_egg"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     }
+    ]
+   }
+  ]
+ },
+ "30": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "worried",
+    "scene": "w_mom",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_mom"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_grab"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_blocks",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_flower",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": "a_laugh"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_sticker"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_dark",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "worried",
+    "scene": "w_rain",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     }
+    ]
+   }
+  ]
+ },
+ "31": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_icecream",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_icecream"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_gift"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "worried",
+    "scene": "w_mom",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_mom"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_laugh",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_bdog",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_queue",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_thunder"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_queue"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     }
+    ]
+   }
+  ]
+ },
+ "32": {
+  "ch": 7,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_balloon",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_shot"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_icecream"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_bdog",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": "a_queue"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_egg"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_blocks",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_snow",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "33": {
+  "ch": 7,
+  "dch": 4,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_flower",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_bdog",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "worried",
+    "scene": "w_rain",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_gift"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_park",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "surprised",
+    "scene": "su_balls",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_balls"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_icecream"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     }
+    ]
+   }
+  ]
+ },
+ "34": {
+  "ch": 7,
+  "dch": 3,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "scared",
+    "scene": "c_dark",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_sticker"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_queue"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_flower",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_shot"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_egg"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_laugh",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "worried",
+    "scene": "w_mom",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_mom"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_grab",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "35": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 0,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_egg",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_flower",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "happy",
+    "scene": "h_gift",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_test"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_gift"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_blocks",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     }
+    ]
+   }
+  ]
+ },
+ "36": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 1,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "surprised",
+    "scene": "su_snow",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_dark",
+    "faces": [
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "sad",
+    "scene": "s_icecream",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_sticker"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_bdog"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_icecream"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "angry",
+    "scene": "a_grab",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "37": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 2,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "worried",
+    "scene": "w_rain",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_balloon"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_gift"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "happy",
+    "scene": "h_park",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_laugh",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_laugh"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_egg",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     }
+    ]
+   }
+  ]
+ },
+ "38": {
+  "ch": 8,
+  "dch": 2,
+  "lv": 3,
+  "qs": [
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "happy",
+    "scene": "h_park",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_park"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_teddy"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_snow"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "sad",
+    "scene": "s_balloon",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "surprised",
+    "scene": "su_egg",
+    "faces": [
+     {
+      "emo": "sad",
+      "scene": "s_icecream"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_egg"
+     },
+     {
+      "emo": "scared",
+      "scene": "c_dark"
+     },
+     {
+      "emo": "happy",
+      "scene": "h_sticker"
+     }
+    ]
+   }
+  ]
+ },
+ "39": {
+  "ch": 8,
+  "dch": 4,
+  "lv": 4,
+  "qs": [
+   {
+    "mode": "rev",
+    "emo": "angry",
+    "scene": "a_blocks",
+    "faces": [
+     {
+      "emo": "scared",
+      "scene": "c_shot"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_path"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_blocks"
+     },
+     {
+      "emo": "sad",
+      "scene": "s_flower"
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "scared",
+    "scene": "c_thunder",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "scared",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "worried",
+    "scene": "w_test",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     },
+     {
+      "emo": "worried",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "fwd",
+    "emo": "surprised",
+    "scene": "su_egg",
+    "faces": [
+     {
+      "emo": "angry",
+      "scene": null
+     },
+     {
+      "emo": "surprised",
+      "scene": null
+     },
+     {
+      "emo": "happy",
+      "scene": null
+     },
+     {
+      "emo": "sad",
+      "scene": null
+     }
+    ]
+   },
+   {
+    "mode": "rev",
+    "emo": "happy",
+    "scene": "h_icecream",
+    "faces": [
+     {
+      "emo": "happy",
+      "scene": "h_icecream"
+     },
+     {
+      "emo": "worried",
+      "scene": "w_rain"
+     },
+     {
+      "emo": "surprised",
+      "scene": "su_party"
+     },
+     {
+      "emo": "angry",
+      "scene": "a_grab"
+     }
+    ]
+   }
+  ]
+ }
+}

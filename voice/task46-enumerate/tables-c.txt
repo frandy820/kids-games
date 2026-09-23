@@ -1,0 +1,16 @@
+=== feed quiz [game-data.js]
+const quizSpeech = q => '喂小兔子' + numCn(q.n) + mwOf(q.food) + nameOf(q.food);
+=== feed combo [game-data.js]
+const comboSpeech = q => '喂小兔子，' + numCn(q.a) + mwOf(q.foods[0]) + nameOf(q.foods[0]) + |   '，' + numCn(q.b) + mwOf(q.foods[1]) + nameOf(q.foods[1]);
+=== feed FOODS [game-data.js]
+const FOODS = { |   carrot: { n: '胡萝卜', mw: '根' }, |   greens: { n: '青菜',   mw: '片' }, |   apple:  { n: '苹果',   mw: '个' } | };
+=== colormix COLORS [game-data.js]
+COLORS = { |   red:        { name: '红色',   hex: '#E8483C' }, |   yellow:     { name: '黄色',   hex: '#F5C542' }, |   blue:       { name: '蓝色',   hex: '#4E8FD0' }, |   white:      { name: '白色',   hex: '#FFFFFF' }, |   orange:     { name: '橙色',   hex: '#F08A3C' }, |   green:      { name: '绿色',   hex: '#57B368' }, |   purple:     { name: '紫色',   hex: '#9A6BC9' }, |   brown:      { name: '棕色',   hex: '#9C6238' }, |   lightred:   { name: '浅红色', hex: '#F5A8A0' }, |   lightyellow:{ name: '浅黄色', hex: '#FBE49A' }, |   lightblue:  { name: '浅蓝色', hex: '#A8CBEA' }, |   mud:        { name: '浑浊',   hex: '#B7A99A' }   // 表外组合的结果色（不做目标，只做反馈） | };
+=== hidden  MISS
+=== hidden ANIMALS MISS
+=== share  [game-data.js]
+const quizSpeech = q => numCn(q.n) + '颗糖，分给' + (q.k === 2 ? '两' : numCn(q.k)) + '只小动物，每只一样多';
+=== dressup  [game-data.js]
+const quizSpeech = q => q.kind === 'budget' ? BUDGET_Q[q.theme] |                      : (q.kind === 'anti' ? ANTI_Q[q.theme] : THEMES[q.theme].q);
+=== emo SCENES1 MISS
+=== habitat ANIMALS MISS

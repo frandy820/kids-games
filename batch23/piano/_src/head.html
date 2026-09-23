@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>碰碰琴</title>
+<style>
+/* ================= 碰碰琴 piano（batch23）=================
+   视觉按家族 DESIGN-SPEC §8：暖米底 #FBF6EC、暖橙主色；
+   触摸目标：琴键 ≥64px（高≥150 大键）、模式/底栏按钮 ≥64（均 ≥64）；
+   5-6 岁零文字依赖：键顶色点=色彩编码记忆通道（亮键+色点+音三通道同发）；
+   音名不 TTS——音本身即反馈（SPEC §3）。
+   r23（SPEC-R23-PIANO.md）：.sel=和弦作答选中态 / .tease=首次新作答预告波浪；
+   作答面复用琴键（布局零新控件）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏：logo + 模式切换（大按钮）+ 进度点 ---------- */
+#hud{flex:0 0 76px;display:flex;align-items:center;padding:6px 60px 0 12px;gap:10px}
+#logo{width:42px;height:42px;border-radius:12px;background:#F2C9A0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#mode-switch{display:flex;gap:0;flex:0 0 auto;border:3px solid #4A3B2E;border-radius:22px;
+  overflow:hidden;box-shadow:0 4px 0 #D8C9B4}
+#mode-switch button{width:88px;height:64px;display:flex;align-items:center;justify-content:center;
+  gap:5px;background:#FFF9EE;color:#4A3B2E;font-size:15px;font-weight:700;transition:background .2s}
+#mode-switch button.on{background:#E8975A;color:#FFF9EE}
+#mode-switch button:active{transform:translateY(2px)}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto;justify-content:center}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：兔子 + 状态泡 + 曲子音位点 ---------- */
+#stage{flex:0 0 auto;min-height:118px;display:flex;align-items:center;justify-content:center;
+  gap:8px;padding:4px 12px;overflow:hidden}
+#rabbit-box{position:relative;width:112px;height:104px;flex:0 0 auto}
+#rabbit{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+#rabbit svg{width:96px;height:96px}
+#rabbit.dance{animation:pi-dance 1.1s ease}
+@keyframes pi-dance{0%,100%{transform:rotate(0) translateY(0)}20%{transform:rotate(-8deg) translateY(-10px)}
+  40%{transform:rotate(8deg)}60%{transform:rotate(-6deg) translateY(-8px)}80%{transform:rotate(6deg)}}
+#bubble{flex:0 0 auto;width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:3px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .25s}
+#bubble.pulse{animation:pi-bpulse .8s ease}
+@keyframes pi-bpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+#seq-dots{display:flex;gap:10px;align-items:center;flex:0 0 auto;min-height:30px}
+#seq-dots i{width:26px;height:26px;border-radius:50%;background:#EFE3CD;border:2.5px solid #D8C9B4;
+  transition:all .25s;display:block}
+#seq-dots i.hit{background:#8FBF7F;border-color:#4A3B2E;transform:scale(1.12)}
+#seq-dots i.cur{border-color:#E8975A;animation:pi-sd 1.2s ease-in-out infinite}
+@keyframes pi-sd{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+
+/* ---------- 琴键排：8 键 C 大调（白键造型；键顶色点=音的色彩编码） ---------- */
+#keys{flex:1 1 auto;min-height:170px;display:flex;gap:8px;align-items:stretch;
+  padding:10px 14px 14px;overflow:hidden}
+#keys.bump{animation:pi-kbump .22s ease}
+@keyframes pi-kbump{0%,100%{transform:scale(1)}45%{transform:scale(.985)}}
+.key{position:relative;flex:1 1 0;min-width:64px;border:3.5px solid #4A3B2E;border-radius:10px 10px 16px 16px;
+  background:linear-gradient(180deg,#FFFEFA 0%,#FFF6E3 100%);box-shadow:0 6px 0 #C9B694;
+  transition:transform .12s,box-shadow .12s,background .25s;touch-action:none}
+.key:active{transform:translateY(3px);box-shadow:0 3px 0 #C9B694}
+.key .dot{position:absolute;left:50%;top:12px;width:26px;height:26px;border-radius:50%;
+  transform:translateX(-50%);border:3px solid #4A3B2E;transition:transform .2s}
+.key.active{transform:translateY(3px);box-shadow:0 2px 0 #C9B694}
+.key.active .dot{transform:translateX(-50%) scale(1.3)}
+.key.good{background:linear-gradient(180deg,#E4F3DB 0%,#C8E6B8 100%);box-shadow:0 2px 0 #8FBF7F,0 0 18px rgba(114,182,94,.55)}
+.key.flash{animation:pi-flash .5s ease}
+@keyframes pi-flash{0%,100%{background:linear-gradient(180deg,#FFFEFA 0%,#FFF6E3 100%)}
+  40%,60%{background:#F2C9A0;box-shadow:0 0 16px rgba(232,151,90,.8)}}
+.key.breathe{animation:pi-breathe 1.2s ease-in-out infinite}
+@keyframes pi-breathe{0%,100%{box-shadow:0 6px 0 #C9B694;transform:translateY(0)}
+  50%{box-shadow:0 6px 0 #C9B694,0 0 22px rgba(232,151,90,.85);transform:translateY(3px)}}
+/* r23 和弦听辨：选中态（第 1 键已选待第 2 键——持续亮区别于 active 短亮） */
+.key.sel{background:linear-gradient(180deg,#FCE8C8 0%,#F8D9A8 100%);
+  box-shadow:0 4px 0 #C9A87C,0 0 20px rgba(232,151,90,.75)}
+/* r23 首次新作答预告：8 键次第波浪一遍（播完即止不循环，不指示正确答案） */
+.key.tease{animation:pi-tease .75s ease}
+@keyframes pi-tease{0%,100%{transform:translateY(0)}40%{transform:translateY(-9px)}}
+.key:active{cursor:pointer}
+
+/* 彩花粒子（fixed 层，JS 定位生成） */
+.confetti{position:fixed;z-index:70;width:14px;height:14px;border-radius:50%;pointer-events:none;
+  border:2.5px solid #4A3B2E;opacity:.95;transition:transform .62s cubic-bezier(.2,.7,.4,1),opacity .62s ease}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:pi-hop .45s ease 2}
+@keyframes pi-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:76px;height:76px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:44px;height:44px}
+#btn-replay.bounce{animation:pi-rb .45s ease}
+@keyframes pi-rb{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（fixed 层，教学演示/帮共用；照 batch21/22） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:opacity .4s;transform:translate(-50%,-88%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-88%)}50%{transform:translate(-50%,-74%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：键排收紧仍保 ≥64 触摸目标；舞台紧凑 */
+@media (orientation:portrait){
+  #mode-switch button{width:76px;height:64px;font-size:13px}
+  #stage{min-height:96px;gap:6px;padding:2px 8px}
+  #rabbit-box{width:92px;height:86px}
+  #rabbit svg{width:80px;height:80px}
+  #bubble{width:60px;height:60px}
+  #keys{gap:6px;padding:8px 10px 12px}
+  .key .dot{width:20px;height:20px;top:10px}
+  #seq-dots i{width:22px;height:22px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="碰碰琴">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="mode-switch" role="tablist" aria-label="弹琴模式">
+      <button id="btn-mode-free" aria-label="自由弹"></button>
+      <button id="btn-mode-follow" aria-label="跟弹"></button>
+    </div>
+    <div id="step-dots" aria-label="本关曲子进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="rabbit-box" aria-hidden="true"><div id="rabbit"></div></div>
+    <div id="bubble" aria-hidden="true"></div>
+    <div id="seq-dots" aria-label="当前曲子音位"></div>
+  </div>
+  <div id="keys" aria-label="琴键"></div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-replay" aria-label="再听兔子弹一遍"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

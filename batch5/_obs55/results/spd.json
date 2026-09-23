@@ -1,0 +1,712 @@
+{
+ "game": "spotdiff",
+ "scenarios": {
+  "tutorial": {
+   "watchSec": 3.0,
+   "k": 2,
+   "swallow": {
+    "foundAfterTaps": 0,
+    "missesAfterTaps": 0
+   },
+   "voiceDuring": [
+    "spd_tut_turn"
+   ],
+   "soloHandoff": true,
+   "levelStars": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  "real_flat5": {
+   "startLevel": {
+    "flat": 5,
+    "ch": 2,
+    "dch": 2,
+    "k": 3
+   },
+   "measure0": {
+    "svgRect": [
+     483,
+     278
+    ],
+    "scale": 0.604,
+    "hotzoneRVb": [
+     106,
+     106,
+     106
+    ],
+    "hotzonePx": [
+     64,
+     64,
+     64
+    ],
+    "wrap": [
+     489,
+     284
+    ]
+   },
+   "diffPairDistVb": [
+    336,
+    242,
+    491
+   ],
+   "steps": [
+    {
+     "k": 3,
+     "sig": [
+      {
+       "type": "move",
+       "at": [
+        354,
+        102
+       ],
+       "topEl": {
+        "at": [
+         261,
+         69
+        ],
+        "s": 1,
+        "bb": [
+         129,
+         59
+        ],
+        "fill": "#FFFFFF"
+       },
+       "botEl": {
+        "at": [
+         354,
+         102
+        ],
+        "s": 1,
+        "bb": [
+         62,
+         49
+        ],
+        "fill": "#F2C94C"
+       }
+      },
+      {
+       "type": "add",
+       "at": [
+        504,
+        403
+       ],
+       "topEl": {
+        "at": [
+         640,
+         321
+        ],
+        "s": 1,
+        "bb": [
+         81,
+         94
+        ],
+        "fill": "none"
+       },
+       "botEl": {
+        "at": [
+         504,
+         403
+        ],
+        "s": 1,
+        "bb": [
+         81,
+         94
+        ],
+        "fill": "none"
+       }
+      },
+      {
+       "type": "add",
+       "at": [
+        112,
+        108
+       ],
+       "topEl": {
+        "at": [
+         261,
+         69
+        ],
+        "s": 1,
+        "bb": [
+         129,
+         59
+        ],
+        "fill": "#FFFFFF"
+       },
+       "botEl": {
+        "at": [
+         112,
+         108
+        ],
+        "s": 1,
+        "bb": [
+         62,
+         49
+        ],
+        "fill": "#7FA8D9"
+       }
+      }
+     ],
+     "rings": {
+      "ringsBottom": 3,
+      "ringsTop": 3,
+      "hintRing": 0
+     },
+     "found": 3,
+     "misses": 0,
+     "done": true
+    }
+   ],
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   },
+   "pageerrors": [],
+   "netreq": []
+  },
+  "real_flat10": {
+   "startLevel": {
+    "flat": 10,
+    "ch": 3,
+    "dch": 3,
+    "k": 4
+   },
+   "measure0": {
+    "svgRect": [
+     483,
+     278
+    ],
+    "scale": 0.604,
+    "hotzoneRVb": [
+     106,
+     106,
+     106,
+     106
+    ],
+    "hotzonePx": [
+     64,
+     64,
+     64,
+     64
+    ],
+    "wrap": [
+     489,
+     284
+    ]
+   },
+   "diffPairDistVb": [
+    326,
+    169,
+    552,
+    163,
+    228,
+    384
+   ],
+   "steps": [
+    {
+     "k": 4,
+     "sig": [
+      {
+       "type": "size",
+       "at": [
+        234,
+        414
+       ],
+       "topEl": {
+        "at": [
+         234,
+         414
+        ],
+        "s": 1,
+        "bb": [
+         62,
+         61
+        ],
+        "fill": "#F7EEDE"
+       },
+       "botEl": {
+        "at": [
+         234,
+         414
+        ],
+        "s": 0.62,
+        "bb": [
+         62,
+         61
+        ],
+        "fill": "#F7EEDE"
+       }
+      },
+      {
+       "type": "move",
+       "at": [
+        476,
+        195
+       ],
+       "topEl": {
+        "at": [
+         553,
+         195
+        ],
+        "s": 1,
+        "bb": [
+         62,
+         49
+        ],
+        "fill": "#7FA8D9"
+       },
+       "botEl": {
+        "at": [
+         476,
+         195
+        ],
+        "s": 1,
+        "bb": [
+         62,
+         49
+        ],
+        "fill": "#7FA8D9"
+       }
+      },
+      {
+       "type": "color",
+       "at": [
+        378,
+        325
+       ],
+       "topEl": {
+        "at": [
+         378,
+         325
+        ],
+        "s": 1,
+        "bb": [
+         81,
+         94
+        ],
+        "fill": "none"
+       },
+       "botEl": {
+        "at": [
+         378,
+         325
+        ],
+        "s": 1,
+        "bb": [
+         81,
+         94
+        ],
+        "fill": "none"
+       }
+      },
+      {
+       "type": "del",
+       "at": [
+        670,
+        76
+       ],
+       "topEl": {
+        "at": [
+         670,
+         76
+        ],
+        "s": 1,
+        "bb": [
+         120,
+         120
+        ],
+        "fill": "#F7CE46"
+       },
+       "botEl": {
+        "at": [
+         741,
+         280
+        ],
+        "s": 1,
+        "bb": [
+         81,
+         94
+        ],
+        "fill": "none"
+       }
+      }
+     ],
+     "rings": {
+      "ringsBottom": 4,
+      "ringsTop": 4,
+      "hintRing": 0
+     },
+     "found": 4,
+     "misses": 0,
+     "done": true
+    }
+   ],
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   },
+   "pageerrors": [],
+   "netreq": []
+  },
+  "real_flat15": {
+   "startLevel": {
+    "flat": 15,
+    "ch": 4,
+    "dch": 4,
+    "k": 5
+   },
+   "measure0": {
+    "svgRect": [
+     483,
+     278
+    ],
+    "scale": 0.604,
+    "hotzoneRVb": [
+     106,
+     106,
+     106,
+     106,
+     106
+    ],
+    "hotzonePx": [
+     64,
+     64,
+     64,
+     64,
+     64
+    ],
+    "wrap": [
+     489,
+     284
+    ]
+   },
+   "diffPairDistVb": [
+    316,
+    414,
+    196,
+    456,
+    237,
+    135,
+    155,
+    322,
+    334,
+    261
+   ],
+   "steps": [
+    {
+     "k": 5,
+     "sig": [
+      {
+       "type": "del",
+       "at": [
+        639,
+        320
+       ],
+       "topEl": {
+        "at": [
+         639,
+         320
+        ],
+        "s": 1,
+        "bb": [
+         41,
+         82
+        ],
+        "fill": "#FBF7F0"
+       },
+       "botEl": {
+        "at": [
+         732,
+         280
+        ],
+        "s": 1,
+        "bb": [
+         81,
+         94
+        ],
+        "fill": "none"
+       }
+      },
+      {
+       "type": "color",
+       "at": [
+        348,
+        198
+       ],
+       "topEl": {
+        "at": [
+         348,
+         198
+        ],
+        "s": 1,
+        "bb": [
+         62,
+         49
+        ],
+        "fill": "#E85D75"
+       },
+       "botEl": {
+        "at": [
+         348,
+         198
+        ],
+        "s": 1,
+        "bb": [
+         62,
+         49
+        ],
+        "fill": "#F2C94C"
+       }
+      },
+      {
+       "type": "add",
+       "at": [
+        234,
+        406
+       ],
+       "topEl": {
+        "at": [
+         293,
+         281
+        ],
+        "s": 1,
+        "bb": [
+         62,
+         61
+        ],
+        "fill": "#F7EEDE"
+       },
+       "botEl": {
+        "at": [
+         234,
+         406
+        ],
+        "s": 1,
+        "bb": [
+         81,
+         94
+        ],
+        "fill": "none"
+       }
+      },
+      {
+       "type": "move",
+       "at": [
+        483,
+        202
+       ],
+       "topEl": {
+        "at": [
+         572,
+         202
+        ],
+        "s": 1,
+        "bb": [
+         62,
+         49
+        ],
+        "fill": "#7FA8D9"
+       },
+       "botEl": {
+        "at": [
+         483,
+         202
+        ],
+        "s": 1,
+        "bb": [
+         62,
+         49
+        ],
+        "fill": "#7FA8D9"
+       }
+      },
+      {
+       "type": "size",
+       "at": [
+        256,
+        73
+       ],
+       "topEl": {
+        "at": [
+         256,
+         73
+        ],
+        "s": 1,
+        "bb": [
+         129,
+         59
+        ],
+        "fill": "#FFFFFF"
+       },
+       "botEl": {
+        "at": [
+         256,
+         73
+        ],
+        "s": 1.42,
+        "bb": [
+         129,
+         59
+        ],
+        "fill": "#FFFFFF"
+       }
+      }
+     ],
+     "rings": {
+      "ringsBottom": 5,
+      "ringsTop": 5,
+      "hintRing": 0
+     },
+     "found": 5,
+     "misses": 0,
+     "done": true
+    }
+   ],
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   },
+   "pageerrors": [],
+   "netreq": []
+  },
+  "error_path": {
+   "events": [
+    {
+     "step": "tapTop",
+     "foundChanged": false,
+     "missesChanged": false
+    },
+    {
+     "step": "miss1",
+     "hintRing": 0,
+     "misses": 1
+    },
+    {
+     "step": "miss2",
+     "hintRing": 1,
+     "misses": 2
+    },
+    {
+     "step": "hintTargets",
+     "nearestUnfoundDist": 0
+    },
+    {
+     "step": "followHint",
+     "found": 1
+    }
+   ],
+   "finalStars": {
+    "stars": 2,
+    "plays": 1
+   },
+   "emptyProbe": {
+    "pt": [
+     80,
+     70
+    ],
+    "minDist": 377,
+    "Rvb": 106
+   }
+  },
+  "idle_rescue": {
+   "first26s": [
+    "spd_hint"
+   ],
+   "next22s": [
+    "spd_hint"
+   ],
+   "pageerrors": []
+  },
+  "viewports": {
+   "1280x800": {
+    "overflow": {
+     "sw": 1280,
+     "cw": 1280,
+     "iw": 1280,
+     "overX": 0
+    },
+    "measure": {
+     "svgRect": [
+      483,
+      278
+     ],
+     "scale": 0.604,
+     "hotzoneRVb": [
+      106,
+      106,
+      106,
+      106,
+      106
+     ],
+     "hotzonePx": [
+      64,
+      64,
+      64,
+      64,
+      64
+     ],
+     "wrap": [
+      489,
+      284
+     ]
+    },
+    "shot": {
+     "mean": [
+      234.9,
+      237.0,
+      223.4
+     ],
+     "std": 26.7,
+     "colors": 3618,
+     "nonblank": true
+    },
+    "pageerrors": []
+   },
+   "800x1180": {
+    "overflow": {
+     "sw": 800,
+     "cw": 800,
+     "iw": 800,
+     "overX": 0
+    },
+    "measure": {
+     "svgRect": [
+      780,
+      449
+     ],
+     "scale": 0.975,
+     "hotzoneRVb": [
+      65.6,
+      65.6,
+      65.6,
+      65.6,
+      65.6
+     ],
+     "hotzonePx": [
+      64,
+      64,
+      64,
+      64,
+      64
+     ],
+     "wrap": [
+      786,
+      455
+     ]
+    },
+    "shot": {
+     "mean": [
+      207.4,
+      223.6,
+      204.0
+     ],
+     "std": 34.9,
+     "colors": 6584,
+     "nonblank": true
+    },
+    "pageerrors": []
+   }
+  }
+ }
+}

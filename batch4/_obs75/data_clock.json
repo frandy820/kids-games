@@ -1,0 +1,201 @@
+{
+ "game": "clock",
+ "steps": {
+  "A_tutorial": {
+   "watch_click_step": 0,
+   "watch_click_swallowed": true,
+   "tut_help_reached_ms": 3900,
+   "solo_reached": true,
+   "vc_teach": [
+    "clk_tut_turn"
+   ]
+  },
+  "B_flat0": {
+   "picks": 4,
+   "saved_star_flat0": {
+    "stars": 3,
+    "plays": 1
+   },
+   "celebrate_calls": [
+    {
+     "stars": 3,
+     "at": 1788698864502
+    }
+   ]
+  },
+  "C_flat1_miss_chain": {
+   "items_n": 3,
+   "okIdx": 0,
+   "wrongs": [
+    1,
+    2
+   ],
+   "chain": [
+    {
+     "miss": 1,
+     "pre": "5:00",
+     "pulse": false,
+     "wrongCls": true,
+     "step": 0
+    },
+    {
+     "miss": 2,
+     "pre": "6:30",
+     "pulse": true,
+     "wrongCls": true,
+     "step": 0
+    }
+   ],
+   "grayed_reclick_step": 0,
+   "vc_after_misses": [
+    "clk_tut_turn",
+    "clk_hint",
+    "clk_hint",
+    "clk_hint"
+   ]
+  },
+  "C_flat1_star": {
+   "saved": {
+    "stars": 2,
+    "plays": 1
+   },
+   "misses": 2
+  },
+  "B2_flat2_star": {
+   "saved": {
+    "stars": 3,
+    "plays": 1
+   }
+  },
+  "D_rescue_flat3": {
+   "vc_before": [
+    "clk_tut_turn",
+    "clk_hint",
+    "clk_hint",
+    "clk_hint",
+    "clk_hint"
+   ],
+   "vc_after": [
+    "clk_tut_turn",
+    "clk_hint",
+    "clk_hint",
+    "clk_hint",
+    "clk_hint",
+    "clk_hint"
+   ],
+   "new_keys": [
+    "clk_hint"
+   ],
+   "rescue_played": true
+  },
+  "E_dial_flat10": {
+   "dialdemo_click_swallowed": true,
+   "dialdemo_ms": 3871,
+   "dial_attempts": [
+    {
+     "q": 0,
+     "type": "dial",
+     "target": 55,
+     "tries": 1
+    },
+    {
+     "q": 1,
+     "type": "dial",
+     "target": 15,
+     "tries": 2
+    },
+    {
+     "q": 2,
+     "type": "dial",
+     "target": 50,
+     "tries": 2
+    },
+    {
+     "q": 3,
+     "type": "dial",
+     "target": 5,
+     "tries": 2
+    },
+    {
+     "q": 4,
+     "type": "dial",
+     "target": 55,
+     "tries": 2
+    }
+   ],
+   "card_size": {
+    "w": 330,
+    "h": 330
+   },
+   "flat10_star": {
+    "stars": 3,
+    "plays": 1
+   },
+   "celebrate_calls": [
+    {
+     "stars": 3,
+     "at": 1788698922708
+    }
+   ]
+  },
+  "F_layout": [
+   {
+    "w": 1280,
+    "h": 800,
+    "flat0": {
+     "overflowX": 0,
+     ".opt": {
+      "n": 3,
+      "w": 152,
+      "h": 96
+     },
+     ".clock-card": {
+      "n": 1,
+      "w": 330,
+      "h": 330
+     }
+    },
+    "flat10": {
+     "overflowX": 0,
+     ".opt": "none",
+     ".clock-card": {
+      "n": 1,
+      "w": 330,
+      "h": 330
+     }
+    },
+    "pageerrors": []
+   },
+   {
+    "w": 800,
+    "h": 1180,
+    "flat0": {
+     "overflowX": 0,
+     ".opt": {
+      "n": 3,
+      "w": 165,
+      "h": 104
+     },
+     ".clock-card": {
+      "n": 1,
+      "w": 330,
+      "h": 330
+     }
+    },
+    "flat10": {
+     "overflowX": 0,
+     ".opt": "none",
+     ".clock-card": {
+      "n": 1,
+      "w": 330,
+      "h": 330
+     }
+    },
+    "pageerrors": []
+   }
+  ]
+ },
+ "pageerrors": [],
+ "hook_install": "hooked",
+ "hookErr": null
+}

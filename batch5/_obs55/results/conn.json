@@ -1,0 +1,1506 @@
+{
+ "game": "connect",
+ "scenarios": {
+  "tutorial": {
+   "watchSec": 4.6,
+   "n": 3,
+   "swallow": {
+    "dragLinesAfterTaps": 0
+   },
+   "voiceDuring": [
+    "con_tut_turn"
+   ],
+   "soloHandoff": true,
+   "levelStars": {
+    "stars": 3,
+    "plays": 1
+   },
+   "pairs": [
+    "小鸡→毛毛虫",
+    "小鸟→红果"
+   ]
+  },
+  "real_flat5": {
+   "startLevel": {
+    "flat": 5,
+    "ch": 2,
+    "dch": 2,
+    "n": 4
+   },
+   "board": {
+    "a": [
+     {
+      "lib": 8,
+      "lab": "小熊",
+      "x": 499,
+      "y": 164,
+      "w": 142,
+      "h": 140,
+      "cls": "card acard"
+     },
+     {
+      "lib": 1,
+      "lab": "小猫",
+      "x": 499,
+      "y": 318,
+      "w": 142,
+      "h": 140,
+      "cls": "card acard"
+     },
+     {
+      "lib": 4,
+      "lab": "熊猫",
+      "x": 499,
+      "y": 472,
+      "w": 142,
+      "h": 140,
+      "cls": "card acard"
+     },
+     {
+      "lib": 11,
+      "lab": "老鼠",
+      "x": 499,
+      "y": 626,
+      "w": 142,
+      "h": 140,
+      "cls": "card acard"
+     }
+    ],
+    "f": [
+     {
+      "lib": 4,
+      "lab": "竹子",
+      "x": 781,
+      "y": 164,
+      "w": 142,
+      "h": 140,
+      "cls": "card fcard"
+     },
+     {
+      "lib": 8,
+      "lab": "蜂蜜",
+      "x": 781,
+      "y": 318,
+      "w": 142,
+      "h": 140,
+      "cls": "card fcard"
+     },
+     {
+      "lib": 1,
+      "lab": "小鱼",
+      "x": 781,
+      "y": 472,
+      "w": 142,
+      "h": 140,
+      "cls": "card fcard"
+     },
+     {
+      "lib": 11,
+      "lab": "奶酪",
+      "x": 781,
+      "y": 626,
+      "w": 142,
+      "h": 140,
+      "cls": "card fcard"
+     }
+    ],
+    "lines": 0
+   },
+   "rec": [
+    {
+     "pair": "小熊→蜂蜜",
+     "drag": {
+      "mid": {
+       "ok": 0,
+       "dragging": 1,
+       "near": [],
+       "fed": [],
+       "eaten": [],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 0,
+       "dragging": 1,
+       "near": [
+        8
+       ],
+       "fed": [],
+       "eaten": [],
+       "pulse": []
+      },
+      "target": 8,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       142,
+       140
+      ]
+     },
+     "after": {
+      "ok": 1,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8
+      ],
+      "eaten": [
+       8
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "pair": "小猫→小鱼",
+     "drag": {
+      "mid": {
+       "ok": 1,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8
+       ],
+       "eaten": [
+        8
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 1,
+       "dragging": 1,
+       "near": [
+        1
+       ],
+       "fed": [
+        8
+       ],
+       "eaten": [
+        8
+       ],
+       "pulse": []
+      },
+      "target": 1,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       142,
+       140
+      ]
+     },
+     "after": {
+      "ok": 2,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8,
+       1
+      ],
+      "eaten": [
+       8,
+       1
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "pair": "熊猫→竹子",
+     "drag": {
+      "mid": {
+       "ok": 2,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8,
+        1
+       ],
+       "eaten": [
+        8,
+        1
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 2,
+       "dragging": 1,
+       "near": [
+        4
+       ],
+       "fed": [
+        8,
+        1
+       ],
+       "eaten": [
+        8,
+        1
+       ],
+       "pulse": []
+      },
+      "target": 4,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       142,
+       140
+      ]
+     },
+     "after": {
+      "ok": 3,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8,
+       1,
+       4
+      ],
+      "eaten": [
+       4,
+       8,
+       1
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "pair": "老鼠→奶酪",
+     "drag": {
+      "mid": {
+       "ok": 3,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8,
+        1,
+        4
+       ],
+       "eaten": [
+        4,
+        8,
+        1
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 3,
+       "dragging": 1,
+       "near": [
+        11
+       ],
+       "fed": [
+        8,
+        1,
+        4
+       ],
+       "eaten": [
+        4,
+        8,
+        1
+       ],
+       "pulse": []
+      },
+      "target": 11,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       142,
+       140
+      ]
+     },
+     "after": {
+      "ok": 4,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8,
+       1,
+       4,
+       11
+      ],
+      "eaten": [
+       4,
+       8,
+       1,
+       11
+      ],
+      "pulse": []
+     }
+    }
+   ],
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   },
+   "pageerrors": [],
+   "netreq": []
+  },
+  "real_flat10": {
+   "startLevel": {
+    "flat": 10,
+    "ch": 3,
+    "dch": 3,
+    "n": 5
+   },
+   "board": {
+    "a": [
+     {
+      "lib": 8,
+      "lab": "小熊",
+      "x": 515,
+      "y": 148,
+      "w": 111,
+      "h": 109,
+      "cls": "card acard"
+     },
+     {
+      "lib": 4,
+      "lab": "熊猫",
+      "x": 515,
+      "y": 272,
+      "w": 111,
+      "h": 109,
+      "cls": "card acard"
+     },
+     {
+      "lib": 11,
+      "lab": "老鼠",
+      "x": 515,
+      "y": 395,
+      "w": 111,
+      "h": 109,
+      "cls": "card acard"
+     },
+     {
+      "lib": 6,
+      "lab": "绵羊",
+      "x": 515,
+      "y": 518,
+      "w": 111,
+      "h": 109,
+      "cls": "card acard"
+     },
+     {
+      "lib": 7,
+      "lab": "松鼠",
+      "x": 515,
+      "y": 641,
+      "w": 111,
+      "h": 109,
+      "cls": "card acard"
+     }
+    ],
+    "f": [
+     {
+      "lib": 7,
+      "lab": "松果",
+      "x": 766,
+      "y": 148,
+      "w": 111,
+      "h": 109,
+      "cls": "card fcard"
+     },
+     {
+      "lib": 11,
+      "lab": "奶酪",
+      "x": 766,
+      "y": 272,
+      "w": 111,
+      "h": 109,
+      "cls": "card fcard"
+     },
+     {
+      "lib": 6,
+      "lab": "青草",
+      "x": 766,
+      "y": 395,
+      "w": 111,
+      "h": 109,
+      "cls": "card fcard"
+     },
+     {
+      "lib": 4,
+      "lab": "竹子",
+      "x": 766,
+      "y": 518,
+      "w": 111,
+      "h": 109,
+      "cls": "card fcard"
+     },
+     {
+      "lib": 8,
+      "lab": "蜂蜜",
+      "x": 766,
+      "y": 641,
+      "w": 111,
+      "h": 109,
+      "cls": "card fcard"
+     }
+    ],
+    "lines": 0
+   },
+   "rec": [
+    {
+     "pair": "小熊→蜂蜜",
+     "drag": {
+      "mid": {
+       "ok": 0,
+       "dragging": 1,
+       "near": [],
+       "fed": [],
+       "eaten": [],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 0,
+       "dragging": 1,
+       "near": [
+        8
+       ],
+       "fed": [],
+       "eaten": [],
+       "pulse": []
+      },
+      "target": 8,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       111,
+       109
+      ]
+     },
+     "after": {
+      "ok": 1,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8
+      ],
+      "eaten": [
+       8
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "pair": "熊猫→竹子",
+     "drag": {
+      "mid": {
+       "ok": 1,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8
+       ],
+       "eaten": [
+        8
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 1,
+       "dragging": 1,
+       "near": [
+        4
+       ],
+       "fed": [
+        8
+       ],
+       "eaten": [
+        8
+       ],
+       "pulse": []
+      },
+      "target": 4,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       111,
+       109
+      ]
+     },
+     "after": {
+      "ok": 2,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8,
+       4
+      ],
+      "eaten": [
+       4,
+       8
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "pair": "老鼠→奶酪",
+     "drag": {
+      "mid": {
+       "ok": 2,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8,
+        4
+       ],
+       "eaten": [
+        4,
+        8
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 2,
+       "dragging": 1,
+       "near": [
+        11
+       ],
+       "fed": [
+        8,
+        4
+       ],
+       "eaten": [
+        4,
+        8
+       ],
+       "pulse": []
+      },
+      "target": 11,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       111,
+       109
+      ]
+     },
+     "after": {
+      "ok": 3,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8,
+       4,
+       11
+      ],
+      "eaten": [
+       11,
+       4,
+       8
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "pair": "绵羊→青草",
+     "drag": {
+      "mid": {
+       "ok": 3,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8,
+        4,
+        11
+       ],
+       "eaten": [
+        11,
+        4,
+        8
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 3,
+       "dragging": 1,
+       "near": [
+        6
+       ],
+       "fed": [
+        8,
+        4,
+        11
+       ],
+       "eaten": [
+        11,
+        4,
+        8
+       ],
+       "pulse": []
+      },
+      "target": 6,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       111,
+       109
+      ]
+     },
+     "after": {
+      "ok": 4,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8,
+       4,
+       11,
+       6
+      ],
+      "eaten": [
+       11,
+       6,
+       4,
+       8
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "pair": "松鼠→松果",
+     "drag": {
+      "mid": {
+       "ok": 4,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8,
+        4,
+        11,
+        6
+       ],
+       "eaten": [
+        11,
+        6,
+        4,
+        8
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 4,
+       "dragging": 1,
+       "near": [
+        7
+       ],
+       "fed": [
+        8,
+        4,
+        11,
+        6
+       ],
+       "eaten": [
+        11,
+        6,
+        4,
+        8
+       ],
+       "pulse": []
+      },
+      "target": 7,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       111,
+       109
+      ]
+     },
+     "after": {
+      "ok": 5,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8,
+       4,
+       11,
+       6,
+       7
+      ],
+      "eaten": [
+       7,
+       11,
+       6,
+       4,
+       8
+      ],
+      "pulse": []
+     }
+    }
+   ],
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   },
+   "pageerrors": [],
+   "netreq": []
+  },
+  "real_flat15": {
+   "startLevel": {
+    "flat": 15,
+    "ch": 4,
+    "dch": 4,
+    "n": 6
+   },
+   "board": {
+    "a": [
+     {
+      "lib": 8,
+      "lab": "小熊",
+      "x": 524,
+      "y": 136,
+      "w": 93,
+      "h": 93,
+      "cls": "card acard"
+     },
+     {
+      "lib": 4,
+      "lab": "熊猫",
+      "x": 524,
+      "y": 239,
+      "w": 93,
+      "h": 93,
+      "cls": "card acard"
+     },
+     {
+      "lib": 11,
+      "lab": "老鼠",
+      "x": 524,
+      "y": 342,
+      "w": 93,
+      "h": 93,
+      "cls": "card acard"
+     },
+     {
+      "lib": 0,
+      "lab": "小兔",
+      "x": 524,
+      "y": 444,
+      "w": 93,
+      "h": 93,
+      "cls": "card acard"
+     },
+     {
+      "lib": 7,
+      "lab": "松鼠",
+      "x": 524,
+      "y": 547,
+      "w": 93,
+      "h": 93,
+      "cls": "card acard"
+     },
+     {
+      "lib": 2,
+      "lab": "小狗",
+      "x": 524,
+      "y": 650,
+      "w": 93,
+      "h": 93,
+      "cls": "card acard"
+     }
+    ],
+    "f": [
+     {
+      "lib": 8,
+      "lab": "蜂蜜",
+      "x": 757,
+      "y": 136,
+      "w": 93,
+      "h": 93,
+      "cls": "card fcard"
+     },
+     {
+      "lib": 2,
+      "lab": "骨头",
+      "x": 757,
+      "y": 239,
+      "w": 93,
+      "h": 93,
+      "cls": "card fcard"
+     },
+     {
+      "lib": 11,
+      "lab": "奶酪",
+      "x": 757,
+      "y": 342,
+      "w": 93,
+      "h": 93,
+      "cls": "card fcard"
+     },
+     {
+      "lib": 4,
+      "lab": "竹子",
+      "x": 757,
+      "y": 444,
+      "w": 93,
+      "h": 93,
+      "cls": "card fcard"
+     },
+     {
+      "lib": 7,
+      "lab": "松果",
+      "x": 757,
+      "y": 547,
+      "w": 93,
+      "h": 93,
+      "cls": "card fcard"
+     },
+     {
+      "lib": 0,
+      "lab": "萝卜",
+      "x": 757,
+      "y": 650,
+      "w": 93,
+      "h": 93,
+      "cls": "card fcard"
+     }
+    ],
+    "lines": 0
+   },
+   "rec": [
+    {
+     "probe": "snap_inside",
+     "info": {
+      "mid": {
+       "ok": 0,
+       "dragging": 1,
+       "near": [],
+       "fed": [],
+       "eaten": [],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 0,
+       "dragging": 1,
+       "near": [
+        8
+       ],
+       "fed": [],
+       "eaten": [],
+       "pulse": []
+      },
+      "target": 8,
+      "offset": [
+       -66.5,
+       0.0
+      ],
+      "card": [
+       93,
+       93
+      ]
+     },
+     "after": {
+      "ok": 1,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8
+      ],
+      "eaten": [
+       8
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "probe": "cancel_outside",
+     "info": {
+      "mid": {
+       "ok": 1,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8
+       ],
+       "eaten": [
+        8
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 1,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8
+       ],
+       "eaten": [
+        8
+       ],
+       "pulse": []
+      },
+      "target": 4,
+      "offset": [
+       -106.5,
+       0.0
+      ],
+      "card": [
+       93,
+       93
+      ]
+     },
+     "after": {
+      "ok": 1,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8
+      ],
+      "eaten": [
+       8
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "pair": "熊猫→竹子",
+     "drag": {
+      "mid": {
+       "ok": 1,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8
+       ],
+       "eaten": [
+        8
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 1,
+       "dragging": 1,
+       "near": [
+        4
+       ],
+       "fed": [
+        8
+       ],
+       "eaten": [
+        8
+       ],
+       "pulse": []
+      },
+      "target": 4,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       93,
+       93
+      ]
+     },
+     "after": {
+      "ok": 2,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8,
+       4
+      ],
+      "eaten": [
+       8,
+       4
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "pair": "老鼠→奶酪",
+     "drag": {
+      "mid": {
+       "ok": 2,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8,
+        4
+       ],
+       "eaten": [
+        8,
+        4
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 2,
+       "dragging": 1,
+       "near": [
+        11
+       ],
+       "fed": [
+        8,
+        4
+       ],
+       "eaten": [
+        8,
+        4
+       ],
+       "pulse": []
+      },
+      "target": 11,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       93,
+       93
+      ]
+     },
+     "after": {
+      "ok": 3,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8,
+       4,
+       11
+      ],
+      "eaten": [
+       8,
+       11,
+       4
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "pair": "小兔→萝卜",
+     "drag": {
+      "mid": {
+       "ok": 3,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8,
+        4,
+        11
+       ],
+       "eaten": [
+        8,
+        11,
+        4
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 3,
+       "dragging": 1,
+       "near": [
+        0
+       ],
+       "fed": [
+        8,
+        4,
+        11
+       ],
+       "eaten": [
+        8,
+        11,
+        4
+       ],
+       "pulse": []
+      },
+      "target": 0,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       93,
+       93
+      ]
+     },
+     "after": {
+      "ok": 4,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8,
+       4,
+       11,
+       0
+      ],
+      "eaten": [
+       8,
+       11,
+       4,
+       0
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "pair": "松鼠→松果",
+     "drag": {
+      "mid": {
+       "ok": 4,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8,
+        4,
+        11,
+        0
+       ],
+       "eaten": [
+        8,
+        11,
+        4,
+        0
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 4,
+       "dragging": 1,
+       "near": [
+        7
+       ],
+       "fed": [
+        8,
+        4,
+        11,
+        0
+       ],
+       "eaten": [
+        8,
+        11,
+        4,
+        0
+       ],
+       "pulse": []
+      },
+      "target": 7,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       93,
+       93
+      ]
+     },
+     "after": {
+      "ok": 5,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8,
+       4,
+       11,
+       0,
+       7
+      ],
+      "eaten": [
+       8,
+       11,
+       4,
+       7,
+       0
+      ],
+      "pulse": []
+     }
+    },
+    {
+     "pair": "小狗→骨头",
+     "drag": {
+      "mid": {
+       "ok": 5,
+       "dragging": 1,
+       "near": [],
+       "fed": [
+        8,
+        4,
+        11,
+        0,
+        7
+       ],
+       "eaten": [
+        8,
+        11,
+        4,
+        7,
+        0
+       ],
+       "pulse": []
+      },
+      "beforeUp": {
+       "ok": 5,
+       "dragging": 1,
+       "near": [
+        2
+       ],
+       "fed": [
+        8,
+        4,
+        11,
+        0,
+        7
+       ],
+       "eaten": [
+        8,
+        11,
+        4,
+        7,
+        0
+       ],
+       "pulse": []
+      },
+      "target": 2,
+      "offset": [
+       0.0,
+       0.0
+      ],
+      "card": [
+       93,
+       93
+      ]
+     },
+     "after": {
+      "ok": 6,
+      "dragging": 1,
+      "near": [],
+      "fed": [
+       8,
+       4,
+       11,
+       0,
+       7,
+       2
+      ],
+      "eaten": [
+       8,
+       2,
+       11,
+       4,
+       7,
+       0
+      ],
+      "pulse": []
+     }
+    }
+   ],
+   "stars": {
+    "stars": 3,
+    "plays": 1
+   },
+   "pageerrors": [],
+   "netreq": []
+  },
+  "error_path": {
+   "events": [
+    {
+     "step": "wrong1",
+     "pulse": [],
+     "misses": 1,
+     "okLines": 0,
+     "shake": true
+    },
+    {
+     "step": "wrong2",
+     "pulse": [
+      8
+     ],
+     "misses": 2
+    },
+    {
+     "step": "recover",
+     "ok": true
+    }
+   ],
+   "finalStars": {
+    "stars": 2,
+    "plays": 1
+   }
+  },
+  "idle_rescue": {
+   "first26s": [
+    "con_hint"
+   ],
+   "next22s": [
+    "con_hint"
+   ],
+   "pageerrors": []
+  },
+  "viewports": {
+   "1280x800": {
+    "overflow": {
+     "sw": 1280,
+     "cw": 1280,
+     "iw": 1280,
+     "overX": 0
+    },
+    "cards": {
+     "a": [
+      [
+       93,
+       93
+      ],
+      [
+       93,
+       93
+      ],
+      [
+       93,
+       93
+      ],
+      [
+       93,
+       93
+      ],
+      [
+       93,
+       93
+      ],
+      [
+       93,
+       93
+      ]
+     ],
+     "f": [
+      [
+       93,
+       93
+      ],
+      [
+       93,
+       93
+      ],
+      [
+       93,
+       93
+      ],
+      [
+       93,
+       93
+      ],
+      [
+       93,
+       93
+      ],
+      [
+       93,
+       93
+      ]
+     ]
+    },
+    "labels": [
+     "小熊",
+     "熊猫",
+     "老鼠",
+     "小兔",
+     "松鼠",
+     "小狗"
+    ],
+    "shot": {
+     "mean": [
+      247.3,
+      239.3,
+      224.4
+     ],
+     "std": 19.0,
+     "colors": 2126,
+     "nonblank": true
+    },
+    "pageerrors": []
+   },
+   "800x1180": {
+    "overflow": {
+     "sw": 800,
+     "cw": 800,
+     "iw": 800,
+     "overX": 0
+    },
+    "cards": {
+     "a": [
+      [
+       157,
+       156
+      ],
+      [
+       157,
+       156
+      ],
+      [
+       157,
+       156
+      ],
+      [
+       157,
+       156
+      ],
+      [
+       157,
+       156
+      ],
+      [
+       157,
+       156
+      ]
+     ],
+     "f": [
+      [
+       157,
+       156
+      ],
+      [
+       157,
+       156
+      ],
+      [
+       157,
+       156
+      ],
+      [
+       157,
+       156
+      ],
+      [
+       157,
+       156
+      ],
+      [
+       157,
+       156
+      ]
+     ]
+    },
+    "labels": [
+     "小熊",
+     "熊猫",
+     "老鼠",
+     "小兔",
+     "松鼠",
+     "小狗"
+    ],
+    "shot": {
+     "mean": [
+      243.9,
+      236.0,
+      221.4
+     ],
+     "std": 28.1,
+     "colors": 2865,
+     "nonblank": true
+    },
+    "pageerrors": []
+   }
+  }
+ }
+}

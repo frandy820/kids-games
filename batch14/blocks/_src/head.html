@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>空间积木</title>
+<style>
+/* ================= 空间积木 blocks（batch14）=================
+   视觉按 SPEC-BATCH14 §1：暖米底 #FBF3E4、等轴测方块堆（top 最亮/right 中/left 最暗 暖色系）、
+   地面浅格（含空格 → 俯视教学锚点）、fill 型虚线目标盒
+   四题型：count/fill=3 选 1 大数字卡（≥96）；front/top=3 选 1 投影图卡（≥96，内嵌 SVG）
+   触摸目标：答案卡 ≥96、底栏按钮 ≥72 高；pointerdown 即响应；不灰化款错卡=晃动可重点 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E7D8C0;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E7D8C0}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:6px;overflow:hidden;padding:4px 10px}
+
+/* ---------- 题面行：题型图标 + 问句 ---------- */
+#board{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+  min-height:72px;padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:14px;padding:6px 24px;border-radius:22px;
+  background:#FFFAF0;border:2.5px solid #4A3B2E;box-shadow:0 5px 0 #DFCFB6}
+#prompt-chip .mini{width:54px;height:54px;flex:0 0 54px}
+#prompt-chip .ask{font-size:26px;font-weight:800;color:#4A3B2E;letter-spacing:.02em}
+
+/* ---------- 场景区：等轴测方块堆 SVG（自动 contain 适配容器） ---------- */
+#scene-area{flex:1 1 auto;min-height:190px;width:100%;max-width:900px;display:flex;
+  align-items:center;justify-content:center;padding:2px 6px}
+#scene{width:100%;height:100%;min-height:190px;display:flex;align-items:center;justify-content:center}
+#scene svg.scene{width:100%;height:100%}
+/* 教学演示：被点数的柱高亮 + 柱底角标弹出 */
+#scene .cu.lit .f-top{fill:#FBE4AE}
+#scene .cu.lit .f-right{fill:#F2A96B}
+#scene .dbadge{opacity:0}
+#scene .dbadge.on{opacity:1;animation:badge-pop .4s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes badge-pop{from{transform:scale(0)}to{transform:scale(1)}}
+
+/* ---------- 底部答案区：3 张大卡（数字卡 / 投影图卡） ---------- */
+#answers{flex:0 0 auto;display:flex;justify-content:center;align-items:center;gap:20px;
+  flex-wrap:wrap;min-height:118px;padding:2px 12px}
+.opt{min-width:132px;min-height:96px;padding:0 26px;border-radius:26px;background:#FFFAF0;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #DFCFB6;font-size:46px;font-weight:800;color:#4A3B2E;
+  font-variant-numeric:tabular-nums;transition:transform .15s,box-shadow .15s;position:relative;
+  animation:opt-in .38s cubic-bezier(.2,1.5,.4,1) both}
+.opt:nth-child(2){animation-delay:.07s}.opt:nth-child(3){animation-delay:.14s}
+@keyframes opt-in{from{transform:scale(0) rotate(-14deg)}to{transform:scale(1) rotate(0)}}
+.opt:active{transform:translateY(3px);box-shadow:0 2px 0 #DFCFB6}
+/* 投影图卡（front/top）：内嵌 SVG 图，卡体更高容纳图形 */
+.opt.card{min-width:156px;min-height:112px;padding:10px 16px;display:flex;align-items:center;justify-content:center}
+.opt.card svg{width:100%;height:100%;pointer-events:none}
+/* 不灰化款：错卡=晃动不灰掉可重点（SPEC §1） */
+.opt.wrong{animation:opt-shake .42s ease}
+@keyframes opt-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}
+  40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.opt.right{background:#8FBF7F;color:#4A3B2E;border-color:#6FA063;box-shadow:0 5px 0 #6FA063}
+.opt.right .mark{position:absolute;top:-13px;right:-13px;width:40px;height:40px;border-radius:50%;
+  background:#8FBF7F;border:2.5px solid #FFFAF0;display:flex;align-items:center;justify-content:center;
+  animation:opt-pop .45s cubic-bezier(.2,1.6,.4,1)}
+.opt.right .mark svg{width:26px;height:26px}
+@keyframes opt-pop{from{transform:scale(0) rotate(-20deg)}to{transform:scale(1) rotate(0)}}
+/* 救援视觉：正确卡 breathe 持续循环（§0.21） */
+.opt.breathe{animation:opt-breathe 1.6s ease-in-out infinite}
+@keyframes opt-breathe{0%,100%{transform:scale(1);box-shadow:0 5px 0 #DFCFB6}
+  50%{transform:scale(1.07);box-shadow:0 5px 0 #DFCFB6,0 0 16px rgba(232,151,90,.9)}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 money/subbug） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFFAF0;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：题面/答案卡/场景适配 */
+@media (orientation:portrait){
+  .opt{min-width:150px;min-height:104px;font-size:52px}
+  .opt.card{min-width:150px;min-height:118px}
+  #prompt-chip .ask{font-size:22px}
+  #prompt-chip .mini{width:46px;height:46px;flex:0 0 46px}
+  #scene-area{min-height:230px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="空间积木">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="board">
+      <div id="prompt-chip" role="heading" aria-label="题目"></div>
+    </div>
+    <div id="scene-area">
+      <div id="scene" aria-label="方块堆场景"></div>
+    </div>
+    <div id="answers" aria-label="作答区"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="读题"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

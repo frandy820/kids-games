@@ -1,0 +1,16 @@
+=== stack ASKS MISS
+=== bridge  MISS
+=== bridge COLORS MISS
+=== bubble [bubble]
+quizSpeech = q => '点破' + numCn(q.n) + '个' + COLOR_CN[q.color] + '泡泡';
+=== feed [feed]
+speechOf = q => q.kind === 'combo' ? comboSpeech(q) : quizSpeech(q);
+=== colormix [colormix]
+quizSpeech = t => '调出' + COLORS[t].name + '吧';
+=== colormix COLORS MISS
+=== hidden  MISS
+=== hidden ANIMALS MISS
+=== weather stem1 [weather]
+stem: '下雨啦，去上学，穿什么' }
+=== weather [weather]
+SUBMIT_TEXT = { |   less: '还差一件，再找一找哦',                           /* 少点：不清空继续挑（TTS） */ |   more: '多选了一件，重新挑一挑哦'                        /* 多点：清空重选 + miss（TTS） */ | };

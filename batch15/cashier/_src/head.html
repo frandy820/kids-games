@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>找零收银</title>
+<style>
+/* ================= 找零收银 cashier（batch15）=================
+   视觉按 SPEC-BATCH15 §1（承 batch13/money 家族暖米底）：小卖部柜台、小动物顾客拿
+   1 件商品+付 1 张大额纸币（10/20/50 三色仅展示不可点）→ 黑板"商品 Y 元 / 付了 X 元"
+   → 孩子点币盘（5元×5/2元×5/1元×5/5角×5 固定供给）把找零点入托盘 → 点"找零"提交：
+   托盘总额=找零（组合开放，总额判对）→ 顾客道谢离场；≠找零 → 托盘晃动零惩罚可调整
+   触摸目标：币 ≥64、托盘内币 ≥64、"找零"主按钮 ≥96、底栏按钮 ≥72 高；pointerdown 即响应 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF3E4;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 52px;display:flex;align-items:center;padding:6px 60px 0 14px;gap:14px}
+#logo{width:42px;height:42px;border-radius:12px;background:#E8975A;display:flex;align-items:center;
+  justify-content:center;flex:0 0 42px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E7D8C0;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E7D8C0}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台 ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:8px;overflow:hidden;padding:4px 10px}
+
+/* ---------- 题面行：顾客+商品+小黑板+大额纸币 ---------- */
+#board{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+  min-height:76px;padding:0 8px}
+#prompt-chip{display:flex;align-items:center;gap:14px;padding:8px 22px;border-radius:22px;
+  background:#33544B;border:2.5px solid #B08A5E;box-shadow:0 5px 0 #8A6844}
+#prompt-chip .cust{width:54px;height:54px;flex:0 0 54px;transition:transform .5s ease,opacity .5s ease}
+#prompt-chip .cust.leave{transform:translateX(46px) rotate(8deg);opacity:0}
+#prompt-chip .goods{width:56px;height:56px;flex:0 0 56px}
+/* 小黑板：深绿板面+粉笔白大字（承 money）；商品 Y 元 / 付了 X 元 / 找他多少呀 */
+#chalk{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+#chalk .ln{display:flex;align-items:baseline;gap:5px;color:#F5F1E6;font-weight:800}
+#chalk .lb{font-size:19px;color:#CBE3D4;letter-spacing:.04em}
+#chalk b{font-size:40px;line-height:1.1;font-variant-numeric:tabular-nums;color:#FDF9EE;
+  text-shadow:0 2px 0 rgba(0,0,0,.18)}
+#chalk .u{font-size:18px;color:#CBE3D4;font-weight:800}
+#chalk .ask{font-size:21px;color:#F2C98C;font-weight:800}
+/* 大额纸币（仅展示不可点选 §0.28）：aria 只读 */
+#prompt-chip .bill{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:2px}
+
+/* ---------- 桌面：币盘（上）+ 托盘行（下） ---------- */
+#table-area{flex:1 1 auto;min-height:190px;width:100%;max-width:1180px;display:flex;
+  flex-direction:column;justify-content:center;gap:6px}
+#coin-tray{display:flex;flex-wrap:wrap;justify-content:center;align-content:center;
+  gap:12px 16px;min-height:80px;padding:6px 8px;border-radius:20px;
+  background:#F6ECD9;border:2.5px dashed #D9C5A6}
+/* 币盘按钮：圆形硬币简笔（5元紫/2元绿/1元银灰/5角金铜）；点后 .gone（入托盘）；救援 breathe */
+.coin{position:relative;width:68px;height:68px;padding:0;border-radius:50%;
+  transition:transform .15s;animation:coin-in .4s cubic-bezier(.2,1.5,.4,1) both}
+.coin:nth-child(2n){animation-delay:.06s}.coin:nth-child(3n){animation-delay:.12s}
+@keyframes coin-in{from{transform:scale(0) rotate(-20deg)}to{transform:scale(1) rotate(0)}}
+.coin:active{transform:translateY(3px)}
+.coin svg{width:100%;height:100%;pointer-events:none}
+.coin.gone{visibility:hidden;pointer-events:none}
+.coin.breathe{animation:coin-breathe 1.6s ease-in-out infinite}
+@keyframes coin-breathe{0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(232,151,90,0))}
+  50%{transform:scale(1.12);filter:drop-shadow(0 0 12px rgba(232,151,90,.85))}}
+/* 飞行币（fixed 克隆，JS 设起止坐标） */
+.fly-coin{position:fixed;z-index:60;width:56px;height:56px;pointer-events:none;
+  transition:transform .46s cubic-bezier(.35,.05,.6,1),opacity .46s;will-change:transform}
+
+/* 托盘行：找零托盘（托内币可点=移回）+ 合计大字 + 救援"要找"卡 */
+#basket-row{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+  padding:2px 6px}
+#basket{display:flex;align-items:center;gap:10px;min-width:230px;min-height:96px;
+  padding:8px 16px;border-radius:20px;background:#FBE9CF;border:2.5px solid #C9A87C;
+  box-shadow:0 4px 0 #DFCFB6;flex-wrap:wrap;justify-content:center}
+#basket .empty{font-size:16px;font-weight:700;color:#8A7B6C}
+#basket.wig{animation:basket-wig .5s ease}
+@keyframes basket-wig{0%,100%{transform:translateX(0)}20%{transform:translateX(-9px)}
+  40%{transform:translateX(9px)}60%{transform:translateX(-6px)}80%{transform:translateX(6px)}}
+#basket.nudge{animation:basket-nudge .4s ease}
+@keyframes basket-nudge{0%,100%{transform:scale(1)}50%{transform:scale(.97)}}
+.tcoin{position:relative;width:64px;height:64px;padding:0;border-radius:50%;
+  animation:coin-in .32s cubic-bezier(.2,1.5,.4,1) both;transition:transform .15s}
+.tcoin:active{transform:translateY(3px)}
+.tcoin svg{width:100%;height:100%;pointer-events:none}
+/* 合计：托盘右侧实时大字（目标找零不显示，靠心算——不泄答案） */
+#sumbox{display:flex;align-items:baseline;gap:5px;padding:6px 18px;border-radius:16px;
+  background:#FFFAF0;border:2.5px solid #4A3B2E;box-shadow:0 4px 0 #DFCFB6}
+#sumbox .lb{font-size:17px;font-weight:700;color:#8A7B6C}
+#sumbox b{font-size:42px;font-weight:800;color:#E8873A;line-height:1;
+  font-variant-numeric:tabular-nums}
+#sumbox .u{font-size:19px;font-weight:800;color:#8A7B6C}
+#sumbox .jj{display:none;align-items:baseline;gap:4px}
+#sumbox .jj b{font-size:30px}
+#sumbox.half .jj{display:flex}
+/* 救援"要找"数字卡（§0.21 找零额大字提示）：默认隐藏，救援/连错 2 次亮起 */
+#find-card{display:none;align-items:baseline;gap:5px;padding:6px 18px;border-radius:16px;
+  background:#FDEBD2;border:2.5px solid #E8873A;box-shadow:0 4px 0 #D9A452}
+#find-card .lb{font-size:17px;font-weight:700;color:#8A6532}
+#find-card b{font-size:42px;font-weight:800;color:#E8873A;line-height:1;
+  font-variant-numeric:tabular-nums}
+#find-card .u{font-size:19px;font-weight:800;color:#8A6532}
+#find-card .jj{display:none;align-items:baseline;gap:4px}
+#find-card .jj b{font-size:30px}
+#find-card.half .jj{display:flex}
+#find-card.show{display:flex;animation:find-in .5s cubic-bezier(.2,1.5,.4,1) both}
+#find-card.breathe{animation:find-breathe 1.6s ease-in-out infinite}
+@keyframes find-in{from{transform:scale(.4)}to{transform:scale(1)}}
+@keyframes find-breathe{0%,100%{transform:scale(1);box-shadow:0 4px 0 #D9A452}
+  50%{transform:scale(1.07);box-shadow:0 4px 0 #D9A452,0 0 18px rgba(232,151,90,.9)}}
+
+/* ---------- 底部答案区："找零"主提交大按钮（≥96） ---------- */
+#answers{flex:0 0 auto;display:flex;justify-content:center;align-items:center;gap:20px;
+  flex-wrap:wrap;min-height:118px;padding:2px 12px}
+#deal-tip{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:700;color:#8A7B6C}
+#deal-tip svg{width:34px;height:34px}
+#pay-btn{min-width:216px;min-height:96px;padding:0 40px;border-radius:28px;background:#E8975A;
+  border:3px solid #4A3B2E;box-shadow:0 6px 0 #C77A42;color:#FFF9EE;font-size:34px;font-weight:800;
+  letter-spacing:.08em;display:flex;align-items:center;justify-content:center;gap:12px;
+  transition:transform .15s,box-shadow .15s;animation:coin-in .38s cubic-bezier(.2,1.5,.4,1) both}
+#pay-btn:active{transform:translateY(3px);box-shadow:0 3px 0 #C77A42}
+#pay-btn svg{width:44px;height:44px}
+#pay-btn.breathe{animation:pay-breathe 1.6s ease-in-out infinite}
+@keyframes pay-breathe{0%,100%{transform:scale(1);box-shadow:0 6px 0 #C77A42}
+  50%{transform:scale(1.06);box-shadow:0 6px 0 #C77A42,0 0 18px rgba(232,151,90,.9)}}
+#pay-btn.nudge{animation:pay-nudge .4s ease}
+@keyframes pay-nudge{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}
+  60%{transform:translateX(6px)}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:88px;height:88px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:72px;height:72px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:80px;height:80px;border-radius:50%;background:#FFFAF0;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #DFCFB6;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #DFCFB6}
+#btn-hear svg{width:46px;height:46px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 money/divide） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFFAF0;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：币/题面适配 */
+@media (orientation:portrait){
+  .coin{width:64px;height:64px}
+  #coin-tray{gap:10px 13px}
+  #basket{min-width:210px;min-height:96px}
+  #chalk b{font-size:36px}
+  #chalk .ask{font-size:19px}
+  #chalk .lb{font-size:17px}
+  #prompt-chip{gap:10px;padding:8px 16px}
+  #prompt-chip .cust{width:46px;height:46px;flex:0 0 46px}
+  #prompt-chip .goods{width:48px;height:48px;flex:0 0 48px}
+  #pay-btn{min-width:190px;font-size:30px}
+  #sumbox b{font-size:38px}
+  #find-card b{font-size:38px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="找零收银">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关题目进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <div id="board">
+      <div id="prompt-chip" role="heading" aria-label="题目"></div>
+    </div>
+    <div id="table-area">
+      <div id="coin-tray" aria-label="钱币托盘"></div>
+      <div id="basket-row" aria-label="找零托盘">
+        <div id="basket"></div>
+        <div id="sumbox" aria-label="托盘合计"><span class="lb">合计</span><b class="main">0</b><span class="u mu">元</span><span class="jj"><b>5</b><span class="u">角</span></span></div>
+        <div id="find-card" aria-label="要找的钱"><span class="lb">要找</span><b class="main">0</b><span class="u mu">元</span><span class="jj"><b>5</b><span class="u">角</span></span></div>
+      </div>
+    </div>
+    <div id="answers" aria-label="作答区"></div>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子掌柜"></button>
+    <button id="btn-hear" aria-label="读题"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

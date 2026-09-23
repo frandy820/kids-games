@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>迷宫探险</title>
+<style>
+/* ================= 迷宫探险 maze（batch30）=================
+   视觉按家族基调：暖米底 #FBF6EC、暖橙主色、暖棕描边 #4A3B2E；迷宫=棕描线墙格
+   （树篱灌木 SVG，家族风）。全龄三层难度：ch1 5×5 少障碍 / ch2 7×7 中障碍 /
+   ch3 7×7 钥匙门（钥匙格+门格，门挡通路，先拾钥匙才能过门）/ ch4 混合。
+   玩法：逐格点选相邻可行格移动（'moved'）；点已走格=合法回退 'back'（死路自救，
+   不记 miss）；到萝卜格='right'（末局 'done'）；障碍/对角/不相邻='wrong'+miss
+   轻反馈（pop+容器 bump+目标格 deny 闪，不 wig 人格否定+相邻可行格 pulse 高亮）；
+   未拿钥匙点门='wrong'+miss+maz_key「先找钥匙哦」；每关 3 局（SPEC §0.75 破 5 题惯例）。
+   触摸目标：网格格 ≥72×72（本款口径：5×5 格 84 / 7×7 格 72）。 */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+#game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ---------- 顶栏 ---------- */
+#hud{flex:0 0 50px;display:flex;align-items:center;padding:5px 60px 0 14px;gap:14px}
+#logo{width:40px;height:40px;border-radius:12px;background:#F2DDC0;display:flex;align-items:center;
+  justify-content:center;flex:0 0 40px}
+#step-dots{display:flex;gap:7px;align-items:center;flex:1 1 auto}
+#step-dots i{width:12px;height:12px;border-radius:50%;background:#E5D5BC;transition:all .3s}
+#step-dots i.done{background:#8FBF7F}
+#step-dots i.cur{background:#E8975A;transform:scale(1.35)}
+#chapter-dots{display:flex;gap:5px;align-items:center;flex:0 0 auto}
+#chapter-dots i{width:10px;height:10px;border-radius:50%;background:#E5D5BC}
+#chapter-dots i.done{background:#8FBF7F}
+#chapter-dots i.cur{background:#E8975A}
+
+/* ---------- 舞台：题面卡（题面句 + 迷宫网格）；无指令卡排（直接点格走位） ---------- */
+#stage{flex:1 1 auto;min-height:120px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:12px;overflow:hidden;padding:6px 12px}
+
+/* 题面卡：可点重听题面；题面句条 + 迷宫网格 +（ch3）钥匙徽章 */
+#scene{position:relative;width:min(600px,94vw);border-radius:26px;background:#FFF9EE;
+  border:3px solid #4A3B2E;box-shadow:0 5px 0 #D8C9B4;overflow:hidden;padding:10px 12px 14px;
+  transition:transform .15s}
+#scene:active{transform:translateY(3px)}
+#scene .q-text{position:relative;z-index:3;margin:0 auto 8px;width:max-content;max-width:100%;
+  background:#FBF6EC;border:2.5px solid #4A3B2E;border-radius:16px;
+  padding:4px 18px;font-size:23px;font-weight:700;letter-spacing:1px;white-space:nowrap}
+/* ch3 钥匙徽章：scene 右上角（未拿=灰暗，拿到=金色点亮弹跳） */
+#scene .key-badge{position:absolute;right:12px;top:10px;z-index:4;width:46px;height:46px;
+  border-radius:50%;background:#FBF6EC;border:2.5px solid #4A3B2E;display:none;
+  align-items:center;justify-content:center}
+#scene .key-badge.show{display:flex}
+#scene .key-badge svg{width:34px;height:34px;filter:grayscale(1) opacity(.5)}
+#scene .key-badge.lit svg{filter:none}
+#scene .key-badge.lit{animation:key-lit .55s cubic-bezier(.2,1.6,.4,1);background:#FDE8C8}
+@keyframes key-lit{0%{transform:scale(1)}45%{transform:scale(1.28) rotate(-8deg)}100%{transform:scale(1)}}
+
+/* 迷宫网格：尺寸按 size 由 JS 定宽（5×5=444 / 7×7=540），窄屏自适应不溢出；
+   格 ≥72×72（5×5=84 / 7×7=72，本款触摸口径） */
+#scene .grid{position:relative;display:grid;grid-auto-rows:1fr;gap:6px;
+  width:100%;max-width:min(540px,calc(94vw - 50px));aspect-ratio:1;margin:0 auto}
+#scene .cell{position:relative;border-radius:12px;background:#EAF2DC;
+  border:2.5px solid #9BAA7E;display:flex;align-items:center;justify-content:center;
+  transition:background .25s;cursor:pointer}
+#scene .cell svg{width:78%;height:78%}
+#scene .cell.wall{background:#E4E2DC;border-color:#B9B3A6;padding:2px}
+#scene .cell.goal-cell{background:#FDE8C8}
+#scene .cell.door-cell{background:#F3E3CB}
+#scene .cell.trail-cell::after{content:'';position:absolute;left:50%;top:50%;width:16px;height:16px;
+  border-radius:50%;background:#E8975A;opacity:.32;transform:translate(-50%,-50%)}
+#scene .cell.deny{animation:cell-deny .4s ease}
+@keyframes cell-deny{0%,100%{background:#EAF2DC}45%{background:#F5C9BC}}
+#scene .grid.bump{animation:grid-bump .22s ease}
+@keyframes grid-bump{0%,100%{transform:scale(1)}45%{transform:scale(.97)}}
+/* 错反馈方向级：相邻可行格 pulse 高亮（1.2s 三闪） */
+#scene .cell.walk-hint{animation:walk-hint .4s ease-in-out 3}
+@keyframes walk-hint{0%,100%{background:#EAF2DC;border-color:#9BAA7E}
+  50%{background:#FDE8C8;border-color:#E8975A}}
+/* 萝卜到达演出：萝卜摇摆放大 */
+#scene .cell .carrot-lit{animation:carrot-lit .6s cubic-bezier(.2,1.6,.4,1)}
+@keyframes carrot-lit{0%,100%{transform:scale(1)}45%{transform:scale(1.25) rotate(-6deg)}}
+/* 拾钥匙演出：钥匙格放大淡出 */
+#scene .cell .key-got{animation:key-got .55s ease forwards}
+@keyframes key-got{0%{transform:scale(1);opacity:1}60%{transform:scale(1.35);opacity:.7}
+  100%{transform:scale(.5);opacity:0}}
+#scene.pulse{animation:scene-pulse 1s ease-in-out 3}
+@keyframes scene-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+#scene.bounce{animation:scene-b .4s ease}
+@keyframes scene-b{0%,100%{transform:scale(1)}45%{transform:scale(.97)}}
+
+/* 小兔：绝对定位于网格，left/top 按格心 transition（走格动画） */
+#scene .bun{position:absolute;z-index:5;width:82px;height:82px;left:0;top:0;
+  transition:left .32s cubic-bezier(.3,1.2,.4,1),top .32s cubic-bezier(.3,1.2,.4,1);
+  display:flex;align-items:center;justify-content:center;pointer-events:none}
+#scene .bun svg{width:72px;height:72px;filter:drop-shadow(0 3px 0 rgba(74,59,46,.2))}
+/* 撞墙（相邻墙错点）：小兔朝该方向顶一下弹回（4 向 nudge） */
+#scene .bun.nudge-up{animation:nd-up .38s ease}
+#scene .bun.nudge-down{animation:nd-down .38s ease}
+#scene .bun.nudge-left{animation:nd-left .38s ease}
+#scene .bun.nudge-right{animation:nd-right .38s ease}
+@keyframes nd-up{0%,100%{margin-top:0}45%{margin-top:-18px}}
+@keyframes nd-down{0%,100%{margin-top:0}45%{margin-top:18px}}
+@keyframes nd-left{0%,100%{margin-left:0}45%{margin-left:-18px}}
+@keyframes nd-right{0%,100%{margin-left:0}45%{margin-left:18px}}
+/* 到萝卜：小兔开心连跳 */
+#scene .bun.reach{animation:bun-reach .55s cubic-bezier(.2,1.6,.4,1) 2}
+@keyframes bun-reach{0%,100%{margin-top:0}40%{margin-top:-16px}}
+
+/* ---------- 底栏 ---------- */
+#dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:6px 18px 12px;gap:12px}
+#btn-rabbit{width:86px;height:86px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #C9A87C;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-rabbit:active{transform:translateY(3px);box-shadow:0 1px 0 #C9A87C}
+#btn-rabbit svg{width:70px;height:70px}
+#btn-rabbit.hop{animation:bun-hop .45s ease 2}
+@keyframes bun-hop{0%,100%{margin-top:0}50%{margin-top:-14px}}
+#btn-replay{width:72px;height:72px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-replay:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-replay svg{width:42px;height:42px}
+#btn-hear{width:84px;height:84px;border-radius:50%;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 4px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+#btn-hear:active{transform:translateY(3px);box-shadow:0 1px 0 #D8C9B4}
+#btn-hear svg{width:48px;height:48px}
+#btn-hear.bounce{animation:hear-b .45s ease}
+@keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* ---------- 幽灵手指教学（照 batch21-29） ---------- */
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+
+/* 竖屏（平板竖持）：网格与按钮适配，7×7 格仍 ≥72 */
+@media (orientation:portrait){
+  #scene .q-text{font-size:20px;padding:3px 14px}
+  #scene .key-badge{width:40px;height:40px;top:8px;right:10px}
+  #btn-rabbit{width:78px;height:78px}
+  #btn-rabbit svg{width:64px;height:64px}
+}
+/* 窄屏（<620px 手机）：网格 vw 自适应防溢出（格将小于 72——平板为本族主口径，可用性优先） */
+@media (max-width:620px){
+  #scene .grid{max-width:calc(94vw - 46px)}
+  #scene .bun{width:64px;height:64px}
+  #scene .bun svg{width:56px;height:56px}
+  #dock{padding:4px 10px 8px}
+  #btn-rabbit{width:66px;height:66px}#btn-rabbit svg{width:54px;height:54px}
+  #btn-hear{width:64px;height:64px}#btn-hear svg{width:38px;height:38px}
+  #btn-replay{width:56px;height:56px}#btn-replay svg{width:34px;height:34px}
+}
+</style>
+</head>
+<body>
+<div id="game" aria-label="迷宫探险">
+  <div id="hud">
+    <div id="logo" aria-hidden="true"></div>
+    <div id="step-dots" aria-label="本关局进度"></div>
+    <div id="chapter-dots" aria-label="章节进度"></div>
+  </div>
+  <div id="stage">
+    <button id="scene" aria-label="帮小兔子吃到萝卜，点我再听一遍"></button>
+  </div>
+  <div id="dock">
+    <button id="btn-rabbit" aria-label="小兔子"></button>
+    <button id="btn-hear" aria-label="再听一遍"></button>
+    <button id="btn-replay" aria-label="再玩一次"></button>
+  </div>
+</div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>
