@@ -4,6 +4,12 @@
 
 ## 检查点（最新在上）
 
+### 2026-09-25 阶段5 收口 ✅（commit 6a70b3c）——本轮全部完成
+- **selftest 44/44 全绿**（含 VERIFY 11/11、生字墙 2 断言）；settle_win force-click 修复（rotate 动画 stable 检测 3-4s/张×5 张≈12s 撞墙超时兜底——MutationObserver 时间线实证游戏无 bug，纯测试节奏）。
+- 本地 commit ×3：e40b623（zilearn r2 五项）/ b02adc0（阶段2 文档）/ 6a70b3c（最终交付报告）。**未推送**（用户红线）。
+- 最终交付报告：docs/final-delivery-2026-09-25.md（六节验收对账+回滚办法+风险与未验证项）。
+- 阶段4 决策落地：识字即 B 类主精修，不凑第二款。core.js 零改动=零跨款回归面。
+
 ### 2026-09-25 阶段2 r2 五项落地 + L3 证据 ✅（selftest 复跑中）
 - **r2 实施**（诊断 J1 错误反馈零增益等三项断点的对策）：F1 关末生字墙（翻牌点读收字）/ F2 阶梯错误反馈（错 2 重播字音+组词+正确卡呼吸；错 3 摘 1 干扰变灰）/ F5 词句题面语音键 zi_read_hint / F6 兔子键重播题面 / F7 Audio.play 失败一次性 toast（60s 节流）。F3 遮字、F4 整词朗读**不做**（设计推演否决，理由在 literacy-game-design.md）。
 - build 双跑幂等 md5 `02676bd9c8dde02db92e0a520f265b42`；VERIFY **11/11**（新单元⑪ ladder）；verify_voice **182 PASS**（181+zi_read_hint）；语音键 179 在册断言（178+read_hint）。
@@ -44,8 +50,9 @@
 ### 阶段2 并行启动
 - 识字认知诊断 agent 在飞（真实完整玩+9 场景截图+诊断 A-J 维度）→ 产 docs 前置报告 output/kids-games-audit/zilearn-diagnosis.md。
 
-## 未完成 / 下一步
-- [ ] L1 扫描完成 → review-l1.json → gen_inventory_md.py 合入 docs/current-game-inventory.md
-- [ ] docs/current-game-review.md（逐款层级+证据+最影响可玩性问题）
-- [ ] 识字诊断返回 → docs/literacy-game-design.md → 实施八项
-- [ ] 阶段3 A 类阻断修复 / 阶段4 B 类精修 2-3 款 / 阶段5 回归+交付
+## 未完成 / 下一步（收口态：本轮计划项全部关闭）
+- [x] L1 扫描+清单合入（docs/current-game-inventory.md）
+- [x] docs/current-game-review.md（121 款逐款层级+证据）
+- [x] 识字诊断 → literacy-game-design.md → r2 五项实施（八项交付中六项落地，F3/F4 明确不做+理由）
+- [x] 阶段3 A 类=0（无工作量）/ 阶段4=识字单款深修 / 阶段5 交付报告 final-delivery-2026-09-25.md
+- [ ] **待用户决定**：r2 是否推送上线（本地已 commit 未推）；真机试玩观察（parents-guide.md）
