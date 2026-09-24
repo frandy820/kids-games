@@ -38,6 +38,7 @@ let lastAct = Date.now();                       /* idle 锚（30s 答案级依�
 let lastDir = Date.now();                       /* 14s 方向级独立节流锚（家族 B） */
 let lastAns = Date.now();                       /* 30s 答案级重复节流锚（keepIdle 配套，独立于 lastAct） */
 let wrongChainUntil = 0;                        /* 错反馈链豁免窗终点（真时钟，救援让路——契约 I） */
+let roundMiss = 0;                              /* F2 阶梯反馈：当前题面错次（renderQuiz 开题重置；≥2 重播目标音组词+正确卡 breathe，==3 摘 1 干扰） */
 let helpRedemo = false;
 let ghostReason = null;
 const __voiceLog = [];                          /* play/queue 键账（verify 防泄露断言依据） */
@@ -49,11 +50,29 @@ const optEl = i => optsEl.querySelector('.opt[data-i="' + i + '"]');
    HTML 上下文裸 <path> 是未知元素不渲染（r1-M1：26 字象形面板全空白根因） */
 const picSvg = inner => '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">' + inner + '</svg>';
 
-/* ---------- 语音包装（记录键账 + 缺 clip 由 core 静音兜底） ---------- */
+/* ---------- 语音包装（记录键账 + 缺 clip 由 core 静音兜底 + F7 播放失败探测） ---------- */
+let playFailNoted = 0;                          /* F7：上次失败 toast 时刻（60s 节流，verify 页静默） */
+function notePlayFail() {
+  if (VERIFY) return;
+  const now = Date.now();
+  if (now - playFailNoted < 60000) return;
+  playFailNoted = now;
+  const tip = document.getElementById('mute-tip');
+  if (!tip) return;
+  tip.classList.add('show');
+  setTimeout(() => tip.classList.remove('show'), 3200);
+}
 function wireVoiceLog() {
   const op = KIDS.voice.play, oq = KIDS.voice.queue;
   KIDS.voice.play = function (key, text) { __voiceLog.push(['p', key]); return op.call(this, key, text); };
   KIDS.voice.queue = function (parts) { __voiceLog.push(['q', parts.map(p => typeof p === 'string' ? p : p.key)]); return oq.call(this, parts); };
+  /* F7：Audio.prototype.play 失败探测（仅本款页内；core 吞错 → 家长无从发现无声故障，诊断 G） */
+  const origPlay = Audio.prototype.play;
+  Audio.prototype.play = function () {
+    const pr = origPlay.call(this);
+    if (pr && pr.catch) pr.catch(() => notePlayFail());
+    return pr;
+  };
 }
 
 /* ---------- 日历限速（SPEC §R5：识字节奏保护——洪恩一天一课 5-6 字调研）
@@ -159,6 +178,8 @@ function sayQuestion() {
                       { key: chKey(r.t), text: chText(r.t) }]);
   } else if (q.kind === 'quiz') {
     KIDS.voice.queue([{ key: VOICE.quiz.key, text: VOICE.quiz.text }, { key: VOICE.word.key, text: VOICE.word.text }]);
+  } else if (q.kind === 'sentence') {
+    KIDS.voice.play(VOICE.readHint.key, VOICE.readHint.text);   /* F5：句子副提示语音平行播报（原仅文字） */
   } else {
     KIDS.voice.play(VOICE.word.key, VOICE.word.text);
   }
@@ -184,7 +205,7 @@ function renderQuiz() {
     qPrompt.innerHTML = ICONS.pen + '<span>' + VOICE.word.text + '</span>';
     qText.className = 'sent';
     qText.innerHTML = r.display.split('＿').join('<span class="blank">＿</span>');
-    qSub.textContent = '读一读，选出生字';
+    qSub.textContent = VOICE.readHint.text;
   } else if (q.kind === 'match') {
     qPrompt.innerHTML = ICONS.pen + '<span>给它找个词朋友</span>';
     qText.textContent = r.t;
@@ -201,6 +222,7 @@ function renderQuiz() {
   });
   lastAct = Date.now();                         // 开题重置 idle 锚
   lastDir = Date.now();
+  roundMiss = 0;                                /* F2：新题面错次清零（half 推进=新题面亦重置） */
   if (!VERIFY && !state.demo) sayQuestion();
 }
 
@@ -233,12 +255,25 @@ async function uiPick(i) {
   if (ret === false || ret === null) return false;
   if (ret === 'wrong') {
     lastAct = Date.now();
+    roundMiss++;                                 /* F2 阶梯：错次累计（开题/新题面清零） */
     const el = optEl(i);
     if (el) { el.classList.remove('wig'); void el.offsetWidth; el.classList.add('wig'); }
     optsEl.classList.remove('shake'); void optsEl.offsetWidth; optsEl.classList.add('shake');
     sfx('fail');
-    sayW(VOICE.wrong.key, VOICE.wrong.text);
-    wrongChainUntil = Date.now() + WRONG_CHAIN_WIN;   /* 链豁免窗=错反馈链实长(est)+300，真时钟（契约 I） */
+    const qW = cur.quizzes[cur.step];
+    const rW = qW.rounds ? qW.rounds[qW.ri] : qW;
+    if (roundMiss >= 2) {
+      /* F2 阶梯 2+：错不只是"错了"——重播目标字的音和组词例（数据全现成），正确卡 breathe 一次 */
+      KIDS.voice.queue([{ key: VOICE.wrong.key, text: VOICE.wrong.text },
+                        { key: chKey(rW.t), text: chText(rW.t) }]);
+      const ok = optEl(engAnswer(cur));
+      if (ok) { ok.classList.remove('breathe'); void ok.offsetWidth; ok.classList.add('breathe'); }
+      if (roundMiss === 3) hideOneDistractor();  /* 阶梯 3：摘 1 个干扰（仅一次；4→3 减选择负荷） */
+      wrongChainUntil = Date.now() + estMs(VOICE.wrong.text) + 150 + estMs(chText(rW.t)) + 300;   /* 豁免窗盖住阶梯链（契约 I） */
+    } else {
+      sayW(VOICE.wrong.key, VOICE.wrong.text);
+      wrongChainUntil = Date.now() + WRONG_CHAIN_WIN;   /* 链豁免窗=错反馈链实长(est)+300，真时钟（契约 I） */
+    }
     state.showUntil = Date.now() + 800 * SPEED + 140; /* 首错演出锁总窗（b39 总窗口径） */
     if (state.tut === 'turn') pointGhostAt(optEl(engAnswer(cur)), 'tut');
     await wait(800 * SPEED + 200);                    /* await 覆盖演出锁窗（autoSolve 连点不被 null 吞） */
@@ -277,7 +312,49 @@ async function uiPick(i) {
   return ret;
 }
 
-/* ================= 过关推进（celebrate → level.pass → 章末/日末） ================= */
+/* ================= F2 阶梯 3：摘 1 个干扰项（dimmed 样式隐藏+禁点；不删 DOM 判定索引不变） ================= */
+function hideOneDistractor() {
+  const a = engAnswer(cur);
+  const alive = optsEl.querySelectorAll('.opt:not(.dimmed)');
+  if (alive.length <= 3) return;                 /* 保持 ≥3 选项，仅摘一次 */
+  const el = [...alive].find((x, idx) => idx !== a && Number(x.dataset.i) !== a);
+  if (el) el.classList.add('dimmed');
+}
+
+/* ================= F1 关末生字墙：本关新字翻牌收字（点字听音=主动回忆；全点过/12s 自动过） ================= */
+async function runResultWall(run) {
+  const chars = newCharsOf(run.flat);           /* 本关新字（静态 5 / 生成关 2；纯复习关 [] 不弹） */
+  if (!chars.length || VERIFY) return;
+  const wall = document.getElementById('result-wall');
+  const tray = wall.querySelector('.rw-cards');
+  tray.innerHTML = '';
+  wall.classList.remove('hide');
+  state.locked = true;
+  await new Promise(resolve => {
+    let lit = 0, done = false;
+    const finish = () => {
+      if (done) return; done = true;
+      wall.classList.add('hide');
+      resolve();
+    };
+    const timer = setTimeout(finish, 12000);    /* 超时自动过（家长侧不堵流程） */
+    chars.forEach(ch => {
+      const ent = CHARS[ch];
+      const card = document.createElement('button');
+      card.className = 'rw-card';
+      card.innerHTML = '<span class="rw-zi">' + ch + '</span><span class="rw-py">' + ent.pyFull + '</span>';
+      card.addEventListener('pointerdown', e => {
+        e.preventDefault();
+        KIDS.voice.play(chKey(ch), chText(ch)); /* 点字听音：主动回忆（第 4 种辨认形式） */
+        if (!card.classList.contains('lit')) { card.classList.add('lit'); if (++lit === chars.length) { clearTimeout(timer); setTimeout(finish, 700); } }
+      });
+      tray.appendChild(card);
+    });
+  });
+  state.locked = false;
+}
+
+/* ================= 过关推进（celebrate → F1 生字墙 → level.pass → 章末/日末） ================= */
 function nextHint(flat) {
   /* r1-M2：+1 取下一关所在章——flat 4 章末 → ci=1 → CHAPTERS[2]=ch2 预告（原 floor(flat/5)
      在章末返回刚学完章自己的 hint，off-by-one；flat 19 → ci=4 → 走 GEN 实算分支） */
@@ -306,23 +383,25 @@ function logDayFlat(flat) {
   KIDS.store.persist();
 }
 function winFlow() {
+  const run = cur;                              /* F1：celebrate→生字墙异步链内快照（late-cur 防） */
   state.won = true;
   state.locked = true;
   ghost.hide();
-  const stars = engStars(cur);
+  const stars = engStars(run);
   sfx('win');
   if (VERIFY) return;                           // verify 页：引擎判定即止，不弹层不写档
   const sv = KIDS._save();
-  const k = keyOf(cur.flat);
-  if (!sv.levels[k]) logDayFlat(cur.flat);      // 首次通关入当日新字账（重玩不重复计）
-  KIDS.ui.celebrate(stars).then(() => {
-    const pr = KIDS.level.pass(cur.ch, cur.lv, stars, [0, 1, 2, 3, 4]);
+  const k = keyOf(run.flat);
+  if (!sv.levels[k]) logDayFlat(run.flat);      // 首次通关入当日新字账（重玩不重复计）
+  KIDS.ui.celebrate(stars).then(async () => {
+    await runResultWall(run);                   /* F1：本关生字墙（翻牌收字，点字听音） */
+    const pr = KIDS.level.pass(run.ch, run.lv, stars, [0, 1, 2, 3, 4]);
     renderDots();
     const lim = ziLimit(Infinity);
     const dayDone = lim > 0 && ziDayDone(keysUpTo(lim));
     if (pr.chapterDone) {
-      const stars5 = [0, 1, 2, 3, 4].reduce((s, l) => s + KIDS.level.stars(cur.ch, l), 0);
-      KIDS.ui.chapterEnd({ chapter: cur.ch, stars: stars5, nextHint: nextHint(cur.flat) });
+      const stars5 = [0, 1, 2, 3, 4].reduce((s, l) => s + KIDS.level.stars(run.ch, l), 0);
+      KIDS.ui.chapterEnd({ chapter: run.ch, stars: stars5, nextHint: nextHint(run.flat) });
       setTimeout(proceed, 3400);
     } else if (dayDone) {
       KIDS.ui.dayEnd({ nextHint: nextHint(lim - 1) });
@@ -419,7 +498,10 @@ rabbitBtn.addEventListener('pointerdown', e => {
   if (VERIFY || !cur) return;
   lastAct = Date.now();
   hopRabbit();
-  sayP(VOICE.hint.key, VOICE.hint.text);
+  /* F6（诊断建议 7）：flat3+ 原静默——点兔子=重播当前题面链（与重听按钮对齐，听音题刚需） */
+  const q = cur.quizzes[cur.step];
+  if (q && q.kind !== 'watch' && !state.locked) sayQuestion();
+  else sayP(VOICE.hint.key, VOICE.hint.text);
 });
 replayBtn.addEventListener('pointerdown', e => {
   e.preventDefault();

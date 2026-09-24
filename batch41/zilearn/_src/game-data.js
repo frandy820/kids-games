@@ -259,6 +259,7 @@ const VOICE = {
   wrong:  { key: 'zi_wrong',     text: '不对哦，再想一想' },
   listen: { key: 'zi_listen',    text: '听一听，找一找' },
   word:   { key: 'zi_word',      text: '选一选' },
+  readHint: { key: 'zi_read_hint', text: '读一读，选出生字' },   /* F5 r2：句子副提示（原仅文字无语音） */
   quiz:   { key: 'zi_quiz',      text: '小测时间到' },
 };
 const chKey = ch => 'zi_ch_' + CHARS[ch].py;

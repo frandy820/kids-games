@@ -136,6 +136,31 @@ svg{display:block}
 body.verify #verify-result{display:block}
 
 /* 竖屏（平板竖持）：选项 2×2、题面与亮相缩放，触摸面仍 ≥96 */
+/* F1 关末生字墙：本关新字翻牌收字（点字听音，全点过/12s 自动过） */
+#result-wall{position:fixed;inset:0;z-index:60;background:rgba(74,59,46,.42);display:flex;
+  flex-direction:column;align-items:center;justify-content:center;gap:18px;animation:rw-in .3s ease}
+#result-wall.hide{display:none}
+@keyframes rw-in{from{opacity:0}to{opacity:1}}
+.rw-title{font-size:24px;font-weight:800;color:#FFF9EE;text-shadow:0 2px 0 rgba(74,59,46,.4)}
+.rw-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:520px;padding:0 16px}
+.rw-card{display:flex;flex-direction:column;align-items:center;gap:2px;background:#FFF9EE;
+  border:3px solid #4A3B2E;border-radius:20px;box-shadow:0 5px 0 #D8C9B4;padding:12px 14px;
+  min-width:86px;min-height:112px;transform:rotate(-3deg);transition:transform .18s cubic-bezier(.2,1.5,.4,1)}
+.rw-card:nth-child(2n){transform:rotate(2.5deg)}
+.rw-card:nth-child(3n){transform:rotate(-1deg)}
+.rw-card .rw-zi{font-size:52px;font-weight:800;line-height:1.1;color:#4A3B2E}
+.rw-card .rw-py{font-size:14px;font-weight:700;color:#8A7B6C;font-family:Georgia,serif}
+.rw-card.lit{background:#FDEFD3;border-color:#E8975A;box-shadow:0 5px 0 #D89A6A;transform:scale(1.06)}
+.rw-tip{font-size:16px;font-weight:700;color:#FFF3E0}
+/* F2 阶梯 3：摘除的干扰项（隐藏+禁点，不删 DOM——判定索引不变） */
+.opt.dimmed{opacity:.18;pointer-events:none;filter:grayscale(1)}
+/* F7 播放失败一次性提示（60s 节流；家长可发现无声故障） */
+#mute-tip{position:fixed;top:14px;left:50%;transform:translate(-50%,-56px);z-index:70;display:flex;
+  align-items:center;gap:8px;background:#FFF9EE;border:2.5px solid #4A3B2E;border-radius:16px;
+  box-shadow:0 4px 0 #D8C9B4;padding:8px 16px;font-size:15px;font-weight:700;color:#4A3B2E;
+  transition:transform .3s ease}
+#mute-tip.show{transform:translate(-50%,0)}
+
 @media (orientation:portrait){
   #opts{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:6px 12px;max-width:520px}
   .opt{min-height:104px;font-size:50px}
@@ -150,6 +175,12 @@ body.verify #verify-result{display:block}
 </style>
 </head>
 <body>
+<div id="result-wall" class="hide" aria-label="这一关认识的字">
+  <div class="rw-title">这一关认识的字</div>
+  <div class="rw-cards"></div>
+  <div class="rw-tip">点一点，听一听</div>
+</div>
+<div id="mute-tip" aria-label="声音提示"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 9 h4 l5-4 v14 l-5-4 H4 Z" fill="#4A3B2E"/><path d="M16 8 L21 16 M21 8 L16 16" stroke="#C94F3D" stroke-width="2.4" stroke-linecap="round"/></svg><span>声音没有出来哦</span></div>
 <div id="game" aria-label="识字小课堂">
   <div id="hud">
     <div id="logo" aria-hidden="true"></div>

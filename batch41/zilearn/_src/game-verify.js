@@ -386,7 +386,7 @@ async function runVerify() {
   const sentOk = SENTENCES.length === 20 && SENTENCES.every((s, i) => s.afterFlat === i && s.text === LEVELS[i].sentence.text);
   const pys = Object.keys(CHARS).map(c => CHARS[c].py);
   const keyOk = new Set(pys).size === 150 && pys.every(p => /^[\x21-\x7E]+$/.test(p));   // 150 唯一全 ASCII（clip key 域）
-  const voiceOk = Object.keys(VOICE).length === 8 && Object.keys(VOICE).every(k => VOICE[k].key.indexOf('zi_') === 0);
+  const voiceOk = Object.keys(VOICE).length === 9 && Object.keys(VOICE).every(k => VOICE[k].key.indexOf('zi_') === 0);   // 9=r2F5 加 readHint
   const covAll = covOk && schedOk && sentOk && keyOk && voiceOk;
   if (covAll) npass++;
   units.coverage = { ok: covAll, covOk: covOk, schedOk: schedOk, sentOk: sentOk, keyOk: keyOk, voiceOk: voiceOk };
@@ -396,6 +396,27 @@ async function runVerify() {
   const calOk = SPEC_ZI_BASE.every(([d, v]) => ZIL._ziBase(d) === v) && ZIL._ziBase(100) === 2 + 3 + 4 + 6 * 97;
   if (calOk) npass++;
   units.calendar = { ok: calOk, table: SPEC_ZI_BASE };
+
+  /* ---- ⑪ F2 阶梯错误反馈（r2 诊断 J1）：错 2=queue[wrong,zi_ch_目标]+正确卡 breathe；错 3=摘 1 干扰(dimmed≠答案) ---- */
+  total++;
+  ZIL.start(1);                                       // flat1 qi1：听音 half 题（verify 页直入题流）
+  await new Promise(r => setTimeout(r, 300));
+  const qL = ZIL.quiz;
+  const aL = qL ? qL.opts.indexOf(qL.target) : -1;    // 听音题答案=目标字卡（SPEC 推导）
+  const wL = qL ? qL.opts.findIndex((o, i) => i !== aL) : -1;
+  let lad = { form: !!qL && (qL.kind === 'listen' || qL.sub === 'listen') && aL >= 0 && wL >= 0 };
+  const nL0 = ZIL._voiceLog.length;
+  await ZIL.tapOpt(wL);                               // 错 1：sayW 路径
+  const miss1V = ZIL._voiceLog.slice(nL0).some(e => e[1] === VOICE.wrong.key);
+  await ZIL.tapOpt(wL);                               // 错 2：阶梯重播目标音组词
+  const step2V = ZIL._voiceLog.slice(nL0).some(e => e[0] === 'q' && Array.isArray(e[1]) && e[1].indexOf(chKey(qL.target)) >= 0);
+  const br2V = !!document.querySelector('.opt.breathe');
+  await ZIL.tapOpt(wL);                               // 错 3：摘 1 干扰
+  const dims = document.querySelectorAll('.opt.dimmed');
+  const dim3V = dims.length === 1 && Number(dims[0].dataset.i) !== aL;
+  const ladderOk = lad.form && miss1V && step2V && br2V && dim3V;
+  if (ladderOk) npass++;
+  units.ladder = { ok: ladderOk, form: lad.form, miss1: miss1V, step2: step2V, breathe: br2V, dim3: dim3V };
 
   const out = { game: 'zilearn', total: total, pass: npass, layoutOk: layoutOk,
                 levels: levels, gen: gen, units: units, smokes: smokes };

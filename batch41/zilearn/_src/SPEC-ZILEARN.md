@@ -130,3 +130,25 @@ RESCUE_ANS_REPEAT=15000（lastAns 独立锚）；keepIdle：救援两级均不�
   时钟方向级重播；P3 双视口（1280×800 选项 118 / 800×1180 真竖屏 104，均 ≥96、分离 gap=6、
   overflowX=0、截图非空白）；P4 离线+0 pageerror；P5 变异 4 HIT。
 - 变异 4 HIT（M1 seed/M2 日历表/M3 复习取字/M4 链窗下界，全 VERIFY FAIL）。
+
+## §R13 r2 深度打磨（2026-09-25，诊断 9 场景 → 设计取舍 → 五项实施）
+
+- 依据：诊断 agent 真实完整玩（9 场景 52 截图，zilearn-diagnosis.md）三大断点——J1 错误反馈零增益（错答无学习增量）、
+  J2 关末缺结束感（celebrate 即走）、义线 83% 断裂（124 字无字理文案，教研专项不本轮做）。设计取舍表见 docs/literacy-game-design.md §四。
+- **F1 关末生字墙**：winFlow 链插入 `runResultWall(run)`（celebrate→墙→pass→章末/日末；`run=cur` 快照贯穿 then 链防 late-cur）。
+  本关新字翻牌（静态 5/生成 2/纯复习不弹），点卡播 `chKey/chText`=主动回忆第 4 认字形式；全点过 700ms 收 / 12s 家长侧超时兜底；
+  `state.locked` 包夹防墙内答题。VERIFY 页不弹（`|| VERIFY` 守卫——verify 单元⑦ simView 不受影响）。
+- **F2 阶梯错误反馈**：`roundMiss` 开题重置（half 推进=新题面重置）；错 1 走 sayW+WRONG_CHAIN_WIN；错 2 queue[wrong, zi_ch_目标+组词]
+  +正确卡 breathe（豁免窗动态=estMs(wrong)+150+estMs(chText)+300）；错 3 `hideOneDistractor()` 摘 1 干扰（`.dimmed` opacity .18
+  +pointer-events none，不删 DOM 保判定索引；alive>3 才摘）。
+- **F5/F6**：VOICE 加 readHint（word/sentence 题面语音+qSub 文案）；兔子键 flat3+ 从静默 hint 改重播当前题面（watch 期/locked 除外）。
+- **F7**：`Audio.prototype.play` wrap（wireVoiceLog 内，`pr.catch(()=>notePlayFail())`）——播放失败一次性 mute-tip toast
+  （喇叭划线 SVG，show 3.2s，60s 节流）。家长可发现无声故障。
+- 键账 178→**179**（zi_read_hint，gen_clips 注册+mp3 合成）；build EXPECT_KEYS 断言 179 + 新数据防劣化断言
+  （150 字 words[0] 必含本字、干扰≠本字）。VERIFY **11/11**（新单元⑪ ladder：错 2 键账+breathe、错 3 dimmed 恰 1 且≠答案）。
+- selftest 42→**44**（+生字墙 2 断言）；settle_win helper：F1 使通关链变长，原 4 处固定 3600ms 推进断言改为点卡过墙+4200ms 落账。
+- L3 真实取证 4/4（shots-r2/ 四截图像素复核非空白）：F7 toast 真 reject 触发、F1 墙 5 卡点读过关推进、F2 breathe/dimmed。
+- **r2 终态 md5 `02676bd9c8dde02db92e0a520f265b42`**（build 双跑幂等；§R11 的 `93df824d` 系 r1 终态，已被 r2 取代）。
+- 测试方法论三坑（防再犯）：`.hide` 元素 playwright wait 须 `state='attached'`；Audio reject hook 须 init_script 阶段装
+  （加载后 replace 会盖掉 wrap 层致 notePlayFail 永不触发）；墙内点卡须 force click（rotate 动画致 stable 检测 3-4s/张，
+  5 张≈12s 撞超时兜底——MutationObserver 时间线实测墙开 47248ms→兜底收 59265ms，游戏行为正确非 bug）。

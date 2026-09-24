@@ -22,6 +22,7 @@ from playwright.sync_api import sync_playwright
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 HERE = Path(__file__).resolve().parent
 URL = (HERE.parent / 'index.html').as_uri()
+CHARS_PY = {c: v['py'] for c, v in json.load(open(HERE / 'chars.json', encoding='utf-8'))['chars'].items()}
 SHOTS = HERE / '_shots'
 SHOTS.mkdir(exist_ok=True)
 TODAY = time.strftime('%Y-%m-%d')
@@ -93,7 +94,8 @@ def wait_quiz(pg, timeout=40000):
 
 
 def tap_correct(pg):
-    """真实鼠标点当前题正确项（从 ZIL.quiz 目标+CHARS 首词独立推导下标——非引擎答案直读）"""
+    """真实鼠标点当前题正确项（从 ZIL.quiz 目标+CHARS 首词独立推导下标——非引擎答案直读）
+    bounding_box 不 auto-wait：题位过渡窗口（反馈演出重绘/换题瞬间）可能 None——短重试。"""
     q = pg.evaluate('''() => {
       const z = ZIL.quiz;
       if (!z || z.kind === 'watch') return null;
@@ -102,7 +104,15 @@ def tap_correct(pg):
     }''')
     if q is None or q['idx'] < 0:
         return None, q
-    box = pg.locator('.opt[data-i="%d"]' % q['idx']).bounding_box()
+    loc = pg.locator('.opt[data-i="%d"]' % q['idx'])
+    box = None
+    for _ in range(6):
+        box = loc.bounding_box()
+        if box:
+            break
+        pg.wait_for_timeout(250)
+    if not box:
+        return None, q
     pg.mouse.click(box['x'] + box['width'] / 2, box['y'] + box['height'] / 2)
     return q['idx'], q
 
@@ -150,6 +160,34 @@ def play_level_real(pg):
     pg.wait_for_selector('.k-celebrate', timeout=45000)
     st = pg.evaluate('ZIL.currentLevel')
     return taps, st['misses']
+
+
+def settle_win(pg, tap_first=True):
+    """F1 生字墙（r2）：celebrate 后等墙出现→点首卡断言 zi_ch_<py> 键账→等墙隐藏+winFlow 链落定。
+    返回 (wall_shown, card_key_ok)——纯复习关（newChars=[]）wall_shown=False 属正常。"""
+    try:
+        pg.wait_for_selector('#result-wall:not(.hide)', timeout=8000)
+        shown = True
+    except Exception:
+        shown = False
+    key_ok = None
+    if shown and tap_first:
+        card = pg.locator('.rw-card').first
+        zi = card.locator('.rw-zi').inner_text()
+        py = CHARS_PY.get(zi, '')
+        n0 = pg.evaluate('ZIL._voiceLog.length')
+        card.click(timeout=8000, force=True)        # force：卡 rotate 动画致 stable 检测每张耗 3-4s，
+        pg.wait_for_timeout(400)                    # 5 张普通 click ≈12s 会撞上墙的 12s 超时兜底
+        tail = pg.evaluate('ZIL._voiceLog.slice(%d)' % n0)
+        key_ok = any(e[0] == 'p' and e[1] == 'zi_ch_' + py for e in tail) if py else (len(tail) > 0)
+        rest = pg.locator('.rw-card')               # 点亮其余卡快速过墙（替代 12s 超时等待）
+        for i in range(1, rest.count()):
+            rest.nth(i).click(timeout=3000, force=True)
+            pg.wait_for_timeout(80)
+    if shown:
+        pg.wait_for_selector('#result-wall.hide', timeout=22000, state='attached')   # hide 类=hidden 元素，attached 判类不看可见性
+    pg.wait_for_timeout(4200)                       # pass 落账+proceed/章末日末弹层窗
+    return shown, key_ok
 
 
 def open_parent_panel(pg):
@@ -215,7 +253,9 @@ def main():
             check('2a flat0 real-mouse win: 7 taps, 0 miss, 3 stars',
                   taps == 7 and misses == 0 and pg.locator('.k-celebrate .k-star').count() == 3,
                   'taps=%d misses=%d' % (taps, misses))
-            pg.wait_for_timeout(3600)
+            wall_a, wall_key_a = settle_win(pg)
+            check('2a F1 result-wall shown after flat0 win', wall_a, 'wall=%s' % wall_a)
+            check('2a F1 wall card tap plays zi_ch_<py>', wall_key_a is True, str(wall_key_a))
             lv1 = pg.evaluate('ZIL.currentLevel')
             check('2a proceed to flat=1', lv1 and lv1['flat'] == 1, str(lv1))
             saved = json.loads(pg.evaluate('localStorage.getItem("kidsgame_zilearn")'))
@@ -224,7 +264,7 @@ def main():
             for flat in (1, 2):
                 r = pg.evaluate('ZIL.autoSolve()')
                 pg.wait_for_selector('.k-celebrate', timeout=40000)
-                pg.wait_for_timeout(3600)
+                settle_win(pg)                      # r2F1：autoSolve 关也过生字墙（全点快速过）
                 st = pg.evaluate('ZIL.currentLevel')
                 check('2a flat%d autoSolve taps=7 win (real uiPick path)' % flat,
                       r['done'] and r['taps'] == 7 and st['flat'] == flat + 1,
@@ -272,7 +312,7 @@ def main():
             taps, misses = play_level_real(pg)
             check('2b flat13 real win (walk3+play4=7 taps)', walk_taps + taps == 7,
                   'walk=%d play=%d' % (walk_taps, taps))
-            pg.wait_for_timeout(3600)               # celebrate 收起+pass 落账（winFlow 异步链）
+            settle_win(pg)                                # r2F1：过生字墙+pass 落账（winFlow 异步链）
             open_parent_panel(pg)
             ptxt = pg.locator('.k-panel .box').inner_text()
             check('2b 累计读句=4（flat10-13 已过）', '累计读句' in ptxt and '4 句' in ptxt,
@@ -313,7 +353,7 @@ def main():
             check('2d tutorial level win (7 taps, 0 miss=soft 生效)',
                   taps == 7 and misses == 0 and pg.locator('.k-celebrate .k-star').count() == 3,
                   'taps=%d misses=%d' % (taps, misses))
-            pg.wait_for_timeout(3600)               # celebrate 收起+pass 落账（winFlow 异步链）
+            settle_win(pg)                                # r2F1：过生字墙+pass 落账（winFlow 异步链）
             saved = json.loads(pg.evaluate('localStorage.getItem("kidsgame_zilearn")'))
             check('2d tutorial level 1-0 saved', '1-0' in saved['levels'], str(saved['levels']))
             ctx.close()

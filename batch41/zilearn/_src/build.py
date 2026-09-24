@@ -37,11 +37,11 @@ SRC = json.loads((ROOT / 'chars.json').read_text(encoding='utf-8'))
 EXPECT_KEYS = set('zi_ch_' + v['py'] for v in SRC['chars'].values())
 EXPECT_KEYS |= set('zi_st_%d' % f for f in range(20))
 EXPECT_KEYS |= {'zi_tut_watch', 'zi_tut_turn', 'zi_hint', 'zi_right', 'zi_wrong',
-                'zi_listen', 'zi_word', 'zi_quiz'}
-assert len(EXPECT_KEYS) == 178, '期望键推导异常: %d != 178' % len(EXPECT_KEYS)
+                'zi_listen', 'zi_word', 'zi_read_hint', 'zi_quiz'}
+assert len(EXPECT_KEYS) == 179, '期望键推导异常: %d != 179（178+zi_read_hint r2F5）' % len(EXPECT_KEYS)
 bad_prefix = [k for k in _inj_keys if not (k.startswith('zi_') or k.startswith('core_'))]
 assert not bad_prefix, 'clips 出现非 zi_/core_ 键: %s' % sorted(set(bad_prefix))
-assert n_zi in (0, 178), 'zi_ clips %d 条（段一须 0=未注册，段二须 178=全量，禁部分注册）' % n_zi
+assert n_zi in (0, 179), 'zi_ clips %d 条（段一须 0=未注册，段二须 179=全量，禁部分注册）' % n_zi
 if n_zi:
     missing = EXPECT_KEYS - set(_inj_keys)
     extra = (set(_inj_keys) & set('core_chapter_end core_day_end core_rest')) - {'core_chapter_end', 'core_day_end', 'core_rest'}
@@ -67,6 +67,10 @@ for chb in SRC['chapters']:
         e = dict(lv); e['ch'] = chb['ch']
         lv_expect.append(e)
 assert T['CHARS'] == SRC['chars'], 'CHARS 对账失败（150 字逐字段）'
+# r2 数据防劣化：words[0] 必含本字（word 挖空 blankWord/match 正确项前提）；干扰字≠本字
+for ch, v in SRC['chars'].items():
+    assert v['words'][0][0].find(ch) >= 0, 'words[0] 不含本字: %s %s' % (ch, v['words'][0])
+    assert all(d[0] != ch for d in v['distract']), '干扰含本字: %s' % ch
 assert T['LEVELS'] == lv_expect, 'LEVELS 对账失败（20 关 newChars/review/sentence）'
 assert T['GEN_POOL'] == SRC['genPool'], 'GEN_POOL 对账失败'
 assert T['SENTENCES'] == SRC['sentences'], 'SENTENCES 对账失败'
@@ -155,4 +159,4 @@ for bad in ['http://', 'https://', '<link', ' src=', ' href=']:
 OUT.write_text(html, encoding='utf-8')
 print('OK written:', OUT, len(html), 'chars')
 print('对账: CHARS/LEVELS/GEN_POOL/SENTENCES/REVIEW_SCHED ↔ chars.json 双向全等；PICTO 26(8 ev)')
-print('clips: stage-%d（zi_ %d/178 键在册；段二 gen_clips 注册后自动收紧为全量）' % (stage, n_zi))
+print('clips: stage-%d（zi_ %d/179 键在册；段二 gen_clips 注册后自动收紧为全量）' % (stage, n_zi))

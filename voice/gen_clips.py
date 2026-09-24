@@ -2548,6 +2548,8 @@ def build_manifest():
     m['zi_listen'] = {'text': '听一听，找一找', 'games': ['zilearn']}
     m['zi_word'] = {'text': '选一选', 'games': ['zilearn']}
     m['zi_quiz'] = {'text': '小测时间到', 'games': ['zilearn']}
+    # r2 F5（2026-09-25 诊断建议 4）：句子题副提示语音平行播报——原只有文字无语音
+    m['zi_read_hint'] = {'text': '读一读，选出生字', 'games': ['zilearn']}
     zi_src = open(os.path.join(ROOT, 'batch41', 'zilearn', '_src', 'game-data.js'), encoding='utf-8').read()
     zi_ch = re.findall(r'"([一-鿿])":\s*\{\s*py:\s*"([^"]+)",[^,]+,\s*chNo:\s*\d+,\s*words:\s*\[\["([^"]+)"', zi_src)
     assert len(zi_ch) == 150, 'zi CHARS 提取异常: %d' % len(zi_ch)
@@ -2560,7 +2562,7 @@ def build_manifest():
     assert len({int(f) for _, f in zi_st}) == 20, 'zi afterFlat 冲突'
     for text, flat in zi_st:
         m['zi_st_%s' % flat] = {'text': text, 'games': ['zilearn']}
-    assert sum(1 for k in m if k.startswith('zi_')) == 178, 'zi_ 键总数应 178'
+    assert sum(1 for k in m if k.startswith('zi_')) == 179, 'zi_ 键总数应 179（178+zi_read_hint r2F5）'
     _t46dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'task46-enumerate')
     for jf, expect in (('keys_read.json', 174), ('keys_t46.json', 970)):   # 963-1：tc_s_comma 纯标量段非语音点剔除（edge-tts 0 字节）
         p = os.path.join(_t46dir, jf)
