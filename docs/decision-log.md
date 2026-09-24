@@ -30,4 +30,10 @@
   → Start-Process cmd 独立进程推送（脱离 CC 会话收割）。
 - **结果**：一次成功，188M 约 14 分钟（显著快于代理）。后续推送沿用此通道。
 - **回滚**：`git remote set-url origin https://github.com/frandy820/kids-games.git` + gh api 删除 deploy key。
+
+## #5 2026-09-24 仓库可见性：私有 → 公开 + 开通 GitHub Pages
+- **原因**：用户指令「发布到 GitHub 上，公开任何人都可以，平板上试一下」——推翻 #2 的私有决定（用户在两个时点的不同指令，以最新为准）。
+- **执行**：`gh repo edit --visibility public`（验证 PUBLIC）+ 开 Pages（source=main 根目录，build_type=legacy）。
+- **结果**：站点 https://frandy820.github.io/kids-games/ 构建 built，主入口+游戏页抽查 200。平板/手机浏览器可直接玩，全静态离线结构在 Pages 上等价本地 file:// 行为。
+- **注意**：仓库含 docs/ 内部路径（F:/claudecode/...）与工作文档，随公开一并可见——用户已知情并明确要求公开。ledger/difficulty-audit/output 仍按 .gitignore 不入库。
 - **验证**：首推后 gh api 核验 commits=2；后续收官增量推送（7a3f2cc）后复核 commits=3。进程干净退出 + 日志 `* [new branch] main -> main`。
