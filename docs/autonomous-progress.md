@@ -1,51 +1,28 @@
-# 自治进度（唯一真实进度依据）
+# 自主工作进度（autonomous-progress）
 
-> 本轮任务 = 「成熟儿童游戏」任务书落地。**✅ 全部完成（2026-09-23 收官）**。
-> 裁决：项目已由 Task#45 等提前完成任务书核心改造要求，本轮=文档形态对齐+全量启动冒烟复验，零游戏源码改动（decision-log.md #1）。
+> 本轮：2026-09-25 起约一天。原则：不采信旧报告数字；凡未打开/未玩到的不写"已体验"；改动只本地 commit 不推远端不发布。
 
-## 当前阶段
-**收官**——六 agent 任务全清，docs 文档 8 件+冒烟报告全落盘，远端私有仓库 3 commit 落地。
+## 检查点（最新在上）
 
-## 最终验证记录
-- 冒烟：PASS 120/120 FAIL 0（output/smoke-120/report.md）
-- 远端：commits=3 落地（gh api 核验，2026-09-23 复核）；仓库 PRIVATE
-- 推送通道：SSH ssh.github.com:443 直连+deploy key（代理 HTTPS 已弃用——断流两案见 decision-log #4）
-- 评分对账：深改 35+30+21=86 与 Task#45 口径精确吻合；改造卡编号 1-86 连续+绿款 34=120 闭合
+### 2026-09-25 阶段0 完成 ✅（未 commit，随阶段1 一并）
+- git：main@289cf47 干净工作区；线上 Pages built@289cf47 = 本地 HEAD（同一 commit，线上=本地构建已对账，md5 CRLF 归一一致——昨日推送时验证）。
+- 主入口 121 卡 ↔ 目录 121 游戏双向对账：**无缺失、无孤儿**。旧报告"120 款"口径已废（昨插卡 zilearn 后=121）。
+- 每款唯一 ID G001-G121；数据源 `F:\claudecode\output\kids-games-audit\inventory.json`；清单文档 docs/current-game-inventory.md（L1 列待扫描完成后合入）。
+- 识字小课堂 = G121（batch41/zilearn/index.html，3420KB，_src 七件套，线上入口 batch41/zilearn/index.html）。
+- 无 _src 源码 2 款：G001 pipe-rabbit、G002 shop-math（batch1 早期，构建产物即源）。
+- 年龄段：卡面与页面均无年龄标注 → 清单记「页面未标」，不采信旧报告年龄划分。
 
-## 已完成任务
-- 2026-09-23 GitHub 仓库建立并推送（frandy820/kids-games），随后按用户指令**转为私有** ✓（visibility=PRIVATE 已验证）
-- 差距分析完成：任务书八阶段中，阶段 1/2/3（基础修复/深改/推广）已由 Task#45 覆盖，增量=阶段 0 文档 + 阶段 4 冒烟
+### 阶段1 进行中（后台）
+- L1 全量扫描脚本 `output/kids-games-audit/stage1_l1_scan.py` 后台跑（121 款：盲开+首截图+console+一次真实点击+after 截图+verify 自检页探测；4 并发；viewport 390×760 窄屏）。
+- 分级口径：L0 链接 / L1 启动 / L1.5 verify 自检 PASS（真实浏览器完整判定流）/ L2 核心交互 / L3 完整一局结算 / L4 真机儿童。启动冒烟只支撑 L1。
+- L3 抽样（真实模式 autoSolve 至结算 8-10 款）待 L1 完成后按 verify PASS 款抽样。
+- 线上复核口径：本地=同 commit 构建，抽样 5 款走代理 curl 线上比对（不全量扫线上，避免噪音）。
 
-## 正在进行的任务（6 agent 并行）
-| # | 任务 | 产物 | 状态 |
-|---|------|------|------|
-| A1 | 5-6 岁段 40 款审计评分卡 | docs/_audit-56.md | ✅ 完成（40 款全列，深改 35，均值 84.4，目录名无不一致） |
-| A2 | 6-7 岁段 40 款审计评分卡 | docs/_audit-67.md | ✅ 完成（40 款全列，深改 30，均值 86.1，目录名核对无不一致） |
-| A3 | 7-8 岁段 40 款审计评分卡 | docs/_audit-78.md | ✅ 完成（40 款全列，深改 21，均值 87.3，目录名无不一致） |
-| A4 | 公共能力框架文档 | docs/game-framework.md | ✅ 完成（251 行；6 项等价+2 项部分等价：无暂停按钮/难度=章谱+救援两层无自适应；勘误：救援双锚在款侧非 core、系统 TTS 已删、reduce-motion 未实现） |
-| A5 | 改造卡汇总（86 款深改） | docs/game-improvement-plan.md | ✅ 完成（930 行；编号 1-86 连续校验+绿款 34 行=120 闭合；勘正 SUMMARY 黄45/绿35→黄46/绿34） |
-| A6 | 全量 120 款启动冒烟（夜跑承载） | output/smoke-120/report.md | ✅ 完成（**PASS 120/120 FAIL 0**；pageerror 0/console error 0/主入口双向对账零缺失；10.6min） |
+### 阶段2 并行启动
+- 识字认知诊断 agent 在飞（真实完整玩+9 场景截图+诊断 A-J 维度）→ 产 docs 前置报告 output/kids-games-audit/zilearn-diagnosis.md。
 
-## 下一步任务
-1. ~~汇编 docs/game-audit.md~~ ✅（281 行、120 款逐款行验证、分片临时文件已删）
-2. ~~收 A6 冒烟报告~~ ✅（零失败项，无回填修复）
-3. ~~主线写 docs/final-improvement-report.md~~ ✅（主体+冒烟数字已回填；仅剩 git 提交节待补）
-4. git commit（文档批次）→ 等首个 push 完成后增量 push → 终版收尾
-
-## 已完成（主线自做）
-- docs/manual-test-checklist.md ✓（通用清单+红线扫描+抽样建议+儿童观察表）
-
-## 已运行的验证命令及结果
-- `gh repo view frandy820/kids-games --json visibility` → `{"visibility":"PRIVATE"}` ✓
-- git push 后台任务进行中（188M pack，挂代理）
-
-## 当前阻塞项
-- git push 与后续 commit 推送须串行（并发 push 锁冲突），文档 commit 待首推完成
-
-## 已知边界（不做的）
-- B 类设计候选/家族级 core 项挂账（ledger §7）：维持现状，用户点名才动
-- C 类真机观察项：无法代做，列入 game-audit.md 观察节
-- 游戏源码零改动（终态 md5 锁定，见 ledger.md §2）
-
-## 最近一次更新时间
-2026-09-23（首轮派单）
+## 未完成 / 下一步
+- [ ] L1 扫描完成 → review-l1.json → gen_inventory_md.py 合入 docs/current-game-inventory.md
+- [ ] docs/current-game-review.md（逐款层级+证据+最影响可玩性问题）
+- [ ] 识字诊断返回 → docs/literacy-game-design.md → 实施八项
+- [ ] 阶段3 A 类阻断修复 / 阶段4 B 类精修 2-3 款 / 阶段5 回归+交付
