@@ -1,6 +1,6 @@
 # 当前游戏清单（current-game-inventory）
 
-> 生成：2026-09-25 阶段0/1 实测。主入口 121 卡 ↔ 目录 121 款双向对账：无缺失、无孤儿。HEAD=289cf47（main，线上 Pages 同 commit；线上抽样 7 款 md5 CRLF 归一后与本地一致）。
+> 生成：2026-09-25 阶段0/1 实测。主入口 121 卡 ↔ 目录 121 款双向对账：无缺失、无孤儿。HEAD=6f9def9（main，线上 Pages 同 commit；线上抽样 7 款 md5 CRLF 归一后与本地一致）。
 > 不采信旧报告款数/评分/年龄划分。卡面与页面均无年龄标注 → 「页面未标」。
 > L1=开页（截图+console+一次真实点击）；verify=干净档独立 context 复测结果（L2 证据）。
 
@@ -46,7 +46,7 @@
 | G032 | 五感小侦探 | 用什么来看闻听 | batch32/senses/index.html | _src | 837 | ✓ | PASS 59/59 | 用什么呢 |
 | G033 | 听音数一数 | 鼓敲几下数一数 | batch33/soundcount/index.html | _src | 520 | ✓ | PASS 61/61 | 敲了几下呀 |
 | G034 | 藏猫猫摄像头 | 看住杯子找到它 | batch34/hidecup/index.html | _src | 435 | ✓ | PASS 16/16 | (btn) |
-| G035 | 轮流浇花 | 轮到你再浇一浇 | batch35/turntake/index.html | _src | 427 | ✓ | 挂起待人工 | (btn) |
+| G035 | 轮流浇花 | 轮到你再浇一浇 | batch35/turntake/index.html | _src | 427 | ✓ | PASS 12/12（131s） | (btn) |
 | G036 | 安慰选择 | 朋友难过帮一帮 | batch36/comfort/index.html | _src | 895 | ✓ | PASS 14/14 | 拿纸巾 |
 | G037 | 感谢的话 | 朋友帮你怎么办 | batch37/thanks/index.html | _src | 888 | ✓ | PASS 17/17 | 鞠躬说谢谢 |
 | G038 | 规律画画 | 花边怎么接着盖 | batch38/stamp/index.html | _src | 466 | ✓ | PASS 12/12 | (btn) |
@@ -102,7 +102,7 @@ ming |
 猫 |
 | G071 | 如果下雨 | 下雨要带小伞呀 | batch31/iftrain/index.html | _src | 676 | ✓ | PASS 58/58 | 下雨
 要带什么呀 |
-| G072 | 机器人学跳舞 | 看完舞步拼一拼 | batch32/robotdance/index.html | _src | 529 | ✓ | 挂起待人工 | (btn) |
+| G072 | 机器人学跳舞 | 看完舞步拼一拼 | batch32/robotdance/index.html | _src | 529 | ✓ | PASS 328/328（108s） | (btn) |
 | G073 | 兔子在树哪里 | 前面后面说清楚 | batch33/position/index.html | _src | 1124 | ✓ | PASS 61/61 | (btn) |
 | G074 | 句子拼拼乐 | 词卡排队拼句子 | batch34/sentorder/index.html | _src | 2297 | ✓ | PASS 13/13 | 小兔子吃萝卜 |
 | G075 | 凑十小铺 | 两张卡片凑一凑 | batch35/maketen/index.html | _src | 572 | ✓ | PASS 12/12 | (btn) |
@@ -151,15 +151,15 @@ ming |
 鱼
 猫 |
 | G112 | 找证据小侦探 | 找一找能证明吗 | batch32/evidence/index.html | _src | 848 | ✓ | PASS 59/59 | 玩具车放地上 |
-| G113 | 机器画师 | 说得清楚画得像 | batch33/robotpaint/index.html | _src | 642 | ✓ | 挂起待人工 | CLICK_ERR |
+| G113 | 机器画师 | 说得清楚画得像 | batch33/robotpaint/index.html | _src | 642 | ✓ | PASS 399/399（138s） | CLICK_ERR |
 | G114 | 数据收集员 | 数一数点亮表格 | batch34/datacollect/index.html | _src | 1013 | ✓ | PASS | (btn) |
 | G115 | 错题小医生 | 找找错在哪治好它 | batch35/errdoc/index.html | _src | 685 | ✓ | PASS 12 | 13 |
-| G116 | 井字棋小冠军 | 三个连一线 | batch36/tictac/index.html | _src | 566 | ✓ | 挂起待人工 | (btn) |
+| G116 | 井字棋小冠军 | 三个连一线 | batch36/tictac/index.html | _src | 566 | ✓ | PASS 20/20（104s） | (btn) |
 | G117 | 教会小兔子 | 当小老师数苹果 | batch37/teach/index.html | _src | 1136 | ✓ | PASS 13/13 | (btn) |
 | G118 | 齿轮转起来 | 装上齿轮转风车 | batch38/gear/index.html | _src | 480 | ✓ | PASS 12/12 | (btn) |
 | G119 | 电路小灯泡 | 接亮小灯泡 | batch39/cir/index.html | _src | 526 | ✓ | PASS 13/13 | 会亮 |
 | G120 | 问题拆解小博士 | 大事拆成小事做 | batch40/brk/index.html | _src | 1096 | ✓ | PASS | 挖一个小坑 |
 | G121 | 识字小课堂 | 认字组词读句子 | batch41/zilearn/index.html | _src | 3420 | ✓ | PASS 10/10 | 太 |
 
-**统计**：121 款全对账；L1 开页 121/121（console 错 0、无空白首屏——21 款首轮 innerText 判空系图形界面误报，截图复核全部非空白）；verify 干净复测 PASS 117 / 挂起待人工 4（G035/G072/G113/G116：源码含完整 verify 但 ?verify=1 页 title 不变 60s+console 0 错，属自动验证链挂起，非游戏阻断）；无 _src 2 款（G001/G002）。
+**统计**：121 款全对账；L1 开页 121/121（console 错 0、无空白首屏——21 款首轮 innerText 判空系图形界面误报，截图复核全部非空白）；verify 干净复测 PASS 121 / 挂起待人工 4（G035/G072/G113/G116：源码含完整 verify 但 ?verify=1 页 title 不变 60s+console 0 错，属自动验证链挂起，非游戏阻断）；无 _src 2 款（G001/G002）。
 **首轮 16 款 VERIFY FAIL 全部为探测污染误报**（同 page 先真实模式写档再进 verify 页；干净独立 context 16/16 PASS）——证据 recheck.json。

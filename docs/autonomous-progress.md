@@ -4,6 +4,14 @@
 
 ## 检查点（最新在上）
 
+### 2026-09-25 阶段0+1 完成 ✅（commit `docs: 阶段0/1 全库清单+逐款审查`）
+- **121 款 L1 全过**（开页+console 0 错+首屏点击全响应+截图 242 张）；首轮 21 款"blank"系 innerText 判空误报（图形界面），截图复核全非空白。
+- **verify 干净复测 117/121 PASS**（L2 证据）；首轮 16 款 FAIL 全为同 page 带档污染（独立 context 复测 16/16 PASS）——教训：verify 判定必须独立 context。
+- **A 类阻断 0 款**。4 款 verify 链挂起（G035/G072/G113/G116：title 不变 60s+console 0 错）→ 阶段 3 工作量 0，4 款记待人工。
+- 线上抽样 7 款 md5（CRLF 归一）与本地一致 → 本地审查结论可推及线上。
+- L3：G121 识字（诊断 agent 进行中）；hidecup 昨日证据（今日未复验，文档如实标注）。L4：0。
+- 产物：docs/current-game-inventory.md + docs/current-game-review.md；原始记录 output/kids-games-audit/。
+
 ### 2026-09-25 阶段0 完成 ✅（未 commit，随阶段1 一并）
 - git：main@289cf47 干净工作区；线上 Pages built@289cf47 = 本地 HEAD（同一 commit，线上=本地构建已对账，md5 CRLF 归一一致——昨日推送时验证）。
 - 主入口 121 卡 ↔ 目录 121 游戏双向对账：**无缺失、无孤儿**。旧报告"120 款"口径已废（昨插卡 zilearn 后=121）。
