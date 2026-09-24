@@ -3,7 +3,7 @@
 > 生成：2026-09-23。本轮任务 = 「成熟儿童游戏」任务书落地。执行裁决见 [decision-log.md](decision-log.md) #1：
 > 项目核心改造已由 Task#45（2026-09-13 → 09-23）提前完成，本轮交付**文档形态对齐 + 全量启动冒烟复验**，零游戏源码改动。
 
-## 一、本轮产物清单（docs/ 七件套 + 冒烟）
+## 一、本轮产物清单（docs/ 文档 8 件 + 冒烟）
 
 | 文件 | 内容 | 规模 |
 |------|------|------|
@@ -12,13 +12,14 @@
 | game-framework.md | 公共能力框架（八项对照+接入指南+流水线+五门禁+诚实缺口清单） | 251 行 |
 | manual-test-checklist.md | 人工验收清单（通用 8 项+安全红线+抽样+儿童观察表） | — |
 | autonomous-progress.md | 进度真值源（本轮全程） | — |
-| decision-log.md | 决策日志（3 条） | — |
+| decision-log.md | 决策日志（4 条） | — |
 | known-issues.md | 已知问题三分类（A 已清/B 点名才动/C 真机） | — |
-| output/smoke-120/report.md | 全量 120 款启动冒烟（A6 夜跑） | 【待回填】 |
+| final-improvement-report.md | 本报告 | — |
+| output/smoke-120/report.md | 全量 120 款启动冒烟（A6 夜跑，本地 output/ 不入库） | PASS 120/120，FAIL 0（10.6 分钟） |
 
 ## 二、文件变更清单（本轮全部）
 
-**新增**：docs/ 七件（上表）+ output/smoke-120/（冒烟脚本与报告）+ README.md + .gitignore（发布时建）。
+**新增**：docs/ 文档 8 件（上表）+ output/smoke-120/（冒烟脚本与报告）+ README.md + .gitignore（发布时建）。
 **修改**：零游戏源码、零构建产物（120 款终态 md5 锁定，见 ledger.md §2/§7 m 批行）。
 **仓库**：github.com/frandy820/kids-games 已建 → 已转 **PRIVATE**（用户指令，decision-log #2）。
 
@@ -84,7 +85,7 @@ python F:/claudecode/projects/active/kids-games/output/smoke-120/smoke120.py
 |----|----|--------|----------|
 | hidecup 躲猫猫杯子 | 5-6 | 视觉追踪 | 双动物两步题卡壳点；提速档跟得上吗 |
 | soundcount 听音数数 | 5-6 | 听觉计数 | 纯听（无视觉锚）是否靠猜；countdual 最陡点弃关率 |
-| calendar 日历小博士 | 6-7 | 推理 | 多步跳（+2 月跨年）理解度；段链听感 |
+| calendar 日历小星 | 6-7 | 推理 | 多步跳（+2 月跨年）理解度；段链听感 |
 | cbx 冷静工具箱 | 6-7 | 情感选择 | fair 次优卡（好但不最佳）能否说出选择理由 |
 | robotdance 机器人学舞 | 7-8 | 序列记忆 | fix 改错题的观察-比对过程；演出等待是否烦躁 |
 
@@ -93,7 +94,9 @@ python F:/claudecode/projects/active/kids-games/output/smoke-120/smoke120.py
 ## 八、本轮 Git 提交与仓库状态
 
 - 仓库：https://github.com/frandy820/kids-games（**PRIVATE**，用户指令转私有）
-- commit 1：`kids-games 120 款儿童离线游戏库：三年龄段各 40 款+难度改造期终态…`（120 款游戏库+README+.gitignore，188M pack）
-- commit 2：`docs: add game audit (120-game scored), improvement plan (86 cards), framework, test checklist, final report`（8 文件 1707 行）
+- commit 1：`a37961f kids-games 120 款儿童离线游戏库：三年龄段各 40 款+难度改造期终态…`（120 款游戏库+README+.gitignore，188M pack）
+- commit 2：`b4d8deb docs: add game audit (120-game scored), improvement plan (86 cards), framework, test checklist, final report`（8 文件 1707 行）
+- commit 3：`7a3f2cc docs: finalize progress/decision-log (SSH 443 push channel, smoke 120/120)`（收官更新）
 - 推送通道：代理 HTTPS 两连败（低内存收割+断流挂死）→ 终态=**SSH ssh.github.com:443 直连 + repo 级 deploy key（kids-games-push，可写）**，origin 已切 SSH URL；188M 约 14 分钟传完。后续推送沿用此通道即可。
 - 冒烟产物 output/smoke-120/ 按 .gitignore 留本地（内部过程区，不入库）
+- 远端核验：`gh api repos/frandy820/kids-games/commits` = 3 commit，与本地 main 一致（2026-09-23 复核）

@@ -30,4 +30,4 @@
   → Start-Process cmd 独立进程推送（脱离 CC 会话收割）。
 - **结果**：一次成功，188M 约 14 分钟（显著快于代理）。后续推送沿用此通道。
 - **回滚**：`git remote set-url origin https://github.com/frandy820/kids-games.git` + gh api 删除 deploy key。
-- **验证**：远端 commits=2（gh api 核验）+ 进程干净退出 + 日志 `* [new branch] main -> main`。
+- **验证**：首推后 gh api 核验 commits=2；后续收官增量推送（7a3f2cc）后复核 commits=3。进程干净退出 + 日志 `* [new branch] main -> main`。

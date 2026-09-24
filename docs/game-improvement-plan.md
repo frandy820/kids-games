@@ -43,7 +43,7 @@
 | r16 | spellen 英语拼写(b16) / idiom 成语配对(b16) / timecalc 时间计算(b20) | r34 | story3 故事排序(b25) |
 | r17 | memduel 记忆双背(b20) / chartread 图表小读者(b31) / evidence 找证据(b32) | r35 | emo 情绪认知(b25) |
 | r18 | robotpaint 机器画师(b33) / tictac 井字棋(b36) / kitchen-rhythm 厨房节奏(b1) | r36 | sign 交通标志(b26) |
-| r19 | memory 翻翻找朋友(b2) / countchick 数数小鸡(b5) / sortsize 大小排排队(b11) | r37(+bis) | calendar 日历小博士(b26) |
+| r19 | memory 翻翻找朋友(b2) / countchick 数数小鸡(b5) / sortsize 大小排排队(b11) | r37(+bis) | calendar 日历小星(b26) |
 | r20 | hidden 藏猫猫(b22) | r38 | coin 硬币与钱(b27) |
 | r21 | colormix 颜色魔法(b22) | r39(+bis) | notebird 音高小鸟(b27) |
 | r22 | share 分糖果(b23) | r40 | coder 指令小兔(b28) |
@@ -740,7 +740,7 @@ r20 账本化（ledger.md §0）后统一为五门禁，每款全过才进 VERIF
 - 时长/曲线：目标 ≥45s/关；时序全达标（flash 1815ms/重闪窗 1.21s/判对 5437ms）
 - 验收：终态 f572e482 / VERIFY 56/56×2 / _selftest 32/32 / verify_one 12/12×2 / gate 3/3（n=41）/ manifest 5205（+15）；审查 minor8 修复轮全收（M5 flash 抢答掐 timer）；试玩 Blocker0+Should0+Nice3。详见 ledger §5 r36 行
 
-**73. calendar 日历小博士**（b26 · 6-7 岁 · r37+r37-bis）
+**73. calendar 日历小星**（b26 · 6-7 岁 · r37+r37-bis）
 - 玩法：日历导航与日期星期复合题
 - 改造前：星期+1 接龙秒答，反向与跨年界是仅存内容（会话 959s）
 - 乐趣来源：多步跳（后天/上上周）的日历心算+跨月界的推理

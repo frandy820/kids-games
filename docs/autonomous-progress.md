@@ -4,12 +4,12 @@
 > 裁决：项目已由 Task#45 等提前完成任务书核心改造要求，本轮=文档形态对齐+全量启动冒烟复验，零游戏源码改动（decision-log.md #1）。
 
 ## 当前阶段
-**收官**——六 agent 任务全清，docs 七件套+冒烟报告全落盘，远端私有仓库 2 commit 落地。
+**收官**——六 agent 任务全清，docs 文档 8 件+冒烟报告全落盘，远端私有仓库 3 commit 落地。
 
 ## 最终验证记录
 - 冒烟：PASS 120/120 FAIL 0（output/smoke-120/report.md）
-- 远端：commits=2 落地（gh api 核验）；仓库 PRIVATE
-- 推送通道：SSH ssh.github.com:443 直连+deploy key（代理 HTTPS 已弃用——断流两案在 decision-log #4 待补记）
+- 远端：commits=3 落地（gh api 核验，2026-09-23 复核）；仓库 PRIVATE
+- 推送通道：SSH ssh.github.com:443 直连+deploy key（代理 HTTPS 已弃用——断流两案见 decision-log #4）
 - 评分对账：深改 35+30+21=86 与 Task#45 口径精确吻合；改造卡编号 1-86 连续+绿款 34=120 闭合
 
 ## 已完成任务
