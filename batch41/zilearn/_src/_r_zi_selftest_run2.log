@@ -1,0 +1,46 @@
+F:\claudecode\projects\active\kids-games\batch41\zilearn\_src\_selftest.py:82: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  px = list(im.getdata())
+PASS | P1 verify title | VERIFY PASS 10/10
+PASS | P1 verify JSON pass==total | pass=10/10
+PASS | P1 50-flat audit (static20+gen30) all ok | static=20 gen=30
+PASS | P1 deep SPEC-recompute + antiLeak + rescue + calendar units | {'audit': True, 'deep': True, 'uiFlow': True, 'antiLeak': True, 'rescue': True, 'autoSolve': True, 'scriptBlocks': True, 'coverage': True, 'calendar': True}
+PASS | 2a start at flat=0 (ch1) | {'flat': 0, 'ch': 1, 'lv': 0, 'n': 5, 'step': 0, 'round': 0, 'misses': 0, 'done': False, 'won': False}
+PASS | 2a qi0 watch stage (5 chars, options hidden) | {'kind': 'watch', 'chars': ['天', '日', '上', '下', '晴'], 'step': 0}
+PASS | 2a flat0 real-mouse win: 7 taps, 0 miss, 3 stars | taps=7 misses=0
+PASS | 2a proceed to flat=1 | {'flat': 1, 'ch': 1, 'lv': 1, 'n': 5, 'step': 0, 'round': 0, 'misses': 0, 'done': False, 'won': False}
+PASS | 2a save 1-0 recorded (3 stars) | {'1-0': {'stars': 3, 'plays': 1}}
+PASS | 2a flat1 autoSolve taps=7 win (real uiPick path) | r={'done': True, 'taps': 7} next=2
+PASS | 2a flat2 autoSolve taps=7 win (real uiPick path) | r={'done': True, 'taps': 7} next=3
+PASS | 2a parent panel 识字进度 (已学15/今日新15/读句0) | 识字进度 已学汉字 15 字 今日新字 15 字 累计读句 0 句 ✕ 家长面板 · 识字小课堂 首次游玩 2026-09-17 最近游玩 2026-09-24 已完成关卡 3 关 累计星星 9 今日游玩 3 分钟 近期每日游玩（分钟） 09-24：3 声音：关 语音：关 今日多玩关数： 确定 今日已在基数上加 0 关
+PASS | 2b start at flat=13 (ch3, sentence era) | {'flat': 13, 'ch': 3, 'lv': 3, 'n': 5, 'step': 0, 'round': 0, 'misses': 0, 'done': False, 'won': False}
+PASS | 2b sentence quiz: ＿挖空+4 选项+题面不含目标字 | {'kind': 'sentence', 'sub': None, 'target': '字', 'display': '哥哥写＿，我看书', 'opts': ['字', '开', '文', '子'], 'step': 
+PASS | 2b flat13 real win (walk3+play4=7 taps) | walk=3 play=4
+PASS | 2b 累计读句=4（flat10-13 已过） | 识字进度 已学汉字 70 字 今日新字 5 字 累计读句 4 句 ✕ 家长面板 · 识字小课堂 首次游玩 2026-09-17 最近游玩 2026-09-24 已完成关卡 14 关 累计星星 42 今日游玩 1 分钟 近期每日游玩（分钟） 
+PASS | 2c start at flat=20 (first gen level) | {'flat': 20, 'ch': 5, 'lv': 0, 'n': 5, 'step': 0, 'round': 0, 'misses': 0, 'done': False, 'won': False}
+PASS | 2c gen watch introduces exactly 2 new chars | {'kind': 'watch', 'chars': ['一', '二'], 'step': 0}
+PASS | 2c flat20 autoSolve taps=7 win | {'done': True, 'taps': 7}
+PASS | 2d tutorial demo done → zi.tutSeen persisted | {'tutSeen': True}
+PASS | 2d tutorial turn ghost → correct option 
+PASS | 2d tutorial level win (7 taps, 0 miss=soft 生效) | taps=7 misses=0
+PASS | 2d tutorial level 1-0 saved | {'1-0': {'stars': 3, 'plays': 1}}
+PASS | 2e rescue 14s direction tier replays question voice (real clock) | [['q', ['zi_listen', 'zi_ch_mu']]]
+PASS | P3 vp 1280x800 overflowX==0 | ox=0
+PASS | P3 vp 1280x800 4 options ≥96 (portrait media query real) | n=4 optMin=118
+PASS | P3 vp 1280x800 stage/opts 物理分离 (gap>0) | sep=6
+PASS | P3 vp 1280x800 其他按钮触摸面 ≥64 | []
+PASS | P3 screenshot 1280x800 non-blank | PIL pixel stdev=16.6
+PASS | P3 vp 800x1180 overflowX==0 | ox=0
+PASS | P3 vp 800x1180 4 options ≥96 (portrait media query real) | n=4 optMin=104
+PASS | P3 vp 800x1180 stage/opts 物理分离 (gap>0) | sep=6
+PASS | P3 vp 800x1180 其他按钮触摸面 ≥64 | []
+PASS | P3 screenshot 800x1180 non-blank | PIL pixel stdev=16.2
+PASS | P4 fully offline (no http(s) at runtime) | []
+PASS | P4 zero pageerror across all scenarios | []
+PASS | P5 M1 seed 97→98 (engine only) → verify red | VERIFY FAIL (pageerror:0)
+PASS | P5 M2 ZI_DAY_NEW [2,3,4]→[6,6,6] → verify red | VERIFY FAIL (pageerror:0)
+PASS | P5 M3 review pick flat%len→[0] → verify red | VERIFY FAIL (pageerror:0)
+PASS | P5 M4 WRONG_CHAIN_WIN 300→100 (window < chain lower bound) → verify red | VERIFY FAIL (pageerror:0)
+PASS | P5 mutation hits ≥3 | hits=4
+
+==== SELFTEST 41/41 PASS ====
+EXIT=0

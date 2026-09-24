@@ -121,7 +121,8 @@
    "cir",
    "ins",
    "cbx",
-   "brk"
+   "brk",
+   "zilearn"
   ]
  },
  "core_day_end": {
@@ -246,7 +247,8 @@
    "cir",
    "ins",
    "cbx",
-   "brk"
+   "brk",
+   "zilearn"
   ]
  },
  "core_rest": {
@@ -371,7 +373,8 @@
    "cir",
    "ins",
    "cbx",
-   "brk"
+   "brk",
+   "zilearn"
   ]
  },
  "pipe_tut_watch": {
@@ -26631,6 +26634,1074 @@
   "text": "兔子说：我来试试",
   "games": [
    "teach"
+  ]
+ },
+ "zi_tut_watch": {
+  "text": "看！来认识新字啦",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_tut_turn": {
+  "text": "你来点一点",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_hint": {
+  "text": "想一想，再选一选",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_right": {
+  "text": "答对啦，真棒",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_wrong": {
+  "text": "不对哦，再想一想",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_listen": {
+  "text": "听一听，找一找",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_word": {
+  "text": "选一选",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_quiz": {
+  "text": "小测时间到",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_tian": {
+  "text": "天，天空的天",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ri": {
+  "text": "日，日出的日",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_shang": {
+  "text": "上，上学的上",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_xia": {
+  "text": "下，下雨的下",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_qing": {
+  "text": "晴，晴天的晴",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_yue": {
+  "text": "月，月亮的月",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_shui": {
+  "text": "水，喝水的水",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_huo": {
+  "text": "火，火车的火",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_shan": {
+  "text": "山，大山的山",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ren": {
+  "text": "人，大人的人",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_kou": {
+  "text": "口，开口的口",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_mu": {
+  "text": "木，木头的木",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_da": {
+  "text": "大，大人的大",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_xiao": {
+  "text": "小，大小的小",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_yun": {
+  "text": "云，白云的云",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_tian2": {
+  "text": "田，水田的田",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_shi": {
+  "text": "石，石头的石",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ma": {
+  "text": "马，小马的马",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_niao": {
+  "text": "鸟，小鸟的鸟",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_yu": {
+  "text": "鱼，小鱼的鱼",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_yu2": {
+  "text": "雨，下雨的雨",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_men": {
+  "text": "门，大门的门",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_shou": {
+  "text": "手，小手的手",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_li": {
+  "text": "力，力气的力",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_mao": {
+  "text": "毛，羊毛的毛",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_gou": {
+  "text": "狗，小狗的狗",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_mao2": {
+  "text": "猫，小猫的猫",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_niu": {
+  "text": "牛，小牛的牛",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_yang": {
+  "text": "羊，小羊的羊",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_chong": {
+  "text": "虫，小虫的虫",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_mu2": {
+  "text": "目，耳目的目",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_er": {
+  "text": "耳，耳朵的耳",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_zu": {
+  "text": "足，手足的足",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_tou": {
+  "text": "头，头上的头",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ya": {
+  "text": "牙，牙齿的牙",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ba": {
+  "text": "爸，爸爸的爸",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ma2": {
+  "text": "妈，妈妈的妈",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ye": {
+  "text": "爷，爷爷的爷",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_nai": {
+  "text": "奶，奶奶的奶",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_jia": {
+  "text": "家，大家的家",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ge": {
+  "text": "哥，哥哥的哥",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_jie": {
+  "text": "姐，姐姐的姐",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_di": {
+  "text": "弟，弟弟的弟",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_mei": {
+  "text": "妹，妹妹的妹",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_wo": {
+  "text": "我，我们的我",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_zhu": {
+  "text": "竹，竹子的竹",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_cao": {
+  "text": "草，小草的草",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_hua": {
+  "text": "花，小花的花",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_mi": {
+  "text": "米，大米的米",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_he": {
+  "text": "禾，禾苗的禾",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_chi": {
+  "text": "吃，吃饭的吃",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_he2": {
+  "text": "喝，喝水的喝",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_kan": {
+  "text": "看，看见的看",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ting": {
+  "text": "听，听话的听",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_shuo": {
+  "text": "说，说话的说",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_zou": {
+  "text": "走，走路的走",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_pao": {
+  "text": "跑，跑步的跑",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_zuo": {
+  "text": "坐，坐下的坐",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_li2": {
+  "text": "立，起立的立",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_fei": {
+  "text": "飞，飞机的飞",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_du": {
+  "text": "读，读书的读",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_xie": {
+  "text": "写，写字的写",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_hua2": {
+  "text": "画，画画的画",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_shu": {
+  "text": "书，看书的书",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_zi": {
+  "text": "字，写字的字",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_kai": {
+  "text": "开，开门的开",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_guan": {
+  "text": "关，关门的关",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_lai": {
+  "text": "来，来了的来",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_qu": {
+  "text": "去，回去的去",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_hui": {
+  "text": "回，回家的回",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_wan": {
+  "text": "玩，玩具的玩",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_xiao2": {
+  "text": "笑，大笑的笑",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ku": {
+  "text": "哭，大哭的哭",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_shui2": {
+  "text": "睡，睡觉的睡",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_meng": {
+  "text": "梦，做梦的梦",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ming": {
+  "text": "明，明天的明",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_lin": {
+  "text": "林，树林的林",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_sen": {
+  "text": "森，森林的森",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_cong": {
+  "text": "从，从前的从",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_zhong": {
+  "text": "众，大众的众",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_qing2": {
+  "text": "清，清水的清",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_he3": {
+  "text": "河，小河的河",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_hu": {
+  "text": "湖，湖水的湖",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_xing": {
+  "text": "星，星星的星",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_liang": {
+  "text": "亮，月亮的亮",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_qing3": {
+  "text": "请，请坐的请",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ta": {
+  "text": "他，他们的他",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_nan": {
+  "text": "男，男孩的男",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_nv": {
+  "text": "女，女孩的女",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_di2": {
+  "text": "地，大地的地",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_qing4": {
+  "text": "情，心情的情",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ta2": {
+  "text": "她，她们的她",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_guang": {
+  "text": "光，月光的光",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_zao": {
+  "text": "早，早上的早",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_wan2": {
+  "text": "晚，晚上的晚",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_lao": {
+  "text": "老，老师的老",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_shi2": {
+  "text": "师，老师的师",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_xue": {
+  "text": "学，上学的学",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_xiao3": {
+  "text": "校，学校的校",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_hai": {
+  "text": "孩，孩子的孩",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_yi": {
+  "text": "一，一起的一",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_er2": {
+  "text": "二，二十的二",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_san": {
+  "text": "三，三个的三",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_si": {
+  "text": "四，四个的四",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_wu": {
+  "text": "五，五个的五",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_liu": {
+  "text": "六，六个的六",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_qi": {
+  "text": "七，七个的七",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ba2": {
+  "text": "八，八个的八",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_jiu": {
+  "text": "九，九个的九",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_shi3": {
+  "text": "十，十个的十",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_li3": {
+  "text": "里，里面的里",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_wai": {
+  "text": "外，外面的外",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_qian": {
+  "text": "前，前面的前",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_hou": {
+  "text": "后，后面的后",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_zhong2": {
+  "text": "中，中间的中",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_feng": {
+  "text": "风，大风的风",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_xue2": {
+  "text": "雪，下雪的雪",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_hai2": {
+  "text": "海，大海的海",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_chun": {
+  "text": "春，春天的春",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_xia2": {
+  "text": "夏，夏天的夏",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_qiu": {
+  "text": "秋，秋天的秋",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_dong": {
+  "text": "冬，冬天的冬",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ji": {
+  "text": "鸡，小鸡的鸡",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ya2": {
+  "text": "鸭，鸭子的鸭",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_tu": {
+  "text": "兔，兔子的兔",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_xiang": {
+  "text": "象，大象的象",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_long": {
+  "text": "龙，小龙的龙",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_er3": {
+  "text": "儿，儿子的儿",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_you": {
+  "text": "友，朋友的友",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_ming2": {
+  "text": "名，名字的名",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_wen": {
+  "text": "问，问好的问",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_da2": {
+  "text": "答，回答的答",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_zhao": {
+  "text": "找，找到的找",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_gei": {
+  "text": "给，给你的给",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_song": {
+  "text": "送，送花的送",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_na": {
+  "text": "拿，拿走的拿",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_bang": {
+  "text": "帮，帮忙的帮",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_che": {
+  "text": "车，火车的车",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_yi2": {
+  "text": "衣，衣服的衣",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_fan": {
+  "text": "饭，吃饭的饭",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_cai": {
+  "text": "菜，青菜的菜",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_deng": {
+  "text": "灯，电灯的灯",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_gao": {
+  "text": "高，高大的高",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_chang": {
+  "text": "长，长江的长",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_kuai": {
+  "text": "快，快跑的快",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_duo": {
+  "text": "多，多少的多",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_jin": {
+  "text": "今，今天的今",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_nian": {
+  "text": "年，今年的年",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_chuang": {
+  "text": "床，上床的床",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_ch_san2": {
+  "text": "伞，雨伞的伞",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_0": {
+  "text": "你是我的，我是你的",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_1": {
+  "text": "天上有日就是晴天",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_2": {
+  "text": "天上有日，山上有火",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_3": {
+  "text": "天上有云，山下有水",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_4": {
+  "text": "山上有小马和小鸟",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_5": {
+  "text": "下雨啦，天上有云",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_6": {
+  "text": "小牛和小马在山上",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_7": {
+  "text": "大手和小手",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_8": {
+  "text": "我家有爸和妈",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_9": {
+  "text": "哥哥和我在家",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_10": {
+  "text": "山上有花有草",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_11": {
+  "text": "我看小鱼喝水",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_12": {
+  "text": "小鸟飞，小马跑",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_13": {
+  "text": "哥哥写字，我看书",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_14": {
+  "text": "爸爸回家，我开门",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_15": {
+  "text": "我和妹妹在家玩",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_16": {
+  "text": "云在天上飞",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_17": {
+  "text": "山下有小河",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_18": {
+  "text": "他的马好大",
+  "games": [
+   "zilearn"
+  ]
+ },
+ "zi_st_19": {
+  "text": "晚上，天上有星星",
+  "games": [
+   "zilearn"
   ]
  },
  "rd_s_c1s0_carrot_red": {

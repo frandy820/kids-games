@@ -1,0 +1,5463 @@
+{
+ "meta": {
+  "version": 1,
+  "total": 150,
+  "staticCount": 100
+ },
+ "radicals_note": "子集铁律：句子题仅用\"关前已学字+虚词白名单（的了是我你在他有和就不啊吧呀嗯啦好）\"，组词题词面只显示目标字、词音走整词 clip 不受子集约束。py=无调拼音+同音序号（首见无后缀，同无调拼音按全表首见序累加，ü作v），clip key=zi_ch_<py> 全表唯一。pic=true 的字与 batch8 象形字款 40 字 SVG 字库对照（工程直接复用 SVG），glyph=讲给孩子的字理解说（<=40字）。distract=干扰字（形近优先，其次同音/同题，可含表外字仅作选项显示）；干扰与题面无字形包含关系。复习表：1关隔=每章lv2/3/4取上一关3字；3关隔=每章lv3/4取前3关2字；7关隔=ch2/3/4章末取前7关2字（reviewSchedule 列适用关，各关实际复习字已确定性写入 level.review）。",
+ "chapters": [
+  {
+   "ch": 1,
+   "name": "天地山水",
+   "theme": "自然起步：天地日月风雨山石，含已会字热身校准",
+   "levels": [
+    {
+     "lv": 0,
+     "flat": 0,
+     "newChars": [
+      "天",
+      "日",
+      "上",
+      "下",
+      "晴"
+     ],
+     "review": [],
+     "sentence": {
+      "text": "你是我的，我是你的",
+      "charsUsed": [
+       "你",
+       "我",
+       "是",
+       "的"
+      ]
+     }
+    },
+    {
+     "lv": 1,
+     "flat": 1,
+     "newChars": [
+      "月",
+      "水",
+      "火",
+      "山",
+      "人"
+     ],
+     "review": [],
+     "sentence": {
+      "text": "天上有日就是晴天",
+      "charsUsed": [
+       "上",
+       "天",
+       "就",
+       "日",
+       "是",
+       "晴",
+       "有"
+      ]
+     }
+    },
+    {
+     "lv": 2,
+     "flat": 2,
+     "newChars": [
+      "口",
+      "木",
+      "大",
+      "小",
+      "云"
+     ],
+     "review": [
+      "月",
+      "水",
+      "山"
+     ],
+     "sentence": {
+      "text": "天上有日，山上有火",
+      "charsUsed": [
+       "上",
+       "天",
+       "山",
+       "日",
+       "有",
+       "火"
+      ]
+     }
+    },
+    {
+     "lv": 3,
+     "flat": 3,
+     "newChars": [
+      "田",
+      "石",
+      "马",
+      "鸟",
+      "鱼"
+     ],
+     "review": [
+      "木",
+      "大",
+      "云",
+      "天",
+      "日"
+     ],
+     "sentence": {
+      "text": "天上有云，山下有水",
+      "charsUsed": [
+       "上",
+       "下",
+       "云",
+       "天",
+       "山",
+       "有",
+       "水"
+      ]
+     }
+    },
+    {
+     "lv": 4,
+     "flat": 4,
+     "newChars": [
+      "雨",
+      "门",
+      "手",
+      "力",
+      "毛"
+     ],
+     "review": [
+      "马",
+      "鸟",
+      "鱼",
+      "水",
+      "火"
+     ],
+     "sentence": {
+      "text": "山上有小马和小鸟",
+      "charsUsed": [
+       "上",
+       "和",
+       "小",
+       "山",
+       "有",
+       "马",
+       "鸟"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "ch": 2,
+   "name": "我的家",
+   "theme": "动物身体家庭：猫狗牛羊/耳目手足/爸妈哥妹/花草竹禾",
+   "levels": [
+    {
+     "lv": 0,
+     "flat": 5,
+     "newChars": [
+      "狗",
+      "猫",
+      "牛",
+      "羊",
+      "虫"
+     ],
+     "review": [],
+     "sentence": {
+      "text": "下雨啦，天上有云",
+      "charsUsed": [
+       "上",
+       "下",
+       "云",
+       "啦",
+       "天",
+       "有",
+       "雨"
+      ]
+     }
+    },
+    {
+     "lv": 1,
+     "flat": 6,
+     "newChars": [
+      "目",
+      "耳",
+      "足",
+      "头",
+      "牙"
+     ],
+     "review": [],
+     "sentence": {
+      "text": "小牛和小马在山上",
+      "charsUsed": [
+       "上",
+       "和",
+       "在",
+       "小",
+       "山",
+       "牛",
+       "马"
+      ]
+     }
+    },
+    {
+     "lv": 2,
+     "flat": 7,
+     "newChars": [
+      "爸",
+      "妈",
+      "爷",
+      "奶",
+      "家"
+     ],
+     "review": [
+      "目",
+      "耳",
+      "头"
+     ],
+     "sentence": {
+      "text": "大手和小手",
+      "charsUsed": [
+       "和",
+       "大",
+       "小",
+       "手"
+      ]
+     }
+    },
+    {
+     "lv": 3,
+     "flat": 8,
+     "newChars": [
+      "哥",
+      "姐",
+      "弟",
+      "妹",
+      "我"
+     ],
+     "review": [
+      "爸",
+      "妈",
+      "家",
+      "牛",
+      "羊"
+     ],
+     "sentence": {
+      "text": "我家有爸和妈",
+      "charsUsed": [
+       "和",
+       "妈",
+       "家",
+       "我",
+       "有",
+       "爸"
+      ]
+     }
+    },
+    {
+     "lv": 4,
+     "flat": 9,
+     "newChars": [
+      "竹",
+      "草",
+      "花",
+      "米",
+      "禾"
+     ],
+     "review": [
+      "哥",
+      "弟",
+      "我",
+      "足",
+      "牙",
+      "口",
+      "小"
+     ],
+     "sentence": {
+      "text": "哥哥和我在家",
+      "charsUsed": [
+       "和",
+       "哥",
+       "在",
+       "家",
+       "我"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "ch": 3,
+   "name": "吃喝玩乐",
+   "theme": "动作生活：吃喝看听说/走跑坐立飞/读写画书字/开关来去/玩睡梦",
+   "levels": [
+    {
+     "lv": 0,
+     "flat": 10,
+     "newChars": [
+      "吃",
+      "喝",
+      "看",
+      "听",
+      "说"
+     ],
+     "review": [],
+     "sentence": {
+      "text": "山上有花有草",
+      "charsUsed": [
+       "上",
+       "山",
+       "有",
+       "花",
+       "草"
+      ]
+     }
+    },
+    {
+     "lv": 1,
+     "flat": 11,
+     "newChars": [
+      "走",
+      "跑",
+      "坐",
+      "立",
+      "飞"
+     ],
+     "review": [],
+     "sentence": {
+      "text": "我看小鱼喝水",
+      "charsUsed": [
+       "喝",
+       "小",
+       "我",
+       "水",
+       "看",
+       "鱼"
+      ]
+     }
+    },
+    {
+     "lv": 2,
+     "flat": 12,
+     "newChars": [
+      "读",
+      "写",
+      "画",
+      "书",
+      "字"
+     ],
+     "review": [
+      "走",
+      "坐",
+      "飞"
+     ],
+     "sentence": {
+      "text": "小鸟飞，小马跑",
+      "charsUsed": [
+       "小",
+       "跑",
+       "飞",
+       "马",
+       "鸟"
+      ]
+     }
+    },
+    {
+     "lv": 3,
+     "flat": 13,
+     "newChars": [
+      "开",
+      "关",
+      "来",
+      "去",
+      "回"
+     ],
+     "review": [
+      "读",
+      "书",
+      "字",
+      "吃",
+      "喝"
+     ],
+     "sentence": {
+      "text": "哥哥写字，我看书",
+      "charsUsed": [
+       "书",
+       "写",
+       "哥",
+       "字",
+       "我",
+       "看"
+      ]
+     }
+    },
+    {
+     "lv": 4,
+     "flat": 14,
+     "newChars": [
+      "玩",
+      "笑",
+      "哭",
+      "睡",
+      "梦"
+     ],
+     "review": [
+      "开",
+      "来",
+      "去",
+      "跑",
+      "立",
+      "爷",
+      "奶"
+     ],
+     "sentence": {
+      "text": "爸爸回家，我开门",
+      "charsUsed": [
+       "回",
+       "家",
+       "开",
+       "我",
+       "爸",
+       "门"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "ch": 4,
+   "name": "字的家族",
+   "theme": "进阶组字：木族会意+青族拆关分入(清/请/情各关一字)+也族拆关(他地/她)+学校生活收尾，全关互不同音",
+   "levels": [
+    {
+     "lv": 0,
+     "flat": 15,
+     "newChars": [
+      "明",
+      "林",
+      "森",
+      "从",
+      "众"
+     ],
+     "review": [],
+     "sentence": {
+      "text": "我和妹妹在家玩",
+      "charsUsed": [
+       "和",
+       "在",
+       "妹",
+       "家",
+       "我",
+       "玩"
+      ]
+     }
+    },
+    {
+     "lv": 1,
+     "flat": 16,
+     "newChars": [
+      "清",
+      "河",
+      "湖",
+      "星",
+      "亮"
+     ],
+     "review": [],
+     "sentence": {
+      "text": "云在天上飞",
+      "charsUsed": [
+       "上",
+       "云",
+       "在",
+       "天",
+       "飞"
+      ]
+     }
+    },
+    {
+     "lv": 2,
+     "flat": 17,
+     "newChars": [
+      "请",
+      "他",
+      "男",
+      "女",
+      "地"
+     ],
+     "review": [
+      "清",
+      "河",
+      "湖"
+     ],
+     "sentence": {
+      "text": "山下有小河",
+      "charsUsed": [
+       "下",
+       "小",
+       "山",
+       "有",
+       "河"
+      ]
+     }
+    },
+    {
+     "lv": 3,
+     "flat": 18,
+     "newChars": [
+      "情",
+      "她",
+      "光",
+      "早",
+      "晚"
+     ],
+     "review": [
+      "他",
+      "男",
+      "女",
+      "明",
+      "林"
+     ],
+     "sentence": {
+      "text": "他的马好大",
+      "charsUsed": [
+       "他",
+       "大",
+       "好",
+       "的",
+       "马"
+      ]
+     }
+    },
+    {
+     "lv": 4,
+     "flat": 19,
+     "newChars": [
+      "老",
+      "师",
+      "学",
+      "校",
+      "孩"
+     ],
+     "review": [
+      "光",
+      "早",
+      "晚",
+      "星",
+      "亮",
+      "写",
+      "画"
+     ],
+     "sentence": {
+      "text": "晚上，天上有星星",
+      "charsUsed": [
+       "上",
+       "天",
+       "星",
+       "晚",
+       "有"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "chars": {
+  "天": {
+   "py": "tian",
+   "pyFull": "tiān",
+   "chNo": 1,
+   "words": [
+    [
+     "天空",
+     "tiān kōng"
+    ],
+    [
+     "白天",
+     "bái tiān"
+    ],
+    [
+     "明天",
+     "míng tiān"
+    ]
+   ],
+   "pic": true,
+   "glyph": "大字头顶加一横，头顶上面就是天空",
+   "known": true,
+   "distract": [
+    [
+     "大",
+     "形近"
+    ],
+    [
+     "太",
+     "形近"
+    ]
+   ]
+  },
+  "日": {
+   "py": "ri",
+   "pyFull": "rì",
+   "chNo": 1,
+   "words": [
+    [
+     "日出",
+     "rì chū"
+    ],
+    [
+     "生日",
+     "shēng rì"
+    ],
+    [
+     "日子",
+     "rì zi"
+    ]
+   ],
+   "pic": true,
+   "glyph": "方方一块中间一点，圆圆的太阳",
+   "known": true,
+   "distract": [
+    [
+     "目",
+     "形近"
+    ],
+    [
+     "白",
+     "形近"
+    ]
+   ]
+  },
+  "上": {
+   "py": "shang",
+   "pyFull": "shàng",
+   "chNo": 1,
+   "words": [
+    [
+     "上学",
+     "shàng xué"
+    ],
+    [
+     "早上",
+     "zǎo shang"
+    ],
+    [
+     "上面",
+     "shàng miàn"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": true,
+   "distract": [
+    [
+     "下",
+     "同题"
+    ],
+    [
+     "卡",
+     "形近"
+    ]
+   ]
+  },
+  "下": {
+   "py": "xia",
+   "pyFull": "xià",
+   "chNo": 1,
+   "words": [
+    [
+     "下雨",
+     "xià yǔ"
+    ],
+    [
+     "下山",
+     "xià shān"
+    ],
+    [
+     "下面",
+     "xià miàn"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": true,
+   "distract": [
+    [
+     "上",
+     "同题"
+    ],
+    [
+     "卡",
+     "形近"
+    ]
+   ]
+  },
+  "晴": {
+   "py": "qing",
+   "pyFull": "qíng",
+   "chNo": 1,
+   "words": [
+    [
+     "晴天",
+     "qíng tiān"
+    ],
+    [
+     "放晴",
+     "fàng qíng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": true,
+   "distract": [
+    [
+     "清",
+     "形近"
+    ],
+    [
+     "情",
+     "形近"
+    ]
+   ]
+  },
+  "月": {
+   "py": "yue",
+   "pyFull": "yuè",
+   "chNo": 1,
+   "words": [
+    [
+     "月亮",
+     "yuè liang"
+    ],
+    [
+     "月光",
+     "yuè guāng"
+    ],
+    [
+     "一月",
+     "yī yuè"
+    ]
+   ],
+   "pic": true,
+   "glyph": "弯弯的像小船，天上的月亮",
+   "known": true,
+   "distract": [
+    [
+     "日",
+     "形近"
+    ],
+    [
+     "朋",
+     "形近"
+    ]
+   ]
+  },
+  "水": {
+   "py": "shui",
+   "pyFull": "shuǐ",
+   "chNo": 1,
+   "words": [
+    [
+     "喝水",
+     "hē shuǐ"
+    ],
+    [
+     "水果",
+     "shuǐ guǒ"
+    ],
+    [
+     "河水",
+     "hé shuǐ"
+    ]
+   ],
+   "pic": true,
+   "glyph": "中间一条大河，两边溅起小水花",
+   "known": true,
+   "distract": [
+    [
+     "火",
+     "同题"
+    ],
+    [
+     "永",
+     "形近"
+    ]
+   ]
+  },
+  "火": {
+   "py": "huo",
+   "pyFull": "huǒ",
+   "chNo": 1,
+   "words": [
+    [
+     "火车",
+     "huǒ chē"
+    ],
+    [
+     "大火",
+     "dà huǒ"
+    ],
+    [
+     "火山",
+     "huǒ shān"
+    ]
+   ],
+   "pic": true,
+   "glyph": "像跳动的火苗，中间是火心",
+   "known": true,
+   "distract": [
+    [
+     "水",
+     "同题"
+    ],
+    [
+     "灭",
+     "形近"
+    ]
+   ]
+  },
+  "山": {
+   "py": "shan",
+   "pyFull": "shān",
+   "chNo": 1,
+   "words": [
+    [
+     "大山",
+     "dà shān"
+    ],
+    [
+     "山上",
+     "shān shàng"
+    ],
+    [
+     "火山",
+     "huǒ shān"
+    ]
+   ],
+   "pic": true,
+   "glyph": "三个尖尖的山峰站在大地上",
+   "known": true,
+   "distract": [
+    [
+     "出",
+     "形近"
+    ],
+    [
+     "石",
+     "同题"
+    ]
+   ]
+  },
+  "人": {
+   "py": "ren",
+   "pyFull": "rén",
+   "chNo": 1,
+   "words": [
+    [
+     "大人",
+     "dà rén"
+    ],
+    [
+     "人口",
+     "rén kǒu"
+    ],
+    [
+     "人们",
+     "rén men"
+    ]
+   ],
+   "pic": true,
+   "glyph": "两条腿站着走路，就是我们人",
+   "known": true,
+   "distract": [
+    [
+     "入",
+     "形近"
+    ],
+    [
+     "大",
+     "形近"
+    ]
+   ]
+  },
+  "口": {
+   "py": "kou",
+   "pyFull": "kǒu",
+   "chNo": 1,
+   "words": [
+    [
+     "开口",
+     "kāi kǒu"
+    ],
+    [
+     "门口",
+     "mén kǒu"
+    ],
+    [
+     "口水",
+     "kǒu shuǐ"
+    ]
+   ],
+   "pic": true,
+   "glyph": "张开的大嘴巴，方方一个口",
+   "known": false,
+   "distract": [
+    [
+     "日",
+     "形近"
+    ],
+    [
+     "田",
+     "形近"
+    ]
+   ]
+  },
+  "木": {
+   "py": "mu",
+   "pyFull": "mù",
+   "chNo": 1,
+   "words": [
+    [
+     "木头",
+     "mù tou"
+    ],
+    [
+     "树木",
+     "shù mù"
+    ],
+    [
+     "木马",
+     "mù mǎ"
+    ]
+   ],
+   "pic": true,
+   "glyph": "上长枝下生根，一棵小树是木",
+   "known": false,
+   "distract": [
+    [
+     "本",
+     "形近"
+    ],
+    [
+     "禾",
+     "形近"
+    ]
+   ]
+  },
+  "大": {
+   "py": "da",
+   "pyFull": "dà",
+   "chNo": 1,
+   "words": [
+    [
+     "大人",
+     "dà rén"
+    ],
+    [
+     "大小",
+     "dà xiǎo"
+    ],
+    [
+     "大家",
+     "dà jiā"
+    ]
+   ],
+   "pic": true,
+   "glyph": "张开手臂叉开腿，我就是大",
+   "known": false,
+   "distract": [
+    [
+     "天",
+     "形近"
+    ],
+    [
+     "太",
+     "形近"
+    ],
+    [
+     "小",
+     "同题"
+    ]
+   ]
+  },
+  "小": {
+   "py": "xiao",
+   "pyFull": "xiǎo",
+   "chNo": 1,
+   "words": [
+    [
+     "大小",
+     "dà xiǎo"
+    ],
+    [
+     "小雨",
+     "xiǎo yǔ"
+    ],
+    [
+     "小鸟",
+     "xiǎo niǎo"
+    ]
+   ],
+   "pic": true,
+   "glyph": "中间小竖钩，两边小点点，小小的",
+   "known": false,
+   "distract": [
+    [
+     "少",
+     "形近"
+    ],
+    [
+     "大",
+     "同题"
+    ]
+   ]
+  },
+  "云": {
+   "py": "yun",
+   "pyFull": "yún",
+   "chNo": 1,
+   "words": [
+    [
+     "白云",
+     "bái yún"
+    ],
+    [
+     "乌云",
+     "wū yún"
+    ],
+    [
+     "云朵",
+     "yún duǒ"
+    ]
+   ],
+   "pic": true,
+   "glyph": "天上一卷一卷飘着的，就是云",
+   "known": false,
+   "distract": [
+    [
+     "去",
+     "形近"
+    ],
+    [
+     "天",
+     "同题"
+    ]
+   ]
+  },
+  "田": {
+   "py": "tian2",
+   "pyFull": "tián",
+   "chNo": 1,
+   "words": [
+    [
+     "水田",
+     "shuǐ tián"
+    ],
+    [
+     "田里",
+     "tián lǐ"
+    ],
+    [
+     "种田",
+     "zhòng tián"
+    ]
+   ],
+   "pic": true,
+   "glyph": "方框画十字，一块块小农田",
+   "known": false,
+   "distract": [
+    [
+     "由",
+     "形近"
+    ],
+    [
+     "甲",
+     "形近"
+    ],
+    [
+     "日",
+     "形近"
+    ]
+   ]
+  },
+  "石": {
+   "py": "shi",
+   "pyFull": "shí",
+   "chNo": 1,
+   "words": [
+    [
+     "石头",
+     "shí tou"
+    ],
+    [
+     "石子",
+     "shí zǐ"
+    ],
+    [
+     "石桥",
+     "shí qiáo"
+    ]
+   ],
+   "pic": true,
+   "glyph": "山崖下吊着一块大石头",
+   "known": false,
+   "distract": [
+    [
+     "右",
+     "形近"
+    ],
+    [
+     "十",
+     "同音"
+    ]
+   ]
+  },
+  "马": {
+   "py": "ma",
+   "pyFull": "mǎ",
+   "chNo": 1,
+   "words": [
+    [
+     "小马",
+     "xiǎo mǎ"
+    ],
+    [
+     "马车",
+     "mǎ chē"
+    ],
+    [
+     "马上",
+     "mǎ shàng"
+    ]
+   ],
+   "pic": true,
+   "glyph": "有头有鬃有四腿，一匹小马",
+   "known": false,
+   "distract": [
+    [
+     "鸟",
+     "形近"
+    ],
+    [
+     "妈",
+     "同音"
+    ]
+   ]
+  },
+  "鸟": {
+   "py": "niao",
+   "pyFull": "niǎo",
+   "chNo": 1,
+   "words": [
+    [
+     "小鸟",
+     "xiǎo niǎo"
+    ],
+    [
+     "鸟窝",
+     "niǎo wō"
+    ],
+    [
+     "飞鸟",
+     "fēi niǎo"
+    ]
+   ],
+   "pic": true,
+   "glyph": "圆脑袋尖嘴巴，还有小爪子",
+   "known": false,
+   "distract": [
+    [
+     "乌",
+     "形近"
+    ],
+    [
+     "马",
+     "形近"
+    ]
+   ]
+  },
+  "鱼": {
+   "py": "yu",
+   "pyFull": "yú",
+   "chNo": 1,
+   "words": [
+    [
+     "小鱼",
+     "xiǎo yú"
+    ],
+    [
+     "钓鱼",
+     "diào yú"
+    ],
+    [
+     "鱼儿",
+     "yú ér"
+    ]
+   ],
+   "pic": true,
+   "glyph": "尖头摆尾巴，水里游的就是鱼",
+   "known": false,
+   "distract": [
+    [
+     "雨",
+     "同音"
+    ],
+    [
+     "龟",
+     "形近"
+    ]
+   ]
+  },
+  "雨": {
+   "py": "yu2",
+   "pyFull": "yǔ",
+   "chNo": 1,
+   "words": [
+    [
+     "下雨",
+     "xià yǔ"
+    ],
+    [
+     "雨点",
+     "yǔ diǎn"
+    ],
+    [
+     "雨水",
+     "yǔ shuǐ"
+    ]
+   ],
+   "pic": true,
+   "glyph": "天上落下小水点，滴滴答答下雨",
+   "known": false,
+   "distract": [
+    [
+     "鱼",
+     "同音"
+    ],
+    [
+     "雪",
+     "同题"
+    ]
+   ]
+  },
+  "门": {
+   "py": "men",
+   "pyFull": "mén",
+   "chNo": 1,
+   "words": [
+    [
+     "大门",
+     "dà mén"
+    ],
+    [
+     "开门",
+     "kāi mén"
+    ],
+    [
+     "门口",
+     "mén kǒu"
+    ]
+   ],
+   "pic": true,
+   "glyph": "两扇门板关起来，就是大门",
+   "known": false,
+   "distract": [
+    [
+     "们",
+     "形近"
+    ],
+    [
+     "问",
+     "形近"
+    ]
+   ]
+  },
+  "手": {
+   "py": "shou",
+   "pyFull": "shǒu",
+   "chNo": 1,
+   "words": [
+    [
+     "小手",
+     "xiǎo shǒu"
+    ],
+    [
+     "洗手",
+     "xǐ shǒu"
+    ],
+    [
+     "拍手",
+     "pāi shǒu"
+    ]
+   ],
+   "pic": true,
+   "glyph": "五根手指头，张开的小手",
+   "known": false,
+   "distract": [
+    [
+     "毛",
+     "形近"
+    ],
+    [
+     "足",
+     "同题"
+    ]
+   ]
+  },
+  "力": {
+   "py": "li",
+   "pyFull": "lì",
+   "chNo": 1,
+   "words": [
+    [
+     "力气",
+     "lì qi"
+    ],
+    [
+     "用力",
+     "yòng lì"
+    ],
+    [
+     "大力士",
+     "dà lì shì"
+    ]
+   ],
+   "pic": true,
+   "glyph": "胳膊一弯，使劲用力气",
+   "known": false,
+   "distract": [
+    [
+     "刀",
+     "形近"
+    ],
+    [
+     "立",
+     "同音"
+    ]
+   ]
+  },
+  "毛": {
+   "py": "mao",
+   "pyFull": "máo",
+   "chNo": 1,
+   "words": [
+    [
+     "羊毛",
+     "yáng máo"
+    ],
+    [
+     "毛巾",
+     "máo jīn"
+    ],
+    [
+     "毛衣",
+     "máo yī"
+    ]
+   ],
+   "pic": true,
+   "glyph": "弯弯的细细的，软软的毛",
+   "known": false,
+   "distract": [
+    [
+     "手",
+     "形近"
+    ],
+    [
+     "猫",
+     "同音"
+    ]
+   ]
+  },
+  "狗": {
+   "py": "gou",
+   "pyFull": "gǒu",
+   "chNo": 2,
+   "words": [
+    [
+     "小狗",
+     "xiǎo gǒu"
+    ],
+    [
+     "狗窝",
+     "gǒu wō"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "猫",
+     "同题"
+    ],
+    [
+     "羊",
+     "同题"
+    ]
+   ]
+  },
+  "猫": {
+   "py": "mao2",
+   "pyFull": "māo",
+   "chNo": 2,
+   "words": [
+    [
+     "小猫",
+     "xiǎo māo"
+    ],
+    [
+     "花猫",
+     "huā māo"
+    ],
+    [
+     "猫叫",
+     "māo jiào"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "狗",
+     "同题"
+    ],
+    [
+     "毛",
+     "同音"
+    ]
+   ]
+  },
+  "牛": {
+   "py": "niu",
+   "pyFull": "niú",
+   "chNo": 2,
+   "words": [
+    [
+     "小牛",
+     "xiǎo niú"
+    ],
+    [
+     "牛奶",
+     "niú nǎi"
+    ],
+    [
+     "老牛",
+     "lǎo niú"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "午",
+     "形近"
+    ],
+    [
+     "羊",
+     "同题"
+    ]
+   ]
+  },
+  "羊": {
+   "py": "yang",
+   "pyFull": "yáng",
+   "chNo": 2,
+   "words": [
+    [
+     "小羊",
+     "xiǎo yáng"
+    ],
+    [
+     "山羊",
+     "shān yáng"
+    ],
+    [
+     "羊毛",
+     "yáng máo"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "牛",
+     "同题"
+    ],
+    [
+     "半",
+     "形近"
+    ]
+   ]
+  },
+  "虫": {
+   "py": "chong",
+   "pyFull": "chóng",
+   "chNo": 2,
+   "words": [
+    [
+     "小虫",
+     "xiǎo chóng"
+    ],
+    [
+     "虫子",
+     "chóng zi"
+    ],
+    [
+     "毛毛虫",
+     "máo máo chóng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "中",
+     "形近"
+    ],
+    [
+     "鱼",
+     "同题"
+    ]
+   ]
+  },
+  "目": {
+   "py": "mu2",
+   "pyFull": "mù",
+   "chNo": 2,
+   "words": [
+    [
+     "耳目",
+     "ěr mù"
+    ],
+    [
+     "目光",
+     "mù guāng"
+    ],
+    [
+     "节目",
+     "jié mù"
+    ]
+   ],
+   "pic": true,
+   "glyph": "眼睛长长的，中间圆圆瞳孔",
+   "known": false,
+   "distract": [
+    [
+     "日",
+     "形近"
+    ],
+    [
+     "木",
+     "同音"
+    ]
+   ]
+  },
+  "耳": {
+   "py": "er",
+   "pyFull": "ěr",
+   "chNo": 2,
+   "words": [
+    [
+     "耳朵",
+     "ěr duo"
+    ],
+    [
+     "耳机",
+     "ěr jī"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "目",
+     "同题"
+    ],
+    [
+     "二",
+     "同音"
+    ]
+   ]
+  },
+  "足": {
+   "py": "zu",
+   "pyFull": "zú",
+   "chNo": 2,
+   "words": [
+    [
+     "手足",
+     "shǒu zú"
+    ],
+    [
+     "远足",
+     "yuǎn zú"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "走",
+     "形近"
+    ],
+    [
+     "手",
+     "同题"
+    ]
+   ]
+  },
+  "头": {
+   "py": "tou",
+   "pyFull": "tóu",
+   "chNo": 2,
+   "words": [
+    [
+     "头上",
+     "tóu shàng"
+    ],
+    [
+     "点头",
+     "diǎn tóu"
+    ],
+    [
+     "大头",
+     "dà tóu"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "买",
+     "形近"
+    ],
+    [
+     "发",
+     "同题"
+    ]
+   ]
+  },
+  "牙": {
+   "py": "ya",
+   "pyFull": "yá",
+   "chNo": 2,
+   "words": [
+    [
+     "牙齿",
+     "yá chǐ"
+    ],
+    [
+     "刷牙",
+     "shuā yá"
+    ],
+    [
+     "门牙",
+     "mén yá"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "耳",
+     "同题"
+    ],
+    [
+     "芽",
+     "形近"
+    ]
+   ]
+  },
+  "爸": {
+   "py": "ba",
+   "pyFull": "bà",
+   "chNo": 2,
+   "words": [
+    [
+     "爸爸",
+     "bà ba"
+    ],
+    [
+     "老爸",
+     "lǎo bà"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "妈",
+     "同题"
+    ],
+    [
+     "爷",
+     "同题"
+    ]
+   ]
+  },
+  "妈": {
+   "py": "ma2",
+   "pyFull": "mā",
+   "chNo": 2,
+   "words": [
+    [
+     "妈妈",
+     "mā ma"
+    ],
+    [
+     "大妈",
+     "dà mā"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "马",
+     "形近"
+    ],
+    [
+     "爸",
+     "同题"
+    ]
+   ]
+  },
+  "爷": {
+   "py": "ye",
+   "pyFull": "yé",
+   "chNo": 2,
+   "words": [
+    [
+     "爷爷",
+     "yé ye"
+    ],
+    [
+     "老爷",
+     "lǎo yé"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "爸",
+     "同题"
+    ],
+    [
+     "妈",
+     "同题"
+    ]
+   ]
+  },
+  "奶": {
+   "py": "nai",
+   "pyFull": "nǎi",
+   "chNo": 2,
+   "words": [
+    [
+     "奶奶",
+     "nǎi nai"
+    ],
+    [
+     "牛奶",
+     "niú nǎi"
+    ],
+    [
+     "奶糖",
+     "nǎi táng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "妈",
+     "同题"
+    ],
+    [
+     "爷",
+     "同题"
+    ]
+   ]
+  },
+  "家": {
+   "py": "jia",
+   "pyFull": "jiā",
+   "chNo": 2,
+   "words": [
+    [
+     "大家",
+     "dà jiā"
+    ],
+    [
+     "回家",
+     "huí jiā"
+    ],
+    [
+     "家人",
+     "jiā rén"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "爸",
+     "同题"
+    ],
+    [
+     "象",
+     "形近"
+    ]
+   ]
+  },
+  "哥": {
+   "py": "ge",
+   "pyFull": "gē",
+   "chNo": 2,
+   "words": [
+    [
+     "哥哥",
+     "gē ge"
+    ],
+    [
+     "大哥",
+     "dà gē"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "姐",
+     "同题"
+    ],
+    [
+     "歌",
+     "同音"
+    ]
+   ]
+  },
+  "姐": {
+   "py": "jie",
+   "pyFull": "jiě",
+   "chNo": 2,
+   "words": [
+    [
+     "姐姐",
+     "jiě jie"
+    ],
+    [
+     "大姐",
+     "dà jiě"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "哥",
+     "同题"
+    ],
+    [
+     "妹",
+     "同题"
+    ]
+   ]
+  },
+  "弟": {
+   "py": "di",
+   "pyFull": "dì",
+   "chNo": 2,
+   "words": [
+    [
+     "弟弟",
+     "dì di"
+    ],
+    [
+     "兄弟",
+     "xiōng dì"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "第",
+     "形近"
+    ],
+    [
+     "哥",
+     "同题"
+    ]
+   ]
+  },
+  "妹": {
+   "py": "mei",
+   "pyFull": "mèi",
+   "chNo": 2,
+   "words": [
+    [
+     "妹妹",
+     "mèi mei"
+    ],
+    [
+     "小妹",
+     "xiǎo mèi"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "姐",
+     "同题"
+    ],
+    [
+     "味",
+     "形近"
+    ]
+   ]
+  },
+  "我": {
+   "py": "wo",
+   "pyFull": "wǒ",
+   "chNo": 2,
+   "words": [
+    [
+     "我们",
+     "wǒ men"
+    ],
+    [
+     "我家",
+     "wǒ jiā"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "找",
+     "形近"
+    ],
+    [
+     "们",
+     "形近"
+    ]
+   ]
+  },
+  "竹": {
+   "py": "zhu",
+   "pyFull": "zhú",
+   "chNo": 2,
+   "words": [
+    [
+     "竹子",
+     "zhú zi"
+    ],
+    [
+     "竹叶",
+     "zhú yè"
+    ]
+   ],
+   "pic": true,
+   "glyph": "两根小竹竿，长着尖尖叶",
+   "known": false,
+   "distract": [
+    [
+     "草",
+     "同题"
+    ],
+    [
+     "木",
+     "同题"
+    ]
+   ]
+  },
+  "草": {
+   "py": "cao",
+   "pyFull": "cǎo",
+   "chNo": 2,
+   "words": [
+    [
+     "小草",
+     "xiǎo cǎo"
+    ],
+    [
+     "草地",
+     "cǎo dì"
+    ],
+    [
+     "花草",
+     "huā cǎo"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "早",
+     "形近"
+    ],
+    [
+     "花",
+     "同题"
+    ]
+   ]
+  },
+  "花": {
+   "py": "hua",
+   "pyFull": "huā",
+   "chNo": 2,
+   "words": [
+    [
+     "小花",
+     "xiǎo huā"
+    ],
+    [
+     "花朵",
+     "huā duǒ"
+    ],
+    [
+     "开花",
+     "kāi huā"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "化",
+     "形近"
+    ],
+    [
+     "草",
+     "同题"
+    ]
+   ]
+  },
+  "米": {
+   "py": "mi",
+   "pyFull": "mǐ",
+   "chNo": 2,
+   "words": [
+    [
+     "大米",
+     "dà mǐ"
+    ],
+    [
+     "米饭",
+     "mǐ fàn"
+    ],
+    [
+     "玉米",
+     "yù mǐ"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "来",
+     "形近"
+    ],
+    [
+     "面",
+     "同题"
+    ]
+   ]
+  },
+  "禾": {
+   "py": "he",
+   "pyFull": "hé",
+   "chNo": 2,
+   "words": [
+    [
+     "禾苗",
+     "hé miáo"
+    ],
+    [
+     "禾田",
+     "hé tián"
+    ]
+   ],
+   "pic": true,
+   "glyph": "上面垂着穗，一棵庄稼苗",
+   "known": false,
+   "distract": [
+    [
+     "木",
+     "形近"
+    ],
+    [
+     "米",
+     "形近"
+    ]
+   ]
+  },
+  "吃": {
+   "py": "chi",
+   "pyFull": "chī",
+   "chNo": 3,
+   "words": [
+    [
+     "吃饭",
+     "chī fàn"
+    ],
+    [
+     "好吃",
+     "hǎo chī"
+    ],
+    [
+     "小吃",
+     "xiǎo chī"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "喝",
+     "同题"
+    ],
+    [
+     "乞",
+     "形近"
+    ]
+   ]
+  },
+  "喝": {
+   "py": "he2",
+   "pyFull": "hē",
+   "chNo": 3,
+   "words": [
+    [
+     "喝水",
+     "hē shuǐ"
+    ],
+    [
+     "喝奶",
+     "hē nǎi"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "吃",
+     "同题"
+    ],
+    [
+     "渴",
+     "形近"
+    ]
+   ]
+  },
+  "看": {
+   "py": "kan",
+   "pyFull": "kàn",
+   "chNo": 3,
+   "words": [
+    [
+     "看见",
+     "kàn jiàn"
+    ],
+    [
+     "看书",
+     "kàn shū"
+    ],
+    [
+     "好看",
+     "hǎo kàn"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "着",
+     "形近"
+    ],
+    [
+     "目",
+     "同题"
+    ]
+   ]
+  },
+  "听": {
+   "py": "ting",
+   "pyFull": "tīng",
+   "chNo": 3,
+   "words": [
+    [
+     "听话",
+     "tīng huà"
+    ],
+    [
+     "好听",
+     "hǎo tīng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "近",
+     "形近"
+    ],
+    [
+     "耳",
+     "同题"
+    ]
+   ]
+  },
+  "说": {
+   "py": "shuo",
+   "pyFull": "shuō",
+   "chNo": 3,
+   "words": [
+    [
+     "说话",
+     "shuō huà"
+    ],
+    [
+     "听说",
+     "tīng shuō"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "话",
+     "形近"
+    ],
+    [
+     "读",
+     "同题"
+    ]
+   ]
+  },
+  "走": {
+   "py": "zou",
+   "pyFull": "zǒu",
+   "chNo": 3,
+   "words": [
+    [
+     "走路",
+     "zǒu lù"
+    ],
+    [
+     "走开",
+     "zǒu kāi"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "足",
+     "形近"
+    ],
+    [
+     "跑",
+     "同题"
+    ]
+   ]
+  },
+  "跑": {
+   "py": "pao",
+   "pyFull": "pǎo",
+   "chNo": 3,
+   "words": [
+    [
+     "跑步",
+     "pǎo bù"
+    ],
+    [
+     "快跑",
+     "kuài pǎo"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "路",
+     "形近"
+    ],
+    [
+     "走",
+     "同题"
+    ]
+   ]
+  },
+  "坐": {
+   "py": "zuo",
+   "pyFull": "zuò",
+   "chNo": 3,
+   "words": [
+    [
+     "坐下",
+     "zuò xià"
+    ],
+    [
+     "请坐",
+     "qǐng zuò"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "座",
+     "形近"
+    ],
+    [
+     "立",
+     "同题"
+    ]
+   ]
+  },
+  "立": {
+   "py": "li2",
+   "pyFull": "lì",
+   "chNo": 3,
+   "words": [
+    [
+     "起立",
+     "qǐ lì"
+    ],
+    [
+     "站立",
+     "zhàn lì"
+    ],
+    [
+     "立正",
+     "lì zhèng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "力",
+     "同音"
+    ],
+    [
+     "坐",
+     "同题"
+    ]
+   ]
+  },
+  "飞": {
+   "py": "fei",
+   "pyFull": "fēi",
+   "chNo": 3,
+   "words": [
+    [
+     "飞机",
+     "fēi jī"
+    ],
+    [
+     "飞鸟",
+     "fēi niǎo"
+    ],
+    [
+     "飞走",
+     "fēi zǒu"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "气",
+     "形近"
+    ],
+    [
+     "走",
+     "同题"
+    ]
+   ]
+  },
+  "读": {
+   "py": "du",
+   "pyFull": "dú",
+   "chNo": 3,
+   "words": [
+    [
+     "读书",
+     "dú shū"
+    ],
+    [
+     "读一读",
+     "dú yi dú"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "卖",
+     "形近"
+    ],
+    [
+     "看",
+     "同题"
+    ]
+   ]
+  },
+  "写": {
+   "py": "xie",
+   "pyFull": "xiě",
+   "chNo": 3,
+   "words": [
+    [
+     "写字",
+     "xiě zì"
+    ],
+    [
+     "书写",
+     "shū xiě"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "与",
+     "形近"
+    ],
+    [
+     "字",
+     "同题"
+    ]
+   ]
+  },
+  "画": {
+   "py": "hua2",
+   "pyFull": "huà",
+   "chNo": 3,
+   "words": [
+    [
+     "画画",
+     "huà huà"
+    ],
+    [
+     "图画",
+     "tú huà"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "田",
+     "形近"
+    ],
+    [
+     "花",
+     "同音"
+    ]
+   ]
+  },
+  "书": {
+   "py": "shu",
+   "pyFull": "shū",
+   "chNo": 3,
+   "words": [
+    [
+     "看书",
+     "kàn shū"
+    ],
+    [
+     "读书",
+     "dú shū"
+    ],
+    [
+     "书本",
+     "shū běn"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "本",
+     "形近"
+    ],
+    [
+     "画",
+     "同题"
+    ]
+   ]
+  },
+  "字": {
+   "py": "zi",
+   "pyFull": "zì",
+   "chNo": 3,
+   "words": [
+    [
+     "写字",
+     "xiě zì"
+    ],
+    [
+     "数字",
+     "shù zì"
+    ],
+    [
+     "名字",
+     "míng zi"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "子",
+     "形近"
+    ],
+    [
+     "文",
+     "同题"
+    ]
+   ]
+  },
+  "开": {
+   "py": "kai",
+   "pyFull": "kāi",
+   "chNo": 3,
+   "words": [
+    [
+     "开门",
+     "kāi mén"
+    ],
+    [
+     "开心",
+     "kāi xīn"
+    ],
+    [
+     "开车",
+     "kāi chē"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "关",
+     "同题"
+    ],
+    [
+     "井",
+     "形近"
+    ]
+   ]
+  },
+  "关": {
+   "py": "guan",
+   "pyFull": "guān",
+   "chNo": 3,
+   "words": [
+    [
+     "关门",
+     "guān mén"
+    ],
+    [
+     "开关",
+     "kāi guān"
+    ],
+    [
+     "关上",
+     "guān shàng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "开",
+     "同题"
+    ],
+    [
+     "天",
+     "形近"
+    ]
+   ]
+  },
+  "来": {
+   "py": "lai",
+   "pyFull": "lái",
+   "chNo": 3,
+   "words": [
+    [
+     "来了",
+     "lái le"
+    ],
+    [
+     "回来",
+     "huí lái"
+    ],
+    [
+     "来去",
+     "lái qù"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "米",
+     "形近"
+    ],
+    [
+     "去",
+     "同题"
+    ]
+   ]
+  },
+  "去": {
+   "py": "qu",
+   "pyFull": "qù",
+   "chNo": 3,
+   "words": [
+    [
+     "回去",
+     "huí qù"
+    ],
+    [
+     "出去",
+     "chū qù"
+    ],
+    [
+     "来去",
+     "lái qù"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "云",
+     "形近"
+    ],
+    [
+     "来",
+     "同题"
+    ]
+   ]
+  },
+  "回": {
+   "py": "hui",
+   "pyFull": "huí",
+   "chNo": 3,
+   "words": [
+    [
+     "回家",
+     "huí jiā"
+    ],
+    [
+     "回来",
+     "huí lái"
+    ],
+    [
+     "回去",
+     "huí qù"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "面",
+     "形近"
+    ],
+    [
+     "去",
+     "同题"
+    ]
+   ]
+  },
+  "玩": {
+   "py": "wan",
+   "pyFull": "wán",
+   "chNo": 3,
+   "words": [
+    [
+     "玩具",
+     "wán jù"
+    ],
+    [
+     "好玩",
+     "hǎo wán"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "完",
+     "形近"
+    ],
+    [
+     "晚",
+     "同音"
+    ]
+   ]
+  },
+  "笑": {
+   "py": "xiao2",
+   "pyFull": "xiào",
+   "chNo": 3,
+   "words": [
+    [
+     "大笑",
+     "dà xiào"
+    ],
+    [
+     "笑声",
+     "xiào shēng"
+    ],
+    [
+     "玩笑",
+     "wán xiào"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "哭",
+     "同题"
+    ],
+    [
+     "校",
+     "同音"
+    ]
+   ]
+  },
+  "哭": {
+   "py": "ku",
+   "pyFull": "kū",
+   "chNo": 3,
+   "words": [
+    [
+     "大哭",
+     "dà kū"
+    ],
+    [
+     "哭声",
+     "kū shēng"
+    ],
+    [
+     "哭笑",
+     "kū xiào"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "笑",
+     "同题"
+    ],
+    [
+     "器",
+     "形近"
+    ]
+   ]
+  },
+  "睡": {
+   "py": "shui2",
+   "pyFull": "shuì",
+   "chNo": 3,
+   "words": [
+    [
+     "睡觉",
+     "shuì jiào"
+    ],
+    [
+     "睡着",
+     "shuì zháo"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "垂",
+     "形近"
+    ],
+    [
+     "水",
+     "同音"
+    ]
+   ]
+  },
+  "梦": {
+   "py": "meng",
+   "pyFull": "mèng",
+   "chNo": 3,
+   "words": [
+    [
+     "做梦",
+     "zuò mèng"
+    ],
+    [
+     "梦里",
+     "mèng lǐ"
+    ],
+    [
+     "美梦",
+     "měi mèng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "晚",
+     "同题"
+    ],
+    [
+     "床",
+     "同题"
+    ]
+   ]
+  },
+  "明": {
+   "py": "ming",
+   "pyFull": "míng",
+   "chNo": 4,
+   "words": [
+    [
+     "明天",
+     "míng tiān"
+    ],
+    [
+     "明白",
+     "míng bai"
+    ],
+    [
+     "光明",
+     "guāng míng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "朋",
+     "形近"
+    ],
+    [
+     "名",
+     "同音"
+    ]
+   ]
+  },
+  "林": {
+   "py": "lin",
+   "pyFull": "lín",
+   "chNo": 4,
+   "words": [
+    [
+     "树林",
+     "shù lín"
+    ],
+    [
+     "竹林",
+     "zhú lín"
+    ],
+    [
+     "林子",
+     "lín zi"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "森",
+     "形近"
+    ],
+    [
+     "木",
+     "同题"
+    ]
+   ]
+  },
+  "森": {
+   "py": "sen",
+   "pyFull": "sēn",
+   "chNo": 4,
+   "words": [
+    [
+     "森林",
+     "sēn lín"
+    ],
+    [
+     "大森林",
+     "dà sēn lín"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "林",
+     "形近"
+    ],
+    [
+     "木",
+     "同题"
+    ]
+   ]
+  },
+  "从": {
+   "py": "cong",
+   "pyFull": "cóng",
+   "chNo": 4,
+   "words": [
+    [
+     "从前",
+     "cóng qián"
+    ],
+    [
+     "从来",
+     "cóng lái"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "众",
+     "形近"
+    ],
+    [
+     "丛",
+     "形近"
+    ]
+   ]
+  },
+  "众": {
+   "py": "zhong",
+   "pyFull": "zhòng",
+   "chNo": 4,
+   "words": [
+    [
+     "大众",
+     "dà zhòng"
+    ],
+    [
+     "众人",
+     "zhòng rén"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "从",
+     "形近"
+    ],
+    [
+     "中",
+     "同音"
+    ]
+   ]
+  },
+  "清": {
+   "py": "qing2",
+   "pyFull": "qīng",
+   "chNo": 4,
+   "words": [
+    [
+     "清水",
+     "qīng shuǐ"
+    ],
+    [
+     "清凉",
+     "qīng liáng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "晴",
+     "形近"
+    ],
+    [
+     "请",
+     "形近"
+    ]
+   ]
+  },
+  "河": {
+   "py": "he3",
+   "pyFull": "hé",
+   "chNo": 4,
+   "words": [
+    [
+     "小河",
+     "xiǎo hé"
+    ],
+    [
+     "河水",
+     "hé shuǐ"
+    ],
+    [
+     "江河",
+     "jiāng hé"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "湖",
+     "同题"
+    ],
+    [
+     "何",
+     "同音"
+    ]
+   ]
+  },
+  "湖": {
+   "py": "hu",
+   "pyFull": "hú",
+   "chNo": 4,
+   "words": [
+    [
+     "湖水",
+     "hú shuǐ"
+    ],
+    [
+     "大湖",
+     "dà hú"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "河",
+     "同题"
+    ],
+    [
+     "胡",
+     "同音"
+    ]
+   ]
+  },
+  "星": {
+   "py": "xing",
+   "pyFull": "xīng",
+   "chNo": 4,
+   "words": [
+    [
+     "星星",
+     "xīng xing"
+    ],
+    [
+     "星光",
+     "xīng guāng"
+    ],
+    [
+     "火星",
+     "huǒ xīng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "生",
+     "形近"
+    ],
+    [
+     "云",
+     "同题"
+    ]
+   ]
+  },
+  "亮": {
+   "py": "liang",
+   "pyFull": "liàng",
+   "chNo": 4,
+   "words": [
+    [
+     "月亮",
+     "yuè liang"
+    ],
+    [
+     "光亮",
+     "guāng liàng"
+    ],
+    [
+     "明亮",
+     "míng liàng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "高",
+     "形近"
+    ],
+    [
+     "光",
+     "同题"
+    ]
+   ]
+  },
+  "请": {
+   "py": "qing3",
+   "pyFull": "qǐng",
+   "chNo": 4,
+   "words": [
+    [
+     "请坐",
+     "qǐng zuò"
+    ],
+    [
+     "请问",
+     "qǐng wèn"
+    ],
+    [
+     "请客",
+     "qǐng kè"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "清",
+     "形近"
+    ],
+    [
+     "情",
+     "形近"
+    ]
+   ]
+  },
+  "他": {
+   "py": "ta",
+   "pyFull": "tā",
+   "chNo": 4,
+   "words": [
+    [
+     "他们",
+     "tā men"
+    ],
+    [
+     "他家",
+     "tā jiā"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "她",
+     "形近"
+    ],
+    [
+     "地",
+     "形近"
+    ]
+   ]
+  },
+  "男": {
+   "py": "nan",
+   "pyFull": "nán",
+   "chNo": 4,
+   "words": [
+    [
+     "男孩",
+     "nán hái"
+    ],
+    [
+     "男生",
+     "nán shēng"
+    ],
+    [
+     "男女",
+     "nán nǚ"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "女",
+     "同题"
+    ],
+    [
+     "儿",
+     "同题"
+    ]
+   ]
+  },
+  "女": {
+   "py": "nv",
+   "pyFull": "nǚ",
+   "chNo": 4,
+   "words": [
+    [
+     "女孩",
+     "nǚ hái"
+    ],
+    [
+     "女生",
+     "nǚ shēng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "男",
+     "同题"
+    ],
+    [
+     "子",
+     "同题"
+    ]
+   ]
+  },
+  "地": {
+   "py": "di2",
+   "pyFull": "dì",
+   "chNo": 4,
+   "words": [
+    [
+     "大地",
+     "dà dì"
+    ],
+    [
+     "地上",
+     "dì shàng"
+    ],
+    [
+     "土地",
+     "tǔ dì"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "他",
+     "形近"
+    ],
+    [
+     "她",
+     "形近"
+    ],
+    [
+     "弟",
+     "同音"
+    ]
+   ]
+  },
+  "情": {
+   "py": "qing4",
+   "pyFull": "qíng",
+   "chNo": 4,
+   "words": [
+    [
+     "心情",
+     "xīn qíng"
+    ],
+    [
+     "事情",
+     "shì qíng"
+    ],
+    [
+     "友情",
+     "yǒu qíng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "晴",
+     "形近"
+    ],
+    [
+     "请",
+     "形近"
+    ]
+   ]
+  },
+  "她": {
+   "py": "ta2",
+   "pyFull": "tā",
+   "chNo": 4,
+   "words": [
+    [
+     "她们",
+     "tā men"
+    ],
+    [
+     "是她",
+     "shì tā"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "他",
+     "形近"
+    ],
+    [
+     "地",
+     "形近"
+    ]
+   ]
+  },
+  "光": {
+   "py": "guang",
+   "pyFull": "guāng",
+   "chNo": 4,
+   "words": [
+    [
+     "月光",
+     "yuè guāng"
+    ],
+    [
+     "灯光",
+     "dēng guāng"
+    ],
+    [
+     "阳光",
+     "yáng guāng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "亮",
+     "同题"
+    ],
+    [
+     "晃",
+     "形近"
+    ]
+   ]
+  },
+  "早": {
+   "py": "zao",
+   "pyFull": "zǎo",
+   "chNo": 4,
+   "words": [
+    [
+     "早上",
+     "zǎo shang"
+    ],
+    [
+     "早晚",
+     "zǎo wǎn"
+    ],
+    [
+     "早安",
+     "zǎo ān"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "草",
+     "形近"
+    ],
+    [
+     "晚",
+     "同题"
+    ]
+   ]
+  },
+  "晚": {
+   "py": "wan2",
+   "pyFull": "wǎn",
+   "chNo": 4,
+   "words": [
+    [
+     "晚上",
+     "wǎn shang"
+    ],
+    [
+     "晚安",
+     "wǎn ān"
+    ],
+    [
+     "早晚",
+     "zǎo wǎn"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "玩",
+     "同音"
+    ],
+    [
+     "早",
+     "同题"
+    ]
+   ]
+  },
+  "老": {
+   "py": "lao",
+   "pyFull": "lǎo",
+   "chNo": 4,
+   "words": [
+    [
+     "老师",
+     "lǎo shī"
+    ],
+    [
+     "老人",
+     "lǎo rén"
+    ],
+    [
+     "老牛",
+     "lǎo niú"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "考",
+     "形近"
+    ],
+    [
+     "师",
+     "同题"
+    ]
+   ]
+  },
+  "师": {
+   "py": "shi2",
+   "pyFull": "shī",
+   "chNo": 4,
+   "words": [
+    [
+     "老师",
+     "lǎo shī"
+    ],
+    [
+     "大师",
+     "dà shī"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "帅",
+     "形近"
+    ],
+    [
+     "石",
+     "同音"
+    ]
+   ]
+  },
+  "学": {
+   "py": "xue",
+   "pyFull": "xué",
+   "chNo": 4,
+   "words": [
+    [
+     "上学",
+     "shàng xué"
+    ],
+    [
+     "学习",
+     "xué xí"
+    ],
+    [
+     "学校",
+     "xué xiào"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "校",
+     "同题"
+    ],
+    [
+     "字",
+     "同题"
+    ]
+   ]
+  },
+  "校": {
+   "py": "xiao3",
+   "pyFull": "xiào",
+   "chNo": 4,
+   "words": [
+    [
+     "学校",
+     "xué xiào"
+    ],
+    [
+     "校长",
+     "xiào zhǎng"
+    ],
+    [
+     "校园",
+     "xiào yuán"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "学",
+     "同题"
+    ],
+    [
+     "笑",
+     "同音"
+    ]
+   ]
+  },
+  "孩": {
+   "py": "hai",
+   "pyFull": "hái",
+   "chNo": 4,
+   "words": [
+    [
+     "孩子",
+     "hái zi"
+    ],
+    [
+     "小孩",
+     "xiǎo hái"
+    ],
+    [
+     "女孩",
+     "nǚ hái"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "子",
+     "同题"
+    ],
+    [
+     "娃",
+     "同题"
+    ]
+   ]
+  },
+  "一": {
+   "py": "yi",
+   "pyFull": "yī",
+   "chNo": 5,
+   "words": [
+    [
+     "一起",
+     "yì qǐ"
+    ],
+    [
+     "一个",
+     "yí gè"
+    ],
+    [
+     "第一",
+     "dì yī"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "二",
+     "同题"
+    ],
+    [
+     "十",
+     "同题"
+    ]
+   ]
+  },
+  "二": {
+   "py": "er2",
+   "pyFull": "èr",
+   "chNo": 5,
+   "words": [
+    [
+     "二十",
+     "èr shí"
+    ],
+    [
+     "第二",
+     "dì èr"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "三",
+     "同题"
+    ],
+    [
+     "耳",
+     "同音"
+    ]
+   ]
+  },
+  "三": {
+   "py": "san",
+   "pyFull": "sān",
+   "chNo": 5,
+   "words": [
+    [
+     "三个",
+     "sān gè"
+    ],
+    [
+     "三十",
+     "sān shí"
+    ]
+   ],
+   "pic": true,
+   "glyph": "三根长横线，数到三就是它",
+   "known": false,
+   "distract": [
+    [
+     "二",
+     "同题"
+    ],
+    [
+     "川",
+     "形近"
+    ]
+   ]
+  },
+  "四": {
+   "py": "si",
+   "pyFull": "sì",
+   "chNo": 5,
+   "words": [
+    [
+     "四个",
+     "sì gè"
+    ],
+    [
+     "四十",
+     "sì shí"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "西",
+     "形近"
+    ],
+    [
+     "五",
+     "同题"
+    ]
+   ]
+  },
+  "五": {
+   "py": "wu",
+   "pyFull": "wǔ",
+   "chNo": 5,
+   "words": [
+    [
+     "五个",
+     "wǔ gè"
+    ],
+    [
+     "五十",
+     "wǔ shí"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "四",
+     "同题"
+    ],
+    [
+     "六",
+     "同题"
+    ]
+   ]
+  },
+  "六": {
+   "py": "liu",
+   "pyFull": "liù",
+   "chNo": 5,
+   "words": [
+    [
+     "六个",
+     "liù gè"
+    ],
+    [
+     "六十",
+     "liù shí"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "四",
+     "同题"
+    ],
+    [
+     "大",
+     "形近"
+    ]
+   ]
+  },
+  "七": {
+   "py": "qi",
+   "pyFull": "qī",
+   "chNo": 5,
+   "words": [
+    [
+     "七个",
+     "qī gè"
+    ],
+    [
+     "七十",
+     "qī shí"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "十",
+     "形近"
+    ],
+    [
+     "八",
+     "同题"
+    ]
+   ]
+  },
+  "八": {
+   "py": "ba2",
+   "pyFull": "bā",
+   "chNo": 5,
+   "words": [
+    [
+     "八个",
+     "bā gè"
+    ],
+    [
+     "八十",
+     "bā shí"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "人",
+     "形近"
+    ],
+    [
+     "爸",
+     "同音"
+    ]
+   ]
+  },
+  "九": {
+   "py": "jiu",
+   "pyFull": "jiǔ",
+   "chNo": 5,
+   "words": [
+    [
+     "九个",
+     "jiǔ gè"
+    ],
+    [
+     "九十",
+     "jiǔ shí"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "丸",
+     "形近"
+    ],
+    [
+     "久",
+     "同音"
+    ]
+   ]
+  },
+  "十": {
+   "py": "shi3",
+   "pyFull": "shí",
+   "chNo": 5,
+   "words": [
+    [
+     "十个",
+     "shí gè"
+    ],
+    [
+     "十一",
+     "shí yī"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "七",
+     "形近"
+    ],
+    [
+     "石",
+     "同音"
+    ]
+   ]
+  },
+  "里": {
+   "py": "li3",
+   "pyFull": "lǐ",
+   "chNo": 5,
+   "words": [
+    [
+     "里面",
+     "lǐ miàn"
+    ],
+    [
+     "田里",
+     "tián lǐ"
+    ],
+    [
+     "里头",
+     "lǐ tou"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "外",
+     "同题"
+    ],
+    [
+     "力",
+     "同音"
+    ]
+   ]
+  },
+  "外": {
+   "py": "wai",
+   "pyFull": "wài",
+   "chNo": 5,
+   "words": [
+    [
+     "外面",
+     "wài miàn"
+    ],
+    [
+     "门外",
+     "mén wài"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "处",
+     "形近"
+    ],
+    [
+     "里",
+     "同题"
+    ]
+   ]
+  },
+  "前": {
+   "py": "qian",
+   "pyFull": "qián",
+   "chNo": 5,
+   "words": [
+    [
+     "前面",
+     "qián miàn"
+    ],
+    [
+     "门前",
+     "mén qián"
+    ],
+    [
+     "从前",
+     "cóng qián"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "后",
+     "同题"
+    ],
+    [
+     "剪",
+     "形近"
+    ]
+   ]
+  },
+  "后": {
+   "py": "hou",
+   "pyFull": "hòu",
+   "chNo": 5,
+   "words": [
+    [
+     "后面",
+     "hòu miàn"
+    ],
+    [
+     "后头",
+     "hòu tou"
+    ],
+    [
+     "后来",
+     "hòu lái"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "前",
+     "同题"
+    ],
+    [
+     "向",
+     "形近"
+    ]
+   ]
+  },
+  "中": {
+   "py": "zhong2",
+   "pyFull": "zhōng",
+   "chNo": 5,
+   "words": [
+    [
+     "中间",
+     "zhōng jiān"
+    ],
+    [
+     "心中",
+     "xīn zhōng"
+    ],
+    [
+     "水中",
+     "shuǐ zhōng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "虫",
+     "形近"
+    ],
+    [
+     "众",
+     "同音"
+    ]
+   ]
+  },
+  "风": {
+   "py": "feng",
+   "pyFull": "fēng",
+   "chNo": 5,
+   "words": [
+    [
+     "大风",
+     "dà fēng"
+    ],
+    [
+     "风雨",
+     "fēng yǔ"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "凤",
+     "形近"
+    ],
+    [
+     "飞",
+     "同题"
+    ]
+   ]
+  },
+  "雪": {
+   "py": "xue2",
+   "pyFull": "xuě",
+   "chNo": 5,
+   "words": [
+    [
+     "下雪",
+     "xià xuě"
+    ],
+    [
+     "雪人",
+     "xuě rén"
+    ],
+    [
+     "雪花",
+     "xuě huā"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "雷",
+     "形近"
+    ],
+    [
+     "雨",
+     "同题"
+    ]
+   ]
+  },
+  "海": {
+   "py": "hai2",
+   "pyFull": "hǎi",
+   "chNo": 5,
+   "words": [
+    [
+     "大海",
+     "dà hǎi"
+    ],
+    [
+     "海水",
+     "hǎi shuǐ"
+    ],
+    [
+     "海边",
+     "hǎi biān"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "每",
+     "形近"
+    ],
+    [
+     "孩",
+     "同音"
+    ]
+   ]
+  },
+  "春": {
+   "py": "chun",
+   "pyFull": "chūn",
+   "chNo": 5,
+   "words": [
+    [
+     "春天",
+     "chūn tiān"
+    ],
+    [
+     "春风",
+     "chūn fēng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "夏",
+     "同题"
+    ],
+    [
+     "秋",
+     "同题"
+    ]
+   ]
+  },
+  "夏": {
+   "py": "xia2",
+   "pyFull": "xià",
+   "chNo": 5,
+   "words": [
+    [
+     "夏天",
+     "xià tiān"
+    ],
+    [
+     "夏夜",
+     "xià yè"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "春",
+     "同题"
+    ],
+    [
+     "冬",
+     "同题"
+    ],
+    [
+     "下",
+     "同音"
+    ]
+   ]
+  },
+  "秋": {
+   "py": "qiu",
+   "pyFull": "qiū",
+   "chNo": 5,
+   "words": [
+    [
+     "秋天",
+     "qiū tiān"
+    ],
+    [
+     "秋风",
+     "qiū fēng"
+    ],
+    [
+     "中秋",
+     "zhōng qiū"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "伙",
+     "形近"
+    ],
+    [
+     "春",
+     "同题"
+    ]
+   ]
+  },
+  "冬": {
+   "py": "dong",
+   "pyFull": "dōng",
+   "chNo": 5,
+   "words": [
+    [
+     "冬天",
+     "dōng tiān"
+    ],
+    [
+     "过冬",
+     "guò dōng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "夏",
+     "同题"
+    ],
+    [
+     "秋",
+     "同题"
+    ]
+   ]
+  },
+  "鸡": {
+   "py": "ji",
+   "pyFull": "jī",
+   "chNo": 5,
+   "words": [
+    [
+     "小鸡",
+     "xiǎo jī"
+    ],
+    [
+     "公鸡",
+     "gōng jī"
+    ],
+    [
+     "母鸡",
+     "mǔ jī"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "鸟",
+     "同题"
+    ],
+    [
+     "鸭",
+     "同题"
+    ]
+   ]
+  },
+  "鸭": {
+   "py": "ya2",
+   "pyFull": "yā",
+   "chNo": 5,
+   "words": [
+    [
+     "鸭子",
+     "yā zi"
+    ],
+    [
+     "小鸭",
+     "xiǎo yā"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "鸡",
+     "同题"
+    ],
+    [
+     "甲",
+     "形近"
+    ]
+   ]
+  },
+  "兔": {
+   "py": "tu",
+   "pyFull": "tù",
+   "chNo": 5,
+   "words": [
+    [
+     "兔子",
+     "tù zi"
+    ],
+    [
+     "小白兔",
+     "xiǎo bái tù"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "免",
+     "形近"
+    ],
+    [
+     "猫",
+     "同题"
+    ]
+   ]
+  },
+  "象": {
+   "py": "xiang",
+   "pyFull": "xiàng",
+   "chNo": 5,
+   "words": [
+    [
+     "大象",
+     "dà xiàng"
+    ],
+    [
+     "小象",
+     "xiǎo xiàng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "像",
+     "形近"
+    ],
+    [
+     "家",
+     "形近"
+    ]
+   ]
+  },
+  "龙": {
+   "py": "long",
+   "pyFull": "lóng",
+   "chNo": 5,
+   "words": [
+    [
+     "小龙",
+     "xiǎo lóng"
+    ],
+    [
+     "恐龙",
+     "kǒng lóng"
+    ],
+    [
+     "龙船",
+     "lóng chuán"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "尤",
+     "形近"
+    ],
+    [
+     "凤",
+     "同题"
+    ]
+   ]
+  },
+  "儿": {
+   "py": "er3",
+   "pyFull": "ér",
+   "chNo": 5,
+   "words": [
+    [
+     "儿子",
+     "ér zi"
+    ],
+    [
+     "儿童",
+     "ér tóng"
+    ],
+    [
+     "花儿",
+     "huā ér"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "几",
+     "形近"
+    ],
+    [
+     "二",
+     "同音"
+    ]
+   ]
+  },
+  "友": {
+   "py": "you",
+   "pyFull": "yǒu",
+   "chNo": 5,
+   "words": [
+    [
+     "朋友",
+     "péng you"
+    ],
+    [
+     "好友",
+     "hǎo yǒu"
+    ],
+    [
+     "友爱",
+     "yǒu ài"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "反",
+     "形近"
+    ],
+    [
+     "有",
+     "同音"
+    ]
+   ]
+  },
+  "名": {
+   "py": "ming2",
+   "pyFull": "míng",
+   "chNo": 5,
+   "words": [
+    [
+     "名字",
+     "míng zi"
+    ],
+    [
+     "有名",
+     "yǒu míng"
+    ],
+    [
+     "名人",
+     "míng rén"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "各",
+     "形近"
+    ],
+    [
+     "明",
+     "同音"
+    ]
+   ]
+  },
+  "问": {
+   "py": "wen",
+   "pyFull": "wèn",
+   "chNo": 5,
+   "words": [
+    [
+     "问好",
+     "wèn hǎo"
+    ],
+    [
+     "学问",
+     "xué wèn"
+    ],
+    [
+     "问一问",
+     "wèn yi wèn"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "门",
+     "形近"
+    ],
+    [
+     "间",
+     "形近"
+    ]
+   ]
+  },
+  "答": {
+   "py": "da2",
+   "pyFull": "dá",
+   "chNo": 5,
+   "words": [
+    [
+     "回答",
+     "huí dá"
+    ],
+    [
+     "问答",
+     "wèn dá"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "塔",
+     "形近"
+    ],
+    [
+     "大",
+     "同音"
+    ]
+   ]
+  },
+  "找": {
+   "py": "zhao",
+   "pyFull": "zhǎo",
+   "chNo": 5,
+   "words": [
+    [
+     "找到",
+     "zhǎo dào"
+    ],
+    [
+     "找一找",
+     "zhǎo yi zhǎo"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "我",
+     "形近"
+    ],
+    [
+     "打",
+     "形近"
+    ]
+   ]
+  },
+  "给": {
+   "py": "gei",
+   "pyFull": "gěi",
+   "chNo": 5,
+   "words": [
+    [
+     "给你",
+     "gěi nǐ"
+    ],
+    [
+     "送给",
+     "sòng gěi"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "结",
+     "形近"
+    ],
+    [
+     "细",
+     "形近"
+    ]
+   ]
+  },
+  "送": {
+   "py": "song",
+   "pyFull": "sòng",
+   "chNo": 5,
+   "words": [
+    [
+     "送花",
+     "sòng huā"
+    ],
+    [
+     "送给",
+     "sòng gěi"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "关",
+     "形近"
+    ],
+    [
+     "远",
+     "形近"
+    ]
+   ]
+  },
+  "拿": {
+   "py": "na",
+   "pyFull": "ná",
+   "chNo": 5,
+   "words": [
+    [
+     "拿走",
+     "ná zǒu"
+    ],
+    [
+     "拿来",
+     "ná lái"
+    ],
+    [
+     "拿起",
+     "ná qǐ"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "合",
+     "形近"
+    ],
+    [
+     "盒",
+     "形近"
+    ]
+   ]
+  },
+  "帮": {
+   "py": "bang",
+   "pyFull": "bāng",
+   "chNo": 5,
+   "words": [
+    [
+     "帮忙",
+     "bāng máng"
+    ],
+    [
+     "帮手",
+     "bāng shǒu"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "邦",
+     "形近"
+    ],
+    [
+     "拉",
+     "同题"
+    ]
+   ]
+  },
+  "车": {
+   "py": "che",
+   "pyFull": "chē",
+   "chNo": 5,
+   "words": [
+    [
+     "火车",
+     "huǒ chē"
+    ],
+    [
+     "马车",
+     "mǎ chē"
+    ],
+    [
+     "开车",
+     "kāi chē"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "东",
+     "形近"
+    ],
+    [
+     "轮",
+     "同题"
+    ]
+   ]
+  },
+  "衣": {
+   "py": "yi2",
+   "pyFull": "yī",
+   "chNo": 5,
+   "words": [
+    [
+     "衣服",
+     "yī fu"
+    ],
+    [
+     "大衣",
+     "dà yī"
+    ],
+    [
+     "毛衣",
+     "máo yī"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "农",
+     "形近"
+    ],
+    [
+     "一",
+     "同音"
+    ]
+   ]
+  },
+  "饭": {
+   "py": "fan",
+   "pyFull": "fàn",
+   "chNo": 5,
+   "words": [
+    [
+     "吃饭",
+     "chī fàn"
+    ],
+    [
+     "米饭",
+     "mǐ fàn"
+    ],
+    [
+     "早饭",
+     "zǎo fàn"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "板",
+     "形近"
+    ],
+    [
+     "吃",
+     "同题"
+    ]
+   ]
+  },
+  "菜": {
+   "py": "cai",
+   "pyFull": "cài",
+   "chNo": 5,
+   "words": [
+    [
+     "青菜",
+     "qīng cài"
+    ],
+    [
+     "买菜",
+     "mǎi cài"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "茶",
+     "形近"
+    ],
+    [
+     "彩",
+     "同音"
+    ]
+   ]
+  },
+  "灯": {
+   "py": "deng",
+   "pyFull": "dēng",
+   "chNo": 5,
+   "words": [
+    [
+     "电灯",
+     "diàn dēng"
+    ],
+    [
+     "开灯",
+     "kāi dēng"
+    ],
+    [
+     "灯笼",
+     "dēng long"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "登",
+     "形近"
+    ],
+    [
+     "光",
+     "同题"
+    ]
+   ]
+  },
+  "高": {
+   "py": "gao",
+   "pyFull": "gāo",
+   "chNo": 5,
+   "words": [
+    [
+     "高大",
+     "gāo dà"
+    ],
+    [
+     "高兴",
+     "gāo xìng"
+    ],
+    [
+     "高山",
+     "gāo shān"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "亮",
+     "形近"
+    ],
+    [
+     "矮",
+     "同题"
+    ]
+   ]
+  },
+  "长": {
+   "py": "chang",
+   "pyFull": "cháng",
+   "chNo": 5,
+   "words": [
+    [
+     "长江",
+     "cháng jiāng"
+    ],
+    [
+     "长长",
+     "cháng cháng"
+    ],
+    [
+     "长大",
+     "zhǎng dà"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "张",
+     "同音"
+    ],
+    [
+     "短",
+     "同题"
+    ]
+   ]
+  },
+  "快": {
+   "py": "kuai",
+   "pyFull": "kuài",
+   "chNo": 5,
+   "words": [
+    [
+     "快跑",
+     "kuài pǎo"
+    ],
+    [
+     "快乐",
+     "kuài lè"
+    ],
+    [
+     "飞快",
+     "fēi kuài"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "块",
+     "同音"
+    ],
+    [
+     "慢",
+     "同题"
+    ]
+   ]
+  },
+  "多": {
+   "py": "duo",
+   "pyFull": "duō",
+   "chNo": 5,
+   "words": [
+    [
+     "多少",
+     "duō shǎo"
+    ],
+    [
+     "很多",
+     "hěn duō"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "夜",
+     "形近"
+    ],
+    [
+     "少",
+     "同题"
+    ]
+   ]
+  },
+  "今": {
+   "py": "jin",
+   "pyFull": "jīn",
+   "chNo": 5,
+   "words": [
+    [
+     "今天",
+     "jīn tiān"
+    ],
+    [
+     "今年",
+     "jīn nián"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "令",
+     "形近"
+    ],
+    [
+     "斤",
+     "同音"
+    ]
+   ]
+  },
+  "年": {
+   "py": "nian",
+   "pyFull": "nián",
+   "chNo": 5,
+   "words": [
+    [
+     "今年",
+     "jīn nián"
+    ],
+    [
+     "新年",
+     "xīn nián"
+    ],
+    [
+     "过年",
+     "guò nián"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "今",
+     "同题"
+    ],
+    [
+     "岁",
+     "同题"
+    ]
+   ]
+  },
+  "床": {
+   "py": "chuang",
+   "pyFull": "chuáng",
+   "chNo": 5,
+   "words": [
+    [
+     "上床",
+     "shàng chuáng"
+    ],
+    [
+     "小床",
+     "xiǎo chuáng"
+    ],
+    [
+     "起床",
+     "qǐ chuáng"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "麻",
+     "形近"
+    ],
+    [
+     "梦",
+     "同题"
+    ]
+   ]
+  },
+  "伞": {
+   "py": "san2",
+   "pyFull": "sǎn",
+   "chNo": 5,
+   "words": [
+    [
+     "雨伞",
+     "yǔ sǎn"
+    ],
+    [
+     "打伞",
+     "dǎ sǎn"
+    ],
+    [
+     "小伞",
+     "xiǎo sǎn"
+    ]
+   ],
+   "pic": false,
+   "glyph": null,
+   "known": false,
+   "distract": [
+    [
+     "个",
+     "形近"
+    ],
+    [
+     "三",
+     "形近"
+    ]
+   ]
+  }
+ },
+ "reviewSchedule": {
+  "1": [
+   2,
+   3,
+   4,
+   7,
+   8,
+   9,
+   12,
+   13,
+   14,
+   17,
+   18,
+   19
+  ],
+  "3": [
+   3,
+   4,
+   8,
+   9,
+   13,
+   14,
+   18,
+   19
+  ],
+  "7": [
+   9,
+   14,
+   19
+  ]
+ },
+ "genPool": [
+  "一",
+  "二",
+  "三",
+  "四",
+  "五",
+  "六",
+  "七",
+  "八",
+  "九",
+  "十",
+  "里",
+  "外",
+  "前",
+  "后",
+  "中",
+  "风",
+  "雪",
+  "海",
+  "春",
+  "夏",
+  "秋",
+  "冬",
+  "鸡",
+  "鸭",
+  "兔",
+  "象",
+  "龙",
+  "儿",
+  "友",
+  "名",
+  "问",
+  "答",
+  "找",
+  "给",
+  "送",
+  "拿",
+  "帮",
+  "车",
+  "衣",
+  "饭",
+  "菜",
+  "灯",
+  "高",
+  "长",
+  "快",
+  "多",
+  "今",
+  "年",
+  "床",
+  "伞"
+ ],
+ "sentences": [
+  {
+   "text": "你是我的，我是你的",
+   "afterFlat": 0,
+   "charsUsed": [
+    "你",
+    "我",
+    "是",
+    "的"
+   ]
+  },
+  {
+   "text": "天上有日就是晴天",
+   "afterFlat": 1,
+   "charsUsed": [
+    "上",
+    "天",
+    "就",
+    "日",
+    "是",
+    "晴",
+    "有"
+   ]
+  },
+  {
+   "text": "天上有日，山上有火",
+   "afterFlat": 2,
+   "charsUsed": [
+    "上",
+    "天",
+    "山",
+    "日",
+    "有",
+    "火"
+   ]
+  },
+  {
+   "text": "天上有云，山下有水",
+   "afterFlat": 3,
+   "charsUsed": [
+    "上",
+    "下",
+    "云",
+    "天",
+    "山",
+    "有",
+    "水"
+   ]
+  },
+  {
+   "text": "山上有小马和小鸟",
+   "afterFlat": 4,
+   "charsUsed": [
+    "上",
+    "和",
+    "小",
+    "山",
+    "有",
+    "马",
+    "鸟"
+   ]
+  },
+  {
+   "text": "下雨啦，天上有云",
+   "afterFlat": 5,
+   "charsUsed": [
+    "上",
+    "下",
+    "云",
+    "啦",
+    "天",
+    "有",
+    "雨"
+   ]
+  },
+  {
+   "text": "小牛和小马在山上",
+   "afterFlat": 6,
+   "charsUsed": [
+    "上",
+    "和",
+    "在",
+    "小",
+    "山",
+    "牛",
+    "马"
+   ]
+  },
+  {
+   "text": "大手和小手",
+   "afterFlat": 7,
+   "charsUsed": [
+    "和",
+    "大",
+    "小",
+    "手"
+   ]
+  },
+  {
+   "text": "我家有爸和妈",
+   "afterFlat": 8,
+   "charsUsed": [
+    "和",
+    "妈",
+    "家",
+    "我",
+    "有",
+    "爸"
+   ]
+  },
+  {
+   "text": "哥哥和我在家",
+   "afterFlat": 9,
+   "charsUsed": [
+    "和",
+    "哥",
+    "在",
+    "家",
+    "我"
+   ]
+  },
+  {
+   "text": "山上有花有草",
+   "afterFlat": 10,
+   "charsUsed": [
+    "上",
+    "山",
+    "有",
+    "花",
+    "草"
+   ]
+  },
+  {
+   "text": "我看小鱼喝水",
+   "afterFlat": 11,
+   "charsUsed": [
+    "喝",
+    "小",
+    "我",
+    "水",
+    "看",
+    "鱼"
+   ]
+  },
+  {
+   "text": "小鸟飞，小马跑",
+   "afterFlat": 12,
+   "charsUsed": [
+    "小",
+    "跑",
+    "飞",
+    "马",
+    "鸟"
+   ]
+  },
+  {
+   "text": "哥哥写字，我看书",
+   "afterFlat": 13,
+   "charsUsed": [
+    "书",
+    "写",
+    "哥",
+    "字",
+    "我",
+    "看"
+   ]
+  },
+  {
+   "text": "爸爸回家，我开门",
+   "afterFlat": 14,
+   "charsUsed": [
+    "回",
+    "家",
+    "开",
+    "我",
+    "爸",
+    "门"
+   ]
+  },
+  {
+   "text": "我和妹妹在家玩",
+   "afterFlat": 15,
+   "charsUsed": [
+    "和",
+    "在",
+    "妹",
+    "家",
+    "我",
+    "玩"
+   ]
+  },
+  {
+   "text": "云在天上飞",
+   "afterFlat": 16,
+   "charsUsed": [
+    "上",
+    "云",
+    "在",
+    "天",
+    "飞"
+   ]
+  },
+  {
+   "text": "山下有小河",
+   "afterFlat": 17,
+   "charsUsed": [
+    "下",
+    "小",
+    "山",
+    "有",
+    "河"
+   ]
+  },
+  {
+   "text": "他的马好大",
+   "afterFlat": 18,
+   "charsUsed": [
+    "他",
+    "大",
+    "好",
+    "的",
+    "马"
+   ]
+  },
+  {
+   "text": "晚上，天上有星星",
+   "afterFlat": 19,
+   "charsUsed": [
+    "上",
+    "天",
+    "星",
+    "晚",
+    "有"
+   ]
+  }
+ ]
+}

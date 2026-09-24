@@ -435,6 +435,9 @@ EXPECT['robotpaint'] = sorted(set(['core_chapter_end', 'core_day_end', 'core_res
                        {k for k, v in _MANI.items() if k.startswith('rp_') and 'robotpaint' in v['games']})
 EXPECT['hidecup'] = sorted(set(['core_chapter_end', 'core_day_end', 'core_rest']) | \
                     {k for k, v in _MANI.items() if k.startswith('hc_') and 'hidecup' in v['games']})
+# batch41 zilearn（2026-09-24 段二注册；参数子集过滤未登记=静默 rc0 假绿，第 8 起预防）
+EXPECT['zilearn'] = sorted(set(['core_chapter_end', 'core_day_end', 'core_rest']) | \
+                    {k for k, v in _MANI.items() if k.startswith('zi_') and 'zilearn' in v['games']})
 EXPECT['sentorder'] = sorted(set(['core_chapter_end', 'core_day_end', 'core_rest']) | \
                       {k for k, v in _MANI.items() if k.startswith('so_') and 'sentorder' in v['games']})
 EXPECT['errdoc'] = sorted(set(['core_chapter_end', 'core_day_end', 'core_rest']) | \
@@ -505,6 +508,7 @@ DIRS = {'pipe': 'pipe-rabbit', 'shop': 'shop-math', 'kitchen': 'kitchen-rhythm',
         # errdoc/maketen/quickcmp/plant/teach；comfort/thanks/datacollect 已在上）
         'position': '../batch33/position', 'robotpaint': '../batch33/robotpaint',
         'hidecup': '../batch34/hidecup', 'sentorder': '../batch34/sentorder',
+        'zilearn': '../batch41/zilearn',  # batch41 第 151 款（2026-09-24）
         'errdoc': '../batch35/errdoc', 'maketen': '../batch35/maketen',
         'quickcmp': '../batch36/quickcmp', 'plant': '../batch37/plant', 'teach': '../batch37/teach',
         'emo': '../batch25/emo', 'habitat': '../batch25/habitat', 'story3': '../batch25/story3',

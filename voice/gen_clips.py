@@ -56,7 +56,9 @@ def build_manifest():
            'crd', 'etm', 'cir',
            # batch40（前缀 ins_/cbx_/brk_ 已核无占用 2026-09-12 实查——cal_ 被 b26 calendar 占 5 同名键改 cbx_；120 扩容收官批）
            # ins_=insectspider 昆虫还是蜘蛛/cbx_=coolbox 冷静工具箱/brk_=break 问题拆解小博士
-           'ins', 'cbx', 'brk']
+           'ins', 'cbx', 'brk',
+           # batch41（前缀 zi_ 已核 manifest 5517 无占用 2026-09-24 实查；第 151 款——识字小课堂主线认字）
+           'zilearn']
     # core（三款共用）
     m['core_chapter_end'] = {'text': '这一章完成啦，明天还有新关卡哦', 'games': ALL}
     m['core_day_end'] = {'text': '今天的新关卡玩完啦，明天见', 'games': ALL}
@@ -2534,7 +2536,31 @@ def build_manifest():
     T46('tch_ghint', '大数字，可以几个几个数哦', 'teach')
     T46('tch_rabbit', '兔子说：我来试试', 'teach')
 
-    # ---- 1c：动态域族 JSON 读入（task46-enumerate 提取脚本产物，先跑提取再跑本脚本）----
+    # ---- batch41 zilearn 识字小课堂（2026-09-24 段二注册；SPEC-ZILEARN §3——178 键）----
+    # zi_ 前缀已核 manifest 5517 无占用。zi_ch_ 150=每字读音组词（<字>，<首词>的<字>，wrd 范式）
+    # 从 game-data.js CHARS 表正则提取 {字,py,首词}（零手抄，与 chText()/chKey 严格一致）；
+    # zi_st_ 20=句子朗读（SENTENCES 表段内正则——避开 LEVELS 里 sentence 双写，_r_zi_regex_probe 实测口径）。
+    m['zi_tut_watch'] = {'text': '看！来认识新字啦', 'games': ['zilearn']}
+    m['zi_tut_turn'] = {'text': '你来点一点', 'games': ['zilearn']}
+    m['zi_hint'] = {'text': '想一想，再选一选', 'games': ['zilearn']}
+    m['zi_right'] = {'text': '答对啦，真棒', 'games': ['zilearn']}
+    m['zi_wrong'] = {'text': '不对哦，再想一想', 'games': ['zilearn']}
+    m['zi_listen'] = {'text': '听一听，找一找', 'games': ['zilearn']}
+    m['zi_word'] = {'text': '选一选', 'games': ['zilearn']}
+    m['zi_quiz'] = {'text': '小测时间到', 'games': ['zilearn']}
+    zi_src = open(os.path.join(ROOT, 'batch41', 'zilearn', '_src', 'game-data.js'), encoding='utf-8').read()
+    zi_ch = re.findall(r'"([一-鿿])":\s*\{\s*py:\s*"([^"]+)",[^,]+,\s*chNo:\s*\d+,\s*words:\s*\[\["([^"]+)"', zi_src)
+    assert len(zi_ch) == 150, 'zi CHARS 提取异常: %d' % len(zi_ch)
+    assert len({p for _, p, _ in zi_ch}) == 150, 'zi py 冲突（clip key 不唯一）'
+    for c, py, first_word in zi_ch:
+        m['zi_ch_' + py] = {'text': '%s，%s的%s' % (c, first_word, c), 'games': ['zilearn']}
+    zi_seg = zi_src.split('const SENTENCES')[1]
+    zi_st = re.findall(r'\{"text": "([^"]+)", "afterFlat": (\d+)', zi_seg)
+    assert len(zi_st) == 20, 'zi SENTENCES 提取异常: %d' % len(zi_st)
+    assert len({int(f) for _, f in zi_st}) == 20, 'zi afterFlat 冲突'
+    for text, flat in zi_st:
+        m['zi_st_%s' % flat] = {'text': text, 'games': ['zilearn']}
+    assert sum(1 for k in m if k.startswith('zi_')) == 178, 'zi_ 键总数应 178'
     _t46dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'task46-enumerate')
     for jf, expect in (('keys_read.json', 174), ('keys_t46.json', 970)):   # 963-1：tc_s_comma 纯标量段非语音点剔除（edge-tts 0 字节）
         p = os.path.join(_t46dir, jf)
