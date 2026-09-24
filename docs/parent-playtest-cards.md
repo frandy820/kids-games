@@ -1,3 +1,6 @@
+> **⚠️ 本文件为旧轮产物（配套已废弃的 final-improvement-report.md 数字口径）。**
+> 2026-09-25 起以 [parents-guide.md](parents-guide.md)（新审查口径：121 款 L1/L2 证据、L4=0 声明）为准。
+
 # 家长试玩记录卡（5 款推荐款）
 
 > 配套 [final-improvement-report.md](final-improvement-report.md) 第七节推荐清单。

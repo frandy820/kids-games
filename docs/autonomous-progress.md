@@ -4,6 +4,21 @@
 
 ## 检查点（最新在上）
 
+### 2026-09-25 阶段2 r2 五项落地 + L3 证据 ✅（selftest 复跑中）
+- **r2 实施**（诊断 J1 错误反馈零增益等三项断点的对策）：F1 关末生字墙（翻牌点读收字）/ F2 阶梯错误反馈（错 2 重播字音+组词+正确卡呼吸；错 3 摘 1 干扰变灰）/ F5 词句题面语音键 zi_read_hint / F6 兔子键重播题面 / F7 Audio.play 失败一次性 toast（60s 节流）。F3 遮字、F4 整词朗读**不做**（设计推演否决，理由在 literacy-game-design.md）。
+- build 双跑幂等 md5 `02676bd9c8dde02db92e0a520f265b42`；VERIFY **11/11**（新单元⑪ ladder）；verify_voice **182 PASS**（181+zi_read_hint）；语音键 179 在册断言（178+read_hint）。
+- **L3 取证通过**（output/kids-games-audit/l3_evidence.py + shots-r2/ 4 截图非空白）：F7 mute-tip 真浏览器触发 shown=True；F1 墙 5 卡点读 2 亮后自动过关推进 flat1；F2 错 2 breathe=True/错 3 dimmed=1（目标=火，非答案）。
+- 取证脚本三修：`.hide` 元素 wait_for_selector 须 state='attached'（默认等 visible 必超时——selftest 同 bug 同修）；F7 reject hook 须 init_script 阶段装（加载后 replace 会盖掉 wrap 层致 notePlayFail 永不触发）；F7 判定改等待式（开场语音同触发 tip，固定延时查询撞 3.2s 收回窗）。
+- selftest 预期 44/44（42+生字墙 2 断言）；首轮 8 PASS 中断系脚本 hide-wait bug+CPU 并行竞争（bounding_box 不 auto-wait，已加防御重试），复跑在飞。
+- **F8 家长观察卡落盘**：docs/parents-guide.md——5 款（识字/藏猫猫/日历小星/算术/记忆亮亮格）×各 4-5 个观察问题+L4=0 显著标注+自动化边界说明。
+
+### 2026-09-25 阶段1 终版 + 阶段2 准备 ✅（commit ×2）
+- **全库 121/121 verify PASS**（4 款慢 verify 104-138s 超 60s 探针窗被误标"挂起"，300s 复测全 PASS：G072 328/328、G113 399/399 等）。0 阻断结论坐实。
+- 150 字读音一致性机械扫描 0 矛盾（"长"修复后）。
+- docs/literacy-game-design.md 骨架落盘：保留五题位循环本体+日限速+复习+教学三段；本轮四项 D1 关末成果幕 / D2 二错即线索救援 / D3 听音题无声降级（待诊断确认）/ D4 家长观察卡；禁贴纸积分连击。
+- **阶段 4 决策**：识字即本轮 B 类主精修；无余力不做第二款凑数（诚实优先）。
+- 识字认知诊断 agent 在飞（9 场景真实玩+截图+诊断 A-J）。
+
 ### 2026-09-25 阶段0+1 完成 ✅（commit `docs: 阶段0/1 全库清单+逐款审查`）
 - **121 款 L1 全过**（开页+console 0 错+首屏点击全响应+截图 242 张）；首轮 21 款"blank"系 innerText 判空误报（图形界面），截图复核全非空白。
 - **verify 干净复测 117/121 PASS**（L2 证据）；首轮 16 款 FAIL 全为同 page 带档污染（独立 context 复测 16/16 PASS）——教训：verify 判定必须独立 context。
