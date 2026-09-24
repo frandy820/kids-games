@@ -94,40 +94,56 @@ assert "if (document.querySelector('.k-dayend,.k-chapterend,.k-resttip,.k-celebr
 # 家族契约 O：款内自建 button 显式 color（不依赖 core 兜底）
 assert 'button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}' in head, \
     'head 缺自建 button 显式 color（契约 O）'
-# SPEC §0.82 演出时序常量：亮相 1.5s/换位 1100ms/静止 800ms/教学换位 1600ms
-for frag in ('const PEEK_MS = 1500', 'const SWAP_MS = 1100', 'const SWAP_MS_TUT = 1600',
+# SPEC §0.82 演出时序常量：亮相 1.5s/静止 800ms/教学换位 1600ms
+#（换位常量 r51 四档 SWAP_MS_D1-D4 在 SPEC-R51 锚块断言；旧 SWAP_MS=1100 退役）
+for frag in ('const PEEK_MS = 1500', 'const SWAP_MS_TUT = 1600',
              'const STILL_MS = 800', 'const RESET_MS = 500'):
     assert frag in data, 'data 缺 SPEC §0.82 演出常量 %s' % frag
 assert 'lastReplayAt < 3000' in main, 'main 缺重演 3s 节流（SPEC §0.82）'
 
-# ===== SPEC-R25 难度加深结构锚（§R2/§R3/§R4/§R8 四层联动——build 层）=====
-# ① 提速档常量+档位单点（dch3=900/dch4=700，教学 1600 基线不动）
-#（r25 两窗推导断言在下方「语音窗静态断言」块——HC_* 实长常量定义于此块之后）
-for frag in ('const SWAP_MS_D3 = 900', 'const SWAP_MS_D4 = 700', 'const swapMsOf',
-             'const SHOW_WIN_DUAL = 5400', 'const HALF_WIN = 5800'):
-    assert frag in data, 'data 缺 r25 时序常量 %s（SPEC-R25 §R4/§R9）' % frag
-# ② dch4 双型谱（CH_CFG[4] 四键形态+DUAL_KINDS 固定谱——hide c4s4/dual c3s3）
-assert 'dc: 3, ds: 3' in data and 'c: 4, s: 4' in data, 'data CH_CFG 缺 r25 dch4 双型形态'
-assert 'DUAL_KINDS' in data, 'data 缺 dch4 固定谱 DUAL_KINDS（SPEC-R25 §R3）'
-# ③ 引擎锚：hidedual kind+half 相位推进+anim2 仅 dch4 取数
-assert "'hidedual'" in engine, 'engine 缺 r25 双动物题型 hidedual'
-assert 'q.answer = q.answerB' in engine, 'engine 缺 half 相位推进锚（answer=当前步真值）'
-assert 'if (dch === 4)' in engine and 'anim2' in engine, \
-    'engine 缺 anim2 仅 dch4 取数锚（dch1-3 rnd 序列不动=基线真不动）'
-# ④ 主逻辑锚：档位接入+half 分支+M1 防回归+浮点整串+q-text 动态
+# ===== SPEC-R51 难度曲线上移结构锚（§R2/§R3/§R4/§R8 四层联动——build 层）=====
+# ① 四档提速常量+档位单点（900/800/700/600，教学 1600 基线不动；SWAP_MS=1100 退役）
+#（r51 窗推导断言在下方「语音窗静态断言」块——HC_* 实长常量定义于此块之后）
+for frag in ('const SWAP_MS_D1 = 900', 'const SWAP_MS_D2 = 800', 'const SWAP_MS_D3 = 700',
+             'const SWAP_MS_D4 = 600', 'const swapMsOf',
+             'const SHOW_WIN_DUAL = 5400', 'const HALF_WIN = 5800',
+             'const SHOW_WIN_TRIPLE = 7000'):
+    assert frag in data, 'data 缺 r51 时序常量 %s（SPEC-R51 §R4/§R9）' % frag
+assert 'const SWAP_MS =' not in data, 'data 残留退役常量 SWAP_MS=1100（r51 四档表全换）'
+# ② 章型谱（CH_CFG 形态+KINDS3/KINDS4 固定谱——r51 全换）
+for frag in ('c: 3, s: 2', 'c: 4, s: 3', 'dc: 4, ds: 4', 'dc: 4, ds: 5', 'tc: 4, ts: 4'):
+    assert frag in data, 'data CH_CFG 缺 r51 形态 %s' % frag
+assert 'KINDS3' in data and 'KINDS4' in data, 'data 缺 r51 固定谱 KINDS3/KINDS4（SPEC-R51 §R3）'
+assert 'DUAL_KINDS' not in data, 'data 残留 r25 谱名 DUAL_KINDS（r51 已全换 KINDS3/KINDS4）'
+assert "KINDS4 = ['hide', 'hidedual', 'hidetriple', 'hidedual', 'hide']" in data, \
+    'data KINDS4 谱形不符（SPEC-R51 §R2）'
+assert "KINDS3 = ['hide', 'hidedual', 'hide', 'hidedual', 'hide']" in data, \
+    'data KINDS3 谱形不符（SPEC-R51 §R2）'
+# ③ 引擎锚：hidedual/hidetriple kind+half 相位推进×2+anim2 dch>=3/anim3 dch4 取数时机
+assert "'hidedual'" in engine and "'hidetriple'" in engine, 'engine 缺 r51 双/三动物题型'
+assert 'q.answer = q.answerB' in engine, 'engine 缺 half 相位推进锚 B（answer=当前步真值）'
+assert 'q.answer = q.answerC' in engine, 'engine 缺 triple 第二 half 相位推进锚 C（SPEC-R51 §R4）'
+assert 'if (dch >= 3)' in engine and 'anim2' in engine, \
+    'engine 缺 anim2 dch>=3 取数锚（r51：ch3/ch4 谱含 dual）'
+assert 'if (dch === 4)' in engine and 'anim3' in engine, \
+    'engine 缺 anim3 仅 dch4 取数锚（r51：KINDS4 含 triple）'
+# ④ 主逻辑锚：档位接入+half 分支+M1 防回归+浮点整串+q-text 动态+triple 两形态链
 assert 'swapMsOf(cur.dch)' in main, 'main 缺 swapMsOf 档位接入（presentQuiz/doReplay 同速）'
 assert "r === 'half'" in main and "nameClip(q.animA), nameClip(q.animB)" in main, \
-    'main 缺 half 分支/双名音确认链（SPEC-R25 §R4）'
+    'main 缺 half 分支/三段确认链第一形态 [right,nA,nB]（SPEC-R51 §R4）'
+assert "nameClip(q.animB), nameClip(q.animC)" in main, \
+    'main 缺 triple 第二步确认链 [right,nB,nC]（SPEC-R51 §R4）'
 assert 'if (user) lastAct = Date.now();' in main, \
     'main 缺救援重演不动 lastAct 锚（r24 审查 M1 防回归——方向级不得饿死答案级）'
 assert '审查M2 r25：half 亦是正确作答' in main, \
-    'main 缺 half 解锁重置救援钟锚（r25 审查M2 防回归——删此行则慢思考后第二问被即刻泄题且无门禁抓）'
-assert "nameClip(q.kind === 'hidedual' ? q.animB : q.anim)" in main, \
-    'main 缺 dual 第二步末步名音=B 锚（r25 试玩P1 防回归——q.anim 兼容字段恒=A，错用则链尾播 A 名）'
-assert 'Math.round(durMs * SPEED)' in main, 'main doSwapAnim 缺 Math.round（700×0.12 浮点整串）'
-assert '藏在哪里呀' in main and 'setQText' in main, 'main 缺 q-text 动态（dual 按步切名）'
-# ⑤ 4 杯布局锚：CSS 档位适配（触摸面 ≥96×96/不溢出）
-assert '#cups[data-cups="4"]' in head, 'head 缺 4 杯 CSS 档位适配（SPEC-R25 §R4）'
+    'main 缺 half 解锁重置救援钟锚（r25 审查M2 防回归——删此行则慢思考后下一问被即刻泄题且无门禁抓）'
+assert 'nameClip(ansAnimOf(q))' in main, \
+    'main 缺末步名音按 kind 分流锚（r51 triple=C——q.anim 兼容字段恒=A，错用则链尾播 A 名）'
+assert 'Math.round(durMs * SPEED)' in main, 'main doSwapAnim 缺 Math.round（600×0.12=72 浮点整串）'
+assert '藏在哪里呀' in main and 'setQText' in main, 'main 缺 q-text 动态（dual/triple 按步切名）'
+# ⑤ 布局锚：3 杯+4 杯 CSS 档位适配（触摸面 ≥96×96/不溢出）
+assert '#cups[data-cups="3"]' in head, 'head 缺 3 杯 CSS 档位适配（r51 ch1 起步 c=3）'
+assert '#cups[data-cups="4"]' in head, 'head 缺 4 杯 CSS 档位适配'
 # 真时钟演出锁素材（任务书：吞输入用真时钟演出锁，tapCup 演出期 null）
 assert 'Date.now() < state.showUntil' in main, 'main 缺真时钟演出锁判定（tapCup 演出期 null）'
 # Mj-1 防回归（b29 反方审查 major，core voice.queue 弃尾语义）——T46 化零 keyless 政策：
@@ -166,6 +182,9 @@ assert 5400 >= HC_NAME_MAX * 2 + 150 * 2 + HC_SHOW + 300, \
     '双动物亮相链窗 5400 < 名音1440×2+150×2+show1848+300=5328'
 assert 5800 >= HC_RIGHT + 150 + HC_NAME_MAX + 150 + HC_NAME_MAX + 300, \
     'half 过渡窗 5800 < right2232+150+名音1440+150+名音1440+300=5712'
+# ③e r51 三动物亮相链窗推导（SPEC-R51 §R9，名音 max 口径；任务书 6958 系笔误勘误）
+assert 7000 >= HC_NAME_MAX * 3 + 150 * 3 + HC_SHOW + 300, \
+    '三动物亮相链窗 7000 < 名音1440×3+150×3+show1848+300=6918'
 # ④ 教学演示延窗（watch 3264+300=3564 / turn 1824+300=2124 防尾截）
 assert 'await wait(3564 * SPEED)' in main, 'main 缺教学 watch 延 3564（hc_tut_watch 3264+300）'
 assert 'await wait(2124 * SPEED)' in main, 'main 缺教学 turn 延 2124（hc_tut_turn 1824+300）'
@@ -199,8 +218,15 @@ assert '<title>藏猫猫摄像头</title>' in head, 'head 缺标题 藏猫猫摄
 html = (head + '\n' +
         '<script>\n' + core + '\n</script>\n' +
         '<script>\n' + clips + '\n</script>\n' +
-        '<script>\n' + data + engine + main + verif + '\n</script>\n' +
+        '<script>\n' + data + engine + main + '\n</script>\n' +
+        '<script>\n' + verif + '\n</script>\n' +
         '</body>\n</html>\n')
+# b36 M1 修复（r51 收口，任务书坑 2）：verify 独立第 4 script 块——原并入
+# script[2] 时 verify ⑨ 源码锚读自身所在块=自匹配恒真（家族缺陷多次重犯）；
+# 四块独立后 script[2]=纯游戏源码（data+engine+main），锚串不在 verify 块内=
+# 真判别力。块数==4 硬断言防回并。
+assert html.count('<script>') == 4 and html.count('</script>') == 4, \
+    'script 块数 != 4（core/clips/game/verify 四块独立——b36 M1）'
 
 # 硬性检查 3：完全离线——除 SVG xmlns 命名空间标识符外无任何 http(s)/外链
 stripped = html.replace('http://www.w3.org/2000/svg', 'NS-SVG')

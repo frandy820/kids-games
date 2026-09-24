@@ -7,13 +7,15 @@
 <style>
 /* ================= 藏猫猫摄像头 hidecup（batch34·扩容批 4）
    视觉按家族基调：暖米底 #FBF6EC、暖橙主色 #E8975A、暖棕描边 #4A3B2E；
-   玩法 = 经典杯子戏（SPEC-BATCH34 §0.82 + SPEC-R25 难度加深，5-6 岁视觉记忆）：
+   玩法 = 经典杯子戏（SPEC-BATCH34 §0.82 + SPEC-R25 初校准 + SPEC-R51 二次上移 6.5-8 岁视觉记忆）：
    动物探头亮相 1.5s → 躲进某杯 → 杯子换位（两杯互换，换位期杯恒盖住）
    → 静止 800ms → 点杯开杯。
-   r25 章型：ch1=2杯1换1100ms / ch2=2杯2换1100ms（基线不动）、ch3=3杯2换
-   900ms（提速）、ch4 谱=qi0/2/4 4杯4换 + qi1/3 双动物3杯3换（700ms 提速）；
-   4 杯走 #cups[data-cups="4"] 缩杯档位（触摸面恒 ≥96×96、不溢出）。
-   动物池 5（rabbit/cat/bear/dog/duck，每关一主；dch4 双动物腿另挂一副≠主）。
+   r51 章型：ch1=3杯2换900ms / ch2=4杯3换800ms、ch3 谱=4杯4换+双动物
+   （700ms）、ch4 谱=4杯5换+双动物+三动物（600ms 提速）；
+   4 杯走 #cups[data-cups="4"] 缩杯档位、3 杯竖屏走 [data-cups="3"] 档
+   （触摸面恒 ≥96×96、不溢出）。
+   动物池 5（rabbit/cat/bear/dog/duck，每关一主；dch≥3 双动物腿一副、
+   dch4 三动物腿再一只——池 5 取 3 互异）。
    触摸目标：杯 wrap ≥96×96、底栏按钮 ≥72；overflowX 恒 0。
    款内自建 button 带显式 color（契约 O：不依赖 core 兜底）。 */
 *{margin:0;padding:0;box-sizing:border-box}
@@ -68,7 +70,13 @@ svg{display:block}
 @keyframes hc-wig{0%,100%{transform:translateX(0)}25%{transform:translateX(-10px)}
   50%{transform:translateX(9px)}75%{transform:translateX(-6px)}}
 .cup-wrap{position:absolute;bottom:6px;width:170px;height:200px;transition:left 1.1s cubic-bezier(.5,.05,.3,1)}
-/* r25 4 杯档位适配（dch4 量域腿 c=4）：杯缩窄排一行——桌面 slot 612/4=153、
+/* r51 3 杯档位适配（ch1 起步 c=3）：桌面 slot 612/3=204 > 170 默认档无需缩；
+   竖屏 slot 432/3=144 < 默认 150 会溢 3px——竖屏 3 杯独立档 wrap 132×172
+   （右缘余 6px）+svg/peek 等比缩（藏态顶边 < 杯口高=恒被盖住） */
+#cups[data-cups="3"] .cup-wrap{width:154px;height:184px}
+#cups[data-cups="3"] .cup-wrap .cup svg{width:118px;height:136px}
+#cups[data-cups="3"] .cup-wrap .peek{width:96px;height:96px;bottom:92px}
+/* r25/r51 4 杯档位适配（ch2-4 c=4）：杯缩窄排一行——桌面 slot 612/4=153、
    竖屏 432/4=108，wrap 138/102 < slot 保证不溢出；触摸面恒 ≥96×96（竖屏
    wrap 102×150 为下限）；peek/杯 svg 等比缩（藏态顶边 < 杯口高=恒被盖住） */
 #cups[data-cups="4"] .cup-wrap{width:138px;height:172px}
@@ -139,6 +147,11 @@ body.verify #verify-result{display:block}
   .cup-wrap{width:150px;height:180px}
   .cup-wrap .cup svg{width:114px;height:132px}
   .cup-wrap .peek{width:94px;height:94px;bottom:56px}
+  /* r51 3 杯竖屏档（ch1 起步 c=3）：slot 432/3=144 < 默认 150 溢 3px——缩至
+     132×172（右缘余 6px，触摸面 132×172 ≥96 达标）；svg/peek 等比缩 */
+  #cups[data-cups="3"] .cup-wrap{width:132px;height:172px}
+  #cups[data-cups="3"] .cup-wrap .cup svg{width:100px;height:115px}
+  #cups[data-cups="3"] .cup-wrap .peek{width:84px;height:84px;bottom:52px}
   #cups[data-cups="4"] .cup-wrap{width:102px;height:150px}
   #cups[data-cups="4"] .cup-wrap .cup svg{width:80px;height:92px}
   #cups[data-cups="4"] .cup-wrap .peek{width:76px;height:76px;bottom:50px}

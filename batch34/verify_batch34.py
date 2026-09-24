@@ -4,9 +4,9 @@
 口径：verify 页 (?verify=1)；错链豁免窗内错点被吞——wrong 后等过窗再驱动：
      hc≈5450 / so≈6300 / dc≈4450（链构成：hc=wrong1656+150+hint3048+300=5154；so 两级取 max=wrong_word2784+150+hint2760+300=5994；dc=wrong1800+150+hint1896+300=4146）
 钩子形状（SPEC §1-3；agent 交付后探针实证校准——本文件标 [探针校准] 处）：
-  hidecup    quiz={kind('hide'|'hidedual'), cups(2|3|4), swaps[[a,b]], start, answer(动态：dual=当前步真值),
-             anim, animA/animB/startA/startB/answerA/answerB/phase(dual 0=问A/1=问B), step(题号), miss}
-             r25（SPEC-R25-HIDECUP）：dch4 固定谱=3 hide(c=4 s=4)+2 hidedual(c=3 s=3 双动物两步 'half')
+  hidecup    quiz={kind('hide'|'hidedual'|'hidetriple'), cups(3|4), swaps[[a,b]], start, answer(动态：多动物=当前步真值),
+             anim, animA/animB[/animC]/startA/startB[/startC]/answerA/answerB[/answerC]/phase(0=问A/1=问B/2=问C), step(题号), miss}
+             r51（SPEC-R51-HIDECUP）：ch1 c3s2 900ms / ch2 c4s3 800 / ch3 c4s4 谱(3hide+2dual) 700 / ch4 c4s5 谱(2hide+2dual+1triple) 600
   sentorder  quiz={words[](正确语序), opts[{w}](恒全摆 L+d), picked[], step(题号), miss}
   datacollect quiz={kind('count'|'sum'|'diff'|'mostdiff'|'change'|'totalchange'), scene{类目id:数量}(这次调查),
               scene1{...}|null(dch4 上次调查), up|null, ask, answer, options[4], answerIdx, grid[], step(题号), miss}
@@ -37,10 +37,19 @@ def rec(name, ok, info=''):
 
 # ---- SPEC 独立硬编码（禁 import 实现） ----
 HC_ANIMALS = {'rabbit', 'cat', 'bear', 'dog', 'duck'}
-HC_CUPS = {1: 2, 2: 2, 3: 3, 4: 3}          # dch -> 杯数（r25：dch4 hidedual 腿口径；hide 腿 c=4）
-HC_SWAPS = {1: 1, 2: 2, 3: 2, 4: 3}         # dch -> 换位数（r25：dch4 hidedual 腿口径；hide 腿 s=4）
-# r25（SPEC-R25-HIDECUP §R2/§R3）：dch4 固定谱 DUAL_KINDS（3 量域 hide c=4 s=4 + 2 双动物 hidedual c=3 s=3）
-HC_KINDS4 = ['hide', 'hidedual', 'hide', 'hidedual', 'hide']
+# r51（SPEC-R51-HIDECUP §R2/§R3）四档章型域：hide 腿 c/s、hidedual 腿 dc/ds、hidetriple 腿 tc/ts
+HC_CH = {1: dict(c=3, s=2), 2: dict(c=4, s=3),
+         3: dict(c=4, s=4, dc=4, ds=4),
+         4: dict(c=4, s=5, dc=4, ds=5, tc=4, ts=4)}
+HC_KINDS3 = ['hide', 'hidedual', 'hide', 'hidedual', 'hide']           # dch3 谱（3 单+2 双）
+HC_KINDS4 = ['hide', 'hidedual', 'hidetriple', 'hidedual', 'hide']     # dch4 谱（2 单+2 双+1 三）
+
+
+def hc_kind_of(dch, qi):
+    """r51 §R3 谱查位：dch1/2 无谱=全 hide；dch3/dch4 按 KINDS3/4"""
+    if dch <= 2:
+        return 'hide'
+    return (HC_KINDS3 if dch == 3 else HC_KINDS4)[qi]
 DC_CATS = {'rabbit', 'bird', 'cat', 'chick', 'sheep', 'duck'}
 SO_LEN = {1: 3, 2: 4, 3: 5}                  # ch4=3-6 混合（r45 §R1 词域上探 6）
 SO_DIST = {1: 0, 2: 1, 3: 2}                 # ch4=1-2
@@ -69,15 +78,15 @@ def hc_answer(start, swaps):
 
 
 # ---------- m 批①（r25 审查 m2 挂账）：hidecup 40 关谱 Python 复刻（T12 对拍腿） ----------
-# 从 SPEC-BATCH34 §0.82 + SPEC-R25 §R2/§R3 生成律独立写出（禁 import 实现）：
-# 种子 mulberry32(flat*7919+311) → [flat>=20: dch=ri(1,4)] → anim=池5 → [dch==4:
-# anim2 同掷取数+同掷定值替换 (idx+1)%5 不耗种子] → 逐题 buildQuiz（hide: start=
-# ri(0,c-1)→swaps；hidedual: startA=ri(0,c-1)+startB=ri(0,c-2) 压缩互异→swaps）；
-# genSwaps 候选=行序全对 (a,b) a≠b，优先异集合（c=2 空候选时数值交替），取
-# floor(rnd()*len)。dch1-3 anim2 不取数=rnd 消耗序列与 r25 前逐位一致（基线真不动）。
+# r51（SPEC-R51-HIDECUP §R3 取数时机逐位）：
+# 种子 mulberry32(flat*7919+311) → [flat>=20: dch=ri(1,4)] → anim=池5 → [dch>=3:
+# anim2 同掷取数+单次 +1 环取替换保≠anim] → [dch==4: anim3 同掷取数+while 环取
+# 替换保∉{anim,anim2}] → 逐题 buildQuiz（hide: start=ri(0,c-1)→swaps；hidedual:
+# startA=ri(0,c-1)+startB=ri(0,c-2) 压缩互异→swaps；hidetriple: startA/startB
+# 同 dual+startC=rem[ri(0,c-3)] rem=[0,c)\{A,B}→swaps）；
+# genSwaps 候选=行序全对 (a,b) a≠b，优先异集合，取 floor(rnd()*len)。
 HC_ANIMALS_ORDER = ['rabbit', 'cat', 'bear', 'dog', 'duck']   # SPEC §0.82 动物池 5（序=取数域）
-HC_CH_CFG = {1: dict(c=2, s=1), 2: dict(c=2, s=2), 3: dict(c=3, s=2),
-             4: dict(c=4, s=4, dc=3, ds=3)}                    # SPEC-R25 §R2 CH_CFG
+# r51：CH_CFG 即上方 HC_CH（SPEC-R51 §R2 真值表）
 
 def hc_rng(seed):
     """mulberry32 全序列 python 移植（32 位乘后取低位=JS Math.imul 等价；口径同 dch_reseed）"""
@@ -105,13 +114,32 @@ def hc_gen_swaps(c, s, rnd):
         prev = p
     return swaps
 
-def hc_build_quiz(dch, qi, rnd, anim, anim2):
-    """SPEC-R25 §R3 buildQuiz：dch4 按 DUAL_KINDS[qi] 分腿（hide c4s4/hidedual c3s3）"""
-    cfg = HC_CH_CFG[dch]
-    if dch == 4 and HC_KINDS4[qi] == 'hidedual':
+def hc_build_quiz(dch, qi, rnd, anim, anim2, anim3):
+    """SPEC-R51 §R3 buildQuiz：dch3/dch4 按 KINDS3/4[qi] 分腿（hide/hidedual/hidetriple）
+    键序=JS 对象字面量序（JSON.stringify 对拍逐字节前提）"""
+    cfg = HC_CH[dch]
+    kind = hc_kind_of(dch, qi)
+    if kind == 'hidetriple':
+        c, s = cfg['tc'], cfg['ts']
+        start_a = int(rnd() * c)
+        start_b = int(rnd() * (c - 1))
+        if start_b >= start_a:
+            start_b += 1
+        rem = [k for k in range(c) if k != start_a and k != start_b]
+        start_c = rem[int(rnd() * len(rem))]
+        swaps = hc_gen_swaps(c, s, rnd)
+        aa, ab, ac = (hc_answer(start_a, swaps), hc_answer(start_b, swaps),
+                      hc_answer(start_c, swaps))
+        return {'kind': 'hidetriple', 'cups': c, 'swaps': swaps,
+                'startA': start_a, 'startB': start_b, 'startC': start_c,
+                'answerA': aa, 'answerB': ab, 'answerC': ac,
+                'animA': anim, 'animB': anim2, 'animC': anim3, 'phase': 0,
+                'start': start_a, 'answer': aa,
+                'anim': anim, '_miss': 0, '_answered': False}
+    if kind == 'hidedual':
         c, s = cfg['dc'], cfg['ds']
-        start_a = 0 + int(rnd() * (c - 1 + 1))
-        start_b = 0 + int(rnd() * (c - 2 - 0 + 1))
+        start_a = int(rnd() * c)
+        start_b = int(rnd() * (c - 1))
         if start_b >= start_a:
             start_b += 1
         swaps = hc_gen_swaps(c, s, rnd)
@@ -122,13 +150,14 @@ def hc_build_quiz(dch, qi, rnd, anim, anim2):
                 'start': start_a, 'answer': hc_answer(start_a, swaps),
                 'anim': anim, '_miss': 0, '_answered': False}
     c, s = cfg['c'], cfg['s']
-    start = 0 + int(rnd() * (c - 1 + 1))
+    start = int(rnd() * c)
     swaps = hc_gen_swaps(c, s, rnd)
     return {'kind': 'hide', 'cups': c, 'start': start, 'swaps': swaps,
             'answer': hc_answer(start, swaps), 'anim': anim, '_miss': 0, '_answered': False}
 
 def hc_gen_level(flat):
-    """SPEC-BATCH34 §0.82 + SPEC-R25 §R3 genLevel：静态 20 关与生成关同一确定性通道"""
+    """SPEC-BATCH34 §0.82 + SPEC-R51 §R3 genLevel：静态 20 关与生成关同一确定性通道
+    取数时机（r51 §R3 逐位）：dch(flat≥20)→anim→anim2(dch≥3 单次+1 替换)→anim3(dch==4 while 替换)"""
     flat = max(0, int(flat))
     ch = flat // 5 + 1
     lv = flat % 5
@@ -136,20 +165,25 @@ def hc_gen_level(flat):
     dch = ((ch - 1) % 4 + 1) if flat < 20 else 1 + int(rnd() * 4)
     anim = HC_ANIMALS_ORDER[int(rnd() * len(HC_ANIMALS_ORDER))]
     anim2 = None
-    if dch == 4:
+    if dch >= 3:
         anim2 = HC_ANIMALS_ORDER[int(rnd() * len(HC_ANIMALS_ORDER))]
         if anim2 == anim:
             anim2 = HC_ANIMALS_ORDER[(HC_ANIMALS_ORDER.index(anim) + 1) % 5]
-    quizzes = [hc_build_quiz(dch, qi, rnd, anim, anim2) for qi in range(5)]
+    anim3 = None
+    if dch == 4:
+        anim3 = HC_ANIMALS_ORDER[int(rnd() * len(HC_ANIMALS_ORDER))]
+        while anim3 == anim or anim3 == anim2:
+            anim3 = HC_ANIMALS_ORDER[(HC_ANIMALS_ORDER.index(anim3) + 1) % 5]
+    quizzes = [hc_build_quiz(dch, qi, rnd, anim, anim2, anim3) for qi in range(5)]
     return {'flat': flat, 'ch': ch, 'dch': dch, 'lv': lv, 'anim': anim, 'anim2': anim2,
-            'quizzes': quizzes, 'step': 0, 'retries': 0, 'done': False}
+            'anim3': anim3, 'quizzes': quizzes, 'step': 0, 'retries': 0, 'done': False}
 
 def hc_spec_json(flat):
     """与页面 JSON.stringify(genLevel(flat)) 同构（键序=构造序，紧凑分隔符）"""
     return json.dumps(hc_gen_level(flat), separators=(',', ':'), ensure_ascii=False)
 
 def hc_struct_bad(flat, L):
-    """全 40 关结构对账（期望源=SPEC 表+dch_reseed 首取数复算，禁读实现）"""
+    """全 40 关结构对账（期望源=SPEC-R51 表+dch_reseed 首取数复算，禁读实现）"""
     ch_e, lv_e = flat // 5 + 1, flat % 5
     dch_e = (flat // 5 + 1) if flat < 20 else dch_reseed(flat, 311)
     if L.get('ch') != ch_e or L.get('lv') != lv_e or L.get('dch') != dch_e:
@@ -158,19 +192,22 @@ def hc_struct_bad(flat, L):
         return 'f%d anim 越池' % flat
     if L.get('step') != 0 or L.get('retries') != 0 or L.get('done') is not False:
         return 'f%d 初始态脏' % flat
-    if dch_e != 4 and L.get('anim2') is not None:
-        return 'f%d 非dch4 anim2 非 null（rnd 序列被动）' % flat
-    if dch_e == 4 and (L.get('anim2') not in HC_ANIMALS or L.get('anim2') == L.get('anim')):
+    if dch_e < 3 and L.get('anim2') is not None:
+        return 'f%d dch%d anim2 非 null（rnd 序列被动）' % (flat, dch_e)
+    if dch_e >= 3 and (L.get('anim2') not in HC_ANIMALS or L.get('anim2') == L.get('anim')):
         return 'f%d anim2 越池/同主' % flat
+    if dch_e != 4 and L.get('anim3') is not None:
+        return 'f%d 非dch4 anim3 非 null（rnd 序列被动）' % flat
+    if dch_e == 4 and (L.get('anim3') not in HC_ANIMALS or
+                      L.get('anim3') in (L.get('anim'), L.get('anim2'))):
+        return 'f%d anim3 越池/撞主副' % flat
     for k, q in enumerate(L.get('quizzes') or []):
-        dual = q.get('kind') == 'hidedual'
-        if dch_e != 4 and dual:
-            return 'f%dq%d 非dch4 出 dual' % (flat, k)
-        if dch_e == 4 and q.get('kind') != HC_KINDS4[k]:
-            return 'f%dq%d 谱位 kind=%s' % (flat, k, q.get('kind'))
-        cfg = HC_CH_CFG[dch_e]
-        c_e = cfg['dc'] if dual else cfg['c']
-        s_e = cfg['ds'] if dual else cfg['s']
+        kind_e = hc_kind_of(dch_e, k)
+        if q.get('kind') != kind_e:
+            return 'f%dq%d 谱位 kind=%s exp=%s' % (flat, k, q.get('kind'), kind_e)
+        cfg = HC_CH[dch_e]
+        leg = {'hide': ('c', 's'), 'hidedual': ('dc', 'ds'), 'hidetriple': ('tc', 'ts')}[kind_e]
+        c_e, s_e = cfg[leg[0]], cfg[leg[1]]
         if q.get('cups') != c_e or len(q.get('swaps') or []) != s_e:
             return 'f%dq%d c/s %s/%s exp %s/%s' % (flat, k, q.get('cups'), len(q.get('swaps') or []), c_e, s_e)
         for j, (a, b) in enumerate(q['swaps']):
@@ -179,7 +216,7 @@ def hc_struct_bad(flat, L):
             if j and ((a, b) == tuple(q['swaps'][j - 1]) or
                       (c_e >= 3 and {a, b} == set(q['swaps'][j - 1]))):
                 return 'f%dq%d swap%d 假换' % (flat, k, j)
-        if not dual:
+        if kind_e == 'hide':
             if not (0 <= q.get('start', -1) < c_e):
                 return 'f%dq%d start 域' % (flat, k)
             if q.get('answer') != hc_answer(q['start'], q['swaps']):
@@ -187,16 +224,24 @@ def hc_struct_bad(flat, L):
             if q.get('anim') != L.get('anim'):
                 return 'f%dq%d 非关主' % (flat, k)
         else:
-            sa, sb = q.get('startA', -1), q.get('startB', -1)
-            if not (0 <= sa < c_e and 0 <= sb < c_e and sa != sb):
-                return 'f%dq%d dual start' % (flat, k)
-            aa, ab = hc_answer(sa, q['swaps']), hc_answer(sb, q['swaps'])
-            if q.get('answerA') != aa or q.get('answerB') != ab or aa == ab:
-                return 'f%dq%d dual answer' % (flat, k)
-            if q.get('animA') != L.get('anim') or q.get('animB') != L.get('anim2'):
-                return 'f%dq%d dual 非主/副' % (flat, k)
-            if q.get('phase') != 0 or q.get('answer') != aa:
-                return 'f%dq%d dual phase/answer' % (flat, k)
+            if kind_e == 'hidedual':
+                starts = [q.get('startA', -1), q.get('startB', -1)]
+                anims_e = [L.get('anim'), L.get('anim2')]
+            else:                                          # hidetriple（仅 dch4 qi2）
+                starts = [q.get('startA', -1), q.get('startB', -1), q.get('startC', -1)]
+                anims_e = [L.get('anim'), L.get('anim2'), L.get('anim3')]
+            if any(not (0 <= s < c_e) for s in starts) or len(set(starts)) != len(starts):
+                return 'f%dq%d %s start %s' % (flat, k, kind_e, starts)
+            answers = [hc_answer(s, q['swaps']) for s in starts]
+            ans_keys = ['answerA', 'answerB'] + (['answerC'] if kind_e == 'hidetriple' else [])
+            if any(q.get(ans_keys[i]) != answers[i] for i in range(len(answers))) \
+                    or len(set(answers)) != len(answers):
+                return 'f%dq%d %s answer 双射互异破' % (flat, k, kind_e)
+            anim_keys = ['animA', 'animB'] + (['animC'] if kind_e == 'hidetriple' else [])
+            if any(q.get(anim_keys[i]) != anims_e[i] for i in range(len(anims_e))):
+                return 'f%dq%d %s 非主/副/三' % (flat, k, kind_e)
+            if q.get('phase') != 0 or q.get('answer') != answers[0]:
+                return 'f%dq%d %s phase/answer' % (flat, k, kind_e)
         if q.get('_miss') != 0 or q.get('_answered') is not False:
             return 'f%dq%d 初始态脏' % (flat, k)
     return None
@@ -230,29 +275,32 @@ async def tap_retry(pg, expr, wants, timeout=16000):
 
 # ---------- T3 每题审计 ----------
 async def q_hidecup(pg, flat, k, q, dch):
-    if q.get('kind') not in ('hide', 'hidedual', None):   # [探针校准] kind 字段名/值（r25 增 hidedual）
+    if q.get('kind') not in ('hide', 'hidedual', 'hidetriple', None):   # [探针校准] r51 增 hidetriple
         return 'f%dq%d kind=%s' % (flat, k, q.get('kind'))
-    dual = q.get('kind') == 'hidedual'
-    # r25 dch4 按腿取域：hide 腿 c=4 s=4（量域上探）/ hidedual 腿 c=3 s=3（负荷在双轨迹）
-    cups = 4 if (dch == 4 and not dual) else HC_CUPS[dch]
-    nsw_want = 4 if (dch == 4 and not dual) else HC_SWAPS[dch]
+    kind = q.get('kind')
+    kind_e = hc_kind_of(dch, k)
+    if kind != kind_e:
+        return 'f%dq%d 谱位 kind=%s exp=%s' % (flat, k, kind, kind_e)
+    cfg = HC_CH[dch]
+    # r51 四档按腿取域：hide c/s、hidedual dc/ds、hidetriple tc/ts
+    leg = {'hide': ('c', 's'), 'hidedual': ('dc', 'ds'), 'hidetriple': ('tc', 'ts')}[kind_e]
+    cups = cfg[leg[0]]
+    nsw_want = cfg[leg[1]]
     cups_q, nsw = q.get('cups'), len(q.get('swaps') or [])
     if cups_q != cups:
-        return 'f%dq%d ch%d%s cups=%s' % (flat, k, dch, '双' if dual else '', cups_q)
+        return 'f%dq%d ch%d%s cups=%s' % (flat, k, dch, kind_e, cups_q)
     if nsw != nsw_want:
-        return 'f%dq%d ch%d%s swaps=%d' % (flat, k, dch, '双' if dual else '', nsw)
+        return 'f%dq%d ch%d%s swaps=%d' % (flat, k, dch, kind_e, nsw)
     for i, (a, b) in enumerate(q['swaps']):
         if a == b or not (0 <= a < cups_q and 0 <= b < cups_q):
             return 'f%dq%d swap%d=(%d,%d) 非法' % (flat, k, i, a, b)
         if i:
             pa, pb = q['swaps'][i - 1]
-            # SPEC「禁回滚式假换」裁决（§0.82 先验张力）：c=2 时 a≠b 数学唯一=(0,1)/(1,0) 数值交替
-            # （字面「至少一杯不同」在 c=2 域不可满足）；c>=3 时同集合相邻=真回滚拒，完全同序=同对重复拒
+            # SPEC「禁回滚式假换」裁决：c=2 唯一解=数值交替（已随 r51 退役）；
+            # r51 全档 c>=3：同集合相邻=真回滚拒，完全同序=同对重复拒
             if (a, b) == (pa, pb) or (cups_q >= 3 and {a, b} == {pa, pb}):
                 return 'f%dq%d swap%d 回滚式假换' % (flat, k, i)
-    if not dual:
-        if dch == 4 and HC_KINDS4[k] != 'hide':   # dch4 固定谱位对应（量域腿只在 qi0/2/4）
-            return 'f%dq%d ch4 谱位 kind=hide' % (flat, k)
+    if kind_e == 'hide':
         if q.get('anim') not in HC_ANIMALS:
             return 'f%dq%d anim=%s 越池' % (flat, k, q.get('anim'))
         if q['answer'] != hc_answer(q['start'], q['swaps']):
@@ -260,29 +308,30 @@ async def q_hidecup(pg, flat, k, q, dch):
         ans = hc_answer(q['start'], q['swaps'])
         r = await tap_retry(pg, '%s.tapCup(%d)' % (HOOK, ans), ('right', 'done'))
         return None if r in ('right', 'done') else 'f%dq%d tap=%s' % (flat, k, r)
-    # ---- r25 hidedual（仅 dch4 谱位 qi1/3）：双动物双轨迹两步作答 ----
-    if dch != 4:
-        return 'f%dq%d hidedual 在 ch%d' % (flat, k, dch)
-    if HC_KINDS4[k] != 'hidedual':
-        return 'f%dq%d ch4 谱位 kind=hidedual' % (flat, k)
-    sa, sb = q.get('startA'), q.get('startB')
-    if not (0 <= sa < cups_q and 0 <= sb < cups_q and sa != sb):
-        return 'f%dq%d dual start %s/%s' % (flat, k, sa, sb)
-    aa, ab = hc_answer(sa, q['swaps']), hc_answer(sb, q['swaps'])
-    if q.get('answerA') != aa or q.get('answerB') != ab or aa == ab:
-        return 'f%dq%d dual answer %s/%s' % (flat, k, q.get('answerA'), q.get('answerB'))
-    if q.get('animA') not in HC_ANIMALS or q.get('animB') not in HC_ANIMALS or q.get('animA') == q.get('animB'):
-        return 'f%dq%d dual anim %s/%s' % (flat, k, q.get('animA'), q.get('animB'))
-    if q.get('phase') != 0 or q['answer'] != aa:   # 初始步=问 A；answer=当前步真值（动态口径）
-        return 'f%dq%d dual phase=%s answer=%s' % (flat, k, q.get('phase'), q['answer'])
-    r = await tap_retry(pg, '%s.tapCup(%d)' % (HOOK, aa), ('half',))   # 第一步问 A
-    if r != 'half':
-        return 'f%dq%d dual 一步 tap=%s' % (flat, k, r)
-    q2 = json.loads(await pg.evaluate('JSON.stringify(%s.quiz)' % HOOK))
-    if q2.get('phase') != 1 or q2.get('answer') != ab:                  # 'half' 后转问 B
-        return 'f%dq%d dual phase1=%s answer=%s' % (flat, k, q2.get('phase'), q2.get('answer'))
-    r2 = await tap_retry(pg, '%s.tapCup(%d)' % (HOOK, ab), ('right', 'done'))
-    return None if r2 in ('right', 'done') else 'f%dq%d dual 二步 tap=%s' % (flat, k, r2)
+    # ---- r51 多动物腿（hidedual dch3/4 qi1/3 两步 / hidetriple dch4 qi2 三步）----
+    sk = ['startA', 'startB'] + (['startC'] if kind_e == 'hidetriple' else [])
+    ak = ['answerA', 'answerB'] + (['answerC'] if kind_e == 'hidetriple' else [])
+    starts = [q.get(s) for s in sk]
+    if any(not (0 <= s < cups_q) for s in starts) or len(set(starts)) != len(starts):
+        return 'f%dq%d %s start %s' % (flat, k, kind_e, starts)
+    answers = [hc_answer(s, q['swaps']) for s in starts]
+    if any(q.get(ak[i]) != answers[i] for i in range(len(answers))) or len(set(answers)) != len(answers):
+        return 'f%dq%d %s answer %s' % (flat, k, kind_e, [q.get(a) for a in ak])
+    if q.get('phase') != 0 or q['answer'] != answers[0]:   # 初始步=问 A；answer=当前步真值（动态口径）
+        return 'f%dq%d %s phase=%s answer=%s' % (flat, k, kind_e, q.get('phase'), q['answer'])
+    # 逐步驱动：tapCup(当前步真值)→'half'（phase 推进+answer 动态切）；末步 right/done
+    for i, ans in enumerate(answers):
+        last = i == len(answers) - 1
+        wants = ('right', 'done') if last else ('half',)
+        r = await tap_retry(pg, '%s.tapCup(%d)' % (HOOK, ans), wants)
+        if r not in wants:
+            return 'f%dq%d %s 步%d tap=%s' % (flat, k, kind_e, i + 1, r)
+        if not last:
+            q2 = json.loads(await pg.evaluate('JSON.stringify(%s.quiz)' % HOOK))
+            if q2.get('phase') != i + 1 or q2.get('answer') != answers[i + 1]:
+                return 'f%dq%d %s phase%d=%s answer=%s' % (flat, k, kind_e, i + 1,
+                                                            q2.get('phase'), q2.get('answer'))
+    return None
 
 async def q_sentorder(pg, flat, k, q, dch):
     words, opts = q.get('words') or [], q.get('opts') or []
@@ -422,9 +471,11 @@ async def audit_static(pg):
                   4: ['count'] * 2 + ['change', 'change', 'totalchange']}
             if kinds != KS[dch]:
                 bad.append('f%d ch%d 型 %s' % (flat, dch, kinds))
-        # hidecup r25 dch4 固定谱关级对账（SPEC-R25-HIDECUP §R3：恰 3 hide+2 hidedual，qi 位对应）
-        if GAME == 'hidecup' and dch == 4 and kinds != HC_KINDS4:
-            bad.append('f%d ch4 谱 %s' % (flat, kinds))
+        # hidecup r51 谱关级对账（SPEC-R51 §R2：dch1/2 恒 5 hide、dch3 恰 3hide+2dual、dch4 恰 2hide+2dual+1triple）
+        if GAME == 'hidecup':
+            want_kinds = {1: ['hide'] * 5, 2: ['hide'] * 5, 3: HC_KINDS3, 4: HC_KINDS4}[dch]
+            if kinds != want_kinds:
+                bad.append('f%d ch%d 谱 %s' % (flat, dch, kinds))
     return bad
 
 async def wrong_js(restart=True):
@@ -514,7 +565,7 @@ async def main():
         # T7 双错防重入（错链窗内二击**直点**被吞——不走重试版：重试会等过窗落第三错破坏语义，b33 T7 同构）
         await pg.evaluate('%s.start(10)' % HOOK)
         if GAME == 'hidecup':
-            await pg.wait_for_timeout(8000)   # 亮相 3738+换位 2×900=1800（r25 dch3 提速档）+静止 800+余量（探针实证 40ms 内二击返 null）
+            await pg.wait_for_timeout(8600)   # r51 flat10=dch3 hide 腿：亮相4300+换位4×700=2800+静止800+余量（40ms 内二击返 null 口径沿袭）
             dbl = ('(async()=>{const H=%s;const q=H.quiz;const bad=[0,1,2].filter(i=>i!==q.answer&&i<q.cups)[0];'
                    'const r=await H.tapCup(bad);return r===null?"null":String(r);})()' % HOOK)
         elif GAME == 'sentorder':
@@ -576,16 +627,17 @@ async def main():
         rec('T10 C7 预告在场+生成关实算', sem and genok, 'hints=%d gh=%d genok=%s' % (len(hints), len(gh), genok))
         await ctx.close()
 
-        # T12（hidecup 专属，m 批① r25 审查 m2 挂账）：40 关谱 Python 复刻对拍——
-        # dch1-3 逐字节（页面 genLevel JSON 串 == Python 复刻串 = rnd 消耗序列+
-        # 全部派生字段一致 = 「dch1-3 基线真不动」的 Python 侧证据，此前只在试玩侧）
-        # +全 40 关结构（章号/档/谱位/c/s/swap 形状/answer=derive 复算/双动物互异）
+        # T12（hidecup 专属，m 批① 立项 + r51 升格）：40 关谱 Python 复刻对拍——
+        # r51 起全 40 关逐字节（页面 genLevel JSON 串 == Python 复刻串 = rnd 消耗
+        # 序列+全部派生字段一致；r25 期仅 dch1-3 逐字节为「基线不动」主张，r51
+        # 全档内容变化后升格全量）+全 40 关结构（章号/档/谱位/c/s/swap 形状/
+        # answer=derive 复算/双·三动物互异/anim2·anim3 取数时机）
         if GAME == 'hidecup':
             ctx = await b.new_context()
             pg = await ctx.new_page()
             await pg.goto(URL_V)
             await wait_verify_title(pg)
-            byte_bad, struct_bad, n_d13 = [], [], 0
+            byte_bad, struct_bad = [], []
             for flat in range(40):
                 page_js = await pg.evaluate('JSON.stringify(genLevel(%d))' % flat)
                 py_js = hc_spec_json(flat)
@@ -593,13 +645,11 @@ async def main():
                 why = hc_struct_bad(flat, L)
                 if why:
                     struct_bad.append(why)
-                if L.get('dch') in (1, 2, 3):
-                    n_d13 += 1
-                    if page_js != py_js:
-                        byte_bad.append('f%d' % flat)
-            rec('T12 hidecup 40 关谱 Python 对拍', not byte_bad and not struct_bad,
-                'dch1-3 逐字节 %d/%d bad=%s; 结构 40 bad=%s' %
-                (n_d13 - len(byte_bad), n_d13, byte_bad[:4], struct_bad[:4]))
+                if page_js != py_js:
+                    byte_bad.append('f%d' % flat)
+            rec('T12 hidecup 40 关谱 Python 对拍（全量逐字节）', not byte_bad and not struct_bad,
+                '逐字节 %d/%d bad=%s; 结构 40 bad=%s' %
+                (40 - len(byte_bad), 40, byte_bad[:4], struct_bad[:4]))
             await ctx.close()
 
         # T11 契约 I+N（静态；常量可为算术表达式——求和；sentorder 两级链取 max 落在实现单窗）

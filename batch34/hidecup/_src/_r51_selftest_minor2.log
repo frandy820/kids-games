@@ -1,0 +1,19 @@
+P1 verify: VERIFY PASS 16/16 | units: 16 / 16 | clips: 14 | pageerror: 0
+P2 step1: waiting __hcDemoR
+P2 step2: waiting turn quiz (help)
+P2 step3: turn tap returned done
+P2 teach: tapCup(turn)= done | autoSolve= {'done': True, 'taps': 5}
+P2 save v= 1.0 | levels['1-0']= {'stars': 3, 'plays': 1} | tutSeen= True
+P2 clips: 14 (hc_ 11 + core 3 )
+P2 flat5: 开题实测 7654 ms（dch2 qi0=hide c4s3：SHOW_WIN4300+3×800+800+140≈7640——800 档实证（r51-m1 勘正 7740 笔误））
+P2 flat5: PASS | autoSolve= {'done': True, 'taps': 5} | open_ms= 7654 want [6900,8800]
+P2 flat10: 开题实测 8064 ms（dch3 qi0=hide c4s4：SHOW_WIN4300+4×700+800+140≈8040——700 档实证）
+P2 flat10: PASS | autoSolve= {'done': True, 'taps': 7} | open_ms= 8064 want [7500,8840]
+P2 flat15: 开题实测 8256 ms（dch4 qi0=hide c4s5：SHOW_WIN4300+5×600+800+140≈8240——600 档实证）
+P2 flat15: PASS | autoSolve= {'done': True, 'taps': 9} | open_ms= 8256 want [7700,9700]
+P2 flat15: levels['4-0'].stars= 3 | pageerror: 0
+P2 pageerror: 0 []
+P3 竖屏 3 杯: {'n': 3, 'dataCups': '3', 'w': 132, 'h': 172, 'overflowX': 0, 'bodyOverflowX': 0, 'portrait': True}
+P3 竖屏 4 杯: {'n': 4, 'dataCups': '4', 'w': 102, 'h': 150, 'overflowX': 0, 'bodyOverflowX': 0, 'portrait': True}
+P3 portrait 3cups: PASS | 4cups: PASS | pageerror: 0
+SELFTEST PASS

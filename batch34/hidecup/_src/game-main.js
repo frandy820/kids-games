@@ -2,14 +2,20 @@
    开题演出（presentQuiz）：动物探头亮相 1.5s（peek 升起 CSS）→ 缩回杯内 400ms
    → 等亮相链播完（链=[名音 hc_n_<id>(clip), hc_show(clip)]，窗 SHOW_WIN 4300
    ≥ max(3738, 名音 1440+150+hc_show 1848+300=3738)——契约 N/G/T46 化）
-   → 换位演出（swaps 逐次两杯互换，速度按档 swapMsOf：dch1/2=1100/dch3=900/
-   dch4=700（r25 提速）/教学 1600，杯恒盖住；transition-duration 由 JS 逐次
-   设定=verify 页乘 SPEED 同步缩短）→ 静止 800ms → 开放点选。
-   r25 hidedual（dch4 qi1/3）：亮相链 3 段 [名音A, 名音B, hc_show]（窗
+   → 换位演出（swaps 逐次两杯互换，速度按档 swapMsOf：dch1=900/dch2=800/
+   dch3=700/dch4=600（r51 四档提速）/教学 1600，杯恒盖住；transition-duration
+   由 JS 逐次设定=verify 页乘 SPEED 同步缩短）→ 静止 800ms → 开放点选。
+   r51 hidedual（dch3/dch4 qi1/3）：亮相链 3 段 [名音A, 名音B, hc_show]（窗
    SHOW_WIN_DUAL 5400）+两只轮流探头（3800ms 窗）+q-text 双名；第一步点对=
    'half'（A found+链 [hc_right,hc_n_A,hc_n_B] 窗 HALF_WIN 5800+q-text 切 B 名）
    → 第二步点对=right/done（确认链尾=hc_n_B）；第二问重演时 A 藏回完整重看、
    演毕恢复 found。
+   r51 hidetriple（dch4 qi2）：亮相链 4 段 [名音A, 名音B, 名音C, hc_show]（窗
+   SHOW_WIN_TRIPLE 7000 ≥ 1440×3+150×3+1848+300=6918）+三只轮流探头
+   （5700ms 窗）+q-text 三名；第一步对='half'（A found+链 [hc_right,hc_n_A,
+   hc_n_B]）→ 第二步对='half'（B found+链 [hc_right,hc_n_B,hc_n_C]）→ 第三步
+   对=right/done（确认链尾=hc_n_C）；重演时已完成步的 found 藏回完整重看、
+   演毕恢复。
    演出锁=真时钟 state.showUntil（Date.now() 比较，tapCup 演出期返 null——
    测试驱动须轮询等可交互）。
    点对=杯抬+动物蹦出+确认链 [hc_right, hc_n_<id>]（全 clip 无 keyless——契约 N）
@@ -23,10 +29,11 @@
    30s 答案级=正确杯 breathe+重演；错链豁免窗让路（契约 I）。r25 M1 防回归：
    doReplay 完成段 lastAct 仅 user=true 刷（救援路径不刷=答案级不被饿死）。
    验收钩子：window.HC = { get currentLevel, get quiz{kind,cups,swaps,start,answer,
-   anim,step,miss,(dual:startA/B,answerA/B,animA/B,phase)}, tapCup(i), start(flat),
-   autoSolve(), replay() }——真实页同暴露（b29 坑⑥）。
-   tapCup 返回：对且非末题 'right' / 对且末题 'done' / dual 第一步对 'half'（r25）/
-   错 'wrong' / 豁免窗内错点吞 false / 换位演出期 null（真时钟锁）/ 越界·已答·无题 null。 */
+   anim,step,miss,(dual/triple:startA/B(+C),answerA/B(+C),animA/B(+C),phase)},
+   tapCup(i), start(flat), autoSolve(), replay() }——真实页同暴露（b29 坑⑥）。
+   tapCup 返回：对且非末题 'right' / 对且末题 'done' / dual 第一步对 'half' /
+   triple 第一步、第二步对 'half'（r51）/ 错 'wrong' / 豁免窗内错点吞 false /
+   换位演出期 null（真时钟锁）/ 越界·已答·无题 null。 */
 'use strict';
 
 const VERIFY = /[?&]verify=1/.test(location.search);
@@ -92,12 +99,15 @@ function layoutCups() {                          // 按当前位置布杯（slot
   });
 }
 function renderCups(q) {                         // 杯阵初始排列（identity）+动物挂 start 杯随杯走
-  cupsEl.innerHTML = '';                         // r25 hidedual：A/B 各挂 startA/startB 杯（两只随杯走）
+  cupsEl.innerHTML = '';                         // r51：dual A/B、triple A/B/C 各挂 start 杯（随杯走）
   window.__hcPerm = [];
   for (let k = 0; k < q.cups; k++) window.__hcPerm.push(k);     // pos→cup 初始 identity（契约 M 数值层锚）
-  const hostOf = cupId => q.kind === 'hidedual'
-    ? (cupId === q.startA ? q.animA : (cupId === q.startB ? q.animB : null))
-    : (cupId === q.start ? q.anim : null);
+  const hostOf = cupId => q.kind === 'hidetriple'
+    ? (cupId === q.startA ? q.animA : (cupId === q.startB ? q.animB :
+        (cupId === q.startC ? q.animC : null)))
+    : (q.kind === 'hidedual'
+      ? (cupId === q.startA ? q.animA : (cupId === q.startB ? q.animB : null))
+      : (cupId === q.start ? q.anim : null));
   for (let cupId = 0; cupId < q.cups; cupId++) {
     const w = document.createElement('div');
     w.className = 'cup-wrap pop';
@@ -143,13 +153,25 @@ function renderQuiz() {
   renderCups(q);
   renderStep();
 }
-/* r25 q-text 动态：hide=通用问句 / hidedual 按 phase=当前问的动物名（pre-literate
-   由亮相名音链预告，文字为陪读锚） */
+/* r51 q-text 动态：hide=通用问句 / dual、triple 按 phase=剩余未找到的动物名
+   （pre-literate 由亮相名音链预告，文字为陪读锚）。quizQText(names)：
+   单名『X藏在哪里呀』/多名『X、Y和Z藏在哪里呀』（顿号+和——与亮相链顺序一致） */
 function setQText(t) { qTextEl.textContent = t; }
-const dualQText = (q, phase) => ANIMAL_NAME[phase === 1 ? q.animB : q.animA] + '藏在哪里呀';
+function quizQText(names) {
+  if (names.length === 1) return names[0] + '藏在哪里呀';
+  return names.slice(0, -1).join('、') + '和' + names[names.length - 1] + '藏在哪里呀';
+}
+const pendingNames = q => q.kind === 'hide' ? null
+  : (q.kind === 'hidedual'
+      ? [ANIMAL_NAME[q.animA], ANIMAL_NAME[q.animB]].slice(q.phase)
+      : [ANIMAL_NAME[q.animA], ANIMAL_NAME[q.animB], ANIMAL_NAME[q.animC]].slice(q.phase));
+/* 末步名音=当前步答案动物（家族「末步名音=当前答案」口径；试玩P1 r25 防回归：
+   q.anim 兼容字段恒=A，错用则链尾播 A 名——r51 扩 triple=animC） */
+const ansAnimOf = q => q.kind === 'hidedual' ? q.animB
+  : (q.kind === 'hidetriple' ? q.animC : q.anim);
 
 /* ================= 换位动画：两杯互换（transition-duration 由 JS 设定=verify 同步提速；
-   r25 按档 swapMsOf：dch1/2=1100/dch3=900/dch4=700，教学 1600——Math.round 防
+   r51 按档 swapMsOf：dch1=900/dch2=800/dch3=700/dch4=600，教学 1600——Math.round 防
    700×0.12 浮点尾差产出非整串（verify ⑭ 精确断言配套））
    dataset.pos/__hcPerm 即时同步（逻辑排列已定，视觉过渡平滑） ================= */
 function doSwapAnim(sw, durMs) {
@@ -180,49 +202,58 @@ function resetCups(q) {
 
 /* ================= 开题演出：渲染 → 亮相链+peek → 换位 → 静止 → 开放点选
    演出锁=真时钟 showUntil（tapCup 演出期返 null——测试驱动须轮询等可交互）。
-   r25：换位速度按档 swapMsOf(cur.dch)（dch3 900/dch4 700，教学 slow 恒 1600）；
-   hidedual 亮相链 3 段 [名音A, 名音B, hc_show]（窗 SHOW_WIN_DUAL）+两只轮流
-   探头（A 升 1.1s 收 0.4s → B 同律，与名音链 A→B 顺序对应）；q-text 按 kind。 ================= */
+   r51：换位速度按档 swapMsOf(cur.dch)（dch1 900/dch2 800/dch3 700/dch4 600，
+   教学 slow 恒 1600）；hidedual 亮相链 3 段 [名音A, 名音B, hc_show]（窗
+   SHOW_WIN_DUAL）+hidetriple 亮相链 4 段 [名音A, 名音B, 名音C, hc_show]（窗
+   SHOW_WIN_TRIPLE）+轮流探头（每只升 1.1s 收 0.4s，错峰 PEEK_MS——与名音链
+   顺序对应）；q-text 按剩余未找到动物名（pendingNames）。 ================= */
 async function presentQuiz(slow) {
   const q = cur && cur.quizzes[cur.step];
   if (!q) return;
   renderQuiz();
   const run = cur, token = ++showRun;
   const dual = q.kind === 'hidedual';
+  const tri = q.kind === 'hidetriple';                  // r51 三动物
   const swapMs = slow ? SWAP_MS_TUT : swapMsOf(cur.dch);
-  const peekTotal = dual ? (PEEK_MS + HIDE_MS) * 2 : PEEK_MS + HIDE_MS;   // dual 两只轮流=3800
-  const chainWin = slow ? SHOW_WIN_TUT : (dual ? SHOW_WIN_DUAL : SHOW_WIN);
+  const peekTotal = (PEEK_MS + HIDE_MS) * (tri ? 3 : (dual ? 2 : 1));   // dual=3800 / triple=5700
+  const chainWin = slow ? SHOW_WIN_TUT
+    : (tri ? SHOW_WIN_TRIPLE : (dual ? SHOW_WIN_DUAL : SHOW_WIN));
   const total = chainWin + q.swaps.length * swapMs + STILL_MS;
   state.locked = true;
   state.showUntil = Date.now() + total * SPEED + 140;      // 真时钟演出锁（余量）
-  setQText(dual ? (ANIMAL_NAME[q.animA] + '和' + ANIMAL_NAME[q.animB] + '藏在哪里呀') : Q_TEXT);
-  if (dual) {
-    KIDS.voice.queue([nameClip(q.animA), nameClip(q.animB), VOICE.show.key]);   // 双动物亮相链（3 段全 clip）
+  const pend = pendingNames(q);
+  setQText(pend ? quizQText(pend) : Q_TEXT);
+  if (dual || tri) {
+    /* 多动物亮相链（全 clip）：dual 3 段 / triple 4 段（名音按 A→B→C 顺序） */
+    KIDS.voice.queue(tri
+      ? [nameClip(q.animA), nameClip(q.animB), nameClip(q.animC), VOICE.show.key]
+      : [nameClip(q.animA), nameClip(q.animB), VOICE.show.key]);
+    const starts = tri ? [q.startA, q.startB, q.startC] : [q.startA, q.startB];
     requestAnimationFrame(() => requestAnimationFrame(() => {
-      /* m3 竞态守卫（r25 审查挂账②）：双层闭包在 showRun++（重开关卡/通关/重演）后
-         仍可能对旧关 wrap——重渲染后 querySelector 命中的是**新关同号杯**——加 'up'
-         （非死锁竞态瑕疵）；token/cur 双判与下方 await 点守卫同款（r46 S1 旗标回收
-         不变式：++ 到新启动之间旗标恒一致，消费前先验） */
+      /* m3 竞态守卫（r25 审查挂账②/r51 收口统一）：双层闭包在 showRun++（重开关卡/
+         通关/重演）后仍可能对旧关 wrap——重渲染后 querySelector 命中的是**新关同号
+         杯**——加 'up'（非死锁竞态瑕疵）；token/cur 双判与下方 await 点守卫同款
+         （r46 S1 旗标回收不变式：++ 到新启动之间旗标恒一致，消费前先验） */
       if (token !== showRun || cur !== run) return;
-      const upA = cupsEl.querySelector('.cup-wrap[data-cup="' + q.startA + '"] .peek');
-      const upB = cupsEl.querySelector('.cup-wrap[data-cup="' + q.startB + '"] .peek');
-      if (upA) {
-        upA.classList.add('up');                           // A 先探头（对应名音链首段）
-        setTimeout(() => upA.classList.remove('up'), (PEEK_MS - HIDE_MS) * SPEED);
-      }
-      setTimeout(() => {
-        if (token !== showRun || cur !== run) return;   /* B 探头同守卫：A 升起后切关，B 不再对旧 q 探头 */
-        if (upB) {
-          upB.classList.add('up');                         // B 后探头（对应名音链次段）
-          setTimeout(() => upB.classList.remove('up'), (PEEK_MS - HIDE_MS) * SPEED);
-        }
-      }, PEEK_MS * SPEED);
+      starts.forEach((st, k) => {
+        setTimeout(() => {
+          if (token !== showRun || cur !== run) return;   /* 每只探头同守卫：前一只升起后切关，后续不再对旧 q 探头 */
+          const upEl = cupsEl.querySelector('.cup-wrap[data-cup="' + st + '"] .peek');
+          if (upEl) {
+            upEl.classList.add('up');                     // 依次探头（对应名音链顺序段）
+            setTimeout(() => upEl.classList.remove('up'), (PEEK_MS - HIDE_MS) * SPEED);
+          }
+        }, k * PEEK_MS * SPEED);
+      });
     }));
   } else {
     KIDS.voice.queue([nameClip(q.anim), VOICE.show.key]);  // 亮相链（T46 化全 clip，原 keyless 尾段→hc_show）
     const peekEl = cupsEl.querySelector('.cup-wrap[data-cup="' + q.start + '"] .peek');
     if (peekEl) {
       requestAnimationFrame(() => requestAnimationFrame(() => {
+        /* m3 r51 收口（r25 审查挂账②漏网处）：单动物分支同款 token 守卫——
+           hide 分支双层闭包此前无守卫，重开关卡窄窗口旧回调仍可加 'up' 类 */
+        if (token !== showRun || cur !== run) return;
         peekEl.classList.add('up');                        // 探头亮相 1.5s（CSS 升起）
         setTimeout(() => { peekEl.classList.remove('up'); }, (PEEK_MS - HIDE_MS) * SPEED);
       }));
@@ -233,7 +264,7 @@ async function presentQuiz(slow) {
   await wait((chainWin - peekTotal) * SPEED);              // 等亮相链播完（TTS 尾段）
   if (token !== showRun || cur !== run) return;
   for (let k = 0; k < q.swaps.length; k++) {
-    doSwapAnim(q.swaps[k], swapMs);                        // 换位（r25 按档：1100/900/700，教学 1600 慢速）
+    doSwapAnim(q.swaps[k], swapMs);                        // 换位（r51 按档：900/800/700/600，教学 1600 慢速）
     await wait(swapMs * SPEED);
     if (token !== showRun || cur !== run) return;
   }
@@ -246,9 +277,10 @@ async function presentQuiz(slow) {
 
 /* ================= 重看：同 swaps 重放全程（记忆任务重演不泄答案）
    user=true 走 3s 节流（题面后可点）；救援 false 不重置 lastAct（契约 B）。
-   r25：速度同初看（swapMsOf 档位——重演不降难度）；hidedual phase1 重演时
-   A 杯 found 先移除（藏回完整重看换位、不露已开杯跟随移动）、演毕恢复
-   （已完成步的视觉不吞）——恢复动作在 user=false 救援路径同样不刷 lastAct。 ================= */
+   r51：速度同初看（swapMsOf 档位——重演不降难度）；dual phase1 重演时 A 杯
+   found 先移除、triple phase≥1 重演时已完成步（phase1=A / phase2=A+B）found
+   先移除（藏回完整重看换位、不露已开杯跟随移动）、演毕恢复（已完成步的视觉
+   不吞）——恢复动作在 user=false 救援路径同样不刷 lastAct。 ================= */
 async function doReplay(user) {
   const q = cur && cur.quizzes[cur.step];
   if (!q || state.won) return false;
@@ -258,13 +290,17 @@ async function doReplay(user) {
     lastReplayAt = Date.now();
   }
   const run = cur, token = ++showRun;
-  const swapMs = swapMsOf(cur.dch);              // r25：与初看同速（1100/900/700）
+  const swapMs = swapMsOf(cur.dch);              // r51：与初看同速（900/800/700/600）
   const total = RESET_MS + q.swaps.length * swapMs + STILL_MS;
   state.locked = true;
   state.showUntil = Date.now() + total * SPEED + 140;
-  const wa = q.kind === 'hidedual' && q.phase === 1
-    ? cupsEl.querySelector('.cup-wrap[data-cup="' + q.startA + '"]') : null;
-  if (wa) wa.classList.remove('found');          // 重演期 A 藏回（杯身份锚 data-cup 不随 pos 变）
+  /* 已完成步的已开杯藏回（r51 triple 扩：phase1=[A] / phase2=[A,B]；杯身份锚
+     data-cup 不随 pos 变——查杯身份不查位置） */
+  const foundCups = q.kind === 'hidetriple'
+    ? (q.phase >= 2 ? [q.startA, q.startB] : (q.phase === 1 ? [q.startA] : []))
+    : (q.kind === 'hidedual' && q.phase === 1 ? [q.startA] : []);
+  const wasFound = foundCups.map(cu => cupsEl.querySelector('.cup-wrap[data-cup="' + cu + '"]'));
+  wasFound.forEach(w => { if (w) w.classList.remove('found'); });
   resetCups(q);                                  // 瞬时回初始排列
   await wait(RESET_MS * SPEED);
   if (token !== showRun || cur !== run) return false;
@@ -275,7 +311,7 @@ async function doReplay(user) {
   }
   await wait(STILL_MS * SPEED);
   if (token !== showRun || cur !== run) return false;
-  if (wa) wa.classList.add('found');             // 恢复已开 A 杯视觉（第一问已完成）
+  wasFound.forEach(w => { if (w) w.classList.add('found'); });   // 恢复已开杯视觉（已完成步不吞）
   state.locked = false;
   if (user) lastAct = Date.now();                /* 主动重看重置 idle（救援路径不动 lastAct——契约 B；r24 审查 M1 防回归锚） */
   return true;
@@ -348,25 +384,34 @@ async function uiTapCup(i, demo) {
     return r;
   }
 
-  /* ---- r25 half（双动物第一步对：A 蹦出+确认链尾名音预告第二问+q-text 切 B，
-     不推 step 不置 _answered；窗 HALF_WIN 5800 ≥ 2232+150+1440+150+1440+300=5712） ---- */
+  /* ---- r51 half（dual 第一步对 / triple 第一步、第二步对：刚完成步的动物蹦出+
+     确认链尾名音预告下一问+q-text 切剩余名，不推 step 不置 _answered；窗
+     HALF_WIN 5800 ≥ 2232+150+1440+150+1440+300=5712——dual/triple 各 half 通用） ---- */
   if (r === 'half') {
     state.locked = true;
     state.showUntil = Date.now() + HALF_WIN * SPEED + 140;
-    const wa = cupWrapAt(q.answerA);             /* 引擎已切 phase=1（q.answer=answerB），A 位置读 answerA */
-    if (wa) { wa.classList.remove('breathe'); wa.classList.add('found'); }
+    /* 刚完成的步=引擎推进后的 q.phase（dual 1 / triple 1、2）：第一步对 A 蹦出
+       （引擎已切 q.answer=answerB，A 位置读 answerA）、triple 第二步对 B 蹦出 */
+    const stepDone = q.phase;
+    const wHalf = cupWrapAt(stepDone === 1 ? q.answerA : q.answerB);
+    if (wHalf) { wHalf.classList.remove('breathe'); wHalf.classList.add('found'); }
     chimeGoal();
     sfx('coin');
-    KIDS.voice.queue([VOICE.right.key, nameClip(q.animA), nameClip(q.animB)]);   /* 确认链 3 段：找到啦+A 名+B 名（链尾=第二问预告） */
-    setQText(dualQText(q, 1));                   /* q-text 切『<B名>藏在哪里呀』（视觉先行） */
+    if (stepDone === 1) {
+      KIDS.voice.queue([VOICE.right.key, nameClip(q.animA), nameClip(q.animB)]);   /* 确认链 3 段：找到啦+A 名+B 名（链尾=第二问预告） */
+    } else {
+      KIDS.voice.queue([VOICE.right.key, nameClip(q.animB), nameClip(q.animC)]);   /* triple 第二步链：找到啦+B 名+C 名（链尾=第三问预告） */
+    }
+    setQText(quizQText(pendingNames(q)));        /* q-text 切剩余未找到动物名（视觉先行） */
     await wait(1600 * SPEED);
     if (cur !== run || token !== showRun) return r;
     await wait((HALF_WIN - 1600) * SPEED);       /* 罩 3 段确认链收尾 */
     if (cur !== run || token !== showRun) return r;
     state.locked = false;
     lastAct = Date.now();              /* 审查M2 r25：half 亦是正确作答——解锁即重置救援钟（§0.7a 与
-                                          right 路径一致）。不刷则第一问思考 ≥24s 的孩子 half 解锁后
-                                          idle 已越 30s，第二问被答案级救援即刻泄题（breathe 指 answerB） */
+                                          right 路径一致）。不刷则前一步思考 ≥24s 的孩子 half 解锁后
+                                          idle 已越 30s，下一问被答案级救援即刻泄题（breathe 指
+                                          q.answer=下一问真值）。r51 triple 两个 half 解锁处同律 */
     return r;
   }
 
@@ -384,9 +429,10 @@ async function uiTapCup(i, demo) {
   if (el) { el.classList.remove('breathe'); el.classList.add('found'); }
   chimeGoal();
   sfx('coin');
-  /* 试玩P1 r25：dual 第二步（phase=1 问 B）末步名音须=B——q.anim 兼容字段恒=animA，
-     三元分流（不动 q.anim 语义，SPEC §R4 末步名音=当前答案口径） */
-  KIDS.voice.queue([VOICE.right.key, nameClip(q.kind === 'hidedual' ? q.animB : q.anim)]);
+  /* 试玩P1 r25/r51：dual 第二步（问 B）/triple 第三步（问 C）末步名音=当前步答案
+     动物——q.anim 兼容字段恒=animA，ansAnimOf 按 kind 静态分流（不动 q.anim 语义，
+     SPEC §R4 末步名音=当前答案口径） */
+  KIDS.voice.queue([VOICE.right.key, nameClip(ansAnimOf(q))]);
   await wait(1600 * SPEED);                      /* 杯抬+动物蹦出+确认链主窗 */
   if (cur !== run) return r;
   await wait((demo ? 2450 : 3000) * SPEED);      /* 确认链收尾窗：4600 ≥ 2232+150+1440+300=4122（家族 G/H） */
@@ -407,10 +453,11 @@ async function uiTapCup(i, demo) {
 /* ================= 过关推进（celebrate → persistWin → 章末/日末）
    persistWin 抽独立函数：verify 页 KIDS 未 init（save=null）安全跳过，
    verify 单元⑪ init 后=真实写档链（localStorage kidsgame_hidecup） ================= */
-function persistWin(stars) {
+function persistWin(stars, lv) {
   const sv = KIDS._save();
   if (!sv || !sv.levels) return { chapterDone: false };   /* verify 沙盒未 init=安全跳过 */
-  return KIDS.level.pass(cur.ch, cur.lv, stars, [0, 1, 2, 3, 4]);
+  const c = lv || cur;                             /* P3-1：winFlow 异步链内 cur 可能被 HC.start 换关——同步快照优先 */
+  return KIDS.level.pass(c.ch, c.lv, stars, [0, 1, 2, 3, 4]);
 }
 function nextHint(flat) {
   const f = flat == null ? cur.flat : flat;
@@ -420,26 +467,27 @@ function nextHint(flat) {
   return ci < 4 ? CHAPTERS[ci + 1].hint : GEN_HINTS[genLevel(f + 1).dch - 1];
 }
 function winFlow() {
+  const run = cur;                               /* P3-1：celebrate 3s 异步窗内 HC.start 换关防 late-cur（同步快照贯穿 then 链） */
   state.won = true;
   state.locked = true;
   showRun++;                                     /* 通关中止在途演出 */
   ghost.hide();
-  const stars = engStars(cur);
+  const stars = engStars(run);
   sfx('win');
   sayR(VOICE.right.key, VOICE.right.text);       /* hc_right：找到啦，真棒（2232ms） */
   if (VERIFY) { persistWin(stars); return; }     // verify 页：不弹层不写档（init 沙盒除外——单元⑪）
   KIDS.ui.celebrate(stars).then(async () => {
     await wait(400);                             /* 家族 H：celebrate 2620+400=3020 ≥ 2232+300=2532 */
-    const pr = persistWin(stars);
+    const pr = persistWin(stars, run);
     renderDots();
     const lim = KIDS.calendar.limit(Infinity);
     const dayDone = lim > 0 && KIDS.calendar.dayDone(keysUpTo(lim));
     if (pr.chapterDone) {
-      const stars5 = [0, 1, 2, 3, 4].reduce((s, l) => s + KIDS.level.stars(cur.ch, l), 0);
-      KIDS.ui.chapterEnd({ chapter: cur.ch, stars: stars5, nextHint: nextHint(cur.flat) });
+      const stars5 = [0, 1, 2, 3, 4].reduce((s, l) => s + KIDS.level.stars(run.ch, l), 0);
+      KIDS.ui.chapterEnd({ chapter: run.ch, stars: stars5, nextHint: nextHint(run.flat) });
       setTimeout(proceed, 3400);
     } else if (dayDone) {
-      KIDS.ui.dayEnd({ nextHint: nextHint(null) });   /* 家族 A：winFlow 传 nextHint(null)（b25 形态定版） */
+      KIDS.ui.dayEnd({ nextHint: nextHint(null) });   /* 家族 A：winFlow 传 nextHint(null)（b25 形态定版；verify windows-srcA 字面锚——改措辞先查契约断言） */
       setTimeout(proceed, 3400);
     } else proceed();
   });
@@ -478,7 +526,7 @@ function startLevel(flat) {
    watch clip 3264 → 延 3564（≥3264+300）→ 开题演出（亮相窗 4200 ≥ rabbit 名音 1368+150+
    estMs('要躲猫猫啦')2325+300=4143 + 慢速换位 1600 + 静止 800）→ ghost 移入 800+press 320
    → demo 演出窗 1600+2450=4050（罩确认链 2232+150+1368+300=4050）→
-   turn clip 1824 → 延 2124（≥1824+300）→ presentQuiz 4300+1100+800
+   turn clip 1824 → 延 2124（≥1824+300）→ presentQuiz 4300+900+800（r51 教学换位=900 同 dch1 档）
    —— watch 段分账 3564+4200+1600+800+800+320+4050=15334 ≤ 16000 ---------- */
 function tutWatchLevel() {                       // 双题迷你关：题 0=演示题（demo 开对返回 'right'）
   const mk = (start, anim) => ({ kind: 'hide', cups: 2, swaps: [[0, 1]], start: start,
@@ -636,20 +684,24 @@ window.HC = {
     if (!cur || cur.done) return null;
     const q = cur.quizzes[cur.step];
     if (!q) return null;
-    const dual = q.kind === 'hidedual';
-    return { kind: q.kind,                             /* SPEC §1 钩子契约：'hide'|'hidedual'（r25） */
-             cups: q.cups,                             /* 杯数 2|3|4（r25 dch4 量域腿=4） */
+    const multi = q.kind === 'hidedual' || q.kind === 'hidetriple';
+    const tri = q.kind === 'hidetriple';
+    return { kind: q.kind,                             /* SPEC §1 钩子契约：'hide'|'hidedual'|'hidetriple'（r51） */
+             cups: q.cups,                             /* 杯数 3|4（r51：ch1=3，ch2-4=4） */
              swaps: q.swaps.map(s => s.slice()),       /* 换位对 [a,b][] 真值序列 */
-             start: q.start,                           /* 动物初始杯下标（dual=A 兼容面） */
-             answer: q.answer,                         /* 经 swaps 推导的动物杯下标（dual=当前步真值） */
-             anim: q.anim,                             /* 动物 id（池 5；dual=A 兼容面） */
-             startA: dual ? q.startA : undefined,      /* r25 dual：A/B 初始杯（互异） */
-             startB: dual ? q.startB : undefined,
-             answerA: dual ? q.answerA : undefined,    /* r25 dual：A/B 终位（独立复算对账锚） */
-             answerB: dual ? q.answerB : undefined,
-             animA: dual ? q.animA : undefined,
-             animB: dual ? q.animB : undefined,
-             phase: dual ? q.phase : undefined,        /* 0=问 A / 1=问 B */
+             start: q.start,                           /* 动物初始杯下标（dual/triple=A 兼容面） */
+             answer: q.answer,                         /* 经 swaps 推导的动物杯下标（dual/triple=当前步真值） */
+             anim: q.anim,                             /* 动物 id（池 5；dual/triple=A 兼容面） */
+             startA: multi ? q.startA : undefined,     /* dual/triple：A/B 初始杯（互异） */
+             startB: multi ? q.startB : undefined,
+             answerA: multi ? q.answerA : undefined,   /* dual/triple：A/B 终位（独立复算对账锚） */
+             answerB: multi ? q.answerB : undefined,
+             animA: multi ? q.animA : undefined,
+             animB: multi ? q.animB : undefined,
+             startC: tri ? q.startC : undefined,       /* r51 triple：C 初始杯（三互异） */
+             answerC: tri ? q.answerC : undefined,     /* r51 triple：C 终位（独立复算对账锚） */
+             animC: tri ? q.animC : undefined,
+             phase: multi ? q.phase : undefined,       /* 0=问 A / 1=问 B（triple 2=问 C） */
              step: cur.step,                           /* 全关题号 0-4（b33 坑①） */
              miss: q._miss || 0 };
   },
@@ -657,7 +709,7 @@ window.HC = {
   replay() { return doReplay(true); },
   async autoSolve() {                    // UI 路径自动点完当前关（逐题点正确杯，走真实判定链；
     let taps = 0, guard = 0;             // 演出锁/换位演出期 null → 轮询等锁窗结束重试，非 break）
-    while (cur && !cur.done && guard++ < 200) {   // r25：taps=判对次数（half 也计）——dch4 关=7、dch1-3 恒 5
+    while (cur && !cur.done && guard++ < 200) {   // r51：taps=判对次数（half 也计）——dch1/2=5、dch3=7、dch4=9
       let wg = 0;
       while ((state.locked || state.demo || Date.now() < state.showUntil) && wg++ < 3000) await wait(50);
       const q = cur && cur.quizzes[cur.step];
