@@ -16,8 +16,7 @@
    5-6 岁零文字依赖（§0.19）：题面 chip = 糖图形+大数字+箭头+动物图形+大数字，
    语义语音承载；底栏/家长面板除外。
    触摸目标：托盘糖/碗内糖/动物站/数字钮 ≥64、底栏 ≥64；overflowX 恒 0 */
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;overflow:hidden}
+<!--FAMILY_CSS:reset-->
 body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
@@ -211,10 +210,7 @@ svg{display:block}
 #ghost.pressing .g-ripple{animation:g-ripple .6s ease}
 @keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
 
-/* verify 结果（不参与正常布局） */
-#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
-  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
-body.verify #verify-result{display:block}
+<!--FAMILY_CSS:verify-->
 
 /* r22 首次新作答视觉预告：动物站次第 bounce（承 r21 tease 范式，预告可点不指示答案） */
 .station.tease{animation:st-jump .6s ease}
