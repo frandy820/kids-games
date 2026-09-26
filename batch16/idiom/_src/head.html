@@ -14,8 +14,7 @@
    竖屏双通道：@media(orientation:portrait) 与 body.port 逐条等值两段同步（build 对账+
    verify simView 锚+_selftest P1b 真竖 800×1180）；fill 2×2 / near 1×2。
    点对：情境卡亮（lit）+白话释义一句（TTS 兜底）+下一题；点错：卡晃动零惩罚可重点 */
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;overflow:hidden}
+<!--FAMILY_CSS:reset-->
 body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
@@ -119,20 +118,8 @@ svg{display:block}
 #btn-hear.bounce{animation:spk-b .45s ease}
 
 /* ---------- 幽灵手指教学（照家族） ---------- */
-#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
-  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
-#ghost.show{opacity:.92}
-#ghost.pressing{animation:g-press .6s ease}
-@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
-#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
-  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
-#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
-@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
-
-/* verify 结果（不参与正常布局） */
-#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
-  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
-body.verify #verify-result{display:block}
+<!--FAMILY_CSS:ghost-->
+<!--FAMILY_CSS:verify-->
 
 /* ---------- 竖屏双通道（@media 与 body.port 逐条等值两段同步——build 对账+verify simView；
    fill 候选 2×2、near 双卡 1×2、情境句字号收紧防溢出） ---------- */

@@ -10,8 +10,7 @@
    三段式舞台（SPEC §2 r13）：场景插画区（上）/ 题面大字逐词 3-4 句（中）/ 4 选 1 答案大数字卡（下）
    触摸目标：答案卡 ≥96×96、底栏按钮 ≥72；数字大字（关键数字不依赖阅读 §0.19）；
    插画数字与确切数量不入画（防数元素代替运算） */
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;overflow:hidden}
+<!--FAMILY_CSS:reset-->
 body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
@@ -102,20 +101,8 @@ svg{display:block}
 @keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
 
 /* ---------- 幽灵手指教学（照 divide/fraction） ---------- */
-#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
-  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
-#ghost.show{opacity:.92}
-#ghost.pressing{animation:g-press .6s ease}
-@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
-#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
-  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
-#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
-@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
-
-/* verify 结果（不参与正常布局） */
-#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
-  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
-body.verify #verify-result{display:block}
+<!--FAMILY_CSS:ghost-->
+<!--FAMILY_CSS:verify-->
 
 /* 竖屏（平板竖持）：插画收窄、题面数字放大、答案卡加大
    双通道（r9 M-A1/r11 M-1/r12 M3 同型定版）：@media 真竖屏 + body.port 类通道
