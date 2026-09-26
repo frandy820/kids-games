@@ -12,8 +12,7 @@
    卡/家内图形 SVG ≥64（大小维=盒内缩放，触摸面不变）；pointerdown 即响应；
    布局=flex column + 九宫格 HTML grid（§0.15 结构化内容优先）
    答对=图形卡飞进家山墙圆窗/九宫格缺格 + 家亮灯（.lit）；答错=晃动+灰掉 pointer-events:none（灰化款） */
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;overflow:hidden}
+<!--FAMILY_CSS:reset-->
 body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
@@ -131,20 +130,8 @@ svg{display:block}
 @keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
 
 /* ---------- 幽灵手指教学（照 batch9） ---------- */
-#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
-  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
-#ghost.show{opacity:.92}
-#ghost.pressing{animation:g-press .6s ease}
-@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
-#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
-  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
-#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
-@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
-
-/* verify 结果（不参与正常布局） */
-#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
-  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
-body.verify #verify-result{display:block}
+<!--FAMILY_CSS:ghost-->
+<!--FAMILY_CSS:verify-->
 
 /* 竖屏（平板竖持）：家与卡收紧（家 340 宽 + 3×144 卡 + gap 放得下 800 宽） */
 @media (orientation:portrait){
