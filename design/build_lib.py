@@ -23,11 +23,21 @@
     build_lib.build(ROOT, game='xxx', pre_assemble=_asserts)
 """
 import pathlib
+import re
 import sys
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent   # design/ 的上级 = 仓库根
 CORE_JS_PATH = REPO_ROOT / 'design' / 'core.js'
 VOICE_DIR = REPO_ROOT / 'voice'
+FAMILY_CSS_PATH = REPO_ROOT / 'design' / 'family.css'
+
+# 家族公共 CSS 单一真值源（S4 阶段2）：
+#   款级 head.html 里被抽出的公共段以 <!--FAMILY_CSS:NAME--> 占位；
+#   构建期 inject_family_css() 把 design/family.css 中 /*==SEG:NAME==*/ 段原文
+#   内联回原位置 → 产物仍自包含单文件，且与抽取前逐字节等价（原样移出/原样移回）。
+#   无占位的款零影响（head 原样返回，不读 family.css）。
+_FAMILY_SEG_RE = re.compile(r'/\*==SEG:([A-Za-z0-9_-]+)==\*/\n(.*?)\n/\*==SEG-END==\*/\n', re.S)
+_FAMILY_MARKER_RE = re.compile(r'<!--FAMILY_CSS:([A-Za-z0-9_-]+)-->')
 
 # 完全离线白名单：SVG xmlns 命名空间标识符是唯一允许的 http 字面
 _OFFLINE_ALLOW = ('http://www.w3.org/2000/svg',)
@@ -86,6 +96,43 @@ def clips_core_fallback(clips, core_keys=('core_chapter_end', 'core_day_end', 'c
     return clips.replace('};/*CLIPS-END*/', ',' + ','.join(parts) + '};/*CLIPS-END*/')
 
 
+def load_family_css():
+    """解析 design/family.css → {段名: 段原文}。段格式见文件头注释。"""
+    text = FAMILY_CSS_PATH.read_text(encoding='utf-8')
+    segs = {}
+    for m in _FAMILY_SEG_RE.finditer(text):
+        name, seg = m.group(1), m.group(2)
+        assert '/*==SEG' not in seg, 'family.css 段 %s 内含段定界符' % name
+        assert name not in segs, 'family.css 段名重复: %s' % name
+        segs[name] = seg
+    assert segs, 'family.css 解析出 0 段（格式损坏？）'
+    return segs
+
+
+def inject_family_css(head):
+    """head 中 <!--FAMILY_CSS:NAME--> 占位替换为 family.css 对应段原文。
+    - 无占位 → 原样返回（未做占位替换的款行为完全不变，不读 family.css）
+    - 有占位但 family.css 缺文件/缺段 → exit(4) 暴露，禁静默降级（缺段=残缺交付）
+    - 同名占位在 head 中必须恰好 1 次（防双段误并）"""
+    names = set(_FAMILY_MARKER_RE.findall(head))
+    if not names:
+        return head
+    try:
+        segs = load_family_css()
+    except (OSError, AssertionError) as e:
+        print('FAMILY-CSS-FAIL: family.css 不可用:', repr(e)[:200])
+        sys.exit(4)
+    missing = names - set(segs)
+    if missing:
+        print('FAMILY-CSS-FAIL: family.css 缺段:', sorted(missing))
+        sys.exit(4)
+    for name in sorted(names):
+        marker = '<!--FAMILY_CSS:%s-->' % name
+        assert head.count(marker) == 1, '占位 %s 出现 %d 次 != 1' % (marker, head.count(marker))
+        head = head.replace(marker, segs[name])
+    return head
+
+
 def hard_checks_pre(S):
     """硬检查 1：各 JS 段禁字面 </script>（会提前闭合标签）。
     硬检查 2：core.js 必须是最新契约版（防旧版混入）。"""
@@ -139,6 +186,7 @@ def build(src_dir, *, game, head_name='head.html', verify_block='separate',
     返回 (html, out_path)。"""
     _reconfigure_stdout()
     S = load_sources(src_dir, head_name=head_name)
+    S['head'] = inject_family_css(S['head'])
     S['clips'] = load_clips(game)
     if clips_prep is not None:
         S['clips'] = clips_prep(S['clips'])

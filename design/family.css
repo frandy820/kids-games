@@ -1,0 +1,29 @@
+/* kids-games 家族公共样式单一真值源（引擎抽取 S4 阶段2）
+   机制：款级 head.html 中被抽出的公共段以 <!--FAMILY_CSS:段名--> 占位；构建期
+   design/build_lib.py inject_family_css() 把下述 /*==SEG:段名==*/ 段原文内联回原位置。
+   产物仍自包含单文件（红线不变），且与抽取前逐字节等价（原样移出/原样移回）。
+   纪律：本文件只收「跨款逐字节完全一致」的段——改样式不许只改这里（会使已占位款
+   与未占位款分叉），须先在全部款同步改完、对拍一致后再整体收回。
+   各段覆盖率见 S4 阶段2 报告（reset 117/118、ghost 97/118、verify 96/118）。 */
+/*==SEG:reset==*/
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+/*==SEG-END==*/
+/*==SEG:ghost==*/
+#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
+  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
+#ghost.show{opacity:.92}
+#ghost.pressing{animation:g-press .6s ease}
+@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
+#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
+#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
+@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
+
+/*==SEG-END==*/
+/*==SEG:verify==*/
+/* verify 结果（不参与正常布局） */
+#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
+  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
+body.verify #verify-result{display:block}
+/*==SEG-END==*/
