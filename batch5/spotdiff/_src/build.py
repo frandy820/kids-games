@@ -1,46 +1,19 @@
 # -*- coding: utf-8 -*-
 """spotdiff 单文件拼接：_src/head.html + core.js(全文原样) + clips + 游戏 JS → ../index.html
-用法: cd batch5/spotdiff && python _src/build.py"""
+用法: python batch5/spotdiff/_src/build.py
+S4 阶段1：共同骨架（读源/clips 注入/三硬检查/3 块拼接/幂等写出）已入 design/build_lib.py，
+本款无款级断言表（原版仅 ImportError 降级空串守卫，无 MUST/条数断言），
+双跑对拍 md5 等价验证过：5da2d357e00113d27ce6f6f095c34781。
+本款拼接口径=3 script 块（verify 并入第 3 块，无独立第 4 块）。
+坑：字面 </script>/core 契约版由 build_lib.hard_checks_pre 同口径兜底；
+完全离线与 n_scripts==3 由 hard_checks_post(n_scripts=3) 同口径兜底。
+clips 口径差异：旧版 ImportError 时降级空串构建；build_lib 口径=任何失败 exit(3)
+暴露（成功路径产物逐字节一致，对拍实证）。"""
 import pathlib, sys
 
-ROOT = pathlib.Path(__file__).resolve().parent
-SRC = ROOT
-OUT = ROOT.parent / 'index.html'
-CORE = pathlib.Path(r'F:/claudecode/projects/active/kids-games/design/core.js')
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[3]))  # 仓库根（禁绝对路径）
+from design import build_lib
 
-head = (SRC / 'head.html').read_text(encoding='utf-8')
-core = CORE.read_text(encoding='utf-8')
-data = (SRC / 'game-data.js').read_text(encoding='utf-8')
-engine = (SRC / 'game-core.js').read_text(encoding='utf-8')
-main = (SRC / 'game-main.js').read_text(encoding='utf-8')
-verif = (SRC / 'game-verify.js').read_text(encoding='utf-8')
-# 语音 clips 注入（管线未就绪时降级为空串，主会话补管线后重建即可）
-try:
-    sys.path.insert(0, 'F:/claudecode/projects/active/kids-games/voice')
-    from inject_clips import clips_js
-    clips = clips_js('spotdiff')
-except ImportError:
-    clips = ''
+ROOT = pathlib.Path(__file__).resolve().parent          # _src/
 
-# 硬性检查 1：JS 内不得出现字面 </script>（会提前闭合标签）
-for name, s in [('core', core), ('data', data), ('engine', engine),
-                ('main', main), ('verify', verif), ('clips', clips)]:
-    assert '</script' not in s, f'{name} 含字面 </script>，需写 <\\/script>'
-
-# 硬性检查 2：core.js 必须是最新契约版（防旧版混入）
-assert 'settle()' in core, 'core.js 非最新版（缺 session.settle）'
-assert 'queue(parts)' in core, 'core.js 非最新版（缺 voice.queue）'
-
-html = (head + '\n' +
-        '<script>\n' + core + '\n</script>\n' +
-        '<script>\n' + clips + '\n</script>\n' +
-        '<script>\n' + data + engine + main + verif + '\n</script>\n' +
-        '</body>\n</html>\n')
-
-# 硬性检查 3：完全离线——除 SVG xmlns 命名空间标识符外无任何 http(s)/外链
-stripped = html.replace('http://www.w3.org/2000/svg', 'NS-SVG')
-for bad in ['http://', 'https://', '<link', ' src=', ' href=']:
-    assert bad not in stripped, f'发现外部引用: {bad}'
-
-OUT.write_text(html, encoding='utf-8')
-print('OK written:', OUT, len(html), 'chars')
+build_lib.build(ROOT, game='spotdiff', head_name='head.html', verify_block='merged')
