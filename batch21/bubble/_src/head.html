@@ -12,8 +12,7 @@
    5-6 岁零文字依赖：顶部=目标色色卡+目标数大数字（当前计数不显示——数在心里），
    语义全靠语音承载；「好了」=绿色大对勾图形按钮（零文字）；
    r9：#timer 温和琥珀倒计时条（章后段收尾，零文字）+#field.sleep 超时静息（泡泡缓浮不爆） */
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;overflow:hidden}
+<!--FAMILY_CSS:reset-->
 body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
@@ -130,10 +129,7 @@ svg{display:block}
 #ghost.pressing .g-ripple{animation:g-ripple .6s ease}
 @keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
 
-/* verify 结果（不参与正常布局） */
-#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
-  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
-body.verify #verify-result{display:block}
+<!--FAMILY_CSS:verify-->
 
 /* 竖屏（平板竖持）：目标卡适度收紧（泡按 field 实际宽高定位，无需改）。
    body.port=竖屏规则的类通道（媒体查询跟视口不跟元素，verify simView 靠注入 .port 吃到这段，

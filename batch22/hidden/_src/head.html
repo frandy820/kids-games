@@ -10,8 +10,7 @@
    触摸目标：热区按钮直径=2×HIT_R 场景单位（恒 ≥64px，fitField 锁 1000:620 无 letterbox），
    底栏按钮 ≥72；布局量测一律 offsetWidth/offsetHeight（禁 getBoundingClientRect 断言）；
    5-6 岁零文字依赖：题面=动物图标+点数（语音承载全部语义），点数进度点随找到点亮 */
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;overflow:hidden}
+<!--FAMILY_CSS:reset-->
 body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
@@ -160,10 +159,7 @@ svg{display:block}
 #ghost.pressing .g-ripple{animation:g-ripple .6s ease}
 @keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
 
-/* verify 结果（不参与正常布局） */
-#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
-  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
-body.verify #verify-result{display:block}
+<!--FAMILY_CSS:verify-->
 
 /* 竖屏（平板竖持）：计数条适度收紧（场景按 fieldwrap 实际宽高适配，无需改） */
 @media (orientation:portrait){
