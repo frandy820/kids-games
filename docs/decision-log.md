@@ -37,3 +37,45 @@
 - **结果**：站点 https://frandy820.github.io/kids-games/ 构建 built，主入口+游戏页抽查 200。平板/手机浏览器可直接玩，全静态离线结构在 Pages 上等价本地 file:// 行为。
 - **注意**：仓库含 docs/ 内部路径（F:/claudecode/...）与工作文档，随公开一并可见——用户已知情并明确要求公开。ledger/difficulty-audit/output 仍按 .gitignore 不入库。
 - **验证**：首推后 gh api 核验 commits=2；后续收官增量推送（7a3f2cc）后复核 commits=3。进程干净退出 + 日志 `* [new branch] main -> main`。
+
+## #6 2026-09-27 S4 收尾：11 款「自持构建款」不迁移 build_lib，三态分界定版——**用户过目待确认**
+- **背景**：S4 引擎抽取收官（b1-b11，commit 954f785），110/121 款已薄壳化（_src/build.py =
+  design/build_lib.py 薄壳）；11 款未迁移，此前散见台账但零正式落盘（S4 反方审查 M4 敞口）。
+- **术语（定版）**：这 11 款称**「自持构建款」**——各自持有独立 build.py（或纯手拼），
+  不依赖 design/build_lib.py。旧称「legacy 款」废止（与 `batch2/memory/build_legacy/`
+  旧结构备份目录双义撞名，审查 m5）；该备份目录名不变（r19 归档，不参与构建），与本决策无关。
+- **11 款清单与形态**：
+  | 款 | 形态 | 说明 |
+  |---|---|---|
+  | batch2/color | 款根 build.py，1 块拼接（template 直填） | _src 仅 game.css/game.js/pics.js 三件 |
+  | batch2/tangram | 款根 build.py，head+body 三块 | ROOT 指向 _src |
+  | batch3/math | 款根 build.py，五件套三块（verify 并入） | 与薄壳同素材、不同骨架 |
+  | batch3/pattern | 款根 build.py，head+body 三块 | |
+  | batch3/pinyin | **_src/**build.py，head+body 非五件套（merged-in-main 变体） | 薄壳化需先做源件拆分适配 |
+  | batch4/clock | 款根 build.py，五件套三块 | |
+  | batch4/sudoku | 款根 build.py，head+body 三块；路径本就相对 | |
+  | batch4/times | 款根 build.py，五件套三块；路径本就相对 | |
+  | batch5/connect | 款根 build.py，五件套三块 | |
+  | batch1/pipe-rabbit | **无 build.py**（纯手拼 index.html） | 初代款 |
+  | batch1/shop-math | build/build.py（build/ 目录变体） | 拼接源在 build/ 内 |
+- **不迁移理由**：①改造收益低——薄壳化对前 8 款=先补齐 _src 拆分/五件套适配工程
+  （pinyin 非五件套、color 三件、tangram/pattern/sudoku 有 body.html），纯重构无产物收益
+  （S4 红线：产物逐字节不变）；②pipe-rabbit/shop-math 无标准构建链可接；③11 款均有
+  smoke+md5 对照保护（终验 121/121 PASS，自持款为对照组原样未动）；④S4p3 判定
+  「0.8% 收益不称 118 款重排成本」同向。
+- **三态分界（family.css 视角，与 design/family.css 头注释一致）**：
+  ①**占位款**（薄壳 110 中 head 含 FAMILY_CSS 占位者，109 款——kitchen-rhythm 薄壳但
+  head 本无三段）——family.css 改段波及其产物；②**跳段款**（占位款子集 37 款：ghost
+  跳段 20 + verify 跳段 17）——该段改动不波及；③**自持构建款 11**——不读 family.css，
+  同功能段自持且本就异形（实证：color 的 verify 段为单行简版 `#verify-result { display: none; }`
+  vs family.css 四行段），「与 family.css 对拍一致」对它们永不成立。
+- **配套护栏（本条同批落地）**：design/check_family_drift.py 三态快照 + 基线
+  design/family-drift-baseline.json（自持款异形段指纹入册，改段前后对账）；
+  8 个含 F:/ 绝对路径的自持款 build.py 已收编 pathlib 相对推导（color/tangram/math/
+  pattern/pinyin/clock/connect/shop-math；sudoku/times 原本相对；pipe-rabbit 无脚本），
+  逐款 rebuild 对拍 md5 与改前逐字节相等（8/8，产物 git 零 diff）。
+- **回滚方式**：`git revert` 本条对应 commit 即恢复绝对路径版；决策本身如用户否决，
+  按用户指令启动对应款的薄壳化迁移（b1-b11 滚动口径可复用）。
+- **验证方式**：mutation test 18/18（含自持款口径外的薄壳全批代表）+ drift 基线对账
+  PASS + 自持款 8/8 rebuild 对拍；**本条目用户过目确认前为「待确认」状态，不视为已销项**
+  （S4 审查 M4-①：用户过目动作由 orchestrator 向用户确认后销项）。

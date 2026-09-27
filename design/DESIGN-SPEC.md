@@ -181,3 +181,72 @@ SONGS = [{ title:'小星星', bpm: 88, beats: 32,
 3. 双 viewport（1280×800 鼠标 / 800×1180 触摸）检查 overflowX=0、可点元素 ≥64px（抽样 getBoundingClientRect）
 4. 全页截图 → 像素非空白校验
 输出 `batch1/verify-report.md`（PASS/FAIL 表）。
+
+---
+
+## 13. build_lib 薄壳用法（S4 阶段1 定版，2026-09-27 补记）
+
+> 110/121 款已按此形态薄壳化；新款与回炉款一律走本节。完整接口见 design/build_lib.py 模块 docstring。
+
+款级 `_src/build.py` = 薄壳：共同骨架（读五件套 head/game-data/game-core/game-main/game-verify
++ design/core.js 全文 → 语音 clips 注入（voice/inject_clips.py，失败 exit(3) 禁静默降级）→
+三硬检查（字面 `</script>` / core 契约版 settle+queue / 完全离线+script 块数）→ 拼接 →
+幂等写出）全部在 `design/build_lib.py`；薄壳只留**款级差异**：
+
+- `head_name`：head 文件名两态（head.html / game-head.html）；
+- `verify_block`：'separate'=4 块（verify 独立）/ 'merged'=3 块（verify 并入第 3 块）；
+- `clips_prep`：clips 注入后兜底加工（maze 范式 core 3 条走 `build_lib.clips_core_fallback`）；
+- `pre_assemble=_asserts`：**款级断言表**（原样搬移，S 含 head/core/data/engine/main/verify/clips 七键）。
+
+**样板（按复杂度递增，新款直接抄最近的）**：
+- 最简（无款级断言，仅 clips 非空守卫）：`batch9/memgrid/_src/build.py`、`batch9/mirror`、`batch10/chainsum`；
+- 常规（断言表 + 三段占位）：`batch13/grid/_src/build.py`、`batch20/quiz`（大 clips 款）；
+- 特例参考：`batch31/chartread`（LF 写出变体二次定行尾）、`batch40/ins`（game-head.html 两态）、
+  `batch28/coder`（clips_core_fallback 收编）、`batch35/maketen`（款内 _clips_prep 全键口径）。
+
+**纪律**：①断言表原文搬移禁语义改写；确需前移「写盘后断言」时必须在差异注释声明
+（b7-b11 先例：calendar/season/sign/coin 等 M4 尾段前移）；②改薄壳/rebuild 后必须 md5
+对拍逐字节相等才准落盘（CI 链见终验报告：快照→rebuild→对拍→smoke→git status 复核）；
+③平台前提：产物以 Windows 构建为基线，write_text 无 newline 参数，跨平台 rebuild 行尾
+漂移会被 md5 门禁拦下（可发现非静默），跨机批量 rebuild 须同平台。
+
+## 14. family.css 占位机制与改段纪律（S4 阶段2 定版，2026-09-27 补记）
+
+**机制**：跨款逐字节完全一致的公共 CSS 段（reset/ghost/verify）收口于 design/family.css
+单一真值源；款级 head 内被抽出的段以 `<!--FAMILY_CSS:段名-->` 占位，构建期
+`build_lib.inject_family_css()` 把段原文内联回原位置——产物仍自包含单文件且与抽取前
+逐字节等价。失败模式全部显式：无占位零影响 / 同名占位必须恰 1 次 / 缺段 exit(4) /
+段内禁嵌套段定界符。
+
+**三态格局（121 款，2026-09-27 实测；逐款名单以 design/family-drift-baseline.json 为准）**：
+①**占位款 109**：head 含占位符，family.css 改段波及其产物；②**跳段款 37**
+（ghost 跳段 20 + verify 跳段 17，互不重叠）：该款 head 本无该公共段，对应段改动不波及；
+另 batch1/kitchen-rhythm 为薄壳但 head 无全部三段（同理不受波及）；③**自持构建款 11**
+（清单见 docs/decision-log.md #6）：不读 family.css，同功能段自持且本就异形——
+「与 family.css 对拍一致」对它们永不成立。
+
+**改段纪律（可执行版）**：
+1. family.css 只收「跨款逐字节完全一致」的段；段区（==SEG== 定界内）一字节不得随手改；
+2. **改段 = 一次性变更**：改后立即全量 rebuild 全部薄壳 110 款，逐款 md5 对拍落台账——
+   预期 = 受该段影响的占位款 md5 全变且 diff 内容同源；跳段款/kitchen-rhythm/自持款不变；
+3. **跳段款、自持款显式声明不随动**：不要求其与改后段一致；其段态由
+   `design/check_family_drift.py` 快照对账（`--baseline design/family-drift-baseline.json`），
+   自持款异形段指纹不得漂移——防「改段顺手改自持款」与「自持款被静默改动」两种分叉。
+
+## 15. 款级 verify 写作规范（S4p3 判定替代方案，2026-09-27 立）
+
+> S4p3 结论（verify-kit 抽取判定=不做）：款级 verify 差异是设计特性（自持真值、禁抄页面
+> 数据、独立复算），不抽公共 verify-kit.js；以本规范定死已事实收敛的形态，作用于**新款
+> 与回炉款**，存量 121 款零迁移。
+
+新写/回炉 game-verify.js 必须遵循（全库 100% 一致或近一致的事实形态）：
+1. **game-main.js 首部 4 行微段**（全库唯一逐字节一致的段）：`const VERIFY` / `$id` / `wait`
+   / `const SPEED = VERIFY ? 0.12 : 1`（提速档 0.12 为 110 款一致值，8 款有意调变须注释理由）；
+2. **入口 stub 基础 6 行**：`runVerify()` 闭包（ok 计数 + units 数组）标准形态；
+3. **输出行**：结果 JSON 写 `#verify-result`，字段名 `game/total/pass/units` **不得增删改名**
+   ——批量 verify 脚本与 _selftest 按此字段对拍（外部断言契约）；
+4. **title 行**：`VERIFY PASS n/n` 或 `VERIFY FAIL`（含 layoutOk 形态族——layout 断言是否
+   计入 npass 须与该款既有口径一致，勿静默改变语义）；
+5. **simView 头 3 行范式**：模拟视图（如有）按既有款头三行形态；
+6. 真值纪律（原有，重申）：verify 自持真值源，禁抄页面运行时数据，期望值独立复算；
+   build 侧静态前置断言与运行时 verify 单元同源但不互抄实现函数。

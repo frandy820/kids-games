@@ -5,7 +5,7 @@ import pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent
 OUT = ROOT.parent / 'index.html'
-CORE = pathlib.Path(r'F:/claudecode/projects/active/kids-games/design/core.js')
+CORE = ROOT.parent.parent.parent / 'design' / 'core.js'   # 仓库根/design/core.js（绝对路径收编，S4 审查 M4）
 
 head = (ROOT / 'head.html').read_text(encoding='utf-8')
 body = (ROOT / 'body.html').read_text(encoding='utf-8')
@@ -14,7 +14,7 @@ data = (ROOT / 'game-data.js').read_text(encoding='utf-8')
 main = (ROOT / 'game-main.js').read_text(encoding='utf-8')
 verify = (ROOT / 'game-verify.js').read_text(encoding='utf-8')
 # 语音 clips 注入（clips 目录缺失即构建失败，防静默丢语音）
-sys.path.insert(0, r'F:/claudecode/projects/active/kids-games/voice')
+sys.path.insert(0, str(ROOT.parent.parent.parent / 'voice'))   # 绝对路径收编，S4 审查 M4
 from inject_clips import clips_js
 clips = clips_js('shop')
 

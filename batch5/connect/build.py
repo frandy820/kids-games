@@ -6,7 +6,7 @@ import pathlib, sys
 ROOT = pathlib.Path(__file__).resolve().parent
 SRC = ROOT / '_src'
 OUT = ROOT / 'index.html'
-CORE = pathlib.Path(r'F:/claudecode/projects/active/kids-games/design/core.js')
+CORE = ROOT.parent.parent / 'design' / 'core.js'   # ../../design/core.js（绝对路径收编，S4 审查 M4）
 
 head = (SRC / 'head.html').read_text(encoding='utf-8')
 core = CORE.read_text(encoding='utf-8')
@@ -16,7 +16,7 @@ main = (SRC / 'game-main.js').read_text(encoding='utf-8')
 verif = (SRC / 'game-verify.js').read_text(encoding='utf-8')
 # 语音 clips 注入（管线未就绪时降级为空串，主会话补管线后重建即可）
 try:
-    sys.path.insert(0, 'F:/claudecode/projects/active/kids-games/voice')
+    sys.path.insert(0, str(ROOT.parent.parent / 'voice'))   # 绝对路径收编，S4 审查 M4
     from inject_clips import clips_js
     clips = clips_js('connect')
 except Exception:

@@ -1,9 +1,26 @@
-/* kids-games 家族公共样式单一真值源（引擎抽取 S4 阶段2）
+/* kids-games 家族公共样式单一真值源（引擎抽取 S4 阶段2；三态格局+可执行纪律 2026-09-27 补，S4 审查 M2）
    机制：款级 head.html 中被抽出的公共段以 <!--FAMILY_CSS:段名--> 占位；构建期
    design/build_lib.py inject_family_css() 把下述 /*==SEG:段名==*/ 段原文内联回原位置。
    产物仍自包含单文件（红线不变），且与抽取前逐字节等价（原样移出/原样移回）。
-   纪律：本文件只收「跨款逐字节完全一致」的段——改样式不许只改这里（会使已占位款
-   与未占位款分叉），须先在全部款同步改完、对拍一致后再整体收回。
+   三态格局（121 款，2026-09-27 实测；逐款精确名单以 design/family-drift-baseline.json 为准）：
+   ① 占位款 109 —— 薄壳款 head 内含本文件占位符（reset 109/ghost 89/verify 92），
+     本文件改段直接波及其产物（rebuild 后 md5 必变）；
+   ② 跳段款 37 —— 占位款子集，该款 head 本无某公共段（ghost 跳段 20 + verify 跳段 17，
+     两窗互不重叠）：对应段在本文件的改动不波及该款（head 无占位符，inject 原样跳过）。
+     另 batch1/kitchen-rhythm 为薄壳但 head 本无全部三段（无任何占位符，同理不受波及）；
+   ③ 自持构建款 11（batch2/color、batch2/tangram、batch3/math、batch3/pattern、batch3/pinyin、
+     batch4/clock、batch4/sudoku、batch4/times、batch5/connect、batch1/pipe-rabbit、batch1/shop-math）
+     —— 不读本文件，同功能段在各自源内自持，且本就异形：实证 batch2/color 的 verify 段为
+     单行简版 `#verify-result { display: none; }`，与本文件 verify 四行段同功能不同字节
+     ——「与 family.css 对拍一致」对自持款永不成立（决策见 docs/decision-log.md）。
+   纪律（可执行版，替代旧版「全款同步改完再收回」——旧版对跳段款无对象、对自持款不可能一致）：
+   - 本文件只收「跨款逐字节完全一致」的段，段区（==SEG== 定界内）一字节不得随手改；
+   - 改段 = 一次性变更，改后立即：全量 rebuild 全部薄壳 110 款（含全部占位款），逐款 md5
+     对拍落台账——预期=受该段影响的占位款 md5 全变且 diff 内容同源；跳段款/kitchen-rhythm
+     /自持款产物 md5 不变；
+   - 跳段款、自持款显式声明不随动：不要求其与改后段一致；其段态由 design/check_family_drift.py
+     快照对账（改段前后各跑一次 --baseline design/family-drift-baseline.json，自持款异形段
+     指纹不得漂移），防「改段顺手改了自持款」或「自持款被静默改动」。
    各段覆盖率见 S4 阶段2 报告（reset 117/118、ghost 97/118、verify 96/118）。 */
 /*==SEG:reset==*/
 *{margin:0;padding:0;box-sizing:border-box}

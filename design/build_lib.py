@@ -8,6 +8,9 @@
   + 幂等写出 index.html（utf-8，write_text 同旧脚本语义，保证产物逐字节等价）。
 款级差异全部参数化：head 文件名 / clips 游戏名与兜底 / verify 分块 / 款级断言回调。
 路径一律相对仓库根解析（__file__ 向上定位），禁绝对路径——跨机/换目录可跑。
+平台前提（S4 审查 m2）：write_out 的 write_text 不带 newline 参数，行尾按写出平台默认转换
+（与旧款级脚本同语义）；全库产物以 Windows 构建为基线——非 Windows 上 rebuild 行尾会漂移，
+但会被 md5 门禁当场拦下（可发现、非静默）。跨机批量 rebuild 须同平台，否则先行尾归一化再对拍。
 
 薄壳用法（款级 build.py 全文即此样板）：
     import pathlib, sys

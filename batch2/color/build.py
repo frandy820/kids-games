@@ -6,7 +6,7 @@ import pathlib
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent
-DESIGN = pathlib.Path('F:/claudecode/projects/active/kids-games/design')
+DESIGN = ROOT.parent.parent / 'design'   # ../../design（绝对路径收编，S4 审查 M4）
 
 TEMPLATE = '''<!DOCTYPE html>
 <html lang="zh-CN">
@@ -76,7 +76,7 @@ def main():
     css = (ROOT / '_src' / 'game.css').read_text(encoding='utf-8')
     # 语音 clips 注入（clips 目录缺失时降级为空字符串，主会话补管线后重建）
     try:
-        sys.path.insert(0, 'F:/claudecode/projects/active/kids-games/voice')
+        sys.path.insert(0, str(ROOT.parent.parent / 'voice'))   # 绝对路径收编，S4 审查 M4
         from inject_clips import clips_js
         clips = clips_js('color')
     except ImportError:
