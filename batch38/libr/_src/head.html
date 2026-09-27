@@ -17,8 +17,7 @@
    ch1 四格普通/ch2 维度句/ch3 冲突深化/ch4 跨维二级题（pick 盘+目标格脉冲）。
    触摸目标：书架格 ≥96×96（实测 ~132×128）、盘卡 ≥96×126；overflowX 恒 0。
    四格主题色互异+标签牌小图标（识别锚=读标签，非颜色歧视）。 */
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;overflow:hidden}
+<!--FAMILY_CSS:reset-->
 body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
@@ -172,10 +171,7 @@ svg{display:block}
 #ghost.pressing .g-ripple{animation:g-ripple .6s ease}
 @keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
 
-/* verify 结果（不参与正常布局） */
-#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
-  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
-body.verify #verify-result{display:block}
+<!--FAMILY_CSS:verify-->
 
 /* 竖屏（平板竖持）：舞台收紧+格横排收窄 */
 @media (orientation:portrait){
