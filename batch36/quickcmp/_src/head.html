@@ -16,8 +16,7 @@
    章：ch1 subitizing 1-5 / ch2 10-20+等数 / ch3 Weber 10-20 比例带 0.85-0.90 / ch4 dual 双闪两问（seed 887）。
    触摸目标：答案按钮 ≥96×96、圆点面板 ≥120 高；overflowX 恒 0。
    款内自建 button 带显式 color（契约 O：不依赖 core 兜底）。 */
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;overflow:hidden}
+<!--FAMILY_CSS:reset-->
 body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
@@ -117,20 +116,8 @@ svg{display:block}
 #btn-replay svg{width:42px;height:42px}
 
 /* ---------- 幽灵手指教学（照 batch21-35） ---------- */
-#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
-  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
-#ghost.show{opacity:.92}
-#ghost.pressing{animation:g-press .6s ease}
-@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
-#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
-  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
-#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
-@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
-
-/* verify 结果（不参与正常布局） */
-#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
-  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
-body.verify #verify-result{display:block}
+<!--FAMILY_CSS:ghost-->
+<!--FAMILY_CSS:verify-->
 
 /* 竖屏（平板/手机竖持）：面板收小仍左右并排（比大小需同屏对照），答案按钮仍 ≥96 */
 @media (orientation:portrait){
