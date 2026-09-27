@@ -15,8 +15,7 @@
    卡池点完未到达 = wrong + miss + 复位（小兔回起点、卡池恢复）。
    path 题（ch3+）：题面指令条按序展示 2-3 步箭头 + 语音念，「小兔子会走到哪？」3/4 格卡。
    触摸目标：网格格 ≥72×72、指令/格候选卡 ≥64×64（§0.9 本款口径；4×4 档格 72.75-73.75）。 */
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;overflow:hidden}
+<!--FAMILY_CSS:reset-->
 body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
@@ -167,20 +166,8 @@ svg{display:block}
 @keyframes hear-b{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
 
 /* ---------- 幽灵手指教学（照 batch21-27） ---------- */
-#ghost{position:fixed;z-index:80;width:64px;height:76px;pointer-events:none;opacity:0;
-  transition:left .8s ease,top .8s ease,opacity .4s;transform:translate(-50%,-92%)}
-#ghost.show{opacity:.92}
-#ghost.pressing{animation:g-press .6s ease}
-@keyframes g-press{0%,100%{transform:translate(-50%,-92%)}50%{transform:translate(-50%,-78%) scale(.92)}}
-#ghost .g-ripple{position:absolute;left:50%;bottom:-8px;width:56px;height:20px;border-radius:50%;
-  border:3px solid rgba(255,255,255,.85);transform:translateX(-50%) scale(.3);opacity:0}
-#ghost.pressing .g-ripple{animation:g-ripple .6s ease}
-@keyframes g-ripple{0%{transform:translateX(-50%) scale(.3);opacity:.9}100%{transform:translateX(-50%) scale(1.5);opacity:0}}
-
-/* verify 结果（不参与正常布局） */
-#verify-result{position:fixed;left:0;top:0;z-index:99999;font:12px/1.5 monospace;color:#4A3B2E;
-  background:#FFF9EE;padding:6px;max-height:60vh;overflow:auto;display:none;white-space:pre-wrap}
-body.verify #verify-result{display:block}
+<!--FAMILY_CSS:ghost-->
+<!--FAMILY_CSS:verify-->
 
 /* 竖屏（平板竖持）：网格与卡适配，格仍 ≥72、卡 ≥64（r40：g4 档 312px 格 72.75、many 档 76px——r40 审查 m3 勘正：与下行 width:76px 一致） */
 @media (orientation:portrait){
