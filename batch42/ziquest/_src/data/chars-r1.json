@@ -1,0 +1,2658 @@
+{
+ "meta": {
+  "name": "风山镇",
+  "theme": "自然·时令·颜色·感知",
+  "accent": "#7FB3E0",
+  "region": 1,
+  "count": 62,
+  "levels": 12,
+  "note": "order=区域内教学序；g1a 按课标 first 课号排序；life 待 0c 补 py/words"
+ },
+ "function": [],
+ "chars": [
+  {
+   "ch": "天",
+   "src": "g1a",
+   "order": 0,
+   "chNo": null,
+   "first": "1a-s1",
+   "py": "tiān",
+   "pyKey": "tian",
+   "tone": 1,
+   "words": [
+    [
+     "天空",
+     "tiān kōng"
+    ],
+    [
+     "白天",
+     "bái tiān"
+    ],
+    [
+     "明天",
+     "míng tiān"
+    ]
+   ],
+   "glyph": "大字头顶加一横，头顶上面就是天空",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "大",
+     "形近"
+    ],
+    [
+     "太",
+     "形近"
+    ],
+    [
+     "地",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "地",
+   "src": "g1a",
+   "order": 1,
+   "chNo": null,
+   "first": "1a-s1",
+   "py": "dì",
+   "pyKey": "di",
+   "tone": 4,
+   "words": [
+    [
+     "大地",
+     "dà dì"
+    ],
+    [
+     "地上",
+     "dì shàng"
+    ],
+    [
+     "土地",
+     "tǔ dì"
+    ]
+   ],
+   "glyph": "土字旁加个也，脚下踩的就是大地",
+   "parts": [
+    "土",
+    "也"
+   ],
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "他",
+     "形近"
+    ],
+    [
+     "她",
+     "形近"
+    ],
+    [
+     "池",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "日",
+   "src": "g1a",
+   "order": 2,
+   "chNo": null,
+   "first": "1a-s4",
+   "py": "rì",
+   "pyKey": "ri",
+   "tone": 4,
+   "words": [
+    [
+     "日出",
+     "rì chū"
+    ],
+    [
+     "生日",
+     "shēng rì"
+    ],
+    [
+     "日子",
+     "rì zi"
+    ]
+   ],
+   "glyph": "方方一块中间一点，圆圆的太阳",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "目",
+     "形近"
+    ],
+    [
+     "白",
+     "形近"
+    ],
+    [
+     "月",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "月",
+   "src": "g1a",
+   "order": 3,
+   "chNo": null,
+   "first": "1a-s4",
+   "py": "yuè",
+   "pyKey": "yue",
+   "tone": 4,
+   "words": [
+    [
+     "月亮",
+     "yuè liang"
+    ],
+    [
+     "月光",
+     "yuè guāng"
+    ],
+    [
+     "一月",
+     "yī yuè"
+    ]
+   ],
+   "glyph": "弯弯的像小船，天上的月亮",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "日",
+     "形近"
+    ],
+    [
+     "朋",
+     "形近"
+    ],
+    [
+     "用",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "山",
+   "src": "g1a",
+   "order": 4,
+   "chNo": null,
+   "first": "1a-s4",
+   "py": "shān",
+   "pyKey": "shan",
+   "tone": 1,
+   "words": [
+    [
+     "大山",
+     "dà shān"
+    ],
+    [
+     "山上",
+     "shān shàng"
+    ],
+    [
+     "高山",
+     "gāo shān"
+    ]
+   ],
+   "glyph": "三个尖尖的山峰站在大地上",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "丘",
+     "形近"
+    ],
+    [
+     "石",
+     "同类"
+    ],
+    [
+     "土",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "石",
+   "src": "g1a",
+   "order": 5,
+   "chNo": null,
+   "first": "1a-s4",
+   "py": "shí",
+   "pyKey": "shi",
+   "tone": 2,
+   "words": [
+    [
+     "石头",
+     "shí tou"
+    ],
+    [
+     "石子",
+     "shí zǐ"
+    ],
+    [
+     "石桥",
+     "shí qiáo"
+    ]
+   ],
+   "glyph": "山崖下面吊着一块大石头",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "右",
+     "形近"
+    ],
+    [
+     "山",
+     "同类"
+    ],
+    [
+     "土",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "田",
+   "src": "g1a",
+   "order": 6,
+   "chNo": null,
+   "first": "1a-s4",
+   "py": "tián",
+   "pyKey": "tian2",
+   "tone": 2,
+   "words": [
+    [
+     "水田",
+     "shuǐ tián"
+    ],
+    [
+     "田里",
+     "tián lǐ"
+    ],
+    [
+     "种田",
+     "zhòng tián"
+    ]
+   ],
+   "glyph": "方框画十字，一块块小农田",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "日",
+     "形近"
+    ],
+    [
+     "回",
+     "形近"
+    ],
+    [
+     "地",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "火",
+   "src": "g1a",
+   "order": 7,
+   "chNo": null,
+   "first": "1a-s4",
+   "py": "huǒ",
+   "pyKey": "huo",
+   "tone": 3,
+   "words": [
+    [
+     "火车",
+     "huǒ chē"
+    ],
+    [
+     "大火",
+     "dà huǒ"
+    ],
+    [
+     "火山",
+     "huǒ shān"
+    ]
+   ],
+   "glyph": "像跳动的火苗，中间是火心",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "水",
+     "同类"
+    ],
+    [
+     "木",
+     "同类"
+    ],
+    [
+     "土",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "水",
+   "src": "g1a",
+   "order": 8,
+   "chNo": null,
+   "first": "1a-s4",
+   "py": "shuǐ",
+   "pyKey": "shui",
+   "tone": 3,
+   "words": [
+    [
+     "喝水",
+     "hē shuǐ"
+    ],
+    [
+     "水果",
+     "shuǐ guǒ"
+    ],
+    [
+     "河水",
+     "hé shuǐ"
+    ]
+   ],
+   "glyph": "中间一条大河，两边溅起小水花",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "永",
+     "形近"
+    ],
+    [
+     "火",
+     "同类"
+    ],
+    [
+     "河",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "云",
+   "src": "g1a",
+   "order": 9,
+   "chNo": null,
+   "first": "1a-s5",
+   "py": "yún",
+   "pyKey": "yun",
+   "tone": 2,
+   "words": [
+    [
+     "白云",
+     "bái yún"
+    ],
+    [
+     "乌云",
+     "wū yún"
+    ],
+    [
+     "云朵",
+     "yún duǒ"
+    ]
+   ],
+   "glyph": "天上一卷一卷飘着的，就是云",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "去",
+     "形近"
+    ],
+    [
+     "天",
+     "同类"
+    ],
+    [
+     "雨",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "雨",
+   "src": "g1a",
+   "order": 10,
+   "chNo": null,
+   "first": "1a-s5",
+   "py": "yǔ",
+   "pyKey": "yu",
+   "tone": 3,
+   "words": [
+    [
+     "下雨",
+     "xià yǔ"
+    ],
+    [
+     "雨点",
+     "yǔ diǎn"
+    ],
+    [
+     "雨水",
+     "yǔ shuǐ"
+    ]
+   ],
+   "glyph": "天上落下小水点，滴滴答答下雨",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "云",
+     "同类"
+    ],
+    [
+     "风",
+     "同类"
+    ],
+    [
+     "伞",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "风",
+   "src": "g1a",
+   "order": 11,
+   "chNo": null,
+   "first": "1a-s5",
+   "py": "fēng",
+   "pyKey": "feng",
+   "tone": 1,
+   "words": [
+    [
+     "大风",
+     "dà fēng"
+    ],
+    [
+     "风雨",
+     "fēng yǔ"
+    ],
+    [
+     "风景",
+     "fēng jǐng"
+    ]
+   ],
+   "glyph": "空气跑起来的样子，吹得树叶摇",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "凤",
+     "形近"
+    ],
+    [
+     "凡",
+     "形近"
+    ],
+    [
+     "雨",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "对",
+   "src": "g1a",
+   "order": 12,
+   "chNo": null,
+   "first": "1a-s5",
+   "py": "duì",
+   "pyKey": "dui",
+   "tone": 4,
+   "words": [
+    [
+     "对面",
+     "duì miàn"
+    ],
+    [
+     "对错",
+     "duì cuò"
+    ],
+    [
+     "对岸",
+     "duì àn"
+    ]
+   ],
+   "glyph": "又加寸，拍拍手答对了",
+   "parts": [
+    "又",
+    "寸"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "双",
+     "形近"
+    ],
+    [
+     "叉",
+     "形近"
+    ],
+    [
+     "错",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "听",
+   "src": "g1a",
+   "order": 13,
+   "chNo": null,
+   "first": "1a-s6",
+   "py": "tīng",
+   "pyKey": "ting",
+   "tone": 1,
+   "words": [
+    [
+     "听见",
+     "tīng jiàn"
+    ],
+    [
+     "听话",
+     "tīng huà"
+    ],
+    [
+     "好听",
+     "hǎo tīng"
+    ]
+   ],
+   "glyph": "口字旁加个斤，用耳朵听声音",
+   "parts": [
+    "口",
+    "斤"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "近",
+     "形近"
+    ],
+    [
+     "斤",
+     "形近"
+    ],
+    [
+     "耳",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "色",
+   "src": "g1a",
+   "order": 14,
+   "chNo": null,
+   "first": "1a-s6",
+   "py": "sè",
+   "pyKey": "se",
+   "tone": 4,
+   "words": [
+    [
+     "颜色",
+     "yán sè"
+    ],
+    [
+     "彩色",
+     "cǎi sè"
+    ],
+    [
+     "红色",
+     "hóng sè"
+    ]
+   ],
+   "glyph": "红黄蓝绿，东西身上看到的就是颜色",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "巴",
+     "形近"
+    ],
+    [
+     "彩",
+     "同类"
+    ],
+    [
+     "艳",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "黄",
+   "src": "g1a",
+   "order": 15,
+   "chNo": null,
+   "first": "1a-s7",
+   "py": "huáng",
+   "pyKey": "huang",
+   "tone": 2,
+   "words": [
+    [
+     "黄色",
+     "huáng sè"
+    ],
+    [
+     "黄豆",
+     "huáng dòu"
+    ],
+    [
+     "黄叶",
+     "huáng yè"
+    ]
+   ],
+   "glyph": "稻谷熟了、树叶变了的颜色",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "红",
+     "同类"
+    ],
+    [
+     "蓝",
+     "同类"
+    ],
+    [
+     "绿",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "早",
+   "src": "g1a",
+   "order": 16,
+   "chNo": null,
+   "first": "1a-s8",
+   "py": "zǎo",
+   "pyKey": "zao",
+   "tone": 3,
+   "words": [
+    [
+     "早上",
+     "zǎo shang"
+    ],
+    [
+     "早晚",
+     "zǎo wǎn"
+    ],
+    [
+     "早安",
+     "zǎo ān"
+    ]
+   ],
+   "glyph": "日加十，太阳爬上旗杆，天亮了",
+   "parts": [
+    "日",
+    "十"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "旱",
+     "形近"
+    ],
+    [
+     "旦",
+     "形近"
+    ],
+    [
+     "晚",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "红",
+   "src": "g1a",
+   "order": 17,
+   "chNo": null,
+   "first": "1a-s10",
+   "py": "hóng",
+   "pyKey": "hong",
+   "tone": 2,
+   "words": [
+    [
+     "红色",
+     "hóng sè"
+    ],
+    [
+     "红花",
+     "hóng huā"
+    ],
+    [
+     "红旗",
+     "hóng qí"
+    ]
+   ],
+   "glyph": "绞丝旁加个工，像火像太阳的颜色",
+   "parts": null,
+   "family": "gong",
+   "freq": 2,
+   "distract": [
+    [
+     "虹",
+     "同声旁"
+    ],
+    [
+     "江",
+     "同声旁"
+    ],
+    [
+     "绿",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "土",
+   "src": "g1a",
+   "order": 18,
+   "chNo": null,
+   "first": "1a-p4",
+   "py": "tǔ",
+   "pyKey": "tu",
+   "tone": 3,
+   "words": [
+    [
+     "土地",
+     "tǔ dì"
+    ],
+    [
+     "土豆",
+     "tǔ dòu"
+    ],
+    [
+     "尘土",
+     "chén tǔ"
+    ]
+   ],
+   "glyph": "能种花种菜的泥和沙，就是土",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "士",
+     "形近"
+    ],
+    [
+     "工",
+     "形近"
+    ],
+    [
+     "地",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "雪",
+   "src": "g1a",
+   "order": 19,
+   "chNo": null,
+   "first": "1a-p11",
+   "py": "xuě",
+   "pyKey": "xue",
+   "tone": 3,
+   "words": [
+    [
+     "下雪",
+     "xià xuě"
+    ],
+    [
+     "雪人",
+     "xuě rén"
+    ],
+    [
+     "雪花",
+     "xuě huā"
+    ]
+   ],
+   "glyph": "雨字头下面小扫帚，冬天下的小白冰花",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "雷",
+     "形近"
+    ],
+    [
+     "云",
+     "同类"
+    ],
+    [
+     "冰",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "白",
+   "src": "g1a",
+   "order": 20,
+   "chNo": null,
+   "first": "1a-p12",
+   "py": "bái",
+   "pyKey": "bai",
+   "tone": 2,
+   "words": [
+    [
+     "白天",
+     "bái tiān"
+    ],
+    [
+     "雪白",
+     "xuě bái"
+    ],
+    [
+     "白云",
+     "bái yún"
+    ]
+   ],
+   "glyph": "太阳刚升起来的亮光色，云和雪的颜色",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "日",
+     "形近"
+    ],
+    [
+     "百",
+     "形近"
+    ],
+    [
+     "黑",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "秋",
+   "src": "g1a",
+   "order": 21,
+   "chNo": null,
+   "first": "1a-k1",
+   "py": "qiū",
+   "pyKey": "qiu",
+   "tone": 1,
+   "words": [
+    [
+     "秋天",
+     "qiū tiān"
+    ],
+    [
+     "秋风",
+     "qiū fēng"
+    ],
+    [
+     "中秋",
+     "zhōng qiū"
+    ]
+   ],
+   "glyph": "禾加火，庄稼熟了的季节",
+   "parts": [
+    "禾",
+    "火"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "伙",
+     "形近"
+    ],
+    [
+     "春",
+     "同类"
+    ],
+    [
+     "冬",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "气",
+   "src": "g1a",
+   "order": 22,
+   "chNo": null,
+   "first": "1a-k1",
+   "py": "qì",
+   "pyKey": "qi",
+   "tone": 4,
+   "words": [
+    [
+     "天气",
+     "tiān qì"
+    ],
+    [
+     "空气",
+     "kōng qì"
+    ],
+    [
+     "力气",
+     "lì qi"
+    ]
+   ],
+   "glyph": "看不见摸不着，呼吸的空气就是气",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "风",
+     "同类"
+    ],
+    [
+     "云",
+     "同类"
+    ],
+    [
+     "雾",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "树",
+   "src": "g1a",
+   "order": 23,
+   "chNo": null,
+   "first": "1a-k1",
+   "py": "shù",
+   "pyKey": "shu",
+   "tone": 4,
+   "words": [
+    [
+     "大树",
+     "dà shù"
+    ],
+    [
+     "树林",
+     "shù lín"
+    ],
+    [
+     "树叶",
+     "shù yè"
+    ]
+   ],
+   "glyph": "木字旁加个对，一棵大树绿油油",
+   "parts": [
+    "木",
+    "对"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "村",
+     "形近"
+    ],
+    [
+     "林",
+     "同类"
+    ],
+    [
+     "森",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "叶",
+   "src": "g1a",
+   "order": 24,
+   "chNo": null,
+   "first": "1a-k1",
+   "py": "yè",
+   "pyKey": "ye",
+   "tone": 4,
+   "words": [
+    [
+     "树叶",
+     "shù yè"
+    ],
+    [
+     "叶子",
+     "yè zi"
+    ],
+    [
+     "绿叶",
+     "lǜ yè"
+    ]
+   ],
+   "glyph": "口加十，树上长的绿叶子",
+   "parts": [
+    "口",
+    "十"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "苗",
+     "同类"
+    ],
+    [
+     "花",
+     "同类"
+    ],
+    [
+     "草",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "片",
+   "src": "g1a",
+   "order": 25,
+   "chNo": null,
+   "first": "1a-k1",
+   "py": "piàn",
+   "pyKey": "pian",
+   "tone": 4,
+   "words": [
+    [
+     "一片",
+     "yí piàn"
+    ],
+    [
+     "卡片",
+     "kǎ piàn"
+    ],
+    [
+     "图片",
+     "tú piàn"
+    ]
+   ],
+   "glyph": "薄薄的一小块，一片叶一片饼干",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "斤",
+     "形近"
+    ],
+    [
+     "张",
+     "同类"
+    ],
+    [
+     "块",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "星",
+   "src": "g1a",
+   "order": 26,
+   "chNo": null,
+   "first": "1a-k2",
+   "py": "xīng",
+   "pyKey": "xing",
+   "tone": 1,
+   "words": [
+    [
+     "星星",
+     "xīng xing"
+    ],
+    [
+     "星光",
+     "xīng guāng"
+    ],
+    [
+     "火星",
+     "huǒ xīng"
+    ]
+   ],
+   "glyph": "晚上天上眨眼的小亮点，一颗一颗就是星",
+   "parts": [
+    "日",
+    "生"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "生",
+     "形近"
+    ],
+    [
+     "云",
+     "同类"
+    ],
+    [
+     "月",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "看",
+   "src": "g1a",
+   "order": 27,
+   "chNo": null,
+   "first": "1a-k2",
+   "py": "kàn",
+   "pyKey": "kan",
+   "tone": 4,
+   "words": [
+    [
+     "看见",
+     "kàn jiàn"
+    ],
+    [
+     "看书",
+     "kàn shū"
+    ],
+    [
+     "好看",
+     "hǎo kàn"
+    ]
+   ],
+   "glyph": "手搭在眼睛上，远远地望就是看",
+   "parts": [
+    "手",
+    "目"
+   ],
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "着",
+     "形近"
+    ],
+    [
+     "眉",
+     "形近"
+    ],
+    [
+     "见",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "见",
+   "src": "g1a",
+   "order": 28,
+   "chNo": null,
+   "first": "1a-k2",
+   "py": "jiàn",
+   "pyKey": "jian",
+   "tone": 4,
+   "words": [
+    [
+     "看见",
+     "kàn jiàn"
+    ],
+    [
+     "再见",
+     "zài jiàn"
+    ],
+    [
+     "见面",
+     "jiàn miàn"
+    ]
+   ],
+   "glyph": "睁大的眼睛张着腿，看见东西啦",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "贝",
+     "形近"
+    ],
+    [
+     "目",
+     "同类"
+    ],
+    [
+     "看",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "闪",
+   "src": "g1a",
+   "order": 29,
+   "chNo": null,
+   "first": "1a-k2",
+   "py": "shǎn",
+   "pyKey": "shan2",
+   "tone": 3,
+   "words": [
+    [
+     "闪光",
+     "shǎn guāng"
+    ],
+    [
+     "闪电",
+     "shǎn diàn"
+    ],
+    [
+     "闪开",
+     "shǎn kāi"
+    ]
+   ],
+   "glyph": "门里有个人，一转身就闪过去",
+   "parts": [
+    "门",
+    "人"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "闲",
+     "形近"
+    ],
+    [
+     "间",
+     "形近"
+    ],
+    [
+     "亮",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "江",
+   "src": "g1a",
+   "order": 30,
+   "chNo": null,
+   "first": "1a-k3",
+   "py": "jiāng",
+   "pyKey": "jiang",
+   "tone": 1,
+   "words": [
+    [
+     "江河",
+     "jiāng hé"
+    ],
+    [
+     "长江",
+     "cháng jiāng"
+    ],
+    [
+     "江水",
+     "jiāng shuǐ"
+    ]
+   ],
+   "glyph": "三点水加个工，又长又大的河",
+   "parts": null,
+   "family": "gong",
+   "freq": 3,
+   "distract": [
+    [
+     "红",
+     "同声旁"
+    ],
+    [
+     "河",
+     "同类"
+    ],
+    [
+     "湖",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "莲",
+   "src": "g1a",
+   "order": 31,
+   "chNo": null,
+   "first": "1a-k3",
+   "py": "lián",
+   "pyKey": "lian",
+   "tone": 2,
+   "words": [
+    [
+     "莲花",
+     "lián huā"
+    ],
+    [
+     "莲蓬",
+     "lián péng"
+    ],
+    [
+     "莲叶",
+     "lián yè"
+    ]
+   ],
+   "glyph": "水里的花，荷花也叫莲花",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "荷",
+     "同类"
+    ],
+    [
+     "花",
+     "同类"
+    ],
+    [
+     "藕",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "春",
+   "src": "g1a",
+   "order": 32,
+   "chNo": null,
+   "first": "1a-k4",
+   "py": "chūn",
+   "pyKey": "chun",
+   "tone": 1,
+   "words": [
+    [
+     "春天",
+     "chūn tiān"
+    ],
+    [
+     "春风",
+     "chūn fēng"
+    ],
+    [
+     "春雨",
+     "chūn yǔ"
+    ]
+   ],
+   "glyph": "三个人晒着太阳，花儿开的季节",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "夏",
+     "同类"
+    ],
+    [
+     "秋",
+     "同类"
+    ],
+    [
+     "冬",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "冬",
+   "src": "g1a",
+   "order": 33,
+   "chNo": null,
+   "first": "1a-k4",
+   "py": "dōng",
+   "pyKey": "dong",
+   "tone": 1,
+   "words": [
+    [
+     "冬天",
+     "dōng tiān"
+    ],
+    [
+     "过冬",
+     "guò dōng"
+    ]
+   ],
+   "glyph": "冷冷的下雪季节，小熊睡觉过冬",
+   "parts": null,
+   "family": "dong",
+   "freq": 2,
+   "distract": [
+    [
+     "夏",
+     "同类"
+    ],
+    [
+     "秋",
+     "同类"
+    ],
+    [
+     "春",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "夏",
+   "src": "g1a",
+   "order": 34,
+   "chNo": null,
+   "first": "1a-k4",
+   "py": "xià",
+   "pyKey": "xia",
+   "tone": 4,
+   "words": [
+    [
+     "夏天",
+     "xià tiān"
+    ],
+    [
+     "夏夜",
+     "xià yè"
+    ]
+   ],
+   "glyph": "太阳最晒知了叫，最热的季节",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "复",
+     "形近"
+    ],
+    [
+     "春",
+     "同类"
+    ],
+    [
+     "冬",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "青",
+   "src": "g1a",
+   "order": 35,
+   "chNo": null,
+   "first": "1a-k4",
+   "py": "qīng",
+   "pyKey": "qing",
+   "tone": 1,
+   "words": [
+    [
+     "青蛙",
+     "qīng wā"
+    ],
+    [
+     "青菜",
+     "qīng cài"
+    ],
+    [
+     "青山",
+     "qīng shān"
+    ]
+   ],
+   "glyph": "春天草和树叶嫩嫩的颜色就是青",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "绿",
+     "同类"
+    ],
+    [
+     "蓝",
+     "同类"
+    ],
+    [
+     "红",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "影",
+   "src": "g1a",
+   "order": 36,
+   "chNo": null,
+   "first": "1a-k5",
+   "py": "yǐng",
+   "pyKey": "ying",
+   "tone": 3,
+   "words": [
+    [
+     "影子",
+     "yǐng zi"
+    ],
+    [
+     "电影",
+     "diàn yǐng"
+    ],
+    [
+     "树影",
+     "shù yǐng"
+    ]
+   ],
+   "glyph": "光被东西挡住，地上留下的黑形状就是影",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "景",
+     "形近"
+    ],
+    [
+     "彩",
+     "形近"
+    ],
+    [
+     "黑",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "黑",
+   "src": "g1a",
+   "order": 37,
+   "chNo": null,
+   "first": "1a-k5",
+   "py": "hēi",
+   "pyKey": "hei",
+   "tone": 1,
+   "words": [
+    [
+     "黑夜",
+     "hēi yè"
+    ],
+    [
+     "黑色",
+     "hēi sè"
+    ],
+    [
+     "黑板",
+     "hēi bǎn"
+    ]
+   ],
+   "glyph": "烧火熏出来的颜色，晚上天黑黑",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "白",
+     "同类"
+    ],
+    [
+     "灰",
+     "同类"
+    ],
+    [
+     "黄",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "彩",
+   "src": "g1a",
+   "order": 38,
+   "chNo": null,
+   "first": "1a-k8",
+   "py": "cǎi",
+   "pyKey": "cai",
+   "tone": 3,
+   "words": [
+    [
+     "彩色",
+     "cǎi sè"
+    ],
+    [
+     "彩虹",
+     "cǎi hóng"
+    ],
+    [
+     "精彩",
+     "jīng cǎi"
+    ]
+   ],
+   "glyph": "采字加三撇，五颜六色真好看",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "采",
+     "形近"
+    ],
+    [
+     "红",
+     "同类"
+    ],
+    [
+     "绿",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "绿",
+   "src": "g1a",
+   "order": 39,
+   "chNo": null,
+   "first": "1a-k8",
+   "py": "lǜ",
+   "pyKey": "lv",
+   "tone": 4,
+   "words": [
+    [
+     "绿色",
+     "lǜ sè"
+    ],
+    [
+     "绿叶",
+     "lǜ yè"
+    ],
+    [
+     "绿草",
+     "lǜ cǎo"
+    ]
+   ],
+   "glyph": "绞丝旁加个录，草和树叶的颜色",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "录",
+     "形近"
+    ],
+    [
+     "缘",
+     "形近"
+    ],
+    [
+     "红",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "海",
+   "src": "g1a",
+   "order": 40,
+   "chNo": null,
+   "first": "1a-k9",
+   "py": "hǎi",
+   "pyKey": "hai",
+   "tone": 3,
+   "words": [
+    [
+     "大海",
+     "dà hǎi"
+    ],
+    [
+     "海水",
+     "hǎi shuǐ"
+    ],
+    [
+     "海边",
+     "hǎi biān"
+    ]
+   ],
+   "glyph": "三点水加个每，很多水聚一起就是海",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "每",
+     "形近"
+    ],
+    [
+     "江",
+     "同类"
+    ],
+    [
+     "湖",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "亮",
+   "src": "g1a",
+   "order": 41,
+   "chNo": null,
+   "first": "1a-k9",
+   "py": "liàng",
+   "pyKey": "liang",
+   "tone": 4,
+   "words": [
+    [
+     "明亮",
+     "míng liàng"
+    ],
+    [
+     "月亮",
+     "yuè liang"
+    ],
+    [
+     "光亮",
+     "guāng liàng"
+    ]
+   ],
+   "glyph": "有它就不黑，像灯和月亮发光",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "高",
+     "形近"
+    ],
+    [
+     "光",
+     "同类"
+    ],
+    [
+     "明",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "时",
+   "src": "g1a",
+   "order": 42,
+   "chNo": null,
+   "first": "1a-k10",
+   "py": "shí",
+   "pyKey": "shi2",
+   "tone": 2,
+   "words": [
+    [
+     "时间",
+     "shí jiān"
+    ],
+    [
+     "小时",
+     "xiǎo shí"
+    ],
+    [
+     "有时",
+     "yǒu shí"
+    ]
+   ],
+   "glyph": "日加寸，钟表滴答走的时间",
+   "parts": [
+    "日",
+    "寸"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "村",
+     "形近"
+    ],
+    [
+     "分",
+     "同类"
+    ],
+    [
+     "钟",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "候",
+   "src": "g1a",
+   "order": 43,
+   "chNo": null,
+   "first": "1a-k10",
+   "py": "hòu",
+   "pyKey": "hou",
+   "tone": 4,
+   "words": [
+    [
+     "时候",
+     "shí hòu"
+    ],
+    [
+     "小时候",
+     "xiǎo shí hòu"
+    ],
+    [
+     "气候",
+     "qì hòu"
+    ]
+   ],
+   "glyph": "站着等啊等，等着的时候就是候",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "猴",
+     "形近"
+    ],
+    [
+     "侯",
+     "形近"
+    ],
+    [
+     "时",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "蓝",
+   "src": "g1a",
+   "order": 44,
+   "chNo": null,
+   "first": "1a-k11",
+   "py": "lán",
+   "pyKey": "lan",
+   "tone": 2,
+   "words": [
+    [
+     "蓝天",
+     "lán tiān"
+    ],
+    [
+     "蓝色",
+     "lán sè"
+    ],
+    [
+     "蓝莓",
+     "lán méi"
+    ]
+   ],
+   "glyph": "草字头下面一个监，晴天天空的颜色",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "篮",
+     "形近"
+    ],
+    [
+     "青",
+     "同类"
+    ],
+    [
+     "红",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "洞",
+   "src": "g1a",
+   "order": 45,
+   "chNo": null,
+   "first": "1a-k12",
+   "py": "dòng",
+   "pyKey": "dong2",
+   "tone": 4,
+   "words": [
+    [
+     "山洞",
+     "shān dòng"
+    ],
+    [
+     "洞口",
+     "dòng kǒu"
+    ],
+    [
+     "树洞",
+     "shù dòng"
+    ]
+   ],
+   "glyph": "三点水加个冬，能钻进去的窟窿",
+   "parts": null,
+   "family": "dong",
+   "freq": 3,
+   "distract": [
+    [
+     "江",
+     "同类"
+    ],
+    [
+     "湖",
+     "同类"
+    ],
+    [
+     "穴",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "高",
+   "src": "g1a",
+   "order": 46,
+   "chNo": null,
+   "first": "1a-k13",
+   "py": "gāo",
+   "pyKey": "gao",
+   "tone": 1,
+   "words": [
+    [
+     "高兴",
+     "gāo xìng"
+    ],
+    [
+     "高大",
+     "gāo dà"
+    ],
+    [
+     "高山",
+     "gāo shān"
+    ]
+   ],
+   "glyph": "像一座高高的塔，塔顶到地面差好多",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "亮",
+     "形近"
+    ],
+    [
+     "矮",
+     "同类"
+    ],
+    [
+     "低",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "晚",
+   "src": "g1a",
+   "order": 47,
+   "chNo": null,
+   "first": "1a-g5",
+   "py": "wǎn",
+   "pyKey": "wan",
+   "tone": 3,
+   "words": [
+    [
+     "晚上",
+     "wǎn shang"
+    ],
+    [
+     "晚安",
+     "wǎn ān"
+    ],
+    [
+     "早晚",
+     "zǎo wǎn"
+    ]
+   ],
+   "glyph": "日加免，太阳下班天黑了",
+   "parts": [
+    "日",
+    "免"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "晓",
+     "形近"
+    ],
+    [
+     "早",
+     "同类"
+    ],
+    [
+     "午",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "午",
+   "src": "g1a",
+   "order": 48,
+   "chNo": null,
+   "first": "1a-g5",
+   "py": "wǔ",
+   "pyKey": "wu",
+   "tone": 3,
+   "words": [
+    [
+     "中午",
+     "zhōng wǔ"
+    ],
+    [
+     "上午",
+     "shàng wǔ"
+    ],
+    [
+     "下午",
+     "xià wǔ"
+    ]
+   ],
+   "glyph": "太阳爬到头顶上，就是中午",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "牛",
+     "形近"
+    ],
+    [
+     "早",
+     "同类"
+    ],
+    [
+     "晚",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "昨",
+   "src": "g1a",
+   "order": 49,
+   "chNo": null,
+   "first": "1a-g5",
+   "py": "zuó",
+   "pyKey": "zuo",
+   "tone": 2,
+   "words": [
+    [
+     "昨天",
+     "zuó tiān"
+    ],
+    [
+     "昨晚",
+     "zuó wǎn"
+    ],
+    [
+     "昨日",
+     "zuó rì"
+    ]
+   ],
+   "glyph": "太阳落山过了一夜，前一天是昨天",
+   "parts": [
+    "日",
+    "乍"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "作",
+     "形近"
+    ],
+    [
+     "晚",
+     "同类"
+    ],
+    [
+     "今",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "今",
+   "src": "g1a",
+   "order": 50,
+   "chNo": null,
+   "first": "1a-g5",
+   "py": "jīn",
+   "pyKey": "jin",
+   "tone": 1,
+   "words": [
+    [
+     "今天",
+     "jīn tiān"
+    ],
+    [
+     "今年",
+     "jīn nián"
+    ],
+    [
+     "今晚",
+     "jīn wǎn"
+    ]
+   ],
+   "glyph": "人字头戴帽子，说的是现在：今天今年",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "令",
+     "形近"
+    ],
+    [
+     "介",
+     "形近"
+    ],
+    [
+     "昨",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "年",
+   "src": "g1a",
+   "order": 51,
+   "chNo": null,
+   "first": "1a-g5",
+   "py": "nián",
+   "pyKey": "nian",
+   "tone": 2,
+   "words": [
+    [
+     "新年",
+     "xīn nián"
+    ],
+    [
+     "过年",
+     "guò nián"
+    ],
+    [
+     "今年",
+     "jīn nián"
+    ]
+   ],
+   "glyph": "人背着丰收的谷子，谷子熟一次是一年",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "岁",
+     "同类"
+    ],
+    [
+     "今",
+     "同类"
+    ],
+    [
+     "季",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "雾",
+   "src": "life",
+   "order": 52,
+   "chNo": null,
+   "first": null,
+   "py": "wù",
+   "pyKey": "wu2",
+   "tone": 4,
+   "words": [
+    [
+     "大雾",
+     "dà wù"
+    ],
+    [
+     "云雾",
+     "yún wù"
+    ],
+    [
+     "雾气",
+     "wù qì"
+    ]
+   ],
+   "glyph": "雨字头下面一个务，白茫茫看不清路",
+   "parts": [
+    "雨",
+    "务"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "务",
+     "形近"
+    ],
+    [
+     "露",
+     "形近"
+    ],
+    [
+     "云",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "湖",
+   "src": "life",
+   "order": 53,
+   "chNo": null,
+   "first": null,
+   "py": "hú",
+   "pyKey": "hu",
+   "tone": 2,
+   "words": [
+    [
+     "湖水",
+     "hú shuǐ"
+    ],
+    [
+     "大湖",
+     "dà hú"
+    ],
+    [
+     "湖边",
+     "hú biān"
+    ]
+   ],
+   "glyph": "三点水加个胡，大大的一片水",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "胡",
+     "形近"
+    ],
+    [
+     "江",
+     "同类"
+    ],
+    [
+     "海",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "岛",
+   "src": "life",
+   "order": 54,
+   "chNo": null,
+   "first": null,
+   "py": "dǎo",
+   "pyKey": "dao",
+   "tone": 3,
+   "words": [
+    [
+     "小岛",
+     "xiǎo dǎo"
+    ],
+    [
+     "海岛",
+     "hǎi dǎo"
+    ],
+    [
+     "岛上",
+     "dǎo shàng"
+    ]
+   ],
+   "glyph": "小鸟停在山尖上，水中间的陆地",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "鸟",
+     "形近"
+    ],
+    [
+     "海",
+     "同类"
+    ],
+    [
+     "岸",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "岸",
+   "src": "life",
+   "order": 55,
+   "chNo": null,
+   "first": null,
+   "py": "àn",
+   "pyKey": "an",
+   "tone": 4,
+   "words": [
+    [
+     "河岸",
+     "hé àn"
+    ],
+    [
+     "上岸",
+     "shàng àn"
+    ],
+    [
+     "岸边",
+     "àn biān"
+    ]
+   ],
+   "glyph": "水边的地面，船到水边就上岸",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "岛",
+     "同类"
+    ],
+    [
+     "滩",
+     "同类"
+    ],
+    [
+     "沙",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "沙",
+   "src": "life",
+   "order": 56,
+   "chNo": null,
+   "first": null,
+   "py": "shā",
+   "pyKey": "sha",
+   "tone": 1,
+   "words": [
+    [
+     "沙子",
+     "shā zi"
+    ],
+    [
+     "沙滩",
+     "shā tān"
+    ],
+    [
+     "风沙",
+     "fēng shā"
+    ]
+   ],
+   "glyph": "三点水加个少，水边细细的小石子",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "少",
+     "形近"
+    ],
+    [
+     "滩",
+     "同类"
+    ],
+    [
+     "土",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "季",
+   "src": "life",
+   "order": 57,
+   "chNo": null,
+   "first": null,
+   "py": "jì",
+   "pyKey": "ji",
+   "tone": 4,
+   "words": [
+    [
+     "季节",
+     "jì jié"
+    ],
+    [
+     "四季",
+     "sì jì"
+    ],
+    [
+     "雨季",
+     "yǔ jì"
+    ]
+   ],
+   "glyph": "禾加子，一年分成春夏秋冬四季",
+   "parts": [
+    "禾",
+    "子"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "李",
+     "形近"
+    ],
+    [
+     "春",
+     "同类"
+    ],
+    [
+     "秋",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "根",
+   "src": "life",
+   "order": 58,
+   "chNo": null,
+   "first": null,
+   "py": "gēn",
+   "pyKey": "gen",
+   "tone": 1,
+   "words": [
+    [
+     "树根",
+     "shù gēn"
+    ],
+    [
+     "草根",
+     "cǎo gēn"
+    ],
+    [
+     "根本",
+     "gēn běn"
+    ]
+   ],
+   "glyph": "树埋在土里的脚，抓着土不倒",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "跟",
+     "形近"
+    ],
+    [
+     "很",
+     "形近"
+    ],
+    [
+     "本",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "紫",
+   "src": "life",
+   "order": 59,
+   "chNo": null,
+   "first": null,
+   "py": "zǐ",
+   "pyKey": "zi",
+   "tone": 3,
+   "words": [
+    [
+     "紫色",
+     "zǐ sè"
+    ],
+    [
+     "紫菜",
+     "zǐ cài"
+    ],
+    [
+     "紫红",
+     "zǐ hóng"
+    ]
+   ],
+   "glyph": "此字下面挂串丝，茄子和葡萄的颜色",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "此",
+     "形近"
+    ],
+    [
+     "红",
+     "同类"
+    ],
+    [
+     "蓝",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "灰",
+   "src": "life",
+   "order": 60,
+   "chNo": null,
+   "first": null,
+   "py": "huī",
+   "pyKey": "hui",
+   "tone": 1,
+   "words": [
+    [
+     "灰色",
+     "huī sè"
+    ],
+    [
+     "灰尘",
+     "huī chén"
+    ],
+    [
+     "灰白",
+     "huī bái"
+    ]
+   ],
+   "glyph": "火烧剩下的白粉末，一吹就飞起来",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "火",
+     "形近"
+    ],
+    [
+     "黑",
+     "同类"
+    ],
+    [
+     "白",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "棕",
+   "src": "life",
+   "order": 61,
+   "chNo": null,
+   "first": null,
+   "py": "zōng",
+   "pyKey": "zong",
+   "tone": 1,
+   "words": [
+    [
+     "棕色",
+     "zōng sè"
+    ],
+    [
+     "棕熊",
+     "zōng xióng"
+    ],
+    [
+     "棕树",
+     "zōng shù"
+    ]
+   ],
+   "glyph": "木字旁加个宗，熊和大树的颜色",
+   "parts": [
+    "木",
+    "宗"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "宗",
+     "形近"
+    ],
+    [
+     "红",
+     "同类"
+    ],
+    [
+     "紫",
+     "同类"
+    ]
+   ]
+  }
+ ]
+}

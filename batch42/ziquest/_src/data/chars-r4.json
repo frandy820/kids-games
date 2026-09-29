@@ -1,0 +1,1530 @@
+{
+ "meta": {
+  "name": "甜甜集市",
+  "theme": "食物·购物·生活用品",
+  "accent": "#F2C94C",
+  "region": 4,
+  "count": 39,
+  "levels": 7,
+  "note": "order=区域内教学序；g1a 按课标 first 课号排序；life 待 0c 补 py/words"
+ },
+ "function": [],
+ "chars": [
+  {
+   "ch": "苹",
+   "src": "g1a",
+   "order": 0,
+   "chNo": null,
+   "first": "1a-s7",
+   "py": "píng",
+   "pyKey": "ping",
+   "tone": 2,
+   "words": [
+    [
+     "苹果",
+     "píng guǒ"
+    ],
+    [
+     "苹果树",
+     "píng guǒ shù"
+    ]
+   ],
+   "glyph": "苹果的苹，草字头下面加个平，树上结的红果子",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "评",
+     "同声旁"
+    ],
+    [
+     "桃",
+     "同类"
+    ],
+    [
+     "梨",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "果",
+   "src": "g1a",
+   "order": 1,
+   "chNo": null,
+   "first": "1a-s7",
+   "py": "guǒ",
+   "pyKey": "guo",
+   "tone": 3,
+   "words": [
+    [
+     "水果",
+     "shuǐ guǒ"
+    ],
+    [
+     "果汁",
+     "guǒ zhī"
+    ],
+    [
+     "果园",
+     "guǒ yuán"
+    ]
+   ],
+   "glyph": "果子长在树上，上面像圆圆的果子，下面是木",
+   "parts": null,
+   "family": "guo",
+   "freq": 2,
+   "distract": [
+    [
+     "呆",
+     "形近"
+    ],
+    [
+     "杏",
+     "同类"
+    ],
+    [
+     "桃",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "杏",
+   "src": "g1a",
+   "order": 2,
+   "chNo": null,
+   "first": "1a-s7",
+   "py": "xìng",
+   "pyKey": "xing2",
+   "tone": 4,
+   "words": [
+    [
+     "杏子",
+     "xìng zi"
+    ],
+    [
+     "杏花",
+     "xìng huā"
+    ]
+   ],
+   "glyph": "杏子的杏，上面一个木，下面一个口，树上结的黄果子",
+   "parts": [
+    "木",
+    "口"
+   ],
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "呆",
+     "形近"
+    ],
+    [
+     "香",
+     "形近"
+    ],
+    [
+     "桃",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "桃",
+   "src": "g1a",
+   "order": 3,
+   "chNo": null,
+   "first": "1a-s7",
+   "py": "táo",
+   "pyKey": "tao",
+   "tone": 2,
+   "words": [
+    [
+     "桃子",
+     "táo zi"
+    ],
+    [
+     "桃树",
+     "táo shù"
+    ]
+   ],
+   "glyph": "桃子的桃，木字旁加个兆，桃子长在树上",
+   "parts": [
+    "木",
+    "兆"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "挑",
+     "形近"
+    ],
+    [
+     "逃",
+     "形近"
+    ],
+    [
+     "梨",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "给",
+   "src": "g1a",
+   "order": 4,
+   "chNo": null,
+   "first": "1a-k7",
+   "py": "gěi",
+   "pyKey": "gei",
+   "tone": 3,
+   "words": [
+    [
+     "给你",
+     "gěi nǐ"
+    ],
+    [
+     "送给",
+     "sòng gěi"
+    ]
+   ],
+   "glyph": "给你的给，绞丝旁加个合，把东西递给别人",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "结",
+     "形近"
+    ],
+    [
+     "细",
+     "形近"
+    ],
+    [
+     "拾",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "金",
+   "src": "g1a",
+   "order": 5,
+   "chNo": null,
+   "first": "1a-k11",
+   "py": "jīn",
+   "pyKey": "jin2",
+   "tone": 1,
+   "words": [
+    [
+     "金子",
+     "jīn zi"
+    ],
+    [
+     "金色",
+     "jīn sè"
+    ]
+   ],
+   "glyph": "金色的金，金子藏在沙子里，亮闪闪的",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "全",
+     "形近"
+    ],
+    [
+     "伞",
+     "形近"
+    ],
+    [
+     "银",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "贝",
+   "src": "g1a",
+   "order": 6,
+   "chNo": null,
+   "first": "1a-k11",
+   "py": "bèi",
+   "pyKey": "bei2",
+   "tone": 4,
+   "words": [
+    [
+     "贝壳",
+     "bèi ké"
+    ],
+    [
+     "宝贝",
+     "bǎo bèi"
+    ]
+   ],
+   "glyph": "贝壳的贝，海边的宝贝，古人拿贝壳当钱用",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "见",
+     "形近"
+    ],
+    [
+     "页",
+     "形近"
+    ],
+    [
+     "珠",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "菜",
+   "src": "life",
+   "order": 7,
+   "chNo": null,
+   "first": null,
+   "py": "cài",
+   "pyKey": "cai2",
+   "tone": 4,
+   "words": [
+    [
+     "青菜",
+     "qīng cài"
+    ],
+    [
+     "买菜",
+     "mǎi cài"
+    ]
+   ],
+   "glyph": "青菜的菜，草字头说明菜是植物，下面的采是摘菜",
+   "parts": null,
+   "family": "cai",
+   "freq": 2,
+   "distract": [
+    [
+     "茶",
+     "形近"
+    ],
+    [
+     "彩",
+     "同声旁"
+    ],
+    [
+     "茄",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "粥",
+   "src": "life",
+   "order": 8,
+   "chNo": null,
+   "first": null,
+   "py": "zhōu",
+   "pyKey": "zhou",
+   "tone": 1,
+   "words": [
+    [
+     "白粥",
+     "bái zhōu"
+    ],
+    [
+     "喝粥",
+     "hē zhōu"
+    ]
+   ],
+   "glyph": "熬粥的粥，两边两张弓，中间一粒米，米熬成粥",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "弱",
+     "形近"
+    ],
+    [
+     "饭",
+     "同类"
+    ],
+    [
+     "面",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "蛋",
+   "src": "life",
+   "order": 9,
+   "chNo": null,
+   "first": null,
+   "py": "dàn",
+   "pyKey": "dan",
+   "tone": 4,
+   "words": [
+    [
+     "鸡蛋",
+     "jī dàn"
+    ],
+    [
+     "蛋糕",
+     "dàn gāo"
+    ]
+   ],
+   "glyph": "鸡蛋的蛋，下面有条小虫虫，小鸡从蛋里孵出来",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "蚕",
+     "形近"
+    ],
+    [
+     "鸡",
+     "同类"
+    ],
+    [
+     "鱼",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "糖",
+   "src": "life",
+   "order": 10,
+   "chNo": null,
+   "first": null,
+   "py": "táng",
+   "pyKey": "tang",
+   "tone": 2,
+   "words": [
+    [
+     "糖果",
+     "táng guǒ"
+    ],
+    [
+     "白糖",
+     "bái táng"
+    ]
+   ],
+   "glyph": "甜甜的糖，米字旁，因为糖是从粮食里做出来的",
+   "parts": [
+    "米",
+    "唐"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "塘",
+     "形近"
+    ],
+    [
+     "甜",
+     "同类"
+    ],
+    [
+     "盐",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "盐",
+   "src": "life",
+   "order": 11,
+   "chNo": null,
+   "first": null,
+   "py": "yán",
+   "pyKey": "yan",
+   "tone": 2,
+   "words": [
+    [
+     "食盐",
+     "shí yán"
+    ],
+    [
+     "海盐",
+     "hǎi yán"
+    ]
+   ],
+   "glyph": "咸咸的盐，海水晒干就变出白色的盐",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "监",
+     "形近"
+    ],
+    [
+     "油",
+     "同类"
+    ],
+    [
+     "糖",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "油",
+   "src": "life",
+   "order": 12,
+   "chNo": null,
+   "first": null,
+   "py": "yóu",
+   "pyKey": "you",
+   "tone": 2,
+   "words": [
+    [
+     "加油",
+     "jiā yóu"
+    ],
+    [
+     "香油",
+     "xiāng yóu"
+    ]
+   ],
+   "glyph": "炒菜的油，三点水，油亮亮的像水一样流",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "抽",
+     "形近"
+    ],
+    [
+     "邮",
+     "形近"
+    ],
+    [
+     "盐",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "饼",
+   "src": "life",
+   "order": 13,
+   "chNo": null,
+   "first": null,
+   "py": "bǐng",
+   "pyKey": "bing",
+   "tone": 3,
+   "words": [
+    [
+     "饼干",
+     "bǐng gān"
+    ],
+    [
+     "月饼",
+     "yuè bǐng"
+    ]
+   ],
+   "glyph": "饼干的饼，食字旁，因为饼是可以吃的点心",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "瓶",
+     "形近"
+    ],
+    [
+     "拼",
+     "形近"
+    ],
+    [
+     "糕",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "饺",
+   "src": "life",
+   "order": 14,
+   "chNo": null,
+   "first": null,
+   "py": "jiǎo",
+   "pyKey": "jiao",
+   "tone": 3,
+   "words": [
+    [
+     "饺子",
+     "jiǎo zi"
+    ],
+    [
+     "水饺",
+     "shuǐ jiǎo"
+    ]
+   ],
+   "glyph": "饺子的饺，食字旁，过年全家人一起包饺子",
+   "parts": null,
+   "family": "jiao",
+   "freq": 3,
+   "distract": [
+    [
+     "校",
+     "同声旁"
+    ],
+    [
+     "较",
+     "形近"
+    ],
+    [
+     "包",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "虾",
+   "src": "life",
+   "order": 15,
+   "chNo": null,
+   "first": null,
+   "py": "xiā",
+   "pyKey": "xia2",
+   "tone": 1,
+   "words": [
+    [
+     "大虾",
+     "dà xiā"
+    ],
+    [
+     "虾米",
+     "xiā mi"
+    ]
+   ],
+   "glyph": "大虾的虾，虫字旁，虾在水里弯着腰游",
+   "parts": [
+    "虫",
+    "下"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "鱼",
+     "同类"
+    ],
+    [
+     "蟹",
+     "同类"
+    ],
+    [
+     "龟",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "糕",
+   "src": "life",
+   "order": 16,
+   "chNo": null,
+   "first": null,
+   "py": "gāo",
+   "pyKey": "gao2",
+   "tone": 1,
+   "words": [
+    [
+     "蛋糕",
+     "dàn gāo"
+    ],
+    [
+     "糕点",
+     "gāo diǎn"
+    ]
+   ],
+   "glyph": "蛋糕的糕，米字旁，糕点是米面做的，软软的",
+   "parts": [
+    "米",
+    "羔"
+   ],
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "糟",
+     "形近"
+    ],
+    [
+     "饼",
+     "同类"
+    ],
+    [
+     "糖",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "蕉",
+   "src": "life",
+   "order": 17,
+   "chNo": null,
+   "first": null,
+   "py": "jiāo",
+   "pyKey": "jiao2",
+   "tone": 1,
+   "words": [
+    [
+     "香蕉",
+     "xiāng jiāo"
+    ],
+    [
+     "香蕉皮",
+     "xiāng jiāo pí"
+    ]
+   ],
+   "glyph": "香蕉的蕉，草字头，香蕉一串串挂在树上",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "礁",
+     "同声旁"
+    ],
+    [
+     "梨",
+     "同类"
+    ],
+    [
+     "橘",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "梨",
+   "src": "life",
+   "order": 18,
+   "chNo": null,
+   "first": null,
+   "py": "lí",
+   "pyKey": "li2",
+   "tone": 2,
+   "words": [
+    [
+     "梨子",
+     "lí zi"
+    ],
+    [
+     "雪梨",
+     "xuě lí"
+    ]
+   ],
+   "glyph": "梨子的梨，上面是利，下面是木，梨树结的甜果子",
+   "parts": [
+    "利",
+    "木"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "犁",
+     "形近"
+    ],
+    [
+     "桃",
+     "同类"
+    ],
+    [
+     "杏",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "橘",
+   "src": "life",
+   "order": 19,
+   "chNo": null,
+   "first": null,
+   "py": "jú",
+   "pyKey": "ju2",
+   "tone": 2,
+   "words": [
+    [
+     "橘子",
+     "jú zi"
+    ],
+    [
+     "橘树",
+     "jú shù"
+    ]
+   ],
+   "glyph": "橘子的橘，木字旁，橘子树结的酸酸甜甜的果子",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "桔",
+     "形近"
+    ],
+    [
+     "橙",
+     "同类"
+    ],
+    [
+     "柚",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "枣",
+   "src": "life",
+   "order": 20,
+   "chNo": null,
+   "first": null,
+   "py": "zǎo",
+   "pyKey": "zao2",
+   "tone": 3,
+   "words": [
+    [
+     "红枣",
+     "hóng zǎo"
+    ],
+    [
+     "枣树",
+     "zǎo shù"
+    ]
+   ],
+   "glyph": "红枣的枣，枣树上有小刺，字里也藏着尖刺",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "刺",
+     "形近"
+    ],
+    [
+     "杏",
+     "同类"
+    ],
+    [
+     "桃",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "葡",
+   "src": "life",
+   "order": 21,
+   "chNo": null,
+   "first": null,
+   "py": "pú",
+   "pyKey": "pu",
+   "tone": 2,
+   "words": [
+    [
+     "葡萄",
+     "pú tao"
+    ],
+    [
+     "葡萄干",
+     "pú tao gān"
+    ]
+   ],
+   "glyph": "葡萄的葡，草字头，葡萄一串串爬在架子上",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "萄",
+     "形近"
+    ],
+    [
+     "莓",
+     "同类"
+    ],
+    [
+     "瓜",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "萄",
+   "src": "life",
+   "order": 22,
+   "chNo": null,
+   "first": null,
+   "py": "táo",
+   "pyKey": "tao2",
+   "tone": 2,
+   "words": [
+    [
+     "葡萄",
+     "pú tao"
+    ],
+    [
+     "葡萄干",
+     "pú tao gān"
+    ]
+   ],
+   "glyph": "葡萄的萄，和葡是好伙伴，两个字合起来才是葡萄",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "葡",
+     "形近"
+    ],
+    [
+     "莓",
+     "同类"
+    ],
+    [
+     "瓜",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "咸",
+   "src": "life",
+   "order": 23,
+   "chNo": null,
+   "first": null,
+   "py": "xián",
+   "pyKey": "xian",
+   "tone": 2,
+   "words": [
+    [
+     "咸菜",
+     "xián cài"
+    ],
+    [
+     "咸鱼",
+     "xián yú"
+    ]
+   ],
+   "glyph": "咸咸的咸，盐放多了就咸，咸咸的菜要多喝水",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "威",
+     "形近"
+    ],
+    [
+     "甜",
+     "同类"
+    ],
+    [
+     "辣",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "辣",
+   "src": "life",
+   "order": 24,
+   "chNo": null,
+   "first": null,
+   "py": "là",
+   "pyKey": "la",
+   "tone": 4,
+   "words": [
+    [
+     "辣椒",
+     "là jiāo"
+    ],
+    [
+     "麻辣",
+     "má là"
+    ]
+   ],
+   "glyph": "辣辣的辣，左边一个辛，辣椒辣得嘴巴冒火",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "辩",
+     "形近"
+    ],
+    [
+     "咸",
+     "同类"
+    ],
+    [
+     "苦",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "苦",
+   "src": "life",
+   "order": 25,
+   "chNo": null,
+   "first": null,
+   "py": "kǔ",
+   "pyKey": "ku",
+   "tone": 3,
+   "words": [
+    [
+     "苦瓜",
+     "kǔ guā"
+    ],
+    [
+     "苦味",
+     "kǔ wèi"
+    ]
+   ],
+   "glyph": "苦苦的苦，草字头加个古，苦瓜和药都苦苦的",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "若",
+     "形近"
+    ],
+    [
+     "甜",
+     "同类"
+    ],
+    [
+     "辣",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "饮",
+   "src": "life",
+   "order": 26,
+   "chNo": null,
+   "first": null,
+   "py": "yǐn",
+   "pyKey": "yin",
+   "tone": 3,
+   "words": [
+    [
+     "饮料",
+     "yǐn liào"
+    ],
+    [
+     "冷饮",
+     "lěng yǐn"
+    ]
+   ],
+   "glyph": "饮料的饮，食字旁加个欠，喝东西就是饮",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "吹",
+     "形近"
+    ],
+    [
+     "次",
+     "形近"
+    ],
+    [
+     "喝",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "克",
+   "src": "life",
+   "order": 27,
+   "chNo": null,
+   "first": null,
+   "py": "kè",
+   "pyKey": "ke",
+   "tone": 4,
+   "words": [
+    [
+     "千克",
+     "qiān kè"
+    ],
+    [
+     "五百克",
+     "wǔ bǎi kè"
+    ]
+   ],
+   "glyph": "克是称东西用的，一克很轻很轻，像一根羽毛",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "兄",
+     "形近"
+    ],
+    [
+     "元",
+     "形近"
+    ],
+    [
+     "斤",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "买",
+   "src": "life",
+   "order": 28,
+   "chNo": null,
+   "first": null,
+   "py": "mǎi",
+   "pyKey": "mai",
+   "tone": 3,
+   "words": [
+    [
+     "买菜",
+     "mǎi cài"
+    ],
+    [
+     "买糖",
+     "mǎi táng"
+    ]
+   ],
+   "glyph": "古人用网捞贝壳，贝壳就是钱，这就是买",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "实",
+     "形近"
+    ],
+    [
+     "换",
+     "同类"
+    ],
+    [
+     "付",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "卖",
+   "src": "life",
+   "order": 29,
+   "chNo": null,
+   "first": null,
+   "py": "mài",
+   "pyKey": "mai2",
+   "tone": 4,
+   "words": [
+    [
+     "卖菜",
+     "mài cài"
+    ],
+    [
+     "卖花",
+     "mài huā"
+    ]
+   ],
+   "glyph": "卖东西的卖，买字头上加个十，把东西卖出去",
+   "parts": [
+    "十",
+    "买"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "实",
+     "形近"
+    ],
+    [
+     "商",
+     "同类"
+    ],
+    [
+     "换",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "碗",
+   "src": "life",
+   "order": 30,
+   "chNo": null,
+   "first": null,
+   "py": "wǎn",
+   "pyKey": "wan2",
+   "tone": 3,
+   "words": [
+    [
+     "饭碗",
+     "fàn wǎn"
+    ],
+    [
+     "大碗",
+     "dà wǎn"
+    ]
+   ],
+   "glyph": "吃饭的碗，石字旁，瓷碗硬硬的像小石头",
+   "parts": [
+    "石",
+    "宛"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "婉",
+     "形近"
+    ],
+    [
+     "豌",
+     "形近"
+    ],
+    [
+     "盘",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "筷",
+   "src": "life",
+   "order": 31,
+   "chNo": null,
+   "first": null,
+   "py": "kuài",
+   "pyKey": "kuai",
+   "tone": 4,
+   "words": [
+    [
+     "筷子",
+     "kuài zi"
+    ],
+    [
+     "碗筷",
+     "wǎn kuài"
+    ]
+   ],
+   "glyph": "筷子的筷，竹字头，筷子是用竹子做的",
+   "parts": null,
+   "family": "kuai",
+   "freq": 2,
+   "distract": [
+    [
+     "块",
+     "形近"
+    ],
+    [
+     "决",
+     "形近"
+    ],
+    [
+     "勺",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "杯",
+   "src": "life",
+   "order": 32,
+   "chNo": null,
+   "first": null,
+   "py": "bēi",
+   "pyKey": "bei3",
+   "tone": 1,
+   "words": [
+    [
+     "水杯",
+     "shuǐ bēi"
+    ],
+    [
+     "杯子",
+     "bēi zi"
+    ]
+   ],
+   "glyph": "水杯的杯，木字旁，最早的杯子是木头做的",
+   "parts": [
+    "木",
+    "不"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "怀",
+     "形近"
+    ],
+    [
+     "坏",
+     "形近"
+    ],
+    [
+     "碗",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "勺",
+   "src": "life",
+   "order": 33,
+   "chNo": null,
+   "first": null,
+   "py": "sháo",
+   "pyKey": "shao",
+   "tone": 2,
+   "words": [
+    [
+     "汤勺",
+     "tāng sháo"
+    ],
+    [
+     "勺子",
+     "sháo zi"
+    ]
+   ],
+   "glyph": "汤勺的勺，像一把小勺子，舀汤喝",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "勾",
+     "形近"
+    ],
+    [
+     "匀",
+     "形近"
+    ],
+    [
+     "筷",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "袜",
+   "src": "life",
+   "order": 34,
+   "chNo": null,
+   "first": null,
+   "py": "wà",
+   "pyKey": "wa3",
+   "tone": 4,
+   "words": [
+    [
+     "袜子",
+     "wà zi"
+    ],
+    [
+     "棉袜",
+     "mián wà"
+    ]
+   ],
+   "glyph": "袜子的袜，衣字旁，袜子穿在脚上保护脚",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "抹",
+     "形近"
+    ],
+    [
+     "沫",
+     "形近"
+    ],
+    [
+     "裤",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "裤",
+   "src": "life",
+   "order": 35,
+   "chNo": null,
+   "first": null,
+   "py": "kù",
+   "pyKey": "ku2",
+   "tone": 4,
+   "words": [
+    [
+     "裤子",
+     "kù zi"
+    ],
+    [
+     "短裤",
+     "duǎn kù"
+    ]
+   ],
+   "glyph": "裤子的裤，衣字旁加个库，裤腿像两间小库房",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "裙",
+     "形近"
+    ],
+    [
+     "衫",
+     "同类"
+    ],
+    [
+     "袜",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "衫",
+   "src": "life",
+   "order": 36,
+   "chNo": null,
+   "first": null,
+   "py": "shān",
+   "pyKey": "shan3",
+   "tone": 1,
+   "words": [
+    [
+     "衬衫",
+     "chèn shān"
+    ],
+    [
+     "汗衫",
+     "hàn shān"
+    ]
+   ],
+   "glyph": "衬衫的衫，衣字旁，三道撇像衣服的褶子",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "初",
+     "形近"
+    ],
+    [
+     "裤",
+     "同类"
+    ],
+    [
+     "裙",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "帽",
+   "src": "life",
+   "order": 37,
+   "chNo": null,
+   "first": null,
+   "py": "mào",
+   "pyKey": "mao2",
+   "tone": 4,
+   "words": [
+    [
+     "帽子",
+     "mào zi"
+    ],
+    [
+     "草帽",
+     "cǎo mào"
+    ]
+   ],
+   "glyph": "帽子的帽，巾字旁，帽子戴在头上遮太阳",
+   "parts": [
+    "巾",
+    "冒"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "昌",
+     "形近"
+    ],
+    [
+     "鞋",
+     "同类"
+    ],
+    [
+     "袜",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "鞋",
+   "src": "life",
+   "order": 38,
+   "chNo": null,
+   "first": null,
+   "py": "xié",
+   "pyKey": "xie2",
+   "tone": 2,
+   "words": [
+    [
+     "鞋子",
+     "xié zi"
+    ],
+    [
+     "皮鞋",
+     "pí xié"
+    ]
+   ],
+   "glyph": "鞋子的鞋，皮鞋用皮革做，穿在脚上走路",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "蛙",
+     "形近"
+    ],
+    [
+     "娃",
+     "形近"
+    ],
+    [
+     "靴",
+     "同类"
+    ]
+   ]
+  }
+ ]
+}

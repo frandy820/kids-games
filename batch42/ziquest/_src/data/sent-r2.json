@@ -1,0 +1,22 @@
+{"region":2,"sentences":[
+{"id":"s027","region":2,"text":"你看我的手，好白呀！","focus":"手","py":"nǐ kàn wǒ de shǒu hǎo bái ya","len":8},
+{"id":"s028","region":2,"text":"他站好了，你看！","focus":"站","py":"tā zhàn hǎo le nǐ kàn","len":6},
+{"id":"s029","region":2,"text":"坐好，我们听。","focus":"坐","py":"zuò hǎo wǒ men tīng","len":5},
+{"id":"s030","region":2,"text":"我爸好高呀！","focus":"爸","py":"wǒ bà hǎo gāo ya","len":5},
+{"id":"s031","region":2,"text":"我妈来看我了！","focus":"妈","py":"wǒ mā lái kàn wǒ le","len":6},
+{"id":"s032","region":2,"text":"妹，你去不去？","focus":"妹","py":"mèi nǐ qù bù qù","len":5},
+{"id":"s033","region":2,"text":"奶来了，我们坐好。","focus":"奶","py":"nǎi lái le wǒ men zuò hǎo","len":7},
+{"id":"s034","region":2,"text":"我家有爸和妈。","focus":"家","py":"wǒ jiā yǒu bà hé mā","len":6},
+{"id":"s035","region":2,"text":"我和妹，头对头。","focus":"头","py":"wǒ hé mèi tóu duì tóu","len":6},
+{"id":"s036","region":2,"text":"天黑了，我们去睡。","focus":"睡","py":"tiān hēi le wǒ men qù shuì","len":7},
+{"id":"s037","region":2,"text":"妹穿红，我穿绿。","focus":"穿","py":"mèi chuān hóng wǒ chuān lǜ","len":6},
+{"id":"s038","region":2,"text":"我的衣，红红的。","focus":"衣","py":"wǒ de yī hóng hóng de","len":6},
+{"id":"s039","region":2,"text":"我的衣服，蓝蓝的。","focus":"服","py":"wǒ de yī fú lán lán de","len":7},
+{"id":"s040","region":2,"text":"娃睡了，妈还没睡。","focus":"娃","py":"wá shuì le mā hái méi shuì","len":7},
+{"id":"s041","region":2,"text":"妹的牙，白白的。","focus":"牙","py":"mèi de yá bái bái de","len":6},
+{"id":"s042","region":2,"text":"我和哥去看云。","focus":"哥","py":"wǒ hé gē qù kàn yún","len":6},
+{"id":"s043","region":2,"text":"姐的衣服，好好看！","focus":"姐","py":"jiě de yī fú hǎo hǎo kàn","len":7},
+{"id":"s044","region":2,"text":"弟，你睡了吗？","focus":"弟","py":"dì nǐ shuì le ma","len":5},
+{"id":"s045","region":2,"text":"爷，你来坐呀！","focus":"爷","py":"yé nǐ lái zuò ya","len":5},
+{"id":"s046","region":2,"text":"我是女孩，你是男孩。","focus":"女","py":"wǒ shì nǚ hái nǐ shì nán hái","len":8}
+]}

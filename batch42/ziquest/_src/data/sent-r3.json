@@ -1,0 +1,20 @@
+{"region":3,"sentences":[
+{"id":"s047","region":3,"text":"我看牛，牛看我。","focus":"牛","py":"wǒ kàn niú niú kàn wǒ","len":6},
+{"id":"s048","region":3,"text":"猫睡着了。","focus":"猫","py":"māo shuì zháo le","len":4},
+{"id":"s049","region":3,"text":"鸭和牛在禾田。","focus":"鸭","py":"yā hé niú zài hé tián","len":6},
+{"id":"s050","region":3,"text":"宝宝有木屋。","focus":"木","py":"bǎo bǎo yǒu mù wū","len":5},
+{"id":"s051","region":3,"text":"鸟在林，娃在屋。","focus":"林","py":"niǎo zài lín wá zài wū","len":6},
+{"id":"s052","region":3,"text":"森林是鸟的家。","focus":"森","py":"sēn lín shì niǎo de jiā","len":6},
+{"id":"s053","region":3,"text":"娃去坐木马。","focus":"马","py":"wá qù zuò mù mǎ","len":5},
+{"id":"s054","region":3,"text":"鸡看见了虫。","focus":"鸡","py":"jī kàn jiàn le chóng","len":5},
+{"id":"s055","region":3,"text":"草地有花有虫。","focus":"草","py":"cǎo dì yǒu huā yǒu chóng","len":6},
+{"id":"s056","region":3,"text":"妈和娃去湖看鱼。","focus":"鱼","py":"mā hé wá qù hú kàn yú","len":7},
+{"id":"s057","region":3,"text":"青蛙好绿呀！","focus":"蛙","py":"qīng wā hǎo lǜ ya","len":5},
+{"id":"s058","region":3,"text":"我家有猫和狗。","focus":"狗","py":"wǒ jiā yǒu māo hé gǒu","len":6},
+{"id":"s059","region":3,"text":"白兔穿白衣。","focus":"兔","py":"bái tù chuān bái yī","len":5},
+{"id":"s060","region":3,"text":"妈的马尾好黑。","focus":"尾","py":"mā de mǎ wěi hǎo hēi","len":6},
+{"id":"s061","region":3,"text":"竹叶青青的。","focus":"竹","py":"zhú yè qīng qīng de","len":5},
+{"id":"s062","region":3,"text":"它是乌鸦吗？","focus":"鸦","py":"tā shì wū yā ma","len":5},
+{"id":"s063","region":3,"text":"花猫爬树。","focus":"爬","py":"huā māo pá shù","len":4},
+{"id":"s064","region":3,"text":"白鹅白，乌鸦黑。","focus":"鹅","py":"bái é bái wū yā hēi","len":6}
+]}

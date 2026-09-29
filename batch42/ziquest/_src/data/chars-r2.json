@@ -1,0 +1,1779 @@
+{
+ "meta": {
+  "name": "暖暖村",
+  "theme": "家人·身体·生活自理",
+  "accent": "#F2B8C6",
+  "region": 2,
+  "count": 43,
+  "levels": 8,
+  "note": "order=区域内教学序；g1a 按课标 first 课号排序；life 待 0c 补 py/words"
+ },
+ "function": [],
+ "chars": [
+  {
+   "ch": "人",
+   "src": "g1a",
+   "order": 0,
+   "chNo": null,
+   "first": "1a-s1",
+   "py": "rén",
+   "pyKey": "ren",
+   "tone": 2,
+   "words": [
+    [
+     "大人",
+     "dà rén"
+    ],
+    [
+     "人们",
+     "rén men"
+    ],
+    [
+     "人口",
+     "rén kǒu"
+    ]
+   ],
+   "glyph": "两条腿站着走路，就是我们人",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "入",
+     "形近"
+    ],
+    [
+     "八",
+     "形近"
+    ],
+    [
+     "大",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "口",
+   "src": "g1a",
+   "order": 1,
+   "chNo": null,
+   "first": "1a-s3",
+   "py": "kǒu",
+   "pyKey": "kou",
+   "tone": 3,
+   "words": [
+    [
+     "口水",
+     "kǒu shuǐ"
+    ],
+    [
+     "门口",
+     "mén kǒu"
+    ],
+    [
+     "开口",
+     "kāi kǒu"
+    ]
+   ],
+   "glyph": "张开的大嘴巴，方方一个口",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "日",
+     "形近"
+    ],
+    [
+     "田",
+     "形近"
+    ],
+    [
+     "目",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "耳",
+   "src": "g1a",
+   "order": 2,
+   "chNo": null,
+   "first": "1a-s3",
+   "py": "ěr",
+   "pyKey": "er",
+   "tone": 3,
+   "words": [
+    [
+     "耳朵",
+     "ěr duo"
+    ],
+    [
+     "耳机",
+     "ěr jī"
+    ]
+   ],
+   "glyph": "耳朵的样子，长长的耳朵中间藏着小孔",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "目",
+     "同类"
+    ],
+    [
+     "口",
+     "同类"
+    ],
+    [
+     "手",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "目",
+   "src": "g1a",
+   "order": 3,
+   "chNo": null,
+   "first": "1a-s3",
+   "py": "mù",
+   "pyKey": "mu",
+   "tone": 4,
+   "words": [
+    [
+     "耳目",
+     "ěr mù"
+    ],
+    [
+     "节目",
+     "jié mù"
+    ],
+    [
+     "目光",
+     "mù guāng"
+    ]
+   ],
+   "glyph": "眼睛的形状，方框是眼眶，里面两横是眼珠",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "日",
+     "形近"
+    ],
+    [
+     "田",
+     "形近"
+    ],
+    [
+     "月",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "手",
+   "src": "g1a",
+   "order": 4,
+   "chNo": null,
+   "first": "1a-s3",
+   "py": "shǒu",
+   "pyKey": "shou",
+   "tone": 3,
+   "words": [
+    [
+     "小手",
+     "xiǎo shǒu"
+    ],
+    [
+     "洗手",
+     "xǐ shǒu"
+    ],
+    [
+     "拍手",
+     "pāi shǒu"
+    ]
+   ],
+   "glyph": "五根手指头，张开的小手",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "毛",
+     "形近"
+    ],
+    [
+     "足",
+     "同类"
+    ],
+    [
+     "脚",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "足",
+   "src": "g1a",
+   "order": 5,
+   "chNo": null,
+   "first": "1a-s3",
+   "py": "zú",
+   "pyKey": "zu",
+   "tone": 2,
+   "words": [
+    [
+     "足球",
+     "zú qiú"
+    ],
+    [
+     "手足",
+     "shǒu zú"
+    ],
+    [
+     "足迹",
+     "zú jì"
+    ]
+   ],
+   "glyph": "足就是脚，上面像小腿，下面像脚掌",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "走",
+     "形近"
+    ],
+    [
+     "手",
+     "同类"
+    ],
+    [
+     "脚",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "站",
+   "src": "g1a",
+   "order": 6,
+   "chNo": null,
+   "first": "1a-s3",
+   "py": "zhàn",
+   "pyKey": "zhan",
+   "tone": 4,
+   "words": [
+    [
+     "车站",
+     "chē zhàn"
+    ],
+    [
+     "站起来",
+     "zhàn qǐ lái"
+    ]
+   ],
+   "glyph": "站直的站，左边立像人站得直直的",
+   "parts": [
+    "立",
+    "占"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "坐",
+     "同类"
+    ],
+    [
+     "走",
+     "同类"
+    ],
+    [
+     "跑",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "坐",
+   "src": "g1a",
+   "order": 7,
+   "chNo": null,
+   "first": "1a-s3",
+   "py": "zuò",
+   "pyKey": "zuo2",
+   "tone": 4,
+   "words": [
+    [
+     "坐下",
+     "zuò xià"
+    ],
+    [
+     "坐车",
+     "zuò chē"
+    ],
+    [
+     "请坐",
+     "qǐng zuò"
+    ]
+   ],
+   "glyph": "两个人坐在小土堆上，就是坐",
+   "parts": [
+    "人",
+    "人",
+    "土"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "站",
+     "同类"
+    ],
+    [
+     "立",
+     "同类"
+    ],
+    [
+     "趴",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "心",
+   "src": "g1a",
+   "order": 8,
+   "chNo": null,
+   "first": "1a-s9",
+   "py": "xīn",
+   "pyKey": "xin",
+   "tone": 1,
+   "words": [
+    [
+     "开心",
+     "kāi xīn"
+    ],
+    [
+     "心里",
+     "xīn lǐ"
+    ],
+    [
+     "小心",
+     "xiǎo xīn"
+    ]
+   ],
+   "glyph": "心脏的样子，像画的一颗爱心",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "口",
+     "同类"
+    ],
+    [
+     "耳",
+     "同类"
+    ],
+    [
+     "目",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "爸",
+   "src": "g1a",
+   "order": 9,
+   "chNo": null,
+   "first": "1a-p3",
+   "py": "bà",
+   "pyKey": "ba",
+   "tone": 4,
+   "words": [
+    [
+     "爸爸",
+     "bà ba"
+    ],
+    [
+     "老爸",
+     "lǎo bà"
+    ]
+   ],
+   "glyph": "爸爸的爸，上面是父亲的父，下面是巴",
+   "parts": [
+    "父",
+    "巴"
+   ],
+   "family": "ba",
+   "freq": 2,
+   "distract": [
+    [
+     "妈",
+     "同类"
+    ],
+    [
+     "爷",
+     "同类"
+    ],
+    [
+     "叔",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "妈",
+   "src": "g1a",
+   "order": 10,
+   "chNo": null,
+   "first": "1a-p3",
+   "py": "mā",
+   "pyKey": "ma",
+   "tone": 1,
+   "words": [
+    [
+     "妈妈",
+     "mā ma"
+    ],
+    [
+     "爸妈",
+     "bà mā"
+    ]
+   ],
+   "glyph": "妈妈的妈，女字旁，右边是小马的马",
+   "parts": [
+    "女",
+    "马"
+   ],
+   "family": "ma",
+   "freq": 2,
+   "distract": [
+    [
+     "马",
+     "形近"
+    ],
+    [
+     "蚂",
+     "同声旁"
+    ],
+    [
+     "奶",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "妹",
+   "src": "g1a",
+   "order": 11,
+   "chNo": null,
+   "first": "1a-p9",
+   "py": "mèi",
+   "pyKey": "mei",
+   "tone": 4,
+   "words": [
+    [
+     "妹妹",
+     "mèi mei"
+    ],
+    [
+     "姐妹",
+     "jiě mèi"
+    ],
+    [
+     "小妹",
+     "xiǎo mèi"
+    ]
+   ],
+   "glyph": "妹妹的妹，女字旁加未来的未",
+   "parts": [
+    "女",
+    "未"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "味",
+     "同声旁"
+    ],
+    [
+     "姐",
+     "同类"
+    ],
+    [
+     "哥",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "奶",
+   "src": "g1a",
+   "order": 12,
+   "chNo": null,
+   "first": "1a-p9",
+   "py": "nǎi",
+   "pyKey": "nai",
+   "tone": 3,
+   "words": [
+    [
+     "奶奶",
+     "nǎi nai"
+    ],
+    [
+     "牛奶",
+     "niú nǎi"
+    ],
+    [
+     "奶糖",
+     "nǎi táng"
+    ]
+   ],
+   "glyph": "奶奶的奶，左边女字旁，右边是乃",
+   "parts": [
+    "女",
+    "乃"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "妈",
+     "同类"
+    ],
+    [
+     "爷",
+     "同类"
+    ],
+    [
+     "婆",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "儿",
+   "src": "g1a",
+   "order": 13,
+   "chNo": null,
+   "first": "1a-p11",
+   "py": "ér",
+   "pyKey": "er2",
+   "tone": 2,
+   "words": [
+    [
+     "儿子",
+     "ér zi"
+    ],
+    [
+     "儿童",
+     "ér tóng"
+    ],
+    [
+     "花儿",
+     "huā ér"
+    ]
+   ],
+   "glyph": "小孩子走路的样子，上面脑袋，下面两条小腿",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "几",
+     "形近"
+    ],
+    [
+     "二",
+     "形近"
+    ],
+    [
+     "子",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "家",
+   "src": "g1a",
+   "order": 14,
+   "chNo": null,
+   "first": "1a-p12",
+   "py": "jiā",
+   "pyKey": "jia",
+   "tone": 1,
+   "words": [
+    [
+     "大家",
+     "dà jiā"
+    ],
+    [
+     "回家",
+     "huí jiā"
+    ],
+    [
+     "家人",
+     "jiā rén"
+    ]
+   ],
+   "glyph": "屋顶下面养一头小猪，就是家",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "房",
+     "同类"
+    ],
+    [
+     "屋",
+     "同类"
+    ],
+    [
+     "爸",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "头",
+   "src": "g1a",
+   "order": 15,
+   "chNo": null,
+   "first": "1a-k2",
+   "py": "tóu",
+   "pyKey": "tou",
+   "tone": 2,
+   "words": [
+    [
+     "头上",
+     "tóu shàng"
+    ],
+    [
+     "点头",
+     "diǎn tóu"
+    ],
+    [
+     "大头",
+     "dà tóu"
+    ]
+   ],
+   "glyph": "点头的头，脑袋的意思，两点像扎的小辫子",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "买",
+     "形近"
+    ],
+    [
+     "发",
+     "同类"
+    ],
+    [
+     "耳",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "皮",
+   "src": "g1a",
+   "order": 16,
+   "chNo": null,
+   "first": "1a-k4",
+   "py": "pí",
+   "pyKey": "pi",
+   "tone": 2,
+   "words": [
+    [
+     "肚皮",
+     "dù pí"
+    ],
+    [
+     "皮球",
+     "pí qiú"
+    ],
+    [
+     "果皮",
+     "guǒ pí"
+    ]
+   ],
+   "glyph": "皮肤的皮，就是包在身体外面那一层",
+   "parts": null,
+   "family": "pi",
+   "freq": 3,
+   "distract": [
+    [
+     "肤",
+     "同类"
+    ],
+    [
+     "毛",
+     "同类"
+    ],
+    [
+     "手",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "它",
+   "src": "g1a",
+   "order": 17,
+   "chNo": null,
+   "first": "1a-k5",
+   "py": "tā",
+   "pyKey": "ta",
+   "tone": 1,
+   "words": [
+    [
+     "它们",
+     "tā men"
+    ],
+    [
+     "它的",
+     "tā de"
+    ]
+   ],
+   "glyph": "它的它，说小动物的时候用它",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "字",
+     "形近"
+    ],
+    [
+     "他",
+     "同类"
+    ],
+    [
+     "她",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "睡",
+   "src": "g1a",
+   "order": 18,
+   "chNo": null,
+   "first": "1a-k9",
+   "py": "shuì",
+   "pyKey": "shui2",
+   "tone": 4,
+   "words": [
+    [
+     "睡觉",
+     "shuì jiào"
+    ],
+    [
+     "睡着",
+     "shuì zháo"
+    ]
+   ],
+   "glyph": "睡觉的睡，眼皮垂下来，闭上眼睛就睡着",
+   "parts": [
+    "目",
+    "垂"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "醒",
+     "同类"
+    ],
+    [
+     "觉",
+     "同类"
+    ],
+    [
+     "梦",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "穿",
+   "src": "g1a",
+   "order": 19,
+   "chNo": null,
+   "first": "1a-k10",
+   "py": "chuān",
+   "pyKey": "chuan",
+   "tone": 1,
+   "words": [
+    [
+     "穿衣服",
+     "chuān yī fu"
+    ],
+    [
+     "穿上",
+     "chuān shàng"
+    ],
+    [
+     "穿鞋",
+     "chuān xié"
+    ]
+   ],
+   "glyph": "穿衣服的穿，上面像小山洞，钻过洞就穿上了",
+   "parts": [
+    "穴",
+    "牙"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "脱",
+     "同类"
+    ],
+    [
+     "戴",
+     "同类"
+    ],
+    [
+     "衣",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "衣",
+   "src": "g1a",
+   "order": 20,
+   "chNo": null,
+   "first": "1a-k10",
+   "py": "yī",
+   "pyKey": "yi",
+   "tone": 1,
+   "words": [
+    [
+     "衣服",
+     "yī fu"
+    ],
+    [
+     "棉衣",
+     "mián yī"
+    ],
+    [
+     "大衣",
+     "dà yī"
+    ]
+   ],
+   "glyph": "衣服的样子，上面是衣领，下面两片是衣襟",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "农",
+     "形近"
+    ],
+    [
+     "服",
+     "同类"
+    ],
+    [
+     "裤",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "服",
+   "src": "g1a",
+   "order": 21,
+   "chNo": null,
+   "first": "1a-k10",
+   "py": "fú",
+   "pyKey": "fu",
+   "tone": 2,
+   "words": [
+    [
+     "服装",
+     "fú zhuāng"
+    ],
+    [
+     "衣服",
+     "yī fú"
+    ],
+    [
+     "校服",
+     "xiào fú"
+    ]
+   ],
+   "glyph": "衣服的服，月字旁像身体，衣服穿在身上",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "报",
+     "形近"
+    ],
+    [
+     "衣",
+     "同类"
+    ],
+    [
+     "裤",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "娃",
+   "src": "g1a",
+   "order": 22,
+   "chNo": null,
+   "first": "1a-k11",
+   "py": "wá",
+   "pyKey": "wa",
+   "tone": 2,
+   "words": [
+    [
+     "娃娃",
+     "wá wa"
+    ],
+    [
+     "布娃娃",
+     "bù wá wa"
+    ]
+   ],
+   "glyph": "娃娃的娃，女字旁，小娃娃又白又胖",
+   "parts": null,
+   "family": "gui",
+   "freq": 2,
+   "distract": [
+    [
+     "蛙",
+     "同声旁"
+    ],
+    [
+     "哇",
+     "同声旁"
+    ],
+    [
+     "孩",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "牙",
+   "src": "g1a",
+   "order": 23,
+   "chNo": null,
+   "first": "1a-k12",
+   "py": "yá",
+   "pyKey": "ya",
+   "tone": 2,
+   "words": [
+    [
+     "牙齿",
+     "yá chǐ"
+    ],
+    [
+     "刷牙",
+     "shuā yá"
+    ],
+    [
+     "门牙",
+     "mén yá"
+    ]
+   ],
+   "glyph": "牙齿的样子，上下两排牙咬在一起",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "芽",
+     "形近"
+    ],
+    [
+     "耳",
+     "同类"
+    ],
+    [
+     "齿",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "孩",
+   "src": "g1a",
+   "order": 24,
+   "chNo": null,
+   "first": "1a-k14",
+   "py": "hái",
+   "pyKey": "hai2",
+   "tone": 2,
+   "words": [
+    [
+     "孩子",
+     "hái zi"
+    ],
+    [
+     "小孩",
+     "xiǎo hái"
+    ],
+    [
+     "女孩",
+     "nǚ hái"
+    ]
+   ],
+   "glyph": "孩子的孩，左边子是小孩，右边是亥",
+   "parts": [
+    "子",
+    "亥"
+   ],
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "该",
+     "同声旁"
+    ],
+    [
+     "娃",
+     "同类"
+    ],
+    [
+     "儿",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "哥",
+   "src": "g1a",
+   "order": 25,
+   "chNo": null,
+   "first": "1a-g7",
+   "py": "gē",
+   "pyKey": "ge",
+   "tone": 1,
+   "words": [
+    [
+     "哥哥",
+     "gē ge"
+    ],
+    [
+     "大哥",
+     "dà gē"
+    ]
+   ],
+   "glyph": "哥哥的哥，上下两个可，哥哥比我大",
+   "parts": [
+    "可",
+    "可"
+   ],
+   "family": "ke",
+   "freq": 2,
+   "distract": [
+    [
+     "姐",
+     "同类"
+    ],
+    [
+     "弟",
+     "同类"
+    ],
+    [
+     "妹",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "姐",
+   "src": "g1a",
+   "order": 26,
+   "chNo": null,
+   "first": "1a-g7",
+   "py": "jiě",
+   "pyKey": "jie",
+   "tone": 3,
+   "words": [
+    [
+     "姐姐",
+     "jiě jie"
+    ],
+    [
+     "姐妹",
+     "jiě mèi"
+    ]
+   ],
+   "glyph": "姐姐的姐，女字旁加且，姐姐是家里的大女孩",
+   "parts": [
+    "女",
+    "且"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "哥",
+     "同类"
+    ],
+    [
+     "妹",
+     "同类"
+    ],
+    [
+     "祖",
+     "同声旁"
+    ]
+   ]
+  },
+  {
+   "ch": "弟",
+   "src": "g1a",
+   "order": 27,
+   "chNo": null,
+   "first": "1a-g7",
+   "py": "dì",
+   "pyKey": "di2",
+   "tone": 4,
+   "words": [
+    [
+     "弟弟",
+     "dì di"
+    ],
+    [
+     "兄弟",
+     "xiōng dì"
+    ]
+   ],
+   "glyph": "弟弟的弟，家里比我小的男孩叫弟弟",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "第",
+     "形近"
+    ],
+    [
+     "哥",
+     "同类"
+    ],
+    [
+     "姐",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "叔",
+   "src": "g1a",
+   "order": 28,
+   "chNo": null,
+   "first": "1a-g7",
+   "py": "shū",
+   "pyKey": "shu2",
+   "tone": 1,
+   "words": [
+    [
+     "叔叔",
+     "shū shu"
+    ],
+    [
+     "大叔",
+     "dà shū"
+    ]
+   ],
+   "glyph": "叔叔的叔，爸爸的弟弟，右边是又",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "伯",
+     "同类"
+    ],
+    [
+     "舅",
+     "同类"
+    ],
+    [
+     "姨",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "爷",
+   "src": "g1a",
+   "order": 29,
+   "chNo": null,
+   "first": "1a-g7",
+   "py": "yé",
+   "pyKey": "ye2",
+   "tone": 2,
+   "words": [
+    [
+     "爷爷",
+     "yé ye"
+    ],
+    [
+     "老爷",
+     "lǎo yé"
+    ]
+   ],
+   "glyph": "爷爷的爷，上面父字头，爷爷是爸爸的爸爸",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "爸",
+     "同类"
+    ],
+    [
+     "奶",
+     "同类"
+    ],
+    [
+     "公",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "男",
+   "src": "g1a",
+   "order": 30,
+   "chNo": null,
+   "first": "1a-g4",
+   "py": "nán",
+   "pyKey": "nan",
+   "tone": 2,
+   "words": [
+    [
+     "男孩",
+     "nán hái"
+    ],
+    [
+     "男生",
+     "nán shēng"
+    ],
+    [
+     "男女",
+     "nán nǚ"
+    ]
+   ],
+   "glyph": "田里干活出力气的人，就是男",
+   "parts": [
+    "田",
+    "力"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "女",
+     "同类"
+    ],
+    [
+     "儿",
+     "同类"
+    ],
+    [
+     "人",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "女",
+   "src": "g1a",
+   "order": 31,
+   "chNo": null,
+   "first": "1a-g4",
+   "py": "nǚ",
+   "pyKey": "nv",
+   "tone": 3,
+   "words": [
+    [
+     "女孩",
+     "nǚ hái"
+    ],
+    [
+     "女生",
+     "nǚ shēng"
+    ]
+   ],
+   "glyph": "女孩子的女，像一个人安静地交叉着手",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "男",
+     "同类"
+    ],
+    [
+     "子",
+     "同类"
+    ],
+    [
+     "儿",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "屋",
+   "src": "life",
+   "order": 32,
+   "chNo": null,
+   "first": null,
+   "py": "wū",
+   "pyKey": "wu3",
+   "tone": 1,
+   "words": [
+    [
+     "屋子",
+     "wū zi"
+    ],
+    [
+     "屋里",
+     "wū li"
+    ]
+   ],
+   "glyph": "屋子的屋，上面是屋顶，人到家里了",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "层",
+     "形近"
+    ],
+    [
+     "房",
+     "同类"
+    ],
+    [
+     "家",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "婆",
+   "src": "life",
+   "order": 33,
+   "chNo": null,
+   "first": null,
+   "py": "pó",
+   "pyKey": "po",
+   "tone": 2,
+   "words": [
+    [
+     "外婆",
+     "wài pó"
+    ],
+    [
+     "婆婆",
+     "pó po"
+    ],
+    [
+     "老婆婆",
+     "lǎo pó po"
+    ]
+   ],
+   "glyph": "外婆的婆，上面是波浪的波，下面是女",
+   "parts": [
+    "波",
+    "女"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "奶",
+     "同类"
+    ],
+    [
+     "爷",
+     "同类"
+    ],
+    [
+     "妈",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "伯",
+   "src": "life",
+   "order": 34,
+   "chNo": null,
+   "first": null,
+   "py": "bó",
+   "pyKey": "bo",
+   "tone": 2,
+   "words": [
+    [
+     "伯伯",
+     "bó bo"
+    ],
+    [
+     "大伯",
+     "dà bó"
+    ],
+    [
+     "伯父",
+     "bó fù"
+    ]
+   ],
+   "glyph": "伯伯的伯，人字旁加白，爸爸的哥哥",
+   "parts": null,
+   "family": "bai",
+   "freq": 3,
+   "distract": [
+    [
+     "叔",
+     "同类"
+    ],
+    [
+     "舅",
+     "同类"
+    ],
+    [
+     "爷",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "舅",
+   "src": "life",
+   "order": 35,
+   "chNo": null,
+   "first": null,
+   "py": "jiù",
+   "pyKey": "jiu",
+   "tone": 4,
+   "words": [
+    [
+     "舅舅",
+     "jiù jiu"
+    ],
+    [
+     "舅妈",
+     "jiù mā"
+    ]
+   ],
+   "glyph": "舅舅的舅，下面是男，妈妈的兄弟叫舅舅",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "叔",
+     "同类"
+    ],
+    [
+     "伯",
+     "同类"
+    ],
+    [
+     "姨",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "姨",
+   "src": "life",
+   "order": 36,
+   "chNo": null,
+   "first": null,
+   "py": "yí",
+   "pyKey": "yi2",
+   "tone": 2,
+   "words": [
+    [
+     "姨妈",
+     "yí mā"
+    ],
+    [
+     "阿姨",
+     "ā yí"
+    ]
+   ],
+   "glyph": "姨妈的姨，女字旁，妈妈的姐妹叫姨",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "姑",
+     "同类"
+    ],
+    [
+     "婶",
+     "同类"
+    ],
+    [
+     "叔",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "宝",
+   "src": "life",
+   "order": 37,
+   "chNo": null,
+   "first": null,
+   "py": "bǎo",
+   "pyKey": "bao",
+   "tone": 3,
+   "words": [
+    [
+     "宝贝",
+     "bǎo bèi"
+    ],
+    [
+     "宝物",
+     "bǎo wù"
+    ]
+   ],
+   "glyph": "宝贝的宝，屋顶下面藏着一块玉",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "贝",
+     "同类"
+    ],
+    [
+     "珠",
+     "同类"
+    ],
+    [
+     "珍",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "指",
+   "src": "life",
+   "order": 38,
+   "chNo": null,
+   "first": null,
+   "py": "zhǐ",
+   "pyKey": "zhi",
+   "tone": 3,
+   "words": [
+    [
+     "手指",
+     "shǒu zhǐ"
+    ],
+    [
+     "指甲",
+     "zhǐ jia"
+    ]
+   ],
+   "glyph": "手指的指，提手旁，伸出手指数一数",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "拍",
+     "同类"
+    ],
+    [
+     "拉",
+     "同类"
+    ],
+    [
+     "拿",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "肩",
+   "src": "life",
+   "order": 39,
+   "chNo": null,
+   "first": null,
+   "py": "jiān",
+   "pyKey": "jian2",
+   "tone": 1,
+   "words": [
+    [
+     "肩膀",
+     "jiān bǎng"
+    ],
+    [
+     "肩上",
+     "jiān shàng"
+    ]
+   ],
+   "glyph": "肩膀的肩，胳膊上面靠近脖子的地方",
+   "parts": [
+    "户",
+    "月"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "背",
+     "同类"
+    ],
+    [
+     "臂",
+     "同类"
+    ],
+    [
+     "脖",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "被",
+   "src": "life",
+   "order": 40,
+   "chNo": null,
+   "first": null,
+   "py": "bèi",
+   "pyKey": "bei",
+   "tone": 4,
+   "words": [
+    [
+     "被子",
+     "bèi zi"
+    ],
+    [
+     "棉被",
+     "mián bèi"
+    ]
+   ],
+   "glyph": "被子的被，衣字旁加皮，盖在身上暖和",
+   "parts": null,
+   "family": "pi",
+   "freq": 2,
+   "distract": [
+    [
+     "毯",
+     "同类"
+    ],
+    [
+     "袄",
+     "同类"
+    ],
+    [
+     "衣",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "餐",
+   "src": "life",
+   "order": 41,
+   "chNo": null,
+   "first": null,
+   "py": "cān",
+   "pyKey": "can",
+   "tone": 1,
+   "words": [
+    [
+     "餐厅",
+     "cān tīng"
+    ],
+    [
+     "早餐",
+     "zǎo cān"
+    ],
+    [
+     "晚餐",
+     "wǎn cān"
+    ]
+   ],
+   "glyph": "吃饭的餐，一天三顿饭就是三餐",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "饭",
+     "同类"
+    ],
+    [
+     "食",
+     "同类"
+    ],
+    [
+     "饮",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "谢",
+   "src": "life",
+   "order": 42,
+   "chNo": null,
+   "first": null,
+   "py": "xiè",
+   "pyKey": "xie",
+   "tone": 4,
+   "words": [
+    [
+     "谢谢",
+     "xiè xie"
+    ],
+    [
+     "感谢",
+     "gǎn xiè"
+    ]
+   ],
+   "glyph": "谢谢的谢，言字旁，说话时说谢谢",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "请",
+     "同类"
+    ],
+    [
+     "您",
+     "同类"
+    ],
+    [
+     "礼",
+     "同类"
+    ]
+   ]
+  }
+ ]
+}

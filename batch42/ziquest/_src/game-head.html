@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小兔子识字闯世界</title>
+<style>
+/* ================= ziquest 小兔子识字闯世界（batch42，第 152 款，大班·幼小衔接旗舰）
+   家族基调：暖米底 #FBF6EC / 纸面 #FFF9EE / 暖棕墨线 #4A3B2E（DESIGN-SPEC §8）。
+   本款 = 冒险地图 + 收集养成：七层 SVG 绘本长卷（1000×7400，7 区域自下而上），
+   wrapper 单一 transform 平移（禁 layout 属性动画），全动效只用 transform/opacity。
+   迷雾=未解锁区域半透明 noise pattern；节点 4 态（锁灰笼/可玩呼吸/当前脉冲/完成旗星）。
+   触摸目标：节点 hit ≥96（SVG viewBox 1000 宽映射平板横屏≈120px/竖屏≈96px）、底栏按钮 ≥96。 */
+
+/* ========== 一·基式与家族公共段（FAMILY_CSS 三占位：reset/ghost/verify） ========== */
+<!--FAMILY_CSS:reset-->
+body{background:#FBF6EC;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:#4A3B2E}
+svg{display:block}
+
+#zq-game{position:fixed;inset:0;display:flex;flex-direction:column;touch-action:none;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+
+/* ========== 二·冒险地图（HUD 顶栏 / 七层 SVG 长卷 / 底栏三入口） ========== */
+#zq-hud{flex:0 0 54px;display:flex;align-items:center;gap:12px;padding:6px 14px 0;z-index:5}
+#zq-logo{width:42px;height:42px;border-radius:13px;background:#E8975A;flex:0 0 42px;
+  display:flex;align-items:center;justify-content:center;overflow:hidden}
+#zq-logo svg{width:36px;height:36px}
+.zq-pill{display:flex;align-items:center;gap:6px;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  border-radius:18px;box-shadow:0 3px 0 #D8C9B4;padding:5px 14px;font-size:19px;font-weight:800;min-height:36px}
+.zq-pill svg{width:24px;height:24px;flex:0 0 24px}
+.zq-pill b{min-width:26px;text-align:center}
+#zq-today{margin-left:auto;font-size:15px;color:#8A7B6C;background:none;box-shadow:none;border-color:#EFE3CD}
+
+/* 地图视口与 wrapper（唯一 transform 平移通道；拖动时关 transition，松手/跳关恢复） */
+#zq-view{flex:1 1 auto;position:relative;overflow:hidden;touch-action:none}
+#zq-world{position:absolute;left:0;top:0;width:100%;will-change:transform;
+  transition:transform .8s cubic-bezier(.3,.9,.35,1)}
+#zq-world.drag{transition:none}
+#zq-world svg{width:100%;height:auto}
+/* L1 远景视差（极慢平移循环，transform-only） */
+#zq-l1{animation:zq-far 90s linear infinite;will-change:transform}
+@keyframes zq-far{0%,100%{transform:translateX(0)}50%{transform:translateX(-64px)}}
+/* 迷雾覆盖（未解锁区域；解锁时 opacity 1→0 过渡=消散仪式） */
+.zq-fog{opacity:1;transition:opacity .8s ease;pointer-events:none}
+.zq-fog.gone{opacity:0}
+
+/* 节点 4 态：s-locked 灰笼 / s-open 彩色+idle 浮动 / s-current 脉冲环 / s-done 插旗+星 */
+.zq-node .zq-ani{transform-box:fill-box;transform-origin:center}
+.zq-node .zq-hit{fill:#000;opacity:0;pointer-events:all}
+.zq-node.s-open .zq-ani{animation:zq-float 3.2s ease-in-out infinite}
+.zq-node.s-open:nth-of-type(2n) .zq-ani{animation-duration:2.6s;animation-delay:-1.2s}
+.zq-node.s-open:nth-of-type(3n) .zq-ani{animation-duration:3.8s;animation-delay:-.6s}
+@keyframes zq-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.zq-node.s-locked .zq-ani{opacity:.5}
+.zq-node.s-locked .zq-cage{display:block}
+.zq-cage{display:none;fill:#8A9BAE;opacity:.32}
+.zq-node .zq-ring{opacity:0}
+.zq-node.s-current .zq-ring{animation:zq-pulse 2.4s ease-out infinite}
+.zq-node.s-current .zq-ring.r2{animation-delay:1.2s}
+@keyframes zq-pulse{0%{opacity:.85;transform:scale(.62)}70%{opacity:0;transform:scale(1.28)}100%{opacity:0}}
+.zq-node .zq-flag,.zq-node .zq-stars{opacity:0;transition:opacity .3s}
+.zq-node.s-done .zq-flag,.zq-node.s-done .zq-stars{opacity:1}
+.zq-node.s-done .zq-ani{animation:none}
+.zq-node.shake .zq-ani{animation:zq-shake .52s ease}
+@keyframes zq-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-11px)}
+  45%{transform:translateX(10px)}70%{transform:translateX(-6px)}88%{transform:translateX(4px)}}
+/* L5 兔子：hop 落地 squash&stretch（transform-only，作用于内层 g） */
+#zq-rabbit .zq-hop{transform-box:fill-box;transform-origin:50% 100%}
+#zq-rabbit.hop .zq-hop{animation:zq-hop .42s ease 2}
+@keyframes zq-hop{0%,100%{transform:translateY(0) scale(1,1)}30%{transform:translateY(-30px) scale(.96,1.05)}
+  62%{transform:translateY(0) scale(1.14,.84)}82%{transform:translateY(-8px) scale(.99,1.02)}}
+/* L6 粒子池（一次性触发，transform/opacity only） */
+.zq-fx{opacity:0}
+.zq-fx.go{animation:zq-burst .7s ease-out forwards}
+@keyframes zq-burst{0%{opacity:1;transform:translate(0,0) scale(.5)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.3)}}
+
+/* 底栏三入口（图鉴/家园/伙伴——M1 占位，触摸面 ≥96） */
+#zq-dock{flex:0 0 auto;display:flex;align-items:center;justify-content:space-around;gap:10px;padding:4px 16px 12px;z-index:5}
+.zq-dock-btn{min-width:96px;min-height:96px;border-radius:26px;background:#FFF9EE;border:2.5px solid #4A3B2E;
+  box-shadow:0 5px 0 #D8C9B4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  font-size:17px;font-weight:800;transition:transform .15s;flex:1 1 0;max-width:168px}
+.zq-dock-btn:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}
+.zq-dock-btn svg{width:44px;height:44px}
+
+/* ========== 三·关卡占位（M2 题型系统样式区预留：场景框/题面/选项/翻牌/拖拽） ========== */
+/* M2 接入：#zq-level 覆盖层（场景主题框+脚印进度+材质选项）在此段落追加，禁散落到其它段 */
+
+/* ========== 四·收集占位（M4 图鉴/伙伴/家园样式区预留） ========== */
+/* M4 接入：图鉴翻页 / 伙伴家园 / 装扮试穿弹层在此段落追加 */
+
+/* ========== 五·弹层（建设中占位 overlay / 星结算 / 迷雾仪式 / toast） ========== */
+.zq-ov{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:14px;background:rgba(74,59,46,.42);animation:zq-ov-in .3s ease}
+.zq-ov.hide{display:none}
+@keyframes zq-ov-in{from{opacity:0}to{opacity:1}}
+.zq-ov .box{background:#FFF9EE;border:3px solid #4A3B2E;border-radius:28px;box-shadow:0 6px 0 #D8C9B4;
+  padding:26px 34px;display:flex;flex-direction:column;align-items:center;gap:12px;max-width:86vw}
+.zq-ov .box svg{width:110px;height:110px}
+.zq-ov .t1{font-size:25px;font-weight:800}
+.zq-ov .t2{font-size:16px;color:#8A7B6C}
+#zq-toast{position:fixed;left:50%;bottom:128px;transform:translate(-50%,80px);z-index:70;background:#FFF9EE;
+  border:2.5px solid #4A3B2E;border-radius:18px;box-shadow:0 4px 0 #D8C9B4;padding:10px 20px;
+  font-size:16px;font-weight:700;transition:transform .3s ease;pointer-events:none}
+#zq-toast.show{transform:translate(-50%,0)}
+
+@media (orientation:portrait){
+  #zq-hud{flex:0 0 48px}
+  .zq-pill{font-size:16px;padding:4px 11px}
+  .zq-dock-btn{min-width:88px;min-height:88px;font-size:15px}
+}
+
+<!--FAMILY_CSS:ghost-->
+<!--FAMILY_CSS:verify-->
+</style>
+</head>
+<body>
+<!-- 建设中占位 overlay（M1：点可玩节点出此层并写档测试位；M2 换成真关卡入口） -->
+<div id="zq-build" class="zq-ov hide" aria-label="建设中">
+  <div class="box">
+    <div id="zq-build-bunny"></div>
+    <div class="t1" id="zq-build-name">建设中</div>
+    <div class="t2">这一关正在装修，小兔子先帮你记下进度啦</div>
+  </div>
+</div>
+<div id="zq-game" aria-label="小兔子识字闯世界">
+  <div id="zq-hud">
+    <div id="zq-logo" aria-hidden="true"></div>
+    <div class="zq-pill" aria-label="金币"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#F2C94C" stroke="#4A3B2E" stroke-width="2"/><circle cx="12" cy="12" r="5.6" fill="none" stroke="#B8860B" stroke-width="1.8"/></svg><b id="zq-coin-n">0</b></div>
+    <div class="zq-pill" aria-label="星星"><svg viewBox="0 0 24 24"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z" fill="#F5C445" stroke="#4A3B2E" stroke-width="1.8" stroke-linejoin="round"/></svg><b id="zq-star-n">0</b></div>
+    <div class="zq-pill" id="zq-today" aria-label="冒险天数">第 1 天</div>
+  </div>
+  <div id="zq-view"><div id="zq-world"></div></div>
+  <div id="zq-dock">
+    <button class="zq-dock-btn" id="zq-dex" aria-label="汉字图鉴"><svg viewBox="0 0 48 48"><rect x="8" y="6" width="32" height="36" rx="4" fill="#F2B8C6" stroke="#4A3B2E" stroke-width="2.6"/><path d="M15 15h18M15 22h18M15 29h12" stroke="#4A3B2E" stroke-width="2.6" stroke-linecap="round"/></svg><span>图鉴</span></button>
+    <button class="zq-dock-btn" id="zq-home" aria-label="兔子家园"><svg viewBox="0 0 48 48"><path d="M8 26L24 11l16 15v14a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2z" fill="#8FBF7F" stroke="#4A3B2E" stroke-width="2.6" stroke-linejoin="round"/><rect x="19" y="29" width="10" height="12" rx="2" fill="#FBF6EC" stroke="#4A3B2E" stroke-width="2.4"/></svg><span>家园</span></button>
+    <button class="zq-dock-btn" id="zq-comp" aria-label="伙伴"><svg viewBox="0 0 48 48"><circle cx="24" cy="27" r="14" fill="#7FB3E0" stroke="#4A3B2E" stroke-width="2.6"/><ellipse cx="15" cy="13" rx="4.5" ry="8" fill="#7FB3E0" stroke="#4A3B2E" stroke-width="2.4" transform="rotate(-12 15 13)"/><ellipse cx="33" cy="13" rx="4.5" ry="8" fill="#7FB3E0" stroke="#4A3B2E" stroke-width="2.4" transform="rotate(12 33 13)"/><circle cx="19" cy="26" r="2.2" fill="#4A3B2E"/><circle cx="29" cy="26" r="2.2" fill="#4A3B2E"/><path d="M21 32q3 3 6 0" stroke="#4A3B2E" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><span>伙伴</span></button>
+  </div>
+</div>
+<div id="zq-toast" aria-label="提示"></div>
+<div id="ghost" aria-hidden="true"></div>
+<pre id="verify-result"></pre>

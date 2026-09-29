@@ -1,0 +1,2323 @@
+{
+ "meta": {
+  "name": "嘟嘟小镇",
+  "theme": "出行·场所·方位",
+  "accent": "#E8975A",
+  "region": 5,
+  "count": 55,
+  "levels": 11,
+  "note": "order=区域内教学序；g1a 按课标 first 课号排序；life 待 0c 补 py/words"
+ },
+ "function": [],
+ "chars": [
+  {
+   "ch": "上",
+   "src": "g1a",
+   "order": 0,
+   "chNo": null,
+   "first": "1a-s2",
+   "py": "shàng",
+   "pyKey": "shang",
+   "tone": 4,
+   "words": [
+    [
+     "上面",
+     "shàng miàn"
+    ],
+    [
+     "上学",
+     "shàng xué"
+    ],
+    [
+     "楼上",
+     "lóu shàng"
+    ]
+   ],
+   "glyph": "一横上面加一竖一横，高的那边就是上",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "下",
+     "同类"
+    ],
+    [
+     "卡",
+     "形近"
+    ],
+    [
+     "止",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "下",
+   "src": "g1a",
+   "order": 1,
+   "chNo": null,
+   "first": "1a-s2",
+   "py": "xià",
+   "pyKey": "xia3",
+   "tone": 4,
+   "words": [
+    [
+     "下面",
+     "xià miàn"
+    ],
+    [
+     "下雨",
+     "xià yǔ"
+    ],
+    [
+     "山下",
+     "shān xià"
+    ]
+   ],
+   "glyph": "一横下面一竖一点，低的那边就是下",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "上",
+     "同类"
+    ],
+    [
+     "卡",
+     "形近"
+    ],
+    [
+     "不",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "远",
+   "src": "g1a",
+   "order": 2,
+   "chNo": null,
+   "first": "1a-s6",
+   "py": "yuǎn",
+   "pyKey": "yuan",
+   "tone": 3,
+   "words": [
+    [
+     "远方",
+     "yuǎn fāng"
+    ],
+    [
+     "很远",
+     "hěn yuǎn"
+    ],
+    [
+     "远处",
+     "yuǎn chù"
+    ]
+   ],
+   "glyph": "走很久很久才到的地方就是远，远处的东西小小的",
+   "parts": null,
+   "family": "yuan",
+   "freq": 2,
+   "distract": [
+    [
+     "近",
+     "同类"
+    ],
+    [
+     "运",
+     "形近"
+    ],
+    [
+     "园",
+     "同声旁"
+    ]
+   ]
+  },
+  {
+   "ch": "近",
+   "src": "g1a",
+   "order": 3,
+   "chNo": null,
+   "first": "1a-s6",
+   "py": "jìn",
+   "pyKey": "jin3",
+   "tone": 4,
+   "words": [
+    [
+     "近处",
+     "jìn chù"
+    ],
+    [
+     "附近",
+     "fù jìn"
+    ],
+    [
+     "走近",
+     "zǒu jìn"
+    ]
+   ],
+   "glyph": "走几步就到就是近，近处的东西看得清清楚",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "远",
+     "同类"
+    ],
+    [
+     "听",
+     "形近"
+    ],
+    [
+     "进",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "中",
+   "src": "g1a",
+   "order": 4,
+   "chNo": null,
+   "first": "1a-s10",
+   "py": "zhōng",
+   "pyKey": "zhong",
+   "tone": 1,
+   "words": [
+    [
+     "中间",
+     "zhōng jiān"
+    ],
+    [
+     "水中",
+     "shuǐ zhōng"
+    ],
+    [
+     "心中",
+     "xīn zhōng"
+    ]
+   ],
+   "glyph": "口字中间一竖穿，站在正当中",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "虫",
+     "形近"
+    ],
+    [
+     "间",
+     "同类"
+    ],
+    [
+     "里",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "桥",
+   "src": "g1a",
+   "order": 5,
+   "chNo": null,
+   "first": "1a-p10",
+   "py": "qiáo",
+   "pyKey": "qiao",
+   "tone": 2,
+   "words": [
+    [
+     "大桥",
+     "dà qiáo"
+    ],
+    [
+     "过桥",
+     "guò qiáo"
+    ],
+    [
+     "小桥",
+     "xiǎo qiáo"
+    ]
+   ],
+   "glyph": "木头架在河上让人过河，木加乔就是桥",
+   "parts": [
+    "木",
+    "乔"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "轿",
+     "形近"
+    ],
+    [
+     "娇",
+     "同声旁"
+    ],
+    [
+     "路",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "台",
+   "src": "g1a",
+   "order": 6,
+   "chNo": null,
+   "first": "1a-p10",
+   "py": "tái",
+   "pyKey": "tai",
+   "tone": 2,
+   "words": [
+    [
+     "台灯",
+     "tái dēng"
+    ],
+    [
+     "上台",
+     "shàng tái"
+    ],
+    [
+     "平台",
+     "píng tái"
+    ]
+   ],
+   "glyph": "高出来的一块平地，站在上面演戏放东西",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "去",
+     "形近"
+    ],
+    [
+     "只",
+     "形近"
+    ],
+    [
+     "楼",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "车",
+   "src": "g1a",
+   "order": 7,
+   "chNo": null,
+   "first": "1a-p13",
+   "py": "chē",
+   "pyKey": "che",
+   "tone": 1,
+   "words": [
+    [
+     "开车",
+     "kāi chē"
+    ],
+    [
+     "火车",
+     "huǒ chē"
+    ],
+    [
+     "马车",
+     "mǎ chē"
+    ]
+   ],
+   "glyph": "车厢方方轮子圆圆，轱辘转的就是车",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "东",
+     "形近"
+    ],
+    [
+     "轮",
+     "同类"
+    ],
+    [
+     "船",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "路",
+   "src": "g1a",
+   "order": 8,
+   "chNo": null,
+   "first": "1a-p13",
+   "py": "lù",
+   "pyKey": "lu",
+   "tone": 4,
+   "words": [
+    [
+     "马路",
+     "mǎ lù"
+    ],
+    [
+     "走路",
+     "zǒu lù"
+    ],
+    [
+     "路边",
+     "lù biān"
+    ]
+   ],
+   "glyph": "脚底下走道的地方，足加各，一步一步踩过去",
+   "parts": [
+    "足",
+    "各"
+   ],
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "格",
+     "同声旁"
+    ],
+    [
+     "街",
+     "同类"
+    ],
+    [
+     "桥",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "灯",
+   "src": "g1a",
+   "order": 9,
+   "chNo": null,
+   "first": "1a-p13",
+   "py": "dēng",
+   "pyKey": "deng",
+   "tone": 1,
+   "words": [
+    [
+     "台灯",
+     "tái dēng"
+    ],
+    [
+     "开灯",
+     "kāi dēng"
+    ],
+    [
+     "电灯",
+     "diàn dēng"
+    ]
+   ],
+   "glyph": "火能发光，火加丁，天黑了点亮的就是灯",
+   "parts": [
+    "火",
+    "丁"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "登",
+     "形近"
+    ],
+    [
+     "钉",
+     "同声旁"
+    ],
+    [
+     "光",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "走",
+   "src": "g1a",
+   "order": 10,
+   "chNo": null,
+   "first": "1a-p13",
+   "py": "zǒu",
+   "pyKey": "zou",
+   "tone": 3,
+   "words": [
+    [
+     "走路",
+     "zǒu lù"
+    ],
+    [
+     "走开",
+     "zǒu kāi"
+    ],
+    [
+     "飞走",
+     "fēi zǒu"
+    ]
+   ],
+   "glyph": "上面摆手下面迈脚，走路跑步的走",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "足",
+     "形近"
+    ],
+    [
+     "跑",
+     "同类"
+    ],
+    [
+     "去",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "里",
+   "src": "g1a",
+   "order": 11,
+   "chNo": null,
+   "first": "1a-k2",
+   "py": "lǐ",
+   "pyKey": "li3",
+   "tone": 3,
+   "words": [
+    [
+     "里面",
+     "lǐ miàn"
+    ],
+    [
+     "田里",
+     "tián lǐ"
+    ],
+    [
+     "里头",
+     "lǐ tou"
+    ]
+   ],
+   "glyph": "田字连着土，盒子里面就是里",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "外",
+     "同类"
+    ],
+    [
+     "甲",
+     "形近"
+    ],
+    [
+     "果",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "船",
+   "src": "g1a",
+   "order": 12,
+   "chNo": null,
+   "first": "1a-k2",
+   "py": "chuán",
+   "pyKey": "chuan2",
+   "tone": 2,
+   "words": [
+    [
+     "小船",
+     "xiǎo chuán"
+    ],
+    [
+     "坐船",
+     "zuò chuán"
+    ],
+    [
+     "龙船",
+     "lóng chuán"
+    ]
+   ],
+   "glyph": "舟是船身，几口像船上的人，水上开的船",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "般",
+     "形近"
+    ],
+    [
+     "帆",
+     "同类"
+    ],
+    [
+     "车",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "东",
+   "src": "g1a",
+   "order": 13,
+   "chNo": null,
+   "first": "1a-k3",
+   "py": "dōng",
+   "pyKey": "dong3",
+   "tone": 1,
+   "words": [
+    [
+     "东边",
+     "dōng biān"
+    ],
+    [
+     "东西",
+     "dōng xi"
+    ],
+    [
+     "东风",
+     "dōng fēng"
+    ]
+   ],
+   "glyph": "太阳升起来的方向就是东，早上迎太阳",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "车",
+     "形近"
+    ],
+    [
+     "西",
+     "同类"
+    ],
+    [
+     "南",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "南",
+   "src": "g1a",
+   "order": 14,
+   "chNo": null,
+   "first": "1a-k3",
+   "py": "nán",
+   "pyKey": "nan2",
+   "tone": 2,
+   "words": [
+    [
+     "南方",
+     "nán fāng"
+    ],
+    [
+     "南边",
+     "nán biān"
+    ],
+    [
+     "南瓜",
+     "nán guā"
+    ]
+   ],
+   "glyph": "面向太阳升起的东，右手那边就是南",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "商",
+     "形近"
+    ],
+    [
+     "北",
+     "同类"
+    ],
+    [
+     "西",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "西",
+   "src": "g1a",
+   "order": 15,
+   "chNo": null,
+   "first": "1a-k3",
+   "py": "xī",
+   "pyKey": "xi",
+   "tone": 1,
+   "words": [
+    [
+     "西边",
+     "xī biān"
+    ],
+    [
+     "西瓜",
+     "xī guā"
+    ],
+    [
+     "东西",
+     "dōng xi"
+    ]
+   ],
+   "glyph": "太阳落山的方向就是西，傍晚送太阳",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "四",
+     "形近"
+    ],
+    [
+     "东",
+     "同类"
+    ],
+    [
+     "南",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "北",
+   "src": "g1a",
+   "order": 16,
+   "chNo": null,
+   "first": "1a-k3",
+   "py": "běi",
+   "pyKey": "bei4",
+   "tone": 3,
+   "words": [
+    [
+     "北方",
+     "běi fāng"
+    ],
+    [
+     "北京",
+     "běi jīng"
+    ],
+    [
+     "北风",
+     "běi fēng"
+    ]
+   ],
+   "glyph": "两个人背对背，背对的方向就是北",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "比",
+     "形近"
+    ],
+    [
+     "此",
+     "形近"
+    ],
+    [
+     "南",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "前",
+   "src": "g1a",
+   "order": 17,
+   "chNo": null,
+   "first": "1a-k5",
+   "py": "qián",
+   "pyKey": "qian",
+   "tone": 2,
+   "words": [
+    [
+     "前面",
+     "qián miàn"
+    ],
+    [
+     "门前",
+     "mén qián"
+    ],
+    [
+     "从前",
+     "cóng qián"
+    ]
+   ],
+   "glyph": "排队走在最前面的就是前，面前门前",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "后",
+     "同类"
+    ],
+    [
+     "先",
+     "同类"
+    ],
+    [
+     "上",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "后",
+   "src": "g1a",
+   "order": 18,
+   "chNo": null,
+   "first": "1a-k5",
+   "py": "hòu",
+   "pyKey": "hou2",
+   "tone": 4,
+   "words": [
+    [
+     "后面",
+     "hòu miàn"
+    ],
+    [
+     "身后",
+     "shēn hòu"
+    ],
+    [
+     "后来",
+     "hòu lái"
+    ]
+   ],
+   "glyph": "背对着的方向就是后，排在末尾的是后面",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "向",
+     "形近"
+    ],
+    [
+     "石",
+     "形近"
+    ],
+    [
+     "前",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "左",
+   "src": "g1a",
+   "order": 19,
+   "chNo": null,
+   "first": "1a-k5",
+   "py": "zuǒ",
+   "pyKey": "zuo3",
+   "tone": 3,
+   "words": [
+    [
+     "左边",
+     "zuǒ biān"
+    ],
+    [
+     "左手",
+     "zuǒ shǒu"
+    ],
+    [
+     "左右",
+     "zuǒ yòu"
+    ]
+   ],
+   "glyph": "工字上加一撇，拿碗的那只手是左",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "右",
+     "同类"
+    ],
+    [
+     "在",
+     "形近"
+    ],
+    [
+     "友",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "右",
+   "src": "g1a",
+   "order": 20,
+   "chNo": null,
+   "first": "1a-k5",
+   "py": "yòu",
+   "pyKey": "you2",
+   "tone": 4,
+   "words": [
+    [
+     "右边",
+     "yòu biān"
+    ],
+    [
+     "右手",
+     "yòu shǒu"
+    ],
+    [
+     "左右",
+     "zuǒ yòu"
+    ]
+   ],
+   "glyph": "口字上加一撇，写字的那只手是右",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "左",
+     "同类"
+    ],
+    [
+     "石",
+     "形近"
+    ],
+    [
+     "有",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "出",
+   "src": "g1a",
+   "order": 21,
+   "chNo": null,
+   "first": "1a-k8",
+   "py": "chū",
+   "pyKey": "chu",
+   "tone": 1,
+   "words": [
+    [
+     "出来",
+     "chū lái"
+    ],
+    [
+     "出去",
+     "chū qù"
+    ],
+    [
+     "出门",
+     "chū mén"
+    ]
+   ],
+   "glyph": "一座山叠一座山，从屋里走出去就是出",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "山",
+     "形近"
+    ],
+    [
+     "进",
+     "同类"
+    ],
+    [
+     "入",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "门",
+   "src": "g1a",
+   "order": 22,
+   "chNo": null,
+   "first": "1a-k10",
+   "py": "mén",
+   "pyKey": "men",
+   "tone": 2,
+   "words": [
+    [
+     "大门",
+     "dà mén"
+    ],
+    [
+     "开门",
+     "kāi mén"
+    ],
+    [
+     "门口",
+     "mén kǒu"
+    ]
+   ],
+   "glyph": "两扇门板并排站，进门出门都是门",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "们",
+     "形近"
+    ],
+    [
+     "问",
+     "形近"
+    ],
+    [
+     "窗",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "步",
+   "src": "g1a",
+   "order": 23,
+   "chNo": null,
+   "first": "1a-k12",
+   "py": "bù",
+   "pyKey": "bu",
+   "tone": 4,
+   "words": [
+    [
+     "散步",
+     "sàn bù"
+    ],
+    [
+     "脚步",
+     "jiǎo bù"
+    ],
+    [
+     "跑步",
+     "pǎo bù"
+    ]
+   ],
+   "glyph": "上面一只脚，下面也像脚，一步一步向前走",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "走",
+     "同类"
+    ],
+    [
+     "跑",
+     "同类"
+    ],
+    [
+     "少",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "参",
+   "src": "g1a",
+   "order": 24,
+   "chNo": null,
+   "first": "1a-k12",
+   "py": "cān",
+   "pyKey": "can2",
+   "tone": 1,
+   "words": [
+    [
+     "参加",
+     "cān jiā"
+    ],
+    [
+     "参观",
+     "cān guān"
+    ]
+   ],
+   "glyph": "大家一起去做一件事，参加游戏参加比赛",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "加",
+     "同类"
+    ],
+    [
+     "赛",
+     "同类"
+    ],
+    [
+     "报",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "加",
+   "src": "g1a",
+   "order": 25,
+   "chNo": null,
+   "first": "1a-k12",
+   "py": "jiā",
+   "pyKey": "jia2",
+   "tone": 1,
+   "words": [
+    [
+     "加法",
+     "jiā fǎ"
+    ],
+    [
+     "加油",
+     "jiā yóu"
+    ],
+    [
+     "参加",
+     "cān jiā"
+    ]
+   ],
+   "glyph": "力气张开口喊加油，力加口就是加",
+   "parts": [
+    "力",
+    "口"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "另",
+     "形近"
+    ],
+    [
+     "减",
+     "同类"
+    ],
+    [
+     "多",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "处",
+   "src": "g1a",
+   "order": 26,
+   "chNo": null,
+   "first": "1a-k13",
+   "py": "chù",
+   "pyKey": "chu2",
+   "tone": 4,
+   "words": [
+    [
+     "到处",
+     "dào chù"
+    ],
+    [
+     "好处",
+     "hǎo chù"
+    ],
+    [
+     "远处",
+     "yuǎn chù"
+    ]
+   ],
+   "glyph": "一个地方就叫一处，到处都有好玩的地方",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "外",
+     "形近"
+    ],
+    [
+     "冬",
+     "形近"
+    ],
+    [
+     "地",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "旁",
+   "src": "g1a",
+   "order": 27,
+   "chNo": null,
+   "first": "1a-k13",
+   "py": "páng",
+   "pyKey": "pang",
+   "tone": 2,
+   "words": [
+    [
+     "旁边",
+     "páng biān"
+    ],
+    [
+     "路旁",
+     "lù páng"
+    ],
+    [
+     "两旁",
+     "liǎng páng"
+    ]
+   ],
+   "glyph": "紧紧挨着它的身边，路边屋边就是旁",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "边",
+     "同类"
+    ],
+    [
+     "中",
+     "同类"
+    ],
+    [
+     "外",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "进",
+   "src": "g1a",
+   "order": 28,
+   "chNo": null,
+   "first": "1a-k13",
+   "py": "jìn",
+   "pyKey": "jin4",
+   "tone": 4,
+   "words": [
+    [
+     "进门",
+     "jìn mén"
+    ],
+    [
+     "走进",
+     "zǒu jìn"
+    ],
+    [
+     "前进",
+     "qián jìn"
+    ]
+   ],
+   "glyph": "从门外走到门里就是进，进家门啦",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "近",
+     "形近"
+    ],
+    [
+     "远",
+     "形近"
+    ],
+    [
+     "出",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "放",
+   "src": "g1a",
+   "order": 29,
+   "chNo": null,
+   "first": "1a-k13",
+   "py": "fàng",
+   "pyKey": "fang",
+   "tone": 4,
+   "words": [
+    [
+     "放假",
+     "fàng jià"
+    ],
+    [
+     "放学",
+     "fàng xué"
+    ],
+    [
+     "放开",
+     "fàng kāi"
+    ]
+   ],
+   "glyph": "放学了把书包放下，放就是摆下来",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "牧",
+     "形近"
+    ],
+    [
+     "收",
+     "同类"
+    ],
+    [
+     "开",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "找",
+   "src": "g1a",
+   "order": 30,
+   "chNo": null,
+   "first": "1a-k13",
+   "py": "zhǎo",
+   "pyKey": "zhao",
+   "tone": 3,
+   "words": [
+    [
+     "找到",
+     "zhǎo dào"
+    ],
+    [
+     "找一找",
+     "zhǎo yi zhǎo"
+    ],
+    [
+     "寻找",
+     "xún zhǎo"
+    ]
+   ],
+   "glyph": "我字少一撇像在找，用手去找东西",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "我",
+     "形近"
+    ],
+    [
+     "打",
+     "形近"
+    ],
+    [
+     "捉",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "办",
+   "src": "g1a",
+   "order": 31,
+   "chNo": null,
+   "first": "1a-k13",
+   "py": "bàn",
+   "pyKey": "ban",
+   "tone": 4,
+   "words": [
+    [
+     "办法",
+     "bàn fǎ"
+    ],
+    [
+     "怎么办",
+     "zěn me bàn"
+    ]
+   ],
+   "glyph": "出力流汗把事做好，力字两边点两点",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "万",
+     "形近"
+    ],
+    [
+     "为",
+     "形近"
+    ],
+    [
+     "做",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "回",
+   "src": "g1a",
+   "order": 32,
+   "chNo": null,
+   "first": "1a-k14",
+   "py": "huí",
+   "pyKey": "hui2",
+   "tone": 2,
+   "words": [
+    [
+     "回家",
+     "huí jiā"
+    ],
+    [
+     "回来",
+     "huí lái"
+    ],
+    [
+     "回去",
+     "huí qù"
+    ]
+   ],
+   "glyph": "大口套小口，出去玩完就回家",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "面",
+     "形近"
+    ],
+    [
+     "因",
+     "形近"
+    ],
+    [
+     "去",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "住",
+   "src": "g1a",
+   "order": 33,
+   "chNo": null,
+   "first": "1a-k14",
+   "py": "zhù",
+   "pyKey": "zhu3",
+   "tone": 4,
+   "words": [
+    [
+     "住在",
+     "zhù zài"
+    ],
+    [
+     "记住",
+     "jì zhù"
+    ],
+    [
+     "站住",
+     "zhàn zhù"
+    ]
+   ],
+   "glyph": "人住进自己的家，住下记住的住",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "往",
+     "形近"
+    ],
+    [
+     "注",
+     "形近"
+    ],
+    [
+     "停",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "玩",
+   "src": "g1a",
+   "order": 34,
+   "chNo": null,
+   "first": "1a-k14",
+   "py": "wán",
+   "pyKey": "wan3",
+   "tone": 2,
+   "words": [
+    [
+     "玩具",
+     "wán jù"
+    ],
+    [
+     "好玩",
+     "hǎo wán"
+    ],
+    [
+     "玩球",
+     "wán qiú"
+    ]
+   ],
+   "glyph": "王加元，拿着玩具做游戏就是玩",
+   "parts": [
+    "王",
+    "元"
+   ],
+   "family": "yuan",
+   "freq": 1,
+   "distract": [
+    [
+     "完",
+     "形近"
+    ],
+    [
+     "顽",
+     "形近"
+    ],
+    [
+     "耍",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "开",
+   "src": "g1a",
+   "order": 35,
+   "chNo": null,
+   "first": "1a-g4",
+   "py": "kāi",
+   "pyKey": "kai",
+   "tone": 1,
+   "words": [
+    [
+     "开门",
+     "kāi mén"
+    ],
+    [
+     "开心",
+     "kāi xīn"
+    ],
+    [
+     "开车",
+     "kāi chē"
+    ]
+   ],
+   "glyph": "像门被推开的样子，开门开心开花",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "井",
+     "形近"
+    ],
+    [
+     "升",
+     "形近"
+    ],
+    [
+     "关",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "关",
+   "src": "g1a",
+   "order": 36,
+   "chNo": null,
+   "first": "1a-g4",
+   "py": "guān",
+   "pyKey": "guan",
+   "tone": 1,
+   "words": [
+    [
+     "关门",
+     "guān mén"
+    ],
+    [
+     "开关",
+     "kāi guān"
+    ],
+    [
+     "关上",
+     "guān shàng"
+    ]
+   ],
+   "glyph": "两点像门插上闩，关门关窗关灯",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "天",
+     "形近"
+    ],
+    [
+     "兰",
+     "形近"
+    ],
+    [
+     "开",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "正",
+   "src": "g1a",
+   "order": 37,
+   "chNo": null,
+   "first": "1a-g4",
+   "py": "zhèng",
+   "pyKey": "zheng",
+   "tone": 4,
+   "words": [
+    [
+     "正好",
+     "zhèng hǎo"
+    ],
+    [
+     "正在",
+     "zhèng zài"
+    ],
+    [
+     "立正",
+     "lì zhèng"
+    ]
+   ],
+   "glyph": "横平竖直不歪斜，正好正在都是正",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "止",
+     "形近"
+    ],
+    [
+     "王",
+     "形近"
+    ],
+    [
+     "反",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "反",
+   "src": "g1a",
+   "order": 38,
+   "chNo": null,
+   "first": "1a-g4",
+   "py": "fǎn",
+   "pyKey": "fan",
+   "tone": 3,
+   "words": [
+    [
+     "相反",
+     "xiāng fǎn"
+    ],
+    [
+     "反面",
+     "fǎn miàn"
+    ],
+    [
+     "正反",
+     "zhèng fǎn"
+    ]
+   ],
+   "glyph": "把东西翻个面倒过来，反和正相反",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "友",
+     "形近"
+    ],
+    [
+     "正",
+     "同类"
+    ],
+    [
+     "倒",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "工",
+   "src": "g1a",
+   "order": 39,
+   "chNo": null,
+   "first": "1a-g8",
+   "py": "gōng",
+   "pyKey": "gong",
+   "tone": 1,
+   "words": [
+    [
+     "工作",
+     "gōng zuò"
+    ],
+    [
+     "工人",
+     "gōng rén"
+    ],
+    [
+     "做工",
+     "zuò gōng"
+    ]
+   ],
+   "glyph": "一横一根柱一横，像干活搭的架子",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "土",
+     "形近"
+    ],
+    [
+     "干",
+     "形近"
+    ],
+    [
+     "王",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "厂",
+   "src": "g1a",
+   "order": 40,
+   "chNo": null,
+   "first": "1a-g8",
+   "py": "chǎng",
+   "pyKey": "chang",
+   "tone": 3,
+   "words": [
+    [
+     "工厂",
+     "gōng chǎng"
+    ],
+    [
+     "厂子",
+     "chǎng zi"
+    ]
+   ],
+   "glyph": "像个敞开的大门洞，工人在里面做东西",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "广",
+     "形近"
+    ],
+    [
+     "店",
+     "同类"
+    ],
+    [
+     "场",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "医",
+   "src": "g1a",
+   "order": 41,
+   "chNo": null,
+   "first": "1a-g8",
+   "py": "yī",
+   "pyKey": "yi3",
+   "tone": 1,
+   "words": [
+    [
+     "医生",
+     "yī shēng"
+    ],
+    [
+     "医院",
+     "yī yuàn"
+    ]
+   ],
+   "glyph": "生病了去看病的地方，医生帮我们把病治好",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "匠",
+     "形近"
+    ],
+    [
+     "巨",
+     "形近"
+    ],
+    [
+     "院",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "院",
+   "src": "g1a",
+   "order": 42,
+   "chNo": null,
+   "first": "1a-g8",
+   "py": "yuàn",
+   "pyKey": "yuan2",
+   "tone": 4,
+   "words": [
+    [
+     "院子",
+     "yuàn zi"
+    ],
+    [
+     "医院",
+     "yī yuàn"
+    ]
+   ],
+   "glyph": "围墙围起来的大空地，家里有院子能玩球",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "园",
+     "形近"
+    ],
+    [
+     "医",
+     "同类"
+    ],
+    [
+     "家",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "生",
+   "src": "g1a",
+   "order": 43,
+   "chNo": null,
+   "first": "1a-g8",
+   "py": "shēng",
+   "pyKey": "sheng",
+   "tone": 1,
+   "words": [
+    [
+     "生日",
+     "shēng rì"
+    ],
+    [
+     "生字",
+     "shēng zì"
+    ],
+    [
+     "花生",
+     "huā shēng"
+    ]
+   ],
+   "glyph": "小草从土里长出来，出生生长的生",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "牛",
+     "形近"
+    ],
+    [
+     "午",
+     "形近"
+    ],
+    [
+     "先",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "超",
+   "src": "life",
+   "order": 44,
+   "chNo": null,
+   "first": null,
+   "py": "chāo",
+   "pyKey": "chao",
+   "tone": 1,
+   "words": [
+    [
+     "超市",
+     "chāo shì"
+    ],
+    [
+     "超人",
+     "chāo rén"
+    ],
+    [
+     "超过",
+     "chāo guò"
+    ]
+   ],
+   "glyph": "走得比别人快就是超，超市的超人跑得快",
+   "parts": [
+    "走",
+    "召"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "越",
+     "形近"
+    ],
+    [
+     "起",
+     "形近"
+    ],
+    [
+     "赶",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "市",
+   "src": "life",
+   "order": 45,
+   "chNo": null,
+   "first": null,
+   "py": "shì",
+   "pyKey": "shi4",
+   "tone": 4,
+   "words": [
+    [
+     "城市",
+     "chéng shì"
+    ],
+    [
+     "超市",
+     "chāo shì"
+    ],
+    [
+     "夜市",
+     "yè shì"
+    ]
+   ],
+   "glyph": "很多人住在一起买卖东西的大地方就是市",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "布",
+     "形近"
+    ],
+    [
+     "城",
+     "同类"
+    ],
+    [
+     "街",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "店",
+   "src": "life",
+   "order": 46,
+   "chNo": null,
+   "first": null,
+   "py": "diàn",
+   "pyKey": "dian",
+   "tone": 4,
+   "words": [
+    [
+     "商店",
+     "shāng diàn"
+    ],
+    [
+     "书店",
+     "shū diàn"
+    ],
+    [
+     "小店",
+     "xiǎo diàn"
+    ]
+   ],
+   "glyph": "屋檐下面摆着货，买东西的地方就是店",
+   "parts": [
+    "广",
+    "占"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "站",
+     "同声旁"
+    ],
+    [
+     "贴",
+     "同声旁"
+    ],
+    [
+     "馆",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "园",
+   "src": "life",
+   "order": 47,
+   "chNo": null,
+   "first": null,
+   "py": "yuán",
+   "pyKey": "yuan3",
+   "tone": 2,
+   "words": [
+    [
+     "花园",
+     "huā yuán"
+    ],
+    [
+     "公园",
+     "gōng yuán"
+    ],
+    [
+     "幼儿园",
+     "yòu ér yuán"
+    ]
+   ],
+   "glyph": "围墙围一块地，里面有花有草可以玩",
+   "parts": null,
+   "family": "yuan",
+   "freq": 2,
+   "distract": [
+    [
+     "远",
+     "同声旁"
+    ],
+    [
+     "玩",
+     "同声旁"
+    ],
+    [
+     "院",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "街",
+   "src": "life",
+   "order": 48,
+   "chNo": null,
+   "first": null,
+   "py": "jiē",
+   "pyKey": "jie2",
+   "tone": 1,
+   "words": [
+    [
+     "大街",
+     "dà jiē"
+    ],
+    [
+     "街上",
+     "jiē shang"
+    ],
+    [
+     "上街",
+     "shàng jiē"
+    ]
+   ],
+   "glyph": "两排房子中间的路就是街，街上真热闹",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "衔",
+     "形近"
+    ],
+    [
+     "路",
+     "同类"
+    ],
+    [
+     "市",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "楼",
+   "src": "life",
+   "order": 49,
+   "chNo": null,
+   "first": null,
+   "py": "lóu",
+   "pyKey": "lou",
+   "tone": 2,
+   "words": [
+    [
+     "大楼",
+     "dà lóu"
+    ],
+    [
+     "楼上",
+     "lóu shàng"
+    ],
+    [
+     "高楼",
+     "gāo lóu"
+    ]
+   ],
+   "glyph": "一层一层往上盖的高房子就是楼",
+   "parts": [
+    "木",
+    "娄"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "数",
+     "同声旁"
+    ],
+    [
+     "梯",
+     "同类"
+    ],
+    [
+     "房",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "梯",
+   "src": "life",
+   "order": 50,
+   "chNo": null,
+   "first": null,
+   "py": "tī",
+   "pyKey": "ti",
+   "tone": 1,
+   "words": [
+    [
+     "楼梯",
+     "lóu tī"
+    ],
+    [
+     "梯子",
+     "tī zi"
+    ]
+   ],
+   "glyph": "一级一级往上爬，上楼走的楼梯",
+   "parts": [
+    "木",
+    "弟"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "涕",
+     "同声旁"
+    ],
+    [
+     "递",
+     "同声旁"
+    ],
+    [
+     "楼",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "轮",
+   "src": "life",
+   "order": 51,
+   "chNo": null,
+   "first": null,
+   "py": "lún",
+   "pyKey": "lun",
+   "tone": 2,
+   "words": [
+    [
+     "车轮",
+     "chē lún"
+    ],
+    [
+     "轮子",
+     "lún zi"
+    ]
+   ],
+   "glyph": "圆圆的会转，车底下转动的轮子",
+   "parts": [
+    "车",
+    "仑"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "伦",
+     "同声旁"
+    ],
+    [
+     "仓",
+     "形近"
+    ],
+    [
+     "圆",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "帆",
+   "src": "life",
+   "order": 52,
+   "chNo": null,
+   "first": null,
+   "py": "fān",
+   "pyKey": "fan2",
+   "tone": 1,
+   "words": [
+    [
+     "帆船",
+     "fān chuán"
+    ],
+    [
+     "白帆",
+     "bái fān"
+    ]
+   ],
+   "glyph": "船上挂的大布，风吹着帆船向前跑",
+   "parts": [
+    "巾",
+    "凡"
+   ],
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "帐",
+     "形近"
+    ],
+    [
+     "船",
+     "同类"
+    ],
+    [
+     "风",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "骑",
+   "src": "life",
+   "order": 53,
+   "chNo": null,
+   "first": null,
+   "py": "qí",
+   "pyKey": "qi2",
+   "tone": 2,
+   "words": [
+    [
+     "骑马",
+     "qí mǎ"
+    ],
+    [
+     "骑车",
+     "qí chē"
+    ]
+   ],
+   "glyph": "腿跨坐到马背上，骑马骑车的骑",
+   "parts": [
+    "马",
+    "奇"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "椅",
+     "同声旁"
+    ],
+    [
+     "驾",
+     "同类"
+    ],
+    [
+     "坐",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "耍",
+   "src": "life",
+   "order": 54,
+   "chNo": null,
+   "first": null,
+   "py": "shuǎ",
+   "pyKey": "shua",
+   "tone": 3,
+   "words": [
+    [
+     "玩耍",
+     "wán shuǎ"
+    ],
+    [
+     "耍赖",
+     "shuǎ lài"
+    ]
+   ],
+   "glyph": "而字下面一个女，痛痛快快玩就是耍",
+   "parts": [
+    "而",
+    "女"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "要",
+     "形近"
+    ],
+    [
+     "玩",
+     "同类"
+    ],
+    [
+     "戏",
+     "同类"
+    ]
+   ]
+  }
+ ]
+}

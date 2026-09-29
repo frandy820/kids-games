@@ -1,0 +1,981 @@
+{
+ "meta": {
+  "version": 1,
+  "date": "2026-09-29",
+  "note": "slots: hat/dress/shoes/scarf/glass/bag 可穿戴；furn/plant/wall 家园；energy: 伙伴每日3能量，兔子永远保底",
+  "economy": {
+   "newFirst": 10,
+   "newFirst3star": 14,
+   "newReplay": 4,
+   "camp": 6,
+   "chest": 18,
+   "friend": 12,
+   "bossFirst": 45,
+   "bossReplay": 12,
+   "morning": 3,
+   "quest": 5,
+   "calibRight": 2
+  }
+ },
+ "companions": [
+  {
+   "id": "lark",
+   "name": "小云雀叮叮",
+   "region": 1,
+   "color": "#7FB3E0",
+   "skill": "sing",
+   "skillName": "唱一唱",
+   "skillDesc": "把题目的声音再唱一遍给你听",
+   "lines": [
+    "你好呀，我是叮叮！",
+    "我唱得最好听啦",
+    "叮叮升级咯！",
+    "今天也要开心唱歌哦"
+   ]
+  },
+  {
+   "id": "duck",
+   "name": "小鸭嘎嘎",
+   "region": 2,
+   "color": "#F2B8C6",
+   "skill": "slow",
+   "skillName": "慢慢说",
+   "skillDesc": "把声音放慢，一个字一个字说",
+   "lines": [
+    "嘎嘎，我是小鸭嘎嘎",
+    "别急，慢慢来",
+    "嘎嘎，谢谢你的星星",
+    "我们一起去暖暖村吧"
+   ]
+  },
+  {
+   "id": "owl",
+   "name": "猫头鹰博士",
+   "region": 3,
+   "color": "#8FBF7F",
+   "skill": "hint",
+   "skillName": "亮一亮",
+   "skillDesc": "让答案字的一部分亮起来",
+   "lines": [
+    "咕咕，我是博士",
+    "看这里，看这里",
+    "咕咕，你又学会啦",
+    "森林里还有很多秘密哦"
+   ]
+  },
+  {
+   "id": "monkey",
+   "name": "小猴淘淘",
+   "region": 4,
+   "color": "#F2C94C",
+   "skill": "pick",
+   "skillName": "摘一摘",
+   "skillDesc": "帮你摘掉一个不对的",
+   "lines": [
+    "嘿嘿，我是淘淘！",
+    "这个不对，摘掉！",
+    "桃子分你一半！",
+    "集市今天真热闹"
+   ]
+  },
+  {
+   "id": "pigeon",
+   "name": "鸽子邮邮",
+   "region": 5,
+   "color": "#E8975A",
+   "skill": "radar",
+   "skillName": "找一找",
+   "skillDesc": "在地图上闪出宝贝的地方",
+   "lines": [
+    "咕噜噜，信来啦",
+    "跟我来，宝贝在那边",
+    "咕噜噜，谢谢你",
+    "小镇的路我全都认识"
+   ]
+  },
+  {
+   "id": "fox",
+   "name": "小狐狸聪聪",
+   "region": 6,
+   "color": "#B49BD8",
+   "skill": "swap",
+   "skillName": "换一换",
+   "skillDesc": "把这道题换成另一种玩法",
+   "lines": [
+    "你好，我是聪聪",
+    "换个玩法试试看",
+    "聪明如你！",
+    "城堡的书我都读过哦"
+   ]
+  },
+  {
+   "id": "star",
+   "name": "星星精灵闪闪",
+   "region": 7,
+   "color": "#F5C445",
+   "skill": "sparkle",
+   "skillName": "亮晶晶",
+   "skillDesc": "答对时星星特效变得更漂亮",
+   "lines": [
+    "一闪一闪，我是闪闪",
+    "你的星星真漂亮",
+    "闪闪亮亮，升级啦！",
+    "大典的舞台等你很久啦"
+   ]
+  }
+ ],
+ "bosses": [
+  {
+   "region": 1,
+   "id": "sleepy",
+   "name": "瞌睡山神",
+   "intro": "呼……谁来啦……陪我说说话……",
+   "hp": 10
+  },
+  {
+   "region": 2,
+   "id": "cat",
+   "name": "大懒猫",
+   "intro": "喵~把家里人认对了才让你过~",
+   "hp": 9
+  },
+  {
+   "region": 3,
+   "id": "tree",
+   "name": "老树精",
+   "intro": "拼出我的名字，森林之门就开",
+   "hp": 10
+  },
+  {
+   "region": 4,
+   "id": "pig",
+   "name": "算账小猪",
+   "intro": "嗯~钱要算对才好吃呀~",
+   "hp": 9
+  },
+  {
+   "region": 5,
+   "id": "dragon",
+   "name": "迷路邮差龙",
+   "intro": "信上的字错了！帮我找出来！",
+   "hp": 11
+  },
+  {
+   "region": 6,
+   "id": "guard",
+   "name": "图书馆石像卫士",
+   "intro": "想进图书馆？先过我这一关",
+   "hp": 12
+  },
+  {
+   "region": 7,
+   "id": "gala",
+   "name": "万字大典",
+   "intro": "把你会的字都亮出来吧！",
+   "hp": 12,
+   "nonCombat": true
+  }
+ ],
+ "items": [
+  {
+   "id": "hat01",
+   "name": "小红帽",
+   "slot": "hat",
+   "cat": "wear",
+   "price": 0,
+   "unlock": {
+    "region": 1,
+    "chars": 0
+   },
+   "giftAt": 50
+  },
+  {
+   "id": "hat02",
+   "name": "花草帽",
+   "slot": "hat",
+   "cat": "wear",
+   "price": 0,
+   "unlock": {
+    "region": 1,
+    "chars": 0
+   },
+   "giftAt": 100
+  },
+  {
+   "id": "hat03",
+   "name": "蝴蝶结帽",
+   "slot": "hat",
+   "cat": "wear",
+   "price": 0,
+   "unlock": {
+    "region": 1,
+    "chars": 0
+   },
+   "giftAt": 150
+  },
+  {
+   "id": "hat04",
+   "name": "星星帽",
+   "slot": "hat",
+   "cat": "wear",
+   "price": 0,
+   "unlock": {
+    "region": 1,
+    "chars": 0
+   },
+   "giftAt": 250
+  },
+  {
+   "id": "hat05",
+   "name": "贝雷帽",
+   "slot": "hat",
+   "cat": "wear",
+   "price": 0,
+   "unlock": {
+    "region": 1,
+    "chars": 0
+   },
+   "giftAt": 350
+  },
+  {
+   "id": "hat06",
+   "name": "兔耳朵帽",
+   "slot": "hat",
+   "cat": "wear",
+   "price": 90,
+   "unlock": {
+    "region": 1,
+    "chars": 0
+   }
+  },
+  {
+   "id": "hat07",
+   "name": "草莓帽",
+   "slot": "hat",
+   "cat": "wear",
+   "price": 100,
+   "unlock": {
+    "region": 1,
+    "chars": 0
+   }
+  },
+  {
+   "id": "hat08",
+   "name": "云朵帽",
+   "slot": "hat",
+   "cat": "wear",
+   "price": 110,
+   "unlock": {
+    "region": 1,
+    "chars": 0
+   }
+  },
+  {
+   "id": "dress01",
+   "name": "草莓裙",
+   "slot": "dress",
+   "cat": "wear",
+   "price": 0,
+   "unlock": {
+    "region": 2,
+    "chars": 0
+   },
+   "giftAt": 200
+  },
+  {
+   "id": "dress02",
+   "name": "小花裙",
+   "slot": "dress",
+   "cat": "wear",
+   "price": 0,
+   "unlock": {
+    "region": 2,
+    "chars": 0
+   },
+   "giftAt": 300
+  },
+  {
+   "id": "dress03",
+   "name": "星空裙",
+   "slot": "dress",
+   "cat": "wear",
+   "price": 0,
+   "unlock": {
+    "region": 2,
+    "chars": 0
+   },
+   "giftAt": 400
+  },
+  {
+   "id": "dress04",
+   "name": "彩虹裙",
+   "slot": "dress",
+   "cat": "wear",
+   "price": 90,
+   "unlock": {
+    "region": 2,
+    "chars": 0
+   }
+  },
+  {
+   "id": "dress05",
+   "name": "荷叶裙",
+   "slot": "dress",
+   "cat": "wear",
+   "price": 100,
+   "unlock": {
+    "region": 2,
+    "chars": 0
+   }
+  },
+  {
+   "id": "dress06",
+   "name": "蛋糕裙",
+   "slot": "dress",
+   "cat": "wear",
+   "price": 110,
+   "unlock": {
+    "region": 2,
+    "chars": 0
+   }
+  },
+  {
+   "id": "dress07",
+   "name": "铃铛裙",
+   "slot": "dress",
+   "cat": "wear",
+   "price": 120,
+   "unlock": {
+    "region": 2,
+    "chars": 0
+   }
+  },
+  {
+   "id": "dress08",
+   "name": "雪花裙",
+   "slot": "dress",
+   "cat": "wear",
+   "price": 130,
+   "unlock": {
+    "region": 2,
+    "chars": 0
+   }
+  },
+  {
+   "id": "dress09",
+   "name": "蝴蝶裙",
+   "slot": "dress",
+   "cat": "wear",
+   "price": 140,
+   "unlock": {
+    "region": 2,
+    "chars": 0
+   }
+  },
+  {
+   "id": "dress10",
+   "name": "月亮裙",
+   "slot": "dress",
+   "cat": "wear",
+   "price": 150,
+   "unlock": {
+    "region": 2,
+    "chars": 0
+   }
+  },
+  {
+   "id": "dress11",
+   "name": "果绿裙",
+   "slot": "dress",
+   "cat": "wear",
+   "price": 160,
+   "unlock": {
+    "region": 2,
+    "chars": 0
+   }
+  },
+  {
+   "id": "dress12",
+   "name": "蜜桃裙",
+   "slot": "dress",
+   "cat": "wear",
+   "price": 170,
+   "unlock": {
+    "region": 2,
+    "chars": 0
+   }
+  },
+  {
+   "id": "shoes01",
+   "name": "小红鞋",
+   "slot": "shoes",
+   "cat": "wear",
+   "price": 30,
+   "unlock": {
+    "region": 3,
+    "chars": 0
+   }
+  },
+  {
+   "id": "shoes02",
+   "name": "花布鞋",
+   "slot": "shoes",
+   "cat": "wear",
+   "price": 40,
+   "unlock": {
+    "region": 3,
+    "chars": 0
+   }
+  },
+  {
+   "id": "shoes03",
+   "name": "星星鞋",
+   "slot": "shoes",
+   "cat": "wear",
+   "price": 50,
+   "unlock": {
+    "region": 3,
+    "chars": 0
+   }
+  },
+  {
+   "id": "shoes04",
+   "name": "兔拖鞋",
+   "slot": "shoes",
+   "cat": "wear",
+   "price": 60,
+   "unlock": {
+    "region": 3,
+    "chars": 0
+   }
+  },
+  {
+   "id": "shoes05",
+   "name": "运动鞋",
+   "slot": "shoes",
+   "cat": "wear",
+   "price": 70,
+   "unlock": {
+    "region": 3,
+    "chars": 0
+   }
+  },
+  {
+   "id": "shoes06",
+   "name": "小雨靴",
+   "slot": "shoes",
+   "cat": "wear",
+   "price": 80,
+   "unlock": {
+    "region": 3,
+    "chars": 0
+   }
+  },
+  {
+   "id": "scarf01",
+   "name": "红围巾",
+   "slot": "scarf",
+   "cat": "wear",
+   "price": 25,
+   "unlock": {
+    "region": 4,
+    "chars": 0
+   }
+  },
+  {
+   "id": "scarf02",
+   "name": "彩虹围巾",
+   "slot": "scarf",
+   "cat": "wear",
+   "price": 35,
+   "unlock": {
+    "region": 4,
+    "chars": 0
+   }
+  },
+  {
+   "id": "scarf03",
+   "name": "小花围巾",
+   "slot": "scarf",
+   "cat": "wear",
+   "price": 45,
+   "unlock": {
+    "region": 4,
+    "chars": 0
+   }
+  },
+  {
+   "id": "scarf04",
+   "name": "星星围巾",
+   "slot": "scarf",
+   "cat": "wear",
+   "price": 55,
+   "unlock": {
+    "region": 4,
+    "chars": 0
+   }
+  },
+  {
+   "id": "glass01",
+   "name": "圆眼镜",
+   "slot": "glass",
+   "cat": "wear",
+   "price": 25,
+   "unlock": {
+    "region": 5,
+    "chars": 0
+   }
+  },
+  {
+   "id": "glass02",
+   "name": "小墨镜",
+   "slot": "glass",
+   "cat": "wear",
+   "price": 35,
+   "unlock": {
+    "region": 5,
+    "chars": 0
+   }
+  },
+  {
+   "id": "glass03",
+   "name": "星星镜",
+   "slot": "glass",
+   "cat": "wear",
+   "price": 45,
+   "unlock": {
+    "region": 5,
+    "chars": 0
+   }
+  },
+  {
+   "id": "glass04",
+   "name": "花框镜",
+   "slot": "glass",
+   "cat": "wear",
+   "price": 55,
+   "unlock": {
+    "region": 5,
+    "chars": 0
+   }
+  },
+  {
+   "id": "bag01",
+   "name": "小书包",
+   "slot": "bag",
+   "cat": "wear",
+   "price": 35,
+   "unlock": {
+    "region": 6,
+    "chars": 0
+   }
+  },
+  {
+   "id": "bag02",
+   "name": "果子包",
+   "slot": "bag",
+   "cat": "wear",
+   "price": 45,
+   "unlock": {
+    "region": 6,
+    "chars": 0
+   }
+  },
+  {
+   "id": "bag03",
+   "name": "星星包",
+   "slot": "bag",
+   "cat": "wear",
+   "price": 55,
+   "unlock": {
+    "region": 6,
+    "chars": 0
+   }
+  },
+  {
+   "id": "bag04",
+   "name": "花书包",
+   "slot": "bag",
+   "cat": "wear",
+   "price": 65,
+   "unlock": {
+    "region": 6,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn01",
+   "name": "小木床",
+   "slot": "furn",
+   "cat": "home",
+   "price": 50,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn02",
+   "name": "圆桌桌",
+   "slot": "furn",
+   "cat": "home",
+   "price": 58,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn03",
+   "name": "小椅子",
+   "slot": "furn",
+   "cat": "home",
+   "price": 66,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn04",
+   "name": "书架",
+   "slot": "furn",
+   "cat": "home",
+   "price": 74,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn05",
+   "name": "台灯",
+   "slot": "furn",
+   "cat": "home",
+   "price": 82,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn06",
+   "name": "小沙发",
+   "slot": "furn",
+   "cat": "home",
+   "price": 90,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn07",
+   "name": "地毯",
+   "slot": "furn",
+   "cat": "home",
+   "price": 98,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn08",
+   "name": "衣柜",
+   "slot": "furn",
+   "cat": "home",
+   "price": 106,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn09",
+   "name": "花瓶",
+   "slot": "furn",
+   "cat": "home",
+   "price": 114,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn10",
+   "name": "小时钟",
+   "slot": "furn",
+   "cat": "home",
+   "price": 122,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn11",
+   "name": "软抱枕",
+   "slot": "furn",
+   "cat": "home",
+   "price": 130,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn12",
+   "name": "小圆凳",
+   "slot": "furn",
+   "cat": "home",
+   "price": 138,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn13",
+   "name": "画框",
+   "slot": "furn",
+   "cat": "home",
+   "price": 146,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "furn14",
+   "name": "玩具箱",
+   "slot": "furn",
+   "cat": "home",
+   "price": 154,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "plant01",
+   "name": "向日葵",
+   "slot": "plant",
+   "cat": "home",
+   "price": 30,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "plant02",
+   "name": "玫瑰花",
+   "slot": "plant",
+   "cat": "home",
+   "price": 38,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "plant03",
+   "name": "郁金香",
+   "slot": "plant",
+   "cat": "home",
+   "price": 46,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "plant04",
+   "name": "小雏菊",
+   "slot": "plant",
+   "cat": "home",
+   "price": 54,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "plant05",
+   "name": "蒲公英",
+   "slot": "plant",
+   "cat": "home",
+   "price": 62,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "plant06",
+   "name": "太阳花",
+   "slot": "plant",
+   "cat": "home",
+   "price": 70,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "plant07",
+   "name": "蝴蝶兰",
+   "slot": "plant",
+   "cat": "home",
+   "price": 78,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "plant08",
+   "name": "樱花树",
+   "slot": "plant",
+   "cat": "home",
+   "price": 86,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "plant09",
+   "name": "小池塘",
+   "slot": "plant",
+   "cat": "home",
+   "price": 94,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "plant10",
+   "name": "小秋千",
+   "slot": "plant",
+   "cat": "home",
+   "price": 102,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "plant11",
+   "name": "小菜园",
+   "slot": "plant",
+   "cat": "home",
+   "price": 110,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "plant12",
+   "name": "小风车",
+   "slot": "plant",
+   "cat": "home",
+   "price": 118,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "wall01",
+   "name": "米色墙",
+   "slot": "wall",
+   "cat": "home",
+   "price": 45,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "wall02",
+   "name": "花墙纸",
+   "slot": "wall",
+   "cat": "home",
+   "price": 53,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "wall03",
+   "name": "星空墙",
+   "slot": "wall",
+   "cat": "home",
+   "price": 61,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "wall04",
+   "name": "果园墙",
+   "slot": "wall",
+   "cat": "home",
+   "price": 69,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "wall05",
+   "name": "木地板",
+   "slot": "wall",
+   "cat": "home",
+   "price": 77,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "wall06",
+   "name": "草地地板",
+   "slot": "wall",
+   "cat": "home",
+   "price": 85,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "wall07",
+   "name": "彩虹地毯",
+   "slot": "wall",
+   "cat": "home",
+   "price": 93,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  },
+  {
+   "id": "wall08",
+   "name": "蓝天墙",
+   "slot": "wall",
+   "cat": "home",
+   "price": 101,
+   "unlock": {
+    "region": 0,
+    "chars": 0
+   }
+  }
+ ]
+}

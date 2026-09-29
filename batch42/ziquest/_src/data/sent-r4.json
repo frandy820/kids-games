@@ -1,0 +1,19 @@
+{"region":4,"sentences":[
+{"id":"s065","region":4,"text":"妈妈给我红苹果。","focus":"给","py":"mā ma gěi wǒ hóng píng guǒ","len":7},
+{"id":"s066","region":4,"text":"白菜白，青菜青。","focus":"菜","py":"bái cài bái qīng cài qīng","len":6},
+{"id":"s067","region":4,"text":"奶奶的白粥好了！","focus":"粥","py":"nǎi nai de bái zhōu hǎo le","len":7},
+{"id":"s068","region":4,"text":"鸡妈妈有蛋！","focus":"蛋","py":"jī mā ma yǒu dàn","len":5},
+{"id":"s069","region":4,"text":"我有糖，你有吗？","focus":"糖","py":"wǒ yǒu táng nǐ yǒu ma","len":6},
+{"id":"s070","region":4,"text":"是盐还是糖？","focus":"盐","py":"shì yán hái shì táng","len":5},
+{"id":"s071","region":4,"text":"油是黄的吗？","focus":"油","py":"yóu shì huáng de ma","len":5},
+{"id":"s072","region":4,"text":"饼给弟弟吧。","focus":"饼","py":"bǐng gěi dì dì ba","len":5},
+{"id":"s073","region":4,"text":"蛋饺好了吗？","focus":"饺","py":"dàn jiǎo hǎo le ma","len":5},
+{"id":"s074","region":4,"text":"虾给猫吧。","focus":"虾","py":"xiā gěi māo ba","len":4},
+{"id":"s075","region":4,"text":"蛋糕来了！","focus":"糕","py":"dàn gāo lái le","len":4},
+{"id":"s076","region":4,"text":"梨是妈妈的！","focus":"梨","py":"lí shì mā ma de","len":5},
+{"id":"s077","region":4,"text":"枣树好高呀！","focus":"枣","py":"zǎo shù hǎo gāo ya","len":5},
+{"id":"s078","region":4,"text":"葡萄是紫的吗？","focus":"萄","py":"pú tao shì zǐ de ma","len":6},
+{"id":"s079","region":4,"text":"妈妈去买菜。","focus":"买","py":"mā ma qù mǎi cài","len":5},
+{"id":"s080","region":4,"text":"叔叔卖鱼和虾。","focus":"卖","py":"shū shu mài yú hé xiā","len":6},
+{"id":"s081","region":4,"text":"碗是我的！","focus":"碗","py":"wǎn shì wǒ de","len":4}
+]}

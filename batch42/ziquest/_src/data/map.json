@@ -1,0 +1,1513 @@
+{
+ "meta": {
+  "version": 1,
+  "date": "2026-09-29",
+  "canvas": {
+   "w": 1000,
+   "h": 7400
+  },
+  "nodeTypes": {
+   "new": "新字关(萝卜旗)",
+   "camp": "复习营地(帐篷,每日刷新)",
+   "chest": "收集点(宝箱)",
+   "friend": "伙伴事件",
+   "story": "剧情(卷轴)",
+   "boss": "BOSS(大字门)",
+   "calib": "定级(序章)"
+  },
+  "rules": {
+   "unlockNode": "前节点 ≥1 星 → next 亮（story/chest/friend 完成即过）",
+   "unlockBoss": "本区全部 new ≥1 星 → boss 可进",
+   "unlockRegion": "击破前区 boss → 迷雾消散",
+   "quota": "日限速只锁 new：ZQ_DAY_NEW 首日1/2-7日2/8日起3 + 家长bonus"
+  }
+ },
+ "regions": [
+  {
+   "id": 0,
+   "name": "序章·星光草地",
+   "levels": 0,
+   "nodes": [
+    {
+     "key": "r0n01",
+     "region": 0,
+     "type": "story",
+     "label": "开场·吹散的书",
+     "x": 503.7,
+     "y": 7140.0,
+     "next": [
+      "r0n02"
+     ]
+    },
+    {
+     "key": "r0n02",
+     "region": 0,
+     "type": "calib",
+     "label": "和兔子玩认字游戏",
+     "x": 460.0,
+     "y": 6950.0,
+     "next": [
+      "r0n03"
+     ]
+    },
+    {
+     "key": "r0n03",
+     "region": 0,
+     "type": "story",
+     "label": "出发·第一颗种子",
+     "x": 416.3,
+     "y": 6760.0,
+     "next": []
+    }
+   ],
+   "unlock": "first",
+   "boss": null
+  },
+  {
+   "id": 1,
+   "name": "风山镇",
+   "levels": 13,
+   "nodes": [
+    {
+     "key": "r1n01",
+     "region": 1,
+     "type": "story",
+     "label": "风山镇·迷雾中的风山镇",
+     "x": 727.0,
+     "y": 6393.8,
+     "next": [
+      "r1n02"
+     ]
+    },
+    {
+     "key": "r1n02",
+     "region": 1,
+     "type": "new",
+     "label": "新字关1",
+     "x": 732.8,
+     "y": 6357.6,
+     "next": [
+      "r1n03"
+     ]
+    },
+    {
+     "key": "r1n03",
+     "region": 1,
+     "type": "new",
+     "label": "新字关2",
+     "x": 702.4,
+     "y": 6321.4,
+     "next": [
+      "r1n04"
+     ]
+    },
+    {
+     "key": "r1n04",
+     "region": 1,
+     "type": "new",
+     "label": "新字关3",
+     "x": 641.4,
+     "y": 6285.2,
+     "next": [
+      "r1n05"
+     ]
+    },
+    {
+     "key": "r1n05",
+     "region": 1,
+     "type": "chest",
+     "label": "星光驿站",
+     "x": 561.3,
+     "y": 6249.0,
+     "next": [
+      "r1n06"
+     ]
+    },
+    {
+     "key": "r1n06",
+     "region": 1,
+     "type": "new",
+     "label": "新字关4",
+     "x": 477.2,
+     "y": 6212.9,
+     "next": [
+      "r1n07"
+     ]
+    },
+    {
+     "key": "r1n07",
+     "region": 1,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 404.9,
+     "y": 6176.7,
+     "next": [
+      "r1n08"
+     ]
+    },
+    {
+     "key": "r1n08",
+     "region": 1,
+     "type": "new",
+     "label": "新字关5",
+     "x": 358.1,
+     "y": 6140.5,
+     "next": [
+      "r1n09"
+     ]
+    },
+    {
+     "key": "r1n09",
+     "region": 1,
+     "type": "new",
+     "label": "新字关6",
+     "x": 345.5,
+     "y": 6104.3,
+     "next": [
+      "r1n10"
+     ]
+    },
+    {
+     "key": "r1n10",
+     "region": 1,
+     "type": "friend",
+     "label": "lark",
+     "x": 369.5,
+     "y": 6068.1,
+     "next": [
+      "r1n11"
+     ]
+    },
+    {
+     "key": "r1n11",
+     "region": 1,
+     "type": "new",
+     "label": "新字关7",
+     "x": 425.6,
+     "y": 6031.9,
+     "next": [
+      "r1n12"
+     ]
+    },
+    {
+     "key": "r1n12",
+     "region": 1,
+     "type": "new",
+     "label": "新字关8",
+     "x": 503.2,
+     "y": 5995.7,
+     "next": [
+      "r1n13"
+     ]
+    },
+    {
+     "key": "r1n13",
+     "region": 1,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 587.8,
+     "y": 5959.5,
+     "next": [
+      "r1n14"
+     ]
+    },
+    {
+     "key": "r1n14",
+     "region": 1,
+     "type": "new",
+     "label": "新字关9",
+     "x": 663.3,
+     "y": 5923.3,
+     "next": [
+      "r1n15"
+     ]
+    },
+    {
+     "key": "r1n15",
+     "region": 1,
+     "type": "new",
+     "label": "新字关10",
+     "x": 715.7,
+     "y": 5887.1,
+     "next": [
+      "r1n16"
+     ]
+    },
+    {
+     "key": "r1n16",
+     "region": 1,
+     "type": "new",
+     "label": "新字关11",
+     "x": 735.0,
+     "y": 5851.0,
+     "next": [
+      "r1n17"
+     ]
+    },
+    {
+     "key": "r1n17",
+     "region": 1,
+     "type": "new",
+     "label": "新字关12",
+     "x": 717.6,
+     "y": 5814.8,
+     "next": [
+      "r1n18"
+     ]
+    },
+    {
+     "key": "r1n18",
+     "region": 1,
+     "type": "new",
+     "label": "新字关13",
+     "x": 666.8,
+     "y": 5778.6,
+     "next": [
+      "r1n19"
+     ]
+    },
+    {
+     "key": "r1n19",
+     "region": 1,
+     "type": "story",
+     "label": "字锁大门",
+     "x": 592.1,
+     "y": 5742.4,
+     "next": [
+      "r1n20"
+     ]
+    },
+    {
+     "key": "r1n20",
+     "region": 1,
+     "type": "boss",
+     "label": "风山镇守护者",
+     "x": 507.6,
+     "y": 5706.2,
+     "next": []
+    }
+   ],
+   "unlock": "r0n03",
+   "boss": "r1n20"
+  },
+  {
+   "id": 2,
+   "name": "暖暖村",
+   "levels": 9,
+   "nodes": [
+    {
+     "key": "r2n01",
+     "region": 2,
+     "type": "story",
+     "label": "暖暖村·迷雾中的暖暖村",
+     "x": 528.6,
+     "y": 5485.3,
+     "next": [
+      "r2n02"
+     ]
+    },
+    {
+     "key": "r2n02",
+     "region": 2,
+     "type": "new",
+     "label": "新字关1",
+     "x": 539.2,
+     "y": 5440.6,
+     "next": [
+      "r2n03"
+     ]
+    },
+    {
+     "key": "r2n03",
+     "region": 2,
+     "type": "new",
+     "label": "新字关2",
+     "x": 537.3,
+     "y": 5395.9,
+     "next": [
+      "r2n04"
+     ]
+    },
+    {
+     "key": "r2n04",
+     "region": 2,
+     "type": "chest",
+     "label": "星光驿站",
+     "x": 523.1,
+     "y": 5351.2,
+     "next": [
+      "r2n05"
+     ]
+    },
+    {
+     "key": "r2n05",
+     "region": 2,
+     "type": "new",
+     "label": "新字关3",
+     "x": 498.8,
+     "y": 5306.5,
+     "next": [
+      "r2n06"
+     ]
+    },
+    {
+     "key": "r2n06",
+     "region": 2,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 468.4,
+     "y": 5261.8,
+     "next": [
+      "r2n07"
+     ]
+    },
+    {
+     "key": "r2n07",
+     "region": 2,
+     "type": "new",
+     "label": "新字关4",
+     "x": 436.7,
+     "y": 5217.1,
+     "next": [
+      "r2n08"
+     ]
+    },
+    {
+     "key": "r2n08",
+     "region": 2,
+     "type": "friend",
+     "label": "duck",
+     "x": 408.6,
+     "y": 5172.4,
+     "next": [
+      "r2n09"
+     ]
+    },
+    {
+     "key": "r2n09",
+     "region": 2,
+     "type": "new",
+     "label": "新字关5",
+     "x": 388.8,
+     "y": 5127.6,
+     "next": [
+      "r2n10"
+     ]
+    },
+    {
+     "key": "r2n10",
+     "region": 2,
+     "type": "new",
+     "label": "新字关6",
+     "x": 380.2,
+     "y": 5082.9,
+     "next": [
+      "r2n11"
+     ]
+    },
+    {
+     "key": "r2n11",
+     "region": 2,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 384.3,
+     "y": 5038.2,
+     "next": [
+      "r2n12"
+     ]
+    },
+    {
+     "key": "r2n12",
+     "region": 2,
+     "type": "new",
+     "label": "新字关7",
+     "x": 400.5,
+     "y": 4993.5,
+     "next": [
+      "r2n13"
+     ]
+    },
+    {
+     "key": "r2n13",
+     "region": 2,
+     "type": "new",
+     "label": "新字关8",
+     "x": 426.1,
+     "y": 4948.8,
+     "next": [
+      "r2n14"
+     ]
+    },
+    {
+     "key": "r2n14",
+     "region": 2,
+     "type": "new",
+     "label": "新字关9",
+     "x": 457.0,
+     "y": 4904.1,
+     "next": [
+      "r2n15"
+     ]
+    },
+    {
+     "key": "r2n15",
+     "region": 2,
+     "type": "story",
+     "label": "字锁大门",
+     "x": 488.5,
+     "y": 4859.4,
+     "next": [
+      "r2n16"
+     ]
+    },
+    {
+     "key": "r2n16",
+     "region": 2,
+     "type": "boss",
+     "label": "暖暖村守护者",
+     "x": 515.4,
+     "y": 4814.7,
+     "next": []
+    }
+   ],
+   "unlock": "r1_boss",
+   "boss": "r2n16"
+  },
+  {
+   "id": 3,
+   "name": "咕咕森林",
+   "levels": 9,
+   "nodes": [
+    {
+     "key": "r3n01",
+     "region": 3,
+     "type": "story",
+     "label": "咕咕森林·迷雾中的咕咕森林",
+     "x": 751.2,
+     "y": 4585.3,
+     "next": [
+      "r3n02"
+     ]
+    },
+    {
+     "key": "r3n02",
+     "region": 3,
+     "type": "new",
+     "label": "新字关1",
+     "x": 754.8,
+     "y": 4540.6,
+     "next": [
+      "r3n03"
+     ]
+    },
+    {
+     "key": "r3n03",
+     "region": 3,
+     "type": "new",
+     "label": "新字关2",
+     "x": 705.5,
+     "y": 4495.9,
+     "next": [
+      "r3n04"
+     ]
+    },
+    {
+     "key": "r3n04",
+     "region": 3,
+     "type": "chest",
+     "label": "星光驿站",
+     "x": 615.4,
+     "y": 4451.2,
+     "next": [
+      "r3n05"
+     ]
+    },
+    {
+     "key": "r3n05",
+     "region": 3,
+     "type": "new",
+     "label": "新字关3",
+     "x": 506.7,
+     "y": 4406.5,
+     "next": [
+      "r3n06"
+     ]
+    },
+    {
+     "key": "r3n06",
+     "region": 3,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 406.3,
+     "y": 4361.8,
+     "next": [
+      "r3n07"
+     ]
+    },
+    {
+     "key": "r3n07",
+     "region": 3,
+     "type": "new",
+     "label": "新字关4",
+     "x": 338.7,
+     "y": 4317.1,
+     "next": [
+      "r3n08"
+     ]
+    },
+    {
+     "key": "r3n08",
+     "region": 3,
+     "type": "friend",
+     "label": "owl",
+     "x": 320.8,
+     "y": 4272.4,
+     "next": [
+      "r3n09"
+     ]
+    },
+    {
+     "key": "r3n09",
+     "region": 3,
+     "type": "new",
+     "label": "新字关5",
+     "x": 356.9,
+     "y": 4227.6,
+     "next": [
+      "r3n10"
+     ]
+    },
+    {
+     "key": "r3n10",
+     "region": 3,
+     "type": "new",
+     "label": "新字关6",
+     "x": 438.1,
+     "y": 4182.9,
+     "next": [
+      "r3n11"
+     ]
+    },
+    {
+     "key": "r3n11",
+     "region": 3,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 544.4,
+     "y": 4138.2,
+     "next": [
+      "r3n12"
+     ]
+    },
+    {
+     "key": "r3n12",
+     "region": 3,
+     "type": "new",
+     "label": "新字关7",
+     "x": 649.6,
+     "y": 4093.5,
+     "next": [
+      "r3n13"
+     ]
+    },
+    {
+     "key": "r3n13",
+     "region": 3,
+     "type": "new",
+     "label": "新字关8",
+     "x": 727.8,
+     "y": 4048.8,
+     "next": [
+      "r3n14"
+     ]
+    },
+    {
+     "key": "r3n14",
+     "region": 3,
+     "type": "new",
+     "label": "新字关9",
+     "x": 759.8,
+     "y": 4004.1,
+     "next": [
+      "r3n15"
+     ]
+    },
+    {
+     "key": "r3n15",
+     "region": 3,
+     "type": "story",
+     "label": "字锁大门",
+     "x": 737.6,
+     "y": 3959.4,
+     "next": [
+      "r3n16"
+     ]
+    },
+    {
+     "key": "r3n16",
+     "region": 3,
+     "type": "boss",
+     "label": "咕咕森林守护者",
+     "x": 666.7,
+     "y": 3914.7,
+     "next": []
+    }
+   ],
+   "unlock": "r2_boss",
+   "boss": "r3n16"
+  },
+  {
+   "id": 4,
+   "name": "甜甜集市",
+   "levels": 8,
+   "nodes": [
+    {
+     "key": "r4n01",
+     "region": 4,
+     "type": "story",
+     "label": "甜甜集市·迷雾中的甜甜集市",
+     "x": 614.3,
+     "y": 3682.5,
+     "next": [
+      "r4n02"
+     ]
+    },
+    {
+     "key": "r4n02",
+     "region": 4,
+     "type": "new",
+     "label": "新字关1",
+     "x": 628.5,
+     "y": 3635.0,
+     "next": [
+      "r4n03"
+     ]
+    },
+    {
+     "key": "r4n03",
+     "region": 4,
+     "type": "new",
+     "label": "新字关2",
+     "x": 606.8,
+     "y": 3587.5,
+     "next": [
+      "r4n04"
+     ]
+    },
+    {
+     "key": "r4n04",
+     "region": 4,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 553.8,
+     "y": 3540.0,
+     "next": [
+      "r4n05"
+     ]
+    },
+    {
+     "key": "r4n05",
+     "region": 4,
+     "type": "chest",
+     "label": "星光驿站",
+     "x": 480.7,
+     "y": 3492.5,
+     "next": [
+      "r4n06"
+     ]
+    },
+    {
+     "key": "r4n06",
+     "region": 4,
+     "type": "new",
+     "label": "新字关3",
+     "x": 403.1,
+     "y": 3445.0,
+     "next": [
+      "r4n07"
+     ]
+    },
+    {
+     "key": "r4n07",
+     "region": 4,
+     "type": "new",
+     "label": "新字关4",
+     "x": 337.8,
+     "y": 3397.5,
+     "next": [
+      "r4n08"
+     ]
+    },
+    {
+     "key": "r4n08",
+     "region": 4,
+     "type": "friend",
+     "label": "monkey",
+     "x": 298.5,
+     "y": 3350.0,
+     "next": [
+      "r4n09"
+     ]
+    },
+    {
+     "key": "r4n09",
+     "region": 4,
+     "type": "new",
+     "label": "新字关5",
+     "x": 293.7,
+     "y": 3302.5,
+     "next": [
+      "r4n10"
+     ]
+    },
+    {
+     "key": "r4n10",
+     "region": 4,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 324.5,
+     "y": 3255.0,
+     "next": [
+      "r4n11"
+     ]
+    },
+    {
+     "key": "r4n11",
+     "region": 4,
+     "type": "new",
+     "label": "新字关6",
+     "x": 384.1,
+     "y": 3207.5,
+     "next": [
+      "r4n12"
+     ]
+    },
+    {
+     "key": "r4n12",
+     "region": 4,
+     "type": "new",
+     "label": "新字关7",
+     "x": 460.0,
+     "y": 3160.0,
+     "next": [
+      "r4n13"
+     ]
+    },
+    {
+     "key": "r4n13",
+     "region": 4,
+     "type": "new",
+     "label": "新字关8",
+     "x": 535.9,
+     "y": 3112.5,
+     "next": [
+      "r4n14"
+     ]
+    },
+    {
+     "key": "r4n14",
+     "region": 4,
+     "type": "story",
+     "label": "字锁大门",
+     "x": 595.5,
+     "y": 3065.0,
+     "next": [
+      "r4n15"
+     ]
+    },
+    {
+     "key": "r4n15",
+     "region": 4,
+     "type": "boss",
+     "label": "甜甜集市守护者",
+     "x": 626.3,
+     "y": 3017.5,
+     "next": []
+    }
+   ],
+   "unlock": "r3_boss",
+   "boss": "r4n15"
+  },
+  {
+   "id": 5,
+   "name": "嘟嘟小镇",
+   "levels": 11,
+   "nodes": [
+    {
+     "key": "r5n01",
+     "region": 5,
+     "type": "story",
+     "label": "嘟嘟小镇·迷雾中的嘟嘟小镇",
+     "x": 635.4,
+     "y": 2790.0,
+     "next": [
+      "r5n02"
+     ]
+    },
+    {
+     "key": "r5n02",
+     "region": 5,
+     "type": "new",
+     "label": "新字关1",
+     "x": 628.9,
+     "y": 2750.0,
+     "next": [
+      "r5n03"
+     ]
+    },
+    {
+     "key": "r5n03",
+     "region": 5,
+     "type": "new",
+     "label": "新字关2",
+     "x": 598.6,
+     "y": 2710.0,
+     "next": [
+      "r5n04"
+     ]
+    },
+    {
+     "key": "r5n04",
+     "region": 5,
+     "type": "chest",
+     "label": "星光驿站",
+     "x": 552.6,
+     "y": 2670.0,
+     "next": [
+      "r5n05"
+     ]
+    },
+    {
+     "key": "r5n05",
+     "region": 5,
+     "type": "new",
+     "label": "新字关3",
+     "x": 503.2,
+     "y": 2630.0,
+     "next": [
+      "r5n06"
+     ]
+    },
+    {
+     "key": "r5n06",
+     "region": 5,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 463.6,
+     "y": 2590.0,
+     "next": [
+      "r5n07"
+     ]
+    },
+    {
+     "key": "r5n07",
+     "region": 5,
+     "type": "new",
+     "label": "新字关4",
+     "x": 444.6,
+     "y": 2550.0,
+     "next": [
+      "r5n08"
+     ]
+    },
+    {
+     "key": "r5n08",
+     "region": 5,
+     "type": "new",
+     "label": "新字关5",
+     "x": 451.1,
+     "y": 2510.0,
+     "next": [
+      "r5n09"
+     ]
+    },
+    {
+     "key": "r5n09",
+     "region": 5,
+     "type": "friend",
+     "label": "pigeon",
+     "x": 481.4,
+     "y": 2470.0,
+     "next": [
+      "r5n10"
+     ]
+    },
+    {
+     "key": "r5n10",
+     "region": 5,
+     "type": "new",
+     "label": "新字关6",
+     "x": 527.4,
+     "y": 2430.0,
+     "next": [
+      "r5n11"
+     ]
+    },
+    {
+     "key": "r5n11",
+     "region": 5,
+     "type": "new",
+     "label": "新字关7",
+     "x": 576.8,
+     "y": 2390.0,
+     "next": [
+      "r5n12"
+     ]
+    },
+    {
+     "key": "r5n12",
+     "region": 5,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 616.4,
+     "y": 2350.0,
+     "next": [
+      "r5n13"
+     ]
+    },
+    {
+     "key": "r5n13",
+     "region": 5,
+     "type": "new",
+     "label": "新字关8",
+     "x": 635.4,
+     "y": 2310.0,
+     "next": [
+      "r5n14"
+     ]
+    },
+    {
+     "key": "r5n14",
+     "region": 5,
+     "type": "new",
+     "label": "新字关9",
+     "x": 628.9,
+     "y": 2270.0,
+     "next": [
+      "r5n15"
+     ]
+    },
+    {
+     "key": "r5n15",
+     "region": 5,
+     "type": "new",
+     "label": "新字关10",
+     "x": 598.6,
+     "y": 2230.0,
+     "next": [
+      "r5n16"
+     ]
+    },
+    {
+     "key": "r5n16",
+     "region": 5,
+     "type": "new",
+     "label": "新字关11",
+     "x": 552.6,
+     "y": 2190.0,
+     "next": [
+      "r5n17"
+     ]
+    },
+    {
+     "key": "r5n17",
+     "region": 5,
+     "type": "story",
+     "label": "字锁大门",
+     "x": 503.2,
+     "y": 2150.0,
+     "next": [
+      "r5n18"
+     ]
+    },
+    {
+     "key": "r5n18",
+     "region": 5,
+     "type": "boss",
+     "label": "嘟嘟小镇守护者",
+     "x": 463.6,
+     "y": 2110.0,
+     "next": []
+    }
+   ],
+   "unlock": "r4_boss",
+   "boss": "r5n18"
+  },
+  {
+   "id": 6,
+   "name": "智慧城堡",
+   "levels": 11,
+   "nodes": [
+    {
+     "key": "r6n01",
+     "region": 6,
+     "type": "story",
+     "label": "智慧城堡·迷雾中的智慧城堡",
+     "x": 683.5,
+     "y": 1890.0,
+     "next": [
+      "r6n02"
+     ]
+    },
+    {
+     "key": "r6n02",
+     "region": 6,
+     "type": "new",
+     "label": "新字关1",
+     "x": 676.4,
+     "y": 1850.0,
+     "next": [
+      "r6n03"
+     ]
+    },
+    {
+     "key": "r6n03",
+     "region": 6,
+     "type": "new",
+     "label": "新字关2",
+     "x": 615.7,
+     "y": 1810.0,
+     "next": [
+      "r6n04"
+     ]
+    },
+    {
+     "key": "r6n04",
+     "region": 6,
+     "type": "chest",
+     "label": "星光驿站",
+     "x": 516.6,
+     "y": 1770.0,
+     "next": [
+      "r6n05"
+     ]
+    },
+    {
+     "key": "r6n05",
+     "region": 6,
+     "type": "new",
+     "label": "新字关3",
+     "x": 403.4,
+     "y": 1730.0,
+     "next": [
+      "r6n06"
+     ]
+    },
+    {
+     "key": "r6n06",
+     "region": 6,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 304.3,
+     "y": 1690.0,
+     "next": [
+      "r6n07"
+     ]
+    },
+    {
+     "key": "r6n07",
+     "region": 6,
+     "type": "new",
+     "label": "新字关4",
+     "x": 243.6,
+     "y": 1650.0,
+     "next": [
+      "r6n08"
+     ]
+    },
+    {
+     "key": "r6n08",
+     "region": 6,
+     "type": "new",
+     "label": "新字关5",
+     "x": 236.5,
+     "y": 1610.0,
+     "next": [
+      "r6n09"
+     ]
+    },
+    {
+     "key": "r6n09",
+     "region": 6,
+     "type": "friend",
+     "label": "fox",
+     "x": 284.7,
+     "y": 1570.0,
+     "next": [
+      "r6n10"
+     ]
+    },
+    {
+     "key": "r6n10",
+     "region": 6,
+     "type": "new",
+     "label": "新字关6",
+     "x": 376.3,
+     "y": 1530.0,
+     "next": [
+      "r6n11"
+     ]
+    },
+    {
+     "key": "r6n11",
+     "region": 6,
+     "type": "new",
+     "label": "新字关7",
+     "x": 488.5,
+     "y": 1490.0,
+     "next": [
+      "r6n12"
+     ]
+    },
+    {
+     "key": "r6n12",
+     "region": 6,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 593.7,
+     "y": 1450.0,
+     "next": [
+      "r6n13"
+     ]
+    },
+    {
+     "key": "r6n13",
+     "region": 6,
+     "type": "new",
+     "label": "新字关8",
+     "x": 665.8,
+     "y": 1410.0,
+     "next": [
+      "r6n14"
+     ]
+    },
+    {
+     "key": "r6n14",
+     "region": 6,
+     "type": "new",
+     "label": "新字关9",
+     "x": 687.1,
+     "y": 1370.0,
+     "next": [
+      "r6n15"
+     ]
+    },
+    {
+     "key": "r6n15",
+     "region": 6,
+     "type": "new",
+     "label": "新字关10",
+     "x": 652.1,
+     "y": 1330.0,
+     "next": [
+      "r6n16"
+     ]
+    },
+    {
+     "key": "r6n16",
+     "region": 6,
+     "type": "new",
+     "label": "新字关11",
+     "x": 569.6,
+     "y": 1290.0,
+     "next": [
+      "r6n17"
+     ]
+    },
+    {
+     "key": "r6n17",
+     "region": 6,
+     "type": "story",
+     "label": "字锁大门",
+     "x": 460.0,
+     "y": 1250.0,
+     "next": [
+      "r6n18"
+     ]
+    },
+    {
+     "key": "r6n18",
+     "region": 6,
+     "type": "boss",
+     "label": "智慧城堡守护者",
+     "x": 350.4,
+     "y": 1210.0,
+     "next": []
+    }
+   ],
+   "unlock": "r5_boss",
+   "boss": "r6n18"
+  },
+  {
+   "id": 7,
+   "name": "星空剧场",
+   "levels": 17,
+   "nodes": [
+    {
+     "key": "r7n01",
+     "region": 7,
+     "type": "story",
+     "label": "星空剧场·迷雾中的星空剧场",
+     "x": 604.6,
+     "y": 999.6,
+     "next": [
+      "r7n02"
+     ]
+    },
+    {
+     "key": "r7n02",
+     "region": 7,
+     "type": "new",
+     "label": "新字关1",
+     "x": 617.2,
+     "y": 969.2,
+     "next": [
+      "r7n03"
+     ]
+    },
+    {
+     "key": "r7n03",
+     "region": 7,
+     "type": "new",
+     "label": "新字关2",
+     "x": 625.0,
+     "y": 938.8,
+     "next": [
+      "r7n04"
+     ]
+    },
+    {
+     "key": "r7n04",
+     "region": 7,
+     "type": "new",
+     "label": "新字关3",
+     "x": 627.5,
+     "y": 908.4,
+     "next": [
+      "r7n05"
+     ]
+    },
+    {
+     "key": "r7n05",
+     "region": 7,
+     "type": "new",
+     "label": "新字关4",
+     "x": 624.5,
+     "y": 878.0,
+     "next": [
+      "r7n06"
+     ]
+    },
+    {
+     "key": "r7n06",
+     "region": 7,
+     "type": "chest",
+     "label": "星光驿站",
+     "x": 616.1,
+     "y": 847.6,
+     "next": [
+      "r7n07"
+     ]
+    },
+    {
+     "key": "r7n07",
+     "region": 7,
+     "type": "new",
+     "label": "新字关5",
+     "x": 603.0,
+     "y": 817.2,
+     "next": [
+      "r7n08"
+     ]
+    },
+    {
+     "key": "r7n08",
+     "region": 7,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 585.9,
+     "y": 786.8,
+     "next": [
+      "r7n09"
+     ]
+    },
+    {
+     "key": "r7n09",
+     "region": 7,
+     "type": "new",
+     "label": "新字关6",
+     "x": 565.9,
+     "y": 756.4,
+     "next": [
+      "r7n10"
+     ]
+    },
+    {
+     "key": "r7n10",
+     "region": 7,
+     "type": "new",
+     "label": "新字关7",
+     "x": 544.3,
+     "y": 726.0,
+     "next": [
+      "r7n11"
+     ]
+    },
+    {
+     "key": "r7n11",
+     "region": 7,
+     "type": "new",
+     "label": "新字关8",
+     "x": 522.5,
+     "y": 695.6,
+     "next": [
+      "r7n12"
+     ]
+    },
+    {
+     "key": "r7n12",
+     "region": 7,
+     "type": "friend",
+     "label": "star",
+     "x": 501.7,
+     "y": 665.2,
+     "next": [
+      "r7n13"
+     ]
+    },
+    {
+     "key": "r7n13",
+     "region": 7,
+     "type": "new",
+     "label": "新字关9",
+     "x": 483.3,
+     "y": 634.8,
+     "next": [
+      "r7n14"
+     ]
+    },
+    {
+     "key": "r7n14",
+     "region": 7,
+     "type": "new",
+     "label": "新字关10",
+     "x": 468.5,
+     "y": 604.4,
+     "next": [
+      "r7n15"
+     ]
+    },
+    {
+     "key": "r7n15",
+     "region": 7,
+     "type": "new",
+     "label": "新字关11",
+     "x": 458.2,
+     "y": 574.0,
+     "next": [
+      "r7n16"
+     ]
+    },
+    {
+     "key": "r7n16",
+     "region": 7,
+     "type": "camp",
+     "label": "复习营地",
+     "x": 453.1,
+     "y": 543.6,
+     "next": [
+      "r7n17"
+     ]
+    },
+    {
+     "key": "r7n17",
+     "region": 7,
+     "type": "new",
+     "label": "新字关12",
+     "x": 453.3,
+     "y": 513.2,
+     "next": [
+      "r7n18"
+     ]
+    },
+    {
+     "key": "r7n18",
+     "region": 7,
+     "type": "new",
+     "label": "新字关13",
+     "x": 459.1,
+     "y": 482.8,
+     "next": [
+      "r7n19"
+     ]
+    },
+    {
+     "key": "r7n19",
+     "region": 7,
+     "type": "new",
+     "label": "新字关14",
+     "x": 469.9,
+     "y": 452.4,
+     "next": [
+      "r7n20"
+     ]
+    },
+    {
+     "key": "r7n20",
+     "region": 7,
+     "type": "new",
+     "label": "新字关15",
+     "x": 485.1,
+     "y": 422.0,
+     "next": [
+      "r7n21"
+     ]
+    },
+    {
+     "key": "r7n21",
+     "region": 7,
+     "type": "new",
+     "label": "新字关16",
+     "x": 503.8,
+     "y": 391.6,
+     "next": [
+      "r7n22"
+     ]
+    },
+    {
+     "key": "r7n22",
+     "region": 7,
+     "type": "new",
+     "label": "新字关17",
+     "x": 524.7,
+     "y": 361.2,
+     "next": [
+      "r7n23"
+     ]
+    },
+    {
+     "key": "r7n23",
+     "region": 7,
+     "type": "story",
+     "label": "字锁大门",
+     "x": 546.6,
+     "y": 330.8,
+     "next": [
+      "r7n24"
+     ]
+    },
+    {
+     "key": "r7n24",
+     "region": 7,
+     "type": "boss",
+     "label": "星空剧场守护者",
+     "x": 568.1,
+     "y": 300.4,
+     "next": []
+    }
+   ],
+   "unlock": "r6_boss",
+   "boss": "r7n24"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ziquest qtypes dev（M2b 临时独立测试链，交付前删除）</title>
+<style>
+body{background:#FBF6EC;margin:0;color:#4A3B2E;font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+#bar{position:fixed;top:0;left:0;right:0;height:60px;display:flex;gap:6px;padding:10px 8px;
+  align-items:center;z-index:99;background:#FBF6EC;border-bottom:2px solid #EFE3CD;box-sizing:border-box}
+#bar button{min-height:40px;padding:4px 14px;font-size:16px;font-weight:700;border:2px solid #4A3B2E;
+  border-radius:12px;background:#FFF9EE}
+#box{position:fixed;top:60px;left:0;right:0;bottom:0}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="box"></div>
+<script src="../game-data.js"></script>
+<script src="t1.js"></script>
+<script src="t2.js"></script>
+<script src="t3.js"></script>
+<script src="t4.js"></script>
+<script src="t5.js"></script>
+<script src="t6.js"></script>
+<script>
+/* harness：mock api + 样例 q + 题型切换（selftest 驱动；qtypes 不依赖 game-core/game-main） */
+'use strict';
+var BOX = document.getElementById('box');
+var MOCK = {
+  right: 0, wrong: 0, replays: 0, hints: [], voices: [], locks: [], progress: null,
+  reset: function () { this.right = 0; this.wrong = 0; this.replays = 0; this.hints = [];
+    this.voices = []; this.locks = []; this.progress = null; }
+};
+var api = {
+  right: function () { MOCK.right++; },
+  wrong: function () { MOCK.wrong++; },
+  replay: function () { MOCK.replays++; },
+  lock: function (on) { MOCK.locks.push(!!on); },
+  voice: function (k) { MOCK.voices.push(k); },
+  hint: function (l) { MOCK.hints.push(l); },
+  progress: function (c, t) { MOCK.progress = [c, t]; }
+};
+var CH = {};
+ZQ_CHARS['1'].chars.forEach(function (c) { CH[c.ch] = c; });
+function mkq(type, chName, seedIdx) {
+  var c = CH[chName];
+  var opts;
+  if (type === 't4') {                       /* t4 选项=词：正确词 + 3 个同区换字词（确定性=字表序） */
+    var w0 = c.words[0][0], others = [];
+    for (var k in CH) {
+      var w = CH[k].words[0][0];
+      if (k !== chName && w !== w0 && others.indexOf(w) < 0) others.push(w);
+      if (others.length >= 3) break;
+    }
+    opts = [w0].concat(others);
+  } else {
+    opts = [c.ch].concat(c.distract.map(function (d) { return d[0]; }));
+  }
+  return { type: type, ch: c.ch, py: c.py, pyKey: c.pyKey, words: c.words, glyph: c.glyph,
+           parts: c.parts, distract: c.distract, options: opts, answer: 0,
+           seedIdx: seedIdx == null ? 7 : seedIdx, region: 1, challenge: false };
+}
+window.runQ = function (type, chName, seedIdx) {
+  MOCK.reset();
+  var q = mkq(type, chName, seedIdx);
+  ZQ.QT[type].render(q, BOX, api);
+  if (ZQ.QT[type].onShow) ZQ.QT[type].onShow(q, api);
+  window.__q = q;
+  return { ok: true, ch: q.ch, options: q.options };
+};
+window.MOCK = MOCK;
+window.BOX = BOX;
+/* 可选句库注入（t5 测试）。null=空句库容器（容器优先于裸全局 game-data 的 ZQ_SENTENCES，
+   专测 t5 fallback 占位路径——「容器全缺」场景由生产裸全局兜底覆盖，fixture 无法构造） */
+window.setSents = function (arr) {
+  window.ZQ_DATA = { ZQ_SENTENCES: arr || [] };
+};
+</script>
+</body>
+</html>

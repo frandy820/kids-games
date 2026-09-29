@@ -1,0 +1,2159 @@
+{
+ "meta": {
+  "name": "智慧城堡",
+  "theme": "学校·数字·文具·文娱",
+  "accent": "#B49BD8",
+  "region": 6,
+  "count": 55,
+  "levels": 11,
+  "note": "order=区域内教学序；g1a 按课标 first 课号排序；life 待 0c 补 py/words"
+ },
+ "function": [],
+ "chars": [
+  {
+   "ch": "一",
+   "src": "g1a",
+   "order": 0,
+   "chNo": null,
+   "first": "1a-s2",
+   "py": "yī",
+   "pyKey": "yi4",
+   "tone": 1,
+   "words": [
+    [
+     "一起",
+     "yì qǐ"
+    ],
+    [
+     "一个",
+     "yí gè"
+    ],
+    [
+     "第一",
+     "dì yī"
+    ]
+   ],
+   "glyph": "数字一，一条横线就是一，伸出一根手指就是一",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "二",
+     "同类"
+    ],
+    [
+     "三",
+     "同类"
+    ],
+    [
+     "十",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "二",
+   "src": "g1a",
+   "order": 1,
+   "chNo": null,
+   "first": "1a-s2",
+   "py": "èr",
+   "pyKey": "er3",
+   "tone": 4,
+   "words": [
+    [
+     "二十",
+     "èr shí"
+    ],
+    [
+     "二月",
+     "èr yuè"
+    ]
+   ],
+   "glyph": "数字二，两条横线就是二，两根手指头",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "三",
+     "同类"
+    ],
+    [
+     "工",
+     "形近"
+    ],
+    [
+     "两",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "三",
+   "src": "g1a",
+   "order": 2,
+   "chNo": null,
+   "first": "1a-s2",
+   "py": "sān",
+   "pyKey": "san2",
+   "tone": 1,
+   "words": [
+    [
+     "三个",
+     "sān gè"
+    ],
+    [
+     "三十",
+     "sān shí"
+    ]
+   ],
+   "glyph": "数字三，三条横线就是三，数到三就是它",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "二",
+     "同类"
+    ],
+    [
+     "川",
+     "形近"
+    ],
+    [
+     "五",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "四",
+   "src": "g1a",
+   "order": 3,
+   "chNo": null,
+   "first": "1a-s2",
+   "py": "sì",
+   "pyKey": "si",
+   "tone": 4,
+   "words": [
+    [
+     "四个",
+     "sì gè"
+    ],
+    [
+     "四十",
+     "sì shí"
+    ]
+   ],
+   "glyph": "数字四，四四方方像小窗户，里面藏着两条小腿",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "西",
+     "形近"
+    ],
+    [
+     "五",
+     "同类"
+    ],
+    [
+     "匹",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "五",
+   "src": "g1a",
+   "order": 4,
+   "chNo": null,
+   "first": "1a-s2",
+   "py": "wǔ",
+   "pyKey": "wu5",
+   "tone": 3,
+   "words": [
+    [
+     "五个",
+     "wǔ gè"
+    ],
+    [
+     "五十",
+     "wǔ shí"
+    ]
+   ],
+   "glyph": "数字五，五根手指就是五，一只手正好五个",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "四",
+     "同类"
+    ],
+    [
+     "六",
+     "同类"
+    ],
+    [
+     "互",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "书",
+   "src": "g1a",
+   "order": 5,
+   "chNo": null,
+   "first": "1a-s8",
+   "py": "shū",
+   "pyKey": "shu3",
+   "tone": 1,
+   "words": [
+    [
+     "看书",
+     "kàn shū"
+    ],
+    [
+     "读书",
+     "dú shū"
+    ],
+    [
+     "书本",
+     "shū běn"
+    ]
+   ],
+   "glyph": "看书的书，一页一页订起来，翻开就能看故事",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "本",
+     "形近"
+    ],
+    [
+     "画",
+     "同类"
+    ],
+    [
+     "读",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "包",
+   "src": "g1a",
+   "order": 6,
+   "chNo": null,
+   "first": "1a-s8",
+   "py": "bāo",
+   "pyKey": "bao2",
+   "tone": 1,
+   "words": [
+    [
+     "书包",
+     "shū bāo"
+    ],
+    [
+     "包子",
+     "bāo zi"
+    ]
+   ],
+   "glyph": "书包的包，把东西裹起来，外面包上一圈",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "句",
+     "形近"
+    ],
+    [
+     "皮",
+     "同类"
+    ],
+    [
+     "袋",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "尺",
+   "src": "g1a",
+   "order": 7,
+   "chNo": null,
+   "first": "1a-s8",
+   "py": "chǐ",
+   "pyKey": "chi",
+   "tone": 3,
+   "words": [
+    [
+     "尺子",
+     "chǐ zi"
+    ],
+    [
+     "卷尺",
+     "juǎn chǐ"
+    ]
+   ],
+   "glyph": "量长短的尺子，上面有一条条小格子刻度",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "尽",
+     "形近"
+    ],
+    [
+     "寸",
+     "同类"
+    ],
+    [
+     "米",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "作",
+   "src": "g1a",
+   "order": 8,
+   "chNo": null,
+   "first": "1a-s8",
+   "py": "zuò",
+   "pyKey": "zuo4",
+   "tone": 4,
+   "words": [
+    [
+     "写作业",
+     "xiě zuò yè"
+    ],
+    [
+     "作业",
+     "zuò yè"
+    ]
+   ],
+   "glyph": "作业的作，单人旁，做的意思，做作业用它",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "做",
+     "同声旁"
+    ],
+    [
+     "昨",
+     "同声旁"
+    ],
+    [
+     "写",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "业",
+   "src": "g1a",
+   "order": 9,
+   "chNo": null,
+   "first": "1a-s8",
+   "py": "yè",
+   "pyKey": "ye3",
+   "tone": 4,
+   "words": [
+    [
+     "作业",
+     "zuò yè"
+    ],
+    [
+     "毕业",
+     "bì yè"
+    ]
+   ],
+   "glyph": "作业的业，像一排小树苗立在地上，整整齐齐",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "亚",
+     "形近"
+    ],
+    [
+     "叶",
+     "形近"
+    ],
+    [
+     "课",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "本",
+   "src": "g1a",
+   "order": 10,
+   "chNo": null,
+   "first": "1a-s8",
+   "py": "běn",
+   "pyKey": "ben",
+   "tone": 3,
+   "words": [
+    [
+     "本子",
+     "běn zi"
+    ],
+    [
+     "书本",
+     "shū běn"
+    ]
+   ],
+   "glyph": "本子的本，木头的木下面加一横，树的根就是本",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "木",
+     "形近"
+    ],
+    [
+     "书",
+     "同类"
+    ],
+    [
+     "未",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "笔",
+   "src": "g1a",
+   "order": 11,
+   "chNo": null,
+   "first": "1a-s8",
+   "py": "bǐ",
+   "pyKey": "bi",
+   "tone": 3,
+   "words": [
+    [
+     "铅笔",
+     "qiān bǐ"
+    ],
+    [
+     "毛笔",
+     "máo bǐ"
+    ]
+   ],
+   "glyph": "写字用的笔，上面竹字头，下面一根毛，毛笔就是这样",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "竿",
+     "形近"
+    ],
+    [
+     "纸",
+     "同类"
+    ],
+    [
+     "尺",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "刀",
+   "src": "g1a",
+   "order": 12,
+   "chNo": null,
+   "first": "1a-s8",
+   "py": "dāo",
+   "pyKey": "dao2",
+   "tone": 1,
+   "words": [
+    [
+     "小刀",
+     "xiǎo dāo"
+    ],
+    [
+     "剪刀",
+     "jiǎn dāo"
+    ]
+   ],
+   "glyph": "切东西的刀，弯弯的刀身，头上是尖尖的刀刃",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "力",
+     "形近"
+    ],
+    [
+     "勺",
+     "形近"
+    ],
+    [
+     "尺",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "课",
+   "src": "g1a",
+   "order": 13,
+   "chNo": null,
+   "first": "1a-s8",
+   "py": "kè",
+   "pyKey": "ke2",
+   "tone": 4,
+   "words": [
+    [
+     "上课",
+     "shàng kè"
+    ],
+    [
+     "下课",
+     "xià kè"
+    ]
+   ],
+   "glyph": "上课的课，言字旁加果，老师说话我们听课",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "果",
+     "形近"
+    ],
+    [
+     "棵",
+     "同声旁"
+    ],
+    [
+     "题",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "校",
+   "src": "g1a",
+   "order": 14,
+   "chNo": null,
+   "first": "1a-s8",
+   "py": "xiào",
+   "pyKey": "xiao",
+   "tone": 4,
+   "words": [
+    [
+     "学校",
+     "xué xiào"
+    ],
+    [
+     "校园",
+     "xiào yuán"
+    ]
+   ],
+   "glyph": "学校的校，木字旁加交，校园里种着好多树",
+   "parts": [
+    "木",
+    "交"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "郊",
+     "同声旁"
+    ],
+    [
+     "桥",
+     "形近"
+    ],
+    [
+     "学",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "升",
+   "src": "g1a",
+   "order": 15,
+   "chNo": null,
+   "first": "1a-s10",
+   "py": "shēng",
+   "pyKey": "sheng2",
+   "tone": 1,
+   "words": [
+    [
+     "升旗",
+     "shēng qí"
+    ],
+    [
+     "升起",
+     "shēng qǐ"
+    ]
+   ],
+   "glyph": "升国旗的升，往上飞，像太阳升起来，国旗升上去",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "开",
+     "形近"
+    ],
+    [
+     "斗",
+     "形近"
+    ],
+    [
+     "旗",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "国",
+   "src": "g1a",
+   "order": 16,
+   "chNo": null,
+   "first": "1a-s10",
+   "py": "guó",
+   "pyKey": "guo2",
+   "tone": 2,
+   "words": [
+    [
+     "国旗",
+     "guó qí"
+    ],
+    [
+     "国家",
+     "guó jiā"
+    ]
+   ],
+   "glyph": "国家的国，方框里藏着玉，国家把宝贝护在里面",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "围",
+     "形近"
+    ],
+    [
+     "圆",
+     "形近"
+    ],
+    [
+     "家",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "旗",
+   "src": "g1a",
+   "order": 17,
+   "chNo": null,
+   "first": "1a-s10",
+   "py": "qí",
+   "pyKey": "qi3",
+   "tone": 2,
+   "words": [
+    [
+     "红旗",
+     "hóng qí"
+    ],
+    [
+     "旗子",
+     "qí zi"
+    ]
+   ],
+   "glyph": "国旗的旗，旗杆上飘着的布，风一吹就飘起来",
+   "parts": null,
+   "family": "qi",
+   "freq": 3,
+   "distract": [
+    [
+     "棋",
+     "同声旁"
+    ],
+    [
+     "期",
+     "同声旁"
+    ],
+    [
+     "族",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "歌",
+   "src": "g1a",
+   "order": 18,
+   "chNo": null,
+   "first": "1a-s10",
+   "py": "gē",
+   "pyKey": "ge2",
+   "tone": 1,
+   "words": [
+    [
+     "唱歌",
+     "chàng gē"
+    ],
+    [
+     "儿歌",
+     "ér gē"
+    ]
+   ],
+   "glyph": "唱歌的歌，左边一个哥，张开嘴巴唱歌真快活",
+   "parts": [
+    "哥",
+    "欠"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "唱",
+     "同类"
+    ],
+    [
+     "曲",
+     "同类"
+    ],
+    [
+     "款",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "画",
+   "src": "g1a",
+   "order": 19,
+   "chNo": null,
+   "first": "1a-p5",
+   "py": "huà",
+   "pyKey": "hua2",
+   "tone": 4,
+   "words": [
+    [
+     "画画",
+     "huà huà"
+    ],
+    [
+     "图画",
+     "tú huà"
+    ],
+    [
+     "画笔",
+     "huà bǐ"
+    ]
+   ],
+   "glyph": "画画的画，下面一块田，田边围着栏杆像画框",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "田",
+     "形近"
+    ],
+    [
+     "图",
+     "同类"
+    ],
+    [
+     "笔",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "棋",
+   "src": "g1a",
+   "order": 20,
+   "chNo": null,
+   "first": "1a-p6",
+   "py": "qí",
+   "pyKey": "qi4",
+   "tone": 2,
+   "words": [
+    [
+     "下棋",
+     "xià qí"
+    ],
+    [
+     "棋子",
+     "qí zi"
+    ]
+   ],
+   "glyph": "下棋的棋，木字旁加其，木头做的棋子",
+   "parts": [
+    "木",
+    "其"
+   ],
+   "family": "qi",
+   "freq": 3,
+   "distract": [
+    [
+     "旗",
+     "同声旁"
+    ],
+    [
+     "期",
+     "同声旁"
+    ],
+    [
+     "盘",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "字",
+   "src": "g1a",
+   "order": 21,
+   "chNo": null,
+   "first": "1a-p7",
+   "py": "zì",
+   "pyKey": "zi2",
+   "tone": 4,
+   "words": [
+    [
+     "写字",
+     "xiě zì"
+    ],
+    [
+     "数字",
+     "shù zì"
+    ],
+    [
+     "名字",
+     "míng zi"
+    ]
+   ],
+   "glyph": "写字的字，宝盖头下面一个孩子，孩子学的就是字",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "子",
+     "形近"
+    ],
+    [
+     "文",
+     "同类"
+    ],
+    [
+     "句",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "词",
+   "src": "g1a",
+   "order": 22,
+   "chNo": null,
+   "first": "1a-p7",
+   "py": "cí",
+   "pyKey": "ci",
+   "tone": 2,
+   "words": [
+    [
+     "词语",
+     "cí yǔ"
+    ],
+    [
+     "生词",
+     "shēng cí"
+    ]
+   ],
+   "glyph": "词语的词，言字旁加司，说话说出的是词",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "讨",
+     "形近"
+    ],
+    [
+     "语",
+     "同类"
+    ],
+    [
+     "句",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "语",
+   "src": "g1a",
+   "order": 23,
+   "chNo": null,
+   "first": "1a-p7",
+   "py": "yǔ",
+   "pyKey": "yu3",
+   "tone": 3,
+   "words": [
+    [
+     "语文",
+     "yǔ wén"
+    ],
+    [
+     "英语",
+     "yīng yǔ"
+    ]
+   ],
+   "glyph": "语文的语，言字旁加五和口，用嘴巴说话",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "悟",
+     "形近"
+    ],
+    [
+     "说",
+     "同类"
+    ],
+    [
+     "话",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "句",
+   "src": "g1a",
+   "order": 24,
+   "chNo": null,
+   "first": "1a-p7",
+   "py": "jù",
+   "pyKey": "ju3",
+   "tone": 4,
+   "words": [
+    [
+     "句子",
+     "jù zi"
+    ],
+    [
+     "造句",
+     "zào jù"
+    ]
+   ],
+   "glyph": "句子的句，像嘴巴包住说的话，说完整就是一句",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "勺",
+     "形近"
+    ],
+    [
+     "包",
+     "形近"
+    ],
+    [
+     "词",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "子",
+   "src": "g1a",
+   "order": 25,
+   "chNo": null,
+   "first": "1a-p7",
+   "py": "zǐ",
+   "pyKey": "zi3",
+   "tone": 3,
+   "words": [
+    [
+     "孩子",
+     "hái zi"
+    ],
+    [
+     "杯子",
+     "bēi zi"
+    ]
+   ],
+   "glyph": "孩子的子，儿子女儿的子，小朋友的意思",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "了",
+     "形近"
+    ],
+    [
+     "孑",
+     "形近"
+    ],
+    [
+     "儿",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "桌",
+   "src": "g1a",
+   "order": 26,
+   "chNo": null,
+   "first": "1a-p8",
+   "py": "zhuō",
+   "pyKey": "zhuo",
+   "tone": 1,
+   "words": [
+    [
+     "桌子",
+     "zhuō zi"
+    ],
+    [
+     "课桌",
+     "kè zhuō"
+    ]
+   ],
+   "glyph": "上课的桌子，木头做的，平平的桌面放书和本子",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "卓",
+     "形近"
+    ],
+    [
+     "椅",
+     "同类"
+    ],
+    [
+     "凳",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "纸",
+   "src": "g1a",
+   "order": 27,
+   "chNo": null,
+   "first": "1a-p8",
+   "py": "zhǐ",
+   "pyKey": "zhi2",
+   "tone": 3,
+   "words": [
+    [
+     "纸飞机",
+     "zhǐ fēi jī"
+    ],
+    [
+     "白纸",
+     "bái zhǐ"
+    ]
+   ],
+   "glyph": "画画的纸，绞丝旁加氏，薄薄一张用来写字画画",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "低",
+     "同声旁"
+    ],
+    [
+     "底",
+     "同声旁"
+    ],
+    [
+     "布",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "两",
+   "src": "g1a",
+   "order": 28,
+   "chNo": null,
+   "first": "1a-k2",
+   "py": "liǎng",
+   "pyKey": "liang2",
+   "tone": 3,
+   "words": [
+    [
+     "两个",
+     "liǎng gè"
+    ],
+    [
+     "两只",
+     "liǎng zhī"
+    ]
+   ],
+   "glyph": "两个的两，一横两边挂东西，就是数字二的意思",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "雨",
+     "形近"
+    ],
+    [
+     "再",
+     "形近"
+    ],
+    [
+     "二",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "写",
+   "src": "g1a",
+   "order": 29,
+   "chNo": null,
+   "first": "1a-k7",
+   "py": "xiě",
+   "pyKey": "xie3",
+   "tone": 3,
+   "words": [
+    [
+     "写字",
+     "xiě zì"
+    ],
+    [
+     "书写",
+     "shū xiě"
+    ]
+   ],
+   "glyph": "写字的写，屋顶下面把字一笔一笔写清楚",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "与",
+     "形近"
+    ],
+    [
+     "字",
+     "同类"
+    ],
+    [
+     "笔",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "诗",
+   "src": "g1a",
+   "order": 30,
+   "chNo": null,
+   "first": "1a-k7",
+   "py": "shī",
+   "pyKey": "shi5",
+   "tone": 1,
+   "words": [
+    [
+     "古诗",
+     "gǔ shī"
+    ],
+    [
+     "诗歌",
+     "shī gē"
+    ]
+   ],
+   "glyph": "古诗的诗，言字旁加寺庙的寺，念起来好听的话",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "待",
+     "同声旁"
+    ],
+    [
+     "特",
+     "同声旁"
+    ],
+    [
+     "歌",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "老",
+   "src": "g1a",
+   "order": 31,
+   "chNo": null,
+   "first": "1a-k9",
+   "py": "lǎo",
+   "pyKey": "lao",
+   "tone": 3,
+   "words": [
+    [
+     "老师",
+     "lǎo shī"
+    ],
+    [
+     "老虎",
+     "lǎo hǔ"
+    ],
+    [
+     "老人",
+     "lǎo rén"
+    ]
+   ],
+   "glyph": "老师的老，年纪大了就是老，老师教我们学本领",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "考",
+     "形近"
+    ],
+    [
+     "师",
+     "同类"
+    ],
+    [
+     "新",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "师",
+   "src": "g1a",
+   "order": 32,
+   "chNo": null,
+   "first": "1a-k9",
+   "py": "shī",
+   "pyKey": "shi6",
+   "tone": 1,
+   "words": [
+    [
+     "老师",
+     "lǎo shī"
+    ],
+    [
+     "大师",
+     "dà shī"
+    ]
+   ],
+   "glyph": "老师的师，学校里教我们的人，带着我们学知识",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "帅",
+     "形近"
+    ],
+    [
+     "老",
+     "同类"
+    ],
+    [
+     "军",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "用",
+   "src": "g1a",
+   "order": 33,
+   "chNo": null,
+   "first": "1a-k12",
+   "py": "yòng",
+   "pyKey": "yong",
+   "tone": 4,
+   "words": [
+    [
+     "有用",
+     "yǒu yòng"
+    ],
+    [
+     "用处",
+     "yòng chù"
+    ]
+   ],
+   "glyph": "有用的用，像个小水桶，能装东西就有用",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "甩",
+     "形近"
+    ],
+    [
+     "使",
+     "同类"
+    ],
+    [
+     "拿",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "几",
+   "src": "g1a",
+   "order": 34,
+   "chNo": null,
+   "first": "1a-k12",
+   "py": "jǐ",
+   "pyKey": "ji3",
+   "tone": 3,
+   "words": [
+    [
+     "几个",
+     "jǐ gè"
+    ],
+    [
+     "几只",
+     "jǐ zhī"
+    ]
+   ],
+   "glyph": "几个的几，像小桌子两条腿，问几个就数一数",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "凡",
+     "形近"
+    ],
+    [
+     "九",
+     "形近"
+    ],
+    [
+     "多",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "群",
+   "src": "g1a",
+   "order": 35,
+   "chNo": null,
+   "first": "1a-k12",
+   "py": "qún",
+   "pyKey": "qun",
+   "tone": 2,
+   "words": [
+    [
+     "一群",
+     "yì qún"
+    ],
+    [
+     "群山",
+     "qún shān"
+    ]
+   ],
+   "glyph": "一群的群，君字旁加羊，好多羊在一起是一群",
+   "parts": [
+    "君",
+    "羊"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "裙",
+     "同声旁"
+    ],
+    [
+     "队",
+     "同类"
+    ],
+    [
+     "堆",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "六",
+   "src": "g1a",
+   "order": 36,
+   "chNo": null,
+   "first": "1a-g1",
+   "py": "liù",
+   "pyKey": "liu",
+   "tone": 4,
+   "words": [
+    [
+     "六个",
+     "liù gè"
+    ],
+    [
+     "六月",
+     "liù yuè"
+    ]
+   ],
+   "glyph": "数字六，一点一横像帽子，下面两条小腿",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "四",
+     "同类"
+    ],
+    [
+     "大",
+     "形近"
+    ],
+    [
+     "八",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "七",
+   "src": "g1a",
+   "order": 37,
+   "chNo": null,
+   "first": "1a-g1",
+   "py": "qī",
+   "pyKey": "qi5",
+   "tone": 1,
+   "words": [
+    [
+     "七个",
+     "qī gè"
+    ],
+    [
+     "七十",
+     "qī shí"
+    ]
+   ],
+   "glyph": "数字七，一横下面弯弯钩，像把小镰刀",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "十",
+     "形近"
+    ],
+    [
+     "八",
+     "同类"
+    ],
+    [
+     "匕",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "八",
+   "src": "g1a",
+   "order": 38,
+   "chNo": null,
+   "first": "1a-g1",
+   "py": "bā",
+   "pyKey": "ba3",
+   "tone": 1,
+   "words": [
+    [
+     "八个",
+     "bā gè"
+    ],
+    [
+     "八十",
+     "bā shí"
+    ]
+   ],
+   "glyph": "数字八，一撇一捺分开放，像分开的两根手指",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "人",
+     "形近"
+    ],
+    [
+     "入",
+     "形近"
+    ],
+    [
+     "九",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "九",
+   "src": "g1a",
+   "order": 39,
+   "chNo": null,
+   "first": "1a-g1",
+   "py": "jiǔ",
+   "pyKey": "jiu2",
+   "tone": 3,
+   "words": [
+    [
+     "九个",
+     "jiǔ gè"
+    ],
+    [
+     "九十",
+     "jiǔ shí"
+    ]
+   ],
+   "glyph": "数字九，一撇加个丸，丸子上插根小棒",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "丸",
+     "形近"
+    ],
+    [
+     "力",
+     "形近"
+    ],
+    [
+     "十",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "十",
+   "src": "g1a",
+   "order": 40,
+   "chNo": null,
+   "first": "1a-g1",
+   "py": "shí",
+   "pyKey": "shi7",
+   "tone": 2,
+   "words": [
+    [
+     "十个",
+     "shí gè"
+    ],
+    [
+     "十一",
+     "shí yī"
+    ]
+   ],
+   "glyph": "数字十，一横加一竖，十字路口就是十",
+   "parts": null,
+   "family": null,
+   "freq": 1,
+   "distract": [
+    [
+     "七",
+     "形近"
+    ],
+    [
+     "才",
+     "形近"
+    ],
+    [
+     "九",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "文",
+   "src": "g1a",
+   "order": 41,
+   "chNo": null,
+   "first": "1a-g2",
+   "py": "wén",
+   "pyKey": "wen",
+   "tone": 2,
+   "words": [
+    [
+     "文具",
+     "wén jù"
+    ],
+    [
+     "语文",
+     "yǔ wén"
+    ]
+   ],
+   "glyph": "语文的文，一笔一画像花纹，古时候画花纹就是字",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "丈",
+     "形近"
+    ],
+    [
+     "六",
+     "形近"
+    ],
+    [
+     "字",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "数",
+   "src": "g1a",
+   "order": 42,
+   "chNo": null,
+   "first": "1a-g2",
+   "py": "shù",
+   "pyKey": "shu4",
+   "tone": 4,
+   "words": [
+    [
+     "数字",
+     "shù zì"
+    ],
+    [
+     "数学",
+     "shù xué"
+    ]
+   ],
+   "glyph": "数学的数，一个一个数东西，数出来的就是数",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "教",
+     "同类"
+    ],
+    [
+     "学",
+     "同类"
+    ],
+    [
+     "算",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "学",
+   "src": "g1a",
+   "order": 43,
+   "chNo": null,
+   "first": "1a-g2",
+   "py": "xué",
+   "pyKey": "xue2",
+   "tone": 2,
+   "words": [
+    [
+     "上学",
+     "shàng xué"
+    ],
+    [
+     "学习",
+     "xué xí"
+    ],
+    [
+     "学校",
+     "xué xiào"
+    ]
+   ],
+   "glyph": "上学的学，屋顶下面一个孩子，孩子坐在屋里学习",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "觉",
+     "形近"
+    ],
+    [
+     "校",
+     "同类"
+    ],
+    [
+     "读",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "音",
+   "src": "g1a",
+   "order": 44,
+   "chNo": null,
+   "first": "1a-g2",
+   "py": "yīn",
+   "pyKey": "yin2",
+   "tone": 1,
+   "words": [
+    [
+     "声音",
+     "shēng yīn"
+    ],
+    [
+     "音乐",
+     "yīn yuè"
+    ]
+   ],
+   "glyph": "声音的音，立在太阳上，一开口就有声音",
+   "parts": [
+    "立",
+    "日"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "声",
+     "同类"
+    ],
+    [
+     "响",
+     "同类"
+    ],
+    [
+     "乐",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "乐",
+   "src": "g1a",
+   "order": 45,
+   "chNo": null,
+   "first": "1a-g2",
+   "py": "yuè",
+   "pyKey": "yue2",
+   "tone": 4,
+   "words": [
+    [
+     "音乐",
+     "yīn yuè"
+    ],
+    [
+     "乐器",
+     "yuè qì"
+    ]
+   ],
+   "glyph": "音乐的乐，像小苗在跳舞，唱歌听音乐真快乐",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "东",
+     "形近"
+    ],
+    [
+     "歌",
+     "同类"
+    ],
+    [
+     "曲",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "题",
+   "src": "life",
+   "order": 46,
+   "chNo": null,
+   "first": null,
+   "py": "tí",
+   "pyKey": "ti2",
+   "tone": 2,
+   "words": [
+    [
+     "题目",
+     "tí mù"
+    ],
+    [
+     "数学题",
+     "shù xué tí"
+    ]
+   ],
+   "glyph": "做题的题，是字加页字，写在书页上的问题",
+   "parts": [
+    "是",
+    "页"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "项",
+     "形近"
+    ],
+    [
+     "问",
+     "同类"
+    ],
+    [
+     "答",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "卷",
+   "src": "life",
+   "order": 47,
+   "chNo": null,
+   "first": null,
+   "py": "juàn",
+   "pyKey": "juan",
+   "tone": 4,
+   "words": [
+    [
+     "试卷",
+     "shì juàn"
+    ],
+    [
+     "卷子",
+     "juàn zi"
+    ]
+   ],
+   "glyph": "试卷的卷，把纸卷一卷，考卷上印着题目",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "券",
+     "形近"
+    ],
+    [
+     "拳",
+     "形近"
+    ],
+    [
+     "考",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "粉",
+   "src": "life",
+   "order": 48,
+   "chNo": null,
+   "first": null,
+   "py": "fěn",
+   "pyKey": "fen",
+   "tone": 3,
+   "words": [
+    [
+     "粉笔",
+     "fěn bǐ"
+    ],
+    [
+     "粉色",
+     "fěn sè"
+    ]
+   ],
+   "glyph": "粉笔的粉，米字旁加分，细细的粉末做成粉笔",
+   "parts": [
+    "米",
+    "分"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "扮",
+     "同声旁"
+    ],
+    [
+     "纷",
+     "同声旁"
+    ],
+    [
+     "红",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "算",
+   "src": "life",
+   "order": 49,
+   "chNo": null,
+   "first": null,
+   "py": "suàn",
+   "pyKey": "suan",
+   "tone": 4,
+   "words": [
+    [
+     "算数",
+     "suàn shù"
+    ],
+    [
+     "计算",
+     "jì suàn"
+    ]
+   ],
+   "glyph": "算数的算，上面竹字头，古人摆竹棍算数",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "笋",
+     "形近"
+    ],
+    [
+     "篮",
+     "同类"
+    ],
+    [
+     "数",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "图",
+   "src": "life",
+   "order": 50,
+   "chNo": null,
+   "first": null,
+   "py": "tú",
+   "pyKey": "tu3",
+   "tone": 2,
+   "words": [
+    [
+     "地图",
+     "dì tú"
+    ],
+    [
+     "图画",
+     "tú huà"
+    ]
+   ],
+   "glyph": "地图的图，方框像画框，里面装着一幅画",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "囵",
+     "形近"
+    ],
+    [
+     "圆",
+     "形近"
+    ],
+    [
+     "画",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "馆",
+   "src": "life",
+   "order": 51,
+   "chNo": null,
+   "first": null,
+   "py": "guǎn",
+   "pyKey": "guan2",
+   "tone": 3,
+   "words": [
+    [
+     "图书馆",
+     "tú shū guǎn"
+    ],
+    [
+     "饭馆",
+     "fàn guǎn"
+    ]
+   ],
+   "glyph": "图书馆的馆，招待人的大房子，图书馆里好多书",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "管",
+     "同声旁"
+    ],
+    [
+     "棺",
+     "同声旁"
+    ],
+    [
+     "店",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "零",
+   "src": "life",
+   "order": 52,
+   "chNo": null,
+   "first": null,
+   "py": "líng",
+   "pyKey": "ling",
+   "tone": 2,
+   "words": [
+    [
+     "零食",
+     "líng shí"
+    ],
+    [
+     "零钱",
+     "líng qián"
+    ]
+   ],
+   "glyph": "零就是没有，零颗糖一颗也没有；雨字头下面一个令",
+   "parts": [
+    "雨",
+    "令"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "铃",
+     "同声旁"
+    ],
+    [
+     "领",
+     "同声旁"
+    ],
+    [
+     "雪",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "读",
+   "src": "life",
+   "order": 53,
+   "chNo": null,
+   "first": null,
+   "py": "dú",
+   "pyKey": "du",
+   "tone": 2,
+   "words": [
+    [
+     "读书",
+     "dú shū"
+    ],
+    [
+     "读一读",
+     "dú yi dú"
+    ]
+   ],
+   "glyph": "读书的读，言字旁，用嘴巴把字念出声",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "续",
+     "形近"
+    ],
+    [
+     "念",
+     "同类"
+    ],
+    [
+     "看",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "名",
+   "src": "life",
+   "order": 54,
+   "chNo": null,
+   "first": null,
+   "py": "míng",
+   "pyKey": "ming",
+   "tone": 2,
+   "words": [
+    [
+     "名字",
+     "míng zi"
+    ],
+    [
+     "有名",
+     "yǒu míng"
+    ],
+    [
+     "名人",
+     "míng rén"
+    ]
+   ],
+   "glyph": "名字的名，天黑看不见，张开嘴巴喊名字",
+   "parts": [
+    "夕",
+    "口"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "各",
+     "形近"
+    ],
+    [
+     "多",
+     "形近"
+    ],
+    [
+     "字",
+     "同类"
+    ]
+   ]
+  }
+ ]
+}

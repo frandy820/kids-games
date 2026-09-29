@@ -1,0 +1,1686 @@
+{
+ "meta": {
+  "name": "咕咕森林",
+  "theme": "动物·植物",
+  "accent": "#8FBF7F",
+  "region": 3,
+  "count": 41,
+  "levels": 8,
+  "note": "order=区域内教学序；g1a 按课标 first 课号排序；life 待 0c 补 py/words"
+ },
+ "function": [],
+ "chars": [
+  {
+   "ch": "禾",
+   "src": "g1a",
+   "order": 0,
+   "chNo": null,
+   "first": "1a-s4",
+   "py": "hé",
+   "pyKey": "he",
+   "tone": 2,
+   "words": [
+    [
+     "禾苗",
+     "hé miáo"
+    ],
+    [
+     "禾田",
+     "hé tián"
+    ]
+   ],
+   "glyph": "上面垂着穗，一棵庄稼苗",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "木",
+     "形近"
+    ],
+    [
+     "米",
+     "形近"
+    ],
+    [
+     "苗",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "鸟",
+   "src": "g1a",
+   "order": 1,
+   "chNo": null,
+   "first": "1a-s5",
+   "py": "niǎo",
+   "pyKey": "niao",
+   "tone": 3,
+   "words": [
+    [
+     "小鸟",
+     "xiǎo niǎo"
+    ],
+    [
+     "鸟窝",
+     "niǎo wō"
+    ],
+    [
+     "飞鸟",
+     "fēi niǎo"
+    ]
+   ],
+   "glyph": "圆脑袋尖嘴巴，还有小爪子",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "乌",
+     "形近"
+    ],
+    [
+     "马",
+     "形近"
+    ],
+    [
+     "雀",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "虫",
+   "src": "g1a",
+   "order": 2,
+   "chNo": null,
+   "first": "1a-s5",
+   "py": "chóng",
+   "pyKey": "chong",
+   "tone": 2,
+   "words": [
+    [
+     "小虫",
+     "xiǎo chóng"
+    ],
+    [
+     "虫子",
+     "chóng zi"
+    ],
+    [
+     "毛毛虫",
+     "máo máo chóng"
+    ]
+   ],
+   "glyph": "一条小虫子，虫字旁的字都和小虫有关",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "中",
+     "形近"
+    ],
+    [
+     "鱼",
+     "同类"
+    ],
+    [
+     "鸟",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "花",
+   "src": "g1a",
+   "order": 3,
+   "chNo": null,
+   "first": "1a-s5",
+   "py": "huā",
+   "pyKey": "hua",
+   "tone": 1,
+   "words": [
+    [
+     "小花",
+     "xiǎo huā"
+    ],
+    [
+     "花朵",
+     "huā duǒ"
+    ],
+    [
+     "开花",
+     "kāi huā"
+    ]
+   ],
+   "glyph": "草字头下面一个化，花儿开在绿草上",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "化",
+     "形近"
+    ],
+    [
+     "草",
+     "同类"
+    ],
+    [
+     "芽",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "牛",
+   "src": "g1a",
+   "order": 4,
+   "chNo": null,
+   "first": "1a-s7",
+   "py": "niú",
+   "pyKey": "niu",
+   "tone": 2,
+   "words": [
+    [
+     "小牛",
+     "xiǎo niú"
+    ],
+    [
+     "牛奶",
+     "niú nǎi"
+    ],
+    [
+     "老牛",
+     "lǎo niú"
+    ]
+   ],
+   "glyph": "弯弯两只角，哞哞叫的大牛",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "午",
+     "形近"
+    ],
+    [
+     "羊",
+     "同类"
+    ],
+    [
+     "马",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "猫",
+   "src": "g1a",
+   "order": 5,
+   "chNo": null,
+   "first": "1a-s7",
+   "py": "māo",
+   "pyKey": "mao",
+   "tone": 1,
+   "words": [
+    [
+     "小猫",
+     "xiǎo māo"
+    ],
+    [
+     "花猫",
+     "huā māo"
+    ],
+    [
+     "熊猫",
+     "xióng māo"
+    ]
+   ],
+   "glyph": "反犬旁加苗，喵喵叫的小猫",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "狗",
+     "同类"
+    ],
+    [
+     "猪",
+     "同类"
+    ],
+    [
+     "兔",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "鸭",
+   "src": "g1a",
+   "order": 6,
+   "chNo": null,
+   "first": "1a-s7",
+   "py": "yā",
+   "pyKey": "ya2",
+   "tone": 1,
+   "words": [
+    [
+     "鸭子",
+     "yā zi"
+    ],
+    [
+     "小鸭",
+     "xiǎo yā"
+    ],
+    [
+     "鸭蛋",
+     "yā dàn"
+    ]
+   ],
+   "glyph": "甲加鸟，鸭子是水边的鸟，带鸟字的都和鸟有关",
+   "parts": [
+    "甲",
+    "鸟"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "甲",
+     "形近"
+    ],
+    [
+     "鸡",
+     "同类"
+    ],
+    [
+     "鹅",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "木",
+   "src": "g1a",
+   "order": 7,
+   "chNo": null,
+   "first": "1a-s9",
+   "py": "mù",
+   "pyKey": "mu2",
+   "tone": 4,
+   "words": [
+    [
+     "木头",
+     "mù tou"
+    ],
+    [
+     "树木",
+     "shù mù"
+    ],
+    [
+     "木马",
+     "mù mǎ"
+    ]
+   ],
+   "glyph": "上长枝下生根，一棵小树是木",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "本",
+     "形近"
+    ],
+    [
+     "禾",
+     "形近"
+    ],
+    [
+     "米",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "林",
+   "src": "g1a",
+   "order": 8,
+   "chNo": null,
+   "first": "1a-s9",
+   "py": "lín",
+   "pyKey": "lin",
+   "tone": 2,
+   "words": [
+    [
+     "树林",
+     "shù lín"
+    ],
+    [
+     "竹林",
+     "zhú lín"
+    ],
+    [
+     "林子",
+     "lín zi"
+    ]
+   ],
+   "glyph": "两棵树站一起，好多树就是林",
+   "parts": [
+    "木",
+    "木"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "森",
+     "形近"
+    ],
+    [
+     "木",
+     "形近"
+    ],
+    [
+     "树",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "森",
+   "src": "g1a",
+   "order": 9,
+   "chNo": null,
+   "first": "1a-s9",
+   "py": "sēn",
+   "pyKey": "sen",
+   "tone": 1,
+   "words": [
+    [
+     "森林",
+     "sēn lín"
+    ],
+    [
+     "大森林",
+     "dà sēn lín"
+    ]
+   ],
+   "glyph": "三棵树叠罗汉，树多得成森林",
+   "parts": [
+    "木",
+    "木",
+    "木"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "林",
+     "形近"
+    ],
+    [
+     "木",
+     "形近"
+    ],
+    [
+     "树",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "条",
+   "src": "g1a",
+   "order": 10,
+   "chNo": null,
+   "first": "1a-s9",
+   "py": "tiáo",
+   "pyKey": "tiao",
+   "tone": 2,
+   "words": [
+    [
+     "面条",
+     "miàn tiáo"
+    ],
+    [
+     "一条鱼",
+     "yì tiáo yú"
+    ],
+    [
+     "纸条",
+     "zhǐ tiáo"
+    ]
+   ],
+   "glyph": "细细长长的东西用条数，面条一条条",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "根",
+     "同类"
+    ],
+    [
+     "枝",
+     "同类"
+    ],
+    [
+     "朵",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "马",
+   "src": "g1a",
+   "order": 11,
+   "chNo": null,
+   "first": "1a-p4",
+   "py": "mǎ",
+   "pyKey": "ma2",
+   "tone": 3,
+   "words": [
+    [
+     "小马",
+     "xiǎo mǎ"
+    ],
+    [
+     "马车",
+     "mǎ chē"
+    ],
+    [
+     "马上",
+     "mǎ shàng"
+    ]
+   ],
+   "glyph": "有头有鬃有四腿，一匹小马",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "鸟",
+     "形近"
+    ],
+    [
+     "乌",
+     "形近"
+    ],
+    [
+     "牛",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "鸡",
+   "src": "g1a",
+   "order": 12,
+   "chNo": null,
+   "first": "1a-p6",
+   "py": "jī",
+   "pyKey": "ji2",
+   "tone": 1,
+   "words": [
+    [
+     "小鸡",
+     "xiǎo jī"
+    ],
+    [
+     "公鸡",
+     "gōng jī"
+    ],
+    [
+     "母鸡",
+     "mǔ jī"
+    ]
+   ],
+   "glyph": "又加鸟，鸡是会打鸣的鸟，叽叽叽",
+   "parts": [
+    "又",
+    "鸟"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "鸟",
+     "同类"
+    ],
+    [
+     "鸭",
+     "同类"
+    ],
+    [
+     "鹅",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "草",
+   "src": "g1a",
+   "order": 13,
+   "chNo": null,
+   "first": "1a-p12",
+   "py": "cǎo",
+   "pyKey": "cao",
+   "tone": 3,
+   "words": [
+    [
+     "小草",
+     "xiǎo cǎo"
+    ],
+    [
+     "草地",
+     "cǎo dì"
+    ],
+    [
+     "花草",
+     "huā cǎo"
+    ]
+   ],
+   "glyph": "草字头加早，地上绿绿的小草",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "早",
+     "形近"
+    ],
+    [
+     "花",
+     "同类"
+    ],
+    [
+     "芽",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "鱼",
+   "src": "g1a",
+   "order": 14,
+   "chNo": null,
+   "first": "1a-k3",
+   "py": "yú",
+   "pyKey": "yu2",
+   "tone": 2,
+   "words": [
+    [
+     "小鱼",
+     "xiǎo yú"
+    ],
+    [
+     "钓鱼",
+     "diào yú"
+    ],
+    [
+     "鱼儿",
+     "yú ér"
+    ]
+   ],
+   "glyph": "尖头摆尾巴，水里游的就是鱼",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "龟",
+     "形近"
+    ],
+    [
+     "虫",
+     "同类"
+    ],
+    [
+     "蛙",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "蛙",
+   "src": "g1a",
+   "order": 15,
+   "chNo": null,
+   "first": "1a-k4",
+   "py": "wā",
+   "pyKey": "wa2",
+   "tone": 1,
+   "words": [
+    [
+     "青蛙",
+     "qīng wā"
+    ],
+    [
+     "蛙叫",
+     "wā jiào"
+    ]
+   ],
+   "glyph": "虫字旁的字和小动物有关，青蛙呱呱叫",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "娃",
+     "同声旁"
+    ],
+    [
+     "洼",
+     "同声旁"
+    ],
+    [
+     "虫",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "狗",
+   "src": "g1a",
+   "order": 16,
+   "chNo": null,
+   "first": "1a-k5",
+   "py": "gǒu",
+   "pyKey": "gou",
+   "tone": 3,
+   "words": [
+    [
+     "小狗",
+     "xiǎo gǒu"
+    ],
+    [
+     "狗叫",
+     "gǒu jiào"
+    ],
+    [
+     "狗窝",
+     "gǒu wō"
+    ]
+   ],
+   "glyph": "反犬旁的字和动物有关，小狗汪汪叫",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "猫",
+     "同类"
+    ],
+    [
+     "狼",
+     "同类"
+    ],
+    [
+     "狐",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "兔",
+   "src": "g1a",
+   "order": 17,
+   "chNo": null,
+   "first": "1a-k6",
+   "py": "tù",
+   "pyKey": "tu2",
+   "tone": 4,
+   "words": [
+    [
+     "兔子",
+     "tù zi"
+    ],
+    [
+     "小白兔",
+     "xiǎo bái tù"
+    ]
+   ],
+   "glyph": "长耳朵短尾巴，蹦蹦跳跳的兔子",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "免",
+     "形近"
+    ],
+    [
+     "猫",
+     "同类"
+    ],
+    [
+     "狗",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "尾",
+   "src": "g1a",
+   "order": 18,
+   "chNo": null,
+   "first": "1a-k6",
+   "py": "wěi",
+   "pyKey": "wei",
+   "tone": 3,
+   "words": [
+    [
+     "尾巴",
+     "wěi ba"
+    ],
+    [
+     "摇尾巴",
+     "yáo wěi ba"
+    ]
+   ],
+   "glyph": "尸字头加毛字，小狗摇尾巴",
+   "parts": [
+    "尸",
+    "毛"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "毛",
+     "形近"
+    ],
+    [
+     "层",
+     "形近"
+    ],
+    [
+     "屋",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "巴",
+   "src": "g1a",
+   "order": 19,
+   "chNo": null,
+   "first": "1a-k6",
+   "py": "bā",
+   "pyKey": "ba2",
+   "tone": 1,
+   "words": [
+    [
+     "嘴巴",
+     "zuǐ ba"
+    ],
+    [
+     "尾巴",
+     "wěi ba"
+    ],
+    [
+     "下巴",
+     "xià ba"
+    ]
+   ],
+   "glyph": "像张开的嘴巴，下巴尾巴都用巴",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "也",
+     "形近"
+    ],
+    [
+     "已",
+     "形近"
+    ],
+    [
+     "口",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "伞",
+   "src": "g1a",
+   "order": 20,
+   "chNo": null,
+   "first": "1a-k6",
+   "py": "sǎn",
+   "pyKey": "san",
+   "tone": 3,
+   "words": [
+    [
+     "雨伞",
+     "yǔ sǎn"
+    ],
+    [
+     "打伞",
+     "dǎ sǎn"
+    ],
+    [
+     "小伞",
+     "xiǎo sǎn"
+    ]
+   ],
+   "glyph": "人字头下面小柱子，撑开的雨伞",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "个",
+     "形近"
+    ],
+    [
+     "三",
+     "形近"
+    ],
+    [
+     "人",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "竹",
+   "src": "g1a",
+   "order": 21,
+   "chNo": null,
+   "first": "1a-k12",
+   "py": "zhú",
+   "pyKey": "zhu",
+   "tone": 2,
+   "words": [
+    [
+     "竹子",
+     "zhú zi"
+    ],
+    [
+     "竹叶",
+     "zhú yè"
+    ],
+    [
+     "竹林",
+     "zhú lín"
+    ]
+   ],
+   "glyph": "两根小竹竿，长着尖尖叶",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "个",
+     "形近"
+    ],
+    [
+     "草",
+     "同类"
+    ],
+    [
+     "木",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "乌",
+   "src": "g1a",
+   "order": 22,
+   "chNo": null,
+   "first": "1a-k13",
+   "py": "wū",
+   "pyKey": "wu4",
+   "tone": 1,
+   "words": [
+    [
+     "乌云",
+     "wū yún"
+    ],
+    [
+     "乌鸦",
+     "wū yā"
+    ]
+   ],
+   "glyph": "比鸟少一点，乌鸦全身黑看不见眼睛",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "鸟",
+     "形近"
+    ],
+    [
+     "马",
+     "形近"
+    ],
+    [
+     "鸦",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "鸦",
+   "src": "g1a",
+   "order": 23,
+   "chNo": null,
+   "first": "1a-k13",
+   "py": "yā",
+   "pyKey": "ya3",
+   "tone": 1,
+   "words": [
+    [
+     "乌鸦",
+     "wū yā"
+    ],
+    [
+     "小乌鸦",
+     "xiǎo wū yā"
+    ]
+   ],
+   "glyph": "牙加鸟，乌鸦哇哇叫，带鸟字的都和鸟有关",
+   "parts": [
+    "牙",
+    "鸟"
+   ],
+   "family": "ya",
+   "freq": 4,
+   "distract": [
+    [
+     "芽",
+     "同声旁"
+    ],
+    [
+     "鸭",
+     "形近"
+    ],
+    [
+     "鸟",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "芽",
+   "src": "g1a",
+   "order": 24,
+   "chNo": null,
+   "first": "1a-k14",
+   "py": "yá",
+   "pyKey": "ya4",
+   "tone": 2,
+   "words": [
+    [
+     "发芽",
+     "fā yá"
+    ],
+    [
+     "嫩芽",
+     "nèn yá"
+    ]
+   ],
+   "glyph": "草字头加牙，种子发的嫩芽",
+   "parts": null,
+   "family": "ya",
+   "freq": 4,
+   "distract": [
+    [
+     "牙",
+     "形近"
+    ],
+    [
+     "鸦",
+     "同声旁"
+    ],
+    [
+     "草",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "爬",
+   "src": "g1a",
+   "order": 25,
+   "chNo": null,
+   "first": "1a-k14",
+   "py": "pá",
+   "pyKey": "pa",
+   "tone": 2,
+   "words": [
+    [
+     "爬山",
+     "pá shān"
+    ],
+    [
+     "爬树",
+     "pá shù"
+    ]
+   ],
+   "glyph": "爪字旁加巴，像爪子扒地往前爬",
+   "parts": [
+    "爪",
+    "巴"
+   ],
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "巴",
+     "形近"
+    ],
+    [
+     "把",
+     "形近"
+    ],
+    [
+     "趴",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "发",
+   "src": "g1a",
+   "order": 26,
+   "chNo": null,
+   "first": "1a-k14",
+   "py": "fā",
+   "pyKey": "fa",
+   "tone": 1,
+   "words": [
+    [
+     "发芽",
+     "fā yá"
+    ],
+    [
+     "出发",
+     "chū fā"
+    ],
+    [
+     "发光",
+     "fā guāng"
+    ]
+   ],
+   "glyph": "种子冒出小芽叫发芽，发就是长出来",
+   "parts": null,
+   "family": null,
+   "freq": 2,
+   "distract": [
+    [
+     "友",
+     "形近"
+    ],
+    [
+     "放",
+     "形近"
+    ],
+    [
+     "拔",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "猪",
+   "src": "life",
+   "order": 27,
+   "chNo": null,
+   "first": null,
+   "py": "zhū",
+   "pyKey": "zhu2",
+   "tone": 1,
+   "words": [
+    [
+     "小猪",
+     "xiǎo zhū"
+    ],
+    [
+     "猪肉",
+     "zhū ròu"
+    ]
+   ],
+   "glyph": "反犬旁加者，小猪呼噜噜",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "猫",
+     "同类"
+    ],
+    [
+     "狗",
+     "同类"
+    ],
+    [
+     "牛",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "鹅",
+   "src": "life",
+   "order": 28,
+   "chNo": null,
+   "first": null,
+   "py": "é",
+   "pyKey": "e",
+   "tone": 2,
+   "words": [
+    [
+     "白鹅",
+     "bái é"
+    ],
+    [
+     "小鹅",
+     "xiǎo é"
+    ],
+    [
+     "鹅毛",
+     "é máo"
+    ]
+   ],
+   "glyph": "我字加鸟，鹅鹅鹅，曲项向天歌",
+   "parts": [
+    "我",
+    "鸟"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "鸟",
+     "形近"
+    ],
+    [
+     "鸡",
+     "同类"
+    ],
+    [
+     "鸭",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "龟",
+   "src": "life",
+   "order": 29,
+   "chNo": null,
+   "first": null,
+   "py": "guī",
+   "pyKey": "gui",
+   "tone": 1,
+   "words": [
+    [
+     "乌龟",
+     "wū guī"
+    ],
+    [
+     "小乌龟",
+     "xiǎo wū guī"
+    ]
+   ],
+   "glyph": "背着硬壳，慢慢爬的小乌龟",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "鱼",
+     "形近"
+    ],
+    [
+     "电",
+     "形近"
+    ],
+    [
+     "蛙",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "狮",
+   "src": "life",
+   "order": 30,
+   "chNo": null,
+   "first": null,
+   "py": "shī",
+   "pyKey": "shi3",
+   "tone": 1,
+   "words": [
+    [
+     "狮子",
+     "shī zi"
+    ],
+    [
+     "舞狮子",
+     "wǔ shī zi"
+    ]
+   ],
+   "glyph": "反犬旁加师，狮子吼一声，森林大王",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "师",
+     "形近"
+    ],
+    [
+     "虎",
+     "同类"
+    ],
+    [
+     "狼",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "松",
+   "src": "life",
+   "order": 31,
+   "chNo": null,
+   "first": null,
+   "py": "sōng",
+   "pyKey": "song",
+   "tone": 1,
+   "words": [
+    [
+     "松树",
+     "sōng shù"
+    ],
+    [
+     "松果",
+     "sōng guǒ"
+    ],
+    [
+     "松鼠",
+     "sōng shǔ"
+    ]
+   ],
+   "glyph": "木字旁加公，松树四季都绿绿",
+   "parts": [
+    "木",
+    "公"
+   ],
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "公",
+     "形近"
+    ],
+    [
+     "柏",
+     "形近"
+    ],
+    [
+     "梅",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "柏",
+   "src": "life",
+   "order": 32,
+   "chNo": null,
+   "first": null,
+   "py": "bǎi",
+   "pyKey": "bai2",
+   "tone": 3,
+   "words": [
+    [
+     "柏树",
+     "bǎi shù"
+    ],
+    [
+     "松柏",
+     "sōng bǎi"
+    ]
+   ],
+   "glyph": "木加白，柏树和松树是好朋友",
+   "parts": [
+    "木",
+    "白"
+   ],
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "白",
+     "形近"
+    ],
+    [
+     "松",
+     "形近"
+    ],
+    [
+     "梅",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "菊",
+   "src": "life",
+   "order": 33,
+   "chNo": null,
+   "first": null,
+   "py": "jú",
+   "pyKey": "ju",
+   "tone": 2,
+   "words": [
+    [
+     "菊花",
+     "jú huā"
+    ],
+    [
+     "小菊花",
+     "xiǎo jú huā"
+    ]
+   ],
+   "glyph": "草字头，秋天开的菊花香香的",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "草",
+     "形近"
+    ],
+    [
+     "花",
+     "同类"
+    ],
+    [
+     "梅",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "梅",
+   "src": "life",
+   "order": 34,
+   "chNo": null,
+   "first": null,
+   "py": "méi",
+   "pyKey": "mei2",
+   "tone": 2,
+   "words": [
+    [
+     "梅花",
+     "méi huā"
+    ],
+    [
+     "梅子",
+     "méi zi"
+    ]
+   ],
+   "glyph": "木字旁加每，冬天开的梅花",
+   "parts": [
+    "木",
+    "每"
+   ],
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "每",
+     "形近"
+    ],
+    [
+     "菊",
+     "同类"
+    ],
+    [
+     "松",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "蜗",
+   "src": "life",
+   "order": 35,
+   "chNo": null,
+   "first": null,
+   "py": "wō",
+   "pyKey": "wo",
+   "tone": 1,
+   "words": [
+    [
+     "蜗牛",
+     "wō niú"
+    ],
+    [
+     "小蜗牛",
+     "xiǎo wō niú"
+    ]
+   ],
+   "glyph": "虫字旁，蜗牛背着小房子慢慢爬",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "窝",
+     "同声旁"
+    ],
+    [
+     "蛙",
+     "形近"
+    ],
+    [
+     "虫",
+     "形近"
+    ]
+   ]
+  },
+  {
+   "ch": "雀",
+   "src": "life",
+   "order": 36,
+   "chNo": null,
+   "first": null,
+   "py": "què",
+   "pyKey": "que",
+   "tone": 4,
+   "words": [
+    [
+     "麻雀",
+     "má què"
+    ],
+    [
+     "孔雀",
+     "kǒng què"
+    ]
+   ],
+   "glyph": "小小一只鸟，麻雀孔雀都是雀",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "鹊",
+     "形近"
+    ],
+    [
+     "鸟",
+     "同类"
+    ],
+    [
+     "鸡",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "鹤",
+   "src": "life",
+   "order": 37,
+   "chNo": null,
+   "first": null,
+   "py": "hè",
+   "pyKey": "he2",
+   "tone": 4,
+   "words": [
+    [
+     "仙鹤",
+     "xiān hè"
+    ],
+    [
+     "白鹤",
+     "bái hè"
+    ]
+   ],
+   "glyph": "鸟字旁，仙鹤腿长长的会跳舞",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "鸦",
+     "形近"
+    ],
+    [
+     "鹅",
+     "同类"
+    ],
+    [
+     "雁",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "狼",
+   "src": "life",
+   "order": 38,
+   "chNo": null,
+   "first": null,
+   "py": "láng",
+   "pyKey": "lang",
+   "tone": 2,
+   "words": [
+    [
+     "大灰狼",
+     "dà huī láng"
+    ],
+    [
+     "小狼",
+     "xiǎo láng"
+    ]
+   ],
+   "glyph": "反犬旁加良，大灰狼嗷嗷叫",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "良",
+     "形近"
+    ],
+    [
+     "虎",
+     "同类"
+    ],
+    [
+     "狮",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "狐",
+   "src": "life",
+   "order": 39,
+   "chNo": null,
+   "first": null,
+   "py": "hú",
+   "pyKey": "hu2",
+   "tone": 2,
+   "words": [
+    [
+     "狐狸",
+     "hú li"
+    ],
+    [
+     "小狐狸",
+     "xiǎo hú li"
+    ]
+   ],
+   "glyph": "反犬旁加瓜，狡猾的小狐狸",
+   "parts": null,
+   "family": null,
+   "freq": 3,
+   "distract": [
+    [
+     "瓜",
+     "形近"
+    ],
+    [
+     "狸",
+     "形近"
+    ],
+    [
+     "猫",
+     "同类"
+    ]
+   ]
+  },
+  {
+   "ch": "狸",
+   "src": "life",
+   "order": 40,
+   "chNo": null,
+   "first": null,
+   "py": "lí",
+   "pyKey": "li",
+   "tone": 2,
+   "words": [
+    [
+     "狐狸",
+     "hú li"
+    ],
+    [
+     "狸猫",
+     "lí māo"
+    ]
+   ],
+   "glyph": "反犬旁加里字，小狐狸跑得快",
+   "parts": null,
+   "family": null,
+   "freq": 4,
+   "distract": [
+    [
+     "里",
+     "形近"
+    ],
+    [
+     "狐",
+     "形近"
+    ],
+    [
+     "狼",
+     "同类"
+    ]
+   ]
+  }
+ ]
+}
