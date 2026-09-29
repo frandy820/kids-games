@@ -2563,6 +2563,28 @@ def build_manifest():
     for text, flat in zi_st:
         m['zi_st_%s' % flat] = {'text': text, 'games': ['zilearn']}
     assert sum(1 for k in m if k.startswith('zi_')) == 179, 'zi_ 键总数应 179（178+zi_read_hint r2F5）'
+
+    # ---- batch42 ziquest 小兔子识字闯世界（2026-09-30 语音前移·用户首试反馈「孩子不识拼音」----
+    # 语音=可玩性前提非美化项。644 键=字378+句160+UI36+剧情42+伙伴28；zq_ 前缀已核 manifest 无占用（M1 键账）。
+    # 全部从 batch42/ziquest/_src/data/*.json 结构化读取（零正则零手抄）；字文案=zilearn 范式「<字>，<首词>的<字>」。
+    # 字键 zq_ch_<pyKey>（pyKey 全局唯一，_audit_authoring --fix 保证）；句键 zq_st_<id>（id=s001 形态可追溯）；
+    # 剧情键 zq_story_<scene>_<i>（1-based，story.json meta.clipKey 约定）；伙伴键 zq_comp_<id>_<n>。
+    _zqd = os.path.join(ROOT, 'batch42', 'ziquest', '_src', 'data')
+    _jl = lambda n: json.load(open(os.path.join(_zqd, n), encoding='utf-8'))
+    for _r in range(1, 8):
+        for _c in _jl('chars-r%d.json' % _r)['chars']:
+            m['zq_ch_' + _c['pyKey']] = {'text': '%s，%s的%s' % (_c['ch'], _c['words'][0][0], _c['ch']), 'games': ['ziquest']}
+    for _s in _jl('sentences.json')['sentences']:
+        m['zq_st_' + _s['id']] = {'text': _s['text'], 'games': ['ziquest']}
+    for _k, _t in _jl('ui-voice.json')['keys'].items():
+        m[_k] = {'text': _t, 'games': ['ziquest']}
+    for _sc in _jl('story.json')['scenes']:
+        for _i, _ln in enumerate(_sc['lines']):
+            m['zq_story_%s_%d' % (_sc['id'], _i + 1)] = {'text': _ln['t'], 'games': ['ziquest']}
+    for _cp in _jl('catalog.json')['companions']:
+        for _j, _t2 in enumerate(_cp['lines']):
+            m['zq_comp_%s_%d' % (_cp['id'], _j + 1)] = {'text': _t2, 'games': ['ziquest']}
+    assert sum(1 for k in m if k.startswith('zq_')) == 644, 'zq_ 键总数应 644（字378+句160+UI36+story42+comp28）'
     _t46dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'task46-enumerate')
     for jf, expect in (('keys_read.json', 174), ('keys_t46.json', 970)):   # 963-1：tc_s_comma 纯标量段非语音点剔除（edge-tts 0 字节）
         p = os.path.join(_t46dir, jf)

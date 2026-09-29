@@ -12,7 +12,8 @@ if (!ZQ._qt) throw new Error('ZQ._qt missing: qtypes must load t1.js first');
 var QT_ = ZQ._qt;
 
 function t5PickSent(q) {
-  if (q.sentence && q.sentence.text) return String(q.sentence.text);
+  /* 返回 {text,id}（id 可 null——fixture 纯字符串元素；onShow 播 zq_st_<id> 需 id 在场） */
+  if (q.sentence && q.sentence.text) return { text: String(q.sentence.text), id: q.sentence.id || null };
   /* 探测链（2026-09-29 主线修正）：可注入容器 window.ZQ_DATA.ZQ_SENTENCES 优先（测试两态可控），
      生产环境无容器 → 裸全局 const ZQ_SENTENCES（_gen_data 产出）兜底 */
   var S = (typeof window !== 'undefined' && window.ZQ_DATA && window.ZQ_DATA.ZQ_SENTENCES) ||
@@ -21,8 +22,9 @@ function t5PickSent(q) {
   if (S && S.length) {
     var hits = [];
     for (var i = 0; i < S.length; i++) {
-      var t = S[i] == null ? '' : (typeof S[i] === 'string' ? S[i] : S[i].text);
-      if (t && t.indexOf(q.ch) >= 0) hits.push(t);
+      var e = S[i];
+      var t = e == null ? '' : (typeof e === 'string' ? e : e.text);
+      if (t && t.indexOf(q.ch) >= 0) hits.push({ text: t, id: (e && e.id) || null });
     }
     if (hits.length) return hits[((q.seedIdx || 0) % hits.length + hits.length) % hits.length];
   }
@@ -34,17 +36,18 @@ ZQ.registerQ('t5', {
     QT_.teardown(box);
     var f = QT_.frame(box);
     var sent = t5PickSent(q);
+    var sentText = sent ? sent.text : null;
 
     var html, fbCls = '';
-    if (sent) {
+    if (sentText) {
       html = '';
       var done = false;
-      for (var i = 0; i < sent.length; i++) {
-        if (!done && sent[i] === q.ch) {
+      for (var i = 0; i < sentText.length; i++) {
+        if (!done && sentText[i] === q.ch) {
           html += '<span class="zq-t5-blank" aria-label="空位">□</span>';
           done = true;
         } else {
-          html += '<span class="zi">' + QT_.esc(sent[i]) + '</span>';
+          html += '<span class="zi">' + QT_.esc(sentText[i]) + '</span>';
         }
       }
     } else {                                     /* 占位卡：句库缺失，词挖空退化（标记 zq-fb） */
@@ -85,8 +88,10 @@ ZQ.registerQ('t5', {
       }
     });
   },
-  onShow: function (q, api) {                     /* 视觉题纪律：题面音不带目标字音 */
-    QT_.voice(api, 'zq_read_hint');
+  onShow: function (q, api) {                     /* 2026-09-30 语音主通道化：整句朗读（听句辨位=玩法本体）；占位态退回提示音+字音 */
+    var s = t5PickSent(q);
+    if (s && s.id) QT_.voice(api, 'zq_st_' + s.id);
+    else { QT_.voice(api, 'zq_read_hint'); QT_.voice(api, 'zq_ch_' + q.pyKey); }
   }
 });
 

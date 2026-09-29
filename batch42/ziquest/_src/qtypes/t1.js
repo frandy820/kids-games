@@ -295,7 +295,7 @@ QT_.cssOnce('zq-css-t1',
     'gap:2px;padding:10px 26px;transition:transform .15s}' +
   '.zq-t1-spk:active{transform:translateY(3px)}' +
   '.zq-t1-spk svg{width:74px;height:56px}' +
-  '.zq-t1-py{font-size:30px;font-weight:800;color:#4A3B2E}' +
-  '.zq-t1-sub{font-size:13px;font-weight:700;color:#8A7B6C}');
+  '.zq-t1-py{font-size:16px;font-weight:700;color:#A99B8B}' +   /* 2026-09-30 语音主通道化：拼音降小字浸润（孩子不识拼音，主提示=语音） */
+  '.zq-t1-sub{font-size:15px;font-weight:700;color:#8A7B6C}');
 
 })();

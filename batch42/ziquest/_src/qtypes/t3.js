@@ -61,8 +61,9 @@ ZQ.registerQ('t3', {
       }
     });
   },
-  onShow: function (q, api) {                     /* 视觉题纪律：题面音不带目标字音 */
+  onShow: function (q, api) {                     /* 2026-09-30 语音主通道化：孩子不识字词面 → 播「X，word的X」听词辨字（音=词语境，玩法本体非泄露） */
     QT_.voice(api, 'zq_word');
+    QT_.voice(api, 'zq_ch_' + q.pyKey);
   }
 });
 

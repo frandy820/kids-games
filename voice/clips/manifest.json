@@ -27710,6 +27710,3870 @@
    "zilearn"
   ]
  },
+ "zq_ch_tian": {
+  "text": "天，天空的天",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_di": {
+  "text": "地，大地的地",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ri": {
+  "text": "日，日出的日",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yue": {
+  "text": "月，月亮的月",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shan": {
+  "text": "山，大山的山",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shi": {
+  "text": "石，石头的石",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_tian2": {
+  "text": "田，水田的田",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_huo": {
+  "text": "火，火车的火",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shui": {
+  "text": "水，喝水的水",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yun": {
+  "text": "云，白云的云",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yu": {
+  "text": "雨，下雨的雨",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_feng": {
+  "text": "风，大风的风",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_dui": {
+  "text": "对，对面的对",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ting": {
+  "text": "听，听见的听",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_se": {
+  "text": "色，颜色的色",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_huang": {
+  "text": "黄，黄色的黄",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zao": {
+  "text": "早，早上的早",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hong": {
+  "text": "红，红色的红",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_tu": {
+  "text": "土，土地的土",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xue": {
+  "text": "雪，下雪的雪",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bai": {
+  "text": "白，白天的白",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_qiu": {
+  "text": "秋，秋天的秋",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_qi": {
+  "text": "气，天气的气",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shu": {
+  "text": "树，大树的树",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ye": {
+  "text": "叶，树叶的叶",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_pian": {
+  "text": "片，一片的片",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xing": {
+  "text": "星，星星的星",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_kan": {
+  "text": "看，看见的看",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jian": {
+  "text": "见，看见的见",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shan2": {
+  "text": "闪，闪光的闪",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jiang": {
+  "text": "江，江河的江",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_lian": {
+  "text": "莲，莲花的莲",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_chun": {
+  "text": "春，春天的春",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_dong": {
+  "text": "冬，冬天的冬",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xia": {
+  "text": "夏，夏天的夏",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_qing": {
+  "text": "青，青蛙的青",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ying": {
+  "text": "影，影子的影",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hei": {
+  "text": "黑，黑夜的黑",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_cai": {
+  "text": "彩，彩色的彩",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_lv": {
+  "text": "绿，绿色的绿",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hai": {
+  "text": "海，大海的海",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_liang": {
+  "text": "亮，明亮的亮",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shi2": {
+  "text": "时，时间的时",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hou": {
+  "text": "候，时候的候",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_lan": {
+  "text": "蓝，蓝天的蓝",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_dong2": {
+  "text": "洞，山洞的洞",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_gao": {
+  "text": "高，高兴的高",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wan": {
+  "text": "晚，晚上的晚",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wu": {
+  "text": "午，中午的午",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zuo": {
+  "text": "昨，昨天的昨",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jin": {
+  "text": "今，今天的今",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_nian": {
+  "text": "年，新年的年",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wu2": {
+  "text": "雾，大雾的雾",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hu": {
+  "text": "湖，湖水的湖",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_dao": {
+  "text": "岛，小岛的岛",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_an": {
+  "text": "岸，河岸的岸",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_sha": {
+  "text": "沙，沙子的沙",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ji": {
+  "text": "季，季节的季",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_gen": {
+  "text": "根，树根的根",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zi": {
+  "text": "紫，紫色的紫",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hui": {
+  "text": "灰，灰色的灰",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zong": {
+  "text": "棕，棕色的棕",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ren": {
+  "text": "人，大人的人",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_kou": {
+  "text": "口，口水的口",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_er": {
+  "text": "耳，耳朵的耳",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_mu": {
+  "text": "目，耳目的目",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shou": {
+  "text": "手，小手的手",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zu": {
+  "text": "足，足球的足",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhan": {
+  "text": "站，车站的站",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zuo2": {
+  "text": "坐，坐下的坐",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xin": {
+  "text": "心，开心的心",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ba": {
+  "text": "爸，爸爸的爸",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ma": {
+  "text": "妈，妈妈的妈",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_mei": {
+  "text": "妹，妹妹的妹",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_nai": {
+  "text": "奶，奶奶的奶",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_er2": {
+  "text": "儿，儿子的儿",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jia": {
+  "text": "家，大家的家",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_tou": {
+  "text": "头，头上的头",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_pi": {
+  "text": "皮，肚皮的皮",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ta": {
+  "text": "它，它们的它",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shui2": {
+  "text": "睡，睡觉的睡",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_chuan": {
+  "text": "穿，穿衣服的穿",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yi": {
+  "text": "衣，衣服的衣",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_fu": {
+  "text": "服，服装的服",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wa": {
+  "text": "娃，娃娃的娃",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ya": {
+  "text": "牙，牙齿的牙",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hai2": {
+  "text": "孩，孩子的孩",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ge": {
+  "text": "哥，哥哥的哥",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jie": {
+  "text": "姐，姐姐的姐",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_di2": {
+  "text": "弟，弟弟的弟",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shu2": {
+  "text": "叔，叔叔的叔",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ye2": {
+  "text": "爷，爷爷的爷",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_nan": {
+  "text": "男，男孩的男",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_nv": {
+  "text": "女，女孩的女",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wu3": {
+  "text": "屋，屋子的屋",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_po": {
+  "text": "婆，外婆的婆",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bo": {
+  "text": "伯，伯伯的伯",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jiu": {
+  "text": "舅，舅舅的舅",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yi2": {
+  "text": "姨，姨妈的姨",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bao": {
+  "text": "宝，宝贝的宝",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhi": {
+  "text": "指，手指的指",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jian2": {
+  "text": "肩，肩膀的肩",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bei": {
+  "text": "被，被子的被",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_can": {
+  "text": "餐，餐厅的餐",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xie": {
+  "text": "谢，谢谢的谢",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_he": {
+  "text": "禾，禾苗的禾",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_niao": {
+  "text": "鸟，小鸟的鸟",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_chong": {
+  "text": "虫，小虫的虫",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hua": {
+  "text": "花，小花的花",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_niu": {
+  "text": "牛，小牛的牛",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_mao": {
+  "text": "猫，小猫的猫",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ya2": {
+  "text": "鸭，鸭子的鸭",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_mu2": {
+  "text": "木，木头的木",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_lin": {
+  "text": "林，树林的林",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_sen": {
+  "text": "森，森林的森",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_tiao": {
+  "text": "条，面条的条",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ma2": {
+  "text": "马，小马的马",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ji2": {
+  "text": "鸡，小鸡的鸡",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_cao": {
+  "text": "草，小草的草",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yu2": {
+  "text": "鱼，小鱼的鱼",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wa2": {
+  "text": "蛙，青蛙的蛙",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_gou": {
+  "text": "狗，小狗的狗",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_tu2": {
+  "text": "兔，兔子的兔",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wei": {
+  "text": "尾，尾巴的尾",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ba2": {
+  "text": "巴，嘴巴的巴",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_san": {
+  "text": "伞，雨伞的伞",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhu": {
+  "text": "竹，竹子的竹",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wu4": {
+  "text": "乌，乌云的乌",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ya3": {
+  "text": "鸦，乌鸦的鸦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ya4": {
+  "text": "芽，发芽的芽",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_pa": {
+  "text": "爬，爬山的爬",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_fa": {
+  "text": "发，发芽的发",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhu2": {
+  "text": "猪，小猪的猪",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_e": {
+  "text": "鹅，白鹅的鹅",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_gui": {
+  "text": "龟，乌龟的龟",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shi3": {
+  "text": "狮，狮子的狮",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_song": {
+  "text": "松，松树的松",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bai2": {
+  "text": "柏，柏树的柏",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ju": {
+  "text": "菊，菊花的菊",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_mei2": {
+  "text": "梅，梅花的梅",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wo": {
+  "text": "蜗，蜗牛的蜗",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_que": {
+  "text": "雀，麻雀的雀",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_he2": {
+  "text": "鹤，仙鹤的鹤",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_lang": {
+  "text": "狼，大灰狼的狼",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hu2": {
+  "text": "狐，狐狸的狐",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_li": {
+  "text": "狸，狐狸的狸",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ping": {
+  "text": "苹，苹果的苹",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_guo": {
+  "text": "果，水果的果",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xing2": {
+  "text": "杏，杏子的杏",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_tao": {
+  "text": "桃，桃子的桃",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_gei": {
+  "text": "给，给你的给",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jin2": {
+  "text": "金，金子的金",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bei2": {
+  "text": "贝，贝壳的贝",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_cai2": {
+  "text": "菜，青菜的菜",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhou": {
+  "text": "粥，白粥的粥",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_dan": {
+  "text": "蛋，鸡蛋的蛋",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_tang": {
+  "text": "糖，糖果的糖",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yan": {
+  "text": "盐，食盐的盐",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_you": {
+  "text": "油，加油的油",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bing": {
+  "text": "饼，饼干的饼",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jiao": {
+  "text": "饺，饺子的饺",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xia2": {
+  "text": "虾，大虾的虾",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_gao2": {
+  "text": "糕，蛋糕的糕",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jiao2": {
+  "text": "蕉，香蕉的蕉",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_li2": {
+  "text": "梨，梨子的梨",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ju2": {
+  "text": "橘，橘子的橘",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zao2": {
+  "text": "枣，红枣的枣",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_pu": {
+  "text": "葡，葡萄的葡",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_tao2": {
+  "text": "萄，葡萄的萄",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xian": {
+  "text": "咸，咸菜的咸",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_la": {
+  "text": "辣，辣椒的辣",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ku": {
+  "text": "苦，苦瓜的苦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yin": {
+  "text": "饮，饮料的饮",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ke": {
+  "text": "克，千克的克",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_mai": {
+  "text": "买，买菜的买",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_mai2": {
+  "text": "卖，卖菜的卖",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wan2": {
+  "text": "碗，饭碗的碗",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_kuai": {
+  "text": "筷，筷子的筷",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bei3": {
+  "text": "杯，水杯的杯",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shao": {
+  "text": "勺，汤勺的勺",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wa3": {
+  "text": "袜，袜子的袜",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ku2": {
+  "text": "裤，裤子的裤",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shan3": {
+  "text": "衫，衬衫的衫",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_mao2": {
+  "text": "帽，帽子的帽",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xie2": {
+  "text": "鞋，鞋子的鞋",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shang": {
+  "text": "上，上面的上",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xia3": {
+  "text": "下，下面的下",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yuan": {
+  "text": "远，远方的远",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jin3": {
+  "text": "近，近处的近",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhong": {
+  "text": "中，中间的中",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_qiao": {
+  "text": "桥，大桥的桥",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_tai": {
+  "text": "台，台灯的台",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_che": {
+  "text": "车，开车的车",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_lu": {
+  "text": "路，马路的路",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_deng": {
+  "text": "灯，台灯的灯",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zou": {
+  "text": "走，走路的走",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_li3": {
+  "text": "里，里面的里",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_chuan2": {
+  "text": "船，小船的船",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_dong3": {
+  "text": "东，东边的东",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_nan2": {
+  "text": "南，南方的南",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xi": {
+  "text": "西，西边的西",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bei4": {
+  "text": "北，北方的北",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_qian": {
+  "text": "前，前面的前",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hou2": {
+  "text": "后，后面的后",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zuo3": {
+  "text": "左，左边的左",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_you2": {
+  "text": "右，右边的右",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_chu": {
+  "text": "出，出来的出",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_men": {
+  "text": "门，大门的门",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bu": {
+  "text": "步，散步的步",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_can2": {
+  "text": "参，参加的参",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jia2": {
+  "text": "加，加法的加",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_chu2": {
+  "text": "处，到处的处",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_pang": {
+  "text": "旁，旁边的旁",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jin4": {
+  "text": "进，进门的进",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_fang": {
+  "text": "放，放假的放",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhao": {
+  "text": "找，找到的找",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ban": {
+  "text": "办，办法的办",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hui2": {
+  "text": "回，回家的回",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhu3": {
+  "text": "住，住在的住",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wan3": {
+  "text": "玩，玩具的玩",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_kai": {
+  "text": "开，开门的开",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_guan": {
+  "text": "关，关门的关",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zheng": {
+  "text": "正，正好的正",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_fan": {
+  "text": "反，相反的反",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_gong": {
+  "text": "工，工作的工",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_chang": {
+  "text": "厂，工厂的厂",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yi3": {
+  "text": "医，医生的医",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yuan2": {
+  "text": "院，院子的院",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_sheng": {
+  "text": "生，生日的生",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_chao": {
+  "text": "超，超市的超",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shi4": {
+  "text": "市，城市的市",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_dian": {
+  "text": "店，商店的店",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yuan3": {
+  "text": "园，花园的园",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jie2": {
+  "text": "街，大街的街",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_lou": {
+  "text": "楼，大楼的楼",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ti": {
+  "text": "梯，楼梯的梯",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_lun": {
+  "text": "轮，车轮的轮",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_fan2": {
+  "text": "帆，帆船的帆",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_qi2": {
+  "text": "骑，骑马的骑",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shua": {
+  "text": "耍，玩耍的耍",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yi4": {
+  "text": "一，一起的一",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_er3": {
+  "text": "二，二十的二",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_san2": {
+  "text": "三，三个的三",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_si": {
+  "text": "四，四个的四",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wu5": {
+  "text": "五，五个的五",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shu3": {
+  "text": "书，看书的书",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bao2": {
+  "text": "包，书包的包",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_chi": {
+  "text": "尺，尺子的尺",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zuo4": {
+  "text": "作，写作业的作",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ye3": {
+  "text": "业，作业的业",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ben": {
+  "text": "本，本子的本",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bi": {
+  "text": "笔，铅笔的笔",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_dao2": {
+  "text": "刀，小刀的刀",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ke2": {
+  "text": "课，上课的课",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xiao": {
+  "text": "校，学校的校",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_sheng2": {
+  "text": "升，升旗的升",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_guo2": {
+  "text": "国，国旗的国",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_qi3": {
+  "text": "旗，红旗的旗",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ge2": {
+  "text": "歌，唱歌的歌",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hua2": {
+  "text": "画，画画的画",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_qi4": {
+  "text": "棋，下棋的棋",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zi2": {
+  "text": "字，写字的字",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ci": {
+  "text": "词，词语的词",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yu3": {
+  "text": "语，语文的语",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ju3": {
+  "text": "句，句子的句",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zi3": {
+  "text": "子，孩子的子",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhuo": {
+  "text": "桌，桌子的桌",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhi2": {
+  "text": "纸，纸飞机的纸",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_liang2": {
+  "text": "两，两个的两",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xie3": {
+  "text": "写，写字的写",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shi5": {
+  "text": "诗，古诗的诗",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_lao": {
+  "text": "老，老师的老",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shi6": {
+  "text": "师，老师的师",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yong": {
+  "text": "用，有用的用",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ji3": {
+  "text": "几，几个的几",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_qun": {
+  "text": "群，一群的群",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_liu": {
+  "text": "六，六个的六",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_qi5": {
+  "text": "七，七个的七",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ba3": {
+  "text": "八，八个的八",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jiu2": {
+  "text": "九，九个的九",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shi7": {
+  "text": "十，十个的十",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wen": {
+  "text": "文，文具的文",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shu4": {
+  "text": "数，数字的数",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xue2": {
+  "text": "学，上学的学",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yin2": {
+  "text": "音，声音的音",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yue2": {
+  "text": "乐，音乐的乐",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ti2": {
+  "text": "题，题目的题",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_juan": {
+  "text": "卷，试卷的卷",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_fen": {
+  "text": "粉，粉笔的粉",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_suan": {
+  "text": "算，算数的算",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_tu3": {
+  "text": "图，地图的图",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_guan2": {
+  "text": "馆，图书馆的馆",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ling": {
+  "text": "零，零食的零",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_du": {
+  "text": "读，读书的读",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ming": {
+  "text": "名，名字的名",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wu6": {
+  "text": "无，无声的无",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_sheng3": {
+  "text": "声，大声的声",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_duo": {
+  "text": "多，很多的多",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shao2": {
+  "text": "少，多少的少",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhi3": {
+  "text": "只，一只的只",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bian": {
+  "text": "边，边上的边",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_chen": {
+  "text": "尘，尘土的尘",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_cong": {
+  "text": "从，从前的从",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhong2": {
+  "text": "众，众人的众",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shuang": {
+  "text": "双，双手的双",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ming2": {
+  "text": "明，明天的明",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_li4": {
+  "text": "力，力气的力",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_me": {
+  "text": "么，什么的么",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_mei3": {
+  "text": "美，美丽的美",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_li5": {
+  "text": "丽，美丽的丽",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_li6": {
+  "text": "立，起立的立",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_qi6": {
+  "text": "起，起来的起",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_da": {
+  "text": "打，打开的打",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xiao2": {
+  "text": "小，小鸟的小",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_da2": {
+  "text": "大，大人的大",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_fei": {
+  "text": "飞，飞机的飞",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_hui3": {
+  "text": "会，开会的会",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ge3": {
+  "text": "个，一个的个",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ke3": {
+  "text": "可，可以的可",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_cai3": {
+  "text": "采，采花的采",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jian3": {
+  "text": "尖，脚尖的尖",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shuo": {
+  "text": "说，说话的说",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wan4": {
+  "text": "弯，弯弯的弯",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_peng": {
+  "text": "朋，朋友的朋",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_you3": {
+  "text": "友，朋友的友",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bi2": {
+  "text": "比，比一比的比",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shui3": {
+  "text": "谁，是谁的谁",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zui": {
+  "text": "最，最好的最",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_chang2": {
+  "text": "长，长江的长",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_duan": {
+  "text": "短，长短的短",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ba4": {
+  "text": "把，一把的把",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_gong2": {
+  "text": "公，公园的公",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_dian2": {
+  "text": "点，雨点的点",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_yao": {
+  "text": "要，只要的要",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_guo3": {
+  "text": "过，过桥的过",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_dang": {
+  "text": "当，当心的当",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_chuan3": {
+  "text": "串，一串的串",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_cheng": {
+  "text": "成，成功的成",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_dao3": {
+  "text": "到，到家的到",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ban2": {
+  "text": "半，一半的半",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_kong": {
+  "text": "空，天空的空",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wen2": {
+  "text": "问，问好的问",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_fang2": {
+  "text": "方，方向的方",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_geng": {
+  "text": "更，更加的更",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_na": {
+  "text": "那，那边的那",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zhen": {
+  "text": "真，真好的真",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_tong": {
+  "text": "同，一同的同",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_shen": {
+  "text": "什，什么的什",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_cai4": {
+  "text": "才，刚才的才",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_de": {
+  "text": "得，觉得的得",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_kuai2": {
+  "text": "快，快乐的快",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jue": {
+  "text": "觉，觉得的觉",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_zi4": {
+  "text": "自，自己的自",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ji4": {
+  "text": "己，自己的己",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_you4": {
+  "text": "又，又一次的又",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xiao3": {
+  "text": "笑，大笑的笑",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xiang": {
+  "text": "向，方向的向",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_gua": {
+  "text": "挂，挂上的挂",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_huo2": {
+  "text": "活，活动的活",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_wei2": {
+  "text": "为，为什么的为",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_xu": {
+  "text": "许，也许的许",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_fa2": {
+  "text": "法，办法的法",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_jiu3": {
+  "text": "久，好久的久",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_quan": {
+  "text": "全，全家的全",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bian2": {
+  "text": "变，变成的变",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ku3": {
+  "text": "哭，大哭的哭",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_meng": {
+  "text": "梦，做梦的梦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_bang": {
+  "text": "帮，帮忙的帮",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_da3": {
+  "text": "答，回答的答",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_he3": {
+  "text": "喝，喝水的喝",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_long": {
+  "text": "龙，恐龙的龙",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ke4": {
+  "text": "客，客人的客",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_lei": {
+  "text": "累，累了的累",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_e2": {
+  "text": "饿，饿了的饿",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_ke5": {
+  "text": "渴，渴了的渴",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_la2": {
+  "text": "拉，拉手的拉",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_tui": {
+  "text": "推，推开的推",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_ch_cai5": {
+  "text": "猜，猜一猜的猜",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s001": {
+  "text": "风来了，雪来了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s002": {
+  "text": "云是白的，雪还是白的。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s003": {
+  "text": "山有树和水。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s004": {
+  "text": "秋风来了，树叶红了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s005": {
+  "text": "月和星来了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s006": {
+  "text": "我们去看红叶吧。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s007": {
+  "text": "我看见山和水了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s008": {
+  "text": "江水闪呀闪。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s009": {
+  "text": "春天来了，我们去看莲。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s010": {
+  "text": "日来了，树有影了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s011": {
+  "text": "云黑了，雨来了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s012": {
+  "text": "看呀，天有彩云！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s013": {
+  "text": "春来了，树绿了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s014": {
+  "text": "海水来了，海水去了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s015": {
+  "text": "天黑了，月亮来了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s016": {
+  "text": "山有洞，洞好黑。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s017": {
+  "text": "山好高呀，树好绿。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s018": {
+  "text": "天晚了，山黑了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s019": {
+  "text": "午来了，日好亮呀。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s020": {
+  "text": "今天天好蓝呀。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s021": {
+  "text": "今年的雪好白呀。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s022": {
+  "text": "雾来了，山看不见了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s023": {
+  "text": "湖水绿，湖水亮。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s024": {
+  "text": "海岛有树，还有雾。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s025": {
+  "text": "我们去江岸看水。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s026": {
+  "text": "海岛的沙好白。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s027": {
+  "text": "你看我的手，好白呀！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s028": {
+  "text": "他站好了，你看！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s029": {
+  "text": "坐好，我们听。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s030": {
+  "text": "我爸好高呀！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s031": {
+  "text": "我妈来看我了！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s032": {
+  "text": "妹，你去不去？",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s033": {
+  "text": "奶来了，我们坐好。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s034": {
+  "text": "我家有爸和妈。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s035": {
+  "text": "我和妹，头对头。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s036": {
+  "text": "天黑了，我们去睡。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s037": {
+  "text": "妹穿红，我穿绿。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s038": {
+  "text": "我的衣，红红的。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s039": {
+  "text": "我的衣服，蓝蓝的。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s040": {
+  "text": "娃睡了，妈还没睡。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s041": {
+  "text": "妹的牙，白白的。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s042": {
+  "text": "我和哥去看云。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s043": {
+  "text": "姐的衣服，好好看！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s044": {
+  "text": "弟，你睡了吗？",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s045": {
+  "text": "爷，你来坐呀！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s046": {
+  "text": "我是女孩，你是男孩。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s047": {
+  "text": "我看牛，牛看我。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s048": {
+  "text": "猫睡着了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s049": {
+  "text": "鸭和牛在禾田。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s050": {
+  "text": "宝宝有木屋。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s051": {
+  "text": "鸟在林，娃在屋。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s052": {
+  "text": "森林是鸟的家。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s053": {
+  "text": "娃去坐木马。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s054": {
+  "text": "鸡看见了虫。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s055": {
+  "text": "草地有花有虫。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s056": {
+  "text": "妈和娃去湖看鱼。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s057": {
+  "text": "青蛙好绿呀！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s058": {
+  "text": "我家有猫和狗。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s059": {
+  "text": "白兔穿白衣。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s060": {
+  "text": "妈的马尾好黑。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s061": {
+  "text": "竹叶青青的。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s062": {
+  "text": "它是乌鸦吗？",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s063": {
+  "text": "花猫爬树。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s064": {
+  "text": "白鹅白，乌鸦黑。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s065": {
+  "text": "妈妈给我红苹果。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s066": {
+  "text": "白菜白，青菜青。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s067": {
+  "text": "奶奶的白粥好了！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s068": {
+  "text": "鸡妈妈有蛋！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s069": {
+  "text": "我有糖，你有吗？",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s070": {
+  "text": "是盐还是糖？",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s071": {
+  "text": "油是黄的吗？",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s072": {
+  "text": "饼给弟弟吧。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s073": {
+  "text": "蛋饺好了吗？",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s074": {
+  "text": "虾给猫吧。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s075": {
+  "text": "蛋糕来了！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s076": {
+  "text": "梨是妈妈的！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s077": {
+  "text": "枣树好高呀！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s078": {
+  "text": "葡萄是紫的吗？",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s079": {
+  "text": "妈妈去买菜。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s080": {
+  "text": "叔叔卖鱼和虾。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s081": {
+  "text": "碗是我的！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s082": {
+  "text": "月亮在水中。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s083": {
+  "text": "我在桥上看鱼。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s084": {
+  "text": "坐车去看爷爷。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s085": {
+  "text": "去奶奶家的路好远。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s086": {
+  "text": "红灯亮了，我看见了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s087": {
+  "text": "和妈妈在路上走。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s088": {
+  "text": "水里有鱼和虾。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s089": {
+  "text": "船在水上走。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s090": {
+  "text": "东湖里有莲花。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s091": {
+  "text": "南山上有白马。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s092": {
+  "text": "日头下西山。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s093": {
+  "text": "北山下了雪，好白呀！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s094": {
+  "text": "我走在妈妈前头。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s095": {
+  "text": "我在爸爸后头走。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s096": {
+  "text": "我的左手上有花。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s097": {
+  "text": "妈妈在左，我在右。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s098": {
+  "text": "和爸爸出门买菜。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s099": {
+  "text": "走进树林看鸟。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s100": {
+  "text": "我来找你！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s101": {
+  "text": "天黑了，回家吧。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s102": {
+  "text": "去医院看奶奶。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s103": {
+  "text": "去超市，还是去蛋糕店？",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s104": {
+  "text": "我和妈妈看书。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s105": {
+  "text": "我的书包不见了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s106": {
+  "text": "爸爸给我买尺。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s107": {
+  "text": "作业本在书包里。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s108": {
+  "text": "我有红笔和黑笔。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s109": {
+  "text": "我们上课了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s110": {
+  "text": "早上我们升国旗。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s111": {
+  "text": "我和妹妹画画。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s112": {
+  "text": "我的字好看。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s113": {
+  "text": "我看看生词。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s114": {
+  "text": "书在桌子上。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s115": {
+  "text": "白纸上有画。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s116": {
+  "text": "我写字给妈妈看。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s117": {
+  "text": "老师早上好！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s118": {
+  "text": "桌子上有六本书。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s119": {
+  "text": "我有十根手指。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s120": {
+  "text": "我有语文书。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s121": {
+  "text": "来，我们数一数。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s122": {
+  "text": "我去学校上课。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s123": {
+  "text": "图画书里有娃娃。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s124": {
+  "text": "我在学校读书。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s125": {
+  "text": "书包上有名字。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s126": {
+  "text": "我有一只花猫。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s127": {
+  "text": "妈妈买了一双红鞋。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s128": {
+  "text": "我的爸爸有力气。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s129": {
+  "text": "晚上的湖水好美。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s130": {
+  "text": "我站起来看星星。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s131": {
+  "text": "妈妈给我打伞。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s132": {
+  "text": "我的手小，妈妈的手大。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s133": {
+  "text": "小鸟飞上天找妈妈。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s134": {
+  "text": "我会写我的名字。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s135": {
+  "text": "我有一个好妈妈。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s136": {
+  "text": "小兔去山上采花。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s137": {
+  "text": "妈妈说，宝贝睡吧。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s138": {
+  "text": "弯弯的月亮在天上。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s139": {
+  "text": "我和朋友一起玩。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s140": {
+  "text": "我和妹妹比写字。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s141": {
+  "text": "书包是谁的呀？",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s142": {
+  "text": "晚上的月亮最亮。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s143": {
+  "text": "马尾长，兔尾短。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s144": {
+  "text": "我把糖给妹妹。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s145": {
+  "text": "天上下了小雨点。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s146": {
+  "text": "天要黑了，我们回家。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s147": {
+  "text": "妈妈买了一串紫葡萄。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s148": {
+  "text": "我找到好朋友了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s149": {
+  "text": "我们玩了半天，好开心。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s150": {
+  "text": "我问妈妈，星星有几个？",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s151": {
+  "text": "山的那边是我的家。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s152": {
+  "text": "我的朋友真好。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s153": {
+  "text": "我们一同去上学。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s154": {
+  "text": "读书真快乐。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s155": {
+  "text": "妹妹笑了又笑。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s156": {
+  "text": "弟弟哭了，又笑了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s157": {
+  "text": "梦里我飞到月亮上。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s158": {
+  "text": "我帮妈妈买菜。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s159": {
+  "text": "我给小猫喝水，它笑了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_st_s160": {
+  "text": "你猜我是谁？",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_tut_watch": {
+  "text": "看！来认识新字啦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_tut_turn": {
+  "text": "你来点一点",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_hint": {
+  "text": "想一想，再选一选",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_right": {
+  "text": "答对啦，真棒",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_wrong": {
+  "text": "不对哦，再想一想",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_listen": {
+  "text": "听一听，找一找",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_word": {
+  "text": "选一选",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_quiz": {
+  "text": "小测时间到",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_read_hint": {
+  "text": "读一读，选出生字",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_morning": {
+  "text": "早上好！昨天的字还记得吗",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_camp_go": {
+  "text": "复习时间到，旧字宝宝在等你",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_wall": {
+  "text": "把新字宝宝收进图鉴吧",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_wall_done": {
+  "text": "全部收好啦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_calib_start": {
+  "text": "我先看看你认识哪些字，认识的我们就跳过它",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_calib_right": {
+  "text": "你本来就会，真棒",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_calib_wrong": {
+  "text": "这些我们还没学过，正好一起去认识呀",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_calib_done": {
+  "text": "好啦，出发",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_map_open": {
+  "text": "迷雾散开啦，新的地方出现了",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_friend_join": {
+  "text": "新伙伴加入啦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_chest_open": {
+  "text": "宝箱打开啦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_coins": {
+  "text": "哇，好多金币",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_dress_on": {
+  "text": "换上新衣服，真好看",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_dex_open": {
+  "text": "来看你的汉字图鉴",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_milestone": {
+  "text": "恭喜！又点亮五十颗字种子",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_boss_win": {
+  "text": "我们赢啦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_boss_rest": {
+  "text": "它喝口水休息一下，我们也歇一歇",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_skill": {
+  "text": "伙伴来帮忙啦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_slow_go": {
+  "text": "不急，慢慢来",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_gala": {
+  "text": "你的星座升上天空啦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_boss_sleepy": {
+  "text": "呼……谁来啦……陪我说说话……",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_boss_cat": {
+  "text": "喵，把家里人认对了才让你过",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_boss_tree": {
+  "text": "拼出我的名字，森林之门就开",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_boss_pig": {
+  "text": "嗯，钱要算对才好吃呀",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_boss_dragon": {
+  "text": "信上的字错了！帮我找出来",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_boss_guard": {
+  "text": "想进图书馆，先过我这一关",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_boss_gala": {
+  "text": "把你会的字都亮出来吧",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_prologue_a_1": {
+  "text": "呼——呼——不好啦！大风把奶奶的千字书吹散啦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_prologue_a_2": {
+  "text": "书里的字宝宝变成一颗颗小种子，飘到了很远很远的地方。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_prologue_a_3": {
+  "text": "小兔子别怕，我给你一本神奇的汉字图鉴。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_prologue_a_4": {
+  "text": "你每认识一个新字，就能点亮一颗字种子，迷雾就会散开一点点哦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_prologue_a_5": {
+  "text": "出发吧，把字宝宝一个一个找回家！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_prologue_b_1": {
+  "text": "先和兔子玩个认字小游戏，看看你已经认识哪些字啦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_prologue_b_2": {
+  "text": "认识的字会发光飞进你的图鉴，出发！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r1_open_1": {
+  "text": "到风山镇啦！你看，山上白茫茫的，什么都看不清。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r1_open_2": {
+  "text": "山神爷爷睡着了，迷雾就把小镇盖住了。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r1_open_3": {
+  "text": "我们先认识天地日月这些字，点亮种子，雾就会散啦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r1_gate_1": {
+  "text": "一扇大门挡住了去路，门上说，认识字才能通过哦。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r1_gate_2": {
+  "text": "山神爷爷就睡在门后面，我们轻轻把他叫醒吧！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r2_open_1": {
+  "text": "雾散啦！前面是暖暖村，好热闹呀。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r2_open_2": {
+  "text": "这里有爸爸妈妈，还有哥哥姐姐弟弟妹妹。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r2_open_3": {
+  "text": "村口的大懒猫说，想过去，先认识我的家人！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r2_gate_1": {
+  "text": "大懒猫伸了个懒腰，喵，最后考考你！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r3_open_1": {
+  "text": "咕咕，咕咕，森林里传来鸟叫的声音。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r3_open_2": {
+  "text": "老树精爷爷说，森林的字都藏在动物和植物身上。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r3_open_3": {
+  "text": "小心哦，有些字宝宝长得像双胞胎，可别认错啦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r3_gate_1": {
+  "text": "老树精爷爷拦住了路，拼出我的名字，森林之门就打开！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r4_open_1": {
+  "text": "哇！甜甜集市到啦，好香呀，有蛋糕水果还有糖果！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r4_open_2": {
+  "text": "这里买东西不用钱，用字宝宝就可以哦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r4_open_3": {
+  "text": "算账小猪是这里的管理员，它可精明啦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r4_gate_1": {
+  "text": "算账小猪把算盘打得啪啪响，嗯，算对了才好吃呀！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r5_open_1": {
+  "text": "嘟嘟，嘟嘟，小镇的车开来啦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r5_open_2": {
+  "text": "这里有街道医院，还有大工厂。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r5_open_3": {
+  "text": "邮差龙的信上全是错字，急得团团转，我们去帮帮它吧！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r5_gate_1": {
+  "text": "邮差龙哭鼻子了，信寄不出去了，呜呜。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r5_gate_2": {
+  "text": "别哭别哭，我们一起把错字找出来！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r6_open_1": {
+  "text": "好高的城堡呀，这里是字宝宝们的学校。",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r6_open_2": {
+  "text": "石像卫士说，想进城堡读书，先要认识很多很多字！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r6_open_3": {
+  "text": "加油加油，你已经认识一半的字啦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r6_gate_1": {
+  "text": "图书馆的大门缓缓打开，哇，好多好多书！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r6_gate_2": {
+  "text": "石像卫士说，最后一关，看你的本事啦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r7_open_1": {
+  "text": "星光闪闪，我们到星空剧场啦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r7_open_2": {
+  "text": "把学会的字都放上天空，就会变成最美的星座！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r7_open_3": {
+  "text": "今天，你就是剧场最亮的小星星！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r7_gala_1": {
+  "text": "万字大典开始啦！你收集的字宝宝都飞上了夜空！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r7_gala_2": {
+  "text": "一颗两颗三颗，看，它们连成了七个亮晶晶的星座！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r7_gala_3": {
+  "text": "奶奶笑着走过来，孩子，这本我的第一本字典送给你！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r7_gala_4": {
+  "text": "这里每一个字都是你自己认出来的，奶奶为你骄傲！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_story_r7_gala_5": {
+  "text": "远方还有新的海岸线在等你哦，下次再见啦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_lark_1": {
+  "text": "你好呀，我是叮叮！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_lark_2": {
+  "text": "我唱得最好听啦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_lark_3": {
+  "text": "叮叮升级咯！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_lark_4": {
+  "text": "今天也要开心唱歌哦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_duck_1": {
+  "text": "嘎嘎，我是小鸭嘎嘎",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_duck_2": {
+  "text": "别急，慢慢来",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_duck_3": {
+  "text": "嘎嘎，谢谢你的星星",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_duck_4": {
+  "text": "我们一起去暖暖村吧",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_owl_1": {
+  "text": "咕咕，我是博士",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_owl_2": {
+  "text": "看这里，看这里",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_owl_3": {
+  "text": "咕咕，你又学会啦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_owl_4": {
+  "text": "森林里还有很多秘密哦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_monkey_1": {
+  "text": "嘿嘿，我是淘淘！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_monkey_2": {
+  "text": "这个不对，摘掉！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_monkey_3": {
+  "text": "桃子分你一半！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_monkey_4": {
+  "text": "集市今天真热闹",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_pigeon_1": {
+  "text": "咕噜噜，信来啦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_pigeon_2": {
+  "text": "跟我来，宝贝在那边",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_pigeon_3": {
+  "text": "咕噜噜，谢谢你",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_pigeon_4": {
+  "text": "小镇的路我全都认识",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_fox_1": {
+  "text": "你好，我是聪聪",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_fox_2": {
+  "text": "换个玩法试试看",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_fox_3": {
+  "text": "聪明如你！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_fox_4": {
+  "text": "城堡的书我都读过哦",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_star_1": {
+  "text": "一闪一闪，我是闪闪",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_star_2": {
+  "text": "你的星星真漂亮",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_star_3": {
+  "text": "闪闪亮亮，升级啦！",
+  "games": [
+   "ziquest"
+  ]
+ },
+ "zq_comp_star_4": {
+  "text": "大典的舞台等你很久啦",
+  "games": [
+   "ziquest"
+  ]
+ },
  "rd_s_c1s0_carrot_red": {
   "text": "小兔子有一根红色的萝卜，可喜欢它啦。",
   "games": [

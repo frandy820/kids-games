@@ -1,0 +1,65 @@
+ziquest M2b qtypes selftest
+30/30 PASS
+
+PASS   A01-six-qtypes-registered
+PASS   A02-t1-4opts-96px
+PASS   A03-t1-no-leak-in-stem
+PASS   A04-t1-right-flow
+PASS   A05-miss1-encourage-bubble
+PASS   A06-miss2-replay-breathe-on-answer
+PASS   A07-miss3-dim-one-not-answer
+PASS   A08-t2-picto-ready-96px
+PASS   A08c-t2-big-visible
+PASS   A08b-t2-tap-right
+PASS   A09-t2-parts-join
+PASS   A09b-t2-parts-big-visible
+PASS   A10-keyframes-transform-opacity-only
+PASS   A11-t3-blank-no-leak-4opts
+PASS   A11b-t3-opts-96px
+PASS   A11c-t3-fill-blank
+PASS   A12-t4-stem-ch-4word-opts
+PASS   A12b-t4-slot-filled
+PASS   A13-t5-sentence-blank
+PASS   A13b-t5-fill
+PASS   A13c-t5-fallback-playable
+PASS   A13d-t5-fallback-right
+PASS   A14-t6-main-in-opts-96px
+PASS   A14b-t6-distract-row
+PASS   A15-shuffle-deterministic
+PASS   A16-rescue-14s-directional
+PASS   A16b-rescue-30s-answer-breathe
+PASS   A18-inline-svg-no-external
+PASS   A00-zero-pageerror
+PASS   A17-source-clean
+
+DETAIL
+PASS   A01-six-qtypes-registered [True, True, True, True, True, True]
+PASS   A02-t1-4opts-96px [{"t": "地", "w": 236, "h": 96, "v": "3", "cls": "zq-opt"}, {"t": "太", "w": 236, "h": 96, "v": "2", "cls": "zq-opt"}, {"t": "大", "w": 236, "h": 96, "v": "1", "cls": "zq-opt"}, {"t": "天", "w": 236, "h": 96, "v": "0", "cls": "zq-opt"}]
+PASS   A03-t1-no-leak-in-stem stem=听一听，找一找tiān点我再听一次 ans=天
+PASS   A04-t1-right-flow {'r': 1, 'w': 0}
+PASS   A05-miss1-encourage-bubble 没关系，再听一听
+PASS   A06-miss2-replay-breathe-on-answer {'txt': '天', 'replay': 1}
+PASS   A07-miss3-dim-one-not-answer {'n': 1, 'txts': ['地'], 'hints': [1]}
+PASS   A08-t2-picto-ready-96px {'t': '天tiān', 'w': 174, 'h': 174, 'op': '1'}
+PASS   A08c-t2-big-visible {'t': '天tiān', 'w': 174, 'h': 174, 'op': '1'}
+PASS   A08b-t2-tap-right {'r': 1, 'w': 0, 'v': ['zq_tut_watch', 'zq_ch_tian', 'zq_ch_tian', 'zq_right']}
+PASS   A09-t2-parts-join {'parts': ['土', '也'], 'joined': True}
+PASS   A09b-t2-parts-big-visible 1
+PASS   A10-keyframes-transform-opacity-only []
+PASS   A11-t3-blank-no-leak-4opts stem=读一读，空格里是哪个字？□空
+PASS   A11b-t3-opts-96px 
+PASS   A11c-t3-fill-blank lit=天 right=1
+PASS   A12-t4-stem-ch-4word-opts stem=给它找个词朋友天 ans=天空
+PASS   A12b-t4-slot-filled slot=空 tail=空
+PASS   A13-t5-sentence-blank 我在□上看云
+PASS   A13b-t5-fill lit=天
+PASS   A13c-t5-fallback-playable {'fb': True, 'n': 4}
+PASS   A13d-t5-fallback-right 
+PASS   A14-t6-main-in-opts-96px ['她', '池', '他', '地']
+PASS   A14b-t6-distract-row ['他', '她', '池']
+PASS   A15-shuffle-deterministic [['3', '2', '1', '0'], ['3', '2', '1', '0'], ['2', '3', '0', '1'], ['2', '3', '0', '1'], ['2', '3', '0', '1']]
+PASS   A16-rescue-14s-directional {'replay': 1, 'w': 0}
+PASS   A16b-rescue-30s-answer-breathe {'txt': '天'}
+PASS   A18-inline-svg-no-external []
+PASS   A00-zero-pageerror []
+PASS   A17-source-clean []

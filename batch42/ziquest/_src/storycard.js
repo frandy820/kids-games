@@ -19,7 +19,9 @@
         if (r.id === 0) sid = i === 0 ? 'prologue_a' : 'prologue_b';
         else if (i === 0) sid = 'r' + r.id + '_open';
         else sid = (r.id === 7) ? 'r7_gala' : 'r' + r.id + '_gate';
-        IDX[n.key] = scenes[sid] || null;
+        var sc = scenes[sid] || null;
+        if (sc) sc._sid = sid;                    /* 场 id 挂载（语音键 zq_story_<sid>_<i+1>） */
+        IDX[n.key] = sc;
       });
     });
   }
@@ -66,6 +68,10 @@
     go.style.pointerEvents = ST.i === lines.length - 1 ? 'auto' : 'none';
     box.querySelector('.zq-st-tap').style.opacity = ST.i === lines.length - 1 ? '0' : '.8';
     ST.cool = Date.now() + 350;          /* 防双击连跳 */
+    /* 语音主通道化（2026-09-30）：逐句播 zq_story_<sid>_<i+1>（台词=6 岁理解主通道；M5 前移） */
+    if (sc._sid && typeof KIDS !== 'undefined' && KIDS.voice && KIDS.voice.play) {
+      try { KIDS.voice.play('zq_story_' + sc._sid + '_' + (ST.i + 1)); } catch (e) {}
+    }
   }
 
   function start(key) {

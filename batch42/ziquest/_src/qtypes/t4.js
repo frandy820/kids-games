@@ -54,8 +54,9 @@ ZQ.registerQ('t4', {
       }
     });
   },
-  onShow: function (q, api) {                     /* 视觉题纪律：题面期绝不播目标字音（SPEC-ZILEARN §2） */
+  onShow: function (q, api) {                     /* 2026-09-30 语音主通道化：播「X，word的X」听音选词（音=玩法本体；识字前孩子靠听不靠读） */
     QT_.voice(api, 'zq_word');
+    QT_.voice(api, 'zq_ch_' + q.pyKey);
   }
 });
 

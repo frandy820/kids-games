@@ -376,7 +376,7 @@ const ZQ_VLOG = [];
 
 /* ---------- I. 关卡循环（渲染/api/判定 UI 化） ---------- */
 let lastAct = 0, lastDir = 0, lastAns = 0, zqWrongChainUntil = 0;
-const ZQ_RIGHT_WIN = 1400;                          /* 对题确认窗（段一静音；M5 实长回填点） */
+const ZQ_RIGHT_WIN = 2400;                          /* 对题确认窗（2026-09-30 语音前移实长回填：zq_right=2280ms mutagen 实测+余量 120） */
 function zqSayQuestion(q) {                         /* 题面语音（防泄露：视觉题禁播目标音；
                                                        无 VERIFY 守卫——救援路径 verify 直驱可测键账，KIDS 未 init 自静默） */
   if (!q || typeof KIDS === 'undefined') return;
