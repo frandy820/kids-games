@@ -24,6 +24,7 @@ LIST = 'F:/claudecode/output/ziquest/work/pics-list.json'
 FETCH = 'F:/claudecode/test/one-piece-map-chronicle/scripts/planet-v2-gen/fetch_original.py'
 LOG = 'F:/claudecode/output/ziquest/work/pics-gen.log'
 HEARTBEAT = 'F:/claudecode/output/ziquest/work/pics-heartbeat.txt'
+QUOTA_WAIT = 'F:/claudecode/output/ziquest/work/pics-quota-wait.json'
 GAP_S = 20                    # 单发间隔（避风控家族口径）
 POLL_MAX_S = 150              # 单张生成轮询上限
 HARD_TIMEOUT_S = 180          # 单字硬超时（含取图+压缩）
@@ -101,8 +102,25 @@ def probe_alive(pw):
         return None, None
 
 
+def probe_quota(pg):
+    """只读探测额度尽文案；命中写 quota_wait.json 并硬退（watchdog 定时重拉）"""
+    try:
+        m = pg.evaluate("""() => { const t = (document.body.innerText || '').slice(-2500);
+          const m = t.match(/额度[^\\n]{0,40}?(\\d{1,2}:\\d{2})[^\\n]{0,15}恢复/);
+          return m ? m[1] : null; }""")
+    except Exception:
+        return False
+    if m:
+        io.open(QUOTA_WAIT, 'w', encoding='utf-8').write(
+            time.strftime('%Y-%m-%d ') + m)
+        log('QUOTA exhausted, resumes at %s -> exit 3 (watchdog will re-launch)' % m)
+        os._exit(3)
+    return True
+
+
 def gen_one(pw, pg, ch, word):
-    """生成一字：输入→Enter→轮询新图→滚动→fetch raw→压缩。返回 ok/失败原因"""
+    """生成一字：输入→Enter→轮询新图→滚动→fetch raw→压缩。返回 ok/失败原因
+    额度尽：页面出现「额度…预计今日 HH:MM 恢复」→ 写 quota_wait.json 后 exit 3（watchdog 定时重拉）"""
     t0 = time.time()
     prompt = PROMPT % subject(word)
     if pg.url == 'about:blank' or 'doubao' not in pg.url:
@@ -127,6 +145,7 @@ def gen_one(pw, pg, ch, word):
                 break
             time.sleep(3)
         if not found:
+            probe_quota(pg)
             return 'gen-timeout'
         time.sleep(2)
         # 滚动挂载卡片（家族坑：新卡未挂载 fetch 必 FAIL）
@@ -182,6 +201,8 @@ def run():
                 fail_streak = 0
             else:
                 fail_streak += 1
+                if fail_streak >= 2:
+                    probe_quota(pg)             # fetch-fail 症状的额度尽也兜住
                 if res == 'page-lost':
                     browser, pg = probe_alive(pw)
                     if not pg:
