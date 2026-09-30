@@ -40,8 +40,8 @@ PASS   A04-t1-right-flow {'r': 1, 'w': 0}
 PASS   A05-miss1-encourage-bubble 没关系，再听一听
 PASS   A06-miss2-replay-breathe-on-answer {'txt': '天', 'replay': 1}
 PASS   A07-miss3-dim-one-not-answer {'n': 1, 'txts': ['地'], 'hints': [1]}
-PASS   A08-t2-picto-ready-96px {'t': '天tiān', 'w': 174, 'h': 174, 'op': '1'}
-PASS   A08c-t2-big-visible {'t': '天tiān', 'w': 174, 'h': 174, 'op': '1'}
+PASS   A08-t2-picto-ready-96px {'t': '天tiān', 'w': 173, 'h': 173, 'op': '1'}
+PASS   A08c-t2-big-visible {'t': '天tiān', 'w': 173, 'h': 173, 'op': '1'}
 PASS   A08b-t2-tap-right {'r': 1, 'w': 0, 'v': ['zq_tut_watch', 'zq_ch_tian', 'zq_ch_tian', 'zq_right']}
 PASS   A09-t2-parts-join {'parts': ['土', '也'], 'joined': True}
 PASS   A09b-t2-parts-big-visible 1

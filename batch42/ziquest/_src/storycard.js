@@ -92,6 +92,21 @@
       'justify-content:center;font-size:15px;color:rgba(255,255,255,.55);', '跳过');
     skip.onclick = function (ev) { ev.stopPropagation(); done(); };
     box.appendChild(skip);
+    /* 派蒙星点（twinkle：transform/opacity only；z-index 9000 层内装饰） */
+    var starD = 'M12 2l2.7 6.2 6.7.6-5.1 4.5 1.5 6.6L12 16.6 6.2 19.9l1.5-6.6-5.1-4.5 6.7-.6z';
+    [[86, 120, 30, 0], [706, 168, 22, -2], [150, 214, 16, -4], [640, 96, 18, 1]].forEach(function (sp) {
+      var st = el('div', 'position:absolute;left:' + sp[0] + 'px;top:' + sp[1] + 'px;width:' + sp[2] + 'px;height:' + sp[2] +
+        'px;pointer-events:none;animation:zq-st-tw 2.6s ease-in-out ' + (sp[3] < 0 ? (-sp[3]) : sp[3]) + 's infinite;');
+      st.innerHTML = '<svg viewBox="0 0 24 24" style="width:100%;height:100%"><path d="' + starD +
+        '" fill="#F5C445" opacity=".85"/></svg>';
+      box.appendChild(st);
+    });
+    if (!document.getElementById('zq-st-tw')) {     /* 幂等：多场复用同一 keyframes */
+      var stCss = document.createElement('style');
+      stCss.id = 'zq-st-tw';
+      stCss.textContent = '@keyframes zq-st-tw{0%,100%{transform:scale(.8);opacity:.35}50%{transform:scale(1.15);opacity:.9}}';
+      document.head.appendChild(stCss);
+    }
     /* 台词 */
     var line = el('div', 'zq-st-line;max-width:620px;text-align:center;color:#FBF6EC;font-weight:700;' +
       'line-height:1.65;letter-spacing:2px;min-height:130px;display:flex;align-items:center;justify-content:center;');
@@ -110,10 +125,10 @@
     tap.style.cssText = 'margin-top:26px;font-size:14px;color:rgba(255,255,255,.8);transition:opacity .2s;';
     box.appendChild(tap);
     var go = el('div', 'zq-st-go;margin-top:24px;padding:18px 58px;border-radius:44px;font-size:26px;font-weight:700;' +
-      'color:#232946;background:' + ac + ';box-shadow:0 6px 0 rgba(0,0,0,.25);transition:opacity .3s;opacity:0;', '出发！');
+      'color:#232946;background:linear-gradient(180deg,' + zqLighten(ac, .35) + ',' + ac + ');box-shadow:inset 0 3px 0 rgba(255,255,255,.55),0 6px 0 rgba(0,0,0,.28);transition:opacity .3s;opacity:0;', '出发！');
     go.className = 'zq-st-go';
     go.style.cssText = 'margin-top:24px;padding:18px 58px;border-radius:44px;font-size:26px;font-weight:700;' +
-      'color:#232946;background:' + ac + ';box-shadow:0 6px 0 rgba(0,0,0,.25);transition:opacity .3s;opacity:0;';
+      'color:#232946;background:linear-gradient(180deg,' + zqLighten(ac, .35) + ',' + ac + ');box-shadow:inset 0 3px 0 rgba(255,255,255,.55),0 6px 0 rgba(0,0,0,.28);transition:opacity .3s;opacity:0;';
     box.appendChild(go);
     box.onclick = function () {
       if (Date.now() < ST.cool) return;

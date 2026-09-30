@@ -3,8 +3,10 @@
    - 探针=T1 听音找字（与正式玩法零学习成本）；三带池=ZQ_CAL.meta.bands（easy40/mid30/hard30，
      build 注入自 data/calib-pool.json），带内 ≤10 题，全对/达晋级线升带（calStop 规则），
      上限 30 题 ≈3-4 分钟。
-   - 对=+ZQ_ECON.calibRight 币（即时入账）+zq_calib_right；错=零惩罚（zq_calib_wrong——错不
-     标记不扣不进薄弱池）；收口=zq_calib_done+写 SAVE.zq.cal（knownSet 供新字关目标剔除，
+   - 对=+ZQ_ECON.calibRight 币（即时入账）+zq_calib_right；错=零惩罚（不标记不扣不进薄弱池），
+     2026-09-30 改单2：错后当页纠错窗再推进（level zqCalibTeach——正确项金色 breathe+
+     queue[zq_calib_wrong,zq_ch_讲解] 讲完再走；摸底记录第一时间落 bandAns 不受影响）；
+     收口=zq_calib_done+写 SAVE.zq.cal（knownSet 供新字关目标剔除，
      zqNodeChars 已实现）+finishNode 写 map（calib 节点 0 结算币——定级另按对题数计）。
    - 动态自适应流走 level.js 关卡循环覆盖点（L.onAnswer/L.finishFlow）——演出锁/救援/
      反馈阶梯全套复用，零重写。
@@ -77,9 +79,8 @@ const ZQ_CALIB = {
         if (L.known.indexOf(q.ch) < 0) L.known.push(q.ch);
         if (SAVE) { SAVE.zq.coins += ZQ_ECON.calibRight; refreshHud(); }   /* 每对+2 币即时（不 persist，收口一并落盘） */
         if (typeof KIDS !== 'undefined') KIDS.voice.play('zq_calib_right');
-      } else if (typeof KIDS !== 'undefined') {
-        KIDS.voice.play('zq_calib_wrong');          /* 零惩罚文案 */
       }
+      /* 错的安抚+讲解归 zqCalibTeach 纠错窗统一串播（改单2：错后先教再走，不在此即时播） */
       if (L.n >= ZQ_CAL_TOTAL_LIM) { L.done = true; return 'done'; }
       if (L.bandAns.length >= ZQ_CAL_BAND_LIM) {    /* 带满 → calStop 升带/停止 */
         L.bands.push({ band: L.band, answers: L.bandAns.slice() });

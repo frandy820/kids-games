@@ -48,36 +48,52 @@ const REGION_META = [];                           /* {id,name,accent,y0,y1,fogRe
 const NODE_ELS = {};                              /* key → g.zq-node */
 let worldEl, svgRoot, rabbitG, fxPool = [];
 const zqAccent = r => (ZQ_CHARS[String(r)] && ZQ_CHARS[String(r)].meta.accent) || '#E8975A';
+function zqLighten(hex, f) {                       /* 颜色向白混合 f∈[0,1]（派蒙风渐变亮端） */
+  const n = parseInt(hex.slice(1), 16);
+  const c = x => Math.round(x + (255 - x) * f);
+  return '#' + ((1 << 24) + (c(n >> 16) << 16) + (c(n >> 8 & 255) << 8) + c(n & 255)).toString(16).slice(1);
+}
 
-/* 七种节点图标简笔（60×60 视区，粗墨线圆角家族语言；done 态另叠旗+星） */
-function nodeIcon(type, ac) {
+/* 七种节点图标（60×60 视区，主体区色渐变+高光点=派蒙立体感；done 态另叠旗+星） */
+function nodeIcon(type, ac, region) {
   const S = 'stroke="#4A3B2E" stroke-width="3" stroke-linejoin="round"';
-  if (type === 'new') return '<ellipse cx="30" cy="38" rx="13" ry="18" fill="' + ac + '" ' + S + '/>' +
+  const G = 'url(#zq-ico-' + region + ')';           /* 主体渐变（defs 由 buildMap 按区建齐） */
+  const hl = '<ellipse cx="24" cy="22" rx="6.5" ry="4" fill="#FFF" opacity=".55" transform="rotate(-24 24 22)"/>';
+  if (type === 'new') return '<ellipse cx="30" cy="38" rx="13" ry="18" fill="' + G + '" ' + S + '/>' +
     '<path d="M30 20q-3 -11 -12 -13q3 9 12 13z" fill="#8FBF7F" ' + S + '/>' +
-    '<path d="M30 20q3 -11 12 -13q-3 9 -12 13z" fill="#8FBF7F" ' + S + '"/>' +
-    '<path d="M30 20v-14h16l-4 5l4 5z" fill="#E8975A" ' + S + '/>';
-  if (type === 'camp') return '<path d="M30 12L52 50H8z" fill="' + ac + '" ' + S + '/>' +
+    '<path d="M30 20q3 -11 12 -13q-3 9 -12 13z" fill="#A8D29A" ' + S + '/>' +
+    '<path d="M30 20v-14h16l-4 5l4 5z" fill="#E8975A" ' + S + '/>' + hl;
+  if (type === 'camp') return '<path d="M30 12L52 50H8z" fill="' + G + '" ' + S + '/>' +
     '<path d="M30 12v38" stroke="#4A3B2E" stroke-width="2.4"/>' +
-    '<path d="M30 12L41 31H19z" fill="#FFF9EE" stroke="#4A3B2E" stroke-width="2.2"/>';
-  if (type === 'chest') return '<rect x="10" y="24" width="40" height="24" rx="5" fill="' + ac + '" ' + S + '/>' +
+    '<path d="M30 12L41 31H19z" fill="#FFF9EE" stroke="#4A3B2E" stroke-width="2.2"/>' +
+    '<ellipse cx="22" cy="30" rx="6" ry="3.6" fill="#FFF" opacity=".5" transform="rotate(30 22 30)"/>';
+  if (type === 'chest') return '<path d="M14 24q16 -14 32 0" fill="none" ' + S + '/>' +
+    '<rect x="10" y="24" width="40" height="24" rx="5" fill="' + G + '" ' + S + '/>' +
     '<path d="M10 32h40" stroke="#4A3B2E" stroke-width="2.6"/>' +
     '<rect x="25" y="28" width="10" height="12" rx="2.5" fill="#F5C445" ' + S + '/>' +
-    '<path d="M14 24q16 -14 32 0" fill="none" ' + S + '/>';
-  if (type === 'friend') return '<circle cx="30" cy="34" r="16" fill="' + ac + '" ' + S + '/>' +
-    '<ellipse cx="17" cy="18" rx="5" ry="9" fill="' + ac + '" ' + S + ' transform="rotate(-14 17 18)"/>' +
-    '<ellipse cx="43" cy="18" rx="5" ry="9" fill="' + ac + '" ' + S + ' transform="rotate(14 43 18)"/>' +
+    '<ellipse cx="18" cy="29" rx="5.5" ry="3" fill="#FFF" opacity=".5" transform="rotate(-16 18 29)"/>';
+  if (type === 'friend') return '<circle cx="30" cy="34" r="16" fill="' + G + '" ' + S + '/>' +
+    '<ellipse cx="17" cy="18" rx="5" ry="9" fill="' + G + '" ' + S + ' transform="rotate(-14 17 18)"/>' +
+    '<ellipse cx="43" cy="18" rx="5" ry="9" fill="' + G + '" ' + S + ' transform="rotate(14 43 18)"/>' +
+    '<ellipse cx="16" cy="14" rx="2" ry="4" fill="#FFF" opacity=".6" transform="rotate(-14 16 14)"/>' +
     '<circle cx="24" cy="32" r="2.4" fill="#4A3B2E"/><circle cx="36" cy="32" r="2.4" fill="#4A3B2E"/>' +
-    '<path d="M26 40q4 4 8 0" stroke="#4A3B2E" stroke-width="2.4" fill="none" stroke-linecap="round"/>';
+    '<circle cx="24.8" cy="31.2" r=".8" fill="#FFF"/><circle cx="36.8" cy="31.2" r=".8" fill="#FFF"/>' +
+    '<path d="M26 40q4 4 8 0" stroke="#4A3B2E" stroke-width="2.4" fill="none" stroke-linecap="round"/>' +
+    '<circle cx="21" cy="38" r="2.2" fill="#F2A9B8" opacity=".7"/><circle cx="39" cy="38" r="2.2" fill="#F2A9B8" opacity=".7"/>';
   if (type === 'story') return '<rect x="12" y="14" width="36" height="32" rx="6" fill="#FFF9EE" ' + S + '/>' +
     '<path d="M12 18q-7 3 0 9M48 18q7 3 0 9" fill="none" ' + S + '/>' +
-    '<path d="M20 25h20M20 32h20M20 39h13" stroke="#4A3B2E" stroke-width="2.6" stroke-linecap="round"/>';
-  if (type === 'boss') return '<path d="M12 50V28a18 18 0 0 1 36 0v22z" fill="' + ac + '" ' + S + '/>' +
+    '<path d="M20 25h20M20 32h20M20 39h13" stroke="#4A3B2E" stroke-width="2.6" stroke-linecap="round"/>' +
+    '<ellipse cx="19" cy="19" rx="5" ry="2.8" fill="#FFF" opacity=".8" transform="rotate(-18 19 19)"/>';
+  if (type === 'boss') return '<path d="M12 50V28a18 18 0 0 1 36 0v22z" fill="' + G + '" ' + S + '/>' +
     '<rect x="22" y="30" width="16" height="20" rx="3" fill="#4A3B2E"/>' +
     '<path d="M30 30v8" stroke="#F5C445" stroke-width="2.6"/>' +
-    '<circle cx="30" cy="20" r="3" fill="#F5C445" ' + S + '/>';
-  return '<circle cx="30" cy="32" r="17" fill="' + ac + '" ' + S + '/>' +  /* calib：星光兔足迹 */
+    '<circle cx="30" cy="20" r="6" fill="#F5C445" opacity=".35"/>' +
+    '<circle cx="30" cy="20" r="3.4" fill="#F5C445" ' + S + '/>' +
+    '<ellipse cx="20" cy="30" rx="6" ry="3.4" fill="#FFF" opacity=".5" transform="rotate(-32 20 30)"/>';
+  return '<circle cx="30" cy="32" r="17" fill="' + G + '" ' + S + '/>' +  /* calib：星光兔足迹 */
     '<path d="M30 14l2.6 6.2 6.7.6-5.1 4.4 1.5 6.6-5.7-3.6-5.7 3.6 1.5-6.6-5.1-4.4 6.7-.6z" fill="#F5C445" ' + S + '/>' +
-    '<circle cx="24" cy="31" r="2.2" fill="#4A3B2E"/><circle cx="36" cy="31" r="2.2" fill="#4A3B2E"/>';
+    '<circle cx="24" cy="31" r="2.2" fill="#4A3B2E"/><circle cx="36" cy="31" r="2.2" fill="#4A3B2E"/>' +
+    '<circle cx="24.7" cy="30.3" r=".7" fill="#FFF"/><circle cx="36.7" cy="30.3" r=".7" fill="#FFF"/>';
 }
 
 function buildMap() {
@@ -100,49 +116,94 @@ function buildMap() {
     REGION_META.push({ id: rg.id, name: rg.name, accent: zqAccent(rg.id), y0: y0, y1: y1, boss: rg.boss, unlock: rg.unlock });
   });
 
-  const L0 = svgEl('g', { id: 'zq-l0' }, svgRoot);   /* 天空色带：每区域 3 条柔和平涂 */
+  /* ---- 派蒙风渐变 defs（v3 改单1：天空/太阳/远山/地块/节点底盘/图标体，一次建齐） ---- */
   REGION_META.forEach(rm => {
-    const h = (rm.y1 - rm.y0) / 3;
-    for (let k = 0; k < 3; k++) {
-      svgEl('rect', { x: 0, y: Math.round(rm.y0 + h * k), width: CW, height: Math.ceil(h) + 1,
-        fill: rm.accent, opacity: (.1 - k * .03).toFixed(3) }, L0);
-    }
+    const sky = svgEl('linearGradient', { id: 'zq-sky-' + rm.id, x1: '0', y1: '0', x2: '0', y2: '1' }, defs);
+    svgEl('stop', { offset: '0', 'stop-color': zqLighten(rm.accent, .5), 'stop-opacity': '.62' }, sky);
+    svgEl('stop', { offset: '.5', 'stop-color': rm.accent, 'stop-opacity': '.16' }, sky);
+    svgEl('stop', { offset: '1', 'stop-color': '#FBF6EC', 'stop-opacity': '0' }, sky);
+    const gr = svgEl('linearGradient', { id: 'zq-ground-' + rm.id, x1: '0', y1: '0', x2: '0', y2: '1' }, defs);
+    svgEl('stop', { offset: '0', 'stop-color': rm.accent, 'stop-opacity': '0' }, gr);
+    svgEl('stop', { offset: '.18', 'stop-color': zqLighten(rm.accent, .25), 'stop-opacity': '.5' }, gr);
+    svgEl('stop', { offset: '.82', 'stop-color': rm.accent, 'stop-opacity': '.32' }, gr);
+    svgEl('stop', { offset: '1', 'stop-color': rm.accent, 'stop-opacity': '0' }, gr);
+    const plate = svgEl('radialGradient', { id: 'zq-plate-' + rm.id, cx: '.5', cy: '.36', r: '.68' }, defs);
+    svgEl('stop', { offset: '0', 'stop-color': zqLighten(rm.accent, .88) }, plate);
+    svgEl('stop', { offset: '.62', 'stop-color': zqLighten(rm.accent, .72) }, plate);
+    svgEl('stop', { offset: '1', 'stop-color': zqLighten(rm.accent, .45) }, plate);
+    const ico = svgEl('linearGradient', { id: 'zq-ico-' + rm.id, x1: '0', y1: '0', x2: '0', y2: '1' }, defs);
+    svgEl('stop', { offset: '0', 'stop-color': zqLighten(rm.accent, .38) }, ico);
+    svgEl('stop', { offset: '1', 'stop-color': rm.accent }, ico);
   });
-  const L1 = svgEl('g', { id: 'zq-l1' }, svgRoot);   /* 远景：太阳+远山+云剪影（CSS 视差 90s） */
-  svgEl('circle', { cx: 830, cy: 430, r: 64, fill: '#F5C445', opacity: '.55' }, L1);
-  svgEl('circle', { cx: 830, cy: 430, r: 46, fill: '#F7D06B', opacity: '.8' }, L1);
-  for (let i = 0; i < 7; i++) {
+  const grassG = svgEl('linearGradient', { id: 'zq-grass', x1: '0', y1: '0', x2: '0', y2: '1' }, defs);
+  svgEl('stop', { offset: '0', 'stop-color': '#A5D38C' }, grassG);
+  svgEl('stop', { offset: '1', 'stop-color': '#7CBF68' }, grassG);
+  const sunG = svgEl('radialGradient', { id: 'zq-sun' }, defs);
+  svgEl('stop', { offset: '0', 'stop-color': '#FFEDB0', 'stop-opacity': '.95' }, sunG);
+  svgEl('stop', { offset: '.3', 'stop-color': '#F7D06B', 'stop-opacity': '.5' }, sunG);
+  svgEl('stop', { offset: '1', 'stop-color': '#F7D06B', 'stop-opacity': '0' }, sunG);
+  const hillFar = svgEl('linearGradient', { id: 'zq-hill-far', x1: '0', y1: '0', x2: '0', y2: '1' }, defs);
+  svgEl('stop', { offset: '0', 'stop-color': '#EFE7D2' }, hillFar);
+  svgEl('stop', { offset: '1', 'stop-color': '#DCCFB2' }, hillFar);
+  const hillNear = svgEl('linearGradient', { id: 'zq-hill-near', x1: '0', y1: '0', x2: '0', y2: '1' }, defs);
+  svgEl('stop', { offset: '0', 'stop-color': '#E3D7BE' }, hillNear);
+  svgEl('stop', { offset: '1', 'stop-color': '#CBBB9A' }, hillNear);
+
+  const L0 = svgEl('g', { id: 'zq-l0' }, svgRoot);   /* 天空：每区垂直渐变（区顶区色微染→暖米） */
+  REGION_META.forEach(rm => {
+    svgEl('rect', { x: 0, y: Math.round(rm.y0), width: CW, height: rm.y1 - rm.y0,
+      fill: 'url(#zq-sky-' + rm.id + ')' }, L0);
+  });
+  const L1 = svgEl('g', { id: 'zq-l1' }, svgRoot);   /* 远景：太阳光晕+白云团+渐变远山（CSS 视差 90s） */
+  svgEl('circle', { cx: 830, cy: 430, r: 170, fill: 'url(#zq-sun)' }, L1);
+  svgEl('circle', { cx: 830, cy: 430, r: 44, fill: '#FFEDB0', opacity: '.95' }, L1);
+  svgEl('circle', { cx: 830, cy: 430, r: 54, fill: 'none', stroke: '#F7D06B', 'stroke-width': '7', opacity: '.55' }, L1);
+  for (let i = 0; i < 7; i++) {                      /* 云团：白主体+淡蓝底影（立体感） */
     const cx = 90 + i * 150, cy = 260 + (i % 3) * 90;
-    svgEl('circle', { cx: cx, cy: cy, r: 34, fill: '#FFF9EE', opacity: '.5' }, L1);
-    svgEl('circle', { cx: cx + 34, cy: cy + 8, r: 26, fill: '#FFF9EE', opacity: '.5' }, L1);
-    svgEl('circle', { cx: cx - 32, cy: cy + 10, r: 22, fill: '#FFF9EE', opacity: '.45' }, L1);
+    svgEl('circle', { cx: cx, cy: cy + 12, r: 33, fill: '#DCE7EE', opacity: '.4' }, L1);
+    svgEl('circle', { cx: cx, cy: cy, r: 34, fill: '#FFFFFF', opacity: '.78' }, L1);
+    svgEl('circle', { cx: cx + 34, cy: cy + 8, r: 26, fill: '#FFFFFF', opacity: '.72' }, L1);
+    svgEl('circle', { cx: cx - 32, cy: cy + 10, r: 22, fill: '#FFFFFF', opacity: '.68' }, L1);
+    svgEl('ellipse', { cx: cx + 4, cy: cy - 20, rx: 20, ry: 10, fill: '#FFFFFF', opacity: '.55' }, L1);
   }
   REGION_META.forEach((rm, i) => {
     svgEl('path', { d: 'M0 ' + rm.y0 + ' q125 -86 250 0 t250 0 t250 0 t250 0 V' + (rm.y0 + 10) + 'z',
-      fill: i % 2 ? '#D9CBAF' : '#E3D7BE', opacity: '.5' }, L1);
+      fill: i % 2 ? 'url(#zq-hill-near)' : 'url(#zq-hill-far)', opacity: '.55' }, L1);
   });
-  const L2 = svgEl('g', { id: 'zq-l2' }, svgRoot);   /* 地块（区域强调色低饱和大色块）+ 迷雾 */
+  const L2 = svgEl('g', { id: 'zq-l2' }, svgRoot);   /* 地块（区色渐变+区界高光线）+ 迷雾 */
   REGION_META.forEach(rm => {
     svgEl('rect', { x: 0, y: Math.round(rm.y0), width: CW, height: rm.y1 - rm.y0,
-      fill: rm.accent, opacity: '.16' }, L2);
+      fill: 'url(#zq-ground-' + rm.id + ')' }, L2);
+    svgEl('rect', { x: 0, y: Math.round(rm.y0), width: CW, height: 3, fill: '#FFFFFF', opacity: '.45' }, L2);
+    const gy = rm.y1 - 46;
+    svgEl('path', { d: 'M-4 ' + (gy - 10) + 'q160 30 340 6t340 -8t340 10V' + (rm.y1 + 130) + 'H-4z',
+      fill: '#7CBF68', opacity: '.32' }, L2);
+    svgEl('path', { d: 'M-4 ' + gy + 'q190 34 380 8t310 -6t310 12V' + (rm.y1 + 130) + 'H-4z',
+      fill: 'url(#zq-grass)', opacity: '.5' }, L2);
     rm.fogRect = svgEl('rect', { x: 0, y: Math.round(rm.y0), width: CW, height: rm.y1 - rm.y0,
       fill: 'url(#zq-fog-pat)', class: 'zq-fog' }, L2);
   });
-  const L3 = svgEl('g', { id: 'zq-l3' }, svgRoot);   /* 路径：节点邻接虚线小径（已走段实线） */
+  const L3 = svgEl('g', { id: 'zq-l3' }, svgRoot);   /* 路径：土路双层（暖棕路基+米白踏面；已走段实线） */
   ZQ_NODES.forEach(n => n.next.forEach(nk => {
     const t = ZQ_NODE[nk];
-    svgEl('path', { d: 'M' + n.x + ' ' + n.y + 'L' + t.x + ' ' + t.y, 'data-edge': n.key + '>' + nk,
-      fill: 'none', stroke: '#B9A98C', 'stroke-width': '6', 'stroke-linecap': 'round',
-      'stroke-dasharray': '2 16' }, L3);
+    const d = 'M' + n.x + ' ' + n.y + 'L' + t.x + ' ' + t.y;
+    svgEl('path', { d: d, fill: 'none', stroke: '#CBBA97', 'stroke-width': '11', 'stroke-linecap': 'round',
+      opacity: '.5' }, L3);
+    svgEl('path', { d: d, fill: 'none', stroke: '#FFF7E3', 'stroke-width': '5.5', 'stroke-linecap': 'round',
+      'stroke-dasharray': '2 15', 'data-edge': n.key + '>' + nk }, L3);
   }));
-  const L4 = svgEl('g', { id: 'zq-l4' }, svgRoot);   /* 130 节点 × 4 态（class 刷，元素一次建齐） */
+  const L4 = svgEl('g', { id: 'zq-l4' }, svgRoot);   /* 130 节点 × 4 态（投影+渐变底盘+高光弧立体化） */
   ZQ_NODES.forEach(n => {
     const g = svgEl('g', { id: n.key, class: 'zq-node', transform: 'translate(' + n.x + ',' + n.y + ')' }, L4);
     const ring1 = svgEl('circle', { r: '52', fill: 'none', stroke: zqAccent(n.region), 'stroke-width': '5', class: 'zq-ring' }, g);
     svgEl('circle', { r: '52', fill: 'none', stroke: zqAccent(n.region), 'stroke-width': '3.5', class: 'zq-ring r2' }, g);
+    svgEl('ellipse', { cy: '46', rx: '34', ry: '9', fill: '#4A3B2E', opacity: '.14' }, g);  /* 落地影 */
     const ani = svgEl('g', { class: 'zq-ani' }, g);
+    svgEl('circle', { r: '45', fill: 'url(#zq-plate-' + n.region + ')', stroke: '#4A3B2E', 'stroke-width': '2.5' }, ani);
+    svgEl('path', { d: 'M-24 -22a30 30 0 0 1 24 -13a30 30 0 0 1 12 3a34 34 0 0 0 -30 15z',
+      fill: '#FFFFFF', opacity: '.5' }, ani);                          /* 盘面白高光弧 */
     const ico = svgEl('g', null, ani);
-    ico.innerHTML = '<g transform="translate(-30,-30)">' + nodeIcon(n.type, zqAccent(n.region)) + '</g>';
+    ico.innerHTML = '<g transform="translate(-30,-30)">' + nodeIcon(n.type, zqAccent(n.region), n.region) + '</g>';
     svgEl('circle', { r: '54', class: 'zq-cage' }, g);                  /* 锁灰笼 */
     const flag = svgEl('g', { class: 'zq-flag' }, g);                   /* done 旗+星 */
     flag.innerHTML = '<path d="M18 -46v-22h20l-5 6l5 6h-14v10z" fill="#E8975A" stroke="#4A3B2E" stroke-width="2.6" stroke-linejoin="round"/>';
@@ -152,7 +213,8 @@ function buildMap() {
     g.addEventListener('click', () => tapNode(n.key));
     NODE_ELS[n.key] = g;
   });
-  rabbitG = svgEl('g', { id: 'zq-rabbit' }, svgRoot); /* L5 兔子 + 装扮槽占位（M4 叠加渲染锚） */
+  rabbitG = svgEl('g', { id: 'zq-rabbit' }, svgRoot); /* L5 兔子 + 落地影 + 装扮槽占位（M4 叠加渲染锚） */
+  svgEl('ellipse', { cy: '4', rx: '30', ry: '8', fill: '#4A3B2E', opacity: '.16' }, rabbitG);
   const hop = svgEl('g', { class: 'zq-hop' }, rabbitG);
   hop.innerHTML = KIDS.assets.rabbit('happy', 72).replace('<svg ', '<svg x="-36" y="-76" ');
   svgEl('g', { id: 'zq-dress-slot' }, rabbitG);       /* 装扮槽（帽/裙/鞋/围巾 SVG 锚点，M4） */

@@ -84,13 +84,18 @@ QT_.cssOnce('zq-css-qt',
   '.zq-stem{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:8px;padding:4px 0 2px}' +
   '.zq-opts{flex:1 1 auto;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:center;' +
     'justify-items:stretch;min-height:0;padding-top:6px}' +
-  '.zq-opt{min-width:96px;min-height:96px;border-radius:22px;background:#FFF9EE;border:2.5px solid #4A3B2E;' +
-    'box-shadow:0 5px 0 #D8C9B4;display:flex;align-items:center;justify-content:center;gap:2px;' +
+  '.zq-opt{min-width:96px;min-height:96px;border-radius:22px;background:linear-gradient(180deg,#FFFDF6,#FFF1D8);' +
+    'border:2.5px solid #4A3B2E;' +
+    'box-shadow:inset 0 2.5px 0 rgba(255,255,255,.95),0 5px 0 #D8C9B4,0 8px 14px rgba(74,59,46,.08);' +
+    'display:flex;align-items:center;justify-content:center;gap:2px;' +
     'font-size:54px;font-weight:800;color:#4A3B2E;line-height:1;transition:transform .15s;' +
     'width:100%;max-width:236px;margin:0 auto}' +
-  '.zq-opt:active{transform:translateY(3px)}' +
+  '.zq-opt:active{transform:translateY(3px);box-shadow:inset 0 2.5px 0 rgba(255,255,255,.95),0 2px 0 #D8C9B4}' +
   '.zq-opt.dimmed{opacity:.18;pointer-events:none}' +
-  '.zq-opt.good{background:#E9F2DF;border-color:#5B8A4E;box-shadow:0 5px 0 #BFD4AC}' +
+  '.zq-opt.good{background:linear-gradient(180deg,#F0F8E8,#DDF0CE);border-color:#5B8A4E;' +
+    'box-shadow:inset 0 2.5px 0 rgba(255,255,255,.9),0 5px 0 #BFD4AC}' +
+  '.zq-opt.lit{background:linear-gradient(180deg,#FDF3D0,#FBE5A8) !important;border-color:#E8B84B !important;' +  /* 纠错教学：正确项金色点亮（改单2，level zqCalibTeach 用） */
+    'box-shadow:inset 0 2.5px 0 rgba(255,255,255,.9),0 5px 0 #E8B84B,0 0 18px rgba(232,184,75,.55) !important}' +
   '.zq-opt.wig{animation:zq-wig .5s ease}' +
   '@keyframes zq-wig{0%,100%{transform:translateX(0)}25%{transform:translateX(-9px)}' +
     '55%{transform:translateX(8px)}80%{transform:translateX(-4px)}}' +
@@ -290,10 +295,11 @@ ZQ.registerQ('t1', {
 });
 
 QT_.cssOnce('zq-css-t1',
-  '.zq-t1-spk{min-width:96px;min-height:96px;border-radius:24px;background:#FFF9EE;border:2.5px solid #4A3B2E;' +
-    'box-shadow:0 5px 0 #D8C9B4;display:flex;flex-direction:column;align-items:center;justify-content:center;' +
+  '.zq-t1-spk{min-width:96px;min-height:96px;border-radius:24px;background:linear-gradient(180deg,#FFFDF6,#FFF1D8);border:2.5px solid #4A3B2E;' +
+    'box-shadow:inset 0 2.5px 0 rgba(255,255,255,.95),0 5px 0 #D8C9B4,0 10px 18px rgba(74,59,46,.1);' +
+    'display:flex;flex-direction:column;align-items:center;justify-content:center;' +
     'gap:2px;padding:10px 26px;transition:transform .15s}' +
-  '.zq-t1-spk:active{transform:translateY(3px)}' +
+  '.zq-t1-spk:active{transform:translateY(3px);box-shadow:inset 0 2.5px 0 rgba(255,255,255,.95),0 2px 0 #D8C9B4}' +
   '.zq-t1-spk svg{width:74px;height:56px}' +
   '.zq-t1-py{font-size:16px;font-weight:700;color:#A99B8B}' +   /* 2026-09-30 语音主通道化：拼音降小字浸润（孩子不识拼音，主提示=语音） */
   '.zq-t1-sub{font-size:15px;font-weight:700;color:#8A7B6C}');

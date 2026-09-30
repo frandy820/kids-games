@@ -260,11 +260,22 @@ const ZQ_LV_CSS = [
 '  animation:zq-lv-in .28s ease}',
 '#zq-lv.hide{display:none}',
 '@keyframes zq-lv-in{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}',
+/* v3 改单1 派蒙场景框：顶弧云+底草条装饰（pointer-events:none 不挡交互；内容层 relative 提层） */
+'.zq-lv-deco-top{position:absolute;left:-6%;right:-6%;top:-44px;height:116px;border-radius:50%;pointer-events:none;',
+'  background:radial-gradient(50% 100% at 50% 100%,rgba(255,255,255,.8),rgba(255,255,255,0) 72%)}',
+'.zq-lv-deco-grass{position:absolute;left:-2%;right:-2%;bottom:-22px;height:84px;pointer-events:none;',
+'  background:linear-gradient(180deg,#A5D38C,#7CBF68);border-radius:46% 46% 0 0 / 44px 44px 0 0;',
+'  box-shadow:inset 0 4px 0 rgba(255,255,255,.6),inset 0 -8px 0 rgba(74,59,46,.08)}',
+'.zq-lv-deco-grass::after{content:"";position:absolute;left:8%;right:8%;bottom:26px;height:26px;',
+'  border-radius:50% 50% 0 0 / 22px 22px 0 0;background:linear-gradient(180deg,#BCE3A6,#9BD486);',
+'  box-shadow:inset 0 3px 0 rgba(255,255,255,.5)}',
+'.zq-lv-top,.zq-lv-steps,.zq-lv-qwrap{position:relative;z-index:1}',
 '.zq-lv-top{flex:0 0 auto;display:flex;align-items:center;gap:10px;padding:10px 16px 4px}',
-'.zq-lv-btn{min-width:96px;min-height:96px;border-radius:24px;background:#FFF9EE;border:2.5px solid #4A3B2E;',
-'  box-shadow:0 5px 0 #D8C9B4;font-size:19px;font-weight:800;display:flex;align-items:center;',
+'.zq-lv-btn{min-width:96px;min-height:96px;border-radius:24px;background:linear-gradient(180deg,#FFFDF6,#FFF1D8);',
+'  border:2.5px solid #4A3B2E;box-shadow:inset 0 2px 0 rgba(255,255,255,.95),0 5px 0 #D8C9B4;',
+'  font-size:19px;font-weight:800;display:flex;align-items:center;',
 '  justify-content:center;gap:4px;transition:transform .15s}',
-'.zq-lv-btn:active{transform:translateY(3px);box-shadow:0 2px 0 #D8C9B4}',
+'.zq-lv-btn:active{transform:translateY(3px);box-shadow:inset 0 2px 0 rgba(255,255,255,.95),0 2px 0 #D8C9B4}',
 '.zq-lv-title-wrap{flex:1 1 auto;min-width:0;text-align:center}',
 '.zq-lv-title{font-size:21px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}',
 '.zq-lv-sub{font-size:14px;color:#8A7B6C;min-height:18px}',
@@ -272,15 +283,15 @@ const ZQ_LV_CSS = [
 '  padding:6px 12px;min-height:26px;flex-wrap:wrap}',
 '.zq-step{width:15px;height:15px;border-radius:50% 50% 50% 4px;background:#E5D5BC;border:2px solid #4A3B2E;',
 '  transform:rotate(-45deg)}',
-'.zq-step.done{background:#8FBF7F}',
-'.zq-step.cur{background:#F5C445;animation:zq-step-pulse 1.6s ease-in-out infinite}',
+'.zq-step.done{background:linear-gradient(180deg,#A8D29A,#8FBF7F);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.6)}',
+'.zq-step.cur{background:linear-gradient(180deg,#FBE08A,#F5C445);animation:zq-step-pulse 1.6s ease-in-out infinite}',
 '@keyframes zq-step-pulse{0%,100%{transform:rotate(-45deg) scale(1)}50%{transform:rotate(-45deg) scale(1.28)}}',
 '.zq-hp-wrap,.zq-drop-wrap{display:flex;align-items:center;gap:5px}',
 '.zq-hp{width:20px;height:14px;border-radius:5px;background:#E5D5BC;border:2px solid #4A3B2E}',
-'.zq-hp.on{background:#E8975A}',
+'.zq-hp.on{background:linear-gradient(180deg,#F2AC72,#E8975A)}',
 '.zq-drop{width:13px;height:13px;border-radius:50% 50% 50% 4px;background:#E5D5BC;border:2px solid #4A3B2E;',
 '  transform:rotate(-45deg)}',
-'.zq-drop.on{background:#7FB3E0}',
+'.zq-drop.on{background:linear-gradient(180deg,#A3CDEE,#7FB3E0)}',
 '.zq-lv-qwrap{flex:1 1 auto;position:relative;overflow:hidden;padding:6px 16px 14px}',
 '#zq-qbox{position:absolute;inset:6px 16px 14px;display:flex;flex-direction:column}',
 /* 选项/题面 CSS 归 M2b qtypes（.zq-stem/.zq-opts/.zq-opt 全套）；level 仅保占位卡 .zq-ph——
@@ -290,31 +301,36 @@ const ZQ_LV_CSS = [
 '.zq-ph-zi{font-size:96px;font-weight:800;line-height:1.2}',
 '.zq-ph-py{font-size:20px;color:#E8975A}',
 '.zq-ph-g{font-size:16px;color:#8A7B6C;max-width:30em;text-align:center}',
-'.zq-ph-btn{min-width:96px;min-height:96px;border-radius:24px;background:#E8975A;color:#FFF9EE;',
-'  border:none;box-shadow:0 5px 0 #C77A42;font-size:20px;font-weight:800}',
-'.zq-ph-btn:active{transform:translateY(3px);box-shadow:0 2px 0 #C77A42}',
-'#zq-wall{position:absolute;inset:0;background:#FBF6EC;display:flex;flex-direction:column;',
+'.zq-ph-btn{min-width:96px;min-height:96px;border-radius:24px;background:linear-gradient(180deg,#F2AC72,#E8975A);',
+'  color:#FFF9EE;border:none;box-shadow:inset 0 2.5px 0 rgba(255,255,255,.5),0 5px 0 #C77A42;',
+'  font-size:20px;font-weight:800}',
+'.zq-ph-btn:active{transform:translateY(3px);box-shadow:inset 0 2.5px 0 rgba(255,255,255,.5),0 2px 0 #C77A42}',
+'#zq-wall{position:absolute;inset:0;background:linear-gradient(180deg,#FDF9EF,#FBF3E2);display:flex;flex-direction:column;',
 '  align-items:center;justify-content:center;gap:16px;z-index:3}',
 '#zq-wall.hide{display:none}',
 '.zq-wall-t{font-size:24px;font-weight:800}',
 '.zq-wall-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:88vw}',
-'.zq-wall-card{min-width:96px;min-height:96px;border-radius:20px;background:#FFF9EE;border:2.5px solid #4A3B2E;',
-'  box-shadow:0 5px 0 #D8C9B4;display:flex;flex-direction:column;align-items:center;justify-content:center;',
+'.zq-wall-card{min-width:96px;min-height:96px;border-radius:20px;background:linear-gradient(180deg,#FFFDF6,#FFF1D8);',
+'  border:2.5px solid #4A3B2E;box-shadow:inset 0 2px 0 rgba(255,255,255,.95),0 5px 0 #D8C9B4;',
+  'display:flex;flex-direction:column;align-items:center;justify-content:center;',
 '  gap:2px;transition:transform .2s}',
-'.zq-wall-card.lit{background:#FDF3D0;transform:scale(1.06)}',
+'.zq-wall-card.lit{background:linear-gradient(180deg,#FDE9AE,#F8D978);transform:scale(1.06);',
+'  box-shadow:inset 0 2px 0 rgba(255,255,255,.95),0 5px 0 #D9B95E}',
 '.zq-w-zi{font-size:42px;font-weight:800;line-height:1.1}',
 '.zq-w-py{font-size:13px;color:#E8975A}',
 '.zq-wall-sub{font-size:15px;color:#8A7B6C}',
 '.zq-lv-rest{position:fixed;inset:0;z-index:96;background:rgba(74,59,46,.42);display:flex;',
 '  align-items:center;justify-content:center;animation:zq-ov-in .3s ease}',
 '@keyframes zq-ov-in{from{opacity:0}to{opacity:1}}',
-'.zq-lv-rest .zq-box{background:#FFF9EE;border:3px solid #4A3B2E;border-radius:28px;',
-'  box-shadow:0 6px 0 #D8C9B4;padding:26px 34px;display:flex;flex-direction:column;align-items:center;',
+'.zq-lv-rest .zq-box{background:linear-gradient(180deg,#FFFDF6,#FFF1D8);border:3px solid #4A3B2E;border-radius:28px;',
+'  box-shadow:inset 0 3px 0 rgba(255,255,255,.95),0 6px 0 #D8C9B4,0 14px 28px rgba(74,59,46,.16);',
+'  padding:26px 34px;display:flex;flex-direction:column;align-items:center;',
 '  gap:12px;max-width:86vw}',
 '.zq-rest-t{font-size:25px;font-weight:800}',
 '.zq-rest-s{font-size:16px;color:#8A7B6C;text-align:center}',
-'.zq-rest-btn{min-width:96px;min-height:96px;border-radius:24px;background:#E8975A;color:#FFF9EE;',
-'  border:none;box-shadow:0 5px 0 #C77A42;font-size:20px;font-weight:800}',
+'.zq-rest-btn{min-width:96px;min-height:96px;border-radius:24px;background:linear-gradient(180deg,#F2AC72,#E8975A);',
+'  color:#FFF9EE;border:none;box-shadow:inset 0 2.5px 0 rgba(255,255,255,.5),0 5px 0 #C77A42;',
+'  font-size:20px;font-weight:800}',
 '@media (orientation:portrait){',
 '  .zq-lv-title{font-size:18px}}'                   /* 触摸目标 ≥96 全向无例外（家族红线）；选项尺寸归 M2b */
 ].join('\n');
@@ -331,7 +347,9 @@ function zqLvEnsure() {
   el.id = 'zq-lv';
   el.className = 'hide';
   el.setAttribute('aria-label', '关卡');
-  el.innerHTML = '<div class="zq-lv-top">' +
+  el.innerHTML = '<div class="zq-lv-deco-top" aria-hidden="true"></div>' +
+    '<div class="zq-lv-deco-grass" aria-hidden="true"></div>' +
+    '<div class="zq-lv-top">' +
     '<button class="zq-lv-btn" id="zq-lv-back" aria-label="回到地图">◂ 地图</button>' +
     '<div class="zq-lv-title-wrap"><div class="zq-lv-title" id="zq-lv-title"></div>' +
     '<div class="zq-lv-sub" id="zq-lv-sub"></div></div>' +
@@ -471,6 +489,11 @@ function zqLvRun(L) {
   lastAct = Date.now(); lastDir = Date.now(); lastAns = Date.now();
   const el = document.getElementById('zq-lv');
   el.classList.remove('hide');
+  /* v3 改单1 派蒙场景底色：区色顶部晕染→暖米（boss 加深一档=对峙氛围；calib=暖橙） */
+  const ac = zqAccent(L.region || 0);
+  el.style.background = L.kind === 'boss'
+    ? 'linear-gradient(180deg,' + zqLighten(ac, .18) + ' 0%,#FDF4E4 42%,#F9ECD6 100%)'
+    : 'linear-gradient(180deg,' + zqLighten(ac, .58) + ' 0%,#FDF9EF 34%,#FBF3E2 100%)';
   document.getElementById('zq-lv-title').textContent = zqLvTitle(L);
   if (typeof KIDS !== 'undefined' && !ZQ_VERIFY) {
     if (L.kind === 'boss' && L.boss) KIDS.voice.play('zq_boss_' + L.boss.id);
@@ -538,8 +561,14 @@ async function zqUiWrong() {                        /* 错误反馈阶梯（zile
     return ret;
   }
   if (ZQ_QT[q.type]) {                              /* M2b 阶梯已反馈（wig/shake/鼓励/breathe/摘干扰）→ 仅状态 */
-    if (ret === 'done') { zqFinishFlow(run); return ret; }   /* calib 错在末题=收口 */
-    if (ret === 'right') zqRenderQ();               /* calib 动态流：错后推进下一题 */
+    if (ret === 'done') {                           /* calib 错在末题=先纠错窗再收口（改单2） */
+      if (L.kind === 'calib') { await zqCalibTeach(run, q, true); return ret; }
+      zqFinishFlow(run); return ret;
+    }
+    if (ret === 'right') {                          /* calib 动态流：错后当页纠错再推进（改单2，不再直跳） */
+      if (L.kind === 'calib') { await zqCalibTeach(run, q, false); return ret; }
+      zqRenderQ();
+    }
     return ret;
   }
   L.uiLock = true;                                  /* 占位路径：level 自担错误阶梯（zilearn F2） */
@@ -560,6 +589,26 @@ async function zqUiWrong() {                        /* 错误反馈阶梯（zile
   if (ret === 'done') { zqFinishFlow(run); return ret; }   /* calib 错在末题=收口 */
   if (ret === 'right') zqRenderQ();                 /* calib 动态流：错后推进下一题 */
   return ret;
+}
+
+/* ---------- K0. 定级错后当页纠错窗（改单2 2026-09-30：「当页纠正、不跳页」硬要求）
+   摸底语义不变（bandAns 在 onAnswer 第一时间已记），此处只接管推进节奏：
+   正确项金色 breathe 点亮 + queue[安抚, zq_ch 讲解「X，word的X」] 讲完再走。
+   qLock 双保险：wirePick 错后 800ms 自解锁，窗内再点经 api.wrong→qLock 拒收防重复推进。 */
+async function zqCalibTeach(L, q, finish) {
+  L.qLock = true;
+  const ok = zqOptEl(q.answer);
+  if (ok) { zqRefx(ok, 'breathe'); ok.classList.add('lit'); }
+  if (ZQ_VERIFY) {                                    /* verify 页键账可测（queue 分支 VERIFY 不走） */
+    if (L._api) L._api.voice('zq_ch_' + q.pyKey);
+  } else if (typeof KIDS !== 'undefined') {
+    KIDS.voice.queue(['zq_calib_wrong', 'zq_ch_' + q.pyKey]);
+  }
+  await wait(4000 * ZQ_SPEED + 200);                  /* 串播实长≈3.6-4s（calib_wrong~1.4s+ch~2.3s）+余量 */
+  if (ZQ_LV !== L) return;
+  L.qLock = false;
+  if (finish) { zqFinishFlow(L); return; }
+  zqRenderQ();
 }
 
 /* ---------- K. boss 休息流（miss3=喝口水休息；半进度重试；永不失败） ---------- */
