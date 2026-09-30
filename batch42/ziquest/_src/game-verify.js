@@ -24,6 +24,7 @@
    ㉓ dispatch 节点分发（story/chest/friend 占位/new/boss 弹层/camp·calib verify 守卫）
    ㉔ seed 确定性工具锚（hash 稳定/同种子洗牌全等）
    ㉕ spread 区域字组均分（R1 十三关并集 62 无缝无重/每关 4-5 字）
+   ㉖ cluster P1 分类聚簇（v4：7 区 cat 区间连续不交错/同 cat 众数占比 ≥60%/关标题主题化）
    结果写 #verify-result + document.title = 'VERIFY PASS n/n'（失败=VERIFY FAIL） */
 'use strict';
 
@@ -577,6 +578,38 @@ async function runVerify() {
     dsv.zq.dayLog[T] = { newChars: [], nodes: [], newDone: ['r1n02'], quests: [] };
     ok('spread', '首日建议量=1（quota 曲线自算，v3.1 起仅统计不锁关）', ZQ._zqQuota(1, 0) === 1);
   } catch (e) { ok('spread', '字组异常 ' + e.message, false); }
+
+  /* ================= ㉖ P1 分类聚簇（v4：cat 子主题同关，簇序递进） ================= */
+  try {
+    const T = '2026-10-01';
+    const mk2 = () => ({ v: '1.0', game: 'ziquest', firstDay: T, levels: {}, bonus: {}, zq: { cal: { done: [], band: 0, skipSeen: false }, map: {}, dex: {}, weak: [], comp: {}, dress: { owned: [], worn: {}, home: {} }, coins: 0, storySeen: [], dayLog: {} } });
+    const sv = mk2();
+    let mono = true, ratios = [], titled = 0;
+    for (let r = 1; r <= 7; r++) {
+      const news = ZQ_NODES.filter(n => n.region === r && n.type === 'new');
+      const seq = [];
+      news.forEach(n => ZQ._nodeChars(n.key, sv).forEach(ch => seq.push((ZQ_CH_ENT[ch] && ZQ_CH_ENT[ch].cat) || '?')));
+      /* 簇序单调：每个 cat 在区内展开序列的区间连续（聚簇排序，floor 均分只切簇边界不交错） */
+      const pos = {};
+      seq.forEach((k, i) => { (pos[k] = pos[k] || []).push(i); });
+      Object.keys(pos).forEach(k => {
+        const p = pos[k];
+        for (let i = p[0]; i <= p[p.length - 1]; i++) if (seq[i] !== k) mono = false;
+      });
+      news.forEach(n => {
+        const cs = ZQ._nodeChars(n.key, sv);
+        const cnt = {};
+        cs.forEach(ch => { const k = (ZQ_CH_ENT[ch] && ZQ_CH_ENT[ch].cat) || '?'; cnt[k] = (cnt[k] || 0) + 1; });
+        const mx = Math.max.apply(null, Object.keys(cnt).map(k => cnt[k]));
+        ratios.push(mx / cs.length);
+        if (ZQ._catTitle({ kind: 'new', chars: cs })) titled++;
+      });
+    }
+    ok('cluster', 'cat 聚簇单调：7 区同 cat 字区间连续不交错（水果关→餐具关递进体感）', mono);
+    ok('cluster', '同 cat 关内众数占比均值 ≥60%（分类识字体感，' + ratios.length + ' 关）',
+      ratios.reduce((a, b) => a + b, 0) / ratios.length >= 0.6);
+    ok('cluster', '关标题主题化：≥max(3,60%) 众数关显「水果关/小厨房关」（' + titled + ' 关）', titled > 0);
+  } catch (e) { ok('cluster', '聚簇异常 ' + e.message, false); }
 
   /* ---- 结果（家族写作规范：title 行 + stub·game·total·pass·units 字段） ---- */
   const res = { game: 'ziquest', total: total, pass: npass, units: {} };

@@ -41,13 +41,17 @@ ZQ.registerQ('t2', {
         '<div class="zq-t2-parts"></div>' +
         '<button class="zq-t2-big" aria-label="点一点这个字"><span class="zi">' +
           QT_.esc(q.ch) + '</span><span class="zq-t2-py">' + QT_.esc(q.py) + '</span></button>' +
+        '<div class="zq-t2-ws"></div>' +
       '</div>';
 
     var glyphEl = f.stem.querySelector('.zq-t2-glyph');
     var pictoEl = f.stem.querySelector('.zq-t2-picto');
     var partsEl = f.stem.querySelector('.zq-t2-parts');
     var bigEl = f.stem.querySelector('.zq-t2-big');
+    var wsEl = f.stem.querySelector('.zq-t2-ws');
     var pic = ZQ_PICTO[q.ch];
+    /* P2 实物图兜底（无象形 SVG 的字）：PICTO 象形（字理价值）优先，ZQ_PICS 实物图次之 */
+    var photo = !pic && typeof ZQ_PICS !== 'undefined' && ZQ_PICS[q.ch] || null;
 
     (async function () {
       /* A：字理文案淡入 */
@@ -73,6 +77,20 @@ ZQ.registerQ('t2', {
           if (st.dead) return;
         }
         pictoEl.classList.add('off');
+      } else if (photo) {                          /* B'：实物图（P2 配图；单帧淡入观赏窗；
+                                                       data: URI 经 DOM API 赋值=离线合规，无 src 字面） */
+        glyphEl.classList.add('off');
+        pictoEl.style.display = '';
+        pictoEl.classList.add('photo');
+        var im = document.createElement('img');
+        im.alt = '';
+        im.draggable = false;
+        im.src = photo;
+        pictoEl.appendChild(im);
+        pictoEl.classList.add('on');
+        await wait(T2.B_MS * 2 + T2.GAP);
+        if (st.dead) return;
+        pictoEl.classList.add('off');
       }
 
       /* C1：部件拼摆（parts 有值；滑入合拢后化出） */
@@ -91,8 +109,21 @@ ZQ.registerQ('t2', {
         pictoEl.style.display = 'none';
       }
 
-      /* C2：现代大字浮现 + 解锁「点一点」 */
+      /* C2：现代大字浮现 + 词句条（P2：words 首词加粗 + 首个含字句）+ 解锁「点一点」 */
+      var sentText = '';
+      if (typeof ZQ_SENTENCES !== 'undefined' && ZQ_SENTENCES) {
+        for (var si = 0; si < ZQ_SENTENCES.length; si++) {
+          var sOne = ZQ_SENTENCES[si];
+          var sTxt = sOne && String(sOne.text != null ? sOne.text : sOne);
+          if (sTxt && sTxt.indexOf(q.ch) >= 0) { sentText = sTxt; break; }
+        }
+      }
+      if (wsEl) {
+        wsEl.innerHTML = (q.words && q.words[0] ? '<b>' + QT_.esc(q.words[0][0]) + '</b>' : '') +
+          (sentText ? '<i>' + QT_.esc(sentText) + '</i>' : '');
+      }
       bigEl.classList.add('on');
+      if (wsEl && wsEl.innerHTML) wsEl.classList.add('on');
       await wait(T2.C_MS);
       if (st.dead) return;
       glyphEl.style.display = 'none';
@@ -152,6 +183,19 @@ QT_.cssOnce('zq-css-t2',
   '.zq-t2-big.ready{animation:zq-breathe 1.6s ease-in-out infinite;' +
     'box-shadow:inset 0 3px 0 rgba(255,255,255,.95),0 6px 0 #D8C9B4,0 0 26px rgba(245,196,69,.5)}' +
   '.zq-t2-big.good{background:linear-gradient(180deg,#F0F8E8,#DDF0CE);border-color:#5B8A4E;' +
-    'box-shadow:inset 0 3px 0 rgba(255,255,255,.9),0 6px 0 #BFD4AC;animation:none}');
+    'box-shadow:inset 0 3px 0 rgba(255,255,255,.9),0 6px 0 #BFD4AC;animation:none}' +
+  /* P2 实物图（photo 卡框=派蒙渐变+白高光；132 视区同 picto） */
+  '.zq-t2-picto.photo{background:linear-gradient(180deg,#FFFDF6,#FFF1D8);border:2.5px solid #4A3B2E;' +
+    'border-radius:22px;box-shadow:inset 0 3px 0 rgba(255,255,255,.95),0 5px 0 #D8C9B4,' +
+    '0 10px 18px rgba(74,59,46,.1);overflow:hidden}' +
+  '.zq-t2-picto.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;user-select:none}' +
+  /* P2 词句条：词加粗暖橙 + 句浅棕（大字卡下随 C2 浮现） */
+  '.zq-t2-ws{display:flex;align-items:center;gap:14px;max-width:92%;opacity:0;' +
+    'transform:translateY(8px);transition:opacity .4s ease,transform .4s ease;' +
+    'background:linear-gradient(180deg,#FFFDF6,#FFF1D8);border:2px solid #4A3B2E;border-radius:16px;' +
+    'box-shadow:inset 0 2px 0 rgba(255,255,255,.95),0 4px 0 #D8C9B4;padding:7px 18px;margin-top:2px}' +
+  '.zq-t2-ws.on{opacity:1;transform:translateY(0)}' +
+  '.zq-t2-ws b{font-size:21px;font-weight:800;color:#E8975A;white-space:nowrap}' +
+  '.zq-t2-ws i{font-style:normal;font-size:16px;font-weight:600;color:#8A7B6C}');
 
 })();

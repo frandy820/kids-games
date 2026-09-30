@@ -55,6 +55,21 @@ def _assemble_flow(S):
     assert '</script' not in cal_js
     S['data'] = S['data'] + ('\n/* calib 三带池（build 注入自 data/calib-pool.json，零手抄；'
                              '_gen_data.py 无此表——M2a build 域内注入） */\nconst ZQ_CAL = ' + cal_js + ';\n')
+    # P2 实物配图（data/pics/<ch>.webp 存在才注入；条件化=生图未跑/部分跑 build 仍过，
+    # t2 运行时 typeof ZQ_PICS 守卫缺图字自动降级无图路径）
+    import base64 as _b64
+    pics_dir = ROOT / 'data' / 'pics'
+    n_pics = 0
+    if pics_dir.is_dir():
+        pics = {}
+        for p in sorted(pics_dir.glob('*.webp')):
+            pics[p.stem] = 'data:image/webp;base64,' + _b64.b64encode(p.read_bytes()).decode('ascii')
+        if pics:
+            pics_js = json.dumps(pics, ensure_ascii=False, separators=(',', ':'))
+            assert '</script' not in pics_js
+            S['data'] = S['data'] + ('\n/* P2 实物配图（build 注入自 data/pics/*.webp 键=字；'
+                                     '真值源图目录，零手抄） */\nvar ZQ_PICS = ' + pics_js + ';\n')
+            n_pics = len(pics)
     return n_qt
 
 
@@ -123,6 +138,21 @@ process.stdout.write(JSON.stringify(ctx.__T));
     assert n_zq in (0, EXPECT), 'zq_ clips %d 条（段一须 0=未注册，段二须 %d=全量，禁部分注册）' % (n_zq, EXPECT)
     # 段二键名级对账（zq_ch_<无调拼音+同音序号>）M5 落地——键名依赖 0c 机扫 py 字段定稿
     stage = 2 if n_zq else 1
+
+    # ===== P2 配图键账+对账：ZQ_PICS 键集 == data/pics/*.webp 文件名集合（双向）；≤200 =====
+    pics_dir = ROOT / 'data' / 'pics'
+    pic_files = {p.stem for p in pics_dir.glob('*.webp')} if pics_dir.is_dir() else set()
+    m2 = re.search(r'var ZQ_PICS = \{(.*?)\};', S['data'], re.S)
+    pic_keys = set(re.findall(r'"([^"]+)":"data:image/webp', m2.group(1))) if m2 else set()
+    assert pic_keys == pic_files, 'ZQ_PICS 键账失败（注入 %d vs 文件 %d）' % (len(pic_keys), len(pic_files))
+    assert len(pic_keys) <= 200, '配图超预算 200：当前 %d（体积红线）' % len(pic_keys)
+    all_chars_set = {c['ch'] for d in CHARS.values() for c in d['chars']}
+    bad_pic = pic_keys - all_chars_set
+    assert not bad_pic, '配图文件名非字表字: %s' % sorted(bad_pic)
+
+    # ===== 体积门禁（≤17MB 硬红线；P2 配图后实收） =====
+    total_chars = sum(len(x) for x in (head, data, engine, main, verif, clips, S.get('ghost', '')))
+    assert total_chars < 17 * 1024 * 1024, '产物 %d chars 超 17MB 红线' % total_chars
 
     # ===== head 硬性：title / 按钮显式 color（契约 O）/ FAMILY_CSS 三占位 / 五段横幅 =====
     assert '<title>小兔子识字闯世界</title>' in head, 'head 缺标题 小兔子识字闯世界'

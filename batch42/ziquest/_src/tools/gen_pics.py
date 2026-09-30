@@ -32,6 +32,30 @@ BUDGET_BYTES = 10240          # WebP ≤10KB
 PROMPT = (u'儿童绘本卡通插画风格的一个%s，明快可爱的暖色调配色，圆润造型带柔和渐变和高光，'
           u'纯白色背景，单个物体居中构图，画面中绝对不要出现任何文字、字母或数字')
 
+# prompt 主体分型（2026-09-30 首图教训：「一个下雪」画成冬帽=词不对图）：
+# word 去动/形/色前缀（下雪→雪、大灰狼→狼、白粥→粥、看书→书）；strip 后单字场景物加
+# 具象化特例（雪→雪景、雾→山间雾气）；word 级特例兜底（土地→泥土田地）
+_STRIP_PREFIX = u'下大看开上白青早小灰'
+_W_SPECIAL = {u'土地': u'泥土田地', u'沙子': u'一堆沙子', u'屋子': u'一座小屋',
+              u'青蛙': u'一只青蛙', u'发芽': u'一颗发芽的种子', u'画画': u'儿童蜡笔画',
+              u'食盐': u'一袋食用盐', u'宝贝': u'一个可爱的宝宝', u'客人': u'来做客的小朋友'}
+_S_SPECIAL = {u'雪': u'雪景', u'雾': u'山间的雾气', u'海': u'大海', u'江': u'江河', u'湖': u'湖泊',
+              u'街': u'热闹的街道', u'楼': u'高楼', u'市': u'城市', u'树': u'大树',
+              u'林': u'小树林', u'森': u'大森林', u'车': u'小汽车', u'书': u'一本翻开的故事书',
+              u'棋': u'棋盘和棋子', u'画': u'儿童蜡笔画', u'果': u'水果拼盘',
+              u'粥': u'一碗白粥', u'菜': u'一棵青菜', u'鹅': u'一只大白鹅', u'虾': u'一只大虾',
+              u'沙': u'一堆沙子', u'屋': u'一座小屋', u'岛': u'一座小岛',
+              u'桥': u'一座小桥', u'船': u'一艘小船'}
+
+
+def subject(word):
+    if word in _W_SPECIAL:
+        return _W_SPECIAL[word]
+    s = word
+    while len(s) > 1 and s[0] in _STRIP_PREFIX:
+        s = s[1:]
+    return _S_SPECIAL.get(s, s)
+
 
 def log(msg):
     line = time.strftime('%H:%M:%S ') + msg
@@ -80,7 +104,7 @@ def probe_alive(pw):
 def gen_one(pw, pg, ch, word):
     """生成一字：输入→Enter→轮询新图→滚动→fetch raw→压缩。返回 ok/失败原因"""
     t0 = time.time()
-    prompt = PROMPT % word
+    prompt = PROMPT % subject(word)
     if pg.url == 'about:blank' or 'doubao' not in pg.url:
         return 'page-lost'
     try:
@@ -151,7 +175,7 @@ def run():
                 log('BREAK fail-streak=3 at %s (circuit breaker)' % it['ch'])
                 break
             t0 = time.time()
-            res = gen_one(pw, it['ch'], it['word'])
+            res = gen_one(pw, pg, it['ch'], it['word'])
             dt = int(time.time() - t0)
             log('[%d/%d] %s(%s) -> %s (%ds)' % (i + 1, len(todo), it['ch'], it['word'], res, dt))
             if res.startswith('ok'):

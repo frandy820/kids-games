@@ -68,14 +68,24 @@ const ZQ_NEWIDX = {};                              /* new 节点 key → {region
   });
 })();
 function zqRegionChars(r) { return ZQ_CHARS[String(r)].chars; }
-/* 节点目标字：区域池序剔除定级已知字（cal.done）后按节点序 floor 均分（4-5 字/关；
+/* 节点目标字：区域池剔除定级已知字后 **cat 子主题聚簇**（簇序=区内 cat 首见序，簇内保 order）
+   再按节点序 floor 均分（4-5 字/关）——同主题字相邻入同关（v4 P1 分类识字：水果关/餐具关体感；
    纯存档态函数——同存档态永远同字组，跨日重算不变=早安营地依据稳定） */
+function zqClusterPool(region, pool) {
+  const withCat = pool.map(function (c) {
+    return { c: c, k: (ZQ_CH_ENT[c.ch] && ZQ_CH_ENT[c.ch].cat) || '\x7f' };
+  });
+  const ord = {}; let nx = 0;
+  withCat.forEach(function (x) { if (!(x.k in ord)) ord[x.k] = nx++; });
+  withCat.sort(function (a, b) { return ord[a.k] - ord[b.k] || a.c.order - b.c.order; });
+  return withCat.map(function (x) { return x.c; });
+}
 function zqNodeChars(key, save) {
   const m = ZQ_NEWIDX[key];
   if (!m) return [];
   const cal = save && save.zq && save.zq.cal && save.zq.cal.done || [];
   const ks = {}; cal.forEach(function (c) { ks[c] = 1; });
-  const pool = zqRegionChars(m.region).filter(function (c) { return !ks[c.ch]; });
+  const pool = zqClusterPool(m.region, zqRegionChars(m.region).filter(function (c) { return !ks[c.ch]; }));
   const a = Math.floor(m.idx * pool.length / m.total), b = Math.floor((m.idx + 1) * pool.length / m.total);
   return pool.slice(a, Math.max(a + 1, b)).map(function (c) { return c.ch; });
 }
@@ -118,7 +128,8 @@ function zqMkQ(type, ch, region, rnd, save) {
   const ent = ZQ_CH_ENT[ch];
   const q = { type: type, ch: ch, py: ent.py, pyKey: ent.pyKey, words: ent.words,
               glyph: ent.glyph, distract: ent.distract, options: [], answer: 0,
-              seedIdx: 0, region: region, challenge: 0, judge: type !== 't2' };
+              seedIdx: 0, region: region, challenge: 0, judge: type !== 't2',
+              parts: ent.parts || null };            /* v4：补 parts（t2 C1 部件拼摆复活——91 字有数据主线从未触发） */
   if (type === 't1' || type === 't6') {
     const o = zqCharOpts(ch, region, rnd);
     q.options = o.opts; q.answer = o.ans;
@@ -475,11 +486,30 @@ function zqRenderQ() {
   }
   lastAct = Date.now(); lastDir = Date.now();
 }
+/* v4 P1：new 关标题主题化——关字组 cat 众数 ≥max(3, 60%) 显示「水果关/小厨房关」（具象类映射，
+   动作/形容/虚词等抽象类不映射=回落默认「新字关N」；孩子不识字名由家长念，分类体感由标题直接给） */
+const ZQ_CAT_TITLE = { '水果': '水果关', '蔬菜': '蔬菜关', '食物饮品': '好吃的关',
+  '餐具厨具': '小厨房关', '身体': '身体关', '家人': '家人关', '动物': '动物关',
+  '植物': '花草关', '自然天象': '天气关', '衣物': '衣服关', '文具': '文具关',
+  '玩具': '玩具关', '学校': '幼儿园关', '场所': '去处关', '出行': '出门关',
+  '方位': '方向关', '数字': '数字关' };
+function zqLvCatTitle(L) {
+  if (L.kind !== 'new' || !L.chars || !L.chars.length) return null;
+  const cnt = {};
+  L.chars.forEach(function (ch) {
+    const k = ZQ_CH_ENT[ch] && ZQ_CH_ENT[ch].cat;
+    if (k) cnt[k] = (cnt[k] || 0) + 1;
+  });
+  let best = null, bn = 0;
+  Object.keys(cnt).forEach(function (k) { if (cnt[k] > bn) { bn = cnt[k]; best = k; } });
+  if (!best || bn < Math.max(3, Math.ceil(L.chars.length * 0.6))) return null;
+  return ZQ_CAT_TITLE[best] || null;
+}
 function zqLvTitle(L) {
   if (L.kind === 'boss') return L.boss ? L.boss.name : 'BOSS';
   if (L.kind === 'camp') return '复习营地';
   if (L.kind === 'morning') return '早安营地';
-  return nodeLabel(L.node);
+  return zqLvCatTitle(L) || nodeLabel(L.node);
 }
 function zqLvRun(L) {
   zqLvEnsure();
@@ -774,6 +804,7 @@ window.ZQ._engPick = zqEngPick;
 window.ZQ._engAnswer = zqEngAnswer;
 window.ZQ._stars = zqStars;
 window.ZQ._nodeChars = zqNodeChars;
+window.ZQ._catTitle = zqLvCatTitle;                 /* v4 P1：verify 聚簇/主题化断言钩子 */
 window.ZQ._mkQ = zqMkQ;
 window.ZQ._lvState = function () {
   if (!ZQ_LV) return null;

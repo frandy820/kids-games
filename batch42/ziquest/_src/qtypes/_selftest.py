@@ -153,6 +153,17 @@ def main():
         bigop = pg.evaluate("() => getComputedStyle(document.querySelector('.zq-t2-big')).opacity")
         check('A09b-t2-parts-big-visible', float(bigop) >= 0.99, bigop)
 
+        # A19 t2 词句条（v4 P2：words[0] 加粗 + 首个含字句；独立驱动「天」=天空+含天句）
+        pg.evaluate("() => runQ('t2','天',7)")
+        pg.wait_for_selector('.zq-t2-big.ready', timeout=9000)
+        ws = pg.evaluate("""() => {
+        const el = document.querySelector('.zq-t2-ws');
+        if (!el) return { on: false };
+        return { on: el.classList.contains('on'), b: el.querySelector('b') ? el.querySelector('b').textContent : '',
+                 i: el.querySelector('i') ? el.querySelector('i').textContent : '' };
+      }""")
+        check('A19-t2-ws-word-sent', ws['on'] and ws['b'] == '天空' and ws['i'] != '' and '天' in ws['i'], ws)
+
         # A10 keyframes transform/opacity only
         kf = pg.evaluate("""() => {
         const BAD = [];
