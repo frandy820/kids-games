@@ -4,9 +4,11 @@
    M2 接入点：genLevel 关卡生成器/题型谱在此段扩展（SPEC §6.2 game-core 职责）。 */
 'use strict';
 
-/* ---------- 日限速（SPEC §1.4：只锁新字关；首日1/2-7日2/8日起3 封顶 + 家长 bonus） ---------- */
+/* ---------- 日配额（v3.1 2026-09-30 起只作统计参考，不再锁关：孩子首试反馈「玩完一关全图锁死」，
+     根因=首日配额 1 关用尽后 nodeState 将后续 new 全锁。撤门=连续解锁；zqQuota/zqDayDone 保留
+     供家长面板「今日已玩 N 关 / 建议量」展示，nodeState 不再调用） ---------- */
 const ZQ_DAY_NEW = [1, 2, 2, 2, 2, 2, 2, 3];
-function zqQuota(day, bonus) {           /* day=1-based；day≥8 恒取表尾 3 */
+function zqQuota(day, bonus) {           /* day=1-based；day≥8 恒取表尾 3（原 SPEC §1.4 曲线） */
   day = Math.max(1, day | 0);
   return ZQ_DAY_NEW[Math.min(day, ZQ_DAY_NEW.length) - 1] + Math.max(0, bonus | 0);
 }
@@ -16,11 +18,11 @@ function zqDayIndex(save, today) {       /* firstDay→today 的 1-based 天序�
   return Math.floor((new Date(today + 'T12:00:00') - new Date(fd + 'T12:00:00')) / 86400000) + 1;
 }
 function zqBonus(save, today) { return (save && save.bonus && save.bonus[today]) || 0; }
-function zqNewSpent(save, today) {       /* 今日已完成新字关数（去重；M1 写档方维护 dayLog.newDone） */
+function zqNewSpent(save, today) {       /* 今日已完成新字关数（去重；写档方维护 dayLog.newDone） */
   const dl = save && save.zq && save.zq.dayLog && save.zq.dayLog[today];
   return dl && dl.newDone ? dl.newDone.length : 0;
 }
-function zqDayDone(save, today) {        /* 今日新字关配额完（core calendar.dayDone 的本款自算版） */
+function zqDayDone(save, today) {        /* 今日已达建议量（原日配额门判据；v3.1 起仅家长面板统计用） */
   return zqNewSpent(save, today) >= zqQuota(zqDayIndex(save, today), zqBonus(save, today));
 }
 
@@ -57,7 +59,9 @@ function zqRegionNewAllDone(save, r) {
   });
 }
 /* 四态之一（不含 current——current=UI 层"兔子站位"语义，另由 curNodeKey 派生）：
-   'done' 完成 / 'open' 可玩 / 'locked' 锁（前驱/区域/BOSS 门/新字日配额 四种锁因） */
+   'done' 完成 / 'open' 可玩 / 'locked' 锁（前驱/区域/BOSS 门 三种锁因）。
+   v3.1 撤日配额门（原第 4 锁因 new+today+zqDayDone→locked）：首试反馈孩子玩完
+   首日唯一配额关后全图锁死「卡住玩不下去」——改为连续解锁，从简到难由 R1→R7 递进保证。 */
 function nodeState(save, key, today) {
   if (zqNodeDone(save, key)) return 'done';
   const n = ZQ_NODE[key];
@@ -68,7 +72,6 @@ function nodeState(save, key, today) {
   } else if (n.prev && !zqNodeDone(save, n.prev)) {
     return 'locked';
   }
-  if (n.type === 'new' && today && zqDayDone(save, today)) return 'locked';
   return 'open';
 }
 /* 当前节点（兔子站位）：全局序第一个未完成且可达的节点；全图完成=终点 */

@@ -1,8 +1,8 @@
 /* ================= ?verify=1 自检（独立第 4 script 块）——M1 骨架 7 单元 + M2a 流程层 17 单元
    ① 结构：script 块数==4 + 完全离线（运行时字面扫描，SVG xmlns 白名单）
    ② 地图拓扑：130 节点 / key 唯一 / next 无断链 / 先序链无孤立（除链尾恰好=各区 boss）/ 区域序线性
-   ③ nodeState 解锁律：fixture 存档推进——锁→开→当前→完成 四态转换 + 区域门 + BOSS 门 + 日配额门
-   ④ 配额表独立对账：SPEC 硬编码 [1,2,2,2,2,2,2,3] 对照 ZQ_DAY_NEW + zqQuota 全日算 + bonus 叠加
+   ③ nodeState 解锁律：fixture 存档推进——锁→开→当前→完成 四态转换 + 区域门 + BOSS 门（v3.1 撤日配额门=连续解锁）
+   ④ 配额表独立对账：SPEC 硬编码 [1,2,2,2,2,2,2,3] 对照 ZQ_DAY_NEW + zqQuota 全日算 + bonus 叠加（v3.1 起仅家长面板统计参考，不锁关）
    ⑤ SRS 调度律：对→间隔沿 [1,3,7,14,30] 扩张封顶 / 错→降档减半+miss+1 / srsDue 定序律
    ⑥ 地图渲染 DOM：130 节点在场 / 当前节点 s-current 脉冲类在场 / 未解锁区域迷雾 pattern 在场
    ⑦ 定级停止规则 calStop：晋级线 8/6 / <4 即停 / 连错 3 快停 / 带 3 完=结束 / 空记录=带 1 起步
@@ -119,8 +119,9 @@ async function runVerify() {
     const CUT = ZQ_NODES.findIndex(n => n.key === 'r1n08');
     ZQ_NODES.slice(0, CUT).forEach(n => { sq.zq.map[n.key] = { stars: 2, plays: 1 }; });   /* r0 全+r1n01..07 */
     sq.zq.dayLog[T].newDone = ['r1n02', 'r1n03', 'r1n04', 'r1n06'];                        /* 首日 quota=1 已超 */
-    ok('unlock', '首日配额=1 用尽→后续 new 锁（日配额门）', ZQ._nodeState(sq, 'r1n08', T) === 'locked');
-    ok('unlock', '配额不锁营地（r1n07 非锁：open/done 皆可）', ZQ._nodeState(sq, 'r1n07', T) !== 'locked');
+    ok('unlock', 'v3.1 连续解锁：首日配额超量后 r1n08 仍 open（撤日配额门，首试反馈修复）', ZQ._nodeState(sq, 'r1n08', T) === 'open');
+    ok('unlock', '连续解锁：r1n09（前驱 r1n08 未完）仍锁=只走前驱链', ZQ._nodeState(sq, 'r1n09', T) === 'locked');
+    ok('unlock', '营地任意态可玩不受限（r1n07 非锁）', ZQ._nodeState(sq, 'r1n07', T) !== 'locked');
   } catch (e) { ok('unlock', '解锁律异常 ' + e.message, false); }
 
   /* ================= ④ 配额表独立对账 ================= */
@@ -574,7 +575,7 @@ async function runVerify() {
       r1News.every(n => { const l = ZQ._nodeChars(n.key, sv).length; return l >= 4 && l <= 5; }));
     const dsv = mk2();
     dsv.zq.dayLog[T] = { newChars: [], nodes: [], newDone: ['r1n02'], quests: [] };
-    ok('spread', '首日 quota=1 用尽判定（zqDayDone 自算）', ZQ._zqQuota(1, 0) === 1);
+    ok('spread', '首日建议量=1（quota 曲线自算，v3.1 起仅统计不锁关）', ZQ._zqQuota(1, 0) === 1);
   } catch (e) { ok('spread', '字组异常 ' + e.message, false); }
 
   /* ---- 结果（家族写作规范：title 行 + stub·game·total·pass·units 字段） ---- */

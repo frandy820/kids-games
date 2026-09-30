@@ -19,7 +19,7 @@
    "unlockNode": "前节点 ≥1 星 → next 亮（story/chest/friend 完成即过）",
    "unlockBoss": "本区全部 new ≥1 星 → boss 可进",
    "unlockRegion": "击破前区 boss → 迷雾消散",
-   "quota": "日限速只锁 new：ZQ_DAY_NEW 首日1/2-7日2/8日起3 + 家长bonus"
+   "quota": "连续解锁（v3.1 撤日限速：孩子首试玩完首日 1 关后全图锁死，撤门；zqQuota 曲线保留仅家长面板统计参考）"
   }
  },
  "regions": [
