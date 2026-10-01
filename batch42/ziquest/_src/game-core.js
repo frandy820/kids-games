@@ -143,7 +143,8 @@ function zqNodeReward(type, first) {     /* 节点完成入账（M1 写档通道
 
 /* ---------- 定级三带停止规则（SPEC §2.4：40/30/30 三带，晋级线 8/6，<4 即停，连错3 快停） ---------- */
 const ZQ_CAL_BANDS = [40, 30, 30];
-const ZQ_CAL_PASS = { 1: 8, 2: 6 };       /* 带1→带2 需对≥8；带2→带3 需对≥6；带3=末带 */
+const ZQ_CAL_PASS = { 1: 4, 2: 4 };       /* 带1→带2 需对≥4；带2→带3 需对≥4；带3=末带
+   （v5 2026-10-01：BAND_LIM 10→5 收紧后晋级线同步 8/6→4/4，80% 晋级语义保持） */
 function zqHasStreak3(a) {
   let n = 0;
   for (let i = 0; i < a.length; i++) { n = a[i] ? 0 : n + 1; if (n >= 3) return true; }
@@ -154,7 +155,7 @@ function zqHasStreak3(a) {
 function calStop(bandResults) {
   for (let i = 0; i < bandResults.length; i++) {
     const b = bandResults[i], right = b.answers.filter(Boolean).length;
-    if (right < 4 || zqHasStreak3(b.answers)) return { stop: true, band: b.band, next: 0 };
+    if (right < 3 || zqHasStreak3(b.answers)) return { stop: true, band: b.band, next: 0 };  /* v5：5 题制对<3=温和停 */
     if (ZQ_CAL_PASS[b.band] === undefined) return { stop: true, band: b.band, next: 0 }; /* 带3 答完=结束 */
     if (right < ZQ_CAL_PASS[b.band]) return { stop: true, band: b.band, next: 0 };      /* 未达晋级线=温和停 */
     if (i === bandResults.length - 1) return { stop: false, band: b.band, next: b.band + 1 };

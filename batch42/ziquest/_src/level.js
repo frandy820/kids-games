@@ -463,7 +463,29 @@ function zqMakeApi(q, own) {                     /* own=反馈归属（未注册
     }
   };
 }
+/* v5 异常护栏（2026-10-01 用户 v4.1 死机教训：undefined.slice 炸断推进链，teardown 已清旧题
+   +无新渲染=永久死机——「认完最后一个字画面不动」）。三级恢复：原样重渲染→跳题→强制结算；
+   console.error 留 stack（playwright/家长控制台可取证根因） */
+function zqCrashGuard(e, where) {
+  try { console.error('[zq-crash:' + where + ']', e && e.stack || e); } catch (_) {}
+  const L = ZQ_LV;
+  if (!L) return;
+  L.uiLock = false; L.qLock = false;                /* 双闸释放（锁死=死机体感主因） */
+  try { zqRenderQRaw(); return; } catch (_) {}
+  try {
+    if (L.qi < L.qs.length - 1) { L.qi++; zqRenderQRaw(); return; }
+  } catch (_) {}
+  try { zqFinishFlow(L); } catch (_) {              /* 永不死机兜底：结算+解锁下一关 */
+    const el = document.getElementById('zq-lv');
+    if (el) el.classList.add('hide');
+    try { finishNode(L.key, 1); } catch (_) {}
+  }
+}
 function zqRenderQ() {
+  try { zqRenderQRaw(); }
+  catch (e) { zqCrashGuard(e, 'render'); }
+}
+function zqRenderQRaw() {
   const L = ZQ_LV;
   if (!L) return;
   const q = L.qs[L.qi];
@@ -549,6 +571,10 @@ function zqDimOne(q) {                             /* 阶梯 3：摘 1 干扰（
   }
 }
 async function zqUiRight() {
+  try { return await zqUiRightRaw(); }
+  catch (e) { zqCrashGuard(e, 'right'); return false; }
+}
+async function zqUiRightRaw() {
   const L = ZQ_LV;
   if (!L || L.uiLock || L.qLock) return false;
   const q = L.qs[L.qi], run = L;
@@ -574,7 +600,11 @@ async function zqUiRight() {
   zqRenderQ();
   return ret;
 }
-async function zqUiWrong() {                        /* 错误反馈阶梯（zilearn F2 全套） */
+async function zqUiWrong() {
+  try { return await zqUiWrongRaw(); }
+  catch (e) { zqCrashGuard(e, 'wrong'); return false; }
+}
+async function zqUiWrongRaw() {                     /* 错误反馈阶梯（zilearn F2 全套） */
   const L = ZQ_LV;
   if (!L || L.uiLock || L.qLock) return false;
   const q = L.qs[L.qi], run = L;
@@ -758,11 +788,15 @@ async function zqFinishFlow(L, stars) {
   L.uiLock = true;
   sfx('win');
   if (ZQ_VERIFY) return;                            /* verify 页：引擎判定即止（不弹层不写档） */
-  if (L.finishFlow) { L.finishFlow(st); return; }   /* calib 等动态流自定义收口覆盖点 */
+  if (L.finishFlow) { L.finishFlow(L, st); return; } /* calib 等动态流自定义收口覆盖点
+     （v5 契约修复 2026-10-01：此处旧传 st 单参——zqCalibFinishFlow(L) 形参当关卡对象用，
+     实收数字→L.known.slice() 炸→新档定级收口死机「认完最后字卡住」；verify 页 VERIFY 提前
+     return 测不出，真页 e2e 复现 CDP 栈坐实） */
   zqSettle(L);
   await KIDS.ui.celebrate(st);
   await zqWallShow(L);
   document.getElementById('zq-lv').classList.add('hide');
+  document.getElementById('zq-qbox').innerHTML = '';   /* v5：收口清题面（层 hide 后残留 opt 会招自动化/辅助工具误触） */
   ZQ_LV = null;
   finishNode(L.key, st);                            /* M1 收口：map/币/解锁/迷雾/兔子 hop/persist */
   burst(L.key);

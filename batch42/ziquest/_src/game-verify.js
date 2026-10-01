@@ -174,18 +174,18 @@ async function runVerify() {
     ok('dom', '兔子 L5 + 粒子池 L6 在场', !!document.getElementById('zq-rabbit') && document.querySelectorAll('.zq-fx').length === 12);
   } catch (e) { ok('dom', 'DOM 异常 ' + e.message, false); }
 
-  /* ================= ⑦ 定级停止规则 ================= */
+  /* ================= ⑦ 定级停止规则（v5：5 题/带·PASS 4/4·对<3 温和停） ================= */
   try {
-    const A = n => { const a = []; for (let i = 0; i < 10; i++) a.push(i < n); return a; };
-    const AM = n => { const a = []; for (let i = 0; i < 10; i++) a.push((i * n) % 10 < n); return a; };  /* 对错交错（无连3错干扰晋级线） */
-    ok('calib', '带1 对9 → 进带2', !ZQ._calStop([{ band: 1, answers: [false].concat(A(9)) }]).stop);
-    ok('calib', '带1 对7（达4未达8）→ 温和停', ZQ._calStop([{ band: 1, answers: AM(7) }]).stop);
-    ok('calib', '带1 对3 <4 → 即停', ZQ._calStop([{ band: 1, answers: A(3) }]).stop);
-    const streak = [true, true, true, true, true, false, false, false, true, true];
-    ok('calib', '带内连错 3 → 快速停（对8 也不救）', ZQ._calStop([{ band: 1, answers: streak }]).stop);
-    ok('calib', '带2 对6 → 进带3', !ZQ._calStop([{ band: 1, answers: A(10) }, { band: 2, answers: AM(6) }]).stop);
-    ok('calib', '带2 对5 → 停', ZQ._calStop([{ band: 1, answers: A(10) }, { band: 2, answers: AM(5) }]).stop);
-    ok('calib', '带3 答完 → 结束（next=0）', ZQ._calStop([{ band: 1, answers: A(10) }, { band: 2, answers: A(7) }, { band: 3, answers: A(6) }]).next === 0);
+    const A = n => { const a = []; for (let i = 0; i < 5; i++) a.push(i < n); return a; };
+    const AM = n => { const a = []; for (let i = 0; i < 5; i++) a.push((i * n) % 5 < n); return a; };  /* 对错交错（无连3错干扰晋级线） */
+    ok('calib', '带1 对5 → 进带2', !ZQ._calStop([{ band: 1, answers: A(5) }]).stop);
+    ok('calib', '带1 对3（达3未达4）→ 温和停', ZQ._calStop([{ band: 1, answers: AM(3) }]).stop);
+    ok('calib', '带1 对2 <3 → 即停', ZQ._calStop([{ band: 1, answers: A(2) }]).stop);
+    const streak = [true, true, false, false, false];
+    ok('calib', '带内连错 3 → 快速停（对2也不救）', ZQ._calStop([{ band: 1, answers: streak }]).stop);
+    ok('calib', '带2 对4 → 进带3', !ZQ._calStop([{ band: 1, answers: A(5) }, { band: 2, answers: AM(4) }]).stop);
+    ok('calib', '带2 对3 → 停', ZQ._calStop([{ band: 1, answers: A(5) }, { band: 2, answers: AM(3) }]).stop);
+    ok('calib', '带3 答完 → 结束（next=0）', ZQ._calStop([{ band: 1, answers: A(5) }, { band: 2, answers: A(4) }, { band: 3, answers: A(3) }]).next === 0);
     ok('calib', '空记录 → 带1 起步不叫停', !ZQ._calStop([]).stop && ZQ._calStop([]).next === 1);
   } catch (e) { ok('calib', '定级异常 ' + e.message, false); }
 
@@ -410,22 +410,22 @@ async function runVerify() {
     ok('morning', '早安币=3（ZQ_ECON.morning）', ZQ_ECON.morning === 3);
   } catch (e) { ok('morning', '早安异常 ' + e.message, false); }
 
-  /* ================= ⑰ 定级流程模拟（zqCalibSim：三带/晋级/停止/known 收集） ================= */
+  /* ================= ⑰ 定级流程模拟（zqCalibSim：三带/晋级/停止/known 收集；v5 5 题/带） ================= */
   try {
-    const A = n => { const a = []; for (let i = 0; i < 10; i++) a.push(i < n); return a; };
-    const AM = n => { const a = []; for (let i = 0; i < 10; i++) a.push((i * n) % 10 < n); return a; };
-    ok('calflow', '全对：带1→2→3 全程 30 题 stop',
-      (() => { const r = ZQ._calibSim([A(10), A(10), A(10)]); return r.stop && r.n === 30 && r.band === 3; })());
-    ok('calflow', '带1 答 10 对 3 <4 → 温和停（n=10）',
-      (() => { const r = ZQ._calibSim([A(3)]); return r.stop && r.band === 1 && r.n === 10; })());
-    ok('calflow', '带1 对9 晋带2、带2 答 10 对 5 停（n=20）',
-      (() => { const r = ZQ._calibSim([A(9), AM(5)]); return r.stop && r.band === 2 && r.n === 20; })());
+    const A = n => { const a = []; for (let i = 0; i < 5; i++) a.push(i < n); return a; };
+    const AM = n => { const a = []; for (let i = 0; i < 5; i++) a.push((i * n) % 5 < n); return a; };
+    ok('calflow', '全对：带1→2→3 全程 15 题 stop',
+      (() => { const r = ZQ._calibSim([A(5), A(5), A(5)]); return r.stop && r.n === 15 && r.band === 3; })());
+    ok('calflow', '带1 答 5 对 2 <3 → 温和停（n=5）',
+      (() => { const r = ZQ._calibSim([A(2)]); return r.stop && r.band === 1 && r.n === 5; })());
+    ok('calflow', '带1 对5 晋带2、带2 答 5 对 3 停（n=10）',
+      (() => { const r = ZQ._calibSim([A(5), AM(3)]); return r.stop && r.band === 2 && r.n === 10; })());
     ok('calflow', 'known 只含答对字（池序对位收集）',
       (() => {
-        const pat = [Array.from({ length: 10 }, (v, i) => i % 3 === 0)];   /* i=0/3/6/9 对=4 字（<8 温和停） */
+        const pat = [Array.from({ length: 5 }, (v, i) => i % 3 === 0)];   /* i=0/3 对=2 字（<4 温和停） */
         const r = ZQ._calibSim(pat);
         const easy = ZQ_CAL.meta.bands.easy;
-        return r.stop && r.n === 10 && r.known.join() === [easy[0], easy[3], easy[6], easy[9]].join();
+        return r.stop && r.n === 5 && r.known.join() === [easy[0], easy[3]].join();
       })());
   } catch (e) { ok('calflow', '定级模拟异常 ' + e.message, false); }
 

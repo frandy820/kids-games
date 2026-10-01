@@ -13,8 +13,10 @@
    - zqCalibSim=纯模拟器（verify 定级停止模拟直驱，无 DOM）。 */
 'use strict';
 
-const ZQ_CAL_BAND_LIM = 10;                         /* 每带 ≤10 题（40/30/30 池、上限 30 题） */
-const ZQ_CAL_TOTAL_LIM = 30;
+const ZQ_CAL_BAND_LIM = 5;                          /* 每带 ≤5 题（v5 收紧 2026-10-01 用户 v4.1 试玩反馈
+                                                       「一关 20 多个字太长」——实为定级 30 题长流程体感；
+                                                       5×3 带=上限 15 题约 2 分钟，三带粗筛+SRS 复盘兜底） */
+const ZQ_CAL_TOTAL_LIM = 15;
 const ZQ_CAL_NAMES = ['easy', 'mid', 'hard'];
 
 /* ---------- 纯模拟器（verify 直驱：patterns=每带答案序列 → 停止点/known/n） ---------- */
@@ -44,7 +46,9 @@ function zqCalibNext(L) {                           /* 带池洗牌序出 1 题�
   L.bi++;
   return zqMkQ('t1', ch, 1, L.rnd, L.save);
 }
-function zqCalibFinishFlow(L) {                     /* 收口：写 cal 档+celebrate+finishNode */
+function zqCalibFinishFlow(L, stars) {              /* 收口：写 cal 档+celebrate+finishNode
+   （v5：形参 (L, stars) 对齐 zqFinishFlow 覆盖点新契约——旧单参实收星级数字，
+   L.known.slice() 炸=新档定级收口死机根因，2026-10-01 e2e CDP 栈坐实） */
   const today = zqToday();
   if (!ZQ_VERIFY && SAVE) {
     const z = SAVE.zq;
@@ -54,7 +58,8 @@ function zqCalibFinishFlow(L) {                     /* 收口：写 cal 档+cele
   }
   ZQ_LV = null;
   document.getElementById('zq-lv').classList.add('hide');
-  finishNode(L.key, 1);                             /* calib 完成=1★过点（0 结算币，定级币已即时入账） */
+  document.getElementById('zq-qbox').innerHTML = '';   /* v5：收口清题面（与 zqFinishFlow 同防御——层 hide 后残留 opt 招误触） */
+  finishNode(L.key, stars || 1);                    /* calib 完成=1★过点（0 结算币，定级币已即时入账） */
   if (L.onDone) L.onDone(L.known.slice());
 }
 const ZQ_CALIB = {
