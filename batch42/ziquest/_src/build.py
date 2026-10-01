@@ -229,5 +229,42 @@ process.stdout.write(JSON.stringify(ctx.__T));
 
 
 _gen_data()
-build_lib.build(ROOT, game='ziquest', head_name='game-head.html',
-                verify_block='separate', pre_assemble=_asserts)
+
+
+def _clips32(clips):
+    """v53 瘦身：clips 基 64 换 clips32/<key>.mp3 重编码版（48→32kbps，647 键省 ~3.7MB base64）。
+    源 voice/clips/ 与 manifest 是家族共享真值源禁改——只在此（内存中）替换。
+    clips32 缺键=保持原 clip（老键兜底）；缓存由 tools/gen_clips32.py 生成（进 git，免 ffmpeg 幂等）。"""
+    import base64 as _b64
+    C32 = ROOT / 'data' / 'clips32'
+    if not C32.exists():
+        print('clips32: cache dir missing, skip (run tools/gen_clips32.py)')
+        return clips
+    import re as _re
+    n = 0
+
+    def _sub(m):
+        nonlocal n
+        key, body = m.group(1), m.group(2)
+        p32 = C32 / (key + '.mp3')
+        if not p32.exists() or p32.stat().st_size < 800:
+            return m.group(0)
+        n += 1
+        return '"%s":"data:audio/mpeg;base64,%s"' % (key, _b64.b64encode(p32.read_bytes()).decode('ascii'))
+
+    out = _re.sub(r'"([a-z0-9_]+)":"data:audio/mpeg;base64,([A-Za-z0-9+/=]+)"', _sub, clips)
+    print('clips32: %d keys swapped to 32kbps' % n)
+    return out
+
+
+_html, _out = build_lib.build(ROOT, game='ziquest', head_name='game-head.html',
+                              verify_block='separate', pre_assemble=_asserts, clips_prep=_clips32)
+
+# ===== v53 体积硬门禁（用户实测国内 Pages 80KB/s：13.7MB 手机白屏 3-5 分钟打不开 → 顶 10.5MB） =====
+import shutil as _sh
+_nbytes = len(_html.encode('utf-8'))
+assert _nbytes <= 10_500_000, 'SIZE GATE FAIL: index.html %.2fMB > 10.5MB（查 clips32/pics 体积）' % (_nbytes / 1048576)
+_pics_b = sum(len(v) for v in re.findall(r'"data:image/webp;base64,([A-Za-z0-9+/=]+)"', _html))
+assert _pics_b * 3 / 4 <= 1_300_000, 'PICS BUDGET FAIL: webp 总量 %.0fKB > 1300KB（138 张×~6KB 预算）' % (_pics_b * 3 / 4 / 1024)
+print('SIZE GATE: %.2fMB ≤ 10.5MB ✓  pics %.0fKB ≤ 1300KB ✓' % (_nbytes / 1048576, _pics_b * 3 / 4 / 1024))
+_sh.copy(ROOT / 'sw.js', _out.parent / 'sw.js')          # SW 随产物落同目录（scope=目录级）

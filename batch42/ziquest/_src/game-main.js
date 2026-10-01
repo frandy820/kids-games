@@ -450,3 +450,17 @@ window.ZQ = {
   _centerOn: centerOn,
   _today: zqToday,
 };
+
+/* v53：收启动 loading 屏（#zq-loading 纯 CSS 零 JS——收尾+SW 注册集中在此，幂等） */
+window.__zqLoadingDone = window.__zqLoadingDone || function () {
+  var b = document.getElementById('zq-loading');
+  if (b && !b.classList.contains('done')) {
+    b.classList.add('done');
+    setTimeout(function () { if (b.parentNode) b.parentNode.removeChild(b); }, 450);
+  }
+  try {
+    if (location.protocol.indexOf('http') === 0 && navigator.serviceWorker)
+      navigator.serviceWorker.register('./sw.js').catch(function () {});
+  } catch (e) {}
+};
+window.__zqLoadingDone();

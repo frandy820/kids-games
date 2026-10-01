@@ -619,6 +619,7 @@ async function runVerify() {
   const el = document.getElementById('verify-result');
   if (el) el.textContent = JSON.stringify(res, null, 1);
   document.title = npass === total ? 'VERIFY PASS ' + npass + '/' + total : 'VERIFY FAIL';
+  if (window.__zqLoadingDone) window.__zqLoadingDone();   /* v53：verify 完成同收 loading（main 已定义） */
 }
 
 if (VERIFY) { runVerify(); }

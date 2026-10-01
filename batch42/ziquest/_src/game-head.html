@@ -126,6 +126,39 @@ svg{display:block}
 </style>
 </head>
 <body>
+<!-- ========== 启动 loading 屏（v53：13MB 单文件国内 80KB/s 首载 2-3 分钟白屏 → 流式渲染
+     此层在一切大 script 之前，浏览器收到前几 KB 即渲染。零 JS 纯 CSS（script 块数==4
+     双断言不动）：文案 5 条 CSS 轮换 / 慢网提示 15s 后淡入 / 收尾+SW 注册由 game-main
+     与 game-verify 尾部内联（__zqLoadingDone 幂等）。 ========== -->
+<div id="zq-loading" aria-label="正在加载">
+<style>
+#zq-loading{position:fixed;inset:0;z-index:99;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:18px;background:#FBF6EC;transition:opacity .35s ease}
+#zq-loading.done{opacity:0;pointer-events:none}
+#zq-loading .bun{width:120px;height:120px;animation:zq-ld-hop 1.1s ease-in-out infinite}
+@keyframes zq-ld-hop{0%,100%{transform:translateY(0) scale(1,1)}30%{transform:translateY(-22px) scale(.97,1.04)}
+  60%{transform:translateY(0) scale(1.1,.88)}80%{transform:translateY(-7px) scale(.99,1.01)}}
+#zq-loading .bar{width:min(64vw,300px);height:16px;border:2.5px solid #4A3B2E;border-radius:12px;
+  background:#FFF9EE;overflow:hidden;box-shadow:inset 0 2px 0 rgba(255,255,255,.9)}
+#zq-loading .bar i{display:block;height:100%;width:38%;border-radius:9px;
+  background:linear-gradient(180deg,#F2A96B,#E8975A);animation:zq-ld-run 1.15s ease-in-out infinite}
+@keyframes zq-ld-run{0%{transform:translateX(-110%)}100%{transform:translateX(280%)}}
+#zq-loading .txt{position:relative;width:100%;height:30px;text-align:center;font-size:21px;font-weight:800;color:#4A3B2E}
+#zq-loading .txt span{position:absolute;left:0;right:0;opacity:0;animation:zq-ld-txt 15s linear infinite}
+#zq-loading .txt span:nth-child(2){animation-delay:3s}
+#zq-loading .txt span:nth-child(3){animation-delay:6s}
+#zq-loading .txt span:nth-child(4){animation-delay:9s}
+#zq-loading .txt span:nth-child(5){animation-delay:12s}
+@keyframes zq-ld-txt{0%,19%{opacity:1}20%,100%{opacity:0}}   /* 每 3s 换一条（1/5 占空比） */
+#zq-loading .slow{opacity:0;font-size:14px;color:#B0684A;max-width:78vw;text-align:center;line-height:1.6;
+  animation:zq-ld-slow .6s ease 15s forwards}                /* 15s 未完成=慢网，淡入提示（防家长以为坏了） */
+@keyframes zq-ld-slow{to{opacity:1}}
+</style>
+<div class="bun"><svg viewBox="0 0 96 96" aria-hidden="true"><ellipse cx="48" cy="18" rx="9" ry="17" fill="#FFFDF6" stroke="#4A3B2E" stroke-width="3" transform="rotate(-9 48 18)"/><ellipse cx="66" cy="20" rx="9" ry="16" fill="#FFE9D8" stroke="#4A3B2E" stroke-width="3" transform="rotate(13 66 20)"/><circle cx="48" cy="55" r="27" fill="#FFFDF6" stroke="#4A3B2E" stroke-width="3"/><circle cx="39" cy="52" r="3.4" fill="#4A3B2E"/><circle cx="58" cy="52" r="3.4" fill="#4A3B2E"/><path d="M43 63q5 5 10 0" stroke="#4A3B2E" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="31" cy="61" r="4" fill="#F2B8C6" opacity=".8"/><circle cx="66" cy="61" r="4" fill="#F2B8C6" opacity=".8"/></svg></div>
+<div class="bar"><i></i></div>
+<div class="txt"><span>小兔子正在准备…</span><span>字卡装进小背包…</span><span>地图慢慢铺开…</span><span>小星星排好队…</span><span>萝卜汤咕嘟咕嘟…</span></div>
+<div class="slow">加载有点慢，多半是网络在努力跑——<br>可以等一会儿，或关掉后重新打开再试</div>
+</div>
 <!-- 建设中占位 overlay（M1：点可玩节点出此层并写档测试位；M2 换成真关卡入口） -->
 <div id="zq-build" class="zq-ov hide" aria-label="建设中">
   <div class="box">

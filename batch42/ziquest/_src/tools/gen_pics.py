@@ -28,7 +28,7 @@ QUOTA_WAIT = 'F:/claudecode/output/ziquest/work/pics-quota-wait.json'
 GAP_S = 20                    # 单发间隔（避风控家族口径）
 POLL_MAX_S = 150              # 单张生成轮询上限
 HARD_TIMEOUT_S = 180          # 单字硬超时（含取图+压缩）
-BUDGET_BYTES = 10240          # WebP ≤10KB
+BUDGET_BYTES = 6144           # WebP ≤6KB（v53 瘦身：320px 档，59 张实测 avg 3.5KB）
 
 PROMPT = (u'儿童绘本卡通插画风格的一个%s，明快可爱的暖色调配色，圆润造型带柔和渐变和高光，'
           u'纯白色背景，单个物体居中构图，画面中绝对不要出现任何文字、字母或数字')
@@ -81,7 +81,7 @@ def compress(ch, raw_path):
     im = im.crop(((w - s) // 2, (h - s) // 2, (w + s) // 2, (h + s) // 2))
     im = im.resize((512, 512), Image.LANCZOS)
     out = os.path.join(PICS, ch + '.webp')
-    for size, q in [(512, 62), (512, 55), (448, 50), (384, 45), (320, 40)]:
+    for size, q in [(320, 58), (320, 50), (288, 45), (256, 40)]:   # v53：320px 起步（幼儿屏显示 ≤300px 够清晰）
         im2 = im.resize((size, size), Image.LANCZOS) if size != 512 else im
         im2.save(out, 'WEBP', quality=q, method=6)
         if os.path.getsize(out) <= BUDGET_BYTES:
