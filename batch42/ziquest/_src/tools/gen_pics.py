@@ -116,12 +116,23 @@ def probe_quota(pg):
         # 深夜跨日判断在写入方（2026-10-01 03:49 教训：watchdog 读侧曾按 remain∈(-23h,0)
         # 自动 +86400，把「到点该恢复」误判跨日推到明天，白等 6h）：20 点后页面说「今日
         # HH:MM」而该时刻已过 → 实为明天，写入时写对；watchdog 只信文件到点即拉
+        stale = False
         try:
             t0 = time.mktime(time.strptime(ts, '%Y-%m-%d %H:%M'))
             if time.localtime().tm_hour >= 20 and t0 < time.time():
                 ts = time.strftime('%Y-%m-%d %H:%M', time.localtime(t0 + 86400))
+            elif t0 < time.time() - 20 * 60:
+                # 文案时刻已过 >20min=额度真尽但页面残留旧文案（2026-10-01 18:0x 死循环：
+                # 每轮写到点的 17:52→watchdog 清→拉起→又写。真恢复点未知）→ 写 now+60min
+                # 探测重试点（届时试跑一张，又尽则顺延），不采信过期文案
+                stale = True
         except Exception:
             pass
+        if stale:
+            ts = time.strftime('%Y-%m-%d %H:%M', time.localtime(time.time() + 3600))
+            io.open(QUOTA_WAIT, 'w', encoding='utf-8').write(ts)
+            log('QUOTA exhausted (stale text %s ignored), probe retry at %s -> exit 3' % (m, ts))
+            os._exit(3)
         io.open(QUOTA_WAIT, 'w', encoding='utf-8').write(ts)
         log('QUOTA exhausted, resumes at %s -> exit 3 (watchdog will re-launch)' % ts)
         os._exit(3)
