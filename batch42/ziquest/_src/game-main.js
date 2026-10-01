@@ -209,8 +209,7 @@ function buildMap() {
     flag.innerHTML = '<path d="M18 -46v-22h20l-5 6l5 6h-14v10z" fill="#E8975A" stroke="#4A3B2E" stroke-width="2.6" stroke-linejoin="round"/>';
     const stars = svgEl('g', { class: 'zq-stars' }, g);
     stars.innerHTML = '<g id="stars-' + n.key + '" transform="translate(0,44)"></g>';
-    svgEl('circle', { r: '60', class: 'zq-hit' }, g);                   /* 触摸热区（viewBox 60r→平板竖屏≈96px） */
-    g.addEventListener('click', () => tapNode(n.key));
+    svgEl('circle', { r: '44', class: 'zq-hit' }, g);   /* 触摸热区（v54：44r 贴视觉底盘 45；点击归属改 bindPan view 级最近节点仲裁——节点最小间距 30svg 曾致 hit 圆互相盖住邻居，点 A 进 B） */
     NODE_ELS[n.key] = g;
   });
   rabbitG = svgEl('g', { id: 'zq-rabbit' }, svgRoot); /* L5 兔子 + 落地影 + 装扮槽占位（M4 叠加渲染锚） */
@@ -226,6 +225,24 @@ function buildMap() {
     fxPool.push({ h: h, p: p });
   }
   worldEl.appendChild(svgRoot);
+  /* v54：收集三入口接线（M4 未建——先建设中占位弹层，杜绝无响应死按钮；
+     同 showBuild 弹层复用，文案分入口） */
+  [['zq-dex', '汉字图鉴', '图鉴小书正在装订，小兔子先帮你记着字啦'],
+   ['zq-home', '兔子家园', '家园小屋正在装修，小兔子先帮你攒金币啦'],
+   ['zq-comp', '伙伴小屋', '小伙伴还在路上，先把识字冒险走下去吧']].forEach(pair => {
+    const b = $id(pair[0]);
+    if (!b) return;
+    b.addEventListener('click', () => {
+      const ov = $id('zq-build');
+      $id('zq-build-bunny').innerHTML = KIDS.assets.rabbit('happy', 110);
+      $id('zq-build-name').textContent = pair[1] + '·建设中';
+      $id('zq-build-tip').textContent = pair[2];
+      ov.classList.remove('hide');
+      KIDS.voice.play('zq_map_open');
+      clearTimeout(buildTimer);
+      buildTimer = setTimeout(() => ov.classList.add('hide'), ZQ_T.OVERLAY_MS);
+    });
+  });
 }
 
 /* ================= 状态刷（节点 4 态 class / 迷雾 / 星数 / 兔子站位 / HUD） ================= */
@@ -266,14 +283,19 @@ function refreshHud() {
 
 /* ================= 视口平移：wrapper 单 transform + 当前节点居中 + 触摸拖动 ================= */
 let VW = 0, VH = 0;
+const mapScale = () => VW * (VW < 640 ? 1.9 : 1) / ZQ_MAP.meta.canvas.w;
+/* v54：窄屏（手机竖屏 <640px）地图 1.9× 放大浏览——1000 宽 SVG 满幅映射下节点视觉仅
+   34px、最小间距 11px，手指（≈40px）无法精准（2026-10-01 家长实测「圈圈挨太紧、点了
+   就覆盖」）。放大后横向放开拖动，clamp 双向；平板/横屏维持 1× 满幅不变。 */
 function worldSize() {
   const v = $id('zq-view');
   VW = v.clientWidth; VH = v.clientHeight;
+  worldEl.style.width = (ZQ_MAP.meta.canvas.w * mapScale()) + 'px';   /* svg width:100% 随 world 撑开 */
 }
 function centerOn(key, animate) {
-  const n = ZQ_NODE[key], scale = VW / ZQ_MAP.meta.canvas.w, H = VW * ZQ_MAP.meta.canvas.h / ZQ_MAP.meta.canvas.w;
+  const n = ZQ_NODE[key], scale = mapScale(), H = ZQ_MAP.meta.canvas.h * scale;
   let tx = VW / 2 - n.x * scale, ty = VH * 0.46 - n.y * scale;
-  tx = Math.min(0, Math.max(VW - VW, tx));           /* 横向：1000 宽=满幅，tx 恒 0（纵向长卷） */
+  tx = Math.min(0, Math.max(VW - ZQ_MAP.meta.canvas.w * scale, tx));  /* v54：横向双向 clamp（窄屏放大后可拖） */
   ty = Math.min(0, Math.max(VH - H, ty));
   if (!animate) worldEl.classList.add('drag');
   worldEl.style.transform = 'translate3d(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px,0)';
@@ -281,27 +303,43 @@ function centerOn(key, animate) {
 }
 function bindPan() {
   const view = $id('zq-view');
-  let sx = 0, sy = 0, tx0 = 0, ty0 = 0, moved = false, tyCur = 0;
+  let sx = 0, sy = 0, tx0 = 0, ty0 = 0, moved = false;
   const readT = () => {
     const m = /translate3d\((-?[\d.]+)px,\s*(-?[\d.]+)px/.exec(worldEl.style.transform || '');
     return m ? { x: +m[1], y: +m[2] } : { x: 0, y: 0 };
   };
   view.addEventListener('pointerdown', e => {
-    const t = readT(); tx0 = t.x; ty0 = t.y; tyCur = t.y; sx = e.clientX; sy = e.clientY; moved = false;
+    const t = readT(); tx0 = t.x; ty0 = t.y; sx = e.clientX; sy = e.clientY; moved = false;
     worldEl.classList.add('drag');
   });
   view.addEventListener('pointermove', e => {
     if (worldEl.classList.contains('drag') && e.buttons) {
-      const scale = VW / ZQ_MAP.meta.canvas.w, H = VW * ZQ_MAP.meta.canvas.h / ZQ_MAP.meta.canvas.w;
-      let ty = Math.min(0, Math.max(VH - H, ty0 + (e.clientY - sy)));
-      worldEl.style.transform = 'translate3d(0px,' + ty.toFixed(1) + 'px,0)';
-      if (Math.abs(e.clientY - sy) > 10) moved = true;
-      tyCur = ty;
+      const scale = mapScale(), H = ZQ_MAP.meta.canvas.h * scale;
+      const tx = Math.min(0, Math.max(VW - ZQ_MAP.meta.canvas.w * scale, tx0 + (e.clientX - sx)));
+      const ty = Math.min(0, Math.max(VH - H, ty0 + (e.clientY - sy)));
+      worldEl.style.transform = 'translate3d(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px,0)';
+      if (Math.abs(e.clientX - sx) > 10 || Math.abs(e.clientY - sy) > 10) moved = true;
     }
   });
-  const end = () => { worldEl.classList.remove('drag'); setTimeout(() => { moved = false; }, 30); };
-  view.addEventListener('pointerup', end);
-  view.addEventListener('pointercancel', end);
+  /* v54 点击仲裁：重叠区归属=距指尖最近的节点（<48svg≈视觉底盘），替代 per-node g.click
+     的「绘制在上者胜」——节点最小间距 30svg 时 hit 圆完全盖住邻居，点 A 进 B 的根因。 */
+  view.addEventListener('pointerup', e => {
+    worldEl.classList.remove('drag');
+    const settle = () => setTimeout(() => { moved = false; }, 30);
+    if (moved) { settle(); return; }
+    const scale = mapScale(), vr = view.getBoundingClientRect(), t = readT();
+    const px = (e.clientX - vr.left - t.x) / scale, py = (e.clientY - vr.top - t.y) / scale;
+    let best = null, bd = 48;
+    ZQ_NODES.forEach(n => {
+      const d = Math.hypot(n.x - px, n.y - py);
+      if (d < bd) { bd = d; best = n; }
+    });
+    if (best) tapNode(best.key);
+    settle();
+  });
+  view.addEventListener('pointercancel', () => {
+    worldEl.classList.remove('drag'); setTimeout(() => { moved = false; }, 30);
+  });
   return { wasDrag: () => moved };
 }
 
@@ -337,10 +375,11 @@ function nodeLabel(n) {
   if (n.type === 'new') return n.label;
   return (ZQ_MAP.meta.nodeTypes[n.type] || '冒险点') + '·' + n.label;
 }
-function showBuild(node) {
+function showBuild(node, tip) {
   const ov = $id('zq-build');
   $id('zq-build-bunny').innerHTML = KIDS.assets.rabbit('happy', 110);
   $id('zq-build-name').textContent = nodeLabel(node);
+  $id('zq-build-tip').textContent = tip || '这一关正在装修，小兔子先帮你记下进度啦';
   ov.classList.remove('hide');
   KIDS.voice.play('zq_map_open');
   clearTimeout(buildTimer);
