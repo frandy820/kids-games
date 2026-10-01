@@ -38,6 +38,7 @@ PROMPT = (u'儿童绘本卡通插画风格的一个%s，明快可爱的暖色调
 # 具象化特例（雪→雪景、雾→山间雾气）；word 级特例兜底（土地→泥土田地）
 _STRIP_PREFIX = u'下大看开上白青早小灰'
 _W_SPECIAL = {u'土地': u'泥土田地', u'沙子': u'一堆沙子', u'屋子': u'一座小屋',
+              u'葡萄': u'一串紫色葡萄',   # 2026-10-01 VLM 抽检：「一个葡萄」画成单颗浆果（似李子），须「一串」诱导成簇
               u'青蛙': u'一只青蛙', u'发芽': u'一颗发芽的种子', u'画画': u'儿童蜡笔画',
               u'食盐': u'一袋食用盐', u'宝贝': u'一个可爱的宝宝', u'客人': u'来做客的小朋友'}
 _S_SPECIAL = {u'雪': u'雪景', u'雾': u'山间的雾气', u'海': u'大海', u'江': u'江河', u'湖': u'湖泊',
@@ -111,9 +112,18 @@ def probe_quota(pg):
     except Exception:
         return False
     if m:
-        io.open(QUOTA_WAIT, 'w', encoding='utf-8').write(
-            time.strftime('%Y-%m-%d ') + m)
-        log('QUOTA exhausted, resumes at %s -> exit 3 (watchdog will re-launch)' % m)
+        ts = time.strftime('%Y-%m-%d ') + m
+        # 深夜跨日判断在写入方（2026-10-01 03:49 教训：watchdog 读侧曾按 remain∈(-23h,0)
+        # 自动 +86400，把「到点该恢复」误判跨日推到明天，白等 6h）：20 点后页面说「今日
+        # HH:MM」而该时刻已过 → 实为明天，写入时写对；watchdog 只信文件到点即拉
+        try:
+            t0 = time.mktime(time.strptime(ts, '%Y-%m-%d %H:%M'))
+            if time.localtime().tm_hour >= 20 and t0 < time.time():
+                ts = time.strftime('%Y-%m-%d %H:%M', time.localtime(t0 + 86400))
+        except Exception:
+            pass
+        io.open(QUOTA_WAIT, 'w', encoding='utf-8').write(ts)
+        log('QUOTA exhausted, resumes at %s -> exit 3 (watchdog will re-launch)' % ts)
         os._exit(3)
     return True
 
