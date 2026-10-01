@@ -272,6 +272,8 @@ function refreshMap(anim) {
   refreshHud();
   return { cur: cur, fogOpened: openedFog };
 }
+const ZQ_GOAL_N = 3;                                 /* v56 每日目标：3 个新字关（纯展示收束感，不阻断） */
+const STAR_ON = '<svg viewBox="0 0 24 24"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z" fill="#F5C445" stroke="#4A3B2E" stroke-width="1.8" stroke-linejoin="round"/></svg>';
 function refreshHud() {
   const sv = zSave();
   let stars = 0;
@@ -279,6 +281,14 @@ function refreshHud() {
   $id('zq-coin-n').textContent = sv.zq.coins;
   $id('zq-star-n').textContent = stars;
   $id('zq-today').textContent = '第 ' + zqDayIndex(sv, zqToday()) + ' 天';
+  const goal = $id('zq-goal');
+  if (goal) {
+    const done = Math.min(ZQ_GOAL_N, zqNewSpent(sv, zqToday()));
+    let gs = '';
+    for (let i = 0; i < ZQ_GOAL_N; i++) gs += '<span class="g' + (i < done ? '' : ' off') + '">' + STAR_ON + '</span>';
+    goal.innerHTML = '今日冒险 ' + gs + '<span class="fin">完成啦！</span>';
+    goal.classList.toggle('full', done >= ZQ_GOAL_N);
+  }
 }
 
 /* ================= 视口平移：wrapper 单 transform + 当前节点居中 + 触摸拖动 ================= */
@@ -438,10 +448,25 @@ function patchParentPanel() {
     if (!box) return;
     const st = zqStats();
     const div = document.createElement('div');
-    div.innerHTML = '<div style="font-size:15px;font-weight:700;margin-top:10px">冒险进度</div><table>' +
-      '<tr><td>已点亮地图站</td><td>' + Object.keys(zSave().zq.map).length + ' / 130</td></tr>' +
-      '<tr><td>星星 / 金币</td><td>' + st.stars + ' / ' + st.coins + '</td></tr>' +
-      '<tr><td>今日新字关</td><td>' + st.todayNew + ' 关</td></tr></table>';
+    /* v56 详版：在原冒险进度表后追加今日新学字/累计掌握/到期复习/薄弱字（家长核心四问） */
+    const sv = zSave(), z = sv.zq, today = zqToday();
+    const dl = (z.dayLog && z.dayLog[today]) || { nodes: [], newDone: [] };
+    const all = Object.keys(z.dex), mastered = all.filter(c => z.dex[c].st >= 2);
+    const weakChars = z.weak || [];
+    const dueToday = all.filter(c => z.dex[c].due && z.dex[c].due <= today);
+    let todayChars = [];
+    dl.newDone.forEach(k => { zqNodeChars(k, sv).forEach(c => { if (todayChars.indexOf(c) < 0) todayChars.push(c); }); });
+    const chCells = (arr, weak) => arr.map(c =>
+      '<span' + (weak ? ' class="w"' : '') + '>' + c + (weak ? '<i>×' + (z.dex[c] ? z.dex[c].miss : '?') + '</i>' : '') + '</span>').join('');
+    div.innerHTML = '<div style="font-size:15px;font-weight:700;margin-top:10px">识字进度（第 ' + zqDayIndex(sv, today) + ' 天）</div>' +
+      '<div class="zq-pstats">' +
+      '<div class="prow"><span>今日新学 <b>' + todayChars.length + '</b> 字 · 完成关卡 <b>' + dl.nodes.length + '</b></span>' +
+      '<span>已学 <b>' + all.length + '</b>/378 · 掌握 <b>' + mastered.length + '</b></span></div>' +
+      '<div class="chars">' + (todayChars.length ? chCells(todayChars) : '今天还没开始学新字') + '</div>' +
+      '<h4>今日到期复习 ' + dueToday.length + ' 字（地图「复习营地」可强化）</h4>' +
+      '<div class="chars">' + (dueToday.length ? chCells(dueToday.slice(0, 40)) : '今天没有到期复习') + '</div>' +
+      '<h4>薄弱字 ' + weakChars.length + ' 个（红底=反复错，建议陪玩）</h4>' +
+      '<div class="chars">' + (weakChars.length ? chCells(weakChars, true) : '暂无薄弱字，学得很稳！') + '</div></div>';
     const close = box.querySelector('.k-close');
     box.insertBefore(div, close);
   };

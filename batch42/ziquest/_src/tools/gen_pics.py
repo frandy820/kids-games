@@ -222,7 +222,9 @@ def run():
                 fail_streak = 0
             else:
                 fail_streak += 1
-                if fail_streak >= 2:
+                # fetch-fail 立即 probe（2026-10-01 20:37 教训：额度尽错误卡带图 src→seen0 假阳性
+                # found→fetch 空。fetch-fail 是额度尽最高频伪装，立即探一次少浪费一整轮轮询）
+                if res.startswith('fetch-fail') or fail_streak >= 2:
                     probe_quota(pg)             # fetch-fail 症状的额度尽也兜住
                 if res == 'page-lost':
                     browser, pg = probe_alive(pw)

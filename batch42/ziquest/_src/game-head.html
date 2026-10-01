@@ -115,6 +115,30 @@ svg{display:block}
   font-size:16px;font-weight:700;transition:transform .3s ease;pointer-events:none}
 #zq-toast.show{transform:translate(-50%,0)}
 
+/* ===== 每日目标条（v56：今日冒险 N 关星槽——给当日收束感；达成不阻断继续玩） ===== */
+#zq-goal{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:6;
+  display:flex;align-items:center;gap:8px;background:linear-gradient(180deg,#FFFDF6,#FFF1D8);
+  border:2.5px solid #4A3B2E;border-radius:18px;
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.95),0 3px 0 #D8C9B4;padding:4px 14px;
+  font-size:15px;font-weight:800;white-space:nowrap;pointer-events:none}
+#zq-goal .g{width:22px;height:22px;flex:0 0 22px}
+#zq-goal .g svg{width:22px;height:22px;display:block}
+#zq-goal .g.off svg{opacity:.28;filter:grayscale(1)}
+#zq-goal.full{background:linear-gradient(180deg,#FFF3C9,#FFE9A8)}
+#zq-goal .fin{display:none;font-size:13px;color:#8A6A1F}
+#zq-goal.full .fin{display:inline}
+
+/* ===== v56 识字进度块：注入家族家长面板（.k-panel 打开时 MutationObserver 塞入，零家族改动） ===== */
+.zq-pstats{margin-top:10px;font-size:14.5px;line-height:1.65}
+.zq-pstats h4{margin:10px 0 3px;font-size:14px;color:#8A6A1F;border-bottom:2px dashed #E5D5BC;padding-bottom:2px}
+.zq-pstats .prow{display:flex;justify-content:space-between;gap:10px}
+.zq-pstats .prow b{font-size:16px}
+.zq-pstats .chars{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.zq-pstats .chars span{width:32px;height:32px;border:2px solid #4A3B2E;border-radius:8px;background:#FFF;
+  display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;position:relative}
+.zq-pstats .chars span.w{background:#FDE7E0}
+.zq-pstats .chars span.w i{position:absolute;right:-4px;top:-6px;font-style:normal;font-size:10.5px;color:#C0492F}
+
 @media (orientation:portrait){
   #zq-hud{flex:0 0 48px}
   .zq-pill{font-size:16px;padding:4px 11px}
@@ -174,7 +198,8 @@ svg{display:block}
     <div class="zq-pill" aria-label="星星"><svg viewBox="0 0 24 24"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z" fill="#F5C445" stroke="#4A3B2E" stroke-width="1.8" stroke-linejoin="round"/></svg><b id="zq-star-n">0</b></div>
     <div class="zq-pill" id="zq-today" aria-label="冒险天数">第 1 天</div>
   </div>
-  <div id="zq-view"><div id="zq-world"></div></div>
+  <div id="zq-view"><div id="zq-world"></div>
+  <div id="zq-goal" aria-label="今日冒险目标"></div></div>
   <div id="zq-dock">
     <button class="zq-dock-btn" id="zq-dex" aria-label="汉字图鉴"><svg viewBox="0 0 48 48"><rect x="8" y="6" width="32" height="36" rx="4" fill="#F2B8C6" stroke="#4A3B2E" stroke-width="2.6"/><path d="M15 15h18M15 22h18M15 29h12" stroke="#4A3B2E" stroke-width="2.6" stroke-linecap="round"/></svg><span>图鉴</span></button>
     <button class="zq-dock-btn" id="zq-home" aria-label="兔子家园"><svg viewBox="0 0 48 48"><path d="M8 26L24 11l16 15v14a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2z" fill="#8FBF7F" stroke="#4A3B2E" stroke-width="2.6" stroke-linejoin="round"/><rect x="19" y="29" width="10" height="12" rx="2" fill="#FBF6EC" stroke="#4A3B2E" stroke-width="2.4"/></svg><span>家园</span></button>
