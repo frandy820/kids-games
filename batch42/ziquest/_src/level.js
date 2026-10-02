@@ -86,8 +86,26 @@ function zqNodeChars(key, save) {
   const cal = save && save.zq && save.zq.cal && save.zq.cal.done || [];
   const ks = {}; cal.forEach(function (c) { ks[c] = 1; });
   const pool = zqClusterPool(m.region, zqRegionChars(m.region).filter(function (c) { return !ks[c.ch]; }));
-  const a = Math.floor(m.idx * pool.length / m.total), b = Math.floor((m.idx + 1) * pool.length / m.total);
-  return pool.slice(a, Math.max(a + 1, b)).map(function (c) { return c.ch; });
+  /* v58 编排律：words[0] 相同的相邻字=词原子（葡+萄=「葡萄」）不拆关——floor 均分切点落在
+     order 相邻的词组字中间会拆进两关（R4 葡萄实证，同词次日重教=重复感）。切点右吸附原子
+     边界（词组字整体归右桶）；纯切点计算=确定性保持（同存档态两跑同组，早安营地依据稳定） */
+  const bounds = { '0': 1 };
+  let acc = 0, lastW = null, curN = 0;
+  pool.forEach(function (c, i) {
+    const w = ZQ_CH_ENT[c.ch].words[0][0];
+    if (w === lastW) curN++; else { acc += curN; curN = 1; lastW = w; }
+    if (i === pool.length - 1 || (pool[i + 1] && ZQ_CH_ENT[pool[i + 1].ch].words[0][0] !== w)) {
+      bounds[String(acc + curN)] = 1;
+    }
+  });
+  function cut(idx) {                               /* 节点切点：floor 位置→右侧最近原子边界 */
+    if (idx >= m.total) return pool.length;
+    let x = Math.floor(idx * pool.length / m.total);
+    while (x < pool.length && !bounds[String(x)]) x++;
+    return x;
+  }
+  const a = cut(m.idx), b = Math.max(cut(m.idx + 1), a + 1);
+  return pool.slice(a, Math.min(b, pool.length)).map(function (c) { return c.ch; });
 }
 
 /* ---------- C. 题目构造（q 对象=接口契约；选项乱序种子驱动） ---------- */
@@ -158,6 +176,17 @@ function zqHasSent(ch) {                           /* R2+ 末字句题 debut：Z
   }
   return false;
 }
+/* v58 编排律：同字判定位禁背靠背（t1 刚教马上考=零间隔提取，测量失真+重复感主源）。
+   两轮分段（t1 段 chars 序 / L2 段反向）+ L2 末位换回末字（t5 关尾运用位语义不变）。
+   注：相邻异型交替与「t1 先 L2 后」不可兼得（交替结构下 L2 序唯一解=恒等序=背靠背），
+   故律2 断言升级为同字间隔律（verify ⑨ 同步）。 */
+function zqL2Order(n) {
+  const ord = [];
+  for (let i = n - 1; i >= 0; i--) ord.push(i);    /* 反向：同字最小间隔最大化（≥2） */
+  const li = ord.indexOf(n - 1);
+  if (li !== n - 1) { const t = ord[n - 1]; ord[n - 1] = n - 1; ord[li] = t; }
+  return ord;
+}
 function zqGenNew(key, save, today, rnd) {
   const n = ZQ_NODE[key], m = ZQ_NEWIDX[key];
   const chars = zqNodeChars(key, save);
@@ -166,10 +195,13 @@ function zqGenNew(key, save, today, rnd) {
   chars.forEach(function (ch) {                    /* 开场 T2 逐字亮相（judge:false 演出位） */
     const q = zqMkQ('t2', ch, n.region, rnd, save); q.judge = false; zqPushQ(qs, q);
   });
-  chars.forEach(function (ch, i) {                 /* 5 字×2 判定位交错：认识 T1 → 辨认 T4/T6；R2+ 末字有句=T5（运用层关后半，律5 ≤2） */
+  chars.forEach(function (ch) {                    /* 认识 T1 段（同型块=指令稳定，大班低负荷热身） */
     zqPushQ(qs, zqMkQ('t1', ch, n.region, rnd, save));
-    var L2 = i % 2 ? 't6' : 't4';
-    if (n.region >= 2 && i === chars.length - 1 && zqHasSent(ch)) L2 = 't5';
+  });
+  zqL2Order(chars.length).forEach(function (ci, k) { /* 辨认 T4/T6 段（反向错开，同字隔 ≥2 题）；R2+ 末字有句=T5（运用层关后半，律5 ≤2） */
+    const ch = chars[ci];
+    var L2 = k % 2 ? 't6' : 't4';
+    if (n.region >= 2 && k === chars.length - 1 && zqHasSent(ch)) L2 = 't5';
     zqPushQ(qs, zqMkQ(L2, ch, n.region, rnd, save));
   });
   return { key: key, node: n, kind: 'new', region: n.region, chars: chars, qs: qs, qi: 0,
@@ -792,6 +824,11 @@ async function zqFinishFlow(L, stars) {
      （v5 契约修复 2026-10-01：此处旧传 st 单参——zqCalibFinishFlow(L) 形参当关卡对象用，
      实收数字→L.known.slice() 炸→新档定级收口死机「认完最后字卡住」；verify 页 VERIFY 提前
      return 测不出，真页 e2e 复现 CDP 栈坐实） */
+  /* v58 关尾集中跟读：本关字逐字大声读（不可跳过），读完才进星结算屏——开口练习+仪式感；
+     跟读表现不进星级判定（星级仍由答题 miss 定）。仅 new 关（boss=战斗节奏/营地自有收口） */
+  if (L.kind === 'new' && window.ZQ && ZQ.RA && L.chars && L.chars.length) {
+    await new Promise(function (done) { ZQ.RA.round(L.chars, done); });
+  }
   zqSettle(L);
   await KIDS.ui.celebrate(st);
   await zqWallShow(L);
@@ -845,6 +882,7 @@ window.ZQ._engPick = zqEngPick;
 window.ZQ._engAnswer = zqEngAnswer;
 window.ZQ._stars = zqStars;
 window.ZQ._nodeChars = zqNodeChars;
+window.ZQ._l2Order = zqL2Order;                    /* v58 编排律：verify 段式编排直驱钩子 */
 window.ZQ._catTitle = zqLvCatTitle;                 /* v4 P1：verify 聚簇/主题化断言钩子 */
 window.ZQ._mkQ = zqMkQ;
 window.ZQ._lvState = function () {

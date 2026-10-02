@@ -37,7 +37,7 @@ def _assemble_flow(S):
     def _rd(n):
         return (ROOT / n).read_text(encoding='utf-8')
     parts = [_rd('level.js'), _rd('calib.js'), _rd('camp.js'), _rd('storycard.js'),
-             _rd('dex.js'), _rd('home.js'), _rd('comp.js')]
+             _rd('dex.js'), _rd('home.js'), _rd('comp.js'), _rd('readaloud.js')]
     qdir = ROOT / 'qtypes'
     n_qt = 0
     if qdir.is_dir():
@@ -197,6 +197,7 @@ process.stdout.write(JSON.stringify(ctx.__T));
         ('dex.js', ['ZQ.Dex', 'zq_ch_', 'ZQ_PICS', 'zq-dex-grid']),
         ('home.js', ['ZQ.Home', 'zq-dress-slot', 'ZQ_CATALOG.items', 'syncMapDress']),
         ('comp.js', ['ZQ.Comp', 'grant', 'zq-pet', 'zq-comp-grid']),
+        ('readaloud.js', ['ZQ.RA', 'webkitSpeechRecognition', 'zq_ra_go', 'zq_ra_good', 'zq_ra_retry', 'zq-ra-skip']),
     ]:
         src = (ROOT / fn).read_text(encoding='utf-8')
         for a in anchors:

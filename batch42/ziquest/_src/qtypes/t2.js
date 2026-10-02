@@ -137,7 +137,15 @@ ZQ.registerQ('t2', {
         QT_.sfx('ok');
         QT_.voice(api, 'zq_ch_' + q.pyKey);
         QT_.voice(api, 'zq_right');
-        setTimeout(function () { if (!st.dead) api.right(); }, 480);
+        /* v58 轻跟读：字音示范后孩子开口读一遍（可跳过；软环节不判 miss——读完/跳过都 right。
+           verify 页零侧效应直通（readaloud 有专门 verify 单元+probe 覆盖）） */
+        var go = function () { setTimeout(function () { if (!st.dead) api.right(); }, 480); };
+        if (!ZQ_VERIFY && window.ZQ && ZQ.RA) {
+          setTimeout(function () {
+            if (st.dead) return;
+            ZQ.RA.ask({ ch: q.ch, pyKey: q.pyKey, skippable: true, onDone: function () { go(); } });
+          }, 900);
+        } else { go(); }
       });
       st.lock = false;
     })();

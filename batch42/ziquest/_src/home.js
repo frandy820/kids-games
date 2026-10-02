@@ -7,7 +7,7 @@
 (function () {
   const WEAR_SLOTS = ['hat', 'dress', 'shoes', 'scarf', 'glass', 'bag'];
   const HOME_SLOTS = ['furn', 'plant', 'wall'];
-  const SLOT_CN = { hat: '帽子', dress: '裙子', shoes: '鞋子', scarf: '围巾', glass: '眼镜', bag: '小包',
+  const SLOT_CN = { hat: '帽子', dress: '裙子', shoes: '鞋子', scarf: '围巾', glass: '眼镜', bag: '小包',  /* v58 tag 去部位前缀后仅详情用 */
     furn: '家具', plant: '花草', wall: '墙饰' };
   const PAL = ['#F2A96B', '#8FBF7F', '#7FB3E0', '#F2B8C6', '#F5C445', '#B39DDB'];
   const pal = id => {
@@ -53,9 +53,9 @@
   function wearLayers(z) {
     return WEAR_SLOTS.map(s => (z.dress.worn[s] ? svgById(z.dress.worn[s]) : '')).join('');
   }
-  /* 试穿预览（家园页）：兔 base + 装扮层同框叠放 */
+  /* 试穿预览（家园页）：兔 base + 装扮层同框叠放（v58 审图 140→172 加大——「试穿预览兔太小」） */
   function bunnyHtml(z) {
-    return '<div class="zq-bunny"><div class="base">' + KIDS.assets.rabbit('happy', 140) + '</div>' +
+    return '<div class="zq-bunny"><div class="base">' + KIDS.assets.rabbit('happy', 172) + '</div>' +
       '<svg class="layer" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" fill="none">' + wearLayers(z) + '</svg></div>';
   }
 
@@ -130,13 +130,16 @@
       const st = stateOf(z, it);
       const d = document.createElement('button');
       d.className = 'zq-item' + (st === 'worn' ? ' worn' : st === 'owned' ? ' owned' : st === 'claim' ? ' claim' : (st === 'poor' || st === 'far' || st === 'locked') ? ' cant' : '');
+      /* v58 审图：tag 单行 nowrap 长文案（「再学 340 字」）横向溢出被裁成「再学340手」——
+         去部位前缀（名称已含语义）+poor 显差额（差 N 金币=买不起的具体引导）+tag 允许两行 */
       const tag = st === 'worn' ? (it.cat === 'home' ? '摆着呢' : '穿着呢') :
         st === 'owned' ? '点我' + (it.cat === 'home' ? '摆上' : '穿上') :
         st === 'claim' ? '🎁 领取' :
-        st === 'buy' || st === 'poor' ? '💰 ' + it.price :
-        st === 'far' ? '再学 ' + (it.giftAt - Object.keys(z.dex).length) + ' 字' : '冒险解锁';
+        st === 'buy' ? '💰 ' + it.price :
+        st === 'poor' ? '💰 ' + it.price + '<br>还差 ' + (it.price - z.coins) :
+        st === 'far' ? '再学 ' + (it.giftAt - Object.keys(z.dex).length) + ' 字<br>就能领取' : '冒险解锁';
       d.innerHTML = '<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" fill="none">' + svgFor(it) + '</svg>' +
-        '<div class="nm">' + it.name + '</div><div class="tag">' + SLOT_CN[it.slot] + ' · ' + tag + '</div>';
+        '<div class="nm">' + it.name + '</div><div class="tag">' + tag + '</div>';
       d.onclick = () => tap(it);
       grid.appendChild(d);
     });
@@ -172,6 +175,21 @@
   function close() { const s = $id('zq-homeov'); if (s) s.remove(); }
 
   window.ZQ.Home = { open: open, close: close, _render: render, _stateOf: stateOf };
-  window.ZQ.Dress = { sync: syncMapDress, _svg: svgFor, _bunnyHtml: bunnyHtml };
+  window.ZQ.Dress = { sync: syncMapDress, _svg: svgFor, _bunnyHtml: bunnyHtml, _wearLayers: wearLayers };
+
+  /* v58 审图：loading 兔带装扮一致性——本模块拼装于 game-main 之后（loading 收起前必已执行），
+     穿戴层叠进 loading 简笔兔（120 系×0.9 对 96 系微调平移）；已收起/无穿戴=静默跳过 */
+  try {
+    const lb = document.querySelector('#zq-loading .bun svg');
+    if (lb) {
+      const l = wearLayers(zSave().zq);
+      if (l) {
+        const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        g.setAttribute('transform', 'translate(-4,-10) scale(0.9)');
+        g.innerHTML = l;
+        lb.appendChild(g);
+      }
+    }
+  } catch (e) { /* loading 兔装饰性注入，任何异常不伤主流程 */ }
   try { syncMapDress(); } catch (e) {}          /* 文件装载即上身（rabbitG 已由 buildMap 建好） */
 })();

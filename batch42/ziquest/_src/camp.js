@@ -12,16 +12,20 @@
 const ZQ_CAMP_N = 6;                                /* 营地 6 题（SPEC 独立表对账） */
 const ZQ_MORNING_N = 3;                             /* 早安 recap 3 题 */
 
-/* ---------- 营地字池：due 池优先 → 薄弱池补 → 本区已学 → 本区字兜底（确定性链） ---------- */
+/* ---------- 营地字池：due 池优先 → 薄弱池补 → 本区已学 → 本区字兜底（确定性链）
+   v58 编排律：今日新学字（dayLog.newChars）当日不进营地——当天刚学当天营地里重教
+   =「怎么又是这个字」重复感最大来源；SRS 语义=隔天起复现（早安营地 recap 昨日字） ---------- */
 function zqCampPool(save, today, region, n) {
   const z = save && save.zq || { dex: {}, weak: [] };
-  let pool = srsDue(z.dex, today).slice(0, n);      /* engine 定序快照 */
+  const fresh = (save && save.zq && save.zq.dayLog && save.zq.dayLog[today] && save.zq.dayLog[today].newChars) || [];
+  const notFresh = function (ch) { return fresh.indexOf(ch) < 0; };
+  let pool = srsDue(z.dex, today).filter(notFresh).slice(0, n);   /* engine 定序快照 */
   if (pool.length < n) {
-    z.weak.forEach(function (ch) { if (pool.length < n && pool.indexOf(ch) < 0 && z.dex[ch]) pool.push(ch); });
+    z.weak.forEach(function (ch) { if (pool.length < n && notFresh(ch) && pool.indexOf(ch) < 0 && z.dex[ch]) pool.push(ch); });
   }
   if (pool.length < n) {                            /* 本区已学字（dex 有档）兜底 */
     const learned = zqRegionChars(region).map(function (c) { return c.ch; })
-      .filter(function (ch) { return z.dex[ch] && pool.indexOf(ch) < 0; });
+      .filter(function (ch) { return notFresh(ch) && z.dex[ch] && pool.indexOf(ch) < 0; });
     pool = pool.concat(learned.slice(0, n - pool.length));
   }
   if (pool.length < n) {                            /* 全新档极端兜底=本区字 */

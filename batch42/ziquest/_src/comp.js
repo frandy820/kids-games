@@ -37,7 +37,9 @@
     return { comp: c, already: already };
   }
 
-  /* ---------- 地图跟班 ---------- */
+  /* ---------- 地图跟班（v58 审图修复：v57 版构造完从未挂载=死代码，跟班从未上过地图） ----------
+     挂 #zq-rabbit（L5 层）内：随兔走不随 hop 跳（跟班自己 bob）；L5 在节点层之上=不被节点圈遮挡；
+     0.42 缩放（avaInner 120 坐标→≈50px 站兔身右侧贴地） */
   function syncMapPet() {
     const old = $id('zq-pet-wrap');
     if (old) old.remove();
@@ -45,9 +47,9 @@
     const cid = z.comp.active;
     const c = cid && z.comp[cid] ? comp(cid) : null;
     if (!c || typeof rabbitG === 'undefined' || !rabbitG) return;
-    const g = svgEl('g', { id: 'zq-pet-wrap', transform: 'translate(-56,-4) scale(0.4)' }, rabbitG);
-    const inner = svgEl('g', { id: 'zq-pet' }, g);
-    inner.innerHTML = avaInner(c);
+    const wrap = svgEl('g', { id: 'zq-pet-wrap', transform: 'translate(50,6) scale(0.42)' }, rabbitG);
+    const bob = svgEl('g', { id: 'zq-pet' }, wrap);
+    bob.innerHTML = avaInner(c);
   }
 
   /* ---------- 详情层（点伙伴卡：大头+台词+技能+出战/休息） ---------- */

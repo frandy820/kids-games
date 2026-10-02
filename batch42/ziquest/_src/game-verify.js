@@ -25,6 +25,8 @@
    ㉔ seed 确定性工具锚（hash 稳定/同种子洗牌全等）
    ㉕ spread 区域字组均分（R1 十三关并集 62 无缝无重/每关 4-5 字）
    ㉖ cluster P1 分类聚簇（v4：7 区 cat 区间连续不交错/同 cat 众数占比 ≥60%/关标题主题化）
+   ㉗ ra v58 跟读评测（_judge 拼音判分同音算对/self 模式 UI 流/round 逐字流转/重入防护）
+   ㉘ lay58 v58 编排律门禁（段式编排同字间隔/词原子不拆关/营地排除今日新学/关字数 4-6）
    结果写 #verify-result + document.title = 'VERIFY PASS n/n'（失败=VERIFY FAIL） */
 'use strict';
 
@@ -224,9 +226,19 @@ async function runVerify() {
     const types = L.qs.map(q => q.type);
     const jd = types.slice(L.chars.length);            /* 判定序列（跳过 t2 演出位） */
     ok('layout', '律1 首判定=认识层 t1', jd[0] === 't1');
+    /* v58 段式编排：同字间隔优先于相邻异型（交替结构与「每字 t1 先 L2 后」不可兼得——
+       交替下 L2 序唯一解=恒等序=同字背靠背；律2 升级为间隔律，异型检查保留在 L2 段内） */
+    let gapOk = true;
+    L.chars.forEach(ch => {
+      const pos = [];
+      L.qs.forEach((q, i) => { if (q.ch === ch && q.judge !== false) pos.push(i); });
+      if (pos.length < 2 || pos[1] - pos[0] < 3) gapOk = false;   /* 位差 ≥3=中间隔 ≥2 题 */
+    });
+    ok('layout', '律2 同字判定位不背靠背（中间隔 ≥2 题）', gapOk);
+    const l2s = jd.slice(L.chars.length);
     let adjOk = true;
-    for (let i = 1; i < jd.length; i++) if (jd[i] === jd[i - 1]) adjOk = false;
-    ok('layout', '律2 相邻判定位不同型', adjOk);
+    for (let i = 1; i < l2s.length; i++) if (l2s[i] === l2s[i - 1]) adjOk = false;
+    ok('layout', '律2b L2 段相邻不同型', adjOk);
     ok('layout', '律3 题型 ≥4 种（t2+t1+t4/t6）', new Set(types).size >= 4);
     let chanOk = true, monoOk = true;
     L.chars.forEach(ch => {
@@ -446,6 +458,60 @@ async function runVerify() {
     L2.onAnswer(true);
     ok('calretry', '首答即对记账 true（升带语义不变）', L2.bandAns.length === 1 && L2.bandAns[0] === true && L2.n === 1 && L2.qi === 1);
   } catch (e) { ok('calretry', '定级重试异常 ' + e.message, false); }
+
+  /* ================= ㉗ v58 跟读评测 readaloud（_judge 拼音判分纯函数 + self 模式 UI 流 + round 流转） ================= */
+  try {
+    /* 判分纯函数：音节匹配（同音算对=pyKey 匹配语义；字表 378 恰零同音 pyKey——跨字同音
+       由 ASR alternatives 数组覆盖；表外字（添/甜等）无拼音信息=不误判对，走 2 失败自评兜底） */
+    ok('ra', 'judge 天→tian 对', ZQ.RA._judge('天', 'tian') === true);
+    ok('ra', 'judge 表外字 添→tian 不误判对（pyStr 无信息→retry/自评兜底路径）',
+      ZQ.RA._judge('添', 'tian') === false && ZQ.RA._pyStr('添') === '');
+    ok('ra', 'judge 山→tian 错（异音）', ZQ.RA._judge('山', 'tian') === false);
+    ok('ra', 'judge 词「天空」含 tian 音节对', ZQ.RA._judge('天空', 'tian') === true);
+    ok('ra', 'judge 候选数组任一对（[山,天]→tian，ASR alternatives 语义）', ZQ.RA._judge(['山', '天'], 'tian') === true &&
+      ZQ.RA._judge(['山', '石'], 'tian') === false);
+    ok('ra', 'judge 空目标音节=错（防御）', ZQ.RA._judge('天', '') === false);
+    ok('ra', 'pyStr 表外字跳过（「天，。」=tian 单音）', ZQ.RA._pyStr('天，。') === 'tian ');
+    ok('ra', 'cap() 返回 asr/self 之一且缓存稳定', ['asr', 'self'].indexOf(ZQ.RA.cap()) >= 0 &&
+      ZQ.RA.cap() === ZQ.RA.cap());
+    /* self 模式 UI 流（verify 页 headless 无 SR→self 分支）。#zq-qbox 由关卡层动态建
+       （zqLvRun :369）——本单元自备容器，不依赖关卡层已弹出 */
+    const host = document.createElement('div');
+    host.id = 'zq-qbox';
+    document.body.appendChild(host);
+    let cbSkip = null, cbOk = null;
+    ZQ.RA.ask({ ch: '天', pyKey: 'tian', skippable: true, onDone: function (okv) { cbSkip = okv; } });
+    const raCard = document.querySelector('#zq-qbox .zq-ra');
+    ok('ra', 'ask 挂卡（标题+大字+麦钮+自评+跳过钮）',
+      !!raCard && raCard.querySelector('.zq-ra-ch').textContent === '天' &&
+      !!raCard.querySelector('.zq-ra-mic') && !!raCard.querySelector('.zq-ra-ok') &&
+      !!raCard.querySelector('.zq-ra-skip'));
+    ok('ra', '自评钮可见性随模式（self=亮/asr=藏；headless Chrome 带 SR API→asr）',
+      (ZQ.RA.cap() === 'self') === (raCard.querySelector('.zq-ra-ok').style.display !== 'none'));
+    ZQ.RA.ask({ ch: '地', pyKey: 'di', onDone: function (okv) { cbOk = okv; } });   /* 重入防护 */
+    ok('ra', 'asking 中重入 ask=立即 onDone(false) 不换卡', cbOk === false &&
+      document.querySelector('#zq-qbox .zq-ra-ch').textContent === '天');
+    raCard.querySelector('.zq-ra-skip').click();
+    ok('ra', '跳过=onDone(false)+DOM 摘除', cbSkip === false && !document.querySelector('#zq-qbox .zq-ra'));
+    ZQ.RA.ask({ ch: '山', pyKey: 'shan', onDone: function (okv) { cbOk = okv; } });
+    document.querySelector('#zq-qbox .zq-ra .zq-ra-ok').click();
+    ok('ra', '自评点亮=onDone(true)+DOM 摘除', cbOk === true && !document.querySelector('#zq-qbox .zq-ra'));
+    /* round：空表直通；逐字流转读完 onAllDone */
+    let roundDone = false;
+    ZQ.RA.round([], function () { roundDone = 'empty'; });
+    ok('ra', 'round 空字表=直接 onAllDone', roundDone === 'empty');
+    let rd = 0, seen = [];
+    ZQ.RA.round(['天', '山'], function () { rd = 1; });
+    for (let i = 0; i < 2; i++) {
+      const ch2 = document.querySelector('#zq-qbox .zq-ra-ch');
+      seen.push(ch2 ? ch2.textContent : null);
+      document.querySelector('#zq-qbox .zq-ra .zq-ra-ok').click();   /* self 直评（round 不可跳过=无 skip 钮） */
+    }
+    ok('ra', 'round 逐字流转（天→山→onAllDone）+ 关尾不可跳过（无 skip 钮）',
+      rd === 1 && seen.join() === '天,山' &&
+      !document.querySelector('#zq-qbox .zq-ra-skip'));
+    host.remove();                                     /* 自备容器摘除（防干扰后续关卡层渲染） */
+  } catch (e) { ok('ra', '跟读异常 ' + e.message, false); }
 
   /* ================= ⑱ 防泄露：视觉题面 DOM 零答案文本 + 渲染期键账零目标音 ================= */
   try {
@@ -667,6 +733,58 @@ async function runVerify() {
       ratios.reduce((a, b) => a + b, 0) / ratios.length >= 0.6);
     ok('cluster', '关标题主题化：≥max(3,60%) 众数关显「水果关/小厨房关」（' + titled + ' 关）', titled > 0);
   } catch (e) { ok('cluster', '聚簇异常 ' + e.message, false); }
+
+  /* ================= ㉘ v58 编排律门禁（重复度改版：同字间隔/词原子/营地排除今日新学） ================= */
+  try {
+    const T = '2026-10-01';
+    const mk2 = () => ({ v: '1.0', game: 'ziquest', firstDay: T, levels: {}, bonus: {}, zq: { cal: { done: [], band: 0, skipSeen: false }, map: {}, dex: {}, weak: [], comp: {}, dress: { owned: [], worn: {}, home: {} }, coins: 0, storySeen: [], dayLog: {} } });
+    /* ① zqL2Order 纯函数：反向+末位换末字=排列保持，同字间隔最大化 */
+    ok('lay58', 'L2 序 n=5 = [0,3,2,1,4]（反向+末位换回末字）', JSON.stringify(ZQ._l2Order(5)) === '[0,3,2,1,4]');
+    ok('lay58', 'L2 序 n=4 = [0,2,1,3]', JSON.stringify(ZQ._l2Order(4)) === '[0,2,1,3]');
+    ok('lay58', 'L2 序 n=1 单字关直通', JSON.stringify(ZQ._l2Order(1)) === '[0]');
+    const permOk = [2, 3, 4, 5, 6, 7].every(n => {
+      const o = ZQ._l2Order(n).slice().sort((a, b) => a - b);
+      return o.every((v, i) => v === i);
+    });
+    ok('lay58', 'L2 序 n=2..7 全为排列（无重复无漏）', permOk);
+    /* ② 同字间隔：7 区每 new 关逐字判定位位差 ≥3（中间隔 ≥2 题）+ 每字暴露 ==3 */
+    const sv0 = mk2();
+    let gapAll = true, expoAll = true;
+    for (let r = 1; r <= 7; r++) {
+      ZQ_NODES.filter(n => n.region === r && n.type === 'new').forEach(n => {
+        const L = ZQ._genLevel(n.key, sv0, T);
+        if (!L) return;
+        L.chars.forEach(ch => {
+          const pos = [], per = [];
+          L.qs.forEach((q, i) => { if (q.ch === ch && q.judge !== false) { pos.push(i); per.push(q.type); } });
+          if (pos.length !== 2) expoAll = false;                      /* 恰 2 判定位（t2 演出位 judge:false 不计） */
+          if (pos.length < 2 || pos[1] - pos[0] < 3) gapAll = false;
+        });
+      });
+    }
+    ok('lay58', '全区 new 关同字判定位位差 ≥3（防零间隔提取失真）', gapAll);
+    ok('lay58', '每字恰 2 判定位（t2 演出位不计——重复度不升）', expoAll);
+    /* ③ 词原子：葡+萄同关（R4 实证「葡萄」拆两关=同词次日重教） */
+    const sv4 = mk2();
+    const r4news = ZQ_NODES.filter(n => n.region === 4 && n.type === 'new');
+    const puGuan = r4news.map(n => ZQ._nodeChars(n.key, sv4)).filter(cs => cs.indexOf('葡') >= 0);
+    ok('lay58', '词原子不拆关（葡与萄同关）', puGuan.length === 1 && puGuan[0].indexOf('萄') >= 0);
+    let sizeOk = true;
+    for (let r = 1; r <= 7; r++) {
+      ZQ_NODES.filter(n => n.region === r && n.type === 'new').forEach(n => {
+        const cs = ZQ._nodeChars(n.key, mk2());
+        if (cs.length < 4 || cs.length > 6) sizeOk = false;           /* 词原子容忍 6；<4/>6=编排退化 */
+      });
+    }
+    ok('lay58', '全区关字数 4-6（词原子右移容差内）', sizeOk);
+    /* ④ 营地排除今日新学：dayLog.newChars 当日不进营地池（当天重教=重复感主源） */
+    const svc = mk2();
+    const r4chars = ZQ_CHARS['4'].chars.map(c => c.ch);
+    r4chars.forEach(ch => { svc.zq.dex[ch] = { due: T, srs: 1, miss: 0 }; });   /* 全区已学档 */
+    svc.zq.dayLog[T] = { newChars: [r4chars[0]], nodes: [], newDone: [], quests: [] };
+    const cp = ZQ._campPool(svc, T, 4, 6);
+    ok('lay58', '营地池排除今日新学字（' + r4chars[0] + ' 不在池）', cp.indexOf(r4chars[0]) < 0 && cp.length === 6);
+  } catch (e) { ok('lay58', '编排律 v58 异常 ' + e.message, false); }
 
   /* ---- 结果（家族写作规范：title 行 + stub·game·total·pass·units 字段） ---- */
   const res = { game: 'ziquest', total: total, pass: npass, units: {} };

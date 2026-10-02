@@ -1,7 +1,8 @@
 {
  "meta": {
-  "version": 1, "date": "2026-09-29",
-  "note": "UI/反馈/题面语音文案（zq_ui_ 29 + zq_boss_ 7 = 36 键）；chText 式字键 zq_ch_<pyKey> 400 条与句键 zq_st_<id> 160 条由 chars/sentences 数据推导，不在此表",
+  "version": 1,
+  "date": "2026-09-29",
+  "note": "UI/反馈/题面语音文案（zq_ui_ 29 + zq_boss_ 7 + zq_ra_ 3 = 39 键）；chText 式字键 zq_ch_<pyKey> 400 条与句键 zq_st_<id> 160 条由 chars/sentences 数据推导，不在此表",
   "tts": "edge-tts 晓晓 zh-CN-XiaoxiaoNeural rate -8% pitch +18Hz（家族口径）"
  },
  "keys": {
@@ -40,6 +41,9 @@
   "zq_boss_pig": "嗯，钱要算对才好吃呀",
   "zq_boss_dragon": "信上的字错了！帮我找出来",
   "zq_boss_guard": "想进图书馆，先过我这一关",
-  "zq_boss_gala": "把你会的字都亮出来吧"
+  "zq_boss_gala": "把你会的字都亮出来吧",
+  "zq_ra_go": "大声读出来吧",
+  "zq_ra_good": "读得真好，真棒",
+  "zq_ra_retry": "再读一次试试"
  }
 }

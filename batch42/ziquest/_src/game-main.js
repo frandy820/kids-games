@@ -454,6 +454,9 @@ function patchParentPanel() {
       '<div class="chars">' + (dueToday.length ? chCells(dueToday.slice(0, 40)) : '今天没有到期复习') + '</div>' +
       '<h4>薄弱字 ' + weakChars.length + ' 个（红底=反复错，建议陪玩）</h4>' +
       '<div class="chars">' + (weakChars.length ? chCells(weakChars, true) : '暂无薄弱字，学得很稳！') + '</div>' +
+      '<div style="margin-top:8px;font-size:11px;color:#B8AB98">跟读环节用浏览器语音识别判断读音（当前浏览器：' +
+      ((window.ZQ && ZQ.RA && ZQ.RA.cap() === 'asr') ? '自动识别' : '自评模式') +
+      '）。微信内打开不支持识别，孩子读完自己点「我读对啦」点亮星星；用系统浏览器（Chrome/Safari）打开可自动判音。</div>' +
       '<div style="margin-top:8px;font-size:11px;color:#B8AB98">游戏配图：OpenMoji（openmoji.org），CC BY-SA 4.0</div></div>';
     const close = box.querySelector('.k-close');
     box.insertBefore(div, close);
