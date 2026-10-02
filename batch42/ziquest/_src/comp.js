@@ -112,10 +112,11 @@
     s.className = 'zq-sheet';
     s.id = 'zq-compov';
     s.innerHTML =
-      '<div class="zq-sheet-h"><div class="tt">伙伴小屋</div><div class="sub" id="zq-comp-sub"></div>' +
-      '<button class="x" aria-label="关上伙伴">✕</button></div>' +
+      '<div class="zq-sheet-h"><button class="back" aria-label="返回冒险地图">' +
+      '<svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="#4A3B2E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      '</button><div class="tt">伙伴小屋</div><div class="sub" id="zq-comp-sub"></div></div>' +
       '<div class="zq-body"><div class="zq-grid" id="zq-comp-grid"></div></div>';
-    s.querySelector('.x').onclick = close;
+    s.querySelector('.back').onclick = close;
     document.body.appendChild(s);
     render();
     if (!VERIFY && typeof KIDS !== 'undefined') KIDS.voice.play('zq_map_open');

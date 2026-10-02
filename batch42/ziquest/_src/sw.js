@@ -4,7 +4,7 @@
    - sw.js 自身浏览器按导航重取，byte 变化即重装 → 发新版换 CACHE_VER 推动全量刷新
    scope=本目录，只拦 navigation 请求，其他一律放行 */
 'use strict';
-const CACHE_VER = 'zq-v57';
+const CACHE_VER = 'zq-v571';
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE_VER).then(c => c.add('./index.html')).then(() => self.skipWaiting()));

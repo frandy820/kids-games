@@ -148,13 +148,14 @@
     s.className = 'zq-sheet';
     s.id = 'zq-homeov';
     s.innerHTML =
-      '<div class="zq-sheet-h"><div class="tt">兔子家园</div><div class="sub" id="zq-home-sub"></div>' +
-      '<button class="x" aria-label="关上家园">✕</button></div>' +
+      '<div class="zq-sheet-h"><button class="back" aria-label="返回冒险地图">' +
+      '<svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="#4A3B2E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      '</button><div class="tt">兔子家园</div><div class="sub" id="zq-home-sub"></div></div>' +
       '<div class="zq-body">' +
       '<div class="zq-home-top"><div id="zq-bunny-box"></div><div class="zq-homescene" id="zq-scene"></div></div>' +
       '<div class="zq-tabs" id="zq-home-tabs"></div>' +
       '<div class="zq-grid" id="zq-home-grid"></div></div>';
-    s.querySelector('.x').onclick = close;
+    s.querySelector('.back').onclick = close;
     const tabs = s.querySelector('#zq-home-tabs');
     [['wear', '穿搭'], ['home', '家居']].forEach(p => {
       const b = document.createElement('button');
