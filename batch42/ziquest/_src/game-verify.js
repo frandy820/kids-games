@@ -429,6 +429,24 @@ async function runVerify() {
       })());
   } catch (e) { ok('calflow', '定级模拟异常 ' + e.message, false); }
 
+  /* ================= ㉖b v572：定级 UI 答错重试（_calibL 直驱 onAnswer——用户实测「选错跳下一页」漏网根因=UI 层零断言） ================= */
+  try {
+    const L = ZQ._calibL(zSave(), ZQ._today(), null);
+    zqPushQ(L.qs, zqCalibNext(L));
+    const qi0 = L.qi, n0 = L.qs.length;
+    const r1 = L.onAnswer(false);
+    ok('calretry', '答错不推进（qi 不动/不发新题/走纠错窗）', r1 === 'right' && L.qi === qi0 && L.qs.length === n0);
+    ok('calretry', '首错落账一次（bandAns/n）', L.bandAns.length === 1 && L.bandAns[0] === false && L.n === 1);
+    L.onAnswer(false);
+    ok('calretry', '同题再错不重复记账', L.bandAns.length === 1 && L.n === 1 && L.qi === qi0);
+    L.onAnswer(true);
+    ok('calretry', '重试答对推进且不污染账本', L.qi === qi0 + 1 && L.bandAns.length === 1 && L.qs.length === n0 + 1);
+    const L2 = ZQ._calibL(zSave(), ZQ._today(), null);
+    zqPushQ(L2.qs, zqCalibNext(L2));
+    L2.onAnswer(true);
+    ok('calretry', '首答即对记账 true（升带语义不变）', L2.bandAns.length === 1 && L2.bandAns[0] === true && L2.n === 1 && L2.qi === 1);
+  } catch (e) { ok('calretry', '定级重试异常 ' + e.message, false); }
+
   /* ================= ⑱ 防泄露：视觉题面 DOM 零答案文本 + 渲染期键账零目标音 ================= */
   try {
     const T = '2026-10-01';

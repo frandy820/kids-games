@@ -63,10 +63,19 @@ function zqCalibFinishFlow(L, stars) {              /* 收口：写 cal 档+cele
   if (L.onDone) L.onDone(L.known.slice());
 }
 const ZQ_CALIB = {
-  /* start(onDone(knownSet))：定级节点 r0n02 入口（ZQ.Level.start 分发） */
+  /* start(onDone(knownSet))：定级节点 r0n02 入口（ZQ.Level.start 分发）。
+     L/onAnswer 构造抽到 zqCalibMkL（v572：verify 直驱答错重试断言用——UI 层此前零断言=漏网根因） */
   start: function (onDone) {
     if (ZQ_VERIFY) return { ok: false, reason: 'verify' };   /* verify 页走 zqCalibSim 直驱 */
     const today = zqToday(), sv = zSave();
+    const L = zqCalibMkL(sv, today, onDone);
+    zqPushQ(L.qs, zqCalibNext(L));                  /* 首题 */
+    if (!ZQ_VERIFY && typeof KIDS !== 'undefined') KIDS.voice.play('zq_calib_start');
+    zqLvRun(L);
+    return { ok: true, key: 'r0n02', kind: 'calib' };
+  }
+};
+function zqCalibMkL(sv, today, onDone) {
     const n = ZQ_NODE['r0n02'];
     const rnd = zqMulberry32(zqHash((sv.firstDay || today) + '|' + today + '|calib'));
     const L = { key: 'r0n02', node: n, kind: 'calib', region: 0, chars: [], qs: [], qi: 0,
@@ -78,14 +87,18 @@ const ZQ_CALIB = {
     L.onAnswer = function (ok) {
       const q = L.qs[L.qi];
       if (!q) return false;
-      L.bandAns.push(ok);
-      L.n++;
-      if (ok) {
-        if (L.known.indexOf(q.ch) < 0) L.known.push(q.ch);
-        if (SAVE) { SAVE.zq.coins += ZQ_ECON.calibRight; refreshHud(); }   /* 每对+2 币即时（不 persist，收口一并落盘） */
-        if (typeof KIDS !== 'undefined') KIDS.voice.play('zq_calib_right');
+      /* v572 热修（用户实测「选错直接跳下一页」）：定级答错不推进——同题重答，与 zqEngAnswer
+         六题型「错不推进」纪律对齐（改单2 当时只做了先教再走，漏了重答位）。首错落账一次
+         （_missed 旗子），重试答对不再记账（防 bandAns 混入补答污染升带/总量判定）。 */
+      if (!ok) {
+        if (!q._missed) { q._missed = 1; L.bandAns.push(false); L.n++; }
+        if (L.n >= ZQ_CAL_TOTAL_LIM) { L.done = true; return 'done'; }
+        return 'right';    /* 'right'→zqCalibTeach 纠错窗照走；qi 未动，窗尾 zqRenderQ 重挂原题 */
       }
-      /* 错的安抚+讲解归 zqCalibTeach 纠错窗统一串播（改单2：错后先教再走，不在此即时播） */
+      if (!q._missed) { L.bandAns.push(true); L.n++; }
+      if (L.known.indexOf(q.ch) < 0) L.known.push(q.ch);
+      if (SAVE) { SAVE.zq.coins += ZQ_ECON.calibRight; refreshHud(); }   /* 每对+2 币即时（不 persist，收口一并落盘） */
+      if (!ZQ_VERIFY && typeof KIDS !== 'undefined') KIDS.voice.play('zq_calib_right');
       if (L.n >= ZQ_CAL_TOTAL_LIM) { L.done = true; return 'done'; }
       if (L.bandAns.length >= ZQ_CAL_BAND_LIM) {    /* 带满 → calStop 升带/停止 */
         L.bands.push({ band: L.band, answers: L.bandAns.slice() });
@@ -100,12 +113,9 @@ const ZQ_CALIB = {
       zqPushQ(L.qs, zqCalibNext(L));
       return 'right';
     };
-    zqPushQ(L.qs, zqCalibNext(L));                  /* 首题 */
-    if (typeof KIDS !== 'undefined') KIDS.voice.play('zq_calib_start');
-    zqLvRun(L);
-    return { ok: true, key: 'r0n02', kind: 'calib' };
-  }
-};
+    return L;
+}
+window.ZQ._calibL = zqCalibMkL;
 window.ZQ.Calib = ZQ_CALIB;
 window.ZQ._calibSim = zqCalibSim;
 window.ZQ.CalibStart = ZQ_CALIB.start;              /* level.js ZQ_LEVEL 分发引用（跨段常量） */
