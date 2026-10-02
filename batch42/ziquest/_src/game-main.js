@@ -225,23 +225,10 @@ function buildMap() {
     fxPool.push({ h: h, p: p });
   }
   worldEl.appendChild(svgRoot);
-  /* v54：收集三入口接线（M4 未建——先建设中占位弹层，杜绝无响应死按钮；
-     同 showBuild 弹层复用，文案分入口） */
-  [['zq-dex', '汉字图鉴', '图鉴小书正在装订，小兔子先帮你记着字啦'],
-   ['zq-home', '兔子家园', '家园小屋正在装修，小兔子先帮你攒金币啦'],
-   ['zq-comp', '伙伴小屋', '小伙伴还在路上，先把识字冒险走下去吧']].forEach(pair => {
+  /* v57 M4：收集三入口=真模块（dex/home/comp.js 拼于本块尾——运行时 ZQ.Dex/Home/Comp 已就位） */
+  [['zq-dex', 'Dex'], ['zq-home', 'Home'], ['zq-comp', 'Comp']].forEach(pair => {
     const b = $id(pair[0]);
-    if (!b) return;
-    b.addEventListener('click', () => {
-      const ov = $id('zq-build');
-      $id('zq-build-bunny').innerHTML = KIDS.assets.rabbit('happy', 110);
-      $id('zq-build-name').textContent = pair[1] + '·建设中';
-      $id('zq-build-tip').textContent = pair[2];
-      ov.classList.remove('hide');
-      KIDS.voice.play('zq_map_open');
-      clearTimeout(buildTimer);
-      buildTimer = setTimeout(() => ov.classList.add('hide'), ZQ_T.OVERLAY_MS);
-    });
+    if (b) b.addEventListener('click', () => ZQ[pair[1]].open());
   });
 }
 
@@ -466,7 +453,8 @@ function patchParentPanel() {
       '<h4>今日到期复习 ' + dueToday.length + ' 字（地图「复习营地」可强化）</h4>' +
       '<div class="chars">' + (dueToday.length ? chCells(dueToday.slice(0, 40)) : '今天没有到期复习') + '</div>' +
       '<h4>薄弱字 ' + weakChars.length + ' 个（红底=反复错，建议陪玩）</h4>' +
-      '<div class="chars">' + (weakChars.length ? chCells(weakChars, true) : '暂无薄弱字，学得很稳！') + '</div></div>';
+      '<div class="chars">' + (weakChars.length ? chCells(weakChars, true) : '暂无薄弱字，学得很稳！') + '</div>' +
+      '<div style="margin-top:8px;font-size:11px;color:#B8AB98">游戏配图：OpenMoji（openmoji.org），CC BY-SA 4.0</div></div>';
     const close = box.querySelector('.k-close');
     box.insertBefore(div, close);
   };

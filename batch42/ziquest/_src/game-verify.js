@@ -539,8 +539,8 @@ async function runVerify() {
     const card = document.querySelector('.zq-st-line');
     ok('dispatch', '剧情卡 DOM 已挂（台词+进度点）', !!card && document.querySelectorAll('.zq-st-dots i').length > 0);
     if (card && card.parentNode) card.parentNode.removeChild(card);  /* 只摘 DOM 不触发 finishNode（verify 禁写档） */
-    ok('dispatch', 'chest/friend 同占位',
-      ZQ.Level.start('r1n05').reason === 'm3m4' && ZQ.Level.start('r1n10').reason === 'm3m4');
+    ok('dispatch', 'chest=金币收集点（v57 M4 真分发）', ZQ.Level.start('r1n05').kind === 'chest');
+    ok('dispatch', 'friend=伙伴入队（v57 M4 真分发）', ZQ.Level.start('r1n10').kind === 'friend');
     ok('dispatch', 'camp/calib verify 页守卫跳过',
       ZQ.Level.start('r1n07').reason === 'verify' && ZQ.Level.start('r0n02').reason === 'verify');
     const rn = ZQ.Level.start('r1n02');
@@ -551,6 +551,45 @@ async function runVerify() {
     ZQ._setLvVerify(null);
     document.getElementById('zq-lv').classList.add('hide');
   } catch (e) { ok('dispatch', '分发异常 ' + e.message, false); }
+
+  /* ================= ㉖ M4 收集三页（v57：图鉴三态/家园穿戴/伙伴出战——VERIFY 空档全只读） ================= */
+  try {
+    ok('m4', '三模块挂载（Dex/Home/Dress/Comp）',
+      !!(ZQ.Dex && ZQ.Dex.open && ZQ.Home && ZQ.Home.open && ZQ.Dress && ZQ.Dress.sync && ZQ.Comp && ZQ.Comp.grant));
+    ZQ.Dex.open();
+    const gcs = document.querySelectorAll('#zq-dex-grid .zq-gc');
+    ok('m4', '图鉴网格=当前区全字', gcs.length === ZQ_CHARS['1'].chars.length && gcs.length > 0);
+    ok('m4', '图鉴空档全未学态（lock 灰）', Array.prototype.every.call(gcs, x => x.classList.contains('lock')));
+    const gc0 = gcs[0];
+    if (gc0) gc0.click();
+    ok('m4', '点字卡出大卡（字+词+听钮）', (function () {
+      const b = document.getElementById('zq-dexbig');
+      const okd = !!b && !!b.querySelector('.ch') && !!b.querySelector('.listen') && !!b.querySelector('.wds');
+      if (b) b.remove();
+      return okd;
+    })());
+    ZQ.Dex.close();
+    ok('m4', '图鉴关闭即摘 DOM', !document.getElementById('zq-dexov'));
+    ok('m4', '装扮纯函数（帽/裙/家具 SVG 非空）',
+      (function () { const f = ZQ.Dress._svg; return f({ id: 'hat01', slot: 'hat' }).length > 20 && f({ id: 'dress01', slot: 'dress' }).length > 20 && f({ id: 'furn01', slot: 'furn' }).length > 20; })());
+    ok('m4', '商品状态机（够钱=buy / 没钱=poor / 礼物未到=far）',
+      (function () {
+        const st = ZQ.Home._stateOf;
+        const base = c => ({ dex: {}, dress: { owned: [], worn: {}, home: {} }, coins: c });
+        return st(base(10), { id: 'x1', slot: 'hat', cat: 'wear', price: 5, unlock: { region: 0, chars: 0 } }) === 'buy' &&
+          st(base(0), { id: 'x1', slot: 'hat', cat: 'wear', price: 5, unlock: { region: 0, chars: 0 } }) === 'poor' &&
+          st(base(0), { id: 'x2', slot: 'hat', cat: 'wear', price: 50, giftAt: 99, unlock: { region: 0, chars: 0 } }) === 'far';
+      })());
+    ok('m4', '伙伴 grant 只读安全（VERIFY 空档不写真档）',
+      (function () { const r = ZQ.Comp.grant('lark'); return !!(r && r.comp && r.comp.id === 'lark' && r.already === false); })());
+    ZQ.Comp.open();
+    const ccs = document.querySelectorAll('#zq-comp-grid .zq-cc');
+    ok('m4', '伙伴页 7 卡（未收=剪影）', ccs.length === ZQ_CATALOG.companions.length &&
+      Array.prototype.every.call(ccs, x => x.classList.contains('lock')));
+    ZQ.Comp.close();
+    ok('m4', '地图装扮槽/跟班锚在场（穿戴上身渲染位）',
+      !!document.getElementById('zq-dress-slot') && !document.getElementById('zq-pet-wrap'));
+  } catch (e) { ok('m4', 'M4 异常 ' + e.message, false); }
 
   /* ================= ㉔ 确定性工具锚（hash 稳定/洗牌可复现） ================= */
   try {

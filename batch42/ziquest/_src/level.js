@@ -814,9 +814,16 @@ const ZQ_LEVEL = {
       return { ok: false, reason: 'm3m4' };
     }
     if (n.type === 'chest' || n.type === 'friend') {
-      toast('这一站要等 M3/M4 开放，先去前面闯关吧');
-      sfx('fail');
-      return { ok: false, reason: 'm3m4' };
+      /* v57 M4 真分发：宝箱=金币收集点；friend=伙伴入队（comp.js grant+仪式弹层）。
+         金币走 finishNode→zqNodeReward 统一入账（chest/friend 在表——此处不手动加，防双计）。
+         VERIFY 空档：grant/finishNode 自守卫禁写，返回值供 verify 断言 */
+      const isFriend = n.type === 'friend';
+      const c = isFriend ? (window.ZQ && ZQ.Comp ? ZQ.Comp.grant(n.label) : null) : null;
+      showBuild(n, isFriend
+        ? ((c && !c.already) ? c.comp.name + ' 加入啦！' + c.comp.lines[0] : (c ? c.comp.name + ' 一直陪着你说：' + c.comp.lines[3] : '小伙伴加入啦！'))
+        : '宝箱打开！+' + ZQ_ECON.chest + ' 金币，攒起来装扮家园吧');
+      finishNode(key, isFriend ? 3 : 1);
+      return { ok: true, key: key, kind: n.type };
     }
     if (n.type === 'calib') return ZQ_CALIB.start();
     if (n.type === 'camp') return ZQ_CAMP.start(key);

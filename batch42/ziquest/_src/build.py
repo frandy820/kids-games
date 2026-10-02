@@ -36,7 +36,8 @@ def _assemble_flow(S):
        构建期注入与 game-data.js 同源同纪律，每次构建幂等重注入）。"""
     def _rd(n):
         return (ROOT / n).read_text(encoding='utf-8')
-    parts = [_rd('level.js'), _rd('calib.js'), _rd('camp.js'), _rd('storycard.js')]
+    parts = [_rd('level.js'), _rd('calib.js'), _rd('camp.js'), _rd('storycard.js'),
+             _rd('dex.js'), _rd('home.js'), _rd('comp.js')]
     qdir = ROOT / 'qtypes'
     n_qt = 0
     if qdir.is_dir():
@@ -163,7 +164,7 @@ process.stdout.write(JSON.stringify(ctx.__T));
                  '#ghost{position:fixed;z-index:80',                     # ghost 段
                  'body.verify #verify-result{display:block}'):           # verify 段
         assert feat in head, 'head 缺 FAMILY_CSS 段特征（占位未注入或段漂移）: %s' % feat[:40]
-    for seg in ('一·基式与家族公共段', '二·冒险地图', '三·关卡占位', '四·收集占位', '五·弹层'):
+    for seg in ('一·基式与家族公共段', '二·冒险地图', '三·关卡占位', '四·M4 收集三页', '五·弹层'):
         assert seg in head, 'head 缺五段横幅分区: %s' % seg
 
     # ===== engine 硬性：核心常量锚 + 纯函数锚 + 经济表同步 =====
@@ -193,6 +194,9 @@ process.stdout.write(JSON.stringify(ctx.__T));
                       'RESCUE_ANS_MS', 'zqNodeChars', 'zqStars']),
         ('calib.js', ['ZQ_CALIB =', 'zq_calib_start', 'zq_calib_done', 'calibRight', 'ZQ_CAL_BAND_LIM']),
         ('camp.js', ['ZQ.Camp =', 'zq_camp_go', 'zq_morning', 'morningDone', 'campPaid']),
+        ('dex.js', ['ZQ.Dex', 'zq_ch_', 'ZQ_PICS', 'zq-dex-grid']),
+        ('home.js', ['ZQ.Home', 'zq-dress-slot', 'ZQ_CATALOG.items', 'syncMapDress']),
+        ('comp.js', ['ZQ.Comp', 'grant', 'zq-pet', 'zq-comp-grid']),
     ]:
         src = (ROOT / fn).read_text(encoding='utf-8')
         for a in anchors:
